@@ -87,7 +87,7 @@ const BUNDLE_PATCH_SRC = `;(function(){
         else { try{ window.__dsDiagErr = (window.__dsDiagErr ? window.__dsDiagErr + ' | ' : '') + 'no joinParty anchor'; }catch(e){} }
         // Gloo Wall Player Physical Collision: patch into kinematics/physics step
         var physTarget = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);";
-        var physReplace = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);if(window.__dsResolveGlooCollision){window.__dsResolveGlooCollision(SW);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){if(V3[_vi]&&V3[_vi].FShYTnMIW)window.__dsResolveGlooCollision(V3[_vi].FShYTnMIW);}}}";
+        var physReplace = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){var _ent=V3[_vi];if(!_ent)continue;if(!_ent['KWC92ef2Y9']||!_ent['KWC92ef2Y9']['PxxmChYjxoE']){if(_ent['opacity']!==undefined&&_ent['opacity']<1)_ent['opacity']=1;if(_ent['yW38T38y4']){_ent['yW38T38y4']['opacity']=1;_ent['yW38T38y4']['EafIbhzQZQ']=1;}if(_ent['r23ZS3L2g']&&!_ent['r23ZS3L2g']['parent']&&typeof Tm!=='undefined'&&Tm){Tm['add'](_ent['r23ZS3L2g']);try{_ent['r23ZS3L2g']['enable']();}catch(eE){}}}}}if(window.__dsResolveGlooCollision){window.__dsResolveGlooCollision(SW);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){if(V3[_vi]&&V3[_vi].FShYTnMIW)window.__dsResolveGlooCollision(V3[_vi].FShYTnMIW);}}}";
         var pi = src.indexOf(physTarget);
         if (pi !== -1) {
           src = src.slice(0, pi) + physReplace + src.slice(pi + physTarget.length);
@@ -943,10 +943,7 @@ class GameSocket {
   }
   respawnPlayer() {
     if (this.closed) return;
-    // No msg7 despawn here: the real server never despawns on respawn (3
-    // respawns in the duo capture, zero msg7 — it only despawns on player
-    // leave). The corpse fades client-side via the 0x60 anim; the same entity
-    // id then re-renders at the new spawn.
+    this.alloc.broadcast([encode('N27s83WCNi', { id: this.me.id })], this);
     this.alloc.respawn(this.me);
     this.spawnPending = true;
     this.send([
@@ -973,6 +970,7 @@ class GameSocket {
     this.me.ammo = WEAPON_AMMO[this.me.weaponType] || 40;
     if (!this.me.alive) {
       this.cancelRespawn();
+      this.alloc.broadcast([encode('N27s83WCNi', { id: this.me.id })], this);
       this.alloc.respawn(this.me);
     }
     if (needsSpawn) {
