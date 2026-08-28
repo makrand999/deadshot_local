@@ -1,0 +1,21 @@
+{
+  "name": "deadshot-gameplay-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/src/gameplay-server.mjs",
+    "two": "node tools/launch-two-windows.mjs",
+    "electron": "node tools/electron-two.mjs",
+    "manual": "node tools/electron-two-manual.mjs",
+    "replay": "node ../tools/replay/replay-match.mjs",
+    "replay:fast": "node ../tools/replay/replay-match.mjs --speed 4",
+    "visual-replay": "node tools/visual-replay.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.21.2"
+  },
+  "devDependencies": {
+    "electron": "^43.4.0"
+  }
+}

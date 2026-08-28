@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "powershell",
+      "Shell(node tools/download-client.js)",
+      "Shell(node -e \"const fs=require('fs');const h=fs.readFileSync('client/index.html','utf8');console.log('len',h.length);console.log('first 400:');console.log(JSON.stringify(h.slice(0,400)));\")",
+      "Shell(node tools/fetch-hex.js)",
+      "Shell(node -e \" const fs=require('fs'); const hex=fs.readFileSync('raw/index.html.hex','utf8'); const html=Buffer.from(hex,'hex').toString('utf8'); fs.writeFileSync('raw/index.html.decoded', html); // decoded copy // find inline scripts const re=/<script(?![^>]*\\bsrc=)[^>]*>([\\s\\S]*?)<\\/script>/g; let m, blocks=[], i=0; while((m=re.exec(html))){ blocks.push({i:i++, len:m[1].length, start:m.index}); } blocks.sort((a,b)=>b.len-a.len); console.log('inline script blocks:', blocks.length); console.log('largest 3:', blocks.slice(0,3)); const big=blocks[0]; const script=html.slice(big.start); const open=script.indexOf('>')+1; const close=script.lastIndexOf('</script>'); const code=script.slice(open, close); fs.writeFileSync('raw/game.js', code); console.log('game.js len:', code.length); \")",
+      "Shell(node -e \" const fs=require('fs'); console.log('game.js exists:', fs.existsSync('raw/game.js')); if(fs.existsSync('raw/game.js')) console.log('game.js len:', fs.statSync('raw/game.js').size); const html=fs.readFileSync('raw/index.html.decoded','utf8'); console.log('decoded len:', html.length); console.log('first 300:', JSON.stringify(html.slice(0,300))); console.log('script tag count:', (html.match(/<script/g)||[]).length); \")",
+      "Shell(node -e \" const fs=require('fs'); console.log('hex exists:', fs.existsSync('raw/index.html.hex')); console.log('decoded exists:', fs.existsSync('raw/index.html.decoded')); console.log('game.js exists:', fs.existsSync('raw/game.js')); if(fs.existsSync('raw/index.html.decoded')){ const html=fs.readFileSync('raw/index.html.decoded','utf8'); console.log('decoded len:', html.length); console.log('script tags:', (html.match(/<script/g)||[]).length); } \")",
+      "Shell(node -e \"console.log('node alive'); const fs=require('fs'); try { console.log(fs.readdirSync('.').join(', ')); } catch(e) { console.log('ERR '+e.message); }\")",
+      "Shell(node -e \" const fs=require('fs'); for (const p of ['raw/index.html.hex','raw/index.html.decoded','raw/game.js','raw/index.html']) { let info='missing'; try { const st=fs.statSync(p); info='size='+st.size; } catch(e){ info='ERR '+e.code; } console.log(p, '->', info); } \")",
+      "Shell(node -e \" const fs=require('fs'); const p='raw/index.html.hex'; try { const buf = fs.readFileSync(p); console.log('READ OK, bytes:', buf.length); } catch (e) { console.log('READ FAILED:', e.code, e.message); } process.exit(0); \")",
+      "Shell(node -e \" const fs=require('fs'); const tests=['raw/index.html','raw/index.html.hex','raw/index.html.decoded','tools/download-client.js','package.json']; for(const p of tests){ try{ const b=fs.readFileSync(p); console.log(p,'OK',b.length); } catch(e){ console.log(p,'FAIL',e.code); } } \")",
+      "Shell(node -e \"process.stderr.write('stderr-test\\n'); process.stdout.write('stdout-test\\n');\")",
+      "Shell(node -e \"const fs=require('fs'); console.log('fs loaded', typeof fs.readFileSync);\")",
+      "Shell(node -e \"const fs=require('fs'); const p='tools/download-client.js'; const b=fs.readFileSync(p); console.log('read', b.length);\")",
+      "Shell(node -e \"const fs=require('fs'); const p='raw/index.html.hex'; const b=fs.readFileSync(p); console.log('read hex', b.length);\")",
+      "Shell(node tools/extract-game.js)",
+      "Shell(node -e \" const fs=require('fs'); const s=fs.readFileSync('raw/game.js','utf8'); console.log('=== HEAD 1500 ==='); console.log(s.slice(0,1500)); console.log('=== WS refs ==='); const ws=[...s.matchAll(/[wW]eb[Ss]ocket/g)].map(m=>m.index); console.log('WebSocket occurrences:', ws.length, ws.slice(0,20)); \")",
+      "Shell(node -e \" const fs=require('fs'); const s=fs.readFileSync('raw/game.js','utf8'); console.log(s.slice(0,800)); \")",
+      "Shell(node -e \"const fs=require('fs'); const b=fs.readFileSync('raw/game.js'); console.log('bytes', b.length);\")"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

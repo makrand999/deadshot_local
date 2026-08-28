@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Deadshot No Recoil Test",
+  "version": "1.0",
+  "description": "Zeroes weapon spread in deadshot.io for protocol testing",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://deadshot.io/*",
+        "https://*.deadshot.io/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": ["inject.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_origin_as_fallback": true,
+      "world": "MAIN"
+    }
+  ],
+  "host_permissions": [
+    "https://deadshot.io/*",
+    "https://*.deadshot.io/*"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "name": "deadshot-lan",
+  "version": "0.1.0",
+  "description": "deadshot.io LAN app — offline, self-hosted",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://example.invalid/deadshot-lan.git"
+  },
+  "type": "module",
+  "main": "main.mjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "prepare:app": "node prepare.mjs",
+    "dist:linux": "node prepare.mjs && electron-builder --linux AppImage"
+  },
+  "build": {
+    "appId": "lan.deadshot.app",
+    "productName": "Deadshot LAN",
+    "files": [
+      "main.mjs",
+      "preload.js"
+    ],
+    "extraResources": [
+      {
+        "from": "../client",
+        "to": "client"
+      },
+      {
+        "from": "../raw/final.pkg",
+        "to": "raw/final.pkg"
+      },
+      {
+        "from": "../raw/final.pkg.gz",
+        "to": "raw/final.pkg.gz"
+      },
+      {
+        "from": "embedded-server/index.mjs",
+        "to": "server/index.mjs"
+      },
+      {
+        "from": "embedded-server/msgpack.mjs",
+        "to": "server/msgpack.mjs"
+      },
+      {
+        "from": "embedded-server/subtle-shim.js",
+        "to": "server/subtle-shim.js"
+      },
+      {
+        "from": "embedded-server/match.mjs",
+        "to": "server/match.mjs"
+      },
+      {
+        "from": "../packages/protocol",
+        "to": "packages/protocol"
+      },
+      {
+        "from": "../server/node_modules",
+        "to": "node_modules"
+      }
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Game"
+    },
+    "publish": {
+      "provider": "generic",
+      "url": "https://example.invalid/deadshot-lan"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  }
+}
