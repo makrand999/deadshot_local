@@ -63,6 +63,10 @@ export class GlooWallManager {
     return expiredList;
   }
 
+  clear() {
+    this.walls.clear();
+  }
+
   damage(wallId, dmg) {
     const wall = this.walls.get(wallId);
     if (!wall) return null;
