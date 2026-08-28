@@ -115,7 +115,7 @@ async function main() {
         const v3dMap = new Map((d.v3d || []).map((x) => [x.id, x.anim]));
         const wpns = (d.weapons || []).map((w) => 'w' + w[0] + '=' + w[1]).join(' ');
         const line = (d.v3 || []).map((e) => 'id' + e.id + ' v' + (e.visible ? 1 : 0) + ' m' + (e.model ? 1 : 0) + ' anim=' + (v3dMap.get(e.id) ?? '-') + ' p(' + (e.pos ? e.pos.x : '-') + ',' + (e.pos ? e.pos.y : '-') + ',' + (e.pos ? e.pos.z : '-') + ') h' + e.hp).join(' | ');
-        log('[' + label + '] self=' + d.selfId + (wpns ? ' [' + wpns + ']' : ''), line || '(no entities)');
+        log('[' + label + '] self=' + d.selfId + ' gloo=' + (d.glooMode ? (d.glooValid === null ? 'ON' : (d.glooValid ? 'ON/blue' : 'ON/hidden')) : 'off') + (d.glooHow ? '(' + d.glooHow + ')' : '') + ' dbg=' + (d.glooDbg ? ('er' + (d.glooDbg.erRan ? 1 : 0) + ' n' + d.glooDbg.n + ' min' + d.glooDbg.min + ' g' + (d.glooDbg.g ?? '-') + (d.glooDbg.err ? ' ERR:' + String(d.glooDbg.err).slice(0, 40) : '')) : '-') + (wpns ? ' [' + wpns + ']' : ''), line || '(no entities)');
         let errs = [];
         try { errs = await win.webContents.executeJavaScript('window.__dsErrors || []'); } catch {}
         if (errs.length) log('[' + label + '] PAGE ERRORS:', JSON.stringify(errs.slice(-5)));
@@ -131,11 +131,20 @@ async function main() {
   });
 
   function makeWindow(label) {
+    const isDebug = Boolean(process.env.DEBUG || process.env.DS_DEBUG || process.env.DEVTOOLS);
     const win = new BrowserWindow({
       width: 1280,
       height: 800,
       show: true,
-      webPreferences: { backgroundThrottling: false },
+      webPreferences: { backgroundThrottling: false, devTools: true },
+    });
+    if (isDebug) {
+      win.webContents.openDevTools({ mode: 'detach' });
+    }
+    win.webContents.on('before-input-event', (event, input) => {
+      if (input.key === 'F12' || (input.control && input.shift && input.key.toLowerCase() === 'i')) {
+        win.webContents.toggleDevTools();
+      }
     });
     win.webContents.on('console-message', (...args) => {
       let level = 'log', message = String(args[0]);
@@ -146,7 +155,7 @@ async function main() {
         level = args[0];
         message = String(args[1]);
       }
-      if (level === 'error' || level === 'warning' || level === 3 || level === 2) {
+      if (isDebug || level === 'error' || level === 'warning' || level === 3 || level === 2) {
         log('[' + label + '] console:', message.slice(0, 300));
       }
     });

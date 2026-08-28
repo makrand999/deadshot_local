@@ -20,7 +20,14 @@ export class GlooWallManager {
     this.nextId = 1;
   }
 
-  spawnWall(ownerId, x, y, z, yaw) {
+  spawnWall(ownerId, x, y, z, yaw, attachId = 0) {
+    // Free-attachment policy: wall placement (incl. gloo-on-gloo, stacks, and
+    // flush side attaches) is decided by the client's LOS solver and may
+    // intentionally interpenetrate other walls. The server keeps authority
+    // over range/limits/TTL and just records the attachment target.
+    if (![x, y, z, yaw].every(Number.isFinite)) {
+      return { wall: null, expired: null, attachId: attachId | 0 };
+    }
     let expired = null;
     // Enforce maxPerPlayer limit (oldest wall owned by player despawns)
     const playerWalls = [...this.walls.values()].filter((w) => w.ownerId === ownerId);
@@ -39,6 +46,7 @@ export class GlooWallManager {
       y: Number(y) || 0,
       z: Number(z) || 0,
       yaw: Number(yaw) || 0,
+      attachId: attachId | 0,
       hp: this.baseHp,
       maxHp: this.baseHp,
       radius: this.radius,

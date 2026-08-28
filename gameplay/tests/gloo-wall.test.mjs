@@ -98,3 +98,35 @@ test('Character Collision - Closest-boundary pushout & Top platform landing', ()
   assert.ok(canLand, 'Player feet at top edge should be eligible for landing');
 });
 
+test('GlooWallManager - Free attachment policy (gloo-on-gloo) & guards', () => {
+  const mgr = new GlooWallManager({ baseHp: 400 });
+
+  // Free attachment: deploying onto/into an existing wall is legal (client
+  // solver decides placement; server records the attachment target).
+  const base = mgr.spawnWall(0, 0, 0, 0, 0);
+  assert.ok(base.wall, 'base wall spawns');
+
+  const onTop = mgr.spawnWall(0, 0, 2.5, 0, 0, base.wall.id);
+  assert.ok(onTop.wall, 'stacked wall (gloo-on-gloo) allowed');
+  assert.equal(onTop.wall.attachId, base.wall.id, 'attachId stored on wall record');
+
+  const flush = mgr.spawnWall(0, 0.5, 0, 0.2, 0, 0);
+  assert.ok(flush.wall, 'interpenetrating wall allowed under free attachment');
+
+  // Default attachId = 0 (map surface)
+  assert.equal(base.wall.attachId, 0, 'map attachment recorded as 0');
+
+  // Non-finite coordinates -> rejected without side effects
+  const before = mgr.walls.size;
+  const bad = mgr.spawnWall(0, NaN, 0, 0, 0);
+  assert.equal(bad.wall, null, 'NaN coords rejected');
+  assert.equal(mgr.walls.size, before, 'no wall created for NaN coords');
+
+  // Per-player limit still applies
+  const lim = new GlooWallManager({ maxPerPlayer: 1 });
+  const l1 = lim.spawnWall(0, 0, 0, 0, 0);
+  const l2 = lim.spawnWall(0, 20, 0, 20, 0);
+  assert.ok(l2.expired, 'limit eviction still fires');
+  assert.equal(l2.expired.id, l1.wall.id);
+});
+
