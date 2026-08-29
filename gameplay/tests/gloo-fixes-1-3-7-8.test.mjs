@@ -109,7 +109,7 @@ test('Gloo Fix 3: __gloo:clear removes meshes without disposing shared geometry/
   assert.equal(context.window.__dsGlooList.length, 0, 'Gloo list should be empty');
 });
 
-test('Gloo Fix 7: WM input hook ignores key repeat (holding Q)', () => {
+test('Gloo Fix 7: WM input hook equips stance on Q (no direct deploy) and deploys on click', () => {
   const context = {
     window: {},
     document: { addEventListener: () => {}, activeElement: null },
@@ -125,17 +125,14 @@ test('Gloo Fix 7: WM input hook ignores key repeat (holding Q)', () => {
   let deployCalls = 0;
   context.window.__dsGlooQuickDeploy = () => { deployCalls++; };
 
-  // First press (repeat = false)
+  // Pressing Q should equip stance without deploying
   vm.runInContext('WM({ type: "keydown", code: "KeyQ", repeat: false })', context);
-  assert.equal(deployCalls, 1, 'First keydown should trigger quick deploy');
+  assert.equal(context.window.__dsGlooState.equipped, true, 'Q should set stance to equipped');
+  assert.equal(deployCalls, 0, 'Q MUST NOT deploy a wall directly');
 
-  // Repeated keydown while held (repeat = true)
-  vm.runInContext('WM({ type: "keydown", code: "KeyQ", repeat: true })', context);
-  assert.equal(deployCalls, 1, 'Repeat keydown MUST be ignored');
-
-  // Another repeated event
-  vm.runInContext('WM({ type: "keydown", code: "KeyQ", repeat: true })', context);
-  assert.equal(deployCalls, 1, 'Subsequent repeat keydowns MUST be ignored');
+  // Left click (keyCode 300) while equipped should trigger deploy
+  vm.runInContext('WM({ keyCode: 300 }, true)', context);
+  assert.equal(deployCalls, 1, 'Left click while equipped should deploy Gloo Wall');
 });
 
 test('Gloo Fix 8: Raycaster and Vector3 instances are reused without per-frame allocations', () => {

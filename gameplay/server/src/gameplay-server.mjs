@@ -96,7 +96,7 @@ const BUNDLE_PATCH_SRC = `;(function(){
         var wmAnchor = "function WM(a3o,a3p){";
         var wmi = src.indexOf(wmAnchor);
         if (wmi !== -1) {
-          var wmCode = "try{if(document.activeElement&&(document.activeElement.tagName==='INPUT'||document.activeElement.tagName==='TEXTAREA'))return;if(a3o.type==='keydown'){if(a3o.repeat)return;if(a3o.keyCode===81||a3o.code==='KeyQ'||a3o.key==='q'||a3o.key==='Q'){if(window.__dsGlooQuickDeploy)window.__dsGlooQuickDeploy();}}}catch(e){}";
+          var wmCode = "try{if(document.activeElement&&(document.activeElement.tagName==='INPUT'||document.activeElement.tagName==='TEXTAREA'))return;var _k=a3o?(a3o.keyCode||a3o.which):0;if(a3o&&a3o.type==='keydown'){if(!a3o.repeat){if(_k===81||a3o.code==='KeyQ'||a3o.key==='q'||a3o.key==='Q'){if(window.__dsGlooState)window.__dsGlooState.equip();return;}else if(_k===82||a3o.code==='KeyR'||a3o.key==='r'||a3o.key==='R'){if(window.__dsGlooState&&window.__dsGlooState.equipped){window.__dsGlooState.unequip();return;}}else if(_k===49||_k===50||_k===51||a3o.code==='Digit1'||a3o.code==='Digit2'||a3o.code==='Digit3'){if(window.__dsGlooState)window.__dsGlooState.unequip();}}}else if(_k===300||(a3o&&a3o.button===0)||(a3o&&a3o.type==='mousedown')){if(window.__dsGlooState&&window.__dsGlooState.equipped){if(typeof Wt!=='undefined')Wt=false;if(a3o.type!=='keyup'&&a3p!==false){if(window.__dsGlooQuickDeploy)window.__dsGlooQuickDeploy();}return;}}}catch(e){}";
           src = src.slice(0, wmi + wmAnchor.length) + wmCode + src.slice(wmi + wmAnchor.length);
         }
         // Gloo Wall Packet Interception: patch kM86hVW024 directly in a0I before J3 binding
