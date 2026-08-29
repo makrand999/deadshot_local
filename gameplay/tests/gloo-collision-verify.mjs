@@ -10,7 +10,7 @@ import { GlooWallManager } from '../server/src/gloo-wall-manager.mjs';
 const wallH     = 2.50;
 const maxX      = 1.95;
 const halfThick = 0.23;
-const pRadius   = 0.15;
+const pRadius   = 0.45;
 
 // ── Helper: simulate __dsResolveGlooCollision for a single wall at origin ───
 // Wall is at (wx=0, wy=0, wz=0), yaw=0 → rotY = yaw + PI = PI
@@ -33,7 +33,7 @@ function simulateCollision(px, py, pz, vx = 0, vz = 0) {
 
   // Top-platform check
   if (pFoot >= wyTop - 0.35) {
-    if (Math.abs(lx) <= maxX + 0.15 && lz >= inLimit - 0.15 && lz <= outLimit + 0.15) {
+    if (Math.abs(lx) <= maxX + 0.25 && lz >= inLimit - 0.25 && lz <= outLimit + 0.25) {
       if (pFoot < wyTop) {
         result.newPy = wyTop + 2.4;
         result.landed = true;
@@ -46,35 +46,41 @@ function simulateCollision(px, py, pz, vx = 0, vz = 0) {
   if (pHead < wy || pFoot > wyTop) return result;
 
   // Body collision
-  let collided = false, resLx = lx, resLz = lz;
+  const slopeX = 0.54 * clampedX;
+  const nLen = Math.sqrt(slopeX * slopeX + 1.0) || 1.0;
+  const nX = slopeX / nLen;
+  const nZ = 1.0 / nLen;
+
+  const dMid = (lx - clampedX) * nX + (lz - zMid) * nZ;
+  const isOuter = (dMid >= 0);
+  const sign = isOuter ? 1.0 : -1.0;
+  const requiredClearance = halfThick + pRadius;
+
+  let collided = false, pushoutDist = 0;
   let locNormX = 0, locNormZ = 1;
 
   if (Math.abs(lx) <= maxX) {
-    if (lz >= inLimit && lz <= outLimit) {
-      const isOuter = (lz >= zMid);
-      resLz = isOuter ? outLimit : inLimit;
-      const slopeX = 0.54 * lx;
-      const nLen = Math.sqrt(slopeX * slopeX + 1) || 1;
-      const sign = isOuter ? 1 : -1;
-      locNormX = sign * (slopeX / nLen);
-      locNormZ = sign * (1.0 / nLen);
+    if (Math.abs(dMid) < requiredClearance) {
       collided = true;
+      pushoutDist = requiredClearance - Math.abs(dMid);
+      locNormX = sign * nX;
+      locNormZ = sign * nZ;
     }
   } else {
     const capX = (lx > 0 ? 1 : -1) * maxX;
     const capZ = 0.71 - 0.27 * (maxX * maxX);
-    const dX = lx - capX, dZ = lz - capZ;
-    const dist = Math.sqrt(dX * dX + dZ * dZ) || 1e-4;
-    const capLimit = halfThick + pRadius;
-    if (dist < capLimit) {
-      locNormX = dX / dist;
-      locNormZ = dZ / dist;
-      resLx = capX + locNormX * capLimit;
-      resLz = capZ + locNormZ * capLimit;
+    const dCapX = lx - capX, dCapZ = lz - capZ;
+    const distCap = Math.sqrt(dCapX * dCapX + dCapZ * dCapZ) || 1e-4;
+    if (distCap < requiredClearance) {
       collided = true;
+      pushoutDist = requiredClearance - distCap;
+      locNormX = dCapX / distCap;
+      locNormZ = dCapZ / distCap;
     }
   }
 
+  const resLx = lx + locNormX * pushoutDist;
+  const resLz = lz + locNormZ * pushoutDist;
   if (collided) {
     const pushX = wx + resLx * Math.cos(rotY) + resLz * Math.sin(rotY);
     const pushZ = wz - resLx * Math.sin(rotY) + resLz * Math.cos(rotY);
@@ -88,8 +94,8 @@ function simulateCollision(px, py, pz, vx = 0, vz = 0) {
     // Project velocity along tangent (cancel penetration component)
     const vDotN = vx * normX + vz * normZ;
     if (vDotN < 0) {
-      result.newVx = vx - vDotN * normX;
-      result.newVz = vz - vDotN * normZ;
+      result.newVx = (vx - vDotN * normX) * 0.95;
+      result.newVz = (vz - vDotN * normZ) * 0.95;
     }
   }
 
@@ -196,7 +202,7 @@ test('Verify: Tangential velocity along curved face is preserved (smooth sliding
   // At lx=0, tangent is purely in X direction. Player moving with vx=3.0, vz=1.0 (moving diagonally into wall)
   const res = simulateCollision(0, 2.4, -1.0, 3.0, 1.0);
   assert.ok(res.collided, 'Should collide');
-  assert.ok(Math.abs(res.newVx - 3.0) < 0.001, `Tangent velocity vx=3.0 should be preserved, got ${res.newVx}`);
+  assert.ok(Math.abs(res.newVx - 2.85) < 0.001, `Tangent velocity with 0.95 wall friction should be 2.85, got ${res.newVx}`);
   assert.ok(Math.abs(res.newVz) < 0.001, `Penetration velocity vz=1.0 should be canceled, got ${res.newVz}`);
 });
 
