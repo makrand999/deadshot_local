@@ -88,24 +88,39 @@ test("Free Fire State Machine: Left-click while Gloo equipped deploys wall and s
   assert.ok(deployedCmd, "Left click must deploy Gloo Wall when equipped");
 });
 
-test("Free Fire State Machine: Pressing R resumes gun mode and disables Gloo deploy on click", () => {
+test("Free Fire State Machine: First R press in Gloo stance is consumed for stance switch (no reload), subsequent R triggers reload", () => {
   const { context, keydownListeners, mousedownListeners } = setupEnvironment();
   context.window.__dsGlooState.equip();
+  assert.equal(context.window.__dsGlooEquipped, true);
 
-  // Press R
+  // First press of R while equipped
+  let firstRPrevented = false;
   const keyHandler = keydownListeners[0];
-  keyHandler({ keyCode: 82, code: "KeyR", key: "r", repeat: false });
+  keyHandler({
+    keyCode: 82,
+    code: "KeyR",
+    key: "r",
+    repeat: false,
+    preventDefault: () => { firstRPrevented = true; },
+    stopPropagation: () => {},
+  });
 
-  assert.equal(context.window.__dsGlooEquipped, false, "R must set Gloo Equipped to false (gun mode resumed)");
+  assert.equal(context.window.__dsGlooEquipped, false, "First R should switch stance to unequipped");
+  assert.equal(firstRPrevented, true, "First R must be consumed (preventDefault) so weapon reload is NOT triggered");
 
-  // Left click should no longer deploy Gloo Wall
-  let deployCalled = false;
-  context.window.__dsSendGlooDeploy = () => { deployCalled = true; return "ok"; };
+  // Second press of R while in normal gun mode
+  let secondRPrevented = false;
+  keyHandler({
+    keyCode: 82,
+    code: "KeyR",
+    key: "r",
+    repeat: false,
+    preventDefault: () => { secondRPrevented = true; },
+    stopPropagation: () => {},
+  });
 
-  const mousedownHandler = mousedownListeners[0];
-  mousedownHandler({ button: 0, preventDefault: () => {}, stopPropagation: () => {} });
-
-  assert.equal(deployCalled, false, "Left click in gun mode must NOT deploy Gloo Wall");
+  assert.equal(context.window.__dsGlooEquipped, false, "Stance remains unequipped");
+  assert.equal(secondRPrevented, false, "Subsequent R must NOT be consumed, allowing normal weapon reload to proceed");
 });
 
 test("Free Fire State Machine: Pressing 1, 2, or 3 weapon slots also exits Gloo mode", () => {
