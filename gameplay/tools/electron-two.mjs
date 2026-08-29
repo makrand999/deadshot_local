@@ -17,7 +17,10 @@ const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const DUMP_PATH = '/tmp/opencode/electron-dump.json';
-const LOG_PATH = '/tmp/opencode/electron-server.log';
+const SERVER_LOG_PATH = '/tmp/opencode/electron-server.log';
+const SESSION_LOG_PATH = '/tmp/opencode/electron-session.log';
+const WIN_A_LOG_PATH = '/tmp/opencode/electron-windowA.log';
+const WIN_B_LOG_PATH = '/tmp/opencode/electron-windowB.log';
 const PORT = 8080;
 
 // ---------------------------------------------------------------------------
@@ -25,7 +28,7 @@ const PORT = 8080;
 // ---------------------------------------------------------------------------
 if (!process.versions.electron) {
   const electronPath = require('electron');
-  const child = spawn(electronPath, [process.argv[1]], { stdio: 'inherit' });
+  const child = spawn(electronPath, [process.argv[1]], { stdio: 'inherit', env: process.env });
   child.on('exit', (code, signal) => process.exit(code == null ? 0 : code));
   child.on('error', (e) => { console.error('electron spawn failed:', e); process.exit(1); });
 } else {
@@ -44,6 +47,17 @@ async function main() {
   app.commandLine.appendSwitch('no-first-run');
   app.commandLine.appendSwitch('disable-background-timer-throttling');
 
+  fs.mkdirSync('/tmp/opencode', { recursive: true });
+  fs.writeFileSync(SESSION_LOG_PATH, '');
+  fs.writeFileSync(WIN_A_LOG_PATH, '');
+  fs.writeFileSync(WIN_B_LOG_PATH, '');
+  fs.writeFileSync(SERVER_LOG_PATH, '');
+
+  const sessionLogStream = fs.createWriteStream(SESSION_LOG_PATH, { flags: 'a' });
+  const winALogStream = fs.createWriteStream(WIN_A_LOG_PATH, { flags: 'a' });
+  const winBLogStream = fs.createWriteStream(WIN_B_LOG_PATH, { flags: 'a' });
+
+  const consoleLogs = { A: [], B: [] };
   const consoleErrors = { A: [], B: [] };
   let server = null;
   let serverKilled = false;
@@ -51,7 +65,13 @@ async function main() {
 
   process.stdout.on('error', (e) => { if (e.code !== 'EPIPE') throw e; });
   process.stderr.on('error', (e) => { if (e.code !== 'EPIPE') throw e; });
-  const log = (...a) => { try { console.log('[' + new Date().toISOString().slice(11, 23) + ']', ...a); } catch {} };
+  
+  const log = (...a) => {
+    const ts = '[' + new Date().toISOString().slice(11, 23) + ']';
+    const line = ts + ' ' + a.map((x) => (typeof x === 'object' ? JSON.stringify(x) : String(x))).join(' ');
+    try { console.log(line); } catch {}
+    try { sessionLogStream.write(line + '\n'); } catch {}
+  };
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
   function killServer() {
@@ -60,6 +80,9 @@ async function main() {
   function cleanup() {
     killServer();
     try { for (const w of windows) w.destroy(); } catch {}
+    try { sessionLogStream.end(); } catch {}
+    try { winALogStream.end(); } catch {}
+    try { winBLogStream.end(); } catch {}
   }
   process.on('exit', cleanup);
   process.on('SIGINT', () => { cleanup(); process.exit(0); });
@@ -75,13 +98,25 @@ async function main() {
     }
   } catch {}
 
-  fs.mkdirSync(path.dirname(LOG_PATH), { recursive: true });
-  fs.writeFileSync(LOG_PATH, '');
-  const outLog = fs.openSync(LOG_PATH, 'a');
+  const serverLogStream = fs.createWriteStream(SERVER_LOG_PATH, { flags: 'a' });
+  let killCount = 0;
   server = spawn('node', ['server/src/gameplay-server.mjs'], {
     cwd: ROOT,
-    stdio: ['ignore', outLog, outLog],
+    stdio: ['ignore', 'pipe', 'pipe'],
+    env: { ...process.env, GP_HITDBG: '1' },
   });
+  const onServerData = (chunk) => {
+    try { serverLogStream.write(chunk); } catch {}
+    const lines = chunk.toString().split('\n');
+    for (const l of lines) {
+      if (l.includes('combat KILL')) {
+        killCount++;
+        log(`[KILL EVENT #${killCount}] ${l.trim()}`);
+      }
+    }
+  };
+  server.stdout?.on('data', onServerData);
+  server.stderr?.on('data', onServerData);
   server.on('exit', (code) => { if (code && !serverKilled) log('server exited', code); });
   server.unref?.();
 
@@ -90,7 +125,10 @@ async function main() {
   // Wait for the HTTP server to answer.
   await waitHttp();
 
-  windows = [makeWindow('A', consoleErrors.A, log), makeWindow('B', consoleErrors.B, log)];
+  windows = [
+    makeWindow('A', consoleLogs.A, consoleErrors.A, winALogStream, log),
+    makeWindow('B', consoleLogs.B, consoleErrors.B, winBLogStream, log),
+  ];
   const [A, B] = windows;
 
   // 1. Both windows must load the patched bundle.
@@ -160,38 +198,82 @@ async function main() {
   log('Gloo Walls in Window A:', JSON.stringify(glooWallsA));
   log('Gloo Walls in Window B:', JSON.stringify(glooWallsB));
 
-  log('settling 5s');
-  await sleep(5000);
+  const targetKills = Number(process.env.DS_KILLS || 5);
+  const maxSettleSec = Number(process.env.DS_TIME || process.env.GP_DURATION || 120);
+  log(`listening for ${targetKills} kills (or max ${maxSettleSec}s) with periodic state polling...`);
+  const settleEnd = Date.now() + maxSettleSec * 1000;
+  while (Date.now() < settleEnd) {
+    await sleep(2000);
+    const dObjA = await A.webContents.executeJavaScript('window.__dsDiag && window.__dsDiag.dump()').catch(() => ({}));
+    const dObjB = await B.webContents.executeJavaScript('window.__dsDiag && window.__dsDiag.dump()').catch(() => ({}));
+    const aHp = dObjA?.v3?.[0]?.hp;
+    const bHp = dObjB?.v3?.[0]?.hp;
+    const aPos = dObjA?.v3?.[0]?.pos;
+    const bPos = dObjB?.v3?.[0]?.pos;
+    const aVis = dObjA?.v3?.[0]?.visible;
+    const bVis = dObjB?.v3?.[0]?.visible;
+    log(`[POLL | Kills: ${killCount}/${targetKills}] A sees enemy@(${aPos?.x !== undefined ? aPos.x.toFixed(1) : '-'}, ${aPos?.z !== undefined ? aPos.z.toFixed(1) : '-'}) hp=${aHp ?? '-'} vis=${aVis} | B sees enemy@(${bPos?.x !== undefined ? bPos.x.toFixed(1) : '-'}, ${bPos?.z !== undefined ? bPos.z.toFixed(1) : '-'}) hp=${bHp ?? '-'} vis=${bVis}`);
+    if (killCount >= targetKills) {
+      log(`Reached target ${targetKills} overall kills! Waiting 3s to capture final state...`);
+      await sleep(3000);
+      break;
+    }
+  }
 
-  // 8. Final diagnostic dumps.
-  const dumpA = await A.webContents.executeJavaScript('window.__dsDiag.dump()');
-  const dumpB = await B.webContents.executeJavaScript('window.__dsDiag.dump()');
+  // 8. Collect page errors & final diagnostic dumps.
+  const pageErrorsA = await A.webContents.executeJavaScript('window.__dsErrors || []').catch(() => []);
+  const pageErrorsB = await B.webContents.executeJavaScript('window.__dsErrors || []').catch(() => []);
+  const dumpA = await A.webContents.executeJavaScript('window.__dsDiag.dump()').catch(() => ({}));
+  const dumpB = await B.webContents.executeJavaScript('window.__dsDiag.dump()').catch(() => ({}));
+
   const result = {
     capturedAt: new Date().toISOString(),
     partyCode: code,
     patchA,
     patchB,
+    pageErrors: { A: pageErrorsA, B: pageErrorsB },
     consoleErrors: { A: consoleErrors.A, B: consoleErrors.B },
+    consoleLogsCount: { A: consoleLogs.A.length, B: consoleLogs.B.length },
     A: dumpA,
     B: dumpB,
+    glooWalls: { A: glooWallsA, B: glooWallsB },
+    logsSaved: {
+      sessionLog: SESSION_LOG_PATH,
+      windowALog: WIN_A_LOG_PATH,
+      windowBLog: WIN_B_LOG_PATH,
+      serverLog: SERVER_LOG_PATH,
+      dumpJson: DUMP_PATH,
+    },
   };
-  fs.mkdirSync(path.dirname(DUMP_PATH), { recursive: true });
   fs.writeFileSync(DUMP_PATH, JSON.stringify(result, null, 2));
-  log('dumps written to', DUMP_PATH);
+  log('diagnostic state dumped to', DUMP_PATH);
+  log('session log saved to', SESSION_LOG_PATH);
+  log('window A logs saved to', WIN_A_LOG_PATH);
+  log('window B logs saved to', WIN_B_LOG_PATH);
+  log('server logs saved to', SERVER_LOG_PATH);
 
   // 9. Human-readable summary on stdout.
-  printSummary(dumpA, dumpB, patchA, patchB, consoleErrors);
+  printSummary(dumpA, dumpB, patchA, patchB, consoleErrors, pageErrorsA, pageErrorsB);
 
   cleanup();
   app.exit(0);
 
   // ---- helpers ------------------------------------------------------------
-  function makeWindow(label, errArr, log) {
+  function makeWindow(label, logsArr, errArr, fileStream, log) {
+    const showDevTools = Boolean(process.env.DS_DEVTOOLS === '1');
     const win = new BrowserWindow({
       width: 1280,
       height: 800,
       show: true,
-      webPreferences: { backgroundThrottling: false },
+      webPreferences: { backgroundThrottling: false, devTools: true },
+    });
+    if (showDevTools) {
+      win.webContents.openDevTools({ mode: 'detach' });
+    }
+    win.webContents.on('before-input-event', (event, input) => {
+      if (input.key === 'F12' || (input.control && input.shift && input.key.toLowerCase() === 'i')) {
+        win.webContents.toggleDevTools();
+      }
     });
     win.webContents.on('console-message', (...args) => {
       let level = 'log', message = String(args[0]);
@@ -202,18 +284,26 @@ async function main() {
         level = args[0];
         message = String(args[1]);
       }
+      const entry = `[${level}] ${message}`;
+      logsArr.push(entry);
+      try { fileStream.write(`[${new Date().toISOString().slice(11, 23)}] ${entry}\n`); } catch {}
+
       if (level === 'error' || level === 'warning' || level === 3 || level === 2) {
-        if (errArr.length < 100) errArr.push(`[${level}] ${message}`);
+        if (errArr.length < 100) errArr.push(entry);
         log('[' + label + '] console:', message);
       }
     });
     win.webContents.on('did-fail-load', (_e, code, desc) => {
-      log('[' + label + '] did-fail-load', code, desc);
-      errArr.push(`did-fail-load ${code} ${desc}`);
+      const errStr = `did-fail-load ${code} ${desc}`;
+      log('[' + label + ']', errStr);
+      errArr.push(errStr);
+      try { fileStream.write(`[${new Date().toISOString().slice(11, 23)}] [ERROR] ${errStr}\n`); } catch {}
     });
     win.webContents.on('render-process-gone', (_e, det) => {
-      log('[' + label + '] renderer gone', det.reason);
-      errArr.push(`render-process-gone ${det.reason}`);
+      const errStr = `render-process-gone ${det.reason}`;
+      log('[' + label + ']', errStr);
+      errArr.push(errStr);
+      try { fileStream.write(`[${new Date().toISOString().slice(11, 23)}] [ERROR] ${errStr}\n`); } catch {}
     });
     win.loadURL('http://127.0.0.1:' + PORT + '/');
     return win;
@@ -245,7 +335,7 @@ async function main() {
   }
 }
 
-function printSummary(dumpA, dumpB, patchA, patchB, errs) {
+function printSummary(dumpA, dumpB, patchA, patchB, errs, pageErrsA, pageErrsB) {
   const line = (d, name) => {
     console.log(`\n=== ${name} (selfId=${d.selfId}, p9=${d.p9}) ===`);
     const list = (d.v3 || []).map((e) => {
@@ -259,4 +349,6 @@ function printSummary(dumpA, dumpB, patchA, patchB, errs) {
   line(dumpA, 'WINDOW A');
   line(dumpB, 'WINDOW B');
   console.log('\nconsole errors: A=', JSON.stringify(errs.A), ' B=', JSON.stringify(errs.B));
+  console.log('page errors (__dsErrors): A=', JSON.stringify(pageErrsA), ' B=', JSON.stringify(pageErrsB));
 }
+

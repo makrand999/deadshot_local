@@ -99,9 +99,16 @@ export class GlooWallManager {
     const surfaces = [0.94, 0.71, 0.48]; // outer face, midline, inner face
 
     for (const wall of this.walls.values()) {
+      const dx = sx - wall.x, dz = sz - wall.z;
+      // Fast spatial bounding pre-check: skip walls too far away or completely behind shooter
+      const wallRad = 2.5;
+      const distSq = dx * dx + dz * dz;
+      if (distSq > (bestDist + wallRad) * (bestDist + wallRad)) continue;
+      const dot = -(dx * dirX + dz * dirZ);
+      if (dot < -wallRad) continue;
+
       const rotY = wall.yaw + Math.PI;
       const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
-      const dx = sx - wall.x, dz = sz - wall.z;
       const ls_x = dx * cosY - dz * sinY;
       const ls_z = dx * sinY + dz * cosY;
       const ls_y = sy - wall.y;

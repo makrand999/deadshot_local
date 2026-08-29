@@ -73,6 +73,7 @@ async function main() {
   server = spawn('node', ['server/src/gameplay-server.mjs'], {
     cwd: ROOT,
     stdio: ['ignore', outLog, outLog],
+    env: { ...process.env, GP_ALLOC_TTL: '0', GP_MATCH_TIME: '3600' },
   });
   server.on('exit', (code) => { if (code && !serverKilled) log('server exited', code); });
   server.unref?.();
