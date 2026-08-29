@@ -61,7 +61,7 @@ test("Free Fire State Machine: Pressing Q equips Gloo without deploying immediat
 
 test("Free Fire State Machine: Left-click while Gloo equipped deploys wall and suppresses gun fire", () => {
   const { context, mousedownListeners } = setupEnvironment();
-  context.window.__dsGlooEquipped = true;
+  context.window.__dsGlooState.equip();
   context.Wt = true; // Pretend gun shooting was active
 
   let deployedCmd = null;
@@ -90,7 +90,7 @@ test("Free Fire State Machine: Left-click while Gloo equipped deploys wall and s
 
 test("Free Fire State Machine: Pressing R resumes gun mode and disables Gloo deploy on click", () => {
   const { context, keydownListeners, mousedownListeners } = setupEnvironment();
-  context.window.__dsGlooEquipped = true;
+  context.window.__dsGlooState.equip();
 
   // Press R
   const keyHandler = keydownListeners[0];
@@ -112,17 +112,17 @@ test("Free Fire State Machine: Pressing 1, 2, or 3 weapon slots also exits Gloo 
   const { context, keydownListeners } = setupEnvironment();
 
   // Test slot 1
-  context.window.__dsGlooEquipped = true;
+  context.window.__dsGlooState.equip();
   keydownListeners[0]({ keyCode: 49, code: "Digit1", key: "1", repeat: false });
   assert.equal(context.window.__dsGlooEquipped, false, "Slot 1 must exit Gloo mode");
 
   // Test slot 2
-  context.window.__dsGlooEquipped = true;
+  context.window.__dsGlooState.equip();
   keydownListeners[0]({ keyCode: 50, code: "Digit2", key: "2", repeat: false });
   assert.equal(context.window.__dsGlooEquipped, false, "Slot 2 must exit Gloo mode");
 
   // Test slot 3
-  context.window.__dsGlooEquipped = true;
+  context.window.__dsGlooState.equip();
   keydownListeners[0]({ keyCode: 51, code: "Digit3", key: "3", repeat: false });
   assert.equal(context.window.__dsGlooEquipped, false, "Slot 3 must exit Gloo mode");
 });
