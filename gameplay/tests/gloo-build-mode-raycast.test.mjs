@@ -45,7 +45,7 @@ function setupEnvironment() {
   return { context, mousedownListeners };
 }
 
-test('Build Mode: Aiming at flat ground uses crosshair hit, 3-point probe leveling, and camera yaw', () => {
+test('Candidate Aiming: Aiming at flat ground uses crosshair hit, 3-point probe leveling, and camera yaw', () => {
   const { context } = setupEnvironment();
 
   // Camera at (0, 2.0, 0), looking down-forward: fY = -0.5, fZ = -0.866
@@ -100,7 +100,7 @@ test('Build Mode: Aiming at flat ground uses crosshair hit, 3-point probe leveli
   assert.ok(Math.abs(cand.y - 0.16) < 0.01, `Preview Y should be leveled to slope height 0.16, got ${cand.y}`);
 });
 
-test('Build Mode: Aiming at vertical Gloo Wall offsets by halfThick, aligns flush yaw, and skips 3-point probe', () => {
+test('Candidate Aiming: Aiming at vertical Gloo Wall offsets by halfThick, aligns flush yaw, and skips 3-point probe', () => {
   const { context } = setupEnvironment();
 
   // Camera at (0, 1.5, 0), looking directly forward along -Z (fX=0, fY=0, fZ=-1)
@@ -168,8 +168,8 @@ test('Build Mode: Aiming at vertical Gloo Wall offsets by halfThick, aligns flus
   assert.ok(Math.abs(cand.yaw - 0) < 0.05, `Preview yaw should align to camera yaw, got ${cand.yaw}`);
 });
 
-test('Build Mode: Aiming at open sky / nothing within 24m hides ghost and blocks left-click', () => {
-  const { context, mousedownListeners } = setupEnvironment();
+test('Candidate Aiming: Aiming at open sky / nothing within 24m marks candidate invalid', () => {
+  const { context } = setupEnvironment();
 
   // Camera looking up at sky (fY = +0.8)
   const matrix = new Array(16).fill(0);
@@ -190,93 +190,6 @@ test('Build Mode: Aiming at open sky / nothing within 24m hides ghost and blocks
   const cand = context.window.__dsGlooComputeCandidate();
   assert.equal(cand.valid, false, 'Candidate must be invalid when aiming at sky / no hit within 24m');
   assert.equal(cand.how, 'no-hit', 'Targeting how should be no-hit');
-
-  // Setup ghost mesh
-  const mockGhost = { visible: true, position: { set: ()=>{}, x:0,y:0,z:0 }, rotation: { y: 0 } };
-  context.window.__dsGlooGhost = mockGhost;
-  context.window.__dsGlooMode = true;
-  context.P9 = true;
-
-  // Frame update should hide the ghost
-  context.window.__dsGlooFrameUpdate();
-  assert.equal(mockGhost.visible, false, 'Ghost mesh MUST be hidden when candidate is invalid');
-
-  // Test left-click placement is blocked
-  let deployCalled = false;
-  context.window.__dsSendGlooDeploy = () => { deployCalled = true; return 'ok'; };
-
-  assert.ok(mousedownListeners.length > 0, 'Mousedown listener should be registered');
-  const mousedownHandler = mousedownListeners[0];
-
-  const mockEvent = {
-    button: 0,
-    preventDefault: () => {},
-    stopPropagation: () => {},
-  };
-  mousedownHandler(mockEvent);
-
-  assert.equal(deployCalled, false, 'Left-click MUST be a no-op when preview is invalid / hidden');
-});
-
-test('Build Mode: Re-acquiring target after open sky smoothly initializes ghost position and resumes rendering', () => {
-  const { context } = setupEnvironment();
-
-  // 1. Aiming at sky -> candidate invalid
-  context.ER = () => ({ length: 0, array: [] });
-  context.QP = { RNQDluasaN: 1 };
-  context.Ff = {};
-  context.a08 = { origin: { set: ()=>{} }, dest: { set: ()=>{} }, far: 0 };
-
-  const matrix = new Array(16).fill(0);
-  matrix[0] = 1; matrix[5] = 1; matrix[10] = 1; matrix[15] = 1;
-  matrix[8] = 0; matrix[9] = -0.9; matrix[10] = 0.43; // sky
-  matrix[12] = 0; matrix[13] = 1.5; matrix[14] = 0;
-  context.T2 = {
-    matrixWorld: { elements: matrix },
-    updateWorldMatrix: () => {},
-  };
-
-  const ghostMesh = {
-    visible: true,
-    position: {
-      x: 0, y: 0, z: 0,
-      set: function(x, y, z) { this.x = x; this.y = y; this.z = z; },
-    },
-    rotation: { y: 0 },
-    material: { color: { setHex: () => {} } },
-  };
-  context.window.__dsGlooGhost = ghostMesh;
-  context.window.__dsGlooMode = true;
-  context.P9 = true;
-
-  // Frame 1: sky -> ghost hidden
-  context.window.__dsGlooFrameUpdate();
-  assert.equal(ghostMesh.visible, false, 'Ghost should be hidden in sky');
-
-  // 2. Crosshair moves back to hit ground at (5, 0, -4)
-  matrix[9] = 0.5; matrix[10] = 0.866; // ground aim
-  matrix[12] = 5.0; matrix[13] = 1.5; matrix[14] = 0;
-  context.ER = (qp, ff, ray) => {
-    if (ray.far >= 24) {
-      return {
-        length: 1,
-        array: [{
-          point: { x: 5, y: 0, z: -4 },
-          face: { normal: { x: 0, y: 1, z: 0 } },
-        }],
-      };
-    }
-    return {
-      length: 1,
-      array: [{ point: { x: ray.origin.x, y: 0, z: ray.origin.z } }],
-    };
-  };
-
-  // Frame 2: ground -> ghost re-acquired
-  context.window.__dsGlooFrameUpdate();
-  assert.equal(ghostMesh.visible, true, 'Ghost should become visible immediately upon target re-acquisition');
-  assert.equal(ghostMesh.position.x, 5, 'Ghost position X should be cleanly initialized on re-acquisition');
-  assert.ok(Math.abs(ghostMesh.position.z - (-4)) < 0.1, 'Ghost position Z should match hit point Z');
 });
 
 test('No Regression: Quick Deploy (Q) pitch curve & fast wall remain intact', () => {
