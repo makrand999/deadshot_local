@@ -130,3 +130,28 @@ test('GlooWallManager - Free attachment policy (gloo-on-gloo) & guards', () => {
   assert.equal(l2.expired.id, l1.wall.id);
 });
 
+test('GlooWallManager - Recoil spray raycasting respects deflected bullet vectors', () => {
+  const mgr = new GlooWallManager({ baseHp: 400 });
+  mgr.spawnWall(0, 0, 0, 10, 0); // Wall at (0, 0, 10) facing -Z, span x in [-1.95, 1.95], y in [0, 2.40]
+
+  const sx = 0, sy = 1.25, sz = 0;
+
+  // 1. Recoil on-target (bullet hits center of wall at y = 1.25m, z = 10m)
+  const hitCenter = mgr.raycast(sx, sy, sz, 0, 0, 1, 100);
+  assert.ok(hitCenter, 'Bullet hitting wall along recoil trajectory is blocked');
+  assert.ok(hitCenter.dist < 10.0, 'Hit distance is outer face (~9.06m)');
+
+  // 2. Recoil climbs upward (pitch +0.15 rad -> reaches y = 2.76m at z = 10m, higher than 2.40m)
+  const dirClimbY = 0.15 / Math.hypot(0.15, 0.988);
+  const dirClimbZ = 0.988 / Math.hypot(0.15, 0.988);
+  const hitOver = mgr.raycast(sx, sy, sz, 0, dirClimbY, dirClimbZ, 100);
+  assert.equal(hitOver, null, 'Bullet climbing over 2.40m wall passes through cleanly');
+
+  // 3. Recoil kicks wide left (yaw deflection -> reaches x = -2.25m at z = 10m, past 1.95m span)
+  const dirWideX = -0.22 / Math.hypot(0.22, 0.975);
+  const dirWideZ = 0.975 / Math.hypot(0.22, 0.975);
+  const hitWide = mgr.raycast(sx, sy, sz, dirWideX, 0, dirWideZ, 100);
+  assert.equal(hitWide, null, 'Bullet kicking wide past side edge passes through cleanly');
+});
+
+

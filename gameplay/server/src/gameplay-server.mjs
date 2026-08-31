@@ -121,6 +121,13 @@ const BUNDLE_PATCH_SRC = `;(function(){
         if (kci !== -1) {
           src = src.slice(0, kci) + kickReplace + src.slice(kci + kickTarget.length);
         }
+        // Gloo Wall Bullet Absorption Hook in a1U (client raycast interception)
+        var a3KTarget = "var a3K=ER(QP,Ff,a08),a3L,a3M,a3N=lrRnpundBY('T1P0J19B02U');";
+        var a3KReplace = "var a3K=ER(QP,Ff,a08);if(window.__dsRaycastGlooWalls&&a08&&a08.origin&&a08.klYMxzxpTL){var _gw=window.__dsRaycastGlooWalls(a08.origin.x,a08.origin.y,a08.origin.z,a08.klYMxzxpTL.x,a08.klYMxzxpTL.y,a08.klYMxzxpTL.z,120);if(_gw&&(!a3K||!a3K.length||_gw.dist<a3K.array[0].distance||_gw.dist<a08.far)){a3K={length:1,array:[{distance:_gw.dist,point:_gw.point,face:{normal:_gw.normal},normal:_gw.normal}]};}}var a3L,a3M,a3N=lrRnpundBY('T1P0J19B02U');";
+        var a3ki = src.indexOf(a3KTarget);
+        if (a3ki !== -1) {
+          src = src.slice(0, a3ki) + a3KReplace + src.slice(a3ki + a3KTarget.length);
+        }
         // First-Person Viewmodel Hook: capture WX to toggle weapon and arms visibility
         var wxAnchor = "T2['add'](WX),WV['add'](Td);";
         var wxi = src.indexOf(wxAnchor);
@@ -528,18 +535,22 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081 } = {}) {
         let pointLen = Infinity;
         const yaw = Number.isFinite(shot.uBHZYKAHa) ? shot.uBHZYKAHa + Math.PI : 0;
         const pitch = Number.isFinite(shot.JoHdvmpcMvL) ? shot.JoHdvmpcMvL : 0;
-        const dirX = Math.sin(yaw) * Math.cos(pitch);
-        const dirY = Math.sin(pitch);
-        const dirZ = Math.cos(yaw) * Math.cos(pitch);
-        const hDirLenSq = dirX * dirX + dirZ * dirZ;
+        let dirX = Math.sin(yaw) * Math.cos(pitch);
+        let dirY = Math.sin(pitch);
+        let dirZ = Math.cos(yaw) * Math.cos(pitch);
 
         if (hasPoint) {
           const px = shot.AHPhtLFTi, py = shot.mGOwFesuTt, pz = shot.MHnEcbTxpbz;
-          const pDot = (px - sx) * dirX + (py - sy) * dirY + (pz - sz) * dirZ;
-          if (pDot > 0) {
-            pointLen = Math.hypot(px - sx, py - sy, pz - sz);
+          const bDx = px - sx, bDy = py - sy, bDz = pz - sz;
+          const bLen = Math.hypot(bDx, bDy, bDz);
+          if (bLen > 0.01) {
+            dirX = bDx / bLen;
+            dirY = bDy / bLen;
+            dirZ = bDz / bLen;
+            pointLen = bLen;
           }
         }
+        const hDirLenSq = dirX * dirX + dirZ * dirZ;
 
         let bestDist = Infinity;
         for (const candidate of this.players) {
