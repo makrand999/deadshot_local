@@ -316,17 +316,17 @@ test('Verify: No client hitpoint (hasPoint=false) → gloo is NOT occluded', () 
 // ═══════════════════════════════════════════════════════════════════════════
 
 test('Verify: Exact weapon damage to destruction counts', () => {
-  const mgr = new GlooWallManager({ baseHp: 400 });
+  const mgr = new GlooWallManager({ baseHp: 100 });
   const { wall } = mgr.spawnWall(0, 0, 0, 5, 0);
 
-  for (let i = 0; i < 36; i++) {
+  for (let i = 0; i < 9; i++) {
     const r = mgr.damage(wall.id, 11);
     assert.ok(r, `Shot ${i + 1} should succeed`);
     assert.equal(r.destroyed, false, `Shot ${i + 1} should not destroy`);
-    assert.equal(r.remainingHp, 400 - (i + 1) * 11);
+    assert.equal(r.remainingHp, 100 - (i + 1) * 11);
   }
   const final = mgr.damage(wall.id, 11);
-  assert.equal(final.destroyed, true, 'Shot 37 should destroy the wall');
+  assert.equal(final.destroyed, true, 'Shot 10 should destroy the wall');
   assert.equal(final.remainingHp, 0);
 });
 

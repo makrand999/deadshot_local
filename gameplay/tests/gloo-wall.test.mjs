@@ -50,16 +50,16 @@ test('GlooWallManager - Raycasting & Direct Hit Detection', () => {
 });
 
 test('GlooWallManager - Durability, Damage & Destruction', () => {
-  const mgr = new GlooWallManager({ baseHp: 400 });
+  const mgr = new GlooWallManager({ baseHp: 100 });
   const { wall } = mgr.spawnWall(0, 0, 0, 5, 0);
 
-  // Deal 100 damage (e.g. 1 AWP shot)
-  const d1 = mgr.damage(wall.id, 100);
+  // Deal 30 damage (e.g. AR body shots)
+  const d1 = mgr.damage(wall.id, 30);
   assert.equal(d1.destroyed, false);
-  assert.equal(d1.remainingHp, 300);
+  assert.equal(d1.remainingHp, 70);
 
-  // Deal 300 more damage
-  const d2 = mgr.damage(wall.id, 300);
+  // Deal 70 more damage (reaches 100)
+  const d2 = mgr.damage(wall.id, 70);
   assert.equal(d2.destroyed, true);
   assert.equal(d2.remainingHp, 0);
   assert.equal(mgr.walls.has(wall.id), false);

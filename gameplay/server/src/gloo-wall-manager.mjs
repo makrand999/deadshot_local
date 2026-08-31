@@ -3,7 +3,7 @@
 
 export class GlooWallManager {
   constructor({
-    baseHp = 400,
+    baseHp = 100,
     radius = 2.00,
     height = 2.40,
     arcDegrees = 135,
