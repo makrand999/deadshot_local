@@ -177,8 +177,8 @@ async function main() {
   }
 
   // 7. Wait for both to have at least one world entity (the enemy), then settle.
-  await waitJs(A, 'window.__dsDiag.dump().v3 && window.__dsDiag.dump().v3.length >= 1', 'A enemy entity', 60000, 2000);
-  await waitJs(B, 'window.__dsDiag.dump().v3 && window.__dsDiag.dump().v3.length >= 1', 'B enemy entity', 60000, 2000);
+  await waitJs(A, 'window.__dsDiag && window.__dsDiag.dump && window.__dsDiag.dump().v3 && window.__dsDiag.dump().v3.length >= 1', 'A enemy entity', 60000, 2000);
+  await waitJs(B, 'window.__dsDiag && window.__dsDiag.dump && window.__dsDiag.dump().v3 && window.__dsDiag.dump().v3.length >= 1', 'B enemy entity', 60000, 2000);
   log('both windows see an enemy entity; testing Gloo Wall deployment');
 
   // 7.5 Gloo Wall Test: Camera Angle & Surface Snapping

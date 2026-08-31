@@ -48,7 +48,7 @@ const SEAM = 'EnJV2g=await gJLONEI(YQVRvZV,zmjVzd_,q7pZFi)';
 //    at 2775107, statement boundary, a0c/Je/OF all in scope. window.__dsPosPatch
 //    is set so the page can be validated in the browser console.
 const BUNDLE_PATCH_SRC = `;(function(){
-  window.__dsPosPatch = 'no-run';
+  window.__dsPosPatch = 'no-run'; try{ window.__dsDiag = window.__dsDiag || { dump: function(){ return { v3: [], loading: true }; }, party: function(){ return { active: false, members: [] }; }, create: function(){ return 'loading'; }, join: function(){ return 'loading'; }, ready: function(){ return 'loading'; }, select: function(){ return 'loading'; }, getGlooWalls: function(){ return []; } }; }catch(e){}
   try{
     try{
       window.__dsErrors = [];
