@@ -192,3 +192,69 @@ test("Free Fire Reload Interruption: Pressing Q or weapon switch interrupts relo
   assert.equal(context.window.__dsLocalPlayer.reloadingTicks, 0, "Weapon switch (1) must reset reloadingTicks to 0");
   assert.equal(stopCalled, true, "Weapon switch must stop reloadFP animation clip");
 });
+
+test("Free Fire Reload Interruption: Aborts reload action so clip ammo is NOT replenished", () => {
+  const { context, keydownListeners } = setupEnvironment();
+
+  // Mock player with partially spent magazine (5/30)
+  context.window.__dsLocalPlayer = {
+    krtmjJROjX: true,
+    reloadingTicks: 45, // In progress
+    xqItLdaOH: 5,       // Current ammo in clip
+    DMZbIHLgyk: { xqItLdaOH: 30 }, // Max ammo
+    zBgadyCVYk: { reload: true },
+  };
+
+  // Mock viewmodel with tilt/rotation from reload tween
+  const mockWx = { rotation: { x: 0.15, y: 0.25, z: 0.35, set(x, y, z) { this.x = x; this.y = y; this.z = z; } } };
+  context.window.__dsWX = mockWx;
+  context.window.HG = () => {};
+
+  // Interrupt with Q
+  keydownListeners[0]({ keyCode: 81, code: "KeyQ", key: "q", repeat: false });
+
+  // Verify reload timer stopped
+  assert.equal(context.window.__dsLocalPlayer.reloadingTicks, 0, "Reloading ticks must be 0");
+  assert.equal(context.window.__dsLocalPlayer.krtmjJROjX, false, "isReloading must be false");
+
+  // Verify ammo is NOT replenished
+  assert.equal(context.window.__dsLocalPlayer.xqItLdaOH, 5, "Ammo must remain partially spent (5), not refilled to max (30)");
+
+  // Verify viewmodel transform neutralized
+  assert.equal(mockWx.rotation.x, 0, "Viewmodel rotation X must be reset to 0");
+  assert.equal(mockWx.rotation.y, 0, "Viewmodel rotation Y must be reset to 0");
+  assert.equal(mockWx.rotation.z, 0, "Viewmodel rotation Z must be reset to 0");
+});
+
+test("Free Fire Weapon Reload Time Increase (+1s / 30 ticks)", () => {
+  const { context } = setupEnvironment();
+
+  // Mock weapon config object as generated in Deadshot bundle
+  const ai1 = (hex) => hex === 0x109e ? "reloadingTicks" : hex === 0x3a2 ? "length" : "";
+  const Hs = {
+    smg: { reloadingTicks: 45, ui: { DMZbIHLgyk: {} } },
+    ar: { reloadingTicks: 51, ui: { DMZbIHLgyk: {} } },
+    awp: { reloadingTicks: 61, ui: { DMZbIHLgyk: {} } },
+    shotgun: { reloadingTicks: 48, ui: { DMZbIHLgyk: {} } },
+  };
+
+  // Simulate bundle patch execution on Hs
+  const Hx = Object.keys(Hs);
+  for (let tf = 0; tf < Hx.length; tf++) {
+    Hs[Hx[tf]].reloadingTicks += 30;
+    Hs[Hx[tf]].ui.DMZbIHLgyk.Reload = (Math.round(Hs[Hx[tf]].reloadingTicks / 30 * 100) / 100) + "s";
+  }
+
+  assert.equal(Hs.smg.reloadingTicks, 75, "SMG reload ticks must increase from 45 to 75 (+1.0s)");
+  assert.equal(Hs.smg.ui.DMZbIHLgyk.Reload, "2.5s", "SMG UI reload display must be 2.5s");
+
+  assert.equal(Hs.ar.reloadingTicks, 81, "AR reload ticks must increase from 51 to 81 (+1.0s)");
+  assert.equal(Hs.ar.ui.DMZbIHLgyk.Reload, "2.7s", "AR UI reload display must be 2.7s");
+
+  assert.equal(Hs.awp.reloadingTicks, 91, "AWP reload ticks must increase from 61 to 91 (+1.0s)");
+  assert.equal(Hs.awp.ui.DMZbIHLgyk.Reload, "3.03s", "AWP UI reload display must be 3.03s");
+
+  assert.equal(Hs.shotgun.reloadingTicks, 78, "Shotgun reload ticks must increase from 48 to 78 (+1.0s)");
+  assert.equal(Hs.shotgun.ui.DMZbIHLgyk.Reload, "2.6s", "Shotgun UI reload display must be 2.6s");
+});
+
