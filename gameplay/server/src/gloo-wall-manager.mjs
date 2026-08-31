@@ -5,7 +5,7 @@ export class GlooWallManager {
   constructor({
     baseHp = 400,
     radius = 2.00,
-    height = 2.50,
+    height = 2.40,
     arcDegrees = 135,
     maxPerPlayer = 3,
     lifetimeMs = 30000,
@@ -117,7 +117,7 @@ export class GlooWallManager {
       const ld_z = dirX * sinY + dirZ * cosY;
       const ld_y = dirY;
 
-      const wallHeight = wall.height || 2.50;
+      const wallHeight = wall.height || 2.40;
 
       // Parabolic surface intersections
       for (const z0 of surfaces) {
