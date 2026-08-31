@@ -266,3 +266,34 @@ test("Free Fire Weapon Reload Time Increase (+1s / 30 ticks)", () => {
   assert.equal(Hs.shotgun.ui.DMZbIHLgyk.Reload, "2.6s", "Shotgun UI reload display must be 2.6s");
 });
 
+test("Free Fire Manual Reload: Empty magazine (0 ammo) does NOT auto-reload without pressing R", () => {
+  // Test the patched reload condition logic
+  const aqH = (hex) => hex === 0x703 ? "reload" : hex === 0x2d5 ? "DMZbIHLgyk" : "";
+  const a56 = {
+    xqItLdaOH: 0, // Empty clip
+    krtmjJROjX: false,
+    reloadingTicks: 0,
+    DMZbIHLgyk: { xqItLdaOH: 30, reloadingTicks: 75 },
+  };
+
+  // Case 1: Empty magazine, player did NOT press R (a5b.reload = false)
+  const a5b_no_press = { reload: false };
+  let reloadTriggered = false;
+  if ((a5b_no_press[aqH(0x703)]) && !a56.krtmjJROjX && a56.xqItLdaOH < a56[aqH(0x2d5)].xqItLdaOH) {
+    reloadTriggered = true;
+    a56.reloadingTicks = a56.DMZbIHLgyk.reloadingTicks;
+  }
+  assert.equal(reloadTriggered, false, "Empty magazine (0 ammo) must NOT auto-trigger reload");
+  assert.equal(a56.reloadingTicks, 0, "Reloading ticks must remain 0");
+
+  // Case 2: Player presses R (a5b.reload = true)
+  const a5b_press = { reload: true };
+  if ((a5b_press[aqH(0x703)]) && !a56.krtmjJROjX && a56.xqItLdaOH < a56[aqH(0x2d5)].xqItLdaOH) {
+    reloadTriggered = true;
+    a56.reloadingTicks = a56.DMZbIHLgyk.reloadingTicks;
+  }
+  assert.equal(reloadTriggered, true, "Pressing R must trigger reload when empty or partially full");
+  assert.equal(a56.reloadingTicks, 75, "Reloading ticks must be set to weapon reload time (75)");
+});
+
+

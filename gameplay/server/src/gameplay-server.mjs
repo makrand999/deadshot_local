@@ -99,6 +99,13 @@ const BUNDLE_PATCH_SRC = `;(function(){
         if (rli !== -1) {
           src = src.slice(0, rli) + reloadReplace + src.slice(rli + reloadTarget.length);
         }
+        // Remove Auto-Reload on Empty Magazine (manual reload with R only)
+        var autoReloadTarget = "if((a5b[aqH(0x703)]||a56['xqItLdaOH']==0x0)&&!a56['krtmjJROjX']&&a56['xqItLdaOH']<a56[aqH(0x2d5)]['xqItLdaOH']){";
+        var autoReloadReplace = "if((a5b[aqH(0x703)])&&!a56['krtmjJROjX']&&a56['xqItLdaOH']<a56[aqH(0x2d5)]['xqItLdaOH']){";
+        var ari = src.indexOf(autoReloadTarget);
+        if (ari !== -1) {
+          src = src.slice(0, ari) + autoReloadReplace + src.slice(ari + autoReloadTarget.length);
+        }
         // First-Person Viewmodel Hook: capture WX to toggle weapon and arms visibility
         var wxAnchor = "T2['add'](WX),WV['add'](Td);";
         var wxi = src.indexOf(wxAnchor);
