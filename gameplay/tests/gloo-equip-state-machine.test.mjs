@@ -155,3 +155,40 @@ test("Free Fire Viewmodel Toggle: Hides gun and arms in Gloo stance, restores on
   context.window.__dsGlooState.unequip();
   assert.equal(mockViewmodel.visible, true, "Viewmodel (gun and arms) must be restored when Gloo is unequipped");
 });
+
+test("Free Fire Reload Interruption: Pressing Q or weapon switch interrupts reload animation & timers", () => {
+  const { context, keydownListeners } = setupEnvironment();
+
+  let stopCalled = false;
+  const mockMixer = {
+    _actions: [
+      {
+        _clip: { name: "reloadFP" },
+        stop: () => { stopCalled = true; },
+      },
+    ],
+  };
+  context.XF = [mockMixer];
+  context.window.__dsLocalPlayer = {
+    krtmjJROjX: true,
+    reloadingTicks: 50,
+    zBgadyCVYk: { reload: true },
+  };
+
+  // 1. Pressing Q should cancel reload
+  keydownListeners[0]({ keyCode: 81, code: "KeyQ", key: "q", repeat: false });
+  assert.equal(context.window.__dsLocalPlayer.krtmjJROjX, false, "Q must cancel isReloading state");
+  assert.equal(context.window.__dsLocalPlayer.reloadingTicks, 0, "Q must reset reloadingTicks to 0");
+  assert.equal(stopCalled, true, "Q must stop reloadFP animation clip");
+
+  // Reset state for weapon switch test
+  stopCalled = false;
+  context.window.__dsLocalPlayer.krtmjJROjX = true;
+  context.window.__dsLocalPlayer.reloadingTicks = 40;
+
+  // 2. Pressing 1, 2, or 3 should cancel reload
+  keydownListeners[0]({ keyCode: 49, code: "Digit1", key: "1", repeat: false });
+  assert.equal(context.window.__dsLocalPlayer.krtmjJROjX, false, "Weapon switch (1) must cancel isReloading state");
+  assert.equal(context.window.__dsLocalPlayer.reloadingTicks, 0, "Weapon switch (1) must reset reloadingTicks to 0");
+  assert.equal(stopCalled, true, "Weapon switch must stop reloadFP animation clip");
+});
