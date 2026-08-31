@@ -141,3 +141,17 @@ test("Free Fire State Machine: Pressing 1, 2, or 3 weapon slots also exits Gloo 
   keydownListeners[0]({ keyCode: 51, code: "Digit3", key: "3", repeat: false });
   assert.equal(context.window.__dsGlooEquipped, false, "Slot 3 must exit Gloo mode");
 });
+
+test("Free Fire Viewmodel Toggle: Hides gun and arms in Gloo stance, restores on unequip", () => {
+  const { context } = setupEnvironment();
+  const mockViewmodel = { visible: true };
+  context.window.__dsWX = mockViewmodel;
+
+  // Equip Gloo
+  context.window.__dsGlooState.equip();
+  assert.equal(mockViewmodel.visible, false, "Viewmodel (gun and arms) must be hidden when Gloo is equipped");
+
+  // Unequip Gloo
+  context.window.__dsGlooState.unequip();
+  assert.equal(mockViewmodel.visible, true, "Viewmodel (gun and arms) must be restored when Gloo is unequipped");
+});
