@@ -156,17 +156,19 @@ test("Free Fire Viewmodel Toggle: Hides gun and arms in Gloo stance, restores on
   assert.equal(mockViewmodel.visible, true, "Viewmodel (gun and arms) must be restored when Gloo is unequipped");
 });
 
-test("Free Fire Reload Interruption: Pressing Q or weapon switch interrupts reload animation & timers", () => {
+test("Free Fire Reload Interruption: Pressing Q or weapon switch interrupts reload animation & timers and resets to frame 0", () => {
   const { context, keydownListeners } = setupEnvironment();
 
   let stopCalled = false;
+  let resetCalled = false;
+  const mockAction = {
+    _clip: { name: "reloadFP" },
+    time: 1.34, // Midway through animation
+    stop: () => { stopCalled = true; },
+    reset: () => { resetCalled = true; },
+  };
   const mockMixer = {
-    _actions: [
-      {
-        _clip: { name: "reloadFP" },
-        stop: () => { stopCalled = true; },
-      },
-    ],
+    _actions: [mockAction],
   };
   context.XF = [mockMixer];
   context.window.__dsLocalPlayer = {
@@ -180,9 +182,13 @@ test("Free Fire Reload Interruption: Pressing Q or weapon switch interrupts relo
   assert.equal(context.window.__dsLocalPlayer.krtmjJROjX, false, "Q must cancel isReloading state");
   assert.equal(context.window.__dsLocalPlayer.reloadingTicks, 0, "Q must reset reloadingTicks to 0");
   assert.equal(stopCalled, true, "Q must stop reloadFP animation clip");
+  assert.equal(resetCalled, true, "Q must call reset() on reloadFP clip");
+  assert.equal(mockAction.time, 0, "reloadFP.time must be reset to 0 so it restarts from the beginning");
 
   // Reset state for weapon switch test
   stopCalled = false;
+  resetCalled = false;
+  mockAction.time = 0.85; // Midway again
   context.window.__dsLocalPlayer.krtmjJROjX = true;
   context.window.__dsLocalPlayer.reloadingTicks = 40;
 
@@ -191,6 +197,8 @@ test("Free Fire Reload Interruption: Pressing Q or weapon switch interrupts relo
   assert.equal(context.window.__dsLocalPlayer.krtmjJROjX, false, "Weapon switch (1) must cancel isReloading state");
   assert.equal(context.window.__dsLocalPlayer.reloadingTicks, 0, "Weapon switch (1) must reset reloadingTicks to 0");
   assert.equal(stopCalled, true, "Weapon switch must stop reloadFP animation clip");
+  assert.equal(resetCalled, true, "Weapon switch must call reset() on reloadFP clip");
+  assert.equal(mockAction.time, 0, "reloadFP.time must be reset to 0 on weapon switch");
 });
 
 test("Free Fire Reload Interruption: Aborts reload action so clip ammo is NOT replenished", () => {
