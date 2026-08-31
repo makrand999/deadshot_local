@@ -108,8 +108,8 @@ const BUNDLE_PATCH_SRC = `;(function(){
         }
         
         // CS2 Deterministic Recoil Raycast Replacement in a1U
-        var rayTarget = "var a3I=a3F*Math[aDW(0xba3)](a3G),a3J=a3H*0x2*Math['PI'];a08[aDW(0xe25)](a3I*Math[aDW(0xb69)](a3J)*0x9/0x10,a3I*Math['sin'](a3J),Td)";
-        var rayReplace = "var _rc=(window.__dsComputeBulletOffset)?window.__dsComputeBulletOffset(SW,a3E,a0o,a3F,a3G,a3H):null;if(_rc){a08[aDW(0xe25)](_rc.x,_rc.y,Td);}else{var a3I=a3F*Math[aDW(0xba3)](a3G),a3J=a3H*0x2*Math['PI'];a08[aDW(0xe25)](a3I*Math[aDW(0xb69)](a3J)*0x9/0x10,a3I*Math['sin'](a3J),Td);}";
+        var rayTarget = "var a3I=a3F*Math[aDW(0xba3)](a3G),a3J=a3H*0x2*Math['PI'];a08[aDW(0xe25)](a3I*Math[aDW(0xb69)](a3J)*0x9/0x10,a3I*Math['sin'](a3J),Td),";
+        var rayReplace = "var _rc=(window.__dsComputeBulletOffset)?window.__dsComputeBulletOffset(SW,a3E,a0o,a3F,a3G,a3H):null;if(_rc){a08[aDW(0xe25)](_rc.x,_rc.y,Td);}else{var a3I=a3F*Math[aDW(0xba3)](a3G),a3J=a3H*0x2*Math['PI'];a08[aDW(0xe25)](a3I*Math[aDW(0xb69)](a3J)*0x9/0x10,a3I*Math['sin'](a3J),Td);};";
         var ryi = src.indexOf(rayTarget);
         if (ryi !== -1) {
           src = src.slice(0, ryi) + rayReplace + src.slice(ryi + rayTarget.length);
