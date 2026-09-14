@@ -1,0 +1,17 @@
+--- android/native/src/sim/sim.c	2026-09-12 17:16:44.205504258 +0530
++++ .agents/m4_exp_fix_nan_1/proposed_sim.c	2026-09-12 19:04:55.432918223 +0530
+@@ -50,12 +50,14 @@
+ }
+ 
+ uint8_t ds_yaw_to_byte(float yaw) {
++  if (!isfinite(yaw)) return 0;
+   // wire: rot.y = byte*pi/128 + pi  => byte = (yaw-pi)*128/pi
+   int b = (int)roundf((yaw - (float)M_PI) * 128.0f / (float)M_PI);
+   return (uint8_t)(b & 0xFF);
+ }
+ 
+ uint8_t ds_pitch_to_byte(float pitch) {
++  if (!isfinite(pitch)) return 64;
+   // 64 = level; handler subtracts 0x40
+   int b = (int)roundf(pitch * 128.0f / (float)M_PI) + 64;
+   return (uint8_t)(b & 0xFF);

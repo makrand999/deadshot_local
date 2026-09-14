@@ -221,8 +221,8 @@ const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'applica
   '.glb': 'model/gltf-binary', '.drc': 'application/octet-stream', '.ktx2': 'application/octet-stream',
   '.bin': 'application/octet-stream', '.obj': 'text/plain' };
 
-export function startGameplayServer({ httpPort = 8080, mmPort = 8081 } = {}) {
-  const clientDir = process.env.GP_CLIENT_DIR || path.join(ROOT, 'client');
+export function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir: optClientDir, verifiedMaps: optVerifiedMaps } = {}) {
+  const clientDir = optClientDir || process.env.GP_CLIENT_DIR || path.join(ROOT, 'client');
   const rawDir = process.env.GP_RAW_DIR || path.join(ROOT, 'raw');
   const patched = buildPage(clientDir);
   log('page patched (' + patched.length + ' bytes)');
@@ -230,8 +230,13 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081 } = {}) {
   const httpServer = http.createServer((req, res) => {
     let p;
     try { p = decodeURIComponent(req.url.split('?')[0]); } catch { res.writeHead(400); res.end(); return; }
+    log(req.method, p);
     if (p === '/final.pkg' || p === '/final_legacy.pkg') return sendFile(res, path.join(rawDir, 'bundles', 'final.pkg'));
-    if (p === '/final.pkg.local.gz' || p === '/final.pkg.gz') return sendFile(res, path.join(rawDir, 'bundles', 'final.pkg.gz'));
+    if (p === '/final.pkg.local.gz' || p === '/final.pkg.gz') {
+      const gzPath = path.join(rawDir, 'bundles', 'final.pkg.gz');
+      if (fs.existsSync(gzPath)) return sendFile(res, gzPath);
+      return sendFile(res, path.join(rawDir, 'bundles', 'final.pkg'));
+    }
     if (p === '/') { res.writeHead(200, { 'Content-Type': 'text/html' }); return res.end(patched); }
     const file = path.join(clientDir, path.normalize(p).replace(/^(\.\.\/)+/, ''));
     if (path.relative(clientDir, file).startsWith('..')) { res.writeHead(403); return res.end(); }
@@ -248,13 +253,15 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081 } = {}) {
   // ---------- matchmaker: private rooms ----------
   const rooms = new Map();       // code -> room
   const memberOf = new Map();    // ws -> {room, member}
+  const verifiedMaps = optVerifiedMaps || scanVerifiedMaps(clientDir);
+  log('lobby maps verified on disk: ' + ([...verifiedMaps].join(',') || '(none!)'));
   const PARTY = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   function makeCode() { let c; do { c = ''; for (let i = 0; i < 3; i++) c += PARTY[crypto.randomInt(PARTY.length)]; } while (rooms.has(c)); return c; }
   function sendPkts(ws, pkts) { if (ws.readyState === 1) ws.send(pack(pkts)); }
   function roomPacket(room, selfMember) {
     return { t: 'pu', u: room.members.indexOf(selfMember), leader: 0,
       m: room.members.map((m) => [m.name, m.skins, m.ready, m.team, m.id]), priv: true,
-      inf: { map: 'newmlab', mode: 'FFA', time: 5, region: 'South India' } };
+      inf: { map: room.config.map, mode: room.config.mode, time: room.config.time, region: room.config.region } };
   }
   function broadcast(room) { for (const m of room.members) sendPkts(m.ws, [roomPacket(room, m)]); }
   function roomOf(ws) { const e = memberOf.get(ws); return e && e.room; }
@@ -271,7 +278,8 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081 } = {}) {
         if (!pkt || typeof pkt.type !== 'string') continue;
         if (pkt.type === 'create') {
           leave(ws);
-          const room = { id: makeCode(), members: [], next: 0, started: false, allocations: [] };
+          const room = { id: makeCode(), members: [], next: 0, started: false, allocations: [],
+            config: { map: resolveLobbyMap(SAFE_MAP, verifiedMaps), mode: 'FFA', time: 5, region: resolveRegion(pkt.region) } };
           rooms.set(room.id, room);
           const member = addMember(room, ws);
           sendPkts(ws, [{ t: 'prtyid', id: room.id, copy: false }]);
@@ -303,6 +311,47 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081 } = {}) {
           if (pkt.name !== undefined) m.member.name = String(pkt.name).slice(0, 20) || 'Guest';
           if (Array.isArray(pkt.skins)) m.member.skins = pkt.skins;
           broadcast(roomOf(ws));
+        } else if (pkt.type === 'updatePartyInfo') {
+          // Host lobby controls: obj = {map}|{mode}|{time} (leader only) or
+          // {swap:true} (any member toggles their own team). Stored on the
+          // room and broadcast to all members via `pu`.
+          const room = roomOf(ws); if (!room || room.started) continue;
+          const e = memberOf.get(ws); if (!e) continue;
+          const obj = pkt.obj;
+          if (!obj || typeof obj !== 'object') continue;
+          const isLeader = room.members[0] === e.member;
+          let changed = false;
+          if (obj.map !== undefined && isLeader) {
+            const want = String(obj.map);
+            if (LOBBY_MAPS.includes(want) && verifiedMaps.has(want)) {
+              if (room.config.map !== want) { room.config.map = want; changed = true; }
+            } else if (LOBBY_MAPS.includes(want)) {
+              // Known map but no geometry on disk: keep the safe map and
+              // re-broadcast so the requester's UI reverts instead of hanging.
+              log('ROOM', room.id, 'ignoring unrunnable map', want);
+              changed = true;
+            }
+          }
+          if (obj.mode !== undefined && isLeader) {
+            const want = String(obj.mode);
+            if (LOBBY_MODES.includes(want) && room.config.mode !== want) {
+              room.config.mode = want; changed = true;
+            }
+          }
+          if (obj.time !== undefined && isLeader) {
+            const want = Number(obj.time);
+            if (LOBBY_TIMES.includes(want) && room.config.time !== want) {
+              room.config.time = want; changed = true;
+            }
+          }
+          if (obj.swap) {
+            e.member.team = e.member.team === 1 ? 2 : 1;
+            changed = true;
+          }
+          if (changed) {
+            log('ROOM', room.id, 'config', JSON.stringify(room.config));
+            broadcast(room);
+          }
         }
       }
     });
@@ -330,464 +379,35 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081 } = {}) {
   const allocations = new Map();
   function startGame(room) {
     const token = crypto.randomBytes(16).toString('hex');
-    const mapIndex = room.mapIndex !== undefined ? room.mapIndex : MAP_INDEX;
-    const modeIndex = room.modeIndex !== undefined ? room.modeIndex : MODE_INDEX;
-    const alloc = makeAlloc(room.members.map((m) => ({ id: m.id, name: m.name, skins: m.skins })), { mapIndex, modeIndex });
+    // The lobby's selected options govern the match (validated at update
+    // time; re-resolved here defensively so a match can never launch into an
+    // unrunnable map or an unknown mode/time).
+    const safeMap = resolveLobbyMap(room.config.map, verifiedMaps);
+    const mapIndex = mapNameToIndex(safeMap);
+    const modeIndex = modeNameToIndex(room.config.mode);
+    const matchSeconds = (LOBBY_TIMES.includes(room.config.time) ? room.config.time : 5) * 60;
+    const teamMode = isTeamModeIndex(modeIndex);
+    const teams = teamMode ? balanceLobbyTeams(room.members) : room.members.map((_, i) => (i % 2) + 1);
+    room.members.forEach((m, i) => { m.team = teams[i]; });
+    const alloc = makeAlloc(
+      room.members.map((m, i) => ({ id: m.id, name: m.name, skins: m.skins, team: teams[i] })),
+      { mapIndex, modeIndex, matchSeconds, scoreLimit: configuredScoreLimit() },
+    );
+    log('ROOM MATCH', room.id, 'map=' + safeMap + '(' + mapIndex + ')', 'mode=' + room.config.mode + '(' + modeIndex + ')',
+      'time=' + matchSeconds + 's', 'teams=' + teams.join(','));
     allocations.set(token, alloc);
+    // Match end returns the party to the lobby for another ready-up.
+    alloc.onEnd = () => {
+      room.started = false;
+      for (const m of room.members) m.ready = false;
+      broadcast(room);
+    };
     alloc.startBroadcast();
     for (const m of room.members) {
       sendPkts(m.ws, [{ t: 'connect', ip: '00000000000000000000000000000000', port: httpPort, r: token }]);
     }
     const ttl = Number(process.env.GP_ALLOC_TTL ?? 30000);
     if (ttl > 0) setTimeout(() => { allocations.delete(token); alloc.stop(); }, ttl);
-  }
-  function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX } = {}) {
-    const spawns = mapIndex === 0 ? SPAWNS_TF : SPAWNS_NEWMLAB;
-    function spawnForAlloc(id) { return spawns[id % spawns.length]; }
-    const players = (roster || [{ id: 0, name: 'Solo', skins: [] }]).map((p) => {
-      const sp = spawnForAlloc(p.id);
-      return {
-        id: p.id, name: p.name, skins: JSON.stringify(p.skins && p.skins.length ? p.skins : DEFAULT_SKINS),
-        x: sp.x, y: sp.y, z: sp.z,
-        yawByte: sp.yaw, spawnYaw: sp.yaw, aimByte: sp.pitch || 63,
-        spawned: false, hp: 100, weaponType: 0, alive: true, ammo: 40, despawnSent: false,
-        kills: 0, deaths: 0, points: 0, headshots: 0, assists: 0, damageBy: new Map(), deadAt: 0,
-        lastDamagedAt: 0, lastRegenAt: 0,
-        reported: null, reportTick: 0, inputVal: 0, inputTick: 0, reportedAt: 0,
-        srv: null,
-      };
-    });
-      const SIM_SPEED = Math.max(0.01, Number(process.env.GP_SPEED || 1));
-    return {
-      players,
-      glooWalls: new GlooWallManager(),
-      mapIndex,
-      modeIndex,
-      spawns,
-      sockets: new Set(),
-      timers: new Set(),
-      closed: false,
-      tickCount: 0,
-      time: (() => { const t = Number(process.env.GP_MATCH_TIME); return Number.isFinite(t) && t >= 0 ? t : 300; })(),
-      secondTickRunning: false,
-      after(ms, fn) {
-        const scaled = Math.max(1, Math.round(ms / SIM_SPEED));
-        const t = setTimeout(() => { this.timers.delete(t); if (!this.closed) fn(); }, scaled);
-        this.timers.add(t);
-      },
-      stop() {
-        this.closed = true;
-        for (const t of this.timers) clearTimeout(t);
-        this.timers.clear();
-        if (this.glooWalls) this.glooWalls.clear();
-      },
-      startBroadcast() {
-        this.after(100, () => { this.tick(); this.startBroadcast(); });
-      },
-      startSecondTick() {
-        if (this.secondTickRunning) return;
-        this.secondTickRunning = true;
-        this._lastHeader = '0,0';
-        // 42 header: once per session, broadcast when the first player spawns
-        // (real capture: 1 per client per session, +1 per kill).
-        this.broadcast([encode('P2F7KG88n96', { a: 0, b: 0 })], null);
-        this.after(1000, () => this.secondTick());
-        this.after(1000, () => this.scoreTick());
-      },
-      secondTick() {
-        if (this.closed || !this.sockets.size) return;
-        this.ageLog = (this.ageLog || 0) + 1;
-        if (this.ageLog % 5 === 0) {
-          const ages = this.players.map((p) => p.id + '=' + Math.round((Date.now() - p.reportedAt) / 100) / 10 + 's' + (p.reported ? '' : '*')).join(' ');
-          log('ages', 'tick', this.tickCount, '->', ages);
-        }
-        if (this.time > 0) this.time--;
-        const ended = this.time === 0;
-        const parts = [encode('ld52k5uY7', { time: this.time })];                       // 19 timer
-        parts.push(encode('hJUJ7cbd51b', { string: '[]' }));                            // 35 item list (none)
-        if (this.glooWalls) {
-          const expired = this.glooWalls.update();
-          for (const exp of expired) {
-            parts.push(encode('kM86hVW024', { id: 0, string: `__gloo:destroy:${exp.id}:expired` }));
-          }
-        }
-        if (ended) parts.push(encode('D522Kq7l5n', {}));                                // 28 match end
-        this.broadcast(parts, null);
-        if (ended) { this.secondTickRunning = false; log('match', 'END time=0'); return; }
-        this.after(1000, () => this.secondTick());
-      },
-      // Scoreboard: ONE broadcast (both players' entries) per timer second +
-      // extras right after kills (real capture: 219 msg24 over 103s, i.e. ~1
-      // broadcast/s, 2 entries each; kill moments show 3-4 per interval).
-      // Header (msg42) only on change.
-      scoreTick() {
-        if (this.closed || !this.sockets.size) return;
-        const parts = [...this.scoreboardMsg()];
-        const sorted = [...this.players].sort((x, y) => y.points - x.points);
-        const hdr = (sorted[0]?.points || 0) + ',' + (sorted[1]?.points || 0);
-        if (hdr !== this._lastHeader) {
-          this._lastHeader = hdr;
-          parts.push(encode('P2F7KG88n96', { a: sorted[0]?.points || 0, b: sorted[1]?.points || 0 }));
-        }
-        this.broadcast(parts, null);
-        this.after(1000, () => this.scoreTick());
-      },
-
-      // Clock correction mix (real capture ratios: 4=2 ~77%, 4=1 ~9%, 5 ~10%,
-      // 6=0 ~4%). msg4 speeds the client sim up (Wg+0.05*val), msg5 slows it
-      // down, msg6 resets Wg to base. A fixed 26-tick cycle reproduces the mix.
-      clockMsg(s) {
-        // Real pattern (capture): long runs of msg4=2 with occasional bursts of
-        // msg5 (slow-down) then msg6 (reset), ratios ~ 4=2:4=1:5:6 = 77:9:10:4.
-        // Phase machine: steady ~40 ticks, then a 3-8 msg5 burst + 1-2 msg6,
-        // repeat. Seeded per socket so runs are reproducible.
-        if (s.clockLeft > 0) {
-          s.clockLeft--;
-          return encode('pi7M701p0', { cKRwdjkqGai: (s.clockCycle++ & 3) === 0 ? 1 : 2 });
-        }
-        if (s.clockResetLeft > 0) {
-          s.clockResetLeft--;
-          return encode('qv8j93zAL', { cKRwdjkqGai: 0 });
-        }
-        if (++s.clockCycle >= 38 + (s.clockRand % 12)) {
-          s.clockCycle = 0;
-          s.clockRand = (s.clockRand * 1103515245 + 12345) >>> 0;
-          s.clockLeft = 3 + (s.clockRand % 6);
-          s.clockResetLeft = 1 + ((s.clockRand >>> 8) & 1);
-        }
-        return encode('Ko38N6873G6', { cKRwdjkqGai: s.clockCycle % 9 === 0 ? 1 : 2 });
-      },
-
-      // Per-viewer state broadcast every ~100ms (mirrors match.mjs: only players
-      // that are spawned go in the world, EXCEPT the viewer's own player which is
-      // always included for the self-state/desync check). Each tick also carries
-      // the Ko38 clock so the client's interpolator keeps its 75-135ms cadence.
-      tick() {
-        if (this.closed || !this.sockets.size) return;
-        this.tickCount++;
-        const now = Date.now();
-        const regenDelay = 3500 / SIM_SPEED;
-        const regenInterval = 100 / SIM_SPEED;
-        for (const p of this.players) {
-          if (p.spawned && p.alive && p.hp > 0 && p.hp < 100) {
-            if (now - (p.lastDamagedAt || 0) > regenDelay) {
-              if (now - (p.lastRegenAt || 0) >= regenInterval) {
-                p.lastRegenAt = now;
-                p.hp = Math.min(100, p.hp + 1);
-              }
-            }
-          }
-        }
-        for (const s of this.sockets) {
-          if (s.closed || s.ws.readyState !== 1) continue;
-          const parts = [];
-          for (const p of this.players) {
-            if (!p.spawned) {
-              // During the 1000ms corpse fade, keep broadcasting msg2 (anim:0x60, hp:0)
-              // so the death animation plays ONCE on opponent screens; after that the
-              // corpse must be EXCLUDED or the client re-triggers the death transition
-              // every tick -> model freezes mid-fall, no death animation (HANDOFF #9).
-              if (!p.deadAt || now - p.deadAt > (1000 / SIM_SPEED)) continue;
-            }
-            if (!p.alive && p !== s.me && now - p.deadAt > (1000 / SIM_SPEED)) continue;
-            parts.push(this.stateMessage(p));
-          }
-          if (!parts.length) continue;
-          parts.push(this.clockMsg(s));                                                  // 4/5/6 clock
-          s.send(parts);
-        }
-      },
-      stateMessage(p) {
-        const r = p.reported;
-        const x = r ? r.x : p.x;
-        const y = r ? r.y : p.y;
-        const z = r ? r.z : p.z;
-        // Anim bits from the reported input val.
-        // HR anim-state bits: 0x01 left, 0x02 right, 0x04 up, 0x08 down, 0x10 ADS(OUsPgMLOT),
-        // 0x20 grounded/idle(vQ5Ra371n0), 0x40 death(PxxmChYjxoE), 0x80 stepped, 0x100 crouch(W91ldgW19d).
-        // Input bits: 0x01 W, 0x02 S, 0x04 A, 0x08 D, 0x10 Jump(space), 0x20 Slide/Shift(HpsuHliFMHL),
-        // 0x40 ADS(OUsPgMLOT), 0x80 Reload(hRdQS9697), 0x100 Crouch/C(MFUoomFzxq).
-        let anim = 0x20; // 32 = grounded (vQ5Ra371n0)
-        if (p.inputVal & 0x01) anim |= 0x04;   // W -> up
-        if (p.inputVal & 0x02) anim |= 0x08;   // S -> down
-        if (p.inputVal & 0x04) anim |= 0x01;   // A -> left
-        if (p.inputVal & 0x08) anim |= 0x02;   // D -> right
-        if (p.inputVal & 0x40) anim |= 0x10;   // ADS -> anim ADS pose
-        if ((p.inputVal & 0x100) || (p.inputVal & 0x20)) anim |= 0x100; // Crouch (C) or Slide (Shift) -> W91ldgW19d (crouchIdle / crouchWalk)
-        if (p.inputVal & 0x10) anim &= ~0x20;  // Jump (Space) -> airborne (!vQ5Ra371n0) -> jumpAnim
-        if (!p.alive) anim = 0x60; // 0x40 fade + 0x20 idle -> corpse fades out
-        return encode('K11Co2hvi1l', {
-          tdkZouYda: p.id,
-          JoHdvmpcMvL: x, uBHZYKAHa: y, yxEKoSFAg: z,
-          TCHdFFAXmk: p.aimByte,            // pitch byte (64 = level)
-          ibyXzJIMNf: p.yawByte,            // body-yaw byte (rot.y = iby*pi/128+pi)
-          YSmEAVINAh: anim,
-          // Echo the client's own tick (already 0..127 from a26); self-check passes
-          // because the value IS the client's own prediction.
-          wGiOzKcGlnH: (r ? p.reportTick : p.inputTick) & 0x7f,
-          hkhrYayXI: p.hp,
-          qXuHmlbSlxE: (this.players.indexOf(p) % 2) + 1,
-        });
-      },
-      // ---------- Phase 2 hybrid combat ----------
-      // All positions come from client msg-52 reports (never simulated). A shot
-      // (msg 8) is a ray from the shooter's reported position + eye height. The
-      // client's OWN world hit point (AHPhtLFTi/mGOwFesuTt/MHnEcbTxpbz) is the
-      // authoritative occlusion test: the client's raycast stops at the first
-      // voxel it hits, so we cap the shot range there — a wall between shooter
-      // and target can never be shot through (no wallbang). Hit selection uses
-      // the same angular + pitch-delta rules as the reference server.
-      broadcast(parts, exclude) {
-        for (const s of this.sockets) {
-          if (s === exclude || s.closed || s.ws.readyState !== 1) continue;
-          s.send(parts);
-        }
-      },
-      scoreboardMsg() {
-        const parts = [];
-        for (const p of this.players) {
-          parts.push(encode('RMFVb5UZGi7', {
-            id: p.id, points: p.points, k: p.kills, d: p.deaths,
-            h: p.weaponType || 0, p: Math.round(((p.srv && p.srv.pingMs) || 0) * 2), c: 0, hsp: p.headshots,
-            PhbhpxFxPP: (p.id % 2) + 1, ha: p.assists, JgVHFEBAE: 0, TxJblhJNah: 0, aMWaisFtZ: 0,
-          }));
-        }
-        return parts;
-      },
-      scoreHeaderMsg() {
-        const sorted = [...this.players].sort((x, y) => y.points - x.points);
-        return encode('P2F7KG88n96', { a: (sorted[0] || {}).points || 0, b: (sorted[1] || {}).points || 0 });
-      },
-      handleShot(shooter, shot) {
-        if (!shooter || !shooter.alive || !shooter.spawned) return;
-        const r = shooter.reported;
-        const sx = r ? r.x : shooter.x, sy = (r ? r.y : shooter.y) + EYE_HEIGHT, sz = r ? r.z : shooter.z;
-        // msg 8 fields (verified vs VM9.deob): uBHZYKAHa = body yaw (shoot dir
-        // = yaw+PI), JoHdvmpcMvL = aim pitch, AHPhtLFTi/mGOwFesuTt/MHnEcbTxpbz =
-        // the client's EXACT crosshair raycast point.
-        const hasPoint = Number.isFinite(shot.AHPhtLFTi) && Number.isFinite(shot.mGOwFesuTt) && Number.isFinite(shot.MHnEcbTxpbz)
-            && Math.abs(shot.AHPhtLFTi) + Math.abs(shot.mGOwFesuTt) + Math.abs(shot.MHnEcbTxpbz) > 0.001;
-        let target = null, targetHeadshot = false;
-        let passY = null; // blood/impact height (client point y when available)
-        let pointLen = Infinity;
-        const yaw = Number.isFinite(shot.uBHZYKAHa) ? shot.uBHZYKAHa + Math.PI : 0;
-        const pitch = Number.isFinite(shot.JoHdvmpcMvL) ? shot.JoHdvmpcMvL : 0;
-        let dirX = Math.sin(yaw) * Math.cos(pitch);
-        let dirY = Math.sin(pitch);
-        let dirZ = Math.cos(yaw) * Math.cos(pitch);
-
-        if (hasPoint) {
-          const px = shot.AHPhtLFTi, py = shot.mGOwFesuTt, pz = shot.MHnEcbTxpbz;
-          const bDx = px - sx, bDy = py - sy, bDz = pz - sz;
-          const bLen = Math.hypot(bDx, bDy, bDz);
-          if (bLen > 0.01) {
-            dirX = bDx / bLen;
-            dirY = bDy / bLen;
-            dirZ = bDz / bLen;
-            pointLen = bLen;
-          }
-        }
-        const hDirLenSq = dirX * dirX + dirZ * dirZ;
-
-        let bestDist = Infinity;
-        for (const candidate of this.players) {
-          if (candidate === shooter || !candidate.spawned || !candidate.alive) continue;
-
-          // Lag compensation: test instant position + rolling history samples
-          const testPositions = [];
-          if (candidate.reported) testPositions.push(candidate.reported);
-          if (candidate.history && candidate.history.length) {
-            for (let hi = candidate.history.length - 1; hi >= 0 && hi >= candidate.history.length - 4; hi--) {
-              testPositions.push(candidate.history[hi]);
-            }
-          }
-          if (!testPositions.length) testPositions.push({ x: candidate.x, y: candidate.y, z: candidate.z });
-
-          for (const pos of testPositions) {
-            const cx = pos.x, cy = pos.y, cz = pos.z;
-            const dx = cx - sx, dz = cz - sz;
-            const directDist = Math.hypot(dx, dz);
-            if (directDist < 0.001 || directDist > 120) continue;
-
-            if (hDirLenSq < 1e-6) continue;
-            const t = (dx * dirX + dz * dirZ) / hDirLenSq;
-            if (t <= 0) continue; // Target is behind shooter
-
-            if (hasPoint && pointLen < t - 1.2) continue;
-
-            const rayX = sx + dirX * t;
-            const rayY = sy + dirY * t;
-            const rayZ = sz + dirZ * t;
-
-            const hDist = Math.hypot(rayX - cx, rayZ - cz);
-            const relY = rayY - cy; // Height relative to candidate's eye level (cy)
-
-            // Torso cylinder: radius 0.48m (accommodates character animations, sprint, and strafe movements)
-            // Vertical range: feet (cy - 2.40m) to top of head (cy + 0.35m)
-            const isHit = hDist <= 0.48 && relY >= -2.40 && relY <= 0.35;
-
-            if (isHit) {
-              // Head region: chin (cy - 0.22m) up to top of head (cy + 0.25m), radius 0.22m
-              const isHead = relY >= -0.22 && relY <= 0.25 && hDist <= 0.22;
-
-              if (t < bestDist) {
-                bestDist = t;
-                target = candidate;
-                targetHeadshot = isHead;
-                passY = rayY;
-              }
-              break; // Found valid hit on this candidate
-            }
-          }
-        }
-        const glooHit = this.glooWalls ? this.glooWalls.raycast(sx, sy, sz, dirX, dirY, dirZ, 120) : null;
-        const glooOccluded = glooHit && hasPoint && pointLen < glooHit.dist - 0.2;
-        if (glooHit && !glooOccluded && glooHit.dist < bestDist) {
-          shooter.ammo = Math.max(0, shooter.ammo - 1);
-          if (shooter.ammo <= 0) shooter.ammo = WEAPON_AMMO[shooter.weaponType] || 40;
-          const base = WEAPON_DAMAGE[shooter.weaponType] !== undefined ? WEAPON_DAMAGE[shooter.weaponType] : 11;
-          const dmgRes = this.glooWalls.damage(glooHit.wall.id, base);
-          const hx = glooHit.hitPoint.x, hy = glooHit.hitPoint.y, hz = glooHit.hitPoint.z;
-          const normalDist = Math.hypot(sx - hx, sz - hz) || 1;
-          const impact = encode('vS66uPxac49', {
-            JoHdvmpcMvL: hx, uBHZYKAHa: hy, yxEKoSFAg: hz,
-            AHPhtLFTi: clampByte(((sx - hx) / normalDist) * 127), mGOwFesuTt: 0, MHnEcbTxpbz: clampByte(((sz - hz) / normalDist) * 127),
-            tdkZouYda: shooter.id,
-          });
-          this.broadcast([impact], null);
-          shooter.srv && shooter.srv.send([encode('ZpZC792j9p3', {
-            lDKzyZxhKX: 0, wtZUXNpiCWl: dmgRes && dmgRes.destroyed ? 1 : 0,
-            JoHdvmpcMvL: hx, uBHZYKAHa: hy, yxEKoSFAg: hz,
-          })]);
-          if (dmgRes && dmgRes.destroyed) {
-            log('combat', `GLOO WALL ${glooHit.wall.id} DESTROYED by shooter ${shooter.id}`);
-            this.broadcast([encode('kM86hVW024', { id: 0, string: `__gloo:destroy:${glooHit.wall.id}:destroyed` })], null);
-          } else if (dmgRes) {
-            this.broadcast([encode('kM86hVW024', { id: 0, string: `__gloo:damage:${glooHit.wall.id}:${dmgRes.remainingHp}:${hx.toFixed(2)}:${hy.toFixed(2)}:${hz.toFixed(2)}` })], null);
-          }
-          log('combat', `shot ${shooter.id} -> GLOO WALL ${glooHit.wall.id} hit dmg=${base} remainingHp=${dmgRes ? dmgRes.remainingHp : 0}`);
-          return;
-        }
-        if (process.env.GP_HITSTATS) {
-          const st = this.hitStats = this.hitStats || { shots: 0, hit: 0 };
-          st.shots++;
-          if (target) { st.hit++; if (st.hit % 20 === 0) log('hitstats', JSON.stringify(st)); }
-        }
-        shooter.ammo = Math.max(0, shooter.ammo - 1);
-        if (shooter.ammo <= 0) shooter.ammo = WEAPON_AMMO[shooter.weaponType] || 40;
-        if (process.env.GP_HITDBG && hasPoint) {
-          for (const c of this.players) {
-            if (c === shooter || !c.spawned) continue;
-            const cr = c.reported, cx = cr ? cr.x : c.x, cz = cr ? cr.z : c.z, cy = cr ? cr.y : c.y;
-            if (Math.hypot(shot.AHPhtLFTi - cx, shot.MHnEcbTxpbz - cz) > 2.5) continue;
-            log('hitdbg', (target ? 'HIT ' : 'MISS'), 'rayY-targetY=', (shot.mGOwFesuTt - cy).toFixed(2), 'rayY=', shot.mGOwFesuTt.toFixed(2), 'targetY=', cy.toFixed(2));
-          }
-        }
-        if (!target) {
-          log('combat', `shot ${shooter.id} MISS`);
-          if (hasPoint) {
-            const nLen = Math.hypot(sx - shot.AHPhtLFTi, sy - shot.mGOwFesuTt, sz - shot.MHnEcbTxpbz) || 1;
-            const miss = encode('vS66uPxac49', {
-              JoHdvmpcMvL: shot.AHPhtLFTi, uBHZYKAHa: shot.mGOwFesuTt, yxEKoSFAg: shot.MHnEcbTxpbz,
-              AHPhtLFTi: clampByte(((sx - shot.AHPhtLFTi) / nLen) * 127),
-              mGOwFesuTt: clampByte(((sy - shot.mGOwFesuTt) / nLen) * 127),
-              MHnEcbTxpbz: clampByte(((sz - shot.MHnEcbTxpbz) / nLen) * 127),
-              tdkZouYda: shooter.id,
-            });
-            this.broadcast([miss], null);
-          }
-          return;
-        }
-        const base = WEAPON_DAMAGE[shooter.weaponType] !== undefined ? WEAPON_DAMAGE[shooter.weaponType] : 11;
-        // Real damage (verified from msg31 h in the duo capture): body 11,
-        // head 39 for smg/ar.
-        const dmg = targetHeadshot ? (shooter.weaponType === 2 ? 100 : (shooter.weaponType === 3 ? 40 : 39)) : base;
-        if (targetHeadshot) shooter.headshots++;
-        target.lastDamagedAt = Date.now();
-        target.hp = Math.max(0, target.hp - dmg);
-        const killed = target.hp === 0;
-        target.damageBy.set(shooter.id, (target.damageBy.get(shooter.id) || 0) + dmg);
-        const tr = target.reported;
-        const hitX = tr ? tr.x : target.x;
-        const hitZ = tr ? tr.z : target.z;
-        const hitY = passY !== null ? passY : (tr ? tr.y : target.y) - 0.75;
-        // 9 impact at the hit point, 10 blood on the victim (broadcast to all).
-        const normalDist = Math.hypot(sx - hitX, sz - hitZ) || 1;
-        const impact = encode('vS66uPxac49', {
-          JoHdvmpcMvL: hitX, uBHZYKAHa: hitY, yxEKoSFAg: hitZ,
-          AHPhtLFTi: clampByte(((sx - hitX) / normalDist) * 127), mGOwFesuTt: 0, MHnEcbTxpbz: clampByte(((sz - hitZ) / normalDist) * 127),
-          tdkZouYda: shooter.id,
-        });
-        const blood = encode('a693b13D91R', { tdkZouYda: target.id, uBHZYKAHa: hitY, MfCOcfVUx: 2 });
-        this.broadcast([impact, blood], null);
-        // 13 hitmarker -> shooter (lDKzyZxhKX=head flag, wtZUXNpiCWl=kill-shot
-        // flag; verified vs capture: every head-height hit has lDKzyZxhKX=1, and
-        // wtZUXNpiCWl=1 appears exactly once per kill).
-        // 31 damage indicator -> VICTIM ONLY, arw=1 (every real msg31 has arw=1
-        // and each client sees only the damage taken by itself).
-        const victim = target.srv;
-        if (victim) victim.send([encode('ib9T000831', { id: shooter.id, h: dmg, arw: 1 })]);
-        shooter.srv && shooter.srv.send([encode('ZpZC792j9p3', {
-          lDKzyZxhKX: targetHeadshot ? 1 : 0, wtZUXNpiCWl: killed ? 1 : 0,
-          JoHdvmpcMvL: hitX, uBHZYKAHa: hitY, yxEKoSFAg: hitZ,
-        })]);
-        log('combat', `shot ${shooter.id} -> ${target.id} dmg=${dmg}${targetHeadshot ? ' HEAD' : ''} hp=${target.hp} ammo=${shooter.ammo}`);
-        if (target.hp <= 0) this.onKill(shooter, target, targetHeadshot);
-      },
-      onKill(shooter, victim, isHead) {
-        victim.alive = false;
-        victim.spawned = false; // stop regular state broadcast; corpse (0x60) window is handled in tick()
-        victim.deadAt = Date.now();
-        victim.deaths++;
-        victim.hp = 0;
-        shooter.kills++;
-        shooter.points += isHead ? 150 : 100; // real KILLCONF pts: 100 body / 150 head
-        if (victim.damageBy) {
-          for (const [aid] of victim.damageBy) {
-            if (aid === shooter.id) continue;
-            const a = this.players.find((p) => p.id === aid);
-            if (a) { a.points += 50; a.assists++; }
-          }
-        }
-        victim.damageBy.clear();
-        // 20 death -> victim only (id = victim.id; h = shooter hp).
-        // 25 killfeed + 24 scoreboard -> all.
-        if (victim.srv) {
-          victim.srv.send([encode('gB4Cncy3f4', { id: victim.id, h: shooter.hp })]);
-          victim.srv.scheduleRespawn(); // real: respawn happens via the client's post-death class re-pick
-        }
-        this.broadcast([encode('Y6805DB31Br', {
-          WJxrwBXgp: shooter.id, cRzBBcbLPR: shooter.weaponType,
-          PacKJQHkQ: victim.id, KiQwnWACHo: isHead ? 1 : 0,
-        })], null);
-        // 23 kill-confirm goes to the KILLER (verified: A got 2 confirms for its
-        // 2 kills, B got 1 for its 1 kill; tdkZouYda = VICTIM id, jatzJSfdtNy =
-        // 100 body / 150 head).
-        if (shooter.srv) shooter.srv.send([encode('G058FYe8B9', {
-          tdkZouYda: victim.id, ldBboSufaY: isHead ? 1 : 0, fRcMMMfSas: 1, jatzJSfdtNy: isHead ? 150 : 100,
-        })]);
-        this.broadcast([...this.scoreboardMsg(), this.scoreHeaderMsg()], null);
-        // Sync the header dedup so the 500ms scoreTick doesn't re-send it.
-        const sorted = [...this.players].sort((x, y) => y.points - x.points);
-        this._lastHeader = ((sorted[0] || {}).points || 0) + ',' + ((sorted[1] || {}).points || 0);
-        log('combat', `KILL ${shooter.id} -> ${victim.id}${isHead ? ' HEAD' : ''}`);
-      },
-      respawn(p) {
-        // rotating spawn to avoid spawn-camping (mirrors match.mjs:288)
-        const spawns = this.spawns || SPAWNS;
-        const sp = spawns[(this.tickCount + p.id + 1) % spawns.length];
-        p.x = sp.x; p.y = sp.y; p.z = sp.z;
-        p.reported = null; p.reportTick = 0; p.reportedAt = 0;
-        // spawned stays false until the client acks (msg16 -> onStateAck sets it),
-        // matching HEAD/verified flow: dead players are not broadcast between
-        // respawn() and the ack.
-        p.hp = 100; p.alive = true; p.deadAt = 0; p.despawnSent = false;
-        p.lastDamagedAt = 0; p.lastRegenAt = 0;
-        p.ammo = WEAPON_AMMO[p.weaponType] || 40;
-        p.damageBy.clear();
-        p.yawByte = sp.yaw; p.spawnYaw = sp.yaw; p.aimByte = sp.pitch || 63;
-      },
-    };
   }
   const game = new WebSocketServer({ server: httpServer, path: '/ws' });
   game.on('connection', (ws, req) => {
@@ -812,34 +432,9 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081 } = {}) {
 }
 
 const DEFAULT_SKINS = [{ name: 'default', weapon: 'ar', wear: 0 }, { name: 'default', weapon: 'smg', wear: 0 }, { name: 'default', weapon: 'awp', wear: 0 }, { name: 'default', weapon: 'shotgun', wear: 0 }];
-const SPAWNS_NEWMLAB = [
-  { x: 48.9, y: 4.6, z: -22.0, pitch: 60, yaw: 254 }, // Eo
-  { x: 55.0, y: 4.6, z: 4.6, pitch: 63, yaw: 253 },   // Ep
-  { x: 67.3, y: 2.5, z: 3.7, pitch: 63, yaw: 192 },   // Eq
-  { x: 60.9, y: 2.5, z: 13.9, pitch: 59, yaw: 122 },  // Er
-  { x: -10.5, y: 4.6, z: 0.1, pitch: 63, yaw: 144 },  // Es
-  { x: -15.6, y: 2.0, z: -1.8, pitch: 63, yaw: 249 }, // Et
-  { x: 3.3, y: -0.4, z: -16.6, pitch: 63, yaw: 63 },  // Eu
-  { x: -22.4, y: 0.8, z: -40.0, pitch: 61, yaw: 139 },// Ev
-  { x: 17.3, y: 4.4, z: -30.3, pitch: 60, yaw: 46 },  // Ew
-  { x: 53.6, y: 7.2, z: 7.7, pitch: 63, yaw: 109 },   // Ex
-];
-const SPAWNS_TF = [
-  { x: -4.1, y: 2.5, z: -0.2, pitch: 64, yaw: 128 },
-  { x: -4.1, y: -0.9, z: 21.4, pitch: 64, yaw: 64 },
-  { x: -26.6, y: 2.5, z: 36.2, pitch: 63, yaw: 191 },
-  { x: -6.4, y: 2.7, z: 31.0, pitch: 63, yaw: 190 },
-  { x: 19.8, y: 2.5, z: 17.6, pitch: 63, yaw: 127 },
-  { x: 29.2, y: 2.5, z: 8.3, pitch: 63, yaw: 125 },
-  { x: 3.9, y: 2.5, z: -21.7, pitch: 63, yaw: 64 },
-  { x: -38.1, y: 2.5, z: 1.6, pitch: 64, yaw: 190 },
-  { x: -24.8, y: -2.1, z: 19.6, pitch: 65, yaw: 193 },
-];
 const FT = ['tf', 'industry', 'winter', 'mlab', 'manor', 'militia', 'shoothouse', 'dust2', 'neon', 'sandstorm', 'sandstorm2', 'newmlab'];
 const MAP_INDEX = Number(process.env.GP_MAP_INDEX ?? 11);
 const MODE_INDEX = Number(process.env.GP_MODE_INDEX ?? 0);
-const SPAWNS = MAP_INDEX === 0 ? SPAWNS_TF : SPAWNS_NEWMLAB;
-function spawnFor(id) { return SPAWNS[id % SPAWNS.length]; }
 function clampByte(v) { return Math.max(-128, Math.min(127, Math.round(v))); }
 // Hybrid combat (Phase 2): damage from a fixed weapon table, NOT a server sim.
 // Verified from msg31 h in the duo capture: smg body=11 head=39 (=round(11*3.5)).
@@ -847,7 +442,711 @@ const WEAPON_DAMAGE = [11, 21, 100, 20]; // SMG: 11, AR: 21, AWP: 100, Shotgun: 
 const WEAPON_AMMO = [40, 30, 3, 2]; // SMG: 40, AR: 30, AWP/Sniper: 3, Shotgun: 2 (verified from bundle Hs)
 const EYE_HEIGHT = 0; // msg52 reports SW.position = the camera/eye (verified: chest hits land at y-0.7)
 
-class GameSocket {
+// ---------- party lobby configuration ----------
+// Client option lists (verified vs raw/bundles/VM9.deob.txt):
+// FO (maps), FP (modes), FQ (time limits, minutes). The lobby card renders
+// `FS[region] + ' - ' + time + ' min'` where FS=FR below, and sticks the
+// mode/time buttons via FP/FQ.indexOf — so ONLY values from these lists may
+// ever be broadcast (anything else throws client-side).
+export const LOBBY_MAPS = ['tf', 'industry', 'winter', 'newmlab', 'manor', 'neon'];
+export const LOBBY_MODES = ['FFA', 'TDM', 'Point', 'Confirm', 'Team KC', 'Dom'];
+export const LOBBY_TIMES = [5, 10, 20];
+export const MODE_INDEX_TABLE = ['FFA', 'TDM', 'SWAT', 'Arcade', 'Siphon', 'Point', 'Confirm', 'Team KC', 'Dom']; // FN = keys(FL)
+export const REGIONS = { 2: 'North America', 9: 'Europe', 52: 'Asia', 40: 'South America', 35: 'Australia' }; // FR
+export const DEFAULT_REGION = '52';
+export const SAFE_MAP = 'newmlab'; // the only map guaranteed routable (see scanVerifiedMaps)
+
+// Maps whose 3D collision/geometry payload is actually on disk. The client
+// map loader fetches maps/<name>/out/out.drc; names without it freeze on the
+// loading screen, so they must never be routed into a match.
+export function scanVerifiedMaps(clientDir) {
+  const out = new Set();
+  for (const m of LOBBY_MAPS) {
+    try {
+      fs.statSync(path.join(clientDir, 'maps', m, 'out', 'out.drc'));
+      out.add(m);
+    } catch { /* no geometry on disk -> not routable */ }
+  }
+  return out;
+}
+export function resolveLobbyMap(req, verified) {
+  if (verified && verified.has(req)) return req;
+  if (verified && verified.has(SAFE_MAP)) return SAFE_MAP;
+  if (verified && verified.size) return [...verified][0];
+  return SAFE_MAP;
+}
+export function mapNameToIndex(name) {
+  const i = FT.indexOf(name);
+  return i === -1 ? FT.indexOf(SAFE_MAP) : i;
+}
+export function modeNameToIndex(name) {
+  const i = MODE_INDEX_TABLE.indexOf(name);
+  return i === -1 ? 0 : i;
+}
+// Every lobby mode except solo FFA plays with teams (TDM, Point, Confirm,
+// Team KC, Dom). Mirrors the client's own FFA-vs-rest split (msg36 KN flag).
+export function isTeamModeIndex(idx) { return idx !== 0; }
+export function resolveRegion(req) {
+  const r = String(req ?? '');
+  return REGIONS[r] ? r : DEFAULT_REGION;
+}
+export function defaultMatchSeconds() {
+  const t = Number(process.env.GP_MATCH_TIME);
+  return Number.isFinite(t) && t >= 0 ? Math.floor(t) : 300;
+}
+export function configuredScoreLimit() {
+  const s = Number(process.env.GP_SCORE_LIMIT ?? 0);
+  return Number.isFinite(s) && s > 0 ? Math.floor(s) : 0;
+}
+// Balance lobby teams for team modes: members with an explicit team (via
+// Switch Teams) keep it; unassigned members join the smaller side.
+export function balanceLobbyTeams(members) {
+  let c1 = 0, c2 = 0;
+  for (const m of members) { if (m.team === 1) c1++; else if (m.team === 2) c2++; }
+  return members.map((m) => {
+    if (m.team === 1 || m.team === 2) return m.team;
+    if (c1 <= c2) { c1++; return 1; }
+    c2++; return 2;
+  });
+}
+
+// ---------- per-map respawn tables ----------
+// Exact spawn points from the client map database (raw/bundles/VM9.deob.txt: each
+// EM entry's `spawns` list; x/y/z are world coordinates, pitch = rx and yaw = ry are
+// the facing-angle bytes). Floats are rounded to 3 decimals (float32 noise removed);
+// the tf/newmlab rows below are byte-identical to the previously hand-verified tables.
+// dust2 defines a single coordinate-only placeholder (0, 100, 0): pitch/yaw fall back
+// to level/0 so the facing bytes are always defined.
+export const MAP_SPAWNS = {
+  // tf (Factory, FT index 0, 9 spawns)
+  tf: [
+    { x: -4.1, y: 2.5, z: -0.2, pitch: 64, yaw: 128 }, // uo
+    { x: -4.1, y: -0.9, z: 21.4, pitch: 64, yaw: 64 }, // up
+    { x: -26.6, y: 2.5, z: 36.2, pitch: 63, yaw: 191 }, // uq
+    { x: -6.4, y: 2.7, z: 31, pitch: 63, yaw: 190 }, // ur
+    { x: 19.8, y: 2.5, z: 17.6, pitch: 63, yaw: 127 }, // us
+    { x: 29.2, y: 2.5, z: 8.3, pitch: 63, yaw: 125 }, // ut
+    { x: 3.9, y: 2.5, z: -21.7, pitch: 63, yaw: 64 }, // uu
+    { x: -38.1, y: 2.5, z: 1.6, pitch: 64, yaw: 190 }, // uv
+    { x: -24.8, y: -2.1, z: 19.6, pitch: 65, yaw: 193 }, // uw
+  ],
+  // industry (Refinery, FT index 1, 5 spawns)
+  industry: [
+    { x: -13, y: 6.5, z: -37, pitch: 64, yaw: 192 }, // v4
+    { x: -0.7, y: 6.5, z: -20, pitch: 64, yaw: 255 }, // v5
+    { x: 6.1, y: 2.8, z: -8.3, pitch: 62, yaw: 190 }, // v6
+    { x: 2.2, y: 7.4, z: 33.1, pitch: 63, yaw: 254 }, // v7
+    { x: 18.9, y: 9.3, z: -20.4, pitch: 64, yaw: 254 }, // v8
+  ],
+  // winter (Snowfall, FT index 2, 8 spawns)
+  winter: [
+    { x: -9.7, y: 6.2, z: 29.3, pitch: 62, yaw: 6 }, // vv
+    { x: -21.1, y: 9.1, z: -26.2, pitch: 59, yaw: 126 }, // vw
+    { x: 32, y: 2.1, z: -23.3, pitch: 61, yaw: 132 }, // vx
+    { x: 26.1, y: 9.9, z: -24.1, pitch: 59, yaw: 218 }, // vy
+    { x: 3.3, y: 6.1, z: -11.1, pitch: 62, yaw: 214 }, // vz
+    { x: 46.4, y: 6.3, z: 12.6, pitch: 63, yaw: 227 }, // vA
+    { x: 42.6, y: 4.6, z: -48.8, pitch: 62, yaw: 171 }, // vB
+    { x: 21, y: 9.9, z: -17.8, pitch: 62, yaw: 160 }, // vC
+  ],
+  // mlab (Legacy Lab, FT index 3, 12 spawns)
+  mlab: [
+    { x: 0, y: 9.3, z: 0, pitch: 62, yaw: 249 }, // vX
+    { x: 5.8, y: 4.5, z: 15, pitch: 62, yaw: 238 }, // vY
+    { x: 54.4, y: 7.1, z: 8.1, pitch: 62, yaw: 95 }, // vZ
+    { x: 65.8, y: 4.5, z: -15, pitch: 63, yaw: 98 }, // w0
+    { x: 47.6, y: 4.5, z: -16.7, pitch: 62, yaw: 185 }, // w1
+    { x: 27.1, y: 3.2, z: -23.9, pitch: 64, yaw: 199 }, // w2
+    { x: 50.2, y: 4.5, z: -40.4, pitch: 63, yaw: 98 }, // w3
+    { x: 17.8, y: 5.5, z: -33.2, pitch: 64, yaw: 61 }, // w4
+    { x: -12.4, y: 1.9, z: -7.8, pitch: 63, yaw: 215 }, // w5
+    { x: -29.9, y: -0.1, z: -34.3, pitch: 64, yaw: 163 }, // w6
+    { x: -10.9, y: 2.9, z: -26.5, pitch: 61, yaw: 69 }, // w7
+    { x: 26.9, y: 4, z: -10, pitch: 64, yaw: 128 }, // w8
+  ],
+  // manor (Vineyard/Manor, FT index 4, 8 spawns)
+  manor: [
+    { x: -17.7, y: -9.3, z: -36.8, pitch: 64, yaw: 126 }, // wq
+    { x: 4.5, y: -1.5, z: -16.4, pitch: 64, yaw: 223 }, // wr
+    { x: 40.9, y: -1.5, z: -2.4, pitch: 64, yaw: 62 }, // wt
+    { x: 13, y: -1.5, z: 14.7, pitch: 63, yaw: 250 }, // wu
+    { x: -22.5, y: -4.9, z: 30.5, pitch: 62, yaw: 39 }, // wv
+    { x: -49.5, y: -3.3, z: 12.1, pitch: 63, yaw: 126 }, // ww
+    { x: -22.5, y: 3.5, z: 29.5, pitch: 64, yaw: 5 }, // wx
+    { x: -26.4, y: -0.3, z: -15.4, pitch: 62, yaw: 192 }, // wy
+  ],
+  // militia (Militia, FT index 5, 7 spawns)
+  militia: [
+    { x: -19, y: 2, z: 8.3, pitch: 63, yaw: 226 }, // wS
+    { x: -4.4, y: 2, z: 18, pitch: 63, yaw: 208 }, // wT
+    { x: 26.4, y: 2, z: 3.4, pitch: 60, yaw: 193 }, // wU
+    { x: 25.9, y: 2, z: -3.8, pitch: 62, yaw: 28 }, // wV
+    { x: 16.4, y: 4.5, z: -28.2, pitch: 64, yaw: 218 }, // wW
+    { x: 5.3, y: 4.5, z: -41.5, pitch: 58, yaw: 64 }, // wX
+    { x: 1.7, y: 4.5, z: -22, pitch: 62, yaw: 24 }, // wY
+  ],
+  // shoothouse (Shoot House, FT index 6, 10 spawns)
+  shoothouse: [
+    { x: 18.8, y: 5.3, z: 3.6, pitch: 64, yaw: 126 }, // x6
+    { x: 34.1, y: 5.3, z: 7.2, pitch: 61, yaw: 191 }, // x7
+    { x: 59.9, y: 5.3, z: -1.1, pitch: 60, yaw: 2 }, // x8
+    { x: 30.5, y: 5.3, z: -15.2, pitch: 59, yaw: 228 }, // x9
+    { x: 9.5, y: 5.3, z: -40.8, pitch: 58, yaw: 64 }, // xa
+    { x: 12.3, y: 5.3, z: -20.4, pitch: 61, yaw: 237 }, // xb
+    { x: 0.1, y: 5.3, z: -20.3, pitch: 57, yaw: 45 }, // xc
+    { x: -26.6, y: 5.3, z: -42.8, pitch: 63, yaw: 96 }, // xd
+    { x: -38.1, y: 5.3, z: -18.1, pitch: 63, yaw: 40 }, // xe
+    { x: -34.4, y: 5.3, z: 32.2, pitch: 61, yaw: 6 }, // xf
+  ],
+  // dust2 (Dust II, FT index 7, 1 spawns)
+  dust2: [
+    { x: 0, y: 100, z: 0, pitch: 64, yaw: 0 }, // xn
+  ],
+  // neon (Neo Tokyo, FT index 8, 11 spawns)
+  neon: [
+    { x: 3, y: 2.4, z: 0.6, pitch: 63, yaw: 177 }, // xw
+    { x: -11.9, y: 1.4, z: 29, pitch: 63, yaw: 0 }, // xx
+    { x: -43.4, y: 5.1, z: -12.9, pitch: 62, yaw: 0 }, // xy
+    { x: 3.3, y: 5.1, z: -35.5, pitch: 63, yaw: 63 }, // xz
+    { x: 2.9, y: 2.4, z: -55.2, pitch: 63, yaw: 187 }, // xA
+    { x: 44.2, y: 0.6, z: 35.1, pitch: 64, yaw: 254 }, // xB
+    { x: 15.1, y: 0.6, z: 20.7, pitch: 64, yaw: 126 }, // xC
+    { x: -6.7, y: 5.2, z: 32.8, pitch: 64, yaw: 63 }, // xD
+    { x: -34, y: 5.1, z: 11.7, pitch: 62, yaw: 159 }, // xE
+    { x: -10.4, y: 5.1, z: -5, pitch: 63, yaw: 23 }, // xF
+    { x: 24, y: 4.7, z: -8.5, pitch: 63, yaw: 254 }, // xG
+  ],
+  // sandstorm (Sandstorm, FT index 9, 6 spawns)
+  sandstorm: [
+    { x: -11, y: -6.8, z: 18.9, pitch: 60, yaw: 30 }, // Bl
+    { x: -27.6, y: -6.8, z: -2.8, pitch: 61, yaw: 125 }, // Bm
+    { x: -54.3, y: -6.9, z: 55.9, pitch: 63, yaw: 190 }, // Bn
+    { x: -58.3, y: -4.2, z: 84.2, pitch: 64, yaw: 191 }, // Bo
+    { x: 20.9, y: -6.8, z: 79.3, pitch: 62, yaw: 244 }, // Bp
+    { x: 30.1, y: -6.8, z: 5.2, pitch: 64, yaw: 128 }, // Bq
+  ],
+  // sandstorm2 (Sandstorm 2, FT index 10, 1 spawns)
+  sandstorm2: [
+    { x: -31.6, y: 10.6, z: -60.2, pitch: 62, yaw: 193 }, // Eg
+  ],
+  // newmlab (Forest, FT index 11, 10 spawns)
+  newmlab: [
+    { x: 48.9, y: 4.6, z: -22, pitch: 60, yaw: 254 }, // Eo
+    { x: 55, y: 4.6, z: 4.6, pitch: 63, yaw: 253 }, // Ep
+    { x: 67.3, y: 2.5, z: 3.7, pitch: 63, yaw: 192 }, // Eq
+    { x: 60.9, y: 2.5, z: 13.9, pitch: 59, yaw: 122 }, // Er
+    { x: -10.5, y: 4.6, z: 0.1, pitch: 63, yaw: 144 }, // Es
+    { x: -15.6, y: 2, z: -1.8, pitch: 63, yaw: 249 }, // Et
+    { x: 3.3, y: -0.4, z: -16.6, pitch: 63, yaw: 63 }, // Eu
+    { x: -22.4, y: 0.8, z: -40, pitch: 61, yaw: 139 }, // Ev
+    { x: 17.3, y: 4.4, z: -30.3, pitch: 60, yaw: 46 }, // Ew
+    { x: 53.6, y: 7.2, z: 7.7, pitch: 63, yaw: 109 }, // Ex
+  ],
+};
+export function spawnsForMap(mapName) {
+  return MAP_SPAWNS[mapName] || MAP_SPAWNS[SAFE_MAP];
+}
+export function spawnsForMapIndex(mapIndex) {
+  return spawnsForMap(FT[mapIndex]);
+}
+
+export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, matchSeconds, scoreLimit = 0 } = {}) {
+  const spawns = spawnsForMapIndex(mapIndex);
+  function spawnForAlloc(id) { return spawns[id % spawns.length]; }
+  const players = (roster || [{ id: 0, name: 'Solo', skins: [] }]).map((p, idx) => {
+    const sp = spawnForAlloc(p.id);
+    return {
+      id: p.id, name: p.name, skins: JSON.stringify(p.skins && p.skins.length ? p.skins : DEFAULT_SKINS),
+      team: Number.isInteger(p.team) && p.team > 0 ? p.team : ((idx % 2) + 1),
+      x: sp.x, y: sp.y, z: sp.z,
+      yawByte: sp.yaw, spawnYaw: sp.yaw, aimByte: sp.pitch || 63,
+      spawned: false, hp: 100, weaponType: 0, alive: true, ammo: 40, despawnSent: false,
+      kills: 0, deaths: 0, points: 0, headshots: 0, assists: 0, damageBy: new Map(), deadAt: 0,
+      lastDamagedAt: 0, lastRegenAt: 0,
+      reported: null, reportTick: 0, inputVal: 0, inputTick: 0, reportedAt: 0,
+      srv: null,
+    };
+  });
+    const SIM_SPEED = Math.max(0.01, Number(process.env.GP_SPEED || 1));
+  return {
+    players,
+    glooWalls: new GlooWallManager(),
+    mapIndex,
+    modeIndex,
+    spawns,
+    sockets: new Set(),
+    timers: new Set(),
+    closed: false,
+    tickCount: 0,
+    // Match countdown (seconds). Room matches pass the lobby's selected time
+    // limit; the env default below only applies to solo/no-room allocations.
+    time: matchSeconds !== undefined ? Math.max(0, Math.floor(matchSeconds)) : defaultMatchSeconds(),
+    matchLength: matchSeconds !== undefined ? Math.max(0, Math.floor(matchSeconds)) : defaultMatchSeconds(),
+    scoreLimit,
+    teamMode: isTeamModeIndex(modeIndex),
+    ended: false,
+    onEnd: null,
+    secondTickRunning: false,
+    after(ms, fn) {
+      const scaled = Math.max(1, Math.round(ms / SIM_SPEED));
+      const t = setTimeout(() => { this.timers.delete(t); if (!this.closed) fn(); }, scaled);
+      this.timers.add(t);
+    },
+    stop() {
+      this.closed = true;
+      for (const t of this.timers) clearTimeout(t);
+      this.timers.clear();
+      if (this.glooWalls) this.glooWalls.clear();
+    },
+    startBroadcast() {
+      this.after(100, () => { this.tick(); this.startBroadcast(); });
+    },
+    startSecondTick() {
+      if (this.secondTickRunning) return;
+      this.secondTickRunning = true;
+      this._lastHeader = this.headerKey();
+      // 42 header: once per session, broadcast when the first player spawns
+      // (real capture: 1 per client per session, +1 per kill).
+      this.broadcast([this.scoreHeaderMsg()], null);
+      // Immediate timer so the HUD initializes to the full limit (e.g. 5:00)
+      // instead of waiting a second for the first tick.
+      this.broadcast([encode('ld52k5uY7', { time: this.time }), encode('hJUJ7cbd51b', { string: '[]' })], null);
+      this.after(1000, () => this.secondTick());
+      this.after(1000, () => this.scoreTick());
+    },
+    // Shared match-completion sequence: final scoreboard + header, then the
+    // end screen trigger (28). onEnd (set by startGame) returns the room to
+    // the lobby so the party can ready up again.
+    endMatch(reason) {
+      if (this.ended) return;
+      this.ended = true;
+      this.secondTickRunning = false;
+      this.broadcast([...this.scoreboardMsg(), this.scoreHeaderMsg(), encode('D522Kq7l5n', {})], null);
+      log('match', 'END ' + reason);
+      if (typeof this.onEnd === 'function') { try { this.onEnd(); } catch {} }
+    },
+    secondTick() {
+      if (this.closed || this.ended || !this.sockets.size) return;
+      this.ageLog = (this.ageLog || 0) + 1;
+      if (this.ageLog % 5 === 0) {
+        const ages = this.players.map((p) => p.id + '=' + Math.round((Date.now() - p.reportedAt) / 100) / 10 + 's' + (p.reported ? '' : '*')).join(' ');
+        log('ages', 'tick', this.tickCount, '->', ages);
+      }
+      if (this.time > 0) this.time--;
+      const parts = [encode('ld52k5uY7', { time: this.time })];                       // 19 timer
+      parts.push(encode('hJUJ7cbd51b', { string: '[]' }));                            // 35 item list (none)
+      if (this.glooWalls) {
+        const expired = this.glooWalls.update();
+        for (const exp of expired) {
+          parts.push(encode('kM86hVW024', { id: 0, string: `__gloo:destroy:${exp.id}:expired` }));
+        }
+      }
+      this.broadcast(parts, null);
+      if (this.time === 0) { this.endMatch('time=0'); return; }
+      this.after(1000, () => this.secondTick());
+    },
+    // Scoreboard: ONE broadcast (both players' entries) per timer second +
+    // extras right after kills (real capture: 219 msg24 over 103s, i.e. ~1
+    // broadcast/s, 2 entries each; kill moments show 3-4 per interval).
+    // Header (msg42) only on change.
+    scoreTick() {
+      if (this.closed || this.ended || !this.sockets.size) return;
+      const parts = [...this.scoreboardMsg()];
+      const hdr = this.headerKey();
+      if (hdr !== this._lastHeader) {
+        this._lastHeader = hdr;
+        parts.push(this.scoreHeaderMsg());
+      }
+      this.broadcast(parts, null);
+      this.after(1000, () => this.scoreTick());
+    },
+
+    // Clock correction mix (real capture ratios: 4=2 ~77%, 4=1 ~9%, 5 ~10%,
+    // 6=0 ~4%). msg4 speeds the client sim up (Wg+0.05*val), msg5 slows it
+    // down, msg6 resets Wg to base. A fixed 26-tick cycle reproduces the mix.
+    clockMsg(s) {
+      // Real pattern (capture): long runs of msg4=2 with occasional bursts of
+      // msg5 (slow-down) then msg6 (reset), ratios ~ 4=2:4=1:5:6 = 77:9:10:4.
+      // Phase machine: steady ~40 ticks, then a 3-8 msg5 burst + 1-2 msg6,
+      // repeat. Seeded per socket so runs are reproducible.
+      if (s.clockLeft > 0) {
+        s.clockLeft--;
+        return encode('pi7M701p0', { cKRwdjkqGai: (s.clockCycle++ & 3) === 0 ? 1 : 2 });
+      }
+      if (s.clockResetLeft > 0) {
+        s.clockResetLeft--;
+        return encode('qv8j93zAL', { cKRwdjkqGai: 0 });
+      }
+      if (++s.clockCycle >= 38 + (s.clockRand % 12)) {
+        s.clockCycle = 0;
+        s.clockRand = (s.clockRand * 1103515245 + 12345) >>> 0;
+        s.clockLeft = 3 + (s.clockRand % 6);
+        s.clockResetLeft = 1 + ((s.clockRand >>> 8) & 1);
+      }
+      return encode('Ko38N6873G6', { cKRwdjkqGai: s.clockCycle % 9 === 0 ? 1 : 2 });
+    },
+
+    // Per-viewer state broadcast every ~100ms (mirrors match.mjs: only players
+    // that are spawned go in the world, EXCEPT the viewer's own player which is
+    // always included for the self-state/desync check). Each tick also carries
+    // the Ko38 clock so the client's interpolator keeps its 75-135ms cadence.
+    tick() {
+      if (this.closed || !this.sockets.size) return;
+      this.tickCount++;
+      const now = Date.now();
+      const regenDelay = 3500 / SIM_SPEED;
+      const regenInterval = 100 / SIM_SPEED;
+      for (const p of this.players) {
+        if (p.spawned && p.alive && p.hp > 0 && p.hp < 100) {
+          if (now - (p.lastDamagedAt || 0) > regenDelay) {
+            if (now - (p.lastRegenAt || 0) >= regenInterval) {
+              p.lastRegenAt = now;
+              p.hp = Math.min(100, p.hp + 1);
+            }
+          }
+        }
+      }
+      for (const s of this.sockets) {
+        if (s.closed || s.ws.readyState !== 1) continue;
+        const parts = [];
+        for (const p of this.players) {
+          if (!p.spawned) {
+            // During the 1000ms corpse fade, keep broadcasting msg2 (anim:0x60, hp:0)
+            // so the death animation plays ONCE on opponent screens; after that the
+            // corpse must be EXCLUDED or the client re-triggers the death transition
+            // every tick -> model freezes mid-fall, no death animation (HANDOFF #9).
+            if (!p.deadAt || now - p.deadAt > (1000 / SIM_SPEED)) continue;
+          }
+          if (!p.alive && p !== s.me && now - p.deadAt > (1000 / SIM_SPEED)) continue;
+          parts.push(this.stateMessage(p));
+        }
+        if (!parts.length) continue;
+        parts.push(this.clockMsg(s));                                                  // 4/5/6 clock
+        s.send(parts);
+      }
+    },
+    stateMessage(p) {
+      const r = p.reported;
+      const x = r ? r.x : p.x;
+      const y = r ? r.y : p.y;
+      const z = r ? r.z : p.z;
+      // Anim bits from the reported input val.
+      // HR anim-state bits: 0x01 left, 0x02 right, 0x04 up, 0x08 down, 0x10 ADS(OUsPgMLOT),
+      // 0x20 grounded/idle(vQ5Ra371n0), 0x40 death(PxxmChYjxoE), 0x80 stepped, 0x100 crouch(W91ldgW19d).
+      // Input bits: 0x01 W, 0x02 S, 0x04 A, 0x08 D, 0x10 Jump(space), 0x20 Slide/Shift(HpsuHliFMHL),
+      // 0x40 ADS(OUsPgMLOT), 0x80 Reload(hRdQS9697), 0x100 Crouch/C(MFUoomFzxq).
+      let anim = 0x20; // 32 = grounded (vQ5Ra371n0)
+      if (p.inputVal & 0x01) anim |= 0x04;   // W -> up
+      if (p.inputVal & 0x02) anim |= 0x08;   // S -> down
+      if (p.inputVal & 0x04) anim |= 0x01;   // A -> left
+      if (p.inputVal & 0x08) anim |= 0x02;   // D -> right
+      if (p.inputVal & 0x40) anim |= 0x10;   // ADS -> anim ADS pose
+      if ((p.inputVal & 0x100) || (p.inputVal & 0x20)) anim |= 0x100; // Crouch (C) or Slide (Shift) -> W91ldgW19d (crouchIdle / crouchWalk)
+      if (p.inputVal & 0x10) anim &= ~0x20;  // Jump (Space) -> airborne (!vQ5Ra371n0) -> jumpAnim
+      if (!p.alive) anim = 0x60; // 0x40 fade + 0x20 idle -> corpse fades out
+      return encode('K11Co2hvi1l', {
+        tdkZouYda: p.id,
+        JoHdvmpcMvL: x, uBHZYKAHa: y, yxEKoSFAg: z,
+        TCHdFFAXmk: p.aimByte,            // pitch byte (64 = level)
+        ibyXzJIMNf: p.yawByte,            // body-yaw byte (rot.y = iby*pi/128+pi)
+        YSmEAVINAh: anim,
+        // Echo the client's own tick (already 0..127 from a26); self-check passes
+        // because the value IS the client's own prediction.
+        wGiOzKcGlnH: (r ? p.reportTick : p.inputTick) & 0x7f,
+        hkhrYayXI: p.hp,
+        qXuHmlbSlxE: p.team, // entity team; always nonzero (FFA alternates, team modes balance)
+      });
+    },
+    // ---------- Phase 2 hybrid combat ----------
+    // All positions come from client msg-52 reports (never simulated). A shot
+    // (msg 8) is a ray from the shooter's reported position + eye height. The
+    // client's OWN world hit point (AHPhtLFTi/mGOwFesuTt/MHnEcbTxpbz) is the
+    // authoritative occlusion test: the client's raycast stops at the first
+    // voxel it hits, so we cap the shot range there — a wall between shooter
+    // and target can never be shot through (no wallbang). Hit selection uses
+    // the same angular + pitch-delta rules as the reference server.
+    broadcast(parts, exclude) {
+      for (const s of this.sockets) {
+        if (s === exclude || s.closed || s.ws.readyState !== 1) continue;
+        s.send(parts);
+      }
+    },
+    scoreboardMsg() {
+      const parts = [];
+      for (const p of this.players) {
+        parts.push(encode('RMFVb5UZGi7', {
+          id: p.id, points: p.points, k: p.kills, d: p.deaths,
+          h: p.weaponType || 0, p: Math.round(((p.srv && p.srv.pingMs) || 0) * 2), c: 0, hsp: p.headshots,
+          PhbhpxFxPP: p.team, ha: p.assists, JgVHFEBAE: 0, TxJblhJNah: 0, aMWaisFtZ: 0,
+        }));
+      }
+      return parts;
+    },
+    // Team totals (kills + assists all score via points, so the sum IS the
+    // team score). FFA header instead shows the top-2 players.
+    teamScores() {
+      let a = 0, b = 0;
+      for (const p of this.players) { if (p.team === 2) b += p.points; else a += p.points; }
+      return { a, b };
+    },
+    headerKey() {
+      if (this.teamMode) { const t = this.teamScores(); return t.a + ',' + t.b; }
+      const sorted = [...this.players].sort((x, y) => y.points - x.points);
+      return (sorted[0]?.points || 0) + ',' + (sorted[1]?.points || 0);
+    },
+    scoreHeaderMsg() {
+      if (this.teamMode) {
+        const t = this.teamScores();
+        return encode('P2F7KG88n96', { a: t.a, b: t.b });
+      }
+      const sorted = [...this.players].sort((x, y) => y.points - x.points);
+      return encode('P2F7KG88n96', { a: (sorted[0] || {}).points || 0, b: (sorted[1] || {}).points || 0 });
+    },
+    handleShot(shooter, shot) {
+      if (!shooter || !shooter.alive || !shooter.spawned) return;
+      const r = shooter.reported;
+      const sx = r ? r.x : shooter.x, sy = (r ? r.y : shooter.y) + EYE_HEIGHT, sz = r ? r.z : shooter.z;
+      // msg 8 fields (verified vs VM9.deob): uBHZYKAHa = body yaw (shoot dir
+      // = yaw+PI), JoHdvmpcMvL = aim pitch, AHPhtLFTi/mGOwFesuTt/MHnEcbTxpbz =
+      // the client's EXACT crosshair raycast point.
+      const hasPoint = Number.isFinite(shot.AHPhtLFTi) && Number.isFinite(shot.mGOwFesuTt) && Number.isFinite(shot.MHnEcbTxpbz)
+          && Math.abs(shot.AHPhtLFTi) + Math.abs(shot.mGOwFesuTt) + Math.abs(shot.MHnEcbTxpbz) > 0.001;
+      let target = null, targetHeadshot = false;
+      let passY = null; // blood/impact height (client point y when available)
+      let pointLen = Infinity;
+      const yaw = Number.isFinite(shot.uBHZYKAHa) ? shot.uBHZYKAHa + Math.PI : 0;
+      const pitch = Number.isFinite(shot.JoHdvmpcMvL) ? shot.JoHdvmpcMvL : 0;
+      let dirX = Math.sin(yaw) * Math.cos(pitch);
+      let dirY = Math.sin(pitch);
+      let dirZ = Math.cos(yaw) * Math.cos(pitch);
+
+      if (hasPoint) {
+        const px = shot.AHPhtLFTi, py = shot.mGOwFesuTt, pz = shot.MHnEcbTxpbz;
+        const bDx = px - sx, bDy = py - sy, bDz = pz - sz;
+        const bLen = Math.hypot(bDx, bDy, bDz);
+        if (bLen > 0.01) {
+          dirX = bDx / bLen;
+          dirY = bDy / bLen;
+          dirZ = bDz / bLen;
+          pointLen = bLen;
+        }
+      }
+      const hDirLenSq = dirX * dirX + dirZ * dirZ;
+
+      let bestDist = Infinity;
+      for (const candidate of this.players) {
+        if (candidate === shooter || !candidate.spawned || !candidate.alive) continue;
+        if (this.teamMode && candidate.team === shooter.team) continue; // no friendly fire in team modes
+
+        // Lag compensation: test instant position + rolling history samples
+        const testPositions = [];
+        if (candidate.reported) testPositions.push(candidate.reported);
+        if (candidate.history && candidate.history.length) {
+          for (let hi = candidate.history.length - 1; hi >= 0 && hi >= candidate.history.length - 4; hi--) {
+            testPositions.push(candidate.history[hi]);
+          }
+        }
+        if (!testPositions.length) testPositions.push({ x: candidate.x, y: candidate.y, z: candidate.z });
+
+        for (const pos of testPositions) {
+          const cx = pos.x, cy = pos.y, cz = pos.z;
+          const dx = cx - sx, dz = cz - sz;
+          const directDist = Math.hypot(dx, dz);
+          if (directDist < 0.001 || directDist > 120) continue;
+
+          if (hDirLenSq < 1e-6) continue;
+          const t = (dx * dirX + dz * dirZ) / hDirLenSq;
+          if (t <= 0) continue; // Target is behind shooter
+
+          if (hasPoint && pointLen < t - 1.2) continue;
+
+          const rayX = sx + dirX * t;
+          const rayY = sy + dirY * t;
+          const rayZ = sz + dirZ * t;
+
+          const hDist = Math.hypot(rayX - cx, rayZ - cz);
+          const relY = rayY - cy; // Height relative to candidate's eye level (cy)
+
+          // Torso cylinder: radius 0.48m (accommodates character animations, sprint, and strafe movements)
+          // Vertical range: feet (cy - 2.40m) to top of head (cy + 0.35m)
+          const isHit = hDist <= 0.48 && relY >= -2.40 && relY <= 0.35;
+
+          if (isHit) {
+            // Head region: chin (cy - 0.22m) up to top of head (cy + 0.25m), radius 0.22m
+            const isHead = relY >= -0.22 && relY <= 0.25 && hDist <= 0.22;
+
+            if (t < bestDist) {
+              bestDist = t;
+              target = candidate;
+              targetHeadshot = isHead;
+              passY = rayY;
+            }
+            break; // Found valid hit on this candidate
+          }
+        }
+      }
+      const glooHit = this.glooWalls ? this.glooWalls.raycast(sx, sy, sz, dirX, dirY, dirZ, 120) : null;
+      const glooOccluded = glooHit && hasPoint && pointLen < glooHit.dist - 0.2;
+      if (glooHit && !glooOccluded && glooHit.dist < bestDist) {
+        shooter.ammo = Math.max(0, shooter.ammo - 1);
+        if (shooter.ammo <= 0) shooter.ammo = WEAPON_AMMO[shooter.weaponType] || 40;
+        const base = WEAPON_DAMAGE[shooter.weaponType] !== undefined ? WEAPON_DAMAGE[shooter.weaponType] : 11;
+        const dmgRes = this.glooWalls.damage(glooHit.wall.id, base);
+        const hx = glooHit.hitPoint.x, hy = glooHit.hitPoint.y, hz = glooHit.hitPoint.z;
+        const normalDist = Math.hypot(sx - hx, sz - hz) || 1;
+        const impact = encode('vS66uPxac49', {
+          JoHdvmpcMvL: hx, uBHZYKAHa: hy, yxEKoSFAg: hz,
+          AHPhtLFTi: clampByte(((sx - hx) / normalDist) * 127), mGOwFesuTt: 0, MHnEcbTxpbz: clampByte(((sz - hz) / normalDist) * 127),
+          tdkZouYda: shooter.id,
+        });
+        this.broadcast([impact], null);
+        shooter.srv && shooter.srv.send([encode('ZpZC792j9p3', {
+          lDKzyZxhKX: 0, wtZUXNpiCWl: dmgRes && dmgRes.destroyed ? 1 : 0,
+          JoHdvmpcMvL: hx, uBHZYKAHa: hy, yxEKoSFAg: hz,
+        })]);
+        if (dmgRes && dmgRes.destroyed) {
+          log('combat', `GLOO WALL ${glooHit.wall.id} DESTROYED by shooter ${shooter.id}`);
+          this.broadcast([encode('kM86hVW024', { id: 0, string: `__gloo:destroy:${glooHit.wall.id}:destroyed` })], null);
+        } else if (dmgRes) {
+          this.broadcast([encode('kM86hVW024', { id: 0, string: `__gloo:damage:${glooHit.wall.id}:${dmgRes.remainingHp}:${hx.toFixed(2)}:${hy.toFixed(2)}:${hz.toFixed(2)}` })], null);
+        }
+        log('combat', `shot ${shooter.id} -> GLOO WALL ${glooHit.wall.id} hit dmg=${base} remainingHp=${dmgRes ? dmgRes.remainingHp : 0}`);
+        return;
+      }
+      if (process.env.GP_HITSTATS) {
+        const st = this.hitStats = this.hitStats || { shots: 0, hit: 0 };
+        st.shots++;
+        if (target) { st.hit++; if (st.hit % 20 === 0) log('hitstats', JSON.stringify(st)); }
+      }
+      shooter.ammo = Math.max(0, shooter.ammo - 1);
+      if (shooter.ammo <= 0) shooter.ammo = WEAPON_AMMO[shooter.weaponType] || 40;
+      if (process.env.GP_HITDBG && hasPoint) {
+        for (const c of this.players) {
+          if (c === shooter || !c.spawned) continue;
+          const cr = c.reported, cx = cr ? cr.x : c.x, cz = cr ? cr.z : c.z, cy = cr ? cr.y : c.y;
+          if (Math.hypot(shot.AHPhtLFTi - cx, shot.MHnEcbTxpbz - cz) > 2.5) continue;
+          log('hitdbg', (target ? 'HIT ' : 'MISS'), 'rayY-targetY=', (shot.mGOwFesuTt - cy).toFixed(2), 'rayY=', shot.mGOwFesuTt.toFixed(2), 'targetY=', cy.toFixed(2));
+        }
+      }
+      if (!target) {
+        log('combat', `shot ${shooter.id} MISS`);
+        if (hasPoint) {
+          const nLen = Math.hypot(sx - shot.AHPhtLFTi, sy - shot.mGOwFesuTt, sz - shot.MHnEcbTxpbz) || 1;
+          const miss = encode('vS66uPxac49', {
+            JoHdvmpcMvL: shot.AHPhtLFTi, uBHZYKAHa: shot.mGOwFesuTt, yxEKoSFAg: shot.MHnEcbTxpbz,
+            AHPhtLFTi: clampByte(((sx - shot.AHPhtLFTi) / nLen) * 127),
+            mGOwFesuTt: clampByte(((sy - shot.mGOwFesuTt) / nLen) * 127),
+            MHnEcbTxpbz: clampByte(((sz - shot.MHnEcbTxpbz) / nLen) * 127),
+            tdkZouYda: shooter.id,
+          });
+          this.broadcast([miss], null);
+        }
+        return;
+      }
+      const base = WEAPON_DAMAGE[shooter.weaponType] !== undefined ? WEAPON_DAMAGE[shooter.weaponType] : 11;
+      // Real damage (verified from msg31 h in the duo capture): body 11,
+      // head 39 for smg/ar.
+      const dmg = targetHeadshot ? (shooter.weaponType === 2 ? 100 : (shooter.weaponType === 3 ? 40 : 39)) : base;
+      if (targetHeadshot) shooter.headshots++;
+      target.lastDamagedAt = Date.now();
+      target.hp = Math.max(0, target.hp - dmg);
+      const killed = target.hp === 0;
+      target.damageBy.set(shooter.id, (target.damageBy.get(shooter.id) || 0) + dmg);
+      const tr = target.reported;
+      const hitX = tr ? tr.x : target.x;
+      const hitZ = tr ? tr.z : target.z;
+      const hitY = passY !== null ? passY : (tr ? tr.y : target.y) - 0.75;
+      // 9 impact at the hit point, 10 blood on the victim (broadcast to all).
+      const normalDist = Math.hypot(sx - hitX, sz - hitZ) || 1;
+      const impact = encode('vS66uPxac49', {
+        JoHdvmpcMvL: hitX, uBHZYKAHa: hitY, yxEKoSFAg: hitZ,
+        AHPhtLFTi: clampByte(((sx - hitX) / normalDist) * 127), mGOwFesuTt: 0, MHnEcbTxpbz: clampByte(((sz - hitZ) / normalDist) * 127),
+        tdkZouYda: shooter.id,
+      });
+      const blood = encode('a693b13D91R', { tdkZouYda: target.id, uBHZYKAHa: hitY, MfCOcfVUx: 2 });
+      this.broadcast([impact, blood], null);
+      // 13 hitmarker -> shooter (lDKzyZxhKX=head flag, wtZUXNpiCWl=kill-shot
+      // flag; verified vs capture: every head-height hit has lDKzyZxhKX=1, and
+      // wtZUXNpiCWl=1 appears exactly once per kill).
+      // 31 damage indicator -> VICTIM ONLY, arw=1 (every real msg31 has arw=1
+      // and each client sees only the damage taken by itself).
+      const victim = target.srv;
+      if (victim) victim.send([encode('ib9T000831', { id: shooter.id, h: dmg, arw: 1 })]);
+      shooter.srv && shooter.srv.send([encode('ZpZC792j9p3', {
+        lDKzyZxhKX: targetHeadshot ? 1 : 0, wtZUXNpiCWl: killed ? 1 : 0,
+        JoHdvmpcMvL: hitX, uBHZYKAHa: hitY, yxEKoSFAg: hitZ,
+      })]);
+      log('combat', `shot ${shooter.id} -> ${target.id} dmg=${dmg}${targetHeadshot ? ' HEAD' : ''} hp=${target.hp} ammo=${shooter.ammo}`);
+      if (target.hp <= 0) this.onKill(shooter, target, targetHeadshot);
+    },
+    onKill(shooter, victim, isHead) {
+      victim.alive = false;
+      victim.spawned = false; // stop regular state broadcast; corpse (0x60) window is handled in tick()
+      victim.deadAt = Date.now();
+      victim.deaths++;
+      victim.hp = 0;
+      shooter.kills++;
+      shooter.points += isHead ? 150 : 100; // real KILLCONF pts: 100 body / 150 head
+      if (victim.damageBy) {
+        for (const [aid] of victim.damageBy) {
+          if (aid === shooter.id) continue;
+          const a = this.players.find((p) => p.id === aid);
+          if (a) { a.points += 50; a.assists++; }
+        }
+      }
+      victim.damageBy.clear();
+      // 20 death -> victim only (id = victim.id; h = shooter hp).
+      // 25 killfeed + 24 scoreboard -> all.
+      if (victim.srv) {
+        victim.srv.send([encode('gB4Cncy3f4', { id: victim.id, h: shooter.hp })]);
+        victim.srv.scheduleRespawn(); // real: respawn happens via the client's post-death class re-pick
+      }
+      this.broadcast([encode('Y6805DB31Br', {
+        WJxrwBXgp: shooter.id, cRzBBcbLPR: shooter.weaponType,
+        PacKJQHkQ: victim.id, KiQwnWACHo: isHead ? 1 : 0,
+      })], null);
+      // 23 kill-confirm goes to the KILLER (verified: A got 2 confirms for its
+      // 2 kills, B got 1 for its 1 kill; tdkZouYda = VICTIM id, jatzJSfdtNy =
+      // 100 body / 150 head).
+      if (shooter.srv) shooter.srv.send([encode('G058FYe8B9', {
+        tdkZouYda: victim.id, ldBboSufaY: isHead ? 1 : 0, fRcMMMfSas: 1, jatzJSfdtNy: isHead ? 150 : 100,
+      })]);
+      this.broadcast([...this.scoreboardMsg(), this.scoreHeaderMsg()], null);
+      // Sync the header dedup so the scoreTick doesn't re-send it.
+      this._lastHeader = this.headerKey();
+      log('combat', `KILL ${shooter.id} -> ${victim.id}${isHead ? ' HEAD' : ''}`);
+      this.checkScoreLimit();
+    },
+    // Winning-score end (GP_SCORE_LIMIT, 0 = off): FFA ends when any player
+    // reaches it, team modes when either team total reaches it.
+    checkScoreLimit() {
+      if (this.ended || !(this.scoreLimit > 0)) return;
+      if (this.teamMode) {
+        const t = this.teamScores();
+        if (t.a >= this.scoreLimit || t.b >= this.scoreLimit) this.endMatch(`score=${t.a}-${t.b}`);
+      } else if (this.players.some((p) => p.points >= this.scoreLimit)) {
+        this.endMatch('score');
+      }
+    },
+    respawn(p) {
+      // rotating spawn to avoid spawn-camping (mirrors match.mjs:288)
+      const spawns = this.spawns || spawnsForMap(SAFE_MAP);
+      const sp = spawns[(this.tickCount + p.id + 1) % spawns.length];
+      p.x = sp.x; p.y = sp.y; p.z = sp.z;
+      p.reported = null; p.reportTick = 0; p.reportedAt = 0;
+      // spawned stays false until the client acks (msg16 -> onStateAck sets it),
+      // matching HEAD/verified flow: dead players are not broadcast between
+      // respawn() and the ack.
+      p.hp = 100; p.alive = true; p.deadAt = 0; p.despawnSent = false;
+      p.lastDamagedAt = 0; p.lastRegenAt = 0;
+      p.ammo = WEAPON_AMMO[p.weaponType] || 40;
+      p.damageBy.clear();
+      p.yawByte = sp.yaw; p.spawnYaw = sp.yaw; p.aimByte = sp.pitch || 63;
+    },
+  };
+}
+
+export class GameSocket {
   constructor(ws, { alloc, me, log }) { this.ws = ws; this.alloc = alloc; this.me = me; this.log = log; this.phase = 'challenge'; this.joined = {}; this.proof = null; this.spawnPending = false; this.timers = new Set(); this.closed = false; this.seed = crypto.randomBytes(4).readUInt32BE(0); this.challenge = 0; this.pingMs = 0; this.pingLoop = null; this.clockCycle = 0; this.clockLeft = 0; this.clockResetLeft = 0; this.clockRand = (this.seed >>> 0) || 1; this.respawnTimer = null; }
   after(ms, fn) { const t = setTimeout(() => { this.timers.delete(t); if (!this.closed) fn(); }, ms); this.timers.add(t); }
   // Real respawn flow: the dead client re-picks class (msg21) and the server
@@ -875,6 +1174,11 @@ class GameSocket {
       if (this.pingLoop) clearInterval(this.pingLoop);
       for (const t of this.timers) clearTimeout(t);
       this.alloc.sockets.delete(this);
+      // Free the slot so a reconnect on the same token reclaims it (kills and
+      // score intact) instead of minting a ghost slot — but only when this
+      // socket still owns it, so a duplicate tab's live link survives.
+      if (this.me.srv === this) this.me.srv = null;
+      this.me.damageBy.clear();
       // Despawn the leaver for the survivors (msg7 N27s83WCNi removes the entity
       // model/nametag client-side); stop broadcasting their state so no ghost respawns.
       this.me.spawned = false;
@@ -901,7 +1205,7 @@ class GameSocket {
     if (m.msgId === 62) { this.proof = bin.subarray(m.offset); this.maybeAuth(); return; }
     switch (m.msgId) {
       case 60: this.joined[60] = m.string; this.maybeConstants(); break;
-      case 30: this.joined[30] = m.fields; this.checkChallengeVal(m.fields.val); this.maybeConstants(); break;
+      case 30: this.joined[30] = m.fields; this.checkChallengeVal(m.fields.val); this.checkLobbySync(m.fields); this.maybeConstants(); break;
       case 57: this.joined[57] = m.fields; this.maybeConstants(); break;
       case 21: this.onClassSelect(m.fields); break;
       case 16: this.onStateAck(); break;
@@ -984,6 +1288,20 @@ class GameSocket {
     this.log('auth', 'msg30 val mismatch got=' + val + ' want=' + expected + ' (set GP_NO_VAL_CHECK=1 to allow)');
     if (!process.env.GP_NO_VAL_CHECK) { try { this.ws.close(4400, 'bad val'); } catch {} }
   }
+  // The client's msg30 echoes its lobby view (pmap/map, ituyDAEpKW/mode,
+  // PSPGZlgWAcZ/time-limit as FO/FP/FQ indices). A mismatch against the
+  // running match means the lobby and the game disagree — loud, not fatal.
+  checkLobbySync(f) {
+    if (!f) return;
+    const wantMap = LOBBY_MAPS.indexOf(FT[this.alloc.mapIndex]);
+    const wantMode = LOBBY_MODES.indexOf(MODE_INDEX_TABLE[this.alloc.modeIndex]);
+    const wantTime = LOBBY_TIMES.indexOf(Math.round(this.alloc.matchLength / 60));
+    const bad = [];
+    if (Number.isInteger(f.pmap) && f.pmap !== wantMap) bad.push(`map client=${f.pmap} match=${wantMap}`);
+    if (Number.isInteger(f.ituyDAEpKW) && f.ituyDAEpKW !== wantMode) bad.push(`mode client=${f.ituyDAEpKW} match=${wantMode}`);
+    if (Number.isInteger(f.PSPGZlgWAcZ) && f.PSPGZlgWAcZ !== wantTime) bad.push(`time client=${f.PSPGZlgWAcZ} match=${wantTime}`);
+    if (bad.length) this.log('sync', 'lobby/match mismatch:', bad.join(' '));
+  }
   maybeConstants() {
     if (this.phase !== 'challenge' || this.joined[60] === undefined || this.joined[30] === undefined || this.joined[57] === undefined) return;
     this.phase = 'constants';
@@ -997,8 +1315,7 @@ class GameSocket {
   maybeAuth() {
     if (this.phase !== 'constants' || this.proof === null) return;
     this.phase = 'playing';
-    const mode = this.alloc.modeIndex !== undefined ? this.alloc.modeIndex : MODE_INDEX;
-    const teamId = mode === 0 ? 0 : ((this.alloc.players.indexOf(this.me) % 2) + 1);
+    const teamId = this.alloc.teamMode ? this.me.team : 0;
     this.send([encode('N3OM6i9r83', { id: teamId, fXfKmXLLuf: 0, DVhVGRcxjKL: 0 })]); // 36 KN=team (0 for FFA)
     this.sendSpawn();
   }
@@ -1021,7 +1338,7 @@ class GameSocket {
     for (const p of this.alloc.players) {
       parts.push(encode('RMFVb5UZGi7', {
         id: p.id, points: p.points, k: p.kills, d: p.deaths, h: p.weaponType || 0, p: 0, c: 0,
-        hsp: p.headshots, PhbhpxFxPP: (p.id % 2) + 1, ha: p.assists, JgVHFEBAE: 0, TxJblhJNah: 0, aMWaisFtZ: 0,
+        hsp: p.headshots, PhbhpxFxPP: p.team, ha: p.assists, JgVHFEBAE: 0, TxJblhJNah: 0, aMWaisFtZ: 0,
       }));
     }
     for (const p of this.alloc.players) parts.push(encode('k1Qu903595', { id: p.id, type: p.weaponType || 0 }));

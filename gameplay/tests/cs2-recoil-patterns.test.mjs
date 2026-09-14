@@ -5,7 +5,10 @@ import path from "node:path";
 import vm from "node:vm";
 
 function setupEnvironment() {
-  const serverFile = fs.readFileSync(path.resolve("server/src/gameplay-server.mjs"), "utf8");
+  const serverPath = fs.existsSync(path.resolve("server/src/gameplay-server.mjs"))
+    ? path.resolve("server/src/gameplay-server.mjs")
+    : path.resolve("gameplay/server/src/gameplay-server.mjs");
+  const serverFile = fs.readFileSync(serverPath, "utf8");
   const patchSrcMatch = serverFile.match(/const BUNDLE_PATCH_SRC = (`[\s\S]*?`);\s*function buildPage/);
   if (!patchSrcMatch) throw new Error("Could not find BUNDLE_PATCH_SRC");
   const evaluatedPatchSrc = eval(patchSrcMatch[1]);

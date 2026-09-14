@@ -98,8 +98,9 @@ deadshot/
 # automated 2-window verification (party flow → dump → exit)
 cd gameplay && npm run electron
 
-# long-lived manual session (play with yourself)
-cd gameplay && GP_ALLOC_TTL=0 GP_MATCH_TIME=3600 npm run manual
+# long-lived manual session (play with yourself; match length comes from the
+# lobby time limit, up to 20 min — pick it in the party room before readying)
+cd gameplay && GP_ALLOC_TTL=0 npm run manual
 
 # plain server only
 cd gameplay && npm start
@@ -107,7 +108,8 @@ cd gameplay && npm start
 #   → window A auto-creates a party; join from B with the 3-char code
 
 # env knobs
-#   GP_MATCH_TIME=3600   match length (seconds); GP_ALLOC_TTL=0  no alloc expiry
+#   GP_MATCH_TIME=3600   solo-fallback match length (seconds); room matches use the lobby time limit
+#   GP_SCORE_LIMIT=500   end room matches early at this score (0 = off); GP_ALLOC_TTL=0  no alloc expiry
 #   GP_NO_VAL_CHECK=1    disable the msg30 anti-bot check
 #   GP_HITDBG=1          log every shot's ray point vs target (hit diagnostics)
 ```

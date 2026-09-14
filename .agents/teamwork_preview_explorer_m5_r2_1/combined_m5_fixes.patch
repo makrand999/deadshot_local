@@ -1,0 +1,77 @@
+--- a/android/native/src/net/host.c	2026-09-13 12:22:26.916921477 +0530
++++ b/android/native/src/net/host.c	2026-09-13 12:40:32.335151588 +0530
+@@ -27,16 +27,18 @@
+   ds_host_player_t *s = find(h, shooter_id); if (!s || !s->p.alive) return -1;
+   if (s->p.ammo <= 0) return -1;
+   s->p.ammo--;
+-  float best = 2.0f; ds_host_player_t *vict = 0; int bhead = 0;
++  float best = 1e9f; ds_host_player_t *vict = 0; int bhead = 0;
+   for (int i = 0; i < h->count; i++) {
+     ds_host_player_t *t = &h->players[i];
+     if (t->id == shooter_id || !t->p.alive) continue;
+     int d = 0, hd = 0;
+     if (ds_hit_test(&s->p, shot, &t->p, &d, &hd)) {
+-      // closest-victim selection by eye distance (cheap, runs at 60Hz rarely)
+-      float dx = t->p.eye.x - shot->origin.x, dz = t->p.eye.z - shot->origin.z;
+-      float dist = dx * dx + dz * dz;
+-      if (dist < best * best || vict == 0) { best = dist; vict = t; bhead = hd; }
++      // closest-victim selection by 3D eye distance along ray direction
++      float dx = t->p.eye.x - shot->origin.x;
++      float dy = t->p.eye.y - shot->origin.y;
++      float dz = t->p.eye.z - shot->origin.z;
++      float dist = dx * dx + dy * dy + dz * dz;
++      if (dist < best || vict == 0) { best = dist; vict = t; bhead = hd; }
+     }
+   }
+   if (!vict) return -1;
+@@ -62,4 +64,3 @@
+   h->time_left -= dt;
+   if (h->time_left < 0.0f) h->time_left = 0.0f;
+ }
+-
+
+--- a/android/native/src/net/discovery.c	2026-09-13 12:25:39.877312013 +0530
++++ b/android/native/src/net/discovery.c	2026-09-13 12:40:42.527261777 +0530
+@@ -81,11 +81,36 @@
+   uint32_t m = (uint32_t)buf[0] | ((uint32_t)buf[1] << 8) |
+                ((uint32_t)buf[2] << 16) | ((uint32_t)buf[3] << 24);
+   if (m != DS_DISC_MAGIC || buf[4] != DS_PROTO_VERSION) return -1;
+-  r->version = buf[4]; r->map_ft = buf[5];
+-  r->players = buf[6]; r->maxp = buf[7];
+-  r->port = (uint16_t)(buf[8] | (buf[9] << 8));
+-  r->code[0] = (char)buf[10]; r->code[1] = (char)buf[11];
+-  r->code[2] = (char)buf[12]; r->code[3] = 0;
+-  if (r->map_ft != DS_MAP_FT_INDEX) return -1; // forest-only lock
++  if (buf[5] != DS_MAP_FT_INDEX) return -1; // forest-only lock
++
++  uint8_t players = buf[6];
++  uint8_t maxp = buf[7];
++  uint16_t port = (uint16_t)(buf[8] | (buf[9] << 8));
++
++  // Parameter sanitization
++  if (port == 0) return -1;
++  if (maxp == 0 || maxp > 64) return -1;
++  if (players > maxp) return -1;
++
++  // Base-32 room code character validation
++  static const char *A = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
++  int is_empty = (buf[10] == 0 && buf[11] == 0 && buf[12] == 0);
++  if (!is_empty) {
++    if (!strchr(A, (char)buf[10]) ||
++        !strchr(A, (char)buf[11]) ||
++        !strchr(A, (char)buf[12])) {
++      return -1;
++    }
++  }
++
++  r->version = buf[4];
++  r->map_ft = buf[5];
++  r->players = players;
++  r->maxp = maxp;
++  r->port = port;
++  r->code[0] = (char)buf[10];
++  r->code[1] = (char)buf[11];
++  r->code[2] = (char)buf[12];
++  r->code[3] = 0;
+   return 0;
+ }

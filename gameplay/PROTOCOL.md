@@ -25,7 +25,7 @@ msgpack-bytes — detect via first byte <= 1).
 | `a` (hello) | `a` = unix seconds | `b = I1(a) = (a*3 + 0x11e1d1) % 0x1C9C380`; stamps `b` onto all pending create/join packets and flushes them. Server ignores `b` (real server may validate; not enforced). |
 | `prtyid` | `id`, `copy` | Sets the party-ID input text to `'Party ID: ' + id.toUpperCase()`, stores the code, saves it to localStorage, shows invite (copy → now.gg/invite-link flow). |
 | `joinsuccess` | — | Marks party active (`GJklRqbLTCs = true`). |
-| `pu` (party update) | `u` (your index), `leader`, `m` = array of `[name, skins, ready, team, memberId]`, `priv`, `inf` = `{map, mode, time, region}` | `isLeader = u == leader`; builds the member list (self row is skipped when `priv` — private parties hide non-members); **auto-assigns class indices by slot: slot 0 → class 2 (AWP), slot 1 → class 0 (SMG), slot 2 → class 1 (AR)**; stores `partyInfo` (used later in msg30's `pmap/ituyDAEpKW`). |
+| `pu` (party update) | `u` (your index), `leader`, `m` = array of `[name, skins, ready, team, memberId]`, `priv`, `inf` = `{map, mode, time, region}` | `isLeader = u == leader`; builds the member list (self row is skipped when `priv` — private parties hide non-members); **auto-assigns class indices by slot: slot 0 → class 2 (AWP), slot 1 → class 0 (SMG), slot 2 → class 1 (AR)**; stores `partyInfo` (used later in msg30's `pmap/ituyDAEpKW/PSPGZlgWAcZ`); renders the lobby card `FS[region] + ' - ' + time + ' min'` and sticks the mode/time buttons via `FP/FQ.indexOf` — so `inf` must only ever carry values from the FO/FP/FQ/FR lists or the client throws. |
 | `error` | `message` | Shows error UI + (if in party) the party toast. Toast path has the client `afE.setText` bug (see session log). |
 | `kicked` | — | Marks `wasKicked`. |
 | `connect` | `ip` (hex string), `port`, `r` (token) | Opens the game socket at `ws://ip:port/ws?r=...` (client uses the page host locally). |
@@ -38,6 +38,7 @@ msgpack-bytes — detect via first byte <= 1).
 | `join` | `id` (last-6/token parsed server-side), `b` | `leave()`; lookup room; reply `joinsuccess` + `prtyid` + broadcast `pu`; `error` if missing/started. |
 | `ready` / `unready` | — | Sets member ready; broadcast `pu`; when all ready → `startGame` → each member gets `connect`. |
 | `updatePlayerInfo` | `name`, `skins` | Updates member; broadcast `pu`. |
+| `updatePartyInfo` | `obj` = `{map}` / `{mode}` / `{time}` (leader only) or `{swap:true}` (any member) | Validates against the FO/FP/FQ lists (map additionally requires `maps/<name>/out/out.drc` on disk); stores on the room; broadcast `pu`. Rejected maps re-broadcast the current safe config so the UI reverts. |
 | `switchPrivate` | `priv`, `region`, `b` | (unhandled — private-room switch) |
 
 ## 2. Game-socket handshake (server behavior)
@@ -128,7 +129,12 @@ lerps between msg2 ticks; `wGiOzKcGlnH` tick echo is the self-desync check
 (server echoes the client's own tick).
 
 **Matchmaker → game handoff**: `connect` → game socket with the token →
-alloc; token TTL `GP_ALLOC_TTL` (0 = never); `GP_MATCH_TIME` match seconds.
+alloc; token TTL `GP_ALLOC_TTL` (0 = never); room-match length comes from the
+lobby's selected time limit (`inf.time` minutes × 60) — `GP_MATCH_TIME` is now
+only the solo/no-room fallback. `GP_SCORE_LIMIT` (points, 0 = off) ends the
+match early when reached (any player in FFA, either team total in team modes);
+the end sequence is final scoreboard + header, then msg28, and the room
+returns to the lobby (un-ready) for another match.
 
 **Hitbox stack (msg8)**: all y-offsets relative to the reported y (= feet/ground
 level): feet y−0.4 r0.30; legs y+0.15 & y+0.5 r0.32; lower torso y+0.9 r0.36;

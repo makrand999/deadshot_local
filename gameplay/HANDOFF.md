@@ -348,3 +348,60 @@ falls back; requestFullscreen gesture warning; B's `afE.setText` hiccup).
   the tick skips dead players after 1000ms; respawn clears it. Verified:
   victim states stop after ~1s (9 ticks of 0x60 then silence), respawn
   resumes them.
+
+## 2026-09-14 — party lobby match configuration (time/mode/map sync)
+
+- **Problem**: the matchmaker ignored the host's lobby settings — `pu` always
+  carried fixed `newmlab/FFA/5`, and matches ran the server's `GP_MATCH_TIME`
+  (e.g. a 60-minute manual preset) instead of the chosen 5/10/20 minutes.
+  Non-default maps also froze clients (no `out.drc` geometry on disk).
+- **Fix** (`gameplay/server/src/gameplay-server.mjs`): rooms now store
+  `{map, mode, time, region}`; the server handles the client's
+  `updatePartyInfo {map|mode|time}` (leader-only) and `{swap}` (any member),
+  validates against the FO/FP/FQ lists from the bundle, and broadcasts `pu`
+  to all members. `startGame` carries the config into the alloc (timer =
+  minutes × 60, FT/FN indices, balanced teams in team modes, no friendly
+  fire, team-total score header). Map requests require
+  `maps/<name>/out/out.drc` on disk, else the lobby keeps the safe map.
+  Match end (0:00 or `GP_SCORE_LIMIT`) sends final scoreboard + header + 28
+  and returns the room to the lobby. `GP_MATCH_TIME` is now solo-fallback
+  only. `makeAlloc` lifted to module scope (exported) for tests.
+- **Verified**: `tests/party-lobby-config.test.mjs` (15 tests: lobby sync +
+  validation over real matchmaker sockets, 5:00/10:00/20:00 HUD init and
+  1-second countdown through the real game handshake, lobby-over-env
+  precedence, map safety, TDM teams, end-of-match flow). Full suite: 77/77 pass.
+
+## 2026-09-14 — per-map respawn tables for all 12 maps
+
+- **Extracted** every map's `spawns` list from the client map database
+  (`raw/bundles/VM9.deob.txt` EM entries): tf 9, industry 5, winter 8,
+  mlab 12, manor 8, militia 7, shoothouse 10, dust2 1, neon 11, sandstorm 6,
+  sandstorm2 1, newmlab 10 (88 points; x/y/z + rx=pitch + ry=yaw bytes).
+  The client never reads these arrays (spawning is server-driven via msg18),
+  so the server owns them. Rounded extraction is byte-identical to the two
+  previously hand-verified tables. dust2 defines a single coordinate-only
+  placeholder (0, 100, 0) — pitch/yaw default to level/0.
+- **Server** (`gameplay/server/src/gameplay-server.mjs`): new `MAP_SPAWNS`
+  table + `spawnsForMap(Index)` lookup replaces the tf-or-Forest fallback;
+  `makeAlloc` and `respawn()` use the active map's list, and rotation
+  (`(tickCount + id + 1) % len`) cycles that map's points. Unknown maps fall
+  back to the safe map. Map-safety routing is unchanged (only newmlab has
+  on-disk geometry, so only it launches real clients).
+- **Verified**: `tests/map-spawns.test.mjs` (7 tests: census, validity, exact
+  spot values, lookup + fallback, launch placement and full rotation
+  coverage on all 12 maps) plus a wire probe (msg18 carries newmlab[0]).
+  Full suite: 84/84 pass.
+
+## 2026-09-14 — mid-match reconnect reclaims slot + score
+
+- **Problem**: on game-socket close the server never cleared `player.srv`, so a
+  reconnecting player was routed into a different free slot (score reset)
+  while their old slot stayed a ghost forever.
+- **Fix** (`gameplay-server.mjs` close handler): free the slot (`srv = null`,
+  guarded by `me.srv === this` so a duplicate tab's live link survives) and
+  clear stale damage assists. Reconnect on the same token now reclaims the
+  same slot with kills/points intact and respawns via the normal rotation.
+  (`GameSocket` exported for tests. Last-player-out still stops the alloc by
+  design, so only live-match reconnects are covered.)
+- **Verified**: 2 tests in `tests/party-lobby-config.test.mjs` (wire-level
+  kill, drop, reconnect with score; duplicate-tab guard unit test).

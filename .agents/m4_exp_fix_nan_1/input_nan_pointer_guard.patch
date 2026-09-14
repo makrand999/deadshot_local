@@ -1,0 +1,140 @@
+--- android/native/src/core/input.c	2026-09-12 18:53:40.458339943 +0530
++++ .agents/m4_exp_fix_nan_1/proposed_input.c	2026-09-12 19:04:47.683110595 +0530
+@@ -4,10 +4,10 @@
+ 
+ void ds_input_init(ds_input_t *in) {
+   if (!in) return;
+-  in->joy_x = 0; in->joy_y = 0; in->look_dx = 0; in->look_dy = 0;
++  in->joy_x = 0.0f; in->joy_y = 0.0f; in->look_dx = 0.0f; in->look_dy = 0.0f;
+   in->fire = 0; in->jump = 0; in->crouch = 0; in->sprint = 0; in->reload = 0;
+   in->switch_weapon = 0; in->ads = 0;
+-  in->yaw = 0; in->pitch = 0;
++  in->yaw = 0.0f; in->pitch = 0.0f;
+ }
+ 
+ uint16_t ds_input_keys(const ds_input_t *in) {
+@@ -26,20 +26,35 @@
+ 
+ void ds_input_look(ds_input_t *in, float sens) {
+   if (!in) return;
++  if (!isfinite(in->look_dx) || !isfinite(in->look_dy) || !isfinite(sens)) {
++    in->look_dx = 0.0f;
++    in->look_dy = 0.0f;
++    return;
++  }
+   in->yaw += in->look_dx * sens;
+   in->pitch -= in->look_dy * sens;
++  if (!isfinite(in->yaw)) in->yaw = 0.0f;
++  if (!isfinite(in->pitch)) in->pitch = 0.0f;
+   if (in->pitch > 1.45f) in->pitch = 1.45f;
+   if (in->pitch < -1.45f) in->pitch = -1.45f;
+-  in->look_dx = 0; in->look_dy = 0; // coalesce: consumed per 60Hz tick
++  in->look_dx = 0.0f; in->look_dy = 0.0f; // coalesce: consumed per 60Hz tick
+ }
+ 
+-uint8_t ds_input_yaw_b(const ds_input_t *in) { return in ? ds_yaw_to_byte(in->yaw) : 0; }
+-uint8_t ds_input_pitch_b(const ds_input_t *in) { return in ? ds_pitch_to_byte(in->pitch) : 64; }
++uint8_t ds_input_yaw_b(const ds_input_t *in) {
++  return (in && isfinite(in->yaw)) ? ds_yaw_to_byte(in->yaw) : 0;
++}
++
++uint8_t ds_input_pitch_b(const ds_input_t *in) {
++  return (in && isfinite(in->pitch)) ? ds_pitch_to_byte(in->pitch) : 64;
++}
+ 
+ void ds_input_inject(ds_input_t *in, float jx, float jy, float dx, float dy, int fire) {
+   if (!in) return;
+-  in->joy_x = jx; in->joy_y = jy;
+-  in->look_dx += dx; in->look_dy += dy; in->fire = fire;
++  in->joy_x = isfinite(jx) ? jx : 0.0f;
++  in->joy_y = isfinite(jy) ? jy : 0.0f;
++  if (isfinite(dx)) in->look_dx += dx;
++  if (isfinite(dy)) in->look_dy += dy;
++  in->fire = fire;
+ }
+ 
+ ds_touch_circle_t ds_touch_btn_fire(int screen_w, int screen_h) {
+@@ -67,7 +82,9 @@
+ }
+ 
+ int ds_touch_hit_test(const ds_touch_circle_t *btn, float x, float y) {
+-  if (!btn || btn->radius <= 0.0f) return 0;
++  if (!btn || !isfinite(btn->radius) || btn->radius <= 0.0f) return 0;
++  if (!isfinite(btn->cx) || !isfinite(btn->cy)) return 0;
++  if (!isfinite(x) || !isfinite(y)) return 0;
+   float dx = x - btn->cx;
+   float dy = y - btn->cy;
+   return (dx * dx + dy * dy) <= (btn->radius * btn->radius);
+@@ -129,6 +146,12 @@
+   // Reject invalid screen dimensions
+   if (screen_w <= 0 || screen_h <= 0) return;
+ 
++  // Reject negative pointer IDs (sentinel aliasing protection)
++  if (pointer_id < 0) return;
++
++  // Reject non-finite coordinates (NaN, +Inf, -Inf)
++  if (!isfinite(x) || !isfinite(y)) return;
++
+   // Reject negative or out-of-bounds touches on initial down
+   if (act == DS_TOUCH_DOWN || act == DS_TOUCH_POINTER_DOWN) {
+     if (x < 0.0f || y < 0.0f || x > (float)screen_w || y > (float)screen_h) {
+@@ -138,7 +161,6 @@
+ 
+   float split_x = (float)screen_w * 0.45f;
+ 
+-
+   if (act == DS_TOUCH_DOWN || act == DS_TOUCH_POINTER_DOWN) {
+     if (x >= split_x) {
+       // Right half of screen: check button hitboxes in priority order
+@@ -200,7 +222,7 @@
+       float dist = sqrtf(raw_dx * raw_dx + raw_dy * raw_dy);
+ 
+       // Radial deadzone (0.10f)
+-      if (dist < 0.10f) {
++      if (!isfinite(dist) || dist < 0.10f) {
+         ts->joy_out_x = 0.0f;
+         ts->joy_out_y = 0.0f;
+         ts->joy_sprint = 0;
+@@ -218,8 +240,12 @@
+       }
+     } else if (pointer_id == ts->look_id) {
+       if (ts->look_had) {
+-        ts->look_dx += (x - ts->look_lx);
+-        ts->look_dy += (y - ts->look_ly);
++        float d_x = x - ts->look_lx;
++        float d_y = y - ts->look_ly;
++        if (isfinite(d_x) && isfinite(d_y)) {
++          ts->look_dx += d_x;
++          ts->look_dy += d_y;
++        }
+       }
+       ts->look_lx = x;
+       ts->look_ly = y;
+@@ -270,8 +296,8 @@
+ 
+ void ds_touch_to_input(ds_touch_state_t *ts, ds_input_t *out_in, float look_sens) {
+   if (!ts || !out_in) return;
+-  out_in->joy_x = ts->joy_out_x;
+-  out_in->joy_y = ts->joy_out_y;
++  out_in->joy_x = isfinite(ts->joy_out_x) ? ts->joy_out_x : 0.0f;
++  out_in->joy_y = isfinite(ts->joy_out_y) ? ts->joy_out_y : 0.0f;
+   out_in->sprint = ts->joy_sprint;
+   out_in->fire = ts->fire_pressed;
+   out_in->reload = ts->reload_pressed;
+@@ -282,13 +308,12 @@
+   out_in->ads = ts->ads_pressed;
+ 
+   // Transfer accumulated look deltas and apply look sensitivity
+-  out_in->look_dx += ts->look_dx;
+-  out_in->look_dy += ts->look_dy;
++  if (isfinite(ts->look_dx)) out_in->look_dx += ts->look_dx;
++  if (isfinite(ts->look_dy)) out_in->look_dy += ts->look_dy;
+   ts->look_dx = 0.0f;
+   ts->look_dy = 0.0f;
+ 
+-  if (look_sens > 0.0f) {
++  if (look_sens > 0.0f && isfinite(look_sens)) {
+     ds_input_look(out_in, look_sens);
+   }
+ }
+-

@@ -1,0 +1,11 @@
+--- a/android/tests/e2e/test_tier1_features.c
++++ b/android/tests/e2e/test_tier1_features.c
+@@ -314,7 +314,7 @@ void test_tier1_features(void) {
+     E2E_TEST_BEGIN("F08.4: Regeneration at 10 HP/s to 100 HP");
+     // Tick another 1.0s (total 4.0s: 0.5s into regen -> +5 HP)
+     for (int t = 0; t < 60; t++) ds_sim_full_tick(&p, NULL, DS_TICK_DT);
+-    E2E_CHECK_EQ(p.health >= 84, 1);
++    E2E_CHECK_EQ(p.health, 84);
+     // Tick 5.0s more -> should hit 100 HP
+     for (int t = 0; t < 300; t++) ds_sim_full_tick(&p, NULL, DS_TICK_DT);
+     E2E_CHECK_EQ(p.health, 100);

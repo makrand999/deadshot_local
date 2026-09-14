@@ -1,0 +1,790 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  /* background-color: #3f345d; */
+}
+
+p {
+	overflow: visible;
+	opacity: 0.7;
+}
+
+#settingsDiv {
+  width: 760px;
+  height: 672px;
+  margin-top: 40px;
+  margin-left: 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #e2e2e2;
+}
+
+#settingsDiv .settings-pages {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+#settingsDiv .settings-scroll {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  --settings-fade: 34px;
+  --settings-fade-top: 34px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+}
+
+#settingsDiv .settings-list {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 0px 0px 32px 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+
+#settingsDiv .settings-list::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 0;
+}
+
+#settingsDiv .settings-list::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0;
+}
+
+#settingsDiv .settings-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+}
+
+#settingsDiv .settings-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 0;
+}
+
+#settingsDiv .settings-list::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+#settingsDiv .settings-section {
+  width: 100%;
+  box-sizing: border-box;
+  scroll-margin-top: 10px;
+  /* override the global `* { overflow: hidden }` so the sticky crosshair preview
+     can stick to the main .settings-list scroller instead of being trapped here */
+  overflow: visible;
+}
+
+#settingsDiv .settings-section-content {
+  overflow: visible;
+}
+
+#settingsDiv .settings-section + .settings-section {
+  margin-top: 18px;
+}
+
+#settingsDiv .settings-section-title {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 0px 7px 0px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 14px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#settingsDiv .settings-section-content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* When a custom dropdown is open, lift its section above later sections so the
+   options menu isn't painted behind them (every section is its own stacking
+   context because of the global `* { transform: translateZ(0) }`). */
+#settingsDiv .settings-section:has( .new-select2.active ) {
+  position: relative;
+  z-index: 50;
+}
+
+#settingsDiv .settings-scroll.can-scroll-up:not(.can-scroll-down) {
+  -webkit-mask-image: linear-gradient(to bottom, transparent -1px, #000 calc(var(--settings-fade-top) - 1px), #000 100%);
+          mask-image: linear-gradient(to bottom, transparent -1px, #000 calc(var(--settings-fade-top) - 1px), #000 100%);
+}
+
+#settingsDiv .settings-scroll.can-scroll-down:not(.can-scroll-up) {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0px, #000 calc(100% - var(--settings-fade) + 1px), transparent calc(100% + 1px));
+          mask-image: linear-gradient(to bottom, #000 0px, #000 calc(100% - var(--settings-fade) + 1px), transparent calc(100% + 1px));
+}
+
+#settingsDiv .settings-scroll.can-scroll-up.can-scroll-down {
+  -webkit-mask-image: linear-gradient(to bottom, transparent -1px, #000 calc(var(--settings-fade-top) - 1px), #000 calc(100% - var(--settings-fade) + 1px), transparent calc(100% + 1px));
+          mask-image: linear-gradient(to bottom, transparent -1px, #000 calc(var(--settings-fade-top) - 1px), #000 calc(100% - var(--settings-fade) + 1px), transparent calc(100% + 1px));
+}
+
+#crosshairSettingsDiv {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  box-sizing: border-box;
+  display: flex;
+  /* NOTE: must stay 'visible' on BOTH axes — an overflow-x:hidden here computes
+     overflow-y to auto, which turns this into a scroll container and breaks the
+     position:sticky crosshair preview (it would stick to this div instead of the
+     main settings scroll). */
+  overflow: visible;
+  color: #e2e2e2;
+  flex-direction: column;
+  padding-top: 12px;
+}
+
+#crosshairSettingsDiv .crosshair-preview {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  flex: 0 0 112px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 112px;
+  margin: 0px 0px 18px 0px;
+  overflow: visible;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#crosshairSettingsDiv .crosshair-preview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* blur rows scrolling under the translucent sticky preview */
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.11) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.11) 1px, transparent 1px),
+    rgba(255, 255, 255, 0.08);
+  background-size: 28px 28px;
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
+}
+
+#crosshairSettingsDiv .crosshair-preview::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 100%;
+  z-index: 0;
+  height: 34px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.24), transparent);
+}
+
+#crosshairSettingsDiv .crosshair-preview-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+#crosshairSettingsDiv .crosshair-settings-scroll {
+  flex: 1 1 auto;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+  --crosshair-settings-fade: 34px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+}
+
+#crosshairSettingsDiv .crosshair-settings-list {
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: visible;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+#crosshairSettingsDiv .crosshair-settings-scroll.can-scroll-up:not(.can-scroll-down) {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0px, #000 var(--crosshair-settings-fade), #000 100%);
+          mask-image: linear-gradient(to bottom, transparent 0px, #000 var(--crosshair-settings-fade), #000 100%);
+}
+
+#crosshairSettingsDiv .crosshair-settings-scroll.can-scroll-down:not(.can-scroll-up) {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0px, #000 calc(100% - var(--crosshair-settings-fade)), transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0px, #000 calc(100% - var(--crosshair-settings-fade)), transparent 100%);
+}
+
+#crosshairSettingsDiv .crosshair-settings-scroll.can-scroll-up.can-scroll-down {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0px, #000 var(--crosshair-settings-fade), #000 calc(100% - var(--crosshair-settings-fade)), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0px, #000 var(--crosshair-settings-fade), #000 calc(100% - var(--crosshair-settings-fade)), transparent 100%);
+}
+
+#crosshairSettingsDiv .crosshair-settings-list .crosshair-setting,
+#crosshairSettingsDiv .crosshair-settings-list .crosshair-setting p {
+  touch-action: pan-y;
+}
+
+#crosshairSettingsDiv .crosshair-settings-list input {
+  touch-action: auto;
+}
+
+#crosshairSettingsDiv .crosshair-settings-group {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 0px 7px 0px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 14px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#crosshairSettingsDiv .crosshair-setting {
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 9px 30px;
+}
+
+#crosshairSettingsDiv .crosshair-setting p {
+  font-size: 21px;
+}
+
+#crosshairSettingsDiv .crosshair-setting:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+#crosshairSettingsDiv .crosshair-color-setting div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 260px;
+  margin: auto 0px;
+}
+
+#crosshairSettingsDiv .crosshair-color-setting .crosshair-color {
+  width: 48px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: none;
+  cursor: pointer;
+}
+
+#crosshairSettingsDiv .crosshair-color-setting .crosshair-color-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 34px;
+  box-sizing: border-box;
+  border: none;
+  color: #e2e2e2;
+  background: none;
+  font-size: 16px;
+  text-align: center;
+  pointer-events: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 700px) {
+  #crosshairSettingsDiv {
+    height: auto;
+    max-height: none;
+  }
+
+  #crosshairSettingsDiv .crosshair-preview {
+    flex-basis: 112px;
+    height: 112px;
+  }
+
+  #crosshairSettingsDiv .crosshair-settings-list {
+    height: auto;
+  }
+
+  #crosshairSettingsDiv .crosshair-settings-scroll {
+    height: auto;
+    max-height: none;
+  }
+
+  #crosshairSettingsDiv .crosshair-setting {
+    width: 100%;
+    padding: 9px 30px;
+  }
+}
+
+#settingsDiv .settingsHeader {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  margin: 10px 0px;
+  letter-spacing: 2px;
+}
+
+#settingsDiv .bar {
+  width: 100%;
+  /*height: 2px;*/
+  background-color: rgba(236, 236, 236, 0.295);
+  /*margin: 9px 0px;*/
+}
+
+.setting {
+  color: #e2e2e2;
+  width: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+
+.setting[data-descrip]:not(.open):hover::after {
+  text-align: left;
+  white-space: pre-wrap;
+  content: attr(data-descrip);
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  width: 300px;
+  border-radius: 4px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(20, 20, 20, 0.8)));
+  background-image: linear-gradient(rgba(20, 20, 20, 0.8) 0 0);
+  padding: 12px;
+  color: white;
+  font-size: 14px;
+  z-index: 30;
+  pointer-events: none;
+}
+
+
+.setting.select .s-hidden {
+  /*display: none;*/
+  opacity: 0;
+  padding-right: 10px;
+}
+
+.setting.select .new-select2 {
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  background: none;
+  padding: 0px 12px;
+  font-size: 16px;
+  margin: auto 0px;
+  text-align: right;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+
+.setting.select .new-select2 p {
+  color: white;
+}
+
+.setting.select .new-select2:after {
+  content: "";
+  margin-top: 1px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(downarrow.png) no-repeat right;
+  -webkit-filter: brightness(90000%);
+          filter: brightness(90000%);
+}
+
+.setting.select .new-select2:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.1)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
+.setting.select .new-select2:active, .setting.select .new-select2.active {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.2)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0 0);
+  z-index: 100;
+}
+
+.setting.select .new-option {
+  position: absolute;
+  right: 0px;
+  top: 41px;
+  text-align: left;
+  /*display: none;*/
+  opacity: 0;
+  list-style: none;
+  border-radius: 4px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(47, 47, 47, 1)));
+  background-image: linear-gradient(rgba(47, 47, 47, 1) 0 0);
+  z-index: 20;
+  padding: 7px 0px;
+  /*max-height: 80px;*/
+  /* this is small for demonstration purposes */
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 14px;
+  z-index: 100;
+}
+
+.setting.select .new-option li {
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.setting.select .new-option li:hover {
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.2)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0 0);
+  color: white;
+}
+
+.setting.sldr {
+  margin: auto 0px;
+}
+
+.setting.sldr div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto 0px;
+  width: 260px;
+}
+
+.setting.sldr div .range {
+  width: 180px;
+  height: 10px;
+  margin: auto 0px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: dimgray;
+  cursor: pointer;
+}
+
+.setting.sldr div .range::-moz-range-thumb {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: #e0e0e0;
+}
+
+.setting.sldr div .range::-moz-range-progress {
+  background-color: #bebebe;
+}
+
+.setting.sldr div .range::-moz-range-track {
+  background-color: dimgray;
+}
+
+.setting.sldr div .range::-ms-thumb {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  appearance: none;
+  background-color: #e0e0e0;
+}
+
+.setting.sldr div .range::-ms-fill-lower {
+  background-color: #bebebe;
+}
+
+.setting.sldr div .range::-ms-fill-upper {
+  background-color: dimgray;
+}
+
+.setting.sldr div .range::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+          appearance: none;
+  margin-top: -1px;
+  overflow: hidden;
+}
+
+.setting.sldr div .range::-webkit-slider-thumb {
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: #e0e0e0;
+  -webkit-box-shadow: -90px 0 0 90px #bebebe;
+          box-shadow: -90px 0 0 90px #bebebe;
+}
+
+.setting.sldr div .number {
+  width: 52px;
+  height: 30px;
+  border: 2px solid #999;
+  border-radius: 4px;
+  background: none;
+  color: white;
+  font-size: 16px;
+  text-align: right;
+  padding-right: 5px;
+  -moz-appearance: textfield;
+}
+
+.setting.sldr div .number:hover {
+  border-color: #aaa;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.1)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
+.setting.sldr div .number:focus {
+  border-color: #eee;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.3)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0 0);
+  outline: none;
+}
+
+.inputBox {
+  width: 200px;
+  height: 30px;
+  border: 2px solid #686868;
+  border-radius: 4px;
+  background: none;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  /*padding-right: 10px;*/
+  -moz-appearance: textfield;
+}
+
+.inputBox:hover {
+  border-color: #5a5a5a;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.1)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
+.inputBox:focus {
+  border-color: #4b4b4b;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.3)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0 0);
+  outline: none;
+}
+
+.setting.sldr div .number::-webkit-inner-spin-button, .setting.sldr div .number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0px;
+}
+
+.setting.toggle {
+  margin: auto 0px;
+}
+
+.setting.toggle label {
+  margin: auto 0px;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.setting.toggle label span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: dimgray;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border-radius: 4px;
+}
+
+.setting.toggle label span:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  margin-top: 3px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.setting.toggle label .checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.setting.toggle label .checkbox:checked + span {
+  background-color: #bebebe;
+}
+
+.setting.toggle label .checkbox:focus + span {
+  -webkit-box-shadow: 0 0 1px #bebebe;
+          box-shadow: 0 0 1px #bebebe;
+}
+
+.setting.toggle label .checkbox:checked + span:before {
+  -webkit-transform: translateX(28px);
+          transform: translateX(28px);
+}
+
+#settingsDiv .settings-keybind-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#settingsDiv .settings-keybind-row,
+#settingsDiv .settings-action-row {
+  min-height: 52px;
+  box-sizing: border-box;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #e2e2e2;
+}
+
+#settingsDiv .settings-keybind-row:nth-child(even),
+#settingsDiv .settings-action-row:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+#settingsDiv .settings-keybind-label,
+#settingsDiv .settings-action-label {
+  margin: 0px;
+  font-size: 21px;
+  opacity: 0.7;
+  text-align: left;
+}
+
+#settingsDiv .settings-keybind-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 260px;
+}
+
+#settingsDiv .settings-keybind-button,
+#settingsDiv .settings-keybind-clear,
+#settingsDiv .settings-action-button {
+  height: 52px;
+  border: none;
+  border-radius: 0px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 52px;
+  opacity: 0.8;
+  text-align: center;
+  text-shadow: none;
+  transition: opacity 0.16s, background-color 0.16s, transform 0.08s;
+}
+
+#settingsDiv .settings-keybind-button:focus,
+#settingsDiv .settings-keybind-clear:focus {
+  outline: none;
+}
+
+#settingsDiv .settings-keybind-button {
+  width: 170px;
+}
+
+#settingsDiv .settings-keybind-button:hover,
+#settingsDiv .settings-keybind-clear:hover,
+#settingsDiv .settings-action-button:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+#settingsDiv .settings-keybind-button:active,
+#settingsDiv .settings-keybind-clear:active,
+#settingsDiv .settings-action-button:active {
+  transform: scale(0.94);
+}
+
+#settingsDiv .settings-keybind-button.listening {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+#settingsDiv .settings-keybind-clear {
+  width: 44px;
+  color: #ff7777;
+  background: rgba(190, 25, 25, 0.22);
+  font-size: 22px;
+  line-height: 32px;
+}
+
+#settingsDiv .settings-keybind-clear:hover {
+  background: rgba(190, 25, 25, 0.34);
+}
+
+#settingsDiv .settings-action-button {
+  min-width: 210px;
+  padding: 0px 18px;
+}
+
+@media (max-width: 700px) {
+  #settingsDiv {
+    width: 720px;
+    height: 660px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
