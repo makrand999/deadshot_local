@@ -200,6 +200,20 @@ const BUNDLE_PATCH_SRC = `;(function(){
         var navReplace = "var a8E=['PLAY" + _BS + "x20GAME'," + _Q + "SETTINGS" + _Q + "," + _Q + "ACCOUNT" + _Q + "];Gj&&(a8E=['PLAY" + _BS + "x20GAME'," + _Q + "SETTINGS" + _Q + "," + _Q + "ACCOUNT" + _Q + "]);var a8F=0x2;";
         var navI = src.indexOf(navTarget);
         if (navI !== -1) src = src.slice(0, navI) + navReplace + src.slice(navI + navTarget.length);
+
+        // 7. Inject dedicated Mobile Gloo Wall HUD button and layout positioning
+        var glooBtnAnchor = "var a4S=a4Q,a4Q=new a3G('pause.png',";
+        var glooBtnIdx = src.indexOf(glooBtnAnchor);
+        if (glooBtnIdx !== -1) {
+          var glooBtnCode = "var a4QGloo=new a3G('gloo.png',0x96*a4N);a4I['fAdWFGQLqES'](a4QGloo);a4QGloo['r23ZS3L2g']['position']['set'](-0x180,-0x200+0x190*a4N);a4QGloo['xhOdNSwMWQd'](!![]);a4QGloo['name']='gloo';a4QGloo['validateCollision']=a4QGloo['validateCollision2'];a4QGloo['onmousedown3']=function(){if(typeof KG!=='undefined'&&KG)return;if(window.__dsCancelReload)window.__dsCancelReload();if(window.__dsGlooQuickDeploy)window.__dsGlooQuickDeploy();};a4QGloo['onmouseup2']=function(){};a4QGloo['onclick']=a4QGloo['onmouseup2'];window.__dsGlooButton=a4QGloo;";
+          src = src.slice(0, glooBtnIdx) + glooBtnCode + src.slice(glooBtnIdx);
+        }
+        var glooLayoutAnchor = "Nc[" + _Q + "r23ZS3L2g" + _Q + "]['position']['x']=Kq['qIySEZgti']['siccypZlKyH']+0xc8*a4O,Nc['xhOdNSwMWQd'](!![]);";
+        var glooLayoutIdx = src.indexOf(glooLayoutAnchor);
+        if (glooLayoutIdx !== -1) {
+          var glooLayoutCode = "if(window.__dsGlooButton&&window.__dsGlooButton['r23ZS3L2g']&&Kq&&Kq['qIySEZgti']){window.__dsGlooButton['r23ZS3L2g']['position']['x']=Kq['qIySEZgti']['siccypZlKyH']+0x170*a4O;window.__dsGlooButton['r23ZS3L2g']['position']['y']=-0x200+0x190*a4N;window.__dsGlooButton['xhOdNSwMWQd'](!![]);}";
+          src = src.slice(0, glooLayoutIdx + glooLayoutAnchor.length) + glooLayoutCode + src.slice(glooLayoutIdx + glooLayoutAnchor.length);
+        }
       }catch(e){ try{ window.__dsDiagErr = String(e); }catch(e2){} }
       return src;
     };
