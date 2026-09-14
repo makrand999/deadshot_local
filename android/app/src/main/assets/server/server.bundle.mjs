@@ -4546,6 +4546,37 @@ var BUNDLE_PATCH_SRC = `;(function(){
           var glooLayoutCode = "if(window.__dsGlooButton&&window.__dsGlooButton['r23ZS3L2g']&&Kq&&Kq['qIySEZgti']){window.__dsGlooButton['r23ZS3L2g']['position']['x']=Kq['qIySEZgti']['siccypZlKyH']+0x170*a4O;window.__dsGlooButton['r23ZS3L2g']['position']['y']=-0x200+0x190*a4N;window.__dsGlooButton['xhOdNSwMWQd'](!![]);}";
           src = src.slice(0, glooLayoutIdx + glooLayoutAnchor.length) + glooLayoutCode + src.slice(glooLayoutIdx + glooLayoutAnchor.length);
         }
+
+        // 8. Fix Settings Close bug and eliminate Crosshair Preview WebGL loop leak causing ~200ms periodic stutter
+        var p1Target = _Q + "Kq[arY(0xbbd)]=function(){var au5=arY;a8P&&a8Z!=undefined&&a8Z['preview']!=undefined&&a8Z['preview'][au5(0x402)]();};" + _Q;
+        var p1Replace = _Q + "Kq[arY(0xbbd)]=function(){var au5=arY;if(!a8P||!a8Y||!a8Z||!a8Z['preview'])return;var _el=a8Z['elem'];if(!_el||!_el.isConnected||!_el.offsetParent)return;a8Z['preview'][au5(0x402)]();};" + _Q;
+        var p1I = src.indexOf(eval(p1Target));
+        if (p1I !== -1) { var rawP1 = eval(p1Target); src = src.slice(0, p1I) + eval(p1Replace) + src.slice(p1I + rawP1.length); }
+
+        var p2Target = _Q + "Kq['renderCrosshairPreview']!=undefined&&Kq['renderCrosshairPreview']();" + _Q;
+        var p2Replace = _Q + "if(typeof a8P!=='undefined'&&a8P&&typeof a8Y!=='undefined'&&a8Y)Kq['renderCrosshairPreview']();" + _Q;
+        var p2I = src.indexOf(eval(p2Target));
+        if (p2I !== -1) { var rawP2 = eval(p2Target); src = src.slice(0, p2I) + eval(p2Replace) + src.slice(p2I + rawP2.length); }
+
+        var p3Target = _Q + "function agb(){var awR=arY;a8Q()," + _Q;
+        var p3Replace = _Q + "function agb(){var awR=arY;a8R()," + _Q;
+        var p3I = src.indexOf(eval(p3Target));
+        if (p3I !== -1) { var rawP3 = eval(p3Target); src = src.slice(0, p3I) + eval(p3Replace) + src.slice(p3I + rawP3.length); }
+
+        var p4Target = _Q + "function a9h(){var auq=arY;a8Q()," + _Q;
+        var p4Replace = _Q + "function a9h(){var auq=arY;a8R()," + _Q;
+        var p4I = src.indexOf(eval(p4Target));
+        if (p4I !== -1) { var rawP4 = eval(p4Target); src = src.slice(0, p4I) + eval(p4Replace) + src.slice(p4I + rawP4.length); }
+
+        var p5Target = _Q + "agb();a8K['dom']['s']['visibility']!=awP(0x5c5)&&a8Q();" + _Q;
+        var p5Replace = _Q + "agb();a8R();" + _Q;
+        var p5I = src.indexOf(eval(p5Target));
+        if (p5I !== -1) { var rawP5 = eval(p5Target); src = src.slice(0, p5I) + eval(p5Replace) + src.slice(p5I + rawP5.length); }
+
+        var p6Target = _Q + "let ah8=a8K[atU(0x9e6)];ah8[atU(0x774)][atU(0x944)](),a8K['dom']['s'][atU(0x40e)]=0x0," + _Q;
+        var p6Replace = _Q + "let ah8=a8K[atU(0x9e6)];a8R()," + _Q;
+        var p6I = src.indexOf(eval(p6Target));
+        if (p6I !== -1) { var rawP6 = eval(p6Target); src = src.slice(0, p6I) + eval(p6Replace) + src.slice(p6I + rawP6.length); }
       }catch(e){ try{ window.__dsDiagErr = String(e); }catch(e2){} }
       return src;
     };
@@ -5791,7 +5822,7 @@ var GameSocket = class {
         this.ws.ping();
       } catch {
       }
-    }, 2e3);
+    }, 3e4);
   }
   onMsg(data) {
     let bin;
@@ -5839,6 +5870,7 @@ var GameSocket = class {
       case 15:
         if (this.phase === "playing" && Date.now() - (this._lastResync || 0) > 2e3) {
           this._lastResync = Date.now();
+          this.log("client desync msg 15 -> resending fullState");
           this.send([this.fullState()]);
         }
         break;
@@ -5899,7 +5931,6 @@ var GameSocket = class {
       }
       case 12:
       case 14:
-      case 15:
         break;
       default:
         break;
