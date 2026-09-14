@@ -4596,11 +4596,47 @@ function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir: optCli
       res.writeHead(403);
       return res.end();
     }
+    if (fs.existsSync(file)) {
+      return sendFile(res, file);
+    }
+    if (p.includes("/mobileTextures/")) {
+      const fallbackP = p.replace("/mobileTextures/", "/compressedTextures/");
+      const fallbackFile = path2.join(clientDir, path2.normalize(fallbackP).replace(/^(\.\.\/)+/, ""));
+      if (fs.existsSync(fallbackFile)) {
+        log("fallback:", p, "->", fallbackP);
+        return sendFile(res, fallbackFile);
+      }
+    }
+    if (p.includes("/compressedTextures/")) {
+      const fallbackP = p.replace("/compressedTextures/", "/mobileTextures/");
+      const fallbackFile = path2.join(clientDir, path2.normalize(fallbackP).replace(/^(\.\.\/)+/, ""));
+      if (fs.existsSync(fallbackFile)) {
+        log("fallback:", p, "->", fallbackP);
+        return sendFile(res, fallbackFile);
+      }
+    }
+    if (p.includes("/mobilelightmap")) {
+      const fallbackP = p.replace("/mobilelightmap", "/lightmap");
+      const fallbackFile = path2.join(clientDir, path2.normalize(fallbackP).replace(/^(\.\.\/)+/, ""));
+      if (fs.existsSync(fallbackFile)) {
+        log("fallback:", p, "->", fallbackP);
+        return sendFile(res, fallbackFile);
+      }
+    }
+    if (p.includes("/lightmap") && !p.includes("/smalllightmap") && !p.includes("/mobilelightmap")) {
+      const fallbackP = p.replace("/lightmap", "/mobilelightmap");
+      const fallbackFile = path2.join(clientDir, path2.normalize(fallbackP).replace(/^(\.\.\/)+/, ""));
+      if (fs.existsSync(fallbackFile)) {
+        log("fallback:", p, "->", fallbackP);
+        return sendFile(res, fallbackFile);
+      }
+    }
     sendFile(res, file);
   });
   function sendFile(res, file) {
     fs.readFile(file, (e, data) => {
       if (e) {
+        log("404:", file);
         res.writeHead(404);
         res.end();
         return;

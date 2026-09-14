@@ -94,6 +94,25 @@ const MAP_CONFIGS = {
       "TarpsStatic", "Puddle",
     ],
   },
+  newmlab: {
+    hasLightmap1: true,
+    skybox: [
+      "out/skybox/skybox.glb",
+    ],
+    textures: [
+      "bake", "BambooLeaves_clip_nobake", "Bamboo", "bluecontainermat", "CaveFloor",
+      "CaveProps", "CaveWall", "ChemicalPropsAlpha_nobake_clip", "ChemicalProps",
+      "ConcreteTrim", "CyanPaintedWall", "darkconcrete1", "DefaultMaterial",
+      "ElectricalProps2", "ElectricalProps", "Fences_nobake", "fern1", "ForestFloor1",
+      "Garage", "Glass", "LabFloor", "LabPropsTransparent_blend_nobake", "LabProps",
+      "LabWall", "Lights", "MetalRoof", "moss1", "Moss1", "MossTrans_nobake_clip",
+      "mushroom1", "mushroom2", "OutdoorConcrete1", "Pipe", "Pump", "RailingTrim",
+      "ReinforcedConcrete", "Riverbed2", "Riverbed_nobake", "Rock7", "Rockwall1",
+      "SteelTrim", "TireTracks_multiply_nobake", "TreeBase", "TreeLeaves_clip_nobake",
+      "TruckTrans", "Truck", "WarehouseFloor", "WarehouseTile", "Water_Scroll_nobake",
+      "WindowsDoor", "WoodTrim",
+    ],
+  },
 };
 
 function buildFileList(mapName, config) {
@@ -103,12 +122,14 @@ function buildFileList(mapName, config) {
     "out/smalllightmap0.webp",
     "out/lightmap0.webp",
     "out/lightmap0.ktx2",
+    "out/mobilelightmap0.ktx2",
   ];
 
   if (config.hasLightmap1) {
     files.push("out/smalllightmap1.webp");
     files.push("out/lightmap1.webp");
     files.push("out/lightmap1.ktx2");
+    files.push("out/mobilelightmap1.ktx2");
   }
 
   for (const s of config.skybox) {
@@ -117,6 +138,7 @@ function buildFileList(mapName, config) {
 
   for (const t of config.textures) {
     files.push(`out/compressedTextures/${t}.webp`);
+    files.push(`out/mobileTextures/${t}.webp`);
   }
 
   return files;
@@ -208,6 +230,13 @@ async function main() {
     } catch (e) {
       console.log(`Symlink note: ${e.message}`);
     }
+  }
+
+  const ANDROID_MAPS_DIR = path.join(ROOT, "android", "app", "src", "main", "assets", "client", "maps");
+  if (fs.existsSync(ANDROID_MAPS_DIR)) {
+    console.log(`\nSyncing downloaded maps to Android assets: ${ANDROID_MAPS_DIR}...`);
+    fs.cpSync(TARGET_MAPS_DIR, ANDROID_MAPS_DIR, { recursive: true });
+    console.log("Sync to Android assets complete.");
   }
 
   console.log("\nVerifying geometry (out.drc) on disk:");
