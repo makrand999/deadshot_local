@@ -750,7 +750,7 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
       x: sp.x, y: sp.y, z: sp.z,
       yawByte: sp.yaw, spawnYaw: sp.yaw, aimByte: sp.pitch || 63,
       spawned: false, hp: 100, weaponType: 0, alive: true, ammo: 40, despawnSent: false,
-      kills: 0, deaths: 0, points: 0, headshots: 0, assists: 0, damageBy: new Map(), deadAt: 0,
+      kills: 0, deaths: 0, points: 0, headshots: 0, assists: 0, damageBy: new Map(),
       lastDamagedAt: 0, lastRegenAt: 0,
       reported: null, reportTick: 0, inputVal: 0, inputTick: 0, reportedAt: 0,
       srv: null,
@@ -899,14 +899,13 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
         if (s.closed || s.ws.readyState !== 1) continue;
         const parts = [];
         for (const p of this.players) {
-          if (!p.spawned) {
-            // During the 1000ms corpse fade, keep broadcasting msg2 (anim:0x60, hp:0)
-            // so the death animation plays ONCE on opponent screens; after that the
-            // corpse must be EXCLUDED or the client re-triggers the death transition
-            // every tick -> model freezes mid-fall, no death animation (HANDOFF #9).
-            if (!p.deadAt || now - p.deadAt > (1000 / SIM_SPEED)) continue;
-          }
-          if (!p.alive && p !== s.me && now - p.deadAt > (1000 / SIM_SPEED)) continue;
+          // match.mjs parity: every spawned player is broadcast every tick —
+          // dead players included (anim 0x60, hp 0), with NO time cutoff.
+          // Dropping the corpse from the broadcast breaks the client's
+          // entity/model state on respawn. Only class-selecting players
+          // (!spawned) are hidden, and the viewer's own player is always
+          // included for the self-state/desync check.
+          if (!p.spawned && p !== s.me) continue;
           parts.push(this.stateMessage(p));
         }
         if (!parts.length) continue;
@@ -1170,8 +1169,9 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
     },
     onKill(shooter, victim, isHead) {
       victim.alive = false;
-      victim.spawned = false; // stop regular state broadcast; corpse (0x60) window is handled in tick()
-      victim.deadAt = Date.now();
+      // match.mjs parity: spawned stays true — the corpse (anim 0x60, hp 0)
+      // keeps broadcasting every tick so the client's entity/model state
+      // survives until the respawn.
       victim.deaths++;
       victim.hp = 0;
       shooter.kills++;
@@ -1223,10 +1223,11 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
       const sp = spawns[(this.tickCount + p.id + 1) % spawns.length];
       p.x = sp.x; p.y = sp.y; p.z = sp.z;
       p.reported = null; p.reportTick = 0; p.reportedAt = 0;
-      // spawned stays false until the client acks (msg16 -> onStateAck sets it),
-      // matching HEAD/verified flow: dead players are not broadcast between
-      // respawn() and the ack.
-      p.hp = 100; p.alive = true; p.deadAt = 0; p.despawnSent = false;
+      // spawned stays true through death (match.mjs parity): there is no
+      // broadcast gap between respawn() and the client's ack — living states
+      // resume on the very next tick. Only the initial join gates on the ack
+      // (msg16 -> onStateAck sets spawned for a never-spawned player).
+      p.hp = 100; p.alive = true; p.despawnSent = false;
       p.lastDamagedAt = 0; p.lastRegenAt = 0;
       p.ammo = WEAPON_AMMO[p.weaponType] || 40;
       p.damageBy.clear();

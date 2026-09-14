@@ -4375,12 +4375,106 @@ var SHIM_SRC = `// JS-only AES-256-GCM polyfill for SubtleCrypto, injected into 
 })();
 `;
 var SHIM_TAG = "<script>" + SHIM_SRC + "</script>\n";
-var LOCAL_LOGIN_TAG = '<script>try{const t="D".repeat(50);localStorage.setItem("dses",t);document.cookie="dses="+t+"; Path=/; Max-Age=31536000";}catch(e){}</script>\n';
+var LOCAL_LOGIN_TAG = '<script>try{const t="D".repeat(50);localStorage.setItem("dses",t);document.cookie="dses="+t+"; Path=/; Max-Age=31536000";if(window.AndroidSettingsBridge){var raw=window.AndroidSettingsBridge.getAllStoredValuesJson();if(raw){var allStored=JSON.parse(raw);for(var k in allStored){if(!localStorage.getItem(k)&&allStored[k]){localStorage.setItem(k,allStored[k]);}}}var syncKeys=["settings","mobilelayout","keyb","onboarded","dses"];for(var i=0;i<syncKeys.length;i++){var key=syncKeys[i];var localVal=localStorage.getItem(key);if(localVal){window.AndroidSettingsBridge.saveStoredValue(key,localVal);}}var origSetItem=localStorage.setItem.bind(localStorage);localStorage.setItem=function(k,v){origSetItem(k,v);try{if(syncKeys.indexOf(k)!==-1&&window.AndroidSettingsBridge){window.AndroidSettingsBridge.saveStoredValue(k,String(v));}}catch(e){}};}}catch(e){}</script>\n';
 var ACBIUZW_ANCHOR = "async function aCbiuzw(zmjVzd_,AeaySZ){var DwUkqS1;";
 var ACBIUZW_PATCH = 'async function aCbiuzw(zmjVzd_,AeaySZ){return new Uint8Array(await(await fetch("/final.pkg.gz")).arrayBuffer());var DwUkqS1;';
 var SEAM = "EnJV2g=await gJLONEI(YQVRvZV,zmjVzd_,q7pZFi)";
 var BUNDLE_PATCH_SRC = `;(function(){
   window.__dsPosPatch = 'no-run'; try{ window.__dsDiag = window.__dsDiag || { dump: function(){ return { v3: [], loading: true }; }, party: function(){ return { active: false, members: [] }; }, create: function(){ return 'loading'; }, join: function(){ return 'loading'; }, ready: function(){ return 'loading'; }, select: function(){ return 'loading'; }, getGlooWalls: function(){ return []; } }; }catch(e){}
+  try{
+    window.__dsGyro = {
+      enabled: true,
+      sensitivity: 1.5,
+      invertY: false,
+      invertX: false,
+      zoomMultiplier: 0.75,
+      deadzone: 0.05,
+      smoothing: 0.25,
+      accumulatedYaw: 0,
+      accumulatedPitch: 0,
+      filteredRateYaw: 0,
+      filteredRatePitch: 0,
+      lastTime: (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now(),
+      init: function() {
+        try {
+          if (typeof localStorage !== 'undefined' && localStorage.settings) {
+            var saved = JSON.parse(localStorage.settings);
+            if (saved.gyro_enabled !== undefined) this.enabled = !!saved.gyro_enabled;
+            if (saved.gyro_sensitivity !== undefined) this.sensitivity = Number(saved.gyro_sensitivity);
+            if (saved.gyro_invert_y !== undefined) this.invertY = !!saved.gyro_invert_y;
+            if (saved.gyro_invert_x !== undefined) this.invertX = !!saved.gyro_invert_x;
+          }
+        } catch(e) {}
+        var self = this;
+        if (typeof window !== 'undefined' && window.addEventListener) {
+          window.addEventListener('devicemotion', function(e) {
+            if (!self.enabled) return;
+            var rot = e.rotationRate;
+            if (!rot) return;
+
+            var screenAngle = (typeof screen !== 'undefined' && screen.orientation && screen.orientation.angle !== undefined) ? screen.orientation.angle : (typeof window.orientation === 'number' ? window.orientation : 90);
+            var landscapeFlip = (screenAngle === 270 || screenAngle === -90) ? -1 : 1;
+
+            // PUBG Mobile / VR gyro model:
+            // 1. Tilt UP/DOWN (Pitch): driven by rot.beta
+            // 2. Turn LEFT/RIGHT (Yaw): driven by rot.alpha
+            // 3. Roll / Steering wheel (rot.gamma): ignored (0.0)
+            var rawPitchRate = -(rot.beta || 0) * landscapeFlip;
+            var rawYawRate = -(rot.alpha || 0) * landscapeFlip;
+
+            if (Math.abs(rawPitchRate) < self.deadzone) rawPitchRate = 0;
+            if (Math.abs(rawYawRate) < self.deadzone) rawYawRate = 0;
+
+            var sm = self.smoothing;
+            self.filteredRateYaw = self.filteredRateYaw * sm + rawYawRate * (1 - sm);
+            self.filteredRatePitch = self.filteredRatePitch * sm + rawPitchRate * (1 - sm);
+
+            var now = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
+            var dt = Math.min(0.05, Math.max(0.001, (now - self.lastTime) / 1000));
+            self.lastTime = now;
+
+            var sens = self.sensitivity;
+            var degToRad = Math.PI / 180;
+
+            var yDelta = self.filteredRateYaw * degToRad * dt * sens;
+            if (self.invertX) yDelta = -yDelta;
+            self.accumulatedYaw += yDelta;
+
+            var pDelta = self.filteredRatePitch * degToRad * dt * sens;
+            if (self.invertY) pDelta = -pDelta;
+            self.accumulatedPitch += pDelta;
+          }, { passive: true });
+        }
+      }
+    };
+    try { window.__dsGyro.init(); } catch(eGyroInit) {}
+
+    window.__dsGyroTick = function(applyFn) {
+      try {
+        var g = window.__dsGyro;
+        if (!g || !g.enabled) return;
+        if (typeof Gf !== 'undefined' && !Gf) {
+          g.accumulatedYaw = 0;
+          g.accumulatedPitch = 0;
+          return;
+        }
+        if (typeof Kq !== 'undefined' && Kq && Kq['zWDCYLcLXY']) return;
+        if (typeof a8P !== 'undefined' && a8P) return;
+
+        var isZoomed = (typeof SW !== 'undefined' && SW && (SW['isZooming'] || (typeof a30 !== 'undefined' && a30 < 0.95)));
+        var zoomFactor = isZoomed ? (g.zoomMultiplier || 0.75) : 1.0;
+
+        var dy = g.accumulatedYaw * zoomFactor;
+        var dp = g.accumulatedPitch * zoomFactor;
+        g.accumulatedYaw = 0;
+        g.accumulatedPitch = 0;
+
+        if (dy !== 0 || dp !== 0) {
+          applyFn(dy, dp);
+        }
+      } catch(eTick) {}
+    };
+  }catch(e){}
   try{
     try{
       window.__dsErrors = [];
@@ -4419,7 +4513,7 @@ var BUNDLE_PATCH_SRC = `;(function(){
         else { try{ window.__dsDiagErr = (window.__dsDiagErr ? window.__dsDiagErr + ' | ' : '') + 'no joinParty anchor'; }catch(e){} }
         // Gloo Wall Player Physical Collision: patch into kinematics/physics step
         var physTarget = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);";
-        var physReplace = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){var _ent=V3[_vi];if(!_ent)continue;if(!_ent['KWC92ef2Y9']||!_ent['KWC92ef2Y9']['PxxmChYjxoE']){if(_ent['opacity']!==undefined&&_ent['opacity']<1)_ent['opacity']=1;if(_ent['yW38T38y4']){_ent['yW38T38y4']['opacity']=1;_ent['yW38T38y4']['EafIbhzQZQ']=1;}if(_ent['r23ZS3L2g']&&!_ent['r23ZS3L2g']['parent']&&typeof Tm!=='undefined'&&Tm){Tm['add'](_ent['r23ZS3L2g']);try{_ent['r23ZS3L2g']['enable']();}catch(eE){}}}}}if(window.__dsResolveGlooCollision){window.__dsResolveGlooCollision(SW);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){if(V3[_vi]&&V3[_vi].FShYTnMIW)window.__dsResolveGlooCollision(V3[_vi].FShYTnMIW);}}}if(window.__dsGlooFrameUpdate){try{window.__dsGlooFrameUpdate();}catch(eGFU){}}";
+        var physReplace = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){var _ent=V3[_vi];if(!_ent)continue;if(_ent['aTw7B6P5H']>0&&(!_ent['KWC92ef2Y9']||!_ent['KWC92ef2Y9']['PxxmChYjxoE'])){if(_ent['r23ZS3L2g']&&!_ent['r23ZS3L2g']['visible'])_ent['r23ZS3L2g']['visible']=true;}}}if(window.__dsResolveGlooCollision){window.__dsResolveGlooCollision(SW);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){if(V3[_vi]&&V3[_vi].FShYTnMIW)window.__dsResolveGlooCollision(V3[_vi].FShYTnMIW);}}}if(window.__dsGlooFrameUpdate){try{window.__dsGlooFrameUpdate();}catch(eGFU){}}";
         var pi = src.indexOf(physTarget);
         if (pi !== -1) {
           src = src.slice(0, pi) + physReplace + src.slice(pi + physTarget.length);
@@ -4577,6 +4671,18 @@ var BUNDLE_PATCH_SRC = `;(function(){
         var p6Replace = _Q + "let ah8=a8K[atU(0x9e6)];a8R()," + _Q;
         var p6I = src.indexOf(eval(p6Target));
         if (p6I !== -1) { var rawP6 = eval(p6Target); src = src.slice(0, p6I) + eval(p6Replace) + src.slice(p6I + rawP6.length); }
+
+        // 9. Inject Gyroscope Controls & Sensitivity into Settings (Rw array)
+        var p9Target = "Ru,Rv,{'type':0x1,'id':'sensitivity'";
+        var p9Replace = "Ru,Rv,{'type':0x2,'id':'gyro_enabled','text':'Gyroscope:','category':'FRF6r51VY32','default':!![],'PNiTcTcLjni':[],'ReDNKHkwk':!![],'onchange':function(a3l){if(window.__dsGyro)window.__dsGyro.enabled=!!a3l;}},{'type':0x1,'id':'gyro_sensitivity','text':'Gyro Sensitivity:','category':'FRF6r51VY32','default':1.5,'minvalue':0.1,'maxvalue':5.0,'step':0.05,'PNiTcTcLjni':[],'ReDNKHkwk':!![],'onchange':function(a3l){if(window.__dsGyro)window.__dsGyro.sensitivity=Number(a3l);}},{'type':0x2,'id':'gyro_invert_y','text':'Invert Gyro Y:','category':'FRF6r51VY32','default':![],'PNiTcTcLjni':[],'ReDNKHkwk':!![],'onchange':function(a3l){if(window.__dsGyro)window.__dsGyro.invertY=!!a3l;}},{'type':0x2,'id':'gyro_invert_x','text':'Invert Gyro X:','category':'FRF6r51VY32','default':![],'PNiTcTcLjni':[],'ReDNKHkwk':!![],'onchange':function(a3l){if(window.__dsGyro)window.__dsGyro.invertX=!!a3l;}},{'type':0x1,'id':'sensitivity'";
+        var p9I = src.indexOf(p9Target);
+        if (p9I !== -1) src = src.slice(0, p9I) + p9Replace + src.slice(p9I + p9Target.length);
+
+        // 10. Inject Gyro Look into a34() input loop
+        var p10Target = "SW['nVQNEtZqJ']=WY,SW['XROrmxcpbW']=WV;while(WY[RY]['y']>=Qz){";
+        var p10Replace = "SW['nVQNEtZqJ']=WY,SW['XROrmxcpbW']=WV;if(window.__dsGyroTick){window.__dsGyroTick(function(dy,dp){WY[RY]['y']+=dy;X7+=dp;});}while(WY[RY]['y']>=Qz){";
+        var p10I = src.indexOf(p10Target);
+        if (p10I !== -1) src = src.slice(0, p10I) + p10Replace + src.slice(p10I + p10Target.length);
       }catch(e){ try{ window.__dsDiagErr = String(e); }catch(e2){} }
       return src;
     };
@@ -5241,7 +5347,6 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
       headshots: 0,
       assists: 0,
       damageBy: /* @__PURE__ */ new Map(),
-      deadAt: 0,
       lastDamagedAt: 0,
       lastRegenAt: 0,
       reported: null,
@@ -5399,10 +5504,7 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
         if (s.closed || s.ws.readyState !== 1) continue;
         const parts = [];
         for (const p of this.players) {
-          if (!p.spawned) {
-            if (!p.deadAt || now - p.deadAt > 1e3 / SIM_SPEED) continue;
-          }
-          if (!p.alive && p !== s.me && now - p.deadAt > 1e3 / SIM_SPEED) continue;
+          if (!p.spawned && p !== s.me) continue;
           parts.push(this.stateMessage(p));
         }
         if (!parts.length) continue;
@@ -5674,8 +5776,6 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
     },
     onKill(shooter, victim, isHead) {
       victim.alive = false;
-      victim.spawned = false;
-      victim.deadAt = Date.now();
       victim.deaths++;
       victim.hp = 0;
       shooter.kills++;
@@ -5692,7 +5792,7 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
       }
       victim.damageBy.clear();
       if (victim.srv) {
-        victim.srv.send([encode("gB4Cncy3f4", { id: victim.id, h: shooter.hp })]);
+        victim.srv.send([encode("gB4Cncy3f4", { id: shooter.id, h: shooter.hp })]);
         victim.srv.scheduleRespawn();
       }
       this.broadcast([encode("Y6805DB31Br", {
@@ -5734,7 +5834,6 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
       p.reportedAt = 0;
       p.hp = 100;
       p.alive = true;
-      p.deadAt = 0;
       p.despawnSent = false;
       p.lastDamagedAt = 0;
       p.lastRegenAt = 0;
@@ -6030,7 +6129,6 @@ var GameSocket = class {
   }
   respawnPlayer() {
     if (this.closed) return;
-    this.alloc.broadcast([encode("N27s83WCNi", { tdkZouYda: this.me.id })], this);
     this.alloc.respawn(this.me);
     this.spawnPending = true;
     this.send([
@@ -6056,7 +6154,6 @@ var GameSocket = class {
     this.me.ammo = WEAPON_AMMO[this.me.weaponType] || 40;
     if (!this.me.alive) {
       this.cancelRespawn();
-      this.alloc.broadcast([encode("N27s83WCNi", { tdkZouYda: this.me.id })], this);
       this.alloc.respawn(this.me);
     }
     if (needsSpawn) {
@@ -6079,14 +6176,20 @@ var GameSocket = class {
     this.me.alive = true;
     this.me.hp = 100;
     this.alloc.startSecondTick();
-    this.send([
+    const livingParts = [
       encode("fm80f18li7", { x: 63, y: this.me.spawnYaw }),
       // 17 yaw/pitch bytes (real: x=63, y=spawn yaw; NOT the live input yaw)
       encode("GDzF2709XA3", {}),
       // 29 spawn trigger
       this.alloc.stateMessage(this.me)
       // 2 immediate living state (hp: 100, anim: 0x20)
-    ]);
+    ];
+    for (const opp of this.alloc.players) {
+      if (opp !== this.me && opp.alive && opp.spawned) {
+        livingParts.push(this.alloc.stateMessage(opp));
+      }
+    }
+    this.send(livingParts);
     this.alloc.broadcast([
       encode("k1Qu903595", { id: this.me.id, type: this.me.weaponType || 0 }),
       this.alloc.stateMessage(this.me)
