@@ -13,7 +13,11 @@ const isDev = !app.isPackaged;
 const ROOT = path.resolve(__dirname, '..');
 
 // resource locations (repo paths in dev, extraResources when packaged)
-const clientDir = isDev ? path.join(ROOT, 'client') : path.join(process.resourcesPath, 'client');
+const clientDir = isDev
+  ? (fs.existsSync(path.join(ROOT, 'gameplay', 'client', 'index.html'))
+      ? path.join(ROOT, 'gameplay', 'client')
+      : path.join(ROOT, 'client'))
+  : path.join(process.resourcesPath, 'client');
 const rawDir = isDev ? path.join(ROOT, 'raw') : path.join(process.resourcesPath, 'raw');
 const logDir = path.join(app.getPath('userData'), 'server-capture');
 const serverDir = isDev

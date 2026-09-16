@@ -658,7 +658,14 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir:
   return new Promise((resolve) => {
     mm.listen(mmPort, () => httpServer.listen(httpPort, () => {
       log('gameplay server:  http :' + httpPort + '  mm ws :' + mmPort);
-      resolve({ httpServer, mm });
+      resolve({
+        httpServer,
+        mm,
+        close() {
+          try { httpServer.close(); } catch {}
+          try { mm.close(); } catch {}
+        },
+      });
     }));
   });
 }
