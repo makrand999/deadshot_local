@@ -4165,28 +4165,7 @@ var GlooWallManager = class {
 // gameplay/server/src/gameplay-server.mjs
 var __dirname2 = path2.dirname(fileURLToPath2(import.meta.url));
 var ROOT = path2.join(__dirname2, "..", "..");
-var LOG_FILE = (() => {
-  try {
-    const d = process.env.GP_CLIENT_DIR;
-    if (!d) return null;
-    const f = path2.join(path2.dirname(d), "server-debug.log");
-    fs.writeFileSync(f, `--- log start ${(/* @__PURE__ */ new Date()).toISOString()} ---
-`);
-    return f;
-  } catch {
-    return null;
-  }
-})();
-var log = (...a) => {
-  const line = "[" + (/* @__PURE__ */ new Date()).toISOString().slice(11, 23) + "] " + a.join(" ");
-  console.log(line);
-  if (LOG_FILE) {
-    try {
-      if (fs.statSync(LOG_FILE).size < 8 * 1024 * 1024) fs.appendFileSync(LOG_FILE, line + "\n");
-    } catch {
-    }
-  }
-};
+var log = (...a) => console.log("[" + (/* @__PURE__ */ new Date()).toISOString().slice(11, 23) + "]", ...a);
 var SHIM_SRC = `// JS-only AES-256-GCM polyfill for SubtleCrypto, injected into the served
 // page. Chrome only exposes crypto.subtle on SECURE contexts; over plain HTTP
 // only http://127.0.0.1 / http://localhost qualify \u2014 LAN IPs don't. The game
@@ -5079,7 +5058,6 @@ function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir: optCli
   return new Promise((resolve) => {
     mm.listen(mmPort, () => httpServer.listen(httpPort, () => {
       log("gameplay server:  http :" + httpPort + "  mm ws :" + mmPort);
-      log("build", "bundle=filelog1" + (LOG_FILE ? " logfile=" + LOG_FILE : " logfile=none"));
       resolve({ httpServer, mm });
     }));
   });

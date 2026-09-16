@@ -16,28 +16,7 @@ import { GlooWallManager } from './gloo-wall-manager.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..', '..');
-const LOG_FILE = (() => {
-  // On-device diagnosis: some OEM ROMs (e.g. Vivo) expose an empty logcat to
-  // adb, so mirror every log line into <filesDir>/server-debug.log (fresh
-  // file each boot, 8MB cap). filesDir is derived from GP_CLIENT_DIR, which
-  // the Android launcher always sets; desktop runs keep console-only logging.
-  try {
-    const d = process.env.GP_CLIENT_DIR;
-    if (!d) return null;
-    const f = path.join(path.dirname(d), 'server-debug.log');
-    fs.writeFileSync(f, `--- log start ${new Date().toISOString()} ---\n`);
-    return f;
-  } catch { return null; }
-})();
-const log = (...a) => {
-  const line = '[' + new Date().toISOString().slice(11, 23) + '] ' + a.join(' ');
-  console.log(line);
-  if (LOG_FILE) {
-    try {
-      if (fs.statSync(LOG_FILE).size < 8 * 1024 * 1024) fs.appendFileSync(LOG_FILE, line + '\n');
-    } catch { /* never break the server for logging */ }
-  }
-};
+const log = (...a) => console.log('[' + new Date().toISOString().slice(11, 23) + ']', ...a);
 
 // ---------- client page patching (same as the main server) ----------
 const SHIM_SRC = fs.readFileSync(path.join(__dirname, 'subtle-shim.js'), 'utf8');
@@ -679,7 +658,6 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir:
   return new Promise((resolve) => {
     mm.listen(mmPort, () => httpServer.listen(httpPort, () => {
       log('gameplay server:  http :' + httpPort + '  mm ws :' + mmPort);
-      log('build', 'bundle=filelog1' + (LOG_FILE ? ' logfile=' + LOG_FILE : ' logfile=none'));
       resolve({ httpServer, mm });
     }));
   });
