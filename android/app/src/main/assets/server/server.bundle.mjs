@@ -4165,7 +4165,28 @@ var GlooWallManager = class {
 // gameplay/server/src/gameplay-server.mjs
 var __dirname2 = path2.dirname(fileURLToPath2(import.meta.url));
 var ROOT = path2.join(__dirname2, "..", "..");
-var log = (...a) => console.log("[" + (/* @__PURE__ */ new Date()).toISOString().slice(11, 23) + "]", ...a);
+var LOG_FILE = (() => {
+  try {
+    const d = process.env.GP_CLIENT_DIR;
+    if (!d) return null;
+    const f = path2.join(path2.dirname(d), "server-debug.log");
+    fs.writeFileSync(f, `--- log start ${(/* @__PURE__ */ new Date()).toISOString()} ---
+`);
+    return f;
+  } catch {
+    return null;
+  }
+})();
+var log = (...a) => {
+  const line = "[" + (/* @__PURE__ */ new Date()).toISOString().slice(11, 23) + "] " + a.join(" ");
+  console.log(line);
+  if (LOG_FILE) {
+    try {
+      if (fs.statSync(LOG_FILE).size < 8 * 1024 * 1024) fs.appendFileSync(LOG_FILE, line + "\n");
+    } catch {
+    }
+  }
+};
 var SHIM_SRC = `// JS-only AES-256-GCM polyfill for SubtleCrypto, injected into the served
 // page. Chrome only exposes crypto.subtle on SECURE contexts; over plain HTTP
 // only http://127.0.0.1 / http://localhost qualify \u2014 LAN IPs don't. The game
@@ -4513,7 +4534,7 @@ var BUNDLE_PATCH_SRC = `;(function(){
         else { try{ window.__dsDiagErr = (window.__dsDiagErr ? window.__dsDiagErr + ' | ' : '') + 'no joinParty anchor'; }catch(e){} }
         // Gloo Wall Player Physical Collision: patch into kinematics/physics step
         var physTarget = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);";
-        var physReplace = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){var _ent=V3[_vi];if(!_ent)continue;if(_ent['aTw7B6P5H']>0&&(!_ent['KWC92ef2Y9']||!_ent['KWC92ef2Y9']['PxxmChYjxoE'])){if(_ent['r23ZS3L2g']&&!_ent['r23ZS3L2g']['visible'])_ent['r23ZS3L2g']['visible']=true;}}}if(window.__dsResolveGlooCollision){window.__dsResolveGlooCollision(SW);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){if(V3[_vi]&&V3[_vi].FShYTnMIW)window.__dsResolveGlooCollision(V3[_vi].FShYTnMIW);}}}if(window.__dsGlooFrameUpdate){try{window.__dsGlooFrameUpdate();}catch(eGFU){}}";
+        var physReplace = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){var _ent=V3[_vi];if(!_ent)continue;if(_ent['aTw7B6P5H']>0&&(!_ent['KWC92ef2Y9']||!_ent['KWC92ef2Y9']['PxxmChYjxoE'])){if(_ent['r23ZS3L2g']&&!_ent['r23ZS3L2g']['visible']){_ent['r23ZS3L2g']['visible']=true;window.__dsVisFix=(window.__dsVisFix||0)+1;}}}}if(window.__dsResolveGlooCollision){window.__dsResolveGlooCollision(SW);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){if(V3[_vi]&&V3[_vi].FShYTnMIW)window.__dsResolveGlooCollision(V3[_vi].FShYTnMIW);}}}if(window.__dsGlooFrameUpdate){try{window.__dsGlooFrameUpdate();}catch(eGFU){}}";
         var pi = src.indexOf(physTarget);
         if (pi !== -1) {
           src = src.slice(0, pi) + physReplace + src.slice(pi + physTarget.length);
@@ -4731,7 +4752,38 @@ function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir: optCli
       res.end();
       return;
     }
-    log(req.method, p);
+    if (p !== "/debug-state") log(req.method, p);
+    if (p === "/debug-state") {
+      try {
+        const out = [];
+        for (const a of allocations.values()) {
+          out.push({
+            tick: a.tickCount,
+            sockets: a.sockets.size,
+            time: a.time,
+            ended: a.ended,
+            players: a.players.map((pl) => ({
+              id: pl.id,
+              alive: pl.alive,
+              spawned: pl.spawned,
+              hp: pl.hp,
+              kills: pl.kills,
+              deaths: pl.deaths,
+              corpseTicks: pl._corpseTicks || 0,
+              cutoff: !!pl._cutoffLogged,
+              spawnPending: !!(pl.srv && pl.srv.spawnPending),
+              hasSrv: !!pl.srv,
+              pos: [pl.x, pl.y, pl.z].map((v) => +Number(v).toFixed(1))
+            }))
+          });
+        }
+        res.writeHead(200, { "Content-Type": "application/json" });
+        return res.end(JSON.stringify(out));
+      } catch (e) {
+        res.writeHead(500);
+        return res.end("debug-state failed: " + e.message);
+      }
+    }
     if (p === "/final.pkg" || p === "/final_legacy.pkg") return sendFile(res, path2.join(rawDir, "bundles", "final.pkg"));
     if (p === "/final.pkg.local.gz" || p === "/final.pkg.gz") {
       const gzPath = path2.join(rawDir, "bundles", "final.pkg.gz");
@@ -4993,10 +5045,17 @@ function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir: optCli
       sendPkts(m.ws, [{ t: "connect", ip: "00000000000000000000000000000000", port: httpPort, r: token }]);
     }
     const ttl = Number(process.env.GP_ALLOC_TTL ?? 3e4);
-    if (ttl > 0) setTimeout(() => {
-      allocations.delete(token);
-      alloc.stop();
-    }, ttl);
+    if (ttl > 0) {
+      const sweep = setInterval(() => {
+        if (alloc.sockets.size === 0) {
+          clearInterval(sweep);
+          log("ROOM", token, "TTL sweep: unclaimed/abandoned, reaping allocation");
+          allocations.delete(token);
+          alloc.stop();
+        }
+      }, ttl);
+      if (sweep.unref) sweep.unref();
+    }
   }
   const game = new import_websocket_server.default({ server: httpServer, path: "/ws" });
   game.on("connection", (ws, req) => {
@@ -5020,6 +5079,7 @@ function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir: optCli
   return new Promise((resolve) => {
     mm.listen(mmPort, () => httpServer.listen(httpPort, () => {
       log("gameplay server:  http :" + httpPort + "  mm ws :" + mmPort);
+      log("build", "bundle=filelog1" + (LOG_FILE ? " logfile=" + LOG_FILE : " logfile=none"));
       resolve({ httpServer, mm });
     }));
   });
@@ -5487,6 +5547,9 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
     tick() {
       if (this.closed || !this.sockets.size) return;
       this.tickCount++;
+      if (process.env.GP_MODELDBG) {
+        log("modeldbg", `tick#${this.tickCount} ` + this.players.map((p) => `p${p.id}:${p.alive ? "A" : "D"}${p.spawned ? "S" : "s"}hp${p.hp}`).join(" "));
+      }
       const now = Date.now();
       const regenDelay = 3500 / SIM_SPEED;
       const regenInterval = 100 / SIM_SPEED;
@@ -5526,6 +5589,13 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
       if (p.inputVal & 256 || p.inputVal & 32) anim |= 256;
       if (p.inputVal & 16) anim &= ~32;
       if (!p.alive) anim = 96;
+      {
+        const _dbgKey = (p.alive ? "A" : "D") + (p.spawned ? "S" : "s") + (anim & 64 ? "d1" : "d0");
+        if (p._modelDbgKey !== _dbgKey) {
+          log("modeldbg", `p${p.id} ${p._modelDbgKey || "init"} -> ${_dbgKey} anim=0x${anim.toString(16)} hp=${p.hp} @(${x.toFixed(1)},${y.toFixed(1)},${z.toFixed(1)})`);
+          p._modelDbgKey = _dbgKey;
+        }
+      }
       return encode("K11Co2hvi1l", {
         tdkZouYda: p.id,
         JoHdvmpcMvL: x,
@@ -5810,6 +5880,7 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
       this.broadcast([...this.scoreboardMsg(), this.scoreHeaderMsg()], null);
       this._lastHeader = this.headerKey();
       log("combat", `KILL ${shooter.id} -> ${victim.id}${isHead ? " HEAD" : ""}`);
+      log("modeldbg", `KILL flow: victim=${victim.id} alive=false hp=0 spawned=${victim.spawned} corpse-anim=0x60 | sent: 20->victim, 25+24->all, 23->killer | respawnTimer=${victim.srv ? "armed(8s fallback)" : "NO-SRV!"}`);
       this.checkScoreLimit();
     },
     // Winning-score end (GP_SCORE_LIMIT, 0 = off): FFA ends when any player
@@ -5826,6 +5897,7 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
     respawn(p) {
       const spawns2 = this.spawns || spawnsForMap(SAFE_MAP);
       const sp = spawns2[(this.tickCount + p.id + 1) % spawns2.length];
+      const _wasAlive = p.alive;
       p.x = sp.x;
       p.y = sp.y;
       p.z = sp.z;
@@ -5842,6 +5914,9 @@ function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX, match
       p.yawByte = sp.yaw;
       p.spawnYaw = sp.yaw;
       p.aimByte = sp.pitch || 63;
+      log("modeldbg", `RESPAWN p${p.id} alive ${_wasAlive}->true hp=100 spawned=${p.spawned}(kept) deadTicks=${p._corpseTicks || 0} @(${p.x.toFixed(1)},${p.y.toFixed(1)},${p.z.toFixed(1)}) yaw=${p.spawnYaw}`);
+      p._corpseTicks = 0;
+      p._cutoffLogged = false;
     }
   };
 }
@@ -5906,6 +5981,7 @@ var GameSocket = class {
       this.me.damageBy.clear();
       this.me.spawned = false;
       this.me.alive = false;
+      log("modeldbg", `p${this.me.id} socket-close: spawned=false alive=false, broadcast msg7 despawn->survivors (model+nametag removed)`);
       this.alloc.broadcast([encode("N27s83WCNi", { tdkZouYda: this.me.id })], this);
       if (!this.alloc.sockets.size) this.alloc.stop();
     });
@@ -6113,6 +6189,10 @@ var GameSocket = class {
       }));
     }
     for (const p of this.alloc.players) parts.push(encode("k1Qu903595", { id: p.id, type: p.weaponType || 0 }));
+    for (const p of this.alloc.players) {
+      if (!p.spawned) continue;
+      parts.push(this.alloc.stateMessage(p));
+    }
     parts.push(encode("zSf6vw9ka", { nwQWcPQjr: this.seed }));
     parts.push(encode("COCjGf0Sf", { string: JSON.stringify([0.3, 0.158, 0.3, 0.3]) }));
     parts.push(encode("Ko38N6873G6", { cKRwdjkqGai: 2 }));
@@ -6131,6 +6211,7 @@ var GameSocket = class {
     if (this.closed) return;
     this.alloc.respawn(this.me);
     this.spawnPending = true;
+    log("modeldbg", `p${this.me.id} fallback-respawn: sent 22+18->victim, broadcast 22->others, spawnPending=true (awaiting msg16 ack for 17+29)`);
     this.send([
       encode("k1Qu903595", { id: this.me.id, type: this.me.weaponType }),
       // 22
@@ -6145,6 +6226,7 @@ var GameSocket = class {
     if (this.phase !== "playing") return;
     const type = Math.max(0, Math.min(3, fields.eXABYtRfN || 0));
     if (this.me.alive && this.me.spawned && type === this.me.weaponType) {
+      log("modeldbg", `p${this.me.id} class-pick same-type while alive: 18 only, no 22 (model untouched)`);
       this.send([this.fullState()]);
       return;
     }
@@ -6160,6 +6242,7 @@ var GameSocket = class {
       this.spawnPending = true;
     }
     const send22 = changed || needsSpawn;
+    log("modeldbg", `p${this.me.id} class-pick type=${type} needsSpawn=${needsSpawn} changed=${changed} send22=${send22} spawnPending=${this.spawnPending} alive=${this.me.alive} spawned=${this.me.spawned}`);
     this.send([
       ...send22 ? [encode("k1Qu903595", { id: this.me.id, type: this.me.weaponType })] : [],
       this.fullState()
@@ -6170,7 +6253,10 @@ var GameSocket = class {
     ], this);
   }
   onStateAck() {
-    if (!this.spawnPending) return;
+    if (!this.spawnPending) {
+      if (process.env.GP_MODELDBG) log("modeldbg", `p${this.me.id} stray msg16 ack (no spawn pending) -> ignored`);
+      return;
+    }
     this.spawnPending = false;
     this.me.spawned = true;
     this.me.alive = true;
@@ -6194,6 +6280,7 @@ var GameSocket = class {
       encode("k1Qu903595", { id: this.me.id, type: this.me.weaponType || 0 }),
       this.alloc.stateMessage(this.me)
     ], this);
+    log("modeldbg", `p${this.me.id} msg16 ack accepted: spawned=true alive=true hp=100 | sent 17+29+living2->victim, broadcast 22+2->others`);
   }
   fullState() {
     const p = this.me;

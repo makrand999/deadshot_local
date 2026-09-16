@@ -16,12 +16,33 @@ import { GlooWallManager } from './gloo-wall-manager.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..', '..');
-const log = (...a) => console.log('[' + new Date().toISOString().slice(11, 23) + ']', ...a);
+const LOG_FILE = (() => {
+  // On-device diagnosis: some OEM ROMs (e.g. Vivo) expose an empty logcat to
+  // adb, so mirror every log line into <filesDir>/server-debug.log (fresh
+  // file each boot, 8MB cap). filesDir is derived from GP_CLIENT_DIR, which
+  // the Android launcher always sets; desktop runs keep console-only logging.
+  try {
+    const d = process.env.GP_CLIENT_DIR;
+    if (!d) return null;
+    const f = path.join(path.dirname(d), 'server-debug.log');
+    fs.writeFileSync(f, `--- log start ${new Date().toISOString()} ---\n`);
+    return f;
+  } catch { return null; }
+})();
+const log = (...a) => {
+  const line = '[' + new Date().toISOString().slice(11, 23) + '] ' + a.join(' ');
+  console.log(line);
+  if (LOG_FILE) {
+    try {
+      if (fs.statSync(LOG_FILE).size < 8 * 1024 * 1024) fs.appendFileSync(LOG_FILE, line + '\n');
+    } catch { /* never break the server for logging */ }
+  }
+};
 
 // ---------- client page patching (same as the main server) ----------
 const SHIM_SRC = fs.readFileSync(path.join(__dirname, 'subtle-shim.js'), 'utf8');
 const SHIM_TAG = '<script>' + SHIM_SRC + '</script>\n';
-const LOCAL_LOGIN_TAG = '<script>try{const t="D".repeat(50);localStorage.setItem("dses",t);document.cookie="dses="+t+"; Path=/; Max-Age=31536000";}catch(e){}</script>\n';
+const LOCAL_LOGIN_TAG = '<script>try{const t="D".repeat(50);localStorage.setItem("dses",t);document.cookie="dses="+t+"; Path=/; Max-Age=31536000";if(window.AndroidSettingsBridge){var raw=window.AndroidSettingsBridge.getAllStoredValuesJson();if(raw){var allStored=JSON.parse(raw);for(var k in allStored){if(!localStorage.getItem(k)&&allStored[k]){localStorage.setItem(k,allStored[k]);}}}var syncKeys=["settings","mobilelayout","keyb","onboarded","dses"];for(var i=0;i<syncKeys.length;i++){var key=syncKeys[i];var localVal=localStorage.getItem(key);if(localVal){window.AndroidSettingsBridge.saveStoredValue(key,localVal);}}var origSetItem=localStorage.setItem.bind(localStorage);localStorage.setItem=function(k,v){origSetItem(k,v);try{if(syncKeys.indexOf(k)!==-1&&window.AndroidSettingsBridge){window.AndroidSettingsBridge.saveStoredValue(k,String(v));}}catch(e){}};}}catch(e){}</script>\n';
 const ACBIUZW_ANCHOR = 'async function aCbiuzw(zmjVzd_,AeaySZ){var DwUkqS1;';
 const ACBIUZW_PATCH =
   'async function aCbiuzw(zmjVzd_,AeaySZ){' +
@@ -49,6 +70,100 @@ const SEAM = 'EnJV2g=await gJLONEI(YQVRvZV,zmjVzd_,q7pZFi)';
 //    is set so the page can be validated in the browser console.
 const BUNDLE_PATCH_SRC = `;(function(){
   window.__dsPosPatch = 'no-run'; try{ window.__dsDiag = window.__dsDiag || { dump: function(){ return { v3: [], loading: true }; }, party: function(){ return { active: false, members: [] }; }, create: function(){ return 'loading'; }, join: function(){ return 'loading'; }, ready: function(){ return 'loading'; }, select: function(){ return 'loading'; }, getGlooWalls: function(){ return []; } }; }catch(e){}
+  try{
+    window.__dsGyro = {
+      enabled: true,
+      sensitivity: 1.5,
+      invertY: false,
+      invertX: false,
+      zoomMultiplier: 0.75,
+      deadzone: 0.05,
+      smoothing: 0.25,
+      accumulatedYaw: 0,
+      accumulatedPitch: 0,
+      filteredRateYaw: 0,
+      filteredRatePitch: 0,
+      lastTime: (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now(),
+      init: function() {
+        try {
+          if (typeof localStorage !== 'undefined' && localStorage.settings) {
+            var saved = JSON.parse(localStorage.settings);
+            if (saved.gyro_enabled !== undefined) this.enabled = !!saved.gyro_enabled;
+            if (saved.gyro_sensitivity !== undefined) this.sensitivity = Number(saved.gyro_sensitivity);
+            if (saved.gyro_invert_y !== undefined) this.invertY = !!saved.gyro_invert_y;
+            if (saved.gyro_invert_x !== undefined) this.invertX = !!saved.gyro_invert_x;
+          }
+        } catch(e) {}
+        var self = this;
+        if (typeof window !== 'undefined' && window.addEventListener) {
+          window.addEventListener('devicemotion', function(e) {
+            if (!self.enabled) return;
+            var rot = e.rotationRate;
+            if (!rot) return;
+
+            var screenAngle = (typeof screen !== 'undefined' && screen.orientation && screen.orientation.angle !== undefined) ? screen.orientation.angle : (typeof window.orientation === 'number' ? window.orientation : 90);
+            var landscapeFlip = (screenAngle === 270 || screenAngle === -90) ? -1 : 1;
+
+            // PUBG Mobile / VR gyro model:
+            // 1. Tilt UP/DOWN (Pitch): driven by rot.beta
+            // 2. Turn LEFT/RIGHT (Yaw): driven by rot.alpha
+            // 3. Roll / Steering wheel (rot.gamma): ignored (0.0)
+            var rawPitchRate = -(rot.beta || 0) * landscapeFlip;
+            var rawYawRate = -(rot.alpha || 0) * landscapeFlip;
+
+            if (Math.abs(rawPitchRate) < self.deadzone) rawPitchRate = 0;
+            if (Math.abs(rawYawRate) < self.deadzone) rawYawRate = 0;
+
+            var sm = self.smoothing;
+            self.filteredRateYaw = self.filteredRateYaw * sm + rawYawRate * (1 - sm);
+            self.filteredRatePitch = self.filteredRatePitch * sm + rawPitchRate * (1 - sm);
+
+            var now = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
+            var dt = Math.min(0.05, Math.max(0.001, (now - self.lastTime) / 1000));
+            self.lastTime = now;
+
+            var sens = self.sensitivity;
+            var degToRad = Math.PI / 180;
+
+            var yDelta = self.filteredRateYaw * degToRad * dt * sens;
+            if (self.invertX) yDelta = -yDelta;
+            self.accumulatedYaw += yDelta;
+
+            var pDelta = self.filteredRatePitch * degToRad * dt * sens;
+            if (self.invertY) pDelta = -pDelta;
+            self.accumulatedPitch += pDelta;
+          }, { passive: true });
+        }
+      }
+    };
+    try { window.__dsGyro.init(); } catch(eGyroInit) {}
+
+    window.__dsGyroTick = function(applyFn) {
+      try {
+        var g = window.__dsGyro;
+        if (!g || !g.enabled) return;
+        if (typeof Gf !== 'undefined' && !Gf) {
+          g.accumulatedYaw = 0;
+          g.accumulatedPitch = 0;
+          return;
+        }
+        if (typeof Kq !== 'undefined' && Kq && Kq['zWDCYLcLXY']) return;
+        if (typeof a8P !== 'undefined' && a8P) return;
+
+        var isZoomed = (typeof SW !== 'undefined' && SW && (SW['isZooming'] || (typeof a30 !== 'undefined' && a30 < 0.95)));
+        var zoomFactor = isZoomed ? (g.zoomMultiplier || 0.75) : 1.0;
+
+        var dy = g.accumulatedYaw * zoomFactor;
+        var dp = g.accumulatedPitch * zoomFactor;
+        g.accumulatedYaw = 0;
+        g.accumulatedPitch = 0;
+
+        if (dy !== 0 || dp !== 0) {
+          applyFn(dy, dp);
+        }
+      } catch(eTick) {}
+    };
+  }catch(e){}
   try{
     try{
       window.__dsErrors = [];
@@ -87,7 +202,7 @@ const BUNDLE_PATCH_SRC = `;(function(){
         else { try{ window.__dsDiagErr = (window.__dsDiagErr ? window.__dsDiagErr + ' | ' : '') + 'no joinParty anchor'; }catch(e){} }
         // Gloo Wall Player Physical Collision: patch into kinematics/physics step
         var physTarget = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);";
-        var physReplace = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){var _ent=V3[_vi];if(!_ent)continue;if(!_ent['KWC92ef2Y9']||!_ent['KWC92ef2Y9']['PxxmChYjxoE']){if(_ent['opacity']!==undefined&&_ent['opacity']<1)_ent['opacity']=1;if(_ent['yW38T38y4']){_ent['yW38T38y4']['opacity']=1;_ent['yW38T38y4']['EafIbhzQZQ']=1;}if(_ent['r23ZS3L2g']&&!_ent['r23ZS3L2g']['parent']&&typeof Tm!=='undefined'&&Tm){Tm['add'](_ent['r23ZS3L2g']);try{_ent['r23ZS3L2g']['enable']();}catch(eE){}}}}}if(window.__dsResolveGlooCollision){window.__dsResolveGlooCollision(SW);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){if(V3[_vi]&&V3[_vi].FShYTnMIW)window.__dsResolveGlooCollision(V3[_vi].FShYTnMIW);}}}if(window.__dsGlooFrameUpdate){try{window.__dsGlooFrameUpdate();}catch(eGFU){}}";
+        var physReplace = "G4=EN(QP,SW,W2),SW['PhbhpxFxPP']=KN,EX(SW,V3);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){var _ent=V3[_vi];if(!_ent)continue;if(_ent['aTw7B6P5H']>0&&(!_ent['KWC92ef2Y9']||!_ent['KWC92ef2Y9']['PxxmChYjxoE'])){if(_ent['r23ZS3L2g']&&!_ent['r23ZS3L2g']['visible']){_ent['r23ZS3L2g']['visible']=true;window.__dsVisFix=(window.__dsVisFix||0)+1;}}}}if(window.__dsResolveGlooCollision){window.__dsResolveGlooCollision(SW);if(typeof V3!=='undefined'&&V3&&V3.length){for(var _vi=0;_vi<V3.length;_vi++){if(V3[_vi]&&V3[_vi].FShYTnMIW)window.__dsResolveGlooCollision(V3[_vi].FShYTnMIW);}}}if(window.__dsGlooFrameUpdate){try{window.__dsGlooFrameUpdate();}catch(eGFU){}}";
         var pi = src.indexOf(physTarget);
         if (pi !== -1) {
           src = src.slice(0, pi) + physReplace + src.slice(pi + physTarget.length);
@@ -245,6 +360,18 @@ const BUNDLE_PATCH_SRC = `;(function(){
         var p6Replace = _Q + "let ah8=a8K[atU(0x9e6)];a8R()," + _Q;
         var p6I = src.indexOf(eval(p6Target));
         if (p6I !== -1) { var rawP6 = eval(p6Target); src = src.slice(0, p6I) + eval(p6Replace) + src.slice(p6I + rawP6.length); }
+
+        // 9. Inject Gyroscope Controls & Sensitivity into Settings (Rw array)
+        var p9Target = "Ru,Rv,{'type':0x1,'id':'sensitivity'";
+        var p9Replace = "Ru,Rv,{'type':0x2,'id':'gyro_enabled','text':'Gyroscope:','category':'FRF6r51VY32','default':!![],'PNiTcTcLjni':[],'ReDNKHkwk':!![],'onchange':function(a3l){if(window.__dsGyro)window.__dsGyro.enabled=!!a3l;}},{'type':0x1,'id':'gyro_sensitivity','text':'Gyro Sensitivity:','category':'FRF6r51VY32','default':1.5,'minvalue':0.1,'maxvalue':5.0,'step':0.05,'PNiTcTcLjni':[],'ReDNKHkwk':!![],'onchange':function(a3l){if(window.__dsGyro)window.__dsGyro.sensitivity=Number(a3l);}},{'type':0x2,'id':'gyro_invert_y','text':'Invert Gyro Y:','category':'FRF6r51VY32','default':![],'PNiTcTcLjni':[],'ReDNKHkwk':!![],'onchange':function(a3l){if(window.__dsGyro)window.__dsGyro.invertY=!!a3l;}},{'type':0x2,'id':'gyro_invert_x','text':'Invert Gyro X:','category':'FRF6r51VY32','default':![],'PNiTcTcLjni':[],'ReDNKHkwk':!![],'onchange':function(a3l){if(window.__dsGyro)window.__dsGyro.invertX=!!a3l;}},{'type':0x1,'id':'sensitivity'";
+        var p9I = src.indexOf(p9Target);
+        if (p9I !== -1) src = src.slice(0, p9I) + p9Replace + src.slice(p9I + p9Target.length);
+
+        // 10. Inject Gyro Look into a34() input loop
+        var p10Target = "SW['nVQNEtZqJ']=WY,SW['XROrmxcpbW']=WV;while(WY[RY]['y']>=Qz){";
+        var p10Replace = "SW['nVQNEtZqJ']=WY,SW['XROrmxcpbW']=WV;if(window.__dsGyroTick){window.__dsGyroTick(function(dy,dp){WY[RY]['y']+=dy;X7+=dp;});}while(WY[RY]['y']>=Qz){";
+        var p10I = src.indexOf(p10Target);
+        if (p10I !== -1) src = src.slice(0, p10I) + p10Replace + src.slice(p10I + p10Target.length);
       }catch(e){ try{ window.__dsDiagErr = String(e); }catch(e2){} }
       return src;
     };
@@ -275,7 +402,29 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir:
   const httpServer = http.createServer((req, res) => {
     let p;
     try { p = decodeURIComponent(req.url.split('?')[0]); } catch { res.writeHead(400); res.end(); return; }
-    log(req.method, p);
+    if (p !== '/debug-state') log(req.method, p); // debug polling must not spam the log
+    if (p === '/debug-state') {
+      // Live match introspection for on-device diagnosis (LAN only): per
+      // player id/alive/spawned/hp, corpse-cutoff counters, pending spawn
+      // acks, and positions. Read via: adb forward tcp:18080 tcp:8080, then
+      // curl localhost:18080/debug-state
+      try {
+        const out = [];
+        for (const a of allocations.values()) {
+          out.push({
+            tick: a.tickCount, sockets: a.sockets.size, time: a.time, ended: a.ended,
+            players: a.players.map((pl) => ({
+              id: pl.id, alive: pl.alive, spawned: pl.spawned, hp: pl.hp,
+              kills: pl.kills, deaths: pl.deaths, corpseTicks: pl._corpseTicks || 0,
+              cutoff: !!pl._cutoffLogged, spawnPending: !!(pl.srv && pl.srv.spawnPending),
+              hasSrv: !!pl.srv, pos: [pl.x, pl.y, pl.z].map((v) => +Number(v).toFixed(1)),
+            })),
+          });
+        }
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        return res.end(JSON.stringify(out));
+      } catch (e) { res.writeHead(500); return res.end('debug-state failed: ' + e.message); }
+    }
     if (p === '/final.pkg' || p === '/final_legacy.pkg') return sendFile(res, path.join(rawDir, 'bundles', 'final.pkg'));
     if (p === '/final.pkg.local.gz' || p === '/final.pkg.gz') {
       const gzPath = path.join(rawDir, 'bundles', 'final.pkg.gz');
@@ -495,8 +644,23 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir:
     for (const m of room.members) {
       sendPkts(m.ws, [{ t: 'connect', ip: '00000000000000000000000000000000', port: httpPort, r: token }]);
     }
+    // Sweep unclaimed allocations (connect packets sent but no game socket
+    // ever opened) AND abandoned ones (all sockets left): reap when empty.
+    // MUST NOT touch live matches — reaping unconditionally nukes every match
+    // ttl ms after room start (ticks stop, so models freeze, death anims
+    // never broadcast, and respawns stay invisible).
     const ttl = Number(process.env.GP_ALLOC_TTL ?? 30000);
-    if (ttl > 0) setTimeout(() => { allocations.delete(token); alloc.stop(); }, ttl);
+    if (ttl > 0) {
+      const sweep = setInterval(() => {
+        if (alloc.sockets.size === 0) {
+          clearInterval(sweep);
+          log('ROOM', token, 'TTL sweep: unclaimed/abandoned, reaping allocation');
+          allocations.delete(token);
+          alloc.stop();
+        }
+      }, ttl);
+      if (sweep.unref) sweep.unref(); // never hold the process open for reaping
+    }
   }
   const game = new WebSocketServer({ server: httpServer, path: '/ws' });
   game.on('connection', (ws, req) => {
@@ -515,6 +679,7 @@ export function startGameplayServer({ httpPort = 8080, mmPort = 8081, clientDir:
   return new Promise((resolve) => {
     mm.listen(mmPort, () => httpServer.listen(httpPort, () => {
       log('gameplay server:  http :' + httpPort + '  mm ws :' + mmPort);
+      log('build', 'bundle=filelog1' + (LOG_FILE ? ' logfile=' + LOG_FILE : ' logfile=none'));
       resolve({ httpServer, mm });
     }));
   });
@@ -530,6 +695,7 @@ function clampByte(v) { return Math.max(-128, Math.min(127, Math.round(v))); }
 const WEAPON_DAMAGE = [11, 21, 100, 20]; // SMG: 11, AR: 21, AWP: 100, Shotgun: 20
 const WEAPON_AMMO = [40, 30, 3, 2]; // SMG: 40, AR: 30, AWP/Sniper: 3, Shotgun: 2 (verified from bundle Hs)
 const EYE_HEIGHT = 0; // msg52 reports SW.position = the camera/eye (verified: chest hits land at y-0.7)
+
 
 // ---------- party lobby configuration ----------
 // Client option lists (verified vs raw/bundles/VM9.deob.txt):
@@ -882,6 +1048,10 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
     tick() {
       if (this.closed || !this.sockets.size) return;
       this.tickCount++;
+      // DEBUG (modeldbg): full per-tick visibility snapshot, only with GP_MODELDBG=1.
+      if (process.env.GP_MODELDBG) {
+        log('modeldbg', `tick#${this.tickCount} ` + this.players.map((p) => `p${p.id}:${p.alive ? 'A' : 'D'}${p.spawned ? 'S' : 's'}hp${p.hp}`).join(' '));
+      }
       const now = Date.now();
       const regenDelay = 3500 / SIM_SPEED;
       const regenInterval = 100 / SIM_SPEED;
@@ -932,6 +1102,16 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
       if ((p.inputVal & 0x100) || (p.inputVal & 0x20)) anim |= 0x100; // Crouch (C) or Slide (Shift) -> W91ldgW19d (crouchIdle / crouchWalk)
       if (p.inputVal & 0x10) anim &= ~0x20;  // Jump (Space) -> airborne (!vQ5Ra371n0) -> jumpAnim
       if (!p.alive) anim = 0x60; // 0x40 fade + 0x20 idle -> corpse fades out
+      // DEBUG (modeldbg): log alive/spawned/death-bit transitions only (per-tick
+      // here would spam 10x/s). Marks the corpse window the client turns into
+      // model fade + hide, and the respawn edge that must undo it.
+      {
+        const _dbgKey = (p.alive ? 'A' : 'D') + (p.spawned ? 'S' : 's') + ((anim & 0x40) ? 'd1' : 'd0');
+        if (p._modelDbgKey !== _dbgKey) {
+          log('modeldbg', `p${p.id} ${p._modelDbgKey || 'init'} -> ${_dbgKey} anim=0x${anim.toString(16)} hp=${p.hp} @(${x.toFixed(1)},${y.toFixed(1)},${z.toFixed(1)})`);
+          p._modelDbgKey = _dbgKey;
+        }
+      }
       return encode('K11Co2hvi1l', {
         tdkZouYda: p.id,
         JoHdvmpcMvL: x, uBHZYKAHa: y, yxEKoSFAg: z,
@@ -1169,9 +1349,10 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
     },
     onKill(shooter, victim, isHead) {
       victim.alive = false;
-      // match.mjs parity: spawned stays true — the corpse (anim 0x60, hp 0)
-      // keeps broadcasting every tick so the client's entity/model state
-      // survives until the respawn.
+      // spawned stays true through death; the corpse (anim 0x60, hp 0) is
+      // broadcast CORPSE_TICKS ticks and then cut off entirely (real parity)
+      // until respawn — see tick(). No msg7: the capture shows no despawn
+      // on death.
       victim.deaths++;
       victim.hp = 0;
       shooter.kills++;
@@ -1184,10 +1365,10 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
         }
       }
       victim.damageBy.clear();
-      // 20 death -> victim only (id = victim.id; h = shooter hp).
+      // 20 death -> victim only (id = shooter.id; h = shooter hp).
       // 25 killfeed + 24 scoreboard -> all.
       if (victim.srv) {
-        victim.srv.send([encode('gB4Cncy3f4', { id: victim.id, h: shooter.hp })]);
+        victim.srv.send([encode('gB4Cncy3f4', { id: shooter.id, h: shooter.hp })]);
         victim.srv.scheduleRespawn(); // real: respawn happens via the client's post-death class re-pick
       }
       this.broadcast([encode('Y6805DB31Br', {
@@ -1204,6 +1385,10 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
       // Sync the header dedup so the scoreTick doesn't re-send it.
       this._lastHeader = this.headerKey();
       log('combat', `KILL ${shooter.id} -> ${victim.id}${isHead ? ' HEAD' : ''}`);
+      // DEBUG (modeldbg): death edge — what the victim's model state becomes and
+      // which side each visibility message goes to. Corpse (anim 0x60, hp 0)
+      // starts broadcasting on the next tick; watch _corpseTicks at respawn.
+      log('modeldbg', `KILL flow: victim=${victim.id} alive=false hp=0 spawned=${victim.spawned} corpse-anim=0x60 | sent: 20->victim, 25+24->all, 23->killer | respawnTimer=${victim.srv ? 'armed(8s fallback)' : 'NO-SRV!'}`);
       this.checkScoreLimit();
     },
     // Winning-score end (GP_SCORE_LIMIT, 0 = off): FFA ends when any player
@@ -1221,17 +1406,25 @@ export function makeAlloc(roster, { mapIndex = MAP_INDEX, modeIndex = MODE_INDEX
       // rotating spawn to avoid spawn-camping (mirrors match.mjs:288)
       const spawns = this.spawns || spawnsForMap(SAFE_MAP);
       const sp = spawns[(this.tickCount + p.id + 1) % spawns.length];
+      const _wasAlive = p.alive; // DEBUG: respawn edge snapshot
       p.x = sp.x; p.y = sp.y; p.z = sp.z;
       p.reported = null; p.reportTick = 0; p.reportedAt = 0;
-      // spawned stays true through death (match.mjs parity): there is no
-      // broadcast gap between respawn() and the client's ack — living states
-      // resume on the very next tick. Only the initial join gates on the ack
-      // (msg16 -> onStateAck sets spawned for a never-spawned player).
+      // spawned stays true through death. Living states resume on the very
+      // next tick (the 22 already went out synchronously with the respawn, so
+      // observers see 22-then-living like the capture); the 17+29 spawn
+      // trigger still needs the victim's msg16 ack (msg16 -> onStateAck).
+      // _corpseTicks/_cutoffLogged reset so the next death gets a fresh
+      // corpse window. Only the initial join gates spawned on the ack.
       p.hp = 100; p.alive = true; p.despawnSent = false;
       p.lastDamagedAt = 0; p.lastRegenAt = 0;
       p.ammo = WEAPON_AMMO[p.weaponType] || 40;
       p.damageBy.clear();
       p.yawByte = sp.yaw; p.spawnYaw = sp.yaw; p.aimByte = sp.pitch || 63;
+      // DEBUG (modeldbg): deadTicks = ticks spent dead (corpse states were
+      // broadcast for the first CORPSE_TICKS of them, then cut off).
+      log('modeldbg', `RESPAWN p${p.id} alive ${_wasAlive}->true hp=100 spawned=${p.spawned}(kept) deadTicks=${p._corpseTicks || 0} @(${p.x.toFixed(1)},${p.y.toFixed(1)},${p.z.toFixed(1)}) yaw=${p.spawnYaw}`);
+      p._corpseTicks = 0;
+      p._cutoffLogged = false;
     },
   };
 }
@@ -1273,6 +1466,9 @@ export class GameSocket {
       // model/nametag client-side); stop broadcasting their state so no ghost respawns.
       this.me.spawned = false;
       this.me.alive = false;
+      // DEBUG (modeldbg): msg7 is the ONLY path that removes a remote model. It
+      // fires here on socket close — never on death (see onKill: no msg7).
+      log('modeldbg', `p${this.me.id} socket-close: spawned=false alive=false, broadcast msg7 despawn->survivors (model+nametag removed)`);
       this.alloc.broadcast([encode('N27s83WCNi', { tdkZouYda: this.me.id })], this);
       if (!this.alloc.sockets.size) this.alloc.stop(); // last one out -> stop loops
     });
@@ -1433,6 +1629,10 @@ export class GameSocket {
       }));
     }
     for (const p of this.alloc.players) parts.push(encode('k1Qu903595', { id: p.id, type: p.weaponType || 0 }));
+    for (const p of this.alloc.players) {
+      if (!p.spawned) continue;
+      parts.push(this.alloc.stateMessage(p));
+    }
     parts.push(encode('zSf6vw9ka', { nwQWcPQjr: this.seed }));                     // 12 seed
     parts.push(encode('COCjGf0Sf', { string: JSON.stringify([0.3, 0.158, 0.3, 0.3]) }));
     parts.push(encode('Ko38N6873G6', { cKRwdjkqGai: 2 }));                         // 4 clock
@@ -1450,13 +1650,10 @@ export class GameSocket {
   }
   respawnPlayer() {
     if (this.closed) return;
-    // 7 despawn: remove the corpse entity in every OTHER window before the
-    // respawn batch, so the next msg2 creates a FRESH entity (real capture:
-    // msg7 immediately precedes every respawn batch). Field MUST be tdkZouYda
-    // (schema) — a wrong name encodes id=0 and despawns player 0's entity.
-    this.alloc.broadcast([encode('N27s83WCNi', { tdkZouYda: this.me.id })], this);
     this.alloc.respawn(this.me);
     this.spawnPending = true;
+    // DEBUG (modeldbg): 8s-fallback path — victim never re-picked a class.
+    log('modeldbg', `p${this.me.id} fallback-respawn: sent 22+18->victim, broadcast 22->others, spawnPending=true (awaiting msg16 ack for 17+29)`);
     this.send([
       encode('k1Qu903595', { id: this.me.id, type: this.me.weaponType }),          // 22
       this.fullState(),                                                            // 18
@@ -1472,6 +1669,7 @@ export class GameSocket {
     if (this.phase !== 'playing') return;
     const type = Math.max(0, Math.min(3, fields.eXABYtRfN || 0));
     if (this.me.alive && this.me.spawned && type === this.me.weaponType) {
+      log('modeldbg', `p${this.me.id} class-pick same-type while alive: 18 only, no 22 (model untouched)`);
       this.send([this.fullState()]); // real: 18 only, no 22 (session-0 same-type pick)
       return;
     }
@@ -1481,14 +1679,15 @@ export class GameSocket {
     this.me.ammo = WEAPON_AMMO[this.me.weaponType] || 40;
     if (!this.me.alive) {
       this.cancelRespawn();
-      // 7 despawn before the respawn batch (see respawnPlayer note).
-      this.alloc.broadcast([encode('N27s83WCNi', { tdkZouYda: this.me.id })], this);
       this.alloc.respawn(this.me);
     }
     if (needsSpawn) {
       this.spawnPending = true; // Trigger 17+29 spawn sequence when joining or spawning from death
     }
     const send22 = changed || needsSpawn; // Initial spawn & respawns always send 22; alive picks send 22 if class changed
+    // DEBUG (modeldbg): 22 = weapon/model render on every client. needsSpawn is
+    // true for initial join AND post-death re-pick; both must send 22.
+    log('modeldbg', `p${this.me.id} class-pick type=${type} needsSpawn=${needsSpawn} changed=${changed} send22=${send22} spawnPending=${this.spawnPending} alive=${this.me.alive} spawned=${this.me.spawned}`);
     this.send([
       ...(send22 ? [encode('k1Qu903595', { id: this.me.id, type: this.me.weaponType })] : []),
       this.fullState(),                                                            // 18
@@ -1501,21 +1700,34 @@ export class GameSocket {
     ], this);
   }
   onStateAck() {
-    if (!this.spawnPending) return;
+    // DEBUG: stray acks (after resync-18s) are normal — only log with GP_MODELDBG.
+    if (!this.spawnPending) {
+      if (process.env.GP_MODELDBG) log('modeldbg', `p${this.me.id} stray msg16 ack (no spawn pending) -> ignored`);
+      return;
+    }
     this.spawnPending = false;
     this.me.spawned = true;
     this.me.alive = true;
     this.me.hp = 100;
     this.alloc.startSecondTick(); // match timer + scoreboard loop
-    this.send([
+    const livingParts = [
       encode('fm80f18li7', { x: 63, y: this.me.spawnYaw }),                          // 17 yaw/pitch bytes (real: x=63, y=spawn yaw; NOT the live input yaw)
       encode('GDzF2709XA3', {}),                                                    // 29 spawn trigger
       this.alloc.stateMessage(this.me),                                             // 2 immediate living state (hp: 100, anim: 0x20)
-    ]);
+    ];
+    for (const opp of this.alloc.players) {
+      if (opp !== this.me && opp.alive && opp.spawned) {
+        livingParts.push(this.alloc.stateMessage(opp));
+      }
+    }
+    this.send(livingParts);
     this.alloc.broadcast([
       encode('k1Qu903595', { id: this.me.id, type: this.me.weaponType || 0 }),
       this.alloc.stateMessage(this.me),
     ], this);
+    // DEBUG (modeldbg): spawn trigger done. If the victim has no 17+29 in the
+    // client capture, the msg16 ack never arrived (check spawnPending above).
+    log('modeldbg', `p${this.me.id} msg16 ack accepted: spawned=true alive=true hp=100 | sent 17+29+living2->victim, broadcast 22+2->others`);
   }
   fullState() {
     const p = this.me;

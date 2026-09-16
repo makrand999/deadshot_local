@@ -1,4 +1,4 @@
-package com.deadshot.offline;
+package com.deadshot.server;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -13,9 +13,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class AssetHelper {
-    private static final String TAG = "AssetHelper";
-    private static final String PREF_NAME = "DeadshotAssetPrefs";
-    private static final String KEY_LAST_UPDATE = "last_apk_update_time";
+    private static final String TAG = "AssetHelperServer";
+    private static final String PREF_NAME = "DeadshotServerAssetPrefs";
+    private static final String KEY_LAST_UPDATE = "last_server_apk_update_time";
 
     public interface ProgressListener {
         void onProgress(String status);
@@ -39,12 +39,12 @@ public class AssetHelper {
 
         if (lastInstalledTime == currentUpdateTime && serverFile.exists() && clientIndex.exists()) {
             Log.i(TAG, "Assets are up to date. Skipping extraction.");
-            if (listener != null) listener.onProgress("Ready");
+            if (listener != null) listener.onProgress("Assets up to date");
             return true;
         }
 
         Log.i(TAG, "Extracting assets from APK to " + targetDir.getAbsolutePath() + "...");
-        if (listener != null) listener.onProgress("Extracting assets...");
+        if (listener != null) listener.onProgress("Extracting server assets...");
 
         AssetManager assetManager = context.getAssets();
         try {
@@ -54,7 +54,7 @@ public class AssetHelper {
 
             prefs.edit().putLong(KEY_LAST_UPDATE, currentUpdateTime).apply();
             Log.i(TAG, "Asset extraction completed successfully.");
-            if (listener != null) listener.onProgress("Assets ready");
+            if (listener != null) listener.onProgress("Server assets ready");
             return true;
         } catch (IOException e) {
             Log.e(TAG, "Error extracting assets: " + e.getMessage(), e);
@@ -66,7 +66,6 @@ public class AssetHelper {
     private static void copyAssetFolder(AssetManager assetManager, String fromAssetPath, File toDir, ProgressListener listener) throws IOException {
         String[] files = assetManager.list(fromAssetPath);
         if (files == null || files.length == 0) {
-            // It's a single file
             copyAssetFile(assetManager, fromAssetPath, toDir);
         } else {
             if (!toDir.exists() && !toDir.mkdirs()) {
