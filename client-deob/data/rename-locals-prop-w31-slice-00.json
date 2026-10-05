@@ -1,0 +1,223 @@
+{
+ "slice": "00",
+ "stats": {
+  "total": 30,
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic method name; DECL @91779 Layers.prototype toggle alongside set/enable/enableAll, USES refCount=0 (API method, no internal refs).",
+   "name": "toggle",
+   "selector": "toggle@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic param name; DECL @366799 getToneMappingFunction(functionName,toneMapping), USES toneMapping branch selection (refCount=2; cf. parameters.toneMapping @379807).",
+   "name": "toneMapping",
+   "selector": "toneMapping@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @872594 _sceneToCubeUV saves renderer toneMapping, USES restore qIySEZgti.toneMapping=toneMapping @873627.",
+   "name": "toneMapping",
+   "selector": "toneMapping@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @366816 toneMappingName in getToneMappingFunction, USES refCount=7 within DECL window (type-to-GLSL switch).",
+   "name": "toneMappingName",
+   "selector": "toneMappingName@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic shader-chunk name; DECL @278514 var tonemapping_fragment GLSL string, USES ShaderChunk + #include <tonemapping_fragment> @281419.",
+   "name": "tonemapping_fragment",
+   "selector": "tonemapping_fragment@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic shader-chunk name; DECL @278632 var tonemapping_pars_fragment GLSL string, USES ShaderChunk map @316952 + define @379913.",
+   "name": "tonemapping_pars_fragment",
+   "selector": "tonemapping_pars_fragment@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @471915 var top2 in setProjectionFromUnion, USES makePerspective(left2,right2,top2,...) refCount=1 in window.",
+   "name": "top2",
+   "selector": "top2@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @471273 var topFov in setProjectionFromUnion, USES top2=topFov*far/far2*near2 @471920.",
+   "name": "topFov",
+   "selector": "topFov@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @41165 var trace in setFromRotationMatrix, USES trace branch refCount=2 in window (console.trace @161630 unrelated).",
+   "name": "trace",
+   "selector": "trace@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic loop var; DECL @661427 var track=clip.tracks[i] in subclip, USES track.times/track.values filtering (refCount=10).",
+   "name": "track",
+   "selector": "track@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic param name; DECL @662762 tracks.find(function(track)...) in makeClipAdditive, USES track.name/ValueTypeName compare (refCount=2).",
+   "name": "track",
+   "selector": "track@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic param name; DECL @669944 KeyframeTrack.toJSON(track), USES track.name/times/values/getInterpolation (refCount=8).",
+   "name": "track",
+   "selector": "track@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @675281 var track in KeyframeTrack.clone, USES new TypedKeyframeTrack + createInterpolant copy (refCount=2).",
+   "name": "track",
+   "selector": "track@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic loop var; DECL @683776 var track in AnimationClip.resetDuration, USES duration=max(track.times[last]) (refCount=2).",
+   "name": "track",
+   "selector": "track@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic loop var; DECL @825116 var track in AnimationMixer._bindAction, USES track.name binding lookups (refCount=3).",
+   "name": "track",
+   "selector": "track@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic param name; DECL @681960 addNonemptyTrack(...,trackName,...), USES new trackType(trackName,times,values).",
+   "name": "trackName",
+   "selector": "trackName@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic param name; DECL @802182 parseTrackName(trackName), USES _trackRe.exec(trackName) + error strings.",
+   "name": "trackName",
+   "selector": "trackName@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @825132 trackName=track.name, USES bindingsByName[trackName] lookups.",
+   "name": "trackName",
+   "selector": "trackName@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic param name; DECL @829857 _addInactiveBinding(binding,rootUuid,trackName), USES bindingByName[trackName]=binding.",
+   "name": "trackName",
+   "selector": "trackName@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @830318 trackName=propBinding.path, USES delete bindingByName[trackName].",
+   "name": "trackName",
+   "selector": "trackName@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic loop var; DECL @835572 for(var trackName in bindingByName), USES bindingByName[trackName].",
+   "name": "trackName",
+   "selector": "trackName@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @669955 trackType=track.constructor, USES trackType.toJSON(track) dispatch.",
+   "name": "trackType",
+   "selector": "trackType@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @679067 trackType=getTrackTypeForValueTypeName(json.type), USES trackType.parse / new trackType(...).",
+   "name": "trackType",
+   "selector": "trackType@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic param name; DECL @681950 addNonemptyTrack(trackType,...), USES new trackType(trackName,times,values).",
+   "name": "trackType",
+   "selector": "trackType@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @661375 subclip tracks array, USES tracks.push(track) + clip.tracks=tracks.",
+   "name": "tracks",
+   "selector": "tracks@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic param name; DECL @678137 AnimationClip(name,duration,tracks,blendMode), USES this.tracks=tracks.",
+   "name": "tracks",
+   "selector": "tracks@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @679466 parse() tracks=[], USES tracks.push(parseKeyframeTrack(...)).",
+   "name": "tracks",
+   "selector": "tracks@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @679774 toJSON() tracks=[], USES tracks.push(KeyframeTrack.toJSON(...)).",
+   "name": "tracks",
+   "selector": "tracks@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @680184 morph-target tracks=[], USES tracks.push(new NumberKeyframeTrack(...)).",
+   "name": "tracks",
+   "selector": "tracks@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Idiomatic var name; DECL @682217 parseAnimation tracks=[], USES addNonemptyTrack(...,tracks) + new AnimationClip(clipName,duration,tracks).",
+   "name": "tracks",
+   "selector": "tracks@u0020#5"
+  }
+ ]
+}

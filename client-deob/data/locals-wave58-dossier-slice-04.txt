@@ -1,0 +1,15 @@
+# DOSSIER slice-04 (wave 58, 1 bindings, 1 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/1] th@u0360#0 | kind=var depth=3 refCount=19 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @95 (verified):
+for(var tf=0x0;tf<te['length'];tf++){if(typeof tc[te[tf]]=='string'){var tg=tc[te[tf]];for(var th=0x0;th<tg["length"];th++){if(!isNaN(tg['charAt'](th))){tg=tg['substr'](th);break;}}var ti=tg["split"](',');tg=ti[ti['length']-0x1];for(var th=tg["length"]-0x1;th>=0x0;th--){if(!isNaN(tg['charAt'](th))){tg=tg['substr'](0x0,th+0x1),ti[ti["length"]-0x1]=tg;break;}}for(var th=0x0;th<ti["length"];th++){ti[th]=Number(ti[th]);}tc[te[tf]]=tb(ti[0x0],ti[0x1],ti[0x2],ti[0x3]);}}
+USES: refCount=19, 15 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @95 (verified), servedRefCount=19:
+for(var tf=0x0;tf<te['length'];tf++){if(typeof tc[te[tf]]=='string'){var tg=tc[te[tf]];for(var th=0x0;th<tg[ai1(0x3a2)];th++){if(!isNaN(tg['charAt'](th))){tg=tg['substr'](th);break;}}var ti=tg[ai1(0xb1e)](',');tg=ti[ti['length']-0x1];for(var th=tg[ai1(0x3a2)]-0x1;th>=0x0;th--){if(!isNaN(tg['charAt'](th))){tg=tg['substr'](0x0,th+0x1),ti[ti[ai1(0x3a2)]-0x1]=tg;break;}}for(var th=0x0;th<ti[ai1(0x3a2)];th++){ti[th]=Number(ti[th]);}tc[te[tf]]=tb(ti[0x0],ti[0x1],ti[0x2],ti[0x3]);}}
+SERVED USES: 15 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-04: propose EVERY binding above.

@@ -1,0 +1,222 @@
+{
+  "proposals": [
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @200996 for(var _iy=0;_iy<gridY;_iy++) PlaneGeometry index loop; USES gridX1*_iy corner math, sibling iy owns vertex loop",
+      "name": "indexRow",
+      "selector": "_iy@u0020#1"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @629156 for(var _iy=0;_iy<heightSegments;_iy++) SphereGeometry index loop; USES grid[_iy][_ix] row lookup",
+      "name": "sphereGridRow",
+      "selector": "_iy@u0020#2"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @148698 for(var _j=0;_j<morphNormalsLength;_j++) morph loop; USES morphNormals[_j].vertexNormals push",
+      "name": "morphNormalIndex",
+      "selector": "_j@u0020#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "DECL @173186 for(var _j=_start2,_jl=_end2;_j<_jl;_j+=3) raycast group loop; USES _a2=_j,_b2=_j+1,_c2=_j+2 tri cursor",
+      "name": "triCursor",
+      "selector": "_j@u0020#1"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @448655 for(var _j=0;_j<mipmaps.length;_j++) cube upload; USES _mipmap=mipmaps[_j] per-level texImage2D",
+      "name": "mipmapIndex",
+      "selector": "_j@u0020#2"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @567837 for(var _j=0,_jl=faceVertexColors.length;...) merge; USES color=faceVertexColors[_j] clone push",
+      "name": "vertColorIndex",
+      "selector": "_j@u0020#3"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "DECL @586461 for(var _j=0;_j<2*(cols-_i)-1;_j++) subdivideFace; USES k=floor(_j/2),_j%2 winding pick",
+      "name": "subdivStep",
+      "selector": "_j@u0020#4"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @607360 _j=_il-1 init with wrap if(_j===_il)_j=0; USES getBevelVec(hole[_i2],hole[_j],hole[_k]) prev-neighbor",
+      "name": "prevIndex",
+      "selector": "_j@u0020#5"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @616567 for(var _j=0;_j<points.length-1;_j++) LatheGeometry indices; USES base=_j+_i*points.length",
+      "name": "pointIndex",
+      "selector": "_j@u0020#6"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @619901 for(var _j=0;_j<slices;_j++) ParametricGeometry indices; USES a=_i*sliceCount+_j quad corners",
+      "name": "sliceIndex",
+      "selector": "_j@u0020#7"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @623075 for(var _j=0;_j<phiSegments;_j++) RingGeometry indices; USES thetaSegmentLevel=_j*(thetaSegments+1)",
+      "name": "phiIndex",
+      "selector": "_j@u0020#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @633851 for(var _j=1;_j<=radialSegments;_j++) TorusGeometry indices; USES (tubularSegments+1)*_j corner math",
+      "name": "radialIndex",
+      "selector": "_j@u0020#9"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @636437 for(var _j=1;_j<=tubularSegments;_j++) TubeGeometry indices; USES (radialSegments+1)*_j corner math",
+      "name": "tubularIndex",
+      "selector": "_j@u0020#10"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @642363 for(var _j=0;_j<3;_j++) EdgesGeometry tri loop; USES indices.getX(_i+_j),getX(_i+(_j+1)%3) corners",
+      "name": "cornerIndex",
+      "selector": "_j@u0020#11"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @674608 for(var _j=0;_j!==stride;++_j) KeyframeTrack compact; USES values[writeOffset+_j]=values[readOff+_j]",
+      "name": "componentIndex",
+      "selector": "_j@u0020#12"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @759378 for(var _j=0,_jl=data.shapes.length;...) + USES shapes[data.shapes[_j]]: loop index over shapes",
+      "name": "_j",
+      "selector": "_j@u0020#13"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @811707 for(var _j=0,_m=nBindings;_j!==_m;++_j) + USES bindings[_j]/paths[_j]: loop index over bindings",
+      "name": "_j",
+      "selector": "_j@u0020#14"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @820975 for(var _j=0,_m=_interpolants.length;...) + USES _interpolants[_j]: loop index over interpolants",
+      "name": "_j",
+      "selector": "_j@u0020#15"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @448964 for(var _j2=0;_j2<mipmaps.length;_j2++) + USES mipmaps[_j2]: mipmap loop index",
+      "name": "_j2",
+      "selector": "_j2@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @568228 for(var _j2=0,_jl2=faceVertexUvs2.length;...) + USES faceVertexUvs2[_j2]: loop index over faceVertexUvs",
+      "name": "_j2",
+      "selector": "_j2@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "medium",
+      "evidence": "DECL @610683 var _j2=i (+_k2=i-1) + USES layeroffset+_j2+slen1: contour-index alias temp in sidewalls()",
+      "name": "_j2",
+      "selector": "_j2@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @617112 for(var _i2=0,_j2=0;...;_j2+=3) + USES normals[_j2+0..2]: strided normals-array offset",
+      "name": "_j2",
+      "selector": "_j2@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @642959 for(var _j2=0;_j2<3;_j2++) + USES index1=3*_i2+_j2: triangle-corner loop index",
+      "name": "_j2",
+      "selector": "_j2@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @674812 for(..._j2=0;_j2!==stride;++_j2) + USES values[_writeOffset+_j2]: stride-component loop index",
+      "name": "_j2",
+      "selector": "_j2@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @814229 for(var _j2=0,_m2=nBindings;_j2!==_m2;++_j2): loop index over bindings in remove() path",
+      "name": "_j2",
+      "selector": "_j2@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @574880 for(var _j3=0,_jl3=...AUbXpMajF.length;...) + USES AUbXpMajF[_j3].clone(): morph-vertices copy-loop index",
+      "name": "_j3",
+      "selector": "_j3@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @575089 for(var _j4=0,_jl4=...normals.length;...) + USES normals[_j4].clone(): morph-normals copy-loop index",
+      "name": "_j4",
+      "selector": "_j4@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @575457 for(var _j5=0,_jl5=...vertexNormals.length;...) + USES vertexNormals[_j5]: morph vertexNormals copy-loop index",
+      "name": "_j5",
+      "selector": "_j5@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @575874 for(var _j6=0,_jl6=...faceNormals.length;...) + USES faceNormals[_j6]: morph faceNormals copy-loop index",
+      "name": "_j6",
+      "selector": "_j6@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @173197 for(var _j=_start2,_jl=_end2;_j<_jl;_j+=3): cached loop-limit temp for indexed raycast walk",
+      "name": "_jl",
+      "selector": "_jl@u0020#0"
+    }
+  ],
+  "stats": {
+    "total": 30,
+    "rename": 15,
+    "keep": 15,
+    "high": 27,
+    "medium": 3,
+    "low": 0
+  }
+}

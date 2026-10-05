@@ -1,0 +1,223 @@
+{
+ "slice": "03",
+ "stats": {
+  "total": 30,
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @679764 toJSON(clip) param, USES clip.tracks/clip.name/clip.uuid reads",
+   "name": "clip",
+   "selector": "clip@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @683542 var clip=new AnimationClip(...), USES 1 return clip",
+   "name": "clip",
+   "selector": "clip@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @691383 var clip=AnimationClip.parse(json[i]), USES 1 animations.push(clip)",
+   "name": "clip",
+   "selector": "clip@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @761009 parseAnimations var clip, USES 2 animation-map stores",
+   "name": "clip",
+   "selector": "clip@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @815688 AnimationAction(mixer,clip,...) param, USES 3 clip.blendMode/clip.tracks reads",
+   "name": "clip",
+   "selector": "clip@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @832393 clipAction(clip,...) param, USES 4 findByName(root,clip)/clipObject resolve",
+   "name": "clip",
+   "selector": "clip@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @833346 existingAction(clip,...) param, USES 4 clipObject/clipUuid resolve",
+   "name": "clip",
+   "selector": "clip@u0020#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @834521 uncacheClip(clip) param, USES 1 clip.uuid read",
+   "name": "clip",
+   "selector": "clip@u0020#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clip' already readable; DECL @835746 uncacheAction(clip,...) param, USES 1 existingAction(clip,...) forward",
+   "name": "clip",
+   "selector": "clip@u0020#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clipAction' already readable; DECL @832382 clipAction:function method name, USES 0 (property key)",
+   "name": "clipAction",
+   "selector": "clipAction@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clipArray' already readable; DECL @680799 findByName(objectOrClipArray...) var, USES 4 array scans",
+   "name": "clipArray",
+   "selector": "clipArray@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clipIntersection' already readable; DECL @342329 clipping var, USES 1 numIntersection set + material prop mirrors",
+   "name": "clipIntersection",
+   "selector": "clipIntersection@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clipName' already readable; DECL @682231 parseAnimation var clipName, USES 1 new AnimationClip(clipName,...)",
+   "name": "clipName",
+   "selector": "clipName@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clipObject' already readable; DECL @832479 var clipObject=typeof clip... resolve, USES 8 clipUuid/blendMode/new Action",
+   "name": "clipObject",
+   "selector": "clipObject@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "token 'clipObject' already readable; DECL @833418 existingAction var clipObject resolve, USES 2 clipUuid/actionsForClip lookup",
+   "name": "clipObject",
+   "selector": "clipObject@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @342372 (WebGLClipping setState scope); USES show material.clipShadows reads (@417260,@417937); token already idiomatic",
+   "name": "clipShadows",
+   "selector": "clipShadows@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @820575 (AnimationAction._update); refCount=2 uses inside DECL window; token already idiomatic",
+   "name": "clipTime",
+   "selector": "clipTime@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @679784 (AnimationClip.parse/toJSON); refCount=2 uses inside DECL window; token already idiomatic",
+   "name": "clipTracks",
+   "selector": "clipTracks@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @825908 (_activateAction: clipUuid=action._clip.uuid); USES _actionsByClip[clipUuid] lookups (@827535 etc); token already idiomatic",
+   "name": "clipUuid",
+   "selector": "clipUuid@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "param DECL @827423 (_addInactiveAction(action,clipUuid,rootUuid)); USES actionsByClip[clipUuid] key (@827535); token already idiomatic",
+   "name": "clipUuid",
+   "selector": "clipUuid@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @828207 (_removeInactiveAction: clipUuid=action._clip.uuid); USES _actionsByClip[clipUuid] (@828297); token already idiomatic",
+   "name": "clipUuid",
+   "selector": "clipUuid@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @832558 (clipAction: clipUuid=clipObject.uuid); USES _actionsByClip[clipUuid] (@832645) and _addInactiveAction pass (@833269); token already idiomatic",
+   "name": "clipUuid",
+   "selector": "clipUuid@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @833493 (existingAction: clipUuid=clipObject.uuid); USES _actionsByClip[clipUuid] (@833569); token already idiomatic",
+   "name": "clipUuid",
+   "selector": "clipUuid@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834553 (uncacheClip: clipUuid=clip.uuid); USES actionsByClip[clipUuid] (@834635) and delete (@835129); token already idiomatic",
+   "name": "clipUuid",
+   "selector": "clipUuid@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835246 (uncacheRoot: for(var clipUuid in actionsByClip)); USES actionsByClip[clipUuid].actionByRoot (@835304); token already idiomatic",
+   "name": "clipUuid",
+   "selector": "clipUuid@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "param DECL @384438 (WebGLPrograms); USES clipping.numPlanes/numIntersection (@391174,@391213); token already idiomatic",
+   "name": "clipping",
+   "selector": "clipping@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @490728 (renderer scope); USES clipping=new WebGLClipping (@492083), setState/uniform/numPlanes reads; token already idiomatic",
+   "name": "clipping",
+   "selector": "clipping@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @211380 (shader chunk var); USES #include <clipping_planes_fragment> in shader templates (@282604 etc); token already idiomatic",
+   "name": "clipping_planes_fragment",
+   "selector": "clipping_planes_fragment@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @212046 (shader chunk var); USES #include <clipping_planes_pars_fragment> in shader templates (@282513 etc); token already idiomatic",
+   "name": "clipping_planes_pars_fragment",
+   "selector": "clipping_planes_pars_fragment@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @212204 (shader chunk var); USES #include <clipping_planes_pars_vertex> in shader templates (@283345 etc); token already idiomatic",
+   "name": "clipping_planes_pars_vertex",
+   "selector": "clipping_planes_pars_vertex@u0020#0"
+  }
+ ]
+}

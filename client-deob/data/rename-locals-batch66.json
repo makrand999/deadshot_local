@@ -1,0 +1,4277 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 66,
+  "date": "2026-09-29",
+  "merged": 176,
+  "heldLow": 1,
+  "heldInvalid": 1,
+  "kept": 2,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Inner index over mobile-hide id list, break by length-add.. SERVED: identical (snippet-only twin).",
+   "name": "hideIdx",
+   "selector": "th@u2263#0",
+   "slice": "slice-00",
+   "disposition": "held-invalid",
+   "reason": "cross-unit top-level redecl: th already renamed file-wide by th@u2470#0->variantIdx (dry-run backstop; LD5 precedent)"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: getIndex result; count and getX build triangle list.. SERVED: identical (snippet-only twin).",
+   "name": "indexAttr",
+   "selector": "a4b@u0020#48",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 48,
+    "refCount": 12,
+    "snippet": "rn a4a['targets']!==undefined?a41(a49,a4a[\"targets\"],a4b):a49;});}function a48(a49,a4a){var akr=aiP,a4b=a49['getIndex']();if(a4b===null){var a4c=[],a4d=a49[\"get"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 48,
+    "refCount": 12,
+    "snippet": "rn a4a['targets']!==undefined?a41(a49,a4a[akq(0x92)],a4b):a49;});}function a48(a49,a4a){var akr=aiP,a4b=a49['getIndex']();if(a4b===null){var a4c=[],a4d=a49[akr("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this.extensions in loadGeometries for draco decode lookup.. SERVED: identical (snippet-only twin).",
+   "name": "gltfExtensions",
+   "selector": "a4b@u0020#49",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 49,
+    "refCount": 1,
+    "snippet": "['setIndex'](a4g),a4h;}return a45[\"prototype\"][\"loadGeometries\"]=function(a49){var aks=aiP,a4a=this,a4b=this['extensions'],a4c=this[\"primitiveCache\"];function a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 49,
+    "refCount": 1,
+    "snippet": "urn a4h['setIndex'](a4g),a4h;}return a45[aiP(0x262)][aiP(0x36d)]=function(a49){var aks=aiP,a4a=this,a4b=this['extensions'],a4c=this[aks(0xfe0)];function a4d(a4m"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this.json in loadMesh; read once for meshes array.. SERVED: identical (snippet-only twin).",
+   "name": "gltfJson",
+   "selector": "a4b@u0020#50",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 50,
+    "refCount": 1,
+    "snippet": "a4k);}}return Promise[\"all\"](a4e);},a45['prototype']['loadMesh']=function(a49){var aku=aiP,a4a=this,a4b=this['json'],a4c=this['extensions'],a4d=a4b['meshes'][a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 50,
+    "refCount": 1,
+    "snippet": "}}return Promise[aks(0x235)](a4e);},a45['prototype']['loadMesh']=function(a49){var aku=aiP,a4a=this,a4b=this['json'],a4c=this['extensions'],a4d=a4b['meshes'][a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json cameras entry; type, name, params read.. SERVED: identical (snippet-only twin).",
+   "name": "cameraDef",
+   "selector": "a4b@u0020#51",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 51,
+    "refCount": 7,
+    "snippet": "{a4t['add'](a4m[a4n]);}return a4t;});},a45['prototype']['loadCamera']=function(a49){var akw=aiP,a4a,a4b=this[\"json\"]['cameras'][a49],a4c=a4b[a4b['type']];if(!a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 51,
+    "refCount": 7,
+    "snippet": "{a4t['add'](a4m[a4n]);}return a4t;});},a45['prototype']['loadCamera']=function(a49){var akw=aiP,a4a,a4b=this[akw(0x7c5)]['cameras'][a49],a4c=a4b[a4b['type']];if"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fresh skin object receiving joints plus bind matrices.. SERVED: identical (snippet-only twin).",
+   "name": "skinDef",
+   "selector": "a4b@u0020#52",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 52,
+    "refCount": 2,
+    "snippet": "olve'](a4a);},a45['prototype']['loadSkin']=function(a49){var akx=aiP,a4a=this[\"json\"][\"skins\"][a49],a4b={};a4b['joints']=a4a['joints'];var a4c=a4b;if(a4a[\"inver"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 52,
+    "refCount": 2,
+    "snippet": "a4a);},a45['prototype']['loadSkin']=function(a49){var akx=aiP,a4a=this[akx(0x7c5)][akx(0x674)][a49],a4b={};a4b['joints']=a4a['joints'];var a4c=a4b;if(a4a[akx(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json animations entry; channels, samplers, parameters read.. SERVED: identical (snippet-only twin).",
+   "name": "animDef",
+   "selector": "a4b@u0020#53",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 53,
+    "refCount": 9,
+    "snippet": "atrices']=a4d,a4c;});},a45['prototype'][\"loadAnimation\"]=function(a49){var aky=aiP,a4a=this['json'],a4b=a4a['animations'][a49],a4c=[],a4d=[],a4e=[],a4f=[],a4g=["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 53,
+    "refCount": 9,
+    "snippet": "BindMatrices']=a4d,a4c;});},a45['prototype'][aiP(0x709)]=function(a49){var aky=aiP,a4a=this['json'],a4b=a4a['animations'][a49],a4c=[],a4d=[],a4e=[],a4f=[],a4g=["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this.extensions in loadNode passed to extension copier.. SERVED: identical (snippet-only twin).",
+   "name": "gltfExtensions",
+   "selector": "a4b@u0020#54",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 54,
+    "refCount": 1,
+    "snippet": "\")](a4N,undefined,a4v);});},a45['prototype']['loadNode']=function(a49){var akB=aiP,a4a=this[\"json\"],a4b=this['extensions'],a4c=this,a4d=a4a['nodes'][a49],a4e=a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 54,
+    "refCount": 1,
+    "snippet": "a4N,undefined,a4v);});},a45['prototype']['loadNode']=function(a49){var akB=aiP,a4a=this[akB(0x7c5)],a4b=this['extensions'],a4c=this,a4d=a4a['nodes'][a49],a4e=a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Parent Object3D receiving added child node.. SERVED: identical (snippet-only twin).",
+   "name": "parentNode",
+   "selector": "a4b@u0020#55",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 55,
+    "refCount": 1,
+    "snippet": "\"associations\"]['set'](a4g,a4k),a4g;});},a45['prototype'][\"loadScene\"]=(function(){function a49(a4a,a4b,a4c,a4d){var akH=o,a4e=a4c[\"nodes\"][a4a];return a4d[\"get"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 55,
+    "refCount": 1,
+    "snippet": ",a4c[akG(0xb5d)]['set'](a4g,a4k),a4g;});},a45['prototype'][aiP(0x47b)]=(function(){function a49(a4a,a4b,a4c,a4d){var akH=o,a4e=a4c[akH(0xa6f)][a4a];return a4d[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Index into json scenes for loadScene.. SERVED: identical (snippet-only twin).",
+   "name": "sceneIndex",
+   "selector": "a4b@u0020#56",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u0020",
+    "index": 56,
+    "refCount": 1,
+    "snippet": "a4k=a4h[a4i];a4g['push'](a49(a4k,a4f,a4c,a4d));}}return Promise['all'](a4g);});}return function a4a(a4b){var akM=o,a4c=this[\"json\"],a4d=this[\"extensions\"],a4e=t"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 56,
+    "refCount": 1,
+    "snippet": "a4k=a4h[a4i];a4g['push'](a49(a4k,a4f,a4c,a4d));}}return Promise['all'](a4g);});}return function a4a(a4b){var akM=o,a4c=this[akM(0x7c5)],a4d=this[akM(0x53e)],a4e"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fourth load callback; invoked on failure, siblings match.. SERVED: identical (snippet-only twin).",
+   "name": "onError",
+   "selector": "a4c@u0020#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "(Object['create'](usvzFuAsEB['Loader'][\"prototype\"]),{'constructor':a3i,'load':function(a49,a4a,a4b,a4c){var aiQ=aiP,a4d=this,a4e;if(this['resourcePath']!=='')a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "](Object['create'](usvzFuAsEB['Loader'][aiP(0x262)]),{'constructor':a3i,'load':function(a49,a4a,a4b,a4c){var aiQ=aiP,a4d=this,a4e;if(this['resourcePath']!=='')a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fourth parse callback; error paths and parser pass-through.. SERVED: identical (snippet-only twin).",
+   "name": "onError",
+   "selector": "a4c@u0020#1",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "lbacks']['splice'](this['pluginCallbacks'][\"indexOf\"](a49),0x1),this;},'parse':function(a49,a4a,a4b,a4c){var aj2=aiP,a4d,a4e={},a4f={};if(typeof a49==='string')"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "backs']['splice'](this['pluginCallbacks'][aj1(0xfad)](a49),0x1),this;},'parse':function(a49,a4a,a4b,a4c){var aj2=aiP,a4d,a4e={},a4f={};if(typeof a49==='string')"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Nodes array length bounding light mark loop.. SERVED: identical (snippet-only twin).",
+   "name": "nodeCount",
+   "selector": "a4c@u0020#3",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "]=function(){var aj4=aiP,a49=this['parser'],a4a=this[\"parser\"]['json']['nodes']||[];for(var a4b=0x0,a4c=a4a[\"length\"];a4b<a4c;a4b++){var a4d=a4a[a4b];a4d['exten"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "unction(){var aj4=aiP,a49=this['parser'],a4a=this[aj4(0x1088)]['json']['nodes']||[];for(var a4b=0x0,a4c=a4a[aj4(0x3a2)];a4b<a4c;a4b++){var a4d=a4a[a4b];a4d['ext"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Cached light promise; get, return, resolve, store.. SERVED: identical (snippet-only twin).",
+   "name": "cachedLight",
+   "selector": "a4c@u0020#4",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 5,
+    "snippet": "\"]);}},a3n['prototype']['_loadLight']=function(a49){var aj5=aiP,a4a=this[\"parser\"],a4b=\"light:\"+a49,a4c=a4a[\"cache\"]['get'](a4b);if(a4c)return a4c;var a4d=a4a['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 5,
+    "snippet": "},a3n['prototype']['_loadLight']=function(a49){var aj5=aiP,a4a=this[aj5(0x1088)],a4b=aj5(0x807)+a49,a4c=a4a[aj5(0x9f0)]['get'](a4b);if(a4c)return a4c;var a4d=a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: nodes entry whose extensions yield light index.. SERVED: identical (snippet-only twin).",
+   "name": "nodeDef",
+   "selector": "a4c@u0020#5",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "pe\"][\"createNodeAttachment\"]=function(a49){var aj6=aiP,self=this,a4a=this['parser'],a4b=a4a['json'],a4c=a4b['nodes'][a49],a4d=a4c[\"extensions\"]&&a4c['extensions"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 2,
+    "snippet": ",a3n[aiP(0x262)][aiP(0xd40)]=function(a49){var aj6=aiP,self=this,a4a=this['parser'],a4b=a4a['json'],a4c=a4b['nodes'][a49],a4d=a4c[aj6(0x53e)]&&a4c['extensions']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Promise array for base-color texture assignment.. SERVED: identical (snippet-only twin).",
+   "name": "texturePromises",
+   "selector": "a4c@u0020#6",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "return usvzFuAsEB[\"KibzRdopc\"];},a3o['prototype']['extendParams']=function(a49,a4a,a4b){var aj9=aiP,a4c=[];a49['color']=new usvzFuAsEB['Color'](0x1,0x1,0x1),a49"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "return usvzFuAsEB[aj8(0x104b)];},a3o['prototype']['extendParams']=function(a49,a4a,a4b){var aj9=aiP,a4c=[];a49['color']=new usvzFuAsEB['Color'](0x1,0x1,0x1),a49"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json materials entry for clearcoat extension params.. SERVED: identical (snippet-only twin).",
+   "name": "materialDef",
+   "selector": "a4c@u0020#7",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 3,
+    "snippet": "erial'];},a3p['prototype']['extendMaterialParams']=function(a49,a4a){var ajb=aiP,a4b=this['parser'],a4c=a4b['json'][\"materials\"][a49];if(!a4c['extensions']||!a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 3,
+    "snippet": "erial'];},a3p['prototype']['extendMaterialParams']=function(a49,a4a){var ajb=aiP,a4b=this['parser'],a4c=a4b['json'][ajb(0xe3d)][a49];if(!a4c['extensions']||!a4c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json materials entry for transmission extension params.. SERVED: identical (snippet-only twin).",
+   "name": "materialDef",
+   "selector": "a4c@u0020#8",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "erial\"];},a3q['prototype']['extendMaterialParams']=function(a49,a4a){var aje=aiP,a4b=this['parser'],a4c=a4b['json']['materials'][a49];if(!a4c['extensions']||!a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "x108d)];},a3q['prototype']['extendMaterialParams']=function(a49,a4a){var aje=aiP,a4b=this['parser'],a4c=a4b['json']['materials'][a49];if(!a4c['extensions']||!a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json textures entry for BasisU extension lookup.. SERVED: identical (snippet-only twin).",
+   "name": "textureDef",
+   "selector": "a4c@u0020#9",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "ISU\"];}a3r['prototype'][\"loadTexture\"]=function(a49){var ajg=aiP,a4a=this['parser'],a4b=a4a['json'],a4c=a4b[\"textures\"][a49];if(!a4c['extensions']||!a4c['extens"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "(0x6dd)];}a3r['prototype'][aiP(0x1e3)]=function(a49){var ajg=aiP,a4a=this['parser'],a4b=a4a['json'],a4c=a4b[ajg(0xd19)][a49];if(!a4c['extensions']||!a4c['extens"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Parser json in WebP loader; textures, images read.. SERVED: identical (snippet-only twin).",
+   "name": "gltfJson",
+   "selector": "a4c@u0020#10",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 4,
+    "snippet": "null;}a3s['prototype']['loadTexture']=function(a49){var aji=aiP,a4a=this['name'],a4b=this['parser'],a4c=a4b[\"json\"],a4d=a4c[\"textures\"][a49];if(!a4d[\"extensions"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 4,
+    "snippet": "null;}a3s['prototype']['loadTexture']=function(a49){var aji=aiP,a4a=this['name'],a4b=this['parser'],a4c=a4b[aji(0x7c5)],a4d=a4c[aji(0xd19)][a49];if(!a4d[aji(0x5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Meshopt extension object; buffer, count, stride, mode.. SERVED: identical (snippet-only twin).",
+   "name": "meshoptExt",
+   "selector": "a4c@u0020#11",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 7,
+    "snippet": "er']['json'],a4b=a4a['bufferViews'][a49];if(a4b['extensions']&&a4b['extensions'][this['name']]){var a4c=a4b['extensions'][this[\"name\"]],a4d=this['parser']['getD"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 7,
+    "snippet": "er']['json'],a4b=a4a['bufferViews'][a49];if(a4b['extensions']&&a4b['extensions'][this['name']]){var a4c=a4b['extensions'][this[ajn(0x9ec)]],a4d=this['parser']['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this.dracoLoader used for decodeDracoFile call.. SERVED: identical (snippet-only twin).",
+   "name": "dracoLoader",
+   "selector": "a4c@u0020#13",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "'][\"preload\"]();}a3z[\"prototype\"][\"decodePrimitive\"]=function(a49,a4a){var ajr=aiP,a4b=this['json'],a4c=this['dracoLoader'],a4d=a49[\"extensions\"][this['name']]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "Loader'][ajq(0x98e)]();}a3z[aiP(0x262)][aiP(0x1016)]=function(a49,a4a){var ajr=aiP,a4b=this['json'],a4c=this['dracoLoader'],a4d=a49[ajr(0x53e)][this['name']][aj"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Shader chunk replacing roughnessmap_fragment include.. SERVED: identical (snippet-only twin).",
+   "name": "roughnessFragChunk",
+   "selector": "a4c@u0020#14",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 14,
+    "refCount": 1,
+    "snippet": "('\\n'),a4b=['#ifdef USE_GLOSSINESSMAP','\\tuniform sampler2D glossinessMap;','#endif']['join']('\\n'),a4c=[\"vec3 specularFactor = specular;\",\"#ifdef USE_SPECULARM"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 14,
+    "refCount": 1,
+    "snippet": "('\\n'),a4b=['#ifdef USE_GLOSSINESSMAP','\\tuniform sampler2D glossinessMap;','#endif']['join']('\\n'),a4c=[aju(0xffb),aju(0xf89),aju(0xc09),'\\ttexelSpecular = sRG"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Spec-gloss extension params; diffuse, specular, glossiness factors.. SERVED: identical (snippet-only twin).",
+   "name": "specGlossParams",
+   "selector": "a4c@u0020#15",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 15,
+    "refCount": 10,
+    "snippet": "nRatio\"],'getMaterialType':function(){return a3B;},'extendParams':function(a49,a4a,a4b){var ajF=ajE,a4c=a4a[\"extensions\"][this['name']];a49['color']=new usvzFuA"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 15,
+    "refCount": 10,
+    "snippet": "(0x28c)],'getMaterialType':function(){return a3B;},'extendParams':function(a49,a4a,a4b){var ajF=ajE,a4c=a4a[ajF(0x53e)][this['name']];a49['color']=new usvzFuAsE"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fourth Interpolant constructor arg, sibling pattern matches.. SERVED: identical (snippet-only twin).",
+   "name": "resultBuffer",
+   "selector": "a4c@u0020#16",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 1,
+    "snippet": "o\"]=0.98,a4a;}};}function a3D(){this['name']=a3l['KHR_MESH_QUANTIZATION'];}function a3E(a49,a4a,a4b,a4c){var ajH=aiP;usvzFuAsEB['Interpolant'][\"call\"](this,a49,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 1,
+    "snippet": "c)]=0.98,a4a;}};}function a3D(){this['name']=a3l['KHR_MESH_QUANTIZATION'];}function a3E(a49,a4a,a4b,a4c){var ajH=aiP;usvzFuAsEB['Interpolant'][ajH(0x432)](this,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this.valueSize driving cubic-spline sample copy loop.. SERVED: identical (snippet-only twin).",
+   "name": "valueSize",
+   "selector": "a4c@u0020#17",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 17,
+    "refCount": 3,
+    "snippet": "e\"][\"copySampleValue_\"]=function(a49){var ajI=aiP,a4a=this[\"resultBuffer\"],a4b=this['sampleValues'],a4c=this['valueSize'],a4d=a49*a4c*0x3+a4c;for(var a4e=0x0;a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 17,
+    "refCount": 3,
+    "snippet": "a3E[aiP(0x262)][aiP(0x619)]=function(a49){var ajI=aiP,a4a=this[ajI(0x408)],a4b=this['sampleValues'],a4c=this['valueSize'],a4d=a49*a4c*0x3+a4c;for(var a4e=0x0;a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Upper time bound in (t-t0)/(t1-t0) phase math.. SERVED: identical (snippet-only twin).",
+   "name": "endTime",
+   "selector": "a4c@u0020#18",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 18,
+    "refCount": 1,
+    "snippet": "erEnd_\"]=a3E['prototype']['copySampleValue_'],a3E['prototype'][\"interpolate_\"]=function(a49,a4a,a4b,a4c){var ajJ=aiP,a4d=this['resultBuffer'],a4e=this['sampleVa"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 18,
+    "refCount": 1,
+    "snippet": "[aiP(0xb03)]=a3E['prototype']['copySampleValue_'],a3E['prototype'][aiP(0xac1)]=function(a49,a4a,a4b,a4c){var ajJ=aiP,a4d=this['resultBuffer'],a4e=this['sampleVa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: For-in key copying gltf extensions to userData.. SERVED: identical (snippet-only twin).",
+   "name": "extName",
+   "selector": "a4c@u0020#19",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 19,
+    "refCount": 3,
+    "snippet": "e':usvzFuAsEB['FrontSide']})),a49[\"DefaultMaterial\"];}function a3Z(a49,a4a,a4b){var ajM=aiP;for(var a4c in a4b['extensions']){a49[a4c]===undefined&&(a4a['userDa"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 19,
+    "refCount": 3,
+    "snippet": "[],'side':usvzFuAsEB['FrontSide']})),a49[ajL(0x8c6)];}function a3Z(a49,a4a,a4b){var ajM=aiP;for(var a4c in a4b['extensions']){a49[a4c]===undefined&&(a4a['userDa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Flag set when morph target has POSITION data.. SERVED: identical (snippet-only twin).",
+   "name": "hasPosition",
+   "selector": "a4c@u0020#20",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 20,
+    "refCount": 5,
+    "snippet": "xZSAjQYG: Ignoring primitive type .extras, '+a4a[\"extras\"]));}function a41(a49,a4a,a4b){var ajO=aiP,a4c=![],a4d=![];for(var a4e=0x0,a4f=a4a['length'];a4e<a4f;a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 20,
+    "refCount": 5,
+    "snippet": "SAjQYG: Ignoring primitive type .extras, '+a4a[ajN(0x923)]));}function a41(a49,a4a,a4b){var ajO=aiP,a4c=![],a4d=![];for(var a4e=0x0,a4f=a4a['length'];a4e<a4f;a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Weights array length bounding influence loop.. SERVED: identical (snippet-only twin).",
+   "name": "weightCount",
+   "selector": "a4c@u0020#21",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 21,
+    "refCount": 2,
+    "snippet": " a42(a49,a4a){var ajQ=aiP;a49['updateMorphTargets']();if(a4a['weights']!==undefined)for(var a4b=0x0,a4c=a4a['weights']['length'];a4b<a4c;a4b++){a49[\"morphTarget"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 21,
+    "refCount": 2,
+    "snippet": " a42(a49,a4a){var ajQ=aiP;a49['updateMorphTargets']();if(a4a['weights']!==undefined)for(var a4b=0x0,a4c=a4a['weights']['length'];a4b<a4c;a4b++){a49[ajQ(0xbc)][a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over sorted attribute keys.. SERVED: identical (snippet-only twin).",
+   "name": "keyIdx",
+   "selector": "a4c@u0020#23",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 23,
+    "refCount": 4,
+    "snippet": "':'+a49[\"mode\"],a4b;}function a44(a49){var ajS=aiP,a4a='',a4b=Object['keys'](a49)[\"sort\"]();for(var a4c=0x0,a4d=a4b['length'];a4c<a4d;a4c++){a4a+=a4b[a4c]+':'+a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 23,
+    "refCount": 4,
+    "snippet": "ajR(0x2b1)],a4b;}function a44(a49){var ajS=aiP,a4a='',a4b=Object['keys'](a49)[ajS(0xbbf)]();for(var a4c=0x0,a4d=a4b['length'];a4c<a4d;a4c++){a4a+=a4b[a4c]+':'+a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this.json in parse; scene, asset, extensions read.. SERVED: identical (snippet-only twin).",
+   "name": "gltfJson",
+   "selector": "a4c@u0020#25",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 25,
+    "refCount": 4,
+    "snippet": "unction(a49){this['plugins']=a49;},a45['prototype']['parse']=function(a49,a4a){var ajU=aiP,a4b=this,a4c=this[\"json\"],a4d=this['extensions'],a4e=this['cache'];th"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 25,
+    "refCount": 4,
+    "snippet": "unction(a49){this['plugins']=a49;},a45['prototype']['parse']=function(a49,a4a){var ajU=aiP,a4b=this,a4c=this[ajU(0x7c5)],a4d=this['extensions'],a4e=this['cache'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop counter over skins marking bone joints.. SERVED: identical (snippet-only twin).",
+   "name": "skinIdx",
+   "selector": "a4c@u0020#26",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 26,
+    "refCount": 3,
+    "snippet": ",a49=this[\"json\"][\"nodes\"]||[],a4a=this['json']['skins']||[],a4b=this[\"json\"]['meshes']||[];for(var a4c=0x0,a4d=a4a[\"length\"];a4c<a4d;a4c++){var a4e=a4a[a4c]['j"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "jW(0x7c5)][ajW(0xa6f)]||[],a4a=this['json']['skins']||[],a4b=this[ajW(0x7c5)]['meshes']||[];for(var a4c=0x0,a4d=a4a[ajW(0x3a2)];a4c<a4d;a4c++){var a4e=a4a[a4c]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clone suffixed _instance_N then returned. SERVED: identical (snippet-only twin).",
+   "name": "clonedNode",
+   "selector": "a4c@u0020#27",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 27,
+    "refCount": 2,
+    "snippet": "rototype\"][\"_getNodeRef\"]=function(a49,a4a,a4b){var ajY=aiP;if(a49['refs'][a4a]<=0x1)return a4b;var a4c=a4b[\"clone\"]();return a4c['name']+='_instance_'+a49['use"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 27,
+    "refCount": 2,
+    "snippet": "5[aiP(0x262)][aiP(0x658)]=function(a49,a4a,a4b){var ajY=aiP;if(a49['refs'][a4a]<=0x1)return a4b;var a4c=a4b[ajY(0xae2)]();return a4c['name']+='_instance_'+a49['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first truthy plugin callback result returned. SERVED: identical (snippet-only twin).",
+   "name": "pluginResult",
+   "selector": "a4c@u0020#28",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 28,
+    "refCount": 2,
+    "snippet": "4a=Object[\"values\"](this['plugins']);a4a['push'](this);for(var a4b=0x0;a4b<a4a['length'];a4b++){var a4c=a49(a4a[a4b]);if(a4c)return a4c;}},a45[\"prototype\"][\"_in"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 28,
+    "refCount": 2,
+    "snippet": "=Object[ajZ(0x9fc)](this['plugins']);a4a['push'](this);for(var a4b=0x0;a4b<a4a['length'];a4b++){var a4c=a49(a4a[a4b]);if(a4c)return a4c;}},a45[aiP(0x262)][aiP(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over plugins-plus-self array. SERVED: identical (snippet-only twin).",
+   "name": "pluginIndex",
+   "selector": "a4c@u0020#29",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 29,
+    "refCount": 3,
+    "snippet": "l\"]=function(a49){var a4a=Object['values'](this['plugins']);a4a['unshift'](this);var a4b=[];for(var a4c=0x0;a4c<a4a['length'];a4c++){var a4d=a49(a4a[a4c]);if(a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 29,
+    "refCount": 3,
+    "snippet": "8)]=function(a49){var a4a=Object['values'](this['plugins']);a4a['unshift'](this);var a4b=[];for(var a4c=0x0;a4c<a4a['length'];a4c++){var a4d=a49(a4a[a4c]);if(a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cached promise filled per dependency type. SERVED: identical (snippet-only twin).",
+   "name": "cachedDependency",
+   "selector": "a4c@u0020#30",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 30,
+    "refCount": 14,
+    "snippet": "(a4d);}return a4b;},a45[\"prototype\"]['getDependency']=function(a49,a4a){var ak0=aiP,a4b=a49+':'+a4a,a4c=this['cache'][\"get\"](a4b);if(!a4c){switch(a49){case'scen"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 30,
+    "refCount": 14,
+    "snippet": "](a4d);}return a4b;},a45[aiP(0x262)]['getDependency']=function(a49,a4a){var ak0=aiP,a4b=a49+':'+a4a,a4c=this['cache'][ak0(0xa18)](a4b);if(!a4c){switch(a49){case"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json def array mapped into promises. SERVED: identical (snippet-only twin).",
+   "name": "typeDefs",
+   "selector": "a4c@u0020#31",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 31,
+    "refCount": 1,
+    "snippet": "rototype'][\"getDependencies\"]=function(a49){var a4a=this['cache']['get'](a49);if(!a4a){var a4b=this,a4c=this['json'][a49+(a49==='mesh'?'es':'s')]||[];a4a=Promis"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 31,
+    "refCount": 1,
+    "snippet": ",a45['prototype'][aiP(0x324)]=function(a49){var a4a=this['cache']['get'](a49);if(!a4a){var a4b=this,a4c=this['json'][a49+(a49==='mesh'?'es':'s')]||[];a4a=Promis"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: options supplying buffer load path. SERVED: identical (snippet-only twin).",
+   "name": "loaderOptions",
+   "selector": "a4c@u0020#32",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 32,
+    "refCount": 1,
+    "snippet": "efined&&a49===0x0)return Promise[\"resolve\"](this['extensions'][a3l['KHR_BINARY_GLTF']][\"body\"]);var a4c=this['options'];return new Promise(function(a4d,a4e){var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 32,
+    "refCount": 1,
+    "snippet": "&&a49===0x0)return Promise[ak3(0xf66)](this['extensions'][a3l['KHR_BINARY_GLTF']][ak3(0x1043)]);var a4c=this['options'];return new Promise(function(a4d,a4e){var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bufferView byteLength bounding slice end. SERVED: identical (snippet-only twin).",
+   "name": "byteLength",
+   "selector": "a4c@u0020#33",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 33,
+    "refCount": 1,
+    "snippet": "Views\"][a49];return this['getDependency']('buffer',a4a['buffer'])[\"then\"](function(a4b){var ak6=ak5,a4c=a4a['byteLength']||0x0,a4d=a4a['byteOffset']||0x0;return"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 33,
+    "refCount": 1,
+    "snippet": "a)][a49];return this['getDependency']('buffer',a4a['buffer'])[ak5(0x4d6)](function(a4b){var ak6=ak5,a4c=a4a['byteLength']||0x0,a4d=a4a['byteOffset']||0x0;return"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: accessor def driving buffer attribute reads. SERVED: identical (snippet-only twin).",
+   "name": "accessorDef",
+   "selector": "a4c@u0020#34",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 34,
+    "refCount": 25,
+    "snippet": ",a4d+a4c);});},a45['prototype'][\"loadAccessor\"]=function(a49){var ak7=aiP,a4a=this,a4b=this[\"json\"],a4c=this['json']['accessors'][a49];if(a4c['bufferView']===un"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 34,
+    "refCount": 25,
+    "snippet": ",a4d+a4c);});},a45['prototype'][aiP(0xdcb)]=function(a49){var ak7=aiP,a4a=this,a4b=this[ak7(0x7c5)],a4c=this['json']['accessors'][a49];if(a4c['bufferView']===un"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: options supplying texture manager handler. SERVED: identical (snippet-only twin).",
+   "name": "loaderOptions",
+   "selector": "a4c@u0020#35",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 35,
+    "refCount": 1,
+    "snippet": "return a4o;});},a45['prototype']['loadTexture']=function(a49){var ak9=aiP,a4a=this,a4b=this[\"json\"],a4c=this[\"options\"],a4d=a4b['textures'][a49],a4e=a4d['extens"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 35,
+    "refCount": 1,
+    "snippet": "rn a4o;});},a45['prototype']['loadTexture']=function(a49){var ak9=aiP,a4a=this,a4b=this[ak9(0x7c5)],a4c=this[ak9(0xa69)],a4d=a4b['textures'][a49],a4e=a4d['exten"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: parser alias for dependency and associations. SERVED: identical (snippet-only twin).",
+   "name": "parser",
+   "selector": "a4c@u0020#36",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 36,
+    "refCount": 2,
+    "snippet": "extureImage\"](a49,a4f,a4g);},a45['prototype']['loadTextureImage']=function(a49,a4a,a4b){var aka=aiP,a4c=this,a4d=this[\"json\"],a4e=this[\"options\"],a4f=a4d['textu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 36,
+    "refCount": 2,
+    "snippet": "[ak9(0x103e)](a49,a4f,a4g);},a45['prototype']['loadTextureImage']=function(a49,a4a,a4b){var aka=aiP,a4c=this,a4d=this[aka(0x7c5)],a4e=this[aka(0xa69)],a4f=a4d['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: parser alias for texture transform lookups. SERVED: identical (snippet-only twin).",
+   "name": "parser",
+   "selector": "a4c@u0020#37",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 37,
+    "refCount": 4,
+    "snippet": "ions'][\"set\"](a4k,a4n),a4k;});},a45['prototype']['assignTexture']=function(a49,a4a,a4b){var ake=aiP,a4c=this;return this['getDependency'](\"texture\",a4b[\"index\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 37,
+    "refCount": 4,
+    "snippet": "][akd(0xc71)](a4k,a4n),a4k;});},a45['prototype']['assignTexture']=function(a49,a4a,a4b){var ake=aiP,a4c=this;return this['getDependency'](ake(0xd31),a4b[ake(0x4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: true when geometry has tangent attribute. SERVED: identical (snippet-only twin).",
+   "name": "hasTangents",
+   "selector": "a4c@u0020#38",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 38,
+    "refCount": 5,
+    "snippet": "totype'][\"assignFinalMaterial\"]=function(a49){var akg=aiP,a4a=a49[\"RNQDluasaN\"],a4b=a49['material'],a4c=a4a[\"attributes\"][\"tangent\"]!==undefined,a4d=a4a[\"attrib"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 38,
+    "refCount": 5,
+    "snippet": "});},a45['prototype'][aiP(0x2a0)]=function(a49){var akg=aiP,a4a=a49[akg(0xbac)],a4b=a49['material'],a4c=a4a[akg(0x672)][akg(0x178)]!==undefined,a4d=a4a[akg(0x67"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: extensions registry for material plugins. SERVED: identical (snippet-only twin).",
+   "name": "parserExtensions",
+   "selector": "a4c@u0020#39",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "KCzNEjzurZ\"];},a45['prototype'][\"loadMaterial\"]=function(a49){var aki=aiP,a4a=this,a4b=this[\"json\"],a4c=this['extensions'],a4d=a4b[\"materials\"][a49],a4e,a4f={},"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "[akh(0xa53)];},a45['prototype'][aiP(0x13d)]=function(a49){var aki=aiP,a4a=this,a4b=this[aki(0x7c5)],a4c=this['extensions'],a4d=a4b[aki(0xe3d)][a49],a4e,a4f={},a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: primitive attributes for POSITION bounds. SERVED: identical (snippet-only twin).",
+   "name": "primitiveAttributes",
+   "selector": "a4c@u0020#41",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 41,
+    "refCount": 2,
+    "snippet": "a4b=a4a+'_'+a4c;}return this[\"nodeNamesUsed\"][a4b]=!![],a4b;};function a46(a49,a4a,a4b){var akn=aiP,a4c=a4a['attributes'],a4d=new usvzFuAsEB[(\"Box3\")]();if(a4c["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 41,
+    "refCount": 2,
+    "snippet": "a4c){a4b=a4a+'_'+a4c;}return this[akm(0x513)][a4b]=!![],a4b;};function a46(a49,a4a,a4b){var akn=aiP,a4c=a4a['attributes'],a4d=new usvzFuAsEB[(akn(0x859))]();if("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: generated sequential index when missing. SERVED: identical (snippet-only twin).",
+   "name": "generatedIndex",
+   "selector": "a4c@u0020#43",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 43,
+    "refCount": 2,
+    "snippet": "[\"targets\"],a4b):a49;});}function a48(a49,a4a){var akr=aiP,a4b=a49['getIndex']();if(a4b===null){var a4c=[],a4d=a49[\"getAttribute\"]('position');if(a4d!==undefine"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 43,
+    "refCount": 2,
+    "snippet": "[akq(0x92)],a4b):a49;});}function a48(a49,a4a){var akr=aiP,a4b=a49['getIndex']();if(a4b===null){var a4c=[],a4d=a49[akr(0x303)]('position');if(a4d!==undefined){f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: primitive cache for deduped geometries. SERVED: identical (snippet-only twin).",
+   "name": "primitiveCache",
+   "selector": "a4c@u0020#44",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 44,
+    "refCount": 2,
+    "snippet": "return a45[\"prototype\"][\"loadGeometries\"]=function(a49){var aks=aiP,a4a=this,a4b=this['extensions'],a4c=this[\"primitiveCache\"];function a4d(a4m){var akt=aks;ret"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 44,
+    "refCount": 2,
+    "snippet": "),a4h;}return a45[aiP(0x262)][aiP(0x36d)]=function(a49){var aks=aiP,a4a=this,a4b=this['extensions'],a4c=this[aks(0xfe0)];function a4d(a4m){var akt=aks;return a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: extensions passed to primitive handlers. SERVED: identical (snippet-only twin).",
+   "name": "parserExtensions",
+   "selector": "a4c@u0020#45",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 45,
+    "refCount": 1,
+    "snippet": "mise[\"all\"](a4e);},a45['prototype']['loadMesh']=function(a49){var aku=aiP,a4a=this,a4b=this['json'],a4c=this['extensions'],a4d=a4b['meshes'][a49],a4e=a4d['primi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 45,
+    "refCount": 1,
+    "snippet": "aks(0x235)](a4e);},a45['prototype']['loadMesh']=function(a49){var aku=aiP,a4a=this,a4b=this['json'],a4c=this['extensions'],a4d=a4b['meshes'][a49],a4e=a4d['primi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: type-specific camera parameters object. SERVED: identical (snippet-only twin).",
+   "name": "cameraParams",
+   "selector": "a4c@u0020#46",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 46,
+    "refCount": 11,
+    "snippet": ";});},a45['prototype']['loadCamera']=function(a49){var akw=aiP,a4a,a4b=this[\"json\"]['cameras'][a49],a4c=a4b[a4b['type']];if(!a4c){console['warn']('usvzFuAsEB.bx"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 46,
+    "refCount": 11,
+    "snippet": "},a45['prototype']['loadCamera']=function(a49){var akw=aiP,a4a,a4b=this[akw(0x7c5)]['cameras'][a49],a4c=a4b[a4b['type']];if(!a4c){console['warn']('usvzFuAsEB.bx"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: skin result gaining inverseBindMatrices. SERVED: identical (snippet-only twin).",
+   "name": "skinResult",
+   "selector": "a4c@u0020#47",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 47,
+    "refCount": 3,
+    "snippet": "n']=function(a49){var akx=aiP,a4a=this[\"json\"][\"skins\"][a49],a4b={};a4b['joints']=a4a['joints'];var a4c=a4b;if(a4a[\"inverseBindMatrices\"]===undefined)return Pro"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 47,
+    "refCount": 3,
+    "snippet": "ction(a49){var akx=aiP,a4a=this[akx(0x7c5)][akx(0x674)][a49],a4b={};a4b['joints']=a4a['joints'];var a4c=a4b;if(a4a[akx(0x1d9)]===undefined)return Promise[akx(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: node dependency promises per channel. SERVED: identical (snippet-only twin).",
+   "name": "nodePromises",
+   "selector": "a4c@u0020#48",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 48,
+    "refCount": 2,
+    "snippet": "'prototype'][\"loadAnimation\"]=function(a49){var aky=aiP,a4a=this['json'],a4b=a4a['animations'][a49],a4c=[],a4d=[],a4e=[],a4f=[],a4g=[];for(var a4h=0x0,a4i=a4b['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 48,
+    "refCount": 2,
+    "snippet": ",a45['prototype'][aiP(0x709)]=function(a49){var aky=aiP,a4a=this['json'],a4b=a4a['animations'][a49],a4c=[],a4d=[],a4e=[],a4f=[],a4g=[];for(var a4h=0x0,a4i=a4b['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: parser alias across node assembly closures. SERVED: identical (snippet-only twin).",
+   "name": "parser",
+   "selector": "a4c@u0020#49",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 49,
+    "refCount": 9,
+    "snippet": "});},a45['prototype']['loadNode']=function(a49){var akB=aiP,a4a=this[\"json\"],a4b=this['extensions'],a4c=this,a4d=a4a['nodes'][a49],a4e=a4d['name']?a4c['createUn"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 49,
+    "refCount": 9,
+    "snippet": ",a45['prototype']['loadNode']=function(a49){var akB=aiP,a4a=this[akB(0x7c5)],a4b=this['extensions'],a4c=this,a4d=a4a['nodes'][a49],a4e=a4d['name']?a4c['createUn"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: glTF json traversed for child nodes. SERVED: identical (snippet-only twin).",
+   "name": "gltfJson",
+   "selector": "a4c@u0020#50",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 50,
+    "refCount": 2,
+    "snippet": "ociations\"]['set'](a4g,a4k),a4g;});},a45['prototype'][\"loadScene\"]=(function(){function a49(a4a,a4b,a4c,a4d){var akH=o,a4e=a4c[\"nodes\"][a4a];return a4d[\"getDepe"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 50,
+    "refCount": 2,
+    "snippet": "[akG(0xb5d)]['set'](a4g,a4k),a4g;});},a45['prototype'][aiP(0x47b)]=(function(){function a49(a4a,a4b,a4c,a4d){var akH=o,a4e=a4c[akH(0xa6f)][a4a];return a4d[akH(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json passed into scene node builder. SERVED: identical (snippet-only twin).",
+   "name": "gltfJson",
+   "selector": "a4c@u0020#51",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u0020",
+    "index": 51,
+    "refCount": 1,
+    "snippet": "g['push'](a49(a4k,a4f,a4c,a4d));}}return Promise['all'](a4g);});}return function a4a(a4b){var akM=o,a4c=this[\"json\"],a4d=this[\"extensions\"],a4e=this[\"json\"]['sc"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 51,
+    "refCount": 1,
+    "snippet": "g['push'](a49(a4k,a4f,a4c,a4d));}}return Promise['all'](a4g);});}return function a4a(a4b){var akM=o,a4c=this[akM(0x7c5)],a4d=this[akM(0x53e)],a4e=this[akM(0x7c5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loader alias across retry closures. SERVED: identical (snippet-only twin).",
+   "name": "loader",
+   "selector": "a4d@u0020#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "(usvzFuAsEB['Loader'][\"prototype\"]),{'constructor':a3i,'load':function(a49,a4a,a4b,a4c){var aiQ=aiP,a4d=this,a4e;if(this['resourcePath']!=='')a4e=this[\"resource"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "](usvzFuAsEB['Loader'][aiP(0x262)]),{'constructor':a3i,'load':function(a49,a4a,a4b,a4c){var aiQ=aiP,a4d=this,a4e;if(this['resourcePath']!=='')a4e=this[aiQ(0x9d0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json string fed to JSON.parse. SERVED: identical (snippet-only twin).",
+   "name": "jsonText",
+   "selector": "a4d@u0020#1",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "](this['pluginCallbacks'][\"indexOf\"](a49),0x1),this;},'parse':function(a49,a4a,a4b,a4c){var aj2=aiP,a4d,a4e={},a4f={};if(typeof a49==='string')a4d=a49;else{var "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "(this['pluginCallbacks'][aj1(0xfad)](a49),0x1),this;},'parse':function(a49,a4a,a4b,a4c){var aj2=aiP,a4d,a4e={},a4f={};if(typeof a49==='string')a4d=a49;else{var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: node def scanned for light extension. SERVED: identical (snippet-only twin).",
+   "name": "nodeDef",
+   "selector": "a4d@u0020#2",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "rser'],a4a=this[\"parser\"]['json']['nodes']||[];for(var a4b=0x0,a4c=a4a[\"length\"];a4b<a4c;a4b++){var a4d=a4a[a4b];a4d['extensions']&&a4d['extensions'][this['name"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "],a4a=this[aj4(0x1088)]['json']['nodes']||[];for(var a4b=0x0,a4c=a4a[aj4(0x3a2)];a4b<a4c;a4b++){var a4d=a4a[a4b];a4d['extensions']&&a4d['extensions'][this['name"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json holding lights extension block. SERVED: identical (snippet-only twin).",
+   "name": "gltfJson",
+   "selector": "a4d@u0020#3",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "{var aj5=aiP,a4a=this[\"parser\"],a4b=\"light:\"+a49,a4c=a4a[\"cache\"]['get'](a4b);if(a4c)return a4c;var a4d=a4a['json'],a4e=a4d['extensions']&&a4d[\"extensions\"][thi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "=aiP,a4a=this[aj5(0x1088)],a4b=aj5(0x807)+a49,a4c=a4a[aj5(0x9f0)]['get'](a4b);if(a4c)return a4c;var a4d=a4a['json'],a4e=a4d['extensions']&&a4d[aj5(0x53e)][this["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: node extensions supplying light index. SERVED: identical (snippet-only twin).",
+   "name": "nodeExtensions",
+   "selector": "a4d@u0020#4",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "ment\"]=function(a49){var aj6=aiP,self=this,a4a=this['parser'],a4b=a4a['json'],a4c=a4b['nodes'][a49],a4d=a4c[\"extensions\"]&&a4c['extensions'][this['name']]||{},a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "xd40)]=function(a49){var aj6=aiP,self=this,a4a=this['parser'],a4b=a4a['json'],a4c=a4b['nodes'][a49],a4d=a4c[aj6(0x53e)]&&a4c['extensions'][this['name']]||{},a4e"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clearcoat texture promises awaited together. SERVED: identical (snippet-only twin).",
+   "name": "texturePromises",
+   "selector": "a4d@u0020#6",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "ials\"][a49];if(!a4c['extensions']||!a4c['extensions'][this['name']])return Promise['resolve']();var a4d=[],a4e=a4c[\"extensions\"][this[\"name\"]];a4e['clearcoatFac"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "xe3d)][a49];if(!a4c['extensions']||!a4c['extensions'][this['name']])return Promise['resolve']();var a4d=[],a4e=a4c[ajb(0x53e)][this[ajb(0x9ec)]];a4e['clearcoatF"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: transmission texture promise awaited once. SERVED: identical (snippet-only twin).",
+   "name": "texturePromises",
+   "selector": "a4d@u0020#7",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "ials'][a49];if(!a4c['extensions']||!a4c[\"extensions\"][this['name']])return Promise[\"resolve\"]();var a4d=[],a4e=a4c['extensions'][this['name']];return a4e['trans"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "rials'][a49];if(!a4c['extensions']||!a4c[aje(0x53e)][this['name']])return Promise[aje(0xf66)]();var a4d=[],a4e=a4c['extensions'][this['name']];return a4e['trans"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: basis extension supplying image source. SERVED: identical (snippet-only twin).",
+   "name": "basisuExtension",
+   "selector": "a4d@u0020#8",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "'],a4c=a4b[\"textures\"][a49];if(!a4c['extensions']||!a4c['extensions'][this[\"name\"]])return null;var a4d=a4c[\"extensions\"][this[\"name\"]],a4e=a4b['images'][a4d['s"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "4c=a4b[ajg(0xd19)][a49];if(!a4c['extensions']||!a4c['extensions'][this[ajg(0x9ec)]])return null;var a4d=a4c[ajg(0x53e)][this[ajg(0x9ec)]],a4e=a4b['images'][a4d["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture def checked for webp extension. SERVED: identical (snippet-only twin).",
+   "name": "textureDef",
+   "selector": "a4d@u0020#9",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "type']['loadTexture']=function(a49){var aji=aiP,a4a=this['name'],a4b=this['parser'],a4c=a4b[\"json\"],a4d=a4c[\"textures\"][a49];if(!a4d[\"extensions\"]||!a4d[\"extens"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "']['loadTexture']=function(a49){var aji=aiP,a4a=this['name'],a4b=this['parser'],a4c=a4b[aji(0x7c5)],a4d=a4c[aji(0xd19)][a49];if(!a4d[aji(0x53e)]||!a4d[aji(0x53e"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: buffer promise decoded with meshopt. SERVED: identical (snippet-only twin).",
+   "name": "bufferPromise",
+   "selector": "a4d@u0020#10",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 1,
+    "snippet": "a49];if(a4b['extensions']&&a4b['extensions'][this['name']]){var a4c=a4b['extensions'][this[\"name\"]],a4d=this['parser']['getDependency'](\"buffer\",a4c['buffer']),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 1,
+    "snippet": ";if(a4b['extensions']&&a4b['extensions'][this['name']]){var a4c=a4b['extensions'][this[ajn(0x9ec)]],a4d=this['parser']['getDependency'](ajn(0xcd4),a4c['buffer']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Spec object encoded: globalKeys, globalIndex, byteSizes, field values. SERVED: identical (snippet-only twin).",
+   "name": "messageSpec",
+   "selector": "a3i@u1959#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3i",
+   "binding": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[\"globalKey"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: DataView written via setUint16 and dynamic setters; mirrors decodeMessage. SERVED: identical (snippet-only twin).",
+   "name": "dataView",
+   "selector": "a3j@u1959#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3j",
+   "binding": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[\"globalKeys\"];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Write cursor advanced per field; mirrors sibling readOffset. SERVED: identical (snippet-only twin).",
+   "name": "writeOffset",
+   "selector": "a3k@u1959#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[\"globalKeys\"];a3j["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3j['s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Holds globalKeys array looped for encode; disjoint namesakes benign. SERVED: identical (snippet-only twin).",
+   "name": "globalKeyList",
+   "selector": "a3l@u1959#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[\"globalKeys\"];a3j['setUint16'](a3k,a3i['globalIndex'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3j['setUint16'](a3k,a3i['globalIndex'])"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over key list; disjoint namesakes benign. SERVED: identical (snippet-only twin).",
+   "name": "keyIndex",
+   "selector": "a3m@u1959#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "i1;a3k=a3k||0x0;var a3l=a3i[\"globalKeys\"];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i[\"byteSizes\"][a3m"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1959",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i[aqs(0x3e9)][a3m]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: Bloom key rounded in place; uses captured as oldKey, hold. SERVED: identical (snippet-only twin).",
+   "name": "tuningKey",
+   "selector": "H6@u1770#0",
+   "slice": "slice-01",
+   "disposition": "held-low",
+   "reason": "low confidence: held for review"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: options ktx2Loader null-checked then passed to loadTextureImage. SERVED: identical (snippet-only twin).",
+   "name": "ktx2Loader",
+   "selector": "a4f@u0020#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "[this[\"name\"]])return null;var a4d=a4c[\"extensions\"][this[\"name\"]],a4e=a4b['images'][a4d['source']],a4f=a4a[\"options\"]['ktx2Loader'];if(!a4f){if(a4b['extensions"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "ajg(0x9ec)]])return null;var a4d=a4c[ajg(0x53e)][this[ajg(0x9ec)]],a4e=a4b['images'][a4d['source']],a4f=a4a[ajg(0xa69)]['ktx2Loader'];if(!a4f){if(a4b['extension"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: images[source] entry uri-checked then passed to loadTextureImage. SERVED: identical (snippet-only twin).",
+   "name": "sourceImage",
+   "selector": "a4f@u0020#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "es\"][a49];if(!a4d[\"extensions\"]||!a4d[\"extensions\"][a4a])return null;var a4e=a4d['extensions'][a4a],a4f=a4c['images'][a4e['source']],a4g=a4f['uri']?a4b['options"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "(0xd19)][a49];if(!a4d[aji(0x53e)]||!a4d[aji(0x53e)][a4a])return null;var a4e=a4d['extensions'][a4a],a4f=a4c['images'][a4e['source']],a4g=a4f['uri']?a4b['options"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Promise.all results array with [0] wrapped as Uint8Array. SERVED: identical (snippet-only twin).",
+   "name": "bufferResults",
+   "selector": "a4f@u0020#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "ing compressed files');else return null;}return Promise[\"all\"]([a4d,a4e['ready']])['then'](function(a4f){var ajo=ajn,a4g=a4c['byteOffset']||0x0,a4h=a4c['byteLen"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "ompressed files');else return null;}return Promise[ajn(0x235)]([a4d,a4e['ready']])['then'](function(a4f){var ajo=ajn,a4g=a4c['byteOffset']||0x0,a4h=a4c['byteLen"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: maps lowercased attributes to ids for decodeDracoFile. SERVED: identical (snippet-only twin).",
+   "name": "attributeIdMap",
+   "selector": "a4f@u0020#9",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 2,
+    "snippet": "a4d=a49[\"extensions\"][this['name']][\"bufferView\"],a4e=a49['extensions'][this['name']]['attributes'],a4f={},a4g={},a4h={};for(var a4i in a4e){var a4j=a3Q[a4i]||a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 2,
+    "snippet": "r'],a4d=a49[ajr(0x53e)][this['name']][ajr(0x585)],a4e=a49['extensions'][this['name']]['attributes'],a4f={},a4g={},a4h={};for(var a4i in a4e){var a4j=a3Q[a4i]||a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: value-one uniform object registered as glossiness. SERVED: identical (snippet-only twin).",
+   "name": "glossinessUniform",
+   "selector": "a4f@u0020#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 2,
+    "snippet": " min( material.specularRoughness, 1.0 );',\"material.specularColor = specularFactor;\"]['join']('\\n'),a4f={};a4f[\"value\"]=0x1;var a4g={};a4g['value']=null;var a4h"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "),'material.specularRoughness = min( material.specularRoughness, 1.0 );',aju(0x101e)]['join']('\\n'),a4f={};a4f[aju(0x9c5)]=0x1;var a4g={};a4g['value']=null;var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture info assigned to glossinessMap and specularMap. SERVED: identical (snippet-only twin).",
+   "name": "specularGlossinessTexture",
+   "selector": "a4f@u0020#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 2,
+    "snippet": "specular'][\"fromArray\"](a4c['specularFactor']);if(a4c['specularGlossinessTexture']!==undefined){var a4f=a4c[\"specularGlossinessTexture\"];a4d['push'](a4b['assign"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 2,
+    "snippet": "specular'][ajF(0x10c5)](a4c['specularFactor']);if(a4c['specularGlossinessTexture']!==undefined){var a4f=a4c[ajF(0x56f)];a4d['push'](a4b['assignTexture'](a49,ajF"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cached this.valueSize driving stride arithmetic and loop. SERVED: identical (snippet-only twin).",
+   "name": "valueSize",
+   "selector": "a4f@u0020#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 12,
+    "refCount": 5,
+    "snippet": "erpolate_\"]=function(a49,a4a,a4b,a4c){var ajJ=aiP,a4d=this['resultBuffer'],a4e=this['sampleValues'],a4f=this[\"valueSize\"],a4g=a4f*0x2,a4h=a4f*0x3,a4i=a4c-a4a,a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 12,
+    "refCount": 5,
+    "snippet": "aiP(0xac1)]=function(a49,a4a,a4b,a4c){var ajJ=aiP,a4d=this['resultBuffer'],a4e=this['sampleValues'],a4f=this[ajJ(0x929)],a4g=a4f*0x2,a4h=a4f*0x3,a4i=a4c-a4a,a4j"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cached array length bounding both morph-target loops. SERVED: identical (snippet-only twin).",
+   "name": "targetCount",
+   "selector": "a4f@u0020#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 2,
+    "snippet": "e .extras, '+a4a[\"extras\"]));}function a41(a49,a4a,a4b){var ajO=aiP,a4c=![],a4d=![];for(var a4e=0x0,a4f=a4a['length'];a4e<a4f;a4e++){var a4g=a4a[a4e];if(a4g['PO"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 2,
+    "snippet": ".extras, '+a4a[ajN(0x923)]));}function a41(a49,a4a,a4b){var ajO=aiP,a4c=![],a4d=![];for(var a4e=0x0,a4f=a4a['length'];a4e<a4f;a4e++){var a4g=a4a[a4e];if(a4g['PO"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: _invokeAll callback entry invoking optional _markDefs. SERVED: identical (snippet-only twin).",
+   "name": "extension",
+   "selector": "a4f@u0020#16",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 4,
+    "snippet": "cene\"),this[\"getDependencies\"]('animation'),this['getDependencies']('aKmLbYuMC')])['then'](function(a4f){var ajV=ajU,a4g={};a4g['scene']=a4f[0x0][a4c['scene']||"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 4,
+    "snippet": "](ajU(0x39e)),this[ajU(0x324)]('animation'),this['getDependencies']('aKmLbYuMC')])['then'](function(a4f){var ajV=ajU,a4g={};a4g['scene']=a4f[0x0][a4c['scene']||"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: joints loop index marking referenced nodes isBone. SERVED: identical (snippet-only twin).",
+   "name": "jointIndex",
+   "selector": "a4f@u0020#17",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 17,
+    "refCount": 3,
+    "snippet": "]['meshes']||[];for(var a4c=0x0,a4d=a4a[\"length\"];a4c<a4d;a4c++){var a4e=a4a[a4c]['joints'];for(var a4f=0x0,a4g=a4e[\"length\"];a4f<a4g;a4f++){a49[a4e[a4f]][\"isBo"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 17,
+    "refCount": 3,
+    "snippet": "'meshes']||[];for(var a4c=0x0,a4d=a4a[ajW(0x3a2)];a4c<a4d;a4c++){var a4e=a4a[a4c]['joints'];for(var a4f=0x0,a4g=a4e[ajW(0x3a2)];a4f<a4g;a4f++){a49[a4e[a4f]][ajW"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first Promise.all buffer backing typed attribute arrays. SERVED: identical (snippet-only twin).",
+   "name": "bufferData",
+   "selector": "a4f@u0020#18",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 18,
+    "refCount": 4,
+    "snippet": "iew',a4c['sparse']['values']['bufferView']))),Promise[\"all\"](a4d)[\"then\"](function(a4e){var ak8=ak7,a4f=a4e[0x0],a4g=a3O[a4c[\"type\"]],a4h=a3I[a4c['componentType"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 18,
+    "refCount": 4,
+    "snippet": "'sparse']['values']['bufferView']))),Promise[ak7(0x235)](a4d)[ak7(0x4d6)](function(a4e){var ak8=ak7,a4f=a4e[0x0],a4g=a3O[a4c[ak8(0xafb)]],a4h=a3I[a4c['component"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: DDS-aware image pick uri-checked into loadTextureImage. SERVED: identical (snippet-only twin).",
+   "name": "sourceImage",
+   "selector": "a4f@u0020#19",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 19,
+    "refCount": 5,
+    "snippet": "iP,a4a=this,a4b=this[\"json\"],a4c=this[\"options\"],a4d=a4b['textures'][a49],a4e=a4d['extensions']||{},a4f;a4e[a3l['MSFT_TEXTURE_DDS']]?a4f=a4b['images'][a4e[a3l['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 19,
+    "refCount": 5,
+    "snippet": "a=this,a4b=this[ak9(0x7c5)],a4c=this[ak9(0xa69)],a4d=a4b['textures'][a49],a4e=a4d['extensions']||{},a4f;a4e[a3l['MSFT_TEXTURE_DDS']]?a4f=a4b['images'][a4e[a3l['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json texture entry supplying name and sampler. SERVED: identical (snippet-only twin).",
+   "name": "textureDef",
+   "selector": "a4f@u0020#20",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 20,
+    "refCount": 3,
+    "snippet": "'loadTextureImage']=function(a49,a4a,a4b){var aka=aiP,a4c=this,a4d=this[\"json\"],a4e=this[\"options\"],a4f=a4d['textures'][a49],a4g=self['URL']||self[\"webkitURL\"],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 20,
+    "refCount": 3,
+    "snippet": "TextureImage']=function(a49,a4a,a4b){var aka=aiP,a4c=this,a4d=this[aka(0x7c5)],a4e=this[aka(0xa69)],a4f=a4d['textures'][a49],a4g=self['URL']||self[aka(0xf03)],a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: association stashed across KHR transform texture replacement. SERVED: identical (snippet-only twin).",
+   "name": "savedAssociation",
+   "selector": "a4f@u0020#21",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 21,
+    "refCount": 1,
+    "snippet": "a4b['extensions']!==undefined?a4b[\"extensions\"][a3l[\"KHR_TEXTURE_TRANSFORM\"]]:undefined;if(a4e){var a4f=a4c['associations'][\"get\"](a4d);a4d=a4c['extensions'][a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 21,
+    "refCount": 1,
+    "snippet": "4e)]]){var a4e=a4b['extensions']!==undefined?a4b[akf(0x53e)][a3l[akf(0x24e)]]:undefined;if(a4e){var a4f=a4c['associations'][akf(0xa18)](a4d);a4d=a4c['extensions"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: skinned flag driving clone key and skinning. SERVED: identical (snippet-only twin).",
+   "name": "isSkinnedMesh",
+   "selector": "a4f@u0020#22",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 22,
+    "refCount": 3,
+    "snippet": "!==undefined,a4d=a4a[\"attributes\"][\"color\"]!==undefined,a4e=a4a[\"attributes\"][\"normal\"]===undefined,a4f=a49['isSkinnedMesh']===!![],a4g=Object[\"keys\"](a4a['morp"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 22,
+    "refCount": 3,
+    "snippet": "==undefined,a4d=a4a[akg(0x672)][akg(0x193)]!==undefined,a4e=a4a[akg(0x672)][akg(0x363)]===undefined,a4f=a49['isSkinnedMesh']===!![],a4g=Object[akg(0x6a4)](a4a['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: params object accumulating material properties for constructor. SERVED: identical (snippet-only twin).",
+   "name": "materialParams",
+   "selector": "a4f@u0020#23",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 23,
+    "refCount": 26,
+    "snippet": "ion(a49){var aki=aiP,a4a=this,a4b=this[\"json\"],a4c=this['extensions'],a4d=a4b[\"materials\"][a49],a4e,a4f={},a4g=a4d['extensions']||{},a4h=[];if(a4g[a3l['KHR_MATE"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 23,
+    "refCount": 26,
+    "snippet": "(a49){var aki=aiP,a4a=this,a4b=this[aki(0x7c5)],a4c=this['extensions'],a4d=a4b[aki(0xe3d)][a49],a4e,a4f={},a4g=a4d['extensions']||{},a4h=[];if(a4g[a3l['KHR_MATE"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: POSITION accessor min array seeding bounding box. SERVED: identical (snippet-only twin).",
+   "name": "accessorMin",
+   "selector": "a4f@u0020#24",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 24,
+    "refCount": 8,
+    "snippet": "uAsEB[(\"Box3\")]();if(a4c[\"POSITION\"]!==undefined){var a4e=a4b[\"json\"][\"accessors\"][a4c['POSITION']],a4f=a4e[\"min\"],a4g=a4e['max'];if(a4f!==undefined&&a4g!==unde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 24,
+    "refCount": 8,
+    "snippet": "akn(0x859))]();if(a4c[akn(0xcce)]!==undefined){var a4e=a4b[akn(0x7c5)][akn(0xd44)][a4c['POSITION']],a4f=a4e[akn(0x40a)],a4g=a4e['max'];if(a4f!==undefined&&a4g!="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: for-in attribute key mapped and fetched per geometry. SERVED: identical (snippet-only twin).",
+   "name": "attributeName",
+   "selector": "a4f@u0020#26",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "a4b['getDependency']('accessor',a4i)['then'](function(a4k){a49['setAttribute'](a4j,a4k);});}for(var a4f in a4c){var a4g=a3Q[a4f]||a4f[\"toLowerCase\"]();if(a4g in"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "a4b['getDependency']('accessor',a4i)['then'](function(a4k){a49['setAttribute'](a4j,a4k);});}for(var a4f in a4c){var a4g=a3Q[a4f]||a4f[ako(0x831)]();if(a4g in a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index enumerating primitives for geometry loading. SERVED: identical (snippet-only twin).",
+   "name": "primitiveIndex",
+   "selector": "a4f@u0020#28",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 28,
+    "refCount": 3,
+    "snippet": "]][\"decodePrimitive\"](a4m,a4a)['then'](function(a4n){return a47(a4n,a4m,a4a);});}var a4e=[];for(var a4f=0x0,a4g=a49[\"length\"];a4f<a4g;a4f++){var a4h=a49[a4f],a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 28,
+    "refCount": 3,
+    "snippet": "SSION']][akt(0x1016)](a4m,a4a)['then'](function(a4n){return a47(a4n,a4m,a4a);});}var a4e=[];for(var a4f=0x0,a4g=a49[aks(0x3a2)];a4f<a4g;a4f++){var a4h=a49[a4f],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: collected channel samplers resolved via Promise.all. SERVED: identical (snippet-only twin).",
+   "name": "pendingSamplers",
+   "selector": "a4f@u0020#30",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 30,
+    "refCount": 2,
+    "snippet": "mation\"]=function(a49){var aky=aiP,a4a=this['json'],a4b=a4a['animations'][a49],a4c=[],a4d=[],a4e=[],a4f=[],a4g=[];for(var a4h=0x0,a4i=a4b['channels']['length'];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 30,
+    "refCount": 2,
+    "snippet": "(0x709)]=function(a49){var aky=aiP,a4a=this['json'],a4b=a4a['animations'][a49],a4c=[],a4d=[],a4e=[],a4f=[],a4g=[];for(var a4h=0x0,a4i=a4b['channels']['length'];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: node mesh camera promises joined by Promise.all. SERVED: identical (snippet-only twin).",
+   "name": "dependencyPromises",
+   "selector": "a4f@u0020#31",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 31,
+    "refCount": 4,
+    "snippet": "'nodes'][a49],a4e=a4d['name']?a4c['createUniqueName'](a4d[\"name\"]):'';return function(){var akC=akB,a4f=[];return a4d[\"mesh\"]!==undefined&&a4f[\"push\"](a4c['getD"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 31,
+    "refCount": 4,
+    "snippet": "es'][a49],a4e=a4d['name']?a4c['createUniqueName'](a4d[akB(0x9ec)]):'';return function(){var akC=akB,a4f=[];return a4d[akC(0x6eb)]!==undefined&&a4f[akC(0xf1e)](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: resolved node object skin-checked traversed and returned. SERVED: identical (snippet-only twin).",
+   "name": "loadedNode",
+   "selector": "a4f@u0020#33",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 33,
+    "refCount": 3,
+    "snippet": "b,a4c,a4d){var akH=o,a4e=a4c[\"nodes\"][a4a];return a4d[\"getDependency\"]('node',a4a)[\"then\"](function(a4f){var akI=akH;if(a4e[\"skin\"]===undefined)return a4f;var a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 33,
+    "refCount": 3,
+    "snippet": "a4c,a4d){var akH=o,a4e=a4c[akH(0xa6f)][a4a];return a4d[akH(0x933)]('node',a4a)[akH(0x4d6)](function(a4f){var akI=akH;if(a4e[akI(0x9b5)]===undefined)return a4f;v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: finished node added to parent before children recursion. SERVED: identical (snippet-only twin).",
+   "name": "resolvedNode",
+   "selector": "a4f@u0020#34",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 34,
+    "refCount": 2,
+    "snippet": ";}a4i['bind'](new usvzFuAsEB['Skeleton'](a4j,a4k),a4i[\"matrixWorld\"]);}),a4f;});})['then'](function(a4f){var akL=akH;a4b[\"add\"](a4f);var a4g=[];if(a4e['children"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 34,
+    "refCount": 2,
+    "snippet": "l]);}a4i['bind'](new usvzFuAsEB['Skeleton'](a4j,a4k),a4i[akK(0xfbe)]);}),a4f;});})['then'](function(a4f){var akL=akH;a4b[akL(0x8da)](a4f);var a4g=[];if(a4e['chi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this-alias used for naming and child recursion. SERVED: identical (snippet-only twin).",
+   "name": "parser",
+   "selector": "a4f@u0020#35",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u0020",
+    "index": 35,
+    "refCount": 2,
+    "snippet": "function a4a(a4b){var akM=o,a4c=this[\"json\"],a4d=this[\"extensions\"],a4e=this[\"json\"]['scenes'][a4b],a4f=this,a4g=new usvzFuAsEB[(\"Group\")]();if(a4e['name'])a4g["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 35,
+    "refCount": 2,
+    "snippet": "on a4a(a4b){var akM=o,a4c=this[akM(0x7c5)],a4d=this[akM(0x53e)],a4e=this[akM(0x7c5)]['scenes'][a4b],a4f=this,a4g=new usvzFuAsEB[(akM(0xd84))]();if(a4e['name'])a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: retryable FileLoader attempt invoked with attempt count. SERVED: identical (snippet-only twin).",
+   "name": "attemptLoad",
+   "selector": "a4g@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "4c?a4c(a4h):console['error'](a4h),a4d['manager']['itemError'](a49),a4d[\"manager\"][\"itemEnd\"](a49);},a4g=function(a4h){var aiS=aiQ,a4i=new usvzFuAsEB['FileLoader"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a4c(a4h):console['error'](a4h),a4d['manager']['itemError'](a49),a4d[aiR(0x1070)][aiR(0xa52)](a49);},a4g=function(a4h){var aiS=aiQ,a4i=new usvzFuAsEB['FileLoader"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first four bytes compared against glTF magic. SERVED: identical (snippet-only twin).",
+   "name": "headerMagic",
+   "selector": "a4g@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "':function(a49,a4a,a4b,a4c){var aj2=aiP,a4d,a4e={},a4f={};if(typeof a49==='string')a4d=a49;else{var a4g=usvzFuAsEB['LoaderUtils'][\"decodeText\"](new Uint8Array(a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "':function(a49,a4a,a4b,a4c){var aj2=aiP,a4d,a4e={},a4f={};if(typeof a49==='string')a4d=a49;else{var a4g=usvzFuAsEB['LoaderUtils'][aj2(0x67d)](new Uint8Array(a49"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: punctual light definition driving three.js light construction. SERVED: identical (snippet-only twin).",
+   "name": "lightDef",
+   "selector": "a4g@u0020#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 20,
+    "snippet": "ar a4d=a4a['json'],a4e=a4d['extensions']&&a4d[\"extensions\"][this[\"name\"]]||{},a4f=a4e['lights']||[],a4g=a4f[a49],a4h,a4i=new usvzFuAsEB['Color'](0xffffff);if(a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 20,
+    "snippet": " a4d=a4a['json'],a4e=a4d['extensions']&&a4d[aj5(0x53e)][this[aj5(0x9ec)]]||{},a4f=a4e['lights']||[],a4g=a4f[a49],a4h,a4i=new usvzFuAsEB['Color'](0xffffff);if(a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: URI handler or fallback loader passed to loadTextureImage. SERVED: identical (snippet-only twin).",
+   "name": "imageLoader",
+   "selector": "a4g@u0020#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "!a4d[\"extensions\"][a4a])return null;var a4e=a4d['extensions'][a4a],a4f=a4c['images'][a4e['source']],a4g=a4f['uri']?a4b['options']['manager']['getHandler'](a4f['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "||!a4d[aji(0x53e)][a4a])return null;var a4e=a4d['extensions'][a4a],a4f=a4c['images'][a4e['source']],a4g=a4f['uri']?a4b['options']['manager']['getHandler'](a4f['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: view byteOffset defaulting zero for Uint8Array slice. SERVED: identical (snippet-only twin).",
+   "name": "byteOffset",
+   "selector": "a4g@u0020#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "les');else return null;}return Promise[\"all\"]([a4d,a4e['ready']])['then'](function(a4f){var ajo=ajn,a4g=a4c['byteOffset']||0x0,a4h=a4c['byteLength']||0x0,a4i=a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": ";else return null;}return Promise[ajn(0x235)]([a4d,a4e['ready']])['then'](function(a4f){var ajo=ajn,a4g=a4c['byteOffset']||0x0,a4h=a4c['byteLength']||0x0,a4i=a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: BIN chunk start offset bounding body slice. SERVED: identical (snippet-only twin).",
+   "name": "binChunkStart",
+   "selector": "a4g@u0020#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "4c,a4d);this['content']=usvzFuAsEB['LoaderUtils']['decodeText'](a4f);}else{if(a4e===a3x[\"BIN\"]){var a4g=a3v+a4c;this['body']=a49[\"slice\"](a4g,a4g+a4d);}}a4c+=a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "d);this['content']=usvzFuAsEB['LoaderUtils']['decodeText'](a4f);}else{if(a4e===a3x[ajp(0xc29)]){var a4g=a3v+a4c;this['body']=a49[ajp(0x67c)](a4g,a4g+a4d);}}a4c+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-attribute normalized flags applied after Draco decode. SERVED: identical (snippet-only twin).",
+   "name": "normalizedMap",
+   "selector": "a4g@u0020#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "[\"extensions\"][this['name']][\"bufferView\"],a4e=a49['extensions'][this['name']]['attributes'],a4f={},a4g={},a4h={};for(var a4i in a4e){var a4j=a3Q[a4i]||a4i[\"toL"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "=a49[ajr(0x53e)][this['name']][ajr(0x585)],a4e=a49['extensions'][this['name']]['attributes'],a4f={},a4g={},a4h={};for(var a4i in a4e){var a4j=a3Q[a4i]||a4i[ajr("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: null-valued uniform object registered as specularMap. SERVED: identical (snippet-only twin).",
+   "name": "specularMapUniform",
+   "selector": "a4g@u0020#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "ness, 1.0 );',\"material.specularColor = specularFactor;\"]['join']('\\n'),a4f={};a4f[\"value\"]=0x1;var a4g={};a4g['value']=null;var a4h={};a4h['value']=null;var a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 2,
+    "snippet": " min( material.specularRoughness, 1.0 );',aju(0x101e)]['join']('\\n'),a4f={};a4f[aju(0x9c5)]=0x1;var a4g={};a4g['value']=null;var a4h={};a4h['value']=null;var a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: valueSize doubled tangent offset; SERVED identical. SERVED: identical (snippet-only twin).",
+   "name": "valueSizeDoubled",
+   "selector": "a4g@u0020#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "49,a4a,a4b,a4c){var ajJ=aiP,a4d=this['resultBuffer'],a4e=this['sampleValues'],a4f=this[\"valueSize\"],a4g=a4f*0x2,a4h=a4f*0x3,a4i=a4c-a4a,a4j=(a4b-a4a)/a4i,a4k=a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "a49,a4a,a4b,a4c){var ajJ=aiP,a4d=this['resultBuffer'],a4e=this['sampleValues'],a4f=this[ajJ(0x929)],a4g=a4f*0x2,a4h=a4f*0x3,a4i=a4c-a4a,a4j=(a4b-a4a)/a4i,a4k=a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: assembled scene/animations/cameras result object; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "gltfResult",
+   "selector": "a4g@u0020#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 8,
+    "snippet": "ependencies\"]('animation'),this['getDependencies']('aKmLbYuMC')])['then'](function(a4f){var ajV=ajU,a4g={};a4g['scene']=a4f[0x0][a4c['scene']||0x0],a4g[\"scenes\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 8,
+    "snippet": "s[ajU(0x324)]('animation'),this['getDependencies']('aKmLbYuMC')])['then'](function(a4f){var ajV=ajU,a4g={};a4g['scene']=a4f[0x0][a4c['scene']||0x0],a4g[ajV(0x8d"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: skin joints length loop bound; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "jointsCount",
+   "selector": "a4g@u0020#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "s']||[];for(var a4c=0x0,a4d=a4a[\"length\"];a4c<a4d;a4c++){var a4e=a4a[a4c]['joints'];for(var a4f=0x0,a4g=a4e[\"length\"];a4f<a4g;a4f++){a49[a4e[a4f]][\"isBone\"]=!!["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "]||[];for(var a4c=0x0,a4d=a4a[ajW(0x3a2)];a4c<a4d;a4c++){var a4e=a4a[a4c]['joints'];for(var a4f=0x0,a4g=a4e[ajW(0x3a2)];a4f<a4g;a4f++){a49[a4e[a4f]][ajW(0x864)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: accessor type component count; BufferAttribute size both sides. SERVED: identical (snippet-only twin).",
+   "name": "itemSize",
+   "selector": "a4g@u0020#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 14,
+    "snippet": "rse']['values']['bufferView']))),Promise[\"all\"](a4d)[\"then\"](function(a4e){var ak8=ak7,a4f=a4e[0x0],a4g=a3O[a4c[\"type\"]],a4h=a3I[a4c['componentType']],a4i=a4h[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 14,
+    "snippet": "lues']['bufferView']))),Promise[ak7(0x235)](a4d)[ak7(0x4d6)](function(a4e){var ak8=ak7,a4f=a4e[0x0],a4g=a3O[a4c[ak8(0xafb)]],a4h=a3I[a4c['componentType']],a4i=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: URI handler or DDS/default loader; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "textureImageLoader",
+   "selector": "a4g@u0020#14",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "S']]?a4f=a4b['images'][a4e[a3l['MSFT_TEXTURE_DDS']][\"source\"]]:a4f=a4b['images'][a4d['source']];var a4g;return a4f['uri']&&(a4g=a4c['manager'][\"getHandler\"](a4f"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "]?a4f=a4b['images'][a4e[a3l['MSFT_TEXTURE_DDS']][ak9(0x10ea)]]:a4f=a4b['images'][a4d['source']];var a4g;return a4f['uri']&&(a4g=a4c['manager'][ak9(0xfe1)](a4f['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: URL. SERVED: identical (snippet-only twin).",
+   "name": "urlApi",
+   "selector": "a4g@u0020#15",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "ion(a49,a4a,a4b){var aka=aiP,a4c=this,a4d=this[\"json\"],a4e=this[\"options\"],a4f=a4d['textures'][a49],a4g=self['URL']||self[\"webkitURL\"],a4h=a4a['uri'],a4i=![],a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "49,a4a,a4b){var aka=aiP,a4c=this,a4d=this[aka(0x7c5)],a4e=this[aka(0xa69)],a4f=a4d['textures'][a49],a4g=self['URL']||self[aka(0xf03)],a4h=a4a['uri'],a4i=![],a4j"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: morphAttributes non-empty flag; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "hasMorphTargets",
+   "selector": "a4g@u0020#16",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 4,
+    "snippet": "\"][\"color\"]!==undefined,a4e=a4a[\"attributes\"][\"normal\"]===undefined,a4f=a49['isSkinnedMesh']===!![],a4g=Object[\"keys\"](a4a['morphAttributes'])['length']>0x0,a4h"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 4,
+    "snippet": "akg(0x193)]!==undefined,a4e=a4a[akg(0x672)][akg(0x363)]===undefined,a4f=a49['isSkinnedMesh']===!![],a4g=Object[akg(0x6a4)](a4a['morphAttributes'])['length']>0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: material extensions object or empty; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "materialExtensions",
+   "selector": "a4g@u0020#17",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "){var aki=aiP,a4a=this,a4b=this[\"json\"],a4c=this['extensions'],a4d=a4b[\"materials\"][a49],a4e,a4f={},a4g=a4d['extensions']||{},a4h=[];if(a4g[a3l['KHR_MATERIALS_P"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "ar aki=aiP,a4a=this,a4b=this[aki(0x7c5)],a4c=this['extensions'],a4d=a4b[aki(0xe3d)][a49],a4e,a4f={},a4g=a4d['extensions']||{},a4h=[];if(a4g[a3l['KHR_MATERIALS_P"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: POSITION accessor max bounds pair; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "accessorMax",
+   "selector": "a4g@u0020#18",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 18,
+    "refCount": 8,
+    "snippet": "();if(a4c[\"POSITION\"]!==undefined){var a4e=a4b[\"json\"][\"accessors\"][a4c['POSITION']],a4f=a4e[\"min\"],a4g=a4e['max'];if(a4f!==undefined&&a4g!==undefined)a4d[\"set\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 18,
+    "refCount": 8,
+    "snippet": "c[akn(0xcce)]!==undefined){var a4e=a4b[akn(0x7c5)][akn(0xd44)][a4c['POSITION']],a4f=a4e[akn(0x40a)],a4g=a4e['max'];if(a4f!==undefined&&a4g!==undefined)a4d[akn(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mapped lowercased attribute key; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "attributeName2",
+   "selector": "a4g@u0020#20",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "cy']('accessor',a4i)['then'](function(a4k){a49['setAttribute'](a4j,a4k);});}for(var a4f in a4c){var a4g=a3Q[a4f]||a4f[\"toLowerCase\"]();if(a4g in a49['attributes"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "cy']('accessor',a4i)['then'](function(a4k){a49['setAttribute'](a4j,a4k);});}for(var a4f in a4c){var a4g=a3Q[a4f]||a4f[ako(0x831)]();if(a4g in a49['attributes'])"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: primitives length loop bound; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "primitiveCount",
+   "selector": "a4g@u0020#22",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 22,
+    "refCount": 1,
+    "snippet": "dePrimitive\"](a4m,a4a)['then'](function(a4n){return a47(a4n,a4m,a4a);});}var a4e=[];for(var a4f=0x0,a4g=a49[\"length\"];a4f<a4g;a4f++){var a4h=a49[a4f],a4i=a43(a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 22,
+    "refCount": 1,
+    "snippet": "[akt(0x1016)](a4m,a4a)['then'](function(a4n){return a47(a4n,a4m,a4a);});}var a4e=[];for(var a4f=0x0,a4g=a49[aks(0x3a2)];a4f<a4g;a4f++){var a4h=a49[a4f],a4i=a43("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: resolved mesh dependency ref; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "loadedMesh",
+   "selector": "a4g@u0020#25",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 25,
+    "refCount": 1,
+    "snippet": "turn a4d[\"mesh\"]!==undefined&&a4f[\"push\"](a4c['getDependency']('mesh',a4d['mesh'])[\"then\"](function(a4g){var akD=akC,a4h=a4c[\"_getNodeRef\"](a4c[\"meshCache\"],a4d"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 25,
+    "refCount": 1,
+    "snippet": "(0x6eb)]!==undefined&&a4f[akC(0xf1e)](a4c['getDependency']('mesh',a4d['mesh'])[akC(0x4d6)](function(a4g){var akD=akC,a4h=a4c[akD(0x658)](a4c[akD(0xc36)],a4d['me"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: resolved camera dependency ref; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "loadedCamera",
+   "selector": "a4g@u0020#26",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 26,
+    "refCount": 1,
+    "snippet": "YuMC']!==undefined&&a4f['push'](a4c[\"getDependency\"]('aKmLbYuMC',a4d['aKmLbYuMC'])['then'](function(a4g){var akF=akC;return a4c['_getNodeRef'](a4c[\"cameraCache\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 26,
+    "refCount": 1,
+    "snippet": "aKmLbYuMC']!==undefined&&a4f['push'](a4c[akC(0x933)]('aKmLbYuMC',a4d['aKmLbYuMC'])['then'](function(a4g){var akF=akC;return a4c['_getNodeRef'](a4c[akF(0xef2)],a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: extension queried for node attachment; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "extension",
+   "selector": "a4g@u0020#27",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 27,
+    "refCount": 2,
+    "snippet": "C;return a4c['_getNodeRef'](a4c[\"cameraCache\"],a4d['aKmLbYuMC'],a4g);})),a4c['_invokeAll'](function(a4g){return a4g['createNodeAttachment']&&a4g['createNodeAtta"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 27,
+    "refCount": 2,
+    "snippet": "=akC;return a4c['_getNodeRef'](a4c[akF(0xef2)],a4d['aKmLbYuMC'],a4g);})),a4c['_invokeAll'](function(a4g){return a4g['createNodeAttachment']&&a4g['createNodeAtta"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: skin with joints bind matrices; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "loadedSkin",
+   "selector": "a4g@u0020#30",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 30,
+    "refCount": 6,
+    "snippet": "ependency\"]('node',a4a)[\"then\"](function(a4f){var akI=akH;if(a4e[\"skin\"]===undefined)return a4f;var a4g;return a4d[\"getDependency\"]('skin',a4e[\"skin\"])['then']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 30,
+    "refCount": 6,
+    "snippet": "3)]('node',a4a)[akH(0x4d6)](function(a4f){var akI=akH;if(a4e[akI(0x9b5)]===undefined)return a4f;var a4g;return a4d[akI(0x933)]('skin',a4e[akI(0x9b5)])['then'](f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: child node promise list; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "childNodePromises",
+   "selector": "a4g@u0020#31",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 31,
+    "refCount": 2,
+    "snippet": "n'](a4j,a4k),a4i[\"matrixWorld\"]);}),a4f;});})['then'](function(a4f){var akL=akH;a4b[\"add\"](a4f);var a4g=[];if(a4e['children']){var a4h=a4e['children'];for(var a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 31,
+    "refCount": 2,
+    "snippet": "](a4j,a4k),a4i[akK(0xfbe)]);}),a4f;});})['then'](function(a4f){var akL=akH;a4b[akL(0x8da)](a4f);var a4g=[];if(a4e['children']){var a4h=a4e['children'];for(var a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: constructed Scene with children; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "scene",
+   "selector": "a4g@u0020#32",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u0020",
+    "index": 32,
+    "refCount": 5,
+    "snippet": "a4a(a4b){var akM=o,a4c=this[\"json\"],a4d=this[\"extensions\"],a4e=this[\"json\"]['scenes'][a4b],a4f=this,a4g=new usvzFuAsEB[(\"Group\")]();if(a4e['name'])a4g[\"name\"]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 32,
+    "refCount": 5,
+    "snippet": "b){var akM=o,a4c=this[akM(0x7c5)],a4d=this[akM(0x53e)],a4e=this[akM(0x7c5)]['scenes'][a4b],a4f=this,a4g=new usvzFuAsEB[(akM(0xd84))]();if(a4e['name'])a4g[akM(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: load failure passed to handler; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "loadError",
+   "selector": "a4h@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "usvzFuAsEB[\"LoaderUtils\"][\"extractUrlBase\"](a49);this[\"manager\"]['itemStart'](a49);var a4f=function(a4h){var aiR=aiQ;a4c?a4c(a4h):console['error'](a4h),a4d['man"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ")]:a4e=usvzFuAsEB[aiQ(0x902)][aiQ(0xfb9)](a49);this[aiQ(0x1070)]['itemStart'](a49);var a4f=function(a4h){var aiR=aiQ;a4c?a4c(a4h):console['error'](a4h),a4d['man"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: retry attempt index vs maxRetries; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "retryAttempt",
+   "selector": "a4h@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "onsole['error'](a4h),a4d['manager']['itemError'](a49),a4d[\"manager\"][\"itemEnd\"](a49);},a4g=function(a4h){var aiS=aiQ,a4i=new usvzFuAsEB['FileLoader'](a4d['manag"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "ole['error'](a4h),a4d['manager']['itemError'](a49),a4d[aiR(0x1070)][aiR(0xa52)](a49);},a4g=function(a4h){var aiS=aiQ,a4i=new usvzFuAsEB['FileLoader'](a4d['manag"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: parsed glTF JSON document; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "gltfJson",
+   "selector": "a4h@u0020#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "NARY_GLTF\"]]['content'];}else a4d=usvzFuAsEB['LoaderUtils'][\"decodeText\"](new Uint8Array(a49));}var a4h=JSON[\"parse\"](a4d);if(a4h[\"asset\"]===undefined||a4h[\"ass"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "l[aj2(0x3ad)]]['content'];}else a4d=usvzFuAsEB['LoaderUtils'][aj2(0x67d)](new Uint8Array(a49));}var a4h=JSON[aj2(0x8c1)](a4d);if(a4h[aj2(0x23e)]===undefined||a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: constructed punctual light object; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "light",
+   "selector": "a4h@u0020#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 18,
+    "snippet": "son'],a4e=a4d['extensions']&&a4d[\"extensions\"][this[\"name\"]]||{},a4f=a4e['lights']||[],a4g=a4f[a49],a4h,a4i=new usvzFuAsEB['Color'](0xffffff);if(a4g['color']!=="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 18,
+    "snippet": "n'],a4e=a4d['extensions']&&a4d[aj5(0x53e)][this[aj5(0x9ec)]]||{},a4f=a4e['lights']||[],a4g=a4f[a49],a4h,a4i=new usvzFuAsEB['Color'](0xffffff);if(a4g['color']!=="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: WebP support flag; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "webpSupported",
+   "selector": "a4h@u0020#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "er']['getHandler'](a4f['uri']):a4b[\"textureLoader\"];return this[\"detectSupport\"]()[\"then\"](function(a4h){var ajj=aji;if(a4h)return a4b['loadTextureImage'](a49,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "manager']['getHandler'](a4f['uri']):a4b[aji(0xd20)];return this[aji(0x10be)]()[aji(0x4d6)](function(a4h){var ajj=aji;if(a4h)return a4b['loadTextureImage'](a49,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: buffer byteLength for view; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "byteLength",
+   "selector": "a4h@u0020#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "urn Promise[\"all\"]([a4d,a4e['ready']])['then'](function(a4f){var ajo=ajn,a4g=a4c['byteOffset']||0x0,a4h=a4c['byteLength']||0x0,a4i=a4c['count'],a4j=a4c[\"byteStr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "romise[ajn(0x235)]([a4d,a4e['ready']])['then'](function(a4f){var ajo=ajn,a4g=a4c['byteOffset']||0x0,a4h=a4c['byteLength']||0x0,a4i=a4c['count'],a4j=a4c[ajo(0x58"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: attribute component-type map; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "attributeTypes",
+   "selector": "a4h@u0020#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "sions\"][this['name']][\"bufferView\"],a4e=a49['extensions'][this['name']]['attributes'],a4f={},a4g={},a4h={};for(var a4i in a4e){var a4j=a3Q[a4i]||a4i[\"toLowerCas"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "r(0x53e)][this['name']][ajr(0x585)],a4e=a49['extensions'][this['name']]['attributes'],a4f={},a4g={},a4h={};for(var a4i in a4e){var a4j=a3Q[a4i]||a4i[ajr(0x831)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: glossinessMap null uniform; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "glossinessMapUniform",
+   "selector": "a4h@u0020#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "larColor = specularFactor;\"]['join']('\\n'),a4f={};a4f[\"value\"]=0x1;var a4g={};a4g['value']=null;var a4h={};a4h['value']=null;var a4i={'specular':{'value':new us"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "ess, 1.0 );',aju(0x101e)]['join']('\\n'),a4f={};a4f[aju(0x9c5)]=0x1;var a4g={};a4g['value']=null;var a4h={};a4h['value']=null;var a4i={'specular':{'value':new us"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: valueSize tripled stride offsets; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "valueSizeTripled",
+   "selector": "a4h@u0020#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "4c){var ajJ=aiP,a4d=this['resultBuffer'],a4e=this['sampleValues'],a4f=this[\"valueSize\"],a4g=a4f*0x2,a4h=a4f*0x3,a4i=a4c-a4a,a4j=(a4b-a4a)/a4i,a4k=a4j*a4j,a4l=a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "a4c){var ajJ=aiP,a4d=this['resultBuffer'],a4e=this['sampleValues'],a4f=this[ajJ(0x929)],a4g=a4f*0x2,a4h=a4f*0x3,a4i=a4c-a4a,a4j=(a4b-a4a)/a4i,a4k=a4j*a4j,a4l=a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: result alias for hooks; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "finalResult",
+   "selector": "a4h@u0020#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "a4f[0x1],a4g['cameras']=a4f[0x2],a4g['asset']=a4c[\"asset\"],a4g[\"parser\"]=a4b,a4g[\"userData\"]={};var a4h=a4g;a3Z(a4d,a4h,a4c),a40(a4h,a4c),a4e['removeAll'](),a4b"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "1],a4g['cameras']=a4f[0x2],a4g['asset']=a4c[ajV(0x23e)],a4g[ajV(0x1088)]=a4b,a4g[ajV(0x8d2)]={};var a4h=a4g;a3Z(a4d,a4h,a4c),a40(a4h,a4c),a4e['removeAll'](),a4b"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: nodes loop index; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "nodeIndex",
+   "selector": "a4h@u0020#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "]['joints'];for(var a4f=0x0,a4g=a4e[\"length\"];a4f<a4g;a4f++){a49[a4e[a4f]][\"isBone\"]=!![];}}for(var a4h=0x0,a4i=a49['length'];a4h<a4i;a4h++){var a4j=a49[a4h];a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "oints'];for(var a4f=0x0,a4g=a4e[ajW(0x3a2)];a4f<a4g;a4f++){a49[a4e[a4f]][ajW(0x864)]=!![];}}for(var a4h=0x0,a4i=a49['length'];a4h<a4i;a4h++){var a4j=a49[a4h];a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: componentType typed-array constructor; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "arrayConstructor",
+   "selector": "a4h@u0020#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 12,
+    "refCount": 5,
+    "snippet": "erView']))),Promise[\"all\"](a4d)[\"then\"](function(a4e){var ak8=ak7,a4f=a4e[0x0],a4g=a3O[a4c[\"type\"]],a4h=a3I[a4c['componentType']],a4i=a4h[\"BYTES_PER_ELEMENT\"],a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 12,
+    "refCount": 5,
+    "snippet": "romise[ak7(0x235)](a4d)[ak7(0x4d6)](function(a4e){var ak8=ak7,a4f=a4e[0x0],a4g=a3O[a4c[ak8(0xafb)]],a4h=a3I[a4c['componentType']],a4i=a4h[ak8(0x946)],a4j=a4i*a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: image URI then object URL; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "imageUrl",
+   "selector": "a4h@u0020#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 5,
+    "snippet": "is,a4d=this[\"json\"],a4e=this[\"options\"],a4f=a4d['textures'][a49],a4g=self['URL']||self[\"webkitURL\"],a4h=a4a['uri'],a4i=![],a4j=!![];if(a4a['mimeType']==='image/"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 5,
+    "snippet": "4d=this[aka(0x7c5)],a4e=this[aka(0xa69)],a4f=a4d['textures'][a49],a4g=self['URL']||self[aka(0xf03)],a4h=a4a['uri'],a4i=![],a4j=!![];if(a4a['mimeType']==='image/"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: morph normals presence flag; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "hasMorphNormals",
+   "selector": "a4h@u0020#14",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "=undefined,a4f=a49['isSkinnedMesh']===!![],a4g=Object[\"keys\"](a4a['morphAttributes'])['length']>0x0,a4h=a4g&&a4a['morphAttributes'][\"normal\"]!==undefined;if(a49"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "efined,a4f=a49['isSkinnedMesh']===!![],a4g=Object[akg(0x6a4)](a4a['morphAttributes'])['length']>0x0,a4h=a4g&&a4a['morphAttributes'][akg(0x363)]!==undefined;if(a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: material dependency promise list; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "materialPromises",
+   "selector": "a4h@u0020#15",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 15,
+    "refCount": 10,
+    "snippet": "=this[\"json\"],a4c=this['extensions'],a4d=a4b[\"materials\"][a49],a4e,a4f={},a4g=a4d['extensions']||{},a4h=[];if(a4g[a3l['KHR_MATERIALS_PBR_SPECULAR_GLOSSINESS']])"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 15,
+    "refCount": 10,
+    "snippet": "is[aki(0x7c5)],a4c=this['extensions'],a4d=a4b[aki(0xe3d)][a49],a4e,a4f={},a4g=a4d['extensions']||{},a4h=[];if(a4g[a3l['KHR_MATERIALS_PBR_SPECULAR_GLOSSINESS']])"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: primitive targets array; SERVED same. SERVED: identical (snippet-only twin).",
+   "name": "morphTargets",
+   "selector": "a4h@u0020#16",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 3,
+    "snippet": "'usvzFuAsEB.bxZSAjQYG: Missing min/max properties for accessor POSITION.');return;}}else return;var a4h=a4a[\"targets\"];if(a4h!==undefined){var a4i=new usvzFuAsE"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 3,
+    "snippet": "'usvzFuAsEB.bxZSAjQYG: Missing min/max properties for accessor POSITION.');return;}}else return;var a4h=a4a[akn(0x92)];if(a4h!==undefined){var a4i=new usvzFuAsE"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: forEach select element; children/selectedIndex/value accessed both lineages. SERVED: identical (snippet-only twin).",
+   "name": "selectEl",
+   "selector": "a3i@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3i",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "function uj(){var apu=ai1;tI(\"select:not(.ignore_me_select)\")[\"forEach\"](function(a3i){var apv=apu;try{var a3j=a3i[\"children\"]['length'];a3i['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "function uj(){var apu=ai1;tI(apu(0x296))[apu(0x68f)](function(a3i){var apv=apu;try{var a3j=a3i[apv(0xc76)]['length'];a3i['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: select children length bounding li-builder loop both lineages. SERVED: identical (snippet-only twin).",
+   "name": "optionCount",
+   "selector": "a3j@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3j",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "n uj(){var apu=ai1;tI(\"select:not(.ignore_me_select)\")[\"forEach\"](function(a3i){var apv=apu;try{var a3j=a3i[\"children\"]['length'];a3i['classList']['add'](tF);va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "function uj(){var apu=ai1;tI(apu(0x296))[apu(0x68f)](function(a3i){var apv=apu;try{var a3j=a3i[apv(0xc76)]['length'];a3i['classList']['add'](tF);va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: select innerHTML wrapped into div string both sides. SERVED: identical (snippet-only twin).",
+   "name": "selectInnerHtml",
+   "selector": "a3k@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "h\"](function(a3i){var apv=apu;try{var a3j=a3i[\"children\"]['length'];a3i['classList']['add'](tF);var a3k=a3i['innerHTML'],a3l='<div>'+a3k+'</div>',a3m=tJ(\"<div c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "f)](function(a3i){var apv=apu;try{var a3j=a3i[apv(0xc76)]['length'];a3i['classList']['add'](tF);var a3k=a3i['innerHTML'],a3l='<div>'+a3k+'</div>',a3m=tJ(apv(0x5"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount=0 assigned never read",
+   "selector": "a3l@u0412#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: parsed replacement div inserted after select both sides. SERVED: identical (snippet-only twin).",
+   "name": "customSelectDiv",
+   "selector": "a3m@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "\"children\"]['length'];a3i['classList']['add'](tF);var a3k=a3i['innerHTML'],a3l='<div>'+a3k+'</div>',a3m=tJ(\"<div class='\"+tG+\"'></div>\"),a3n=a3i[\"insertAdjacent"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "apv(0xc76)]['length'];a3i['classList']['add'](tF);var a3k=a3i['innerHTML'],a3l='<div>'+a3k+'</div>',a3m=tJ(apv(0x577)+tG+apv(0x5eb)),a3n=a3i[apv(0x491)](apv(0x6"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inserted dropdown box; toggles classes/onclick both lineages. SERVED: identical (snippet-only twin).",
+   "name": "customSelectBox",
+   "selector": "a3n@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "]['add'](tF);var a3k=a3i['innerHTML'],a3l='<div>'+a3k+'</div>',a3m=tJ(\"<div class='\"+tG+\"'></div>\"),a3n=a3i[\"insertAdjacentElement\"](\"afterend\",a3m);a3n[\"append"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "ist']['add'](tF);var a3k=a3i['innerHTML'],a3l='<div>'+a3k+'</div>',a3m=tJ(apv(0x577)+tG+apv(0x5eb)),a3n=a3i[apv(0x491)](apv(0x66b),a3m);a3n[apv(0xe3c)](document"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag records selectedIndex==-1 then restores it. SERVED: identical (snippet-only twin).",
+   "name": "wasUnselected",
+   "selector": "a3o@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a3i[\"insertAdjacentElement\"](\"afterend\",a3m);a3n[\"appendChild\"](document['createElement']('p'));var a3o=![];a3i[\"selectedIndex\"]==-0x1&&(a3i[\"selectedIndex\"]=0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "apv(0x5eb)),a3n=a3i[apv(0x491)](apv(0x66b),a3m);a3n[apv(0xe3c)](document['createElement']('p'));var a3o=![];a3i[apv(0xb67)]==-0x1&&(a3i[apv(0xb67)]=0x0,a3o=!![]"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount=0 assigned never read",
+   "selector": "a3p@u0412#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tK(select) value assigned to box minWidth style. SERVED: identical (snippet-only twin).",
+   "name": "selectMinWidth",
+   "selector": "a3q@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3i[\"selectedIndex\"]]['textContent']);a3o&&(a3i['selectedIndex']=-0x1);var a3p=a3n['children'][0x0],a3q=tK(a3i);a3n['style'][\"minWidth\"]=a3q;var a3r=document['c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "69)][a3i[apv(0xb67)]]['textContent']);a3o&&(a3i['selectedIndex']=-0x1);var a3p=a3n['children'][0x0],a3q=tK(a3i);a3n['style'][apv(0x815)]=a3q;var a3r=document['c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: created ul holds li options, toggled both sides. SERVED: identical (snippet-only twin).",
+   "name": "optionsList",
+   "selector": "a3r@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "3i['selectedIndex']=-0x1);var a3p=a3n['children'][0x0],a3q=tK(a3i);a3n['style'][\"minWidth\"]=a3q;var a3r=document['createElement']('ul');a3r['classList'][\"add\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "3i['selectedIndex']=-0x1);var a3p=a3n['children'][0x0],a3q=tK(a3i);a3n['style'][apv(0x815)]=a3q;var a3r=document['createElement']('ul');a3r['classList'][apv(0x8"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: li built from option value/text appended both sides. SERVED: identical (snippet-only twin).",
+   "name": "optionItem",
+   "selector": "a3t@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "tH),a3n[\"par\"+'entNode'][\"insertBefore\"](a3r,a3n['nextSibling']);for(var a3s=0x0;a3s<a3j;a3s++){var a3t=tJ('<li\\x20id=\\x27'+a3i['id']+'.'+a3i[\"children\"][a3s][\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "),a3n[apv(0x1080)+'entNode'][apv(0xd64)](a3r,a3n['nextSibling']);for(var a3s=0x0;a3s<a3j;a3s++){var a3t=tJ('<li\\x20id=\\x27'+a3i['id']+'.'+a3i[apv(0xc76)][a3s][a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ul children collection looped for onclick assignment. SERVED: identical (snippet-only twin).",
+   "name": "optionItems",
+   "selector": "a3u@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "n'][a3s]['value']+'\\x27>'+a3i['children'][a3s]['textContent']+'</li>');a3r[\"appendChild\"](a3t);}var a3u=a3r['children'];a3n['onclick']=function(a3v){var apx=apv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "dren'][a3s]['value']+'\\x27>'+a3i['children'][a3s]['textContent']+'</li>');a3r[apv(0xe3c)](a3t);}var a3u=a3r['children'];a3n['onclick']=function(a3v){var apx=apv"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: each active dropdown closed unless current box. SERVED: identical (snippet-only twin).",
+   "name": "otherSelectBox",
+   "selector": "a3w@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ck']=function(a3v){var apx=apv;a3v['stopPropagation'](),tI('div.'+tG+'.active')['forEach'](function(a3w){var apw=o;if(a3w===a3n)return;a3w['classList'][\"remove\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ck']=function(a3v){var apx=apv;a3v['stopPropagation'](),tI('div.'+tG+'.active')['forEach'](function(a3w){var apw=o;if(a3w===a3n)return;a3w['classList'][apw(0x94"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: li onclick event param only undefined-checked. SERVED: identical (snippet-only twin).",
+   "name": "clickEvent",
+   "selector": "a3w@u0412#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0412",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "oggle']('open');};for(var a3s=0x0;a3s<a3u['length'];a3s++){let a3v=a3u[a3s];a3v['onclick']=function(a3w){var apy=apv;if(a3w!=undefined){}a3n[\"children\"][0x0]['t"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "oggle']('open');};for(var a3s=0x0;a3s<a3u['length'];a3s++){let a3v=a3u[a3s];a3v['onclick']=function(a3w){var apy=apv;if(a3w!=undefined){}a3n[apy(0xc76)][0x0]['t"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: catch param logged via console.log. SERVED: identical (snippet-only twin).",
+   "name": "caughtError",
+   "selector": "a3w@u0412#2",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0412",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "ntElement\"]['classList'][\"remove\"](\"open\"),a3i['dispatchEvent'](new Event('change')),tL();};}}catch(a3w){console['log'](a3w);}});}"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "b0a)]['classList'][apy(0x944)](apy(0xdc2)),a3i['dispatchEvent'](new Event('change')),tL();};}}catch(a3w){console['log'](a3w);}});}"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: recomputed tK(select) minWidth after option pick. SERVED: identical (snippet-only twin).",
+   "name": "updatedMinWidth",
+   "selector": "a3x@u0412#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "hildren\"][0x0]['textContent']=a3v['textContent'],a3i['value']=a3v['attributes']['rel'][\"value\"];var a3x=tK(a3i);a3n[\"style\"]['minWidth']=a3x,a3r[\"toggle\"](),a3n"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0412",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "xc76)][0x0]['textContent']=a3v['textContent'],a3i['value']=a3v['attributes']['rel'][apy(0x9c5)];var a3x=tK(a3i);a3n[apy(0xa92)]['minWidth']=a3x,a3r[apy(0x681)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 510px base driving arc radii and bar lengths. SERVED: identical (snippet-only twin).",
+   "name": "baseSize",
+   "selector": "a3l@u2338#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "function SF(){var ayD=ai1;if(SD!==undefined)return SD;var a3l=0x1ae;a3l=0x1fe;var a3m=\"#000\",a3n=new Kr['object']();a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "function SF(){var ayD=ai1;if(SD!==undefined)return SD;var a3l=0x1ae;a3l=0x1fe;var a3m=ayD(0x26c),a3n=new Kr['object']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: '#000' color argument in every arc/bar constructor. SERVED: identical (snippet-only twin).",
+   "name": "reticleColor",
+   "selector": "a3m@u2338#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "function SF(){var ayD=ai1;if(SD!==undefined)return SD;var a3l=0x1ae;a3l=0x1fe;var a3m=\"#000\",a3n=new Kr['object']();a3n['OFpGjswSPJw']=0x1;var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "function SF(){var ayD=ai1;if(SD!==undefined)return SD;var a3l=0x1ae;a3l=0x1fe;var a3m=ayD(0x26c),a3n=new Kr['object']();a3n['OFpGjswSPJw']=0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: object holding arc rings, prerendered into arc layer. SERVED: identical (snippet-only twin).",
+   "name": "arcGroup",
+   "selector": "a3n@u2338#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "function SF(){var ayD=ai1;if(SD!==undefined)return SD;var a3l=0x1ae;a3l=0x1fe;var a3m=\"#000\",a3n=new Kr['object']();a3n['OFpGjswSPJw']=0x1;var a3o=new Kr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "function SF(){var ayD=ai1;if(SD!==undefined)return SD;var a3l=0x1ae;a3l=0x1fe;var a3m=ayD(0x26c),a3n=new Kr['object']();a3n['OFpGjswSPJw']=0x1;var a3o=new Kr"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: opacity-0.7 arc of radius base+100, composited. SERVED: identical (snippet-only twin).",
+   "name": "outerArc",
+   "selector": "a3o@u2338#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ")return SD;var a3l=0x1ae;a3l=0x1fe;var a3m=\"#000\",a3n=new Kr['object']();a3n['OFpGjswSPJw']=0x1;var a3o=new Kr[(\"arc\")](0x0,0x0,a3l+0x64,a3m,Qz,0x0,0x258);a3o[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "urn SD;var a3l=0x1ae;a3l=0x1fe;var a3m=ayD(0x26c),a3n=new Kr['object']();a3n['OFpGjswSPJw']=0x1;var a3o=new Kr[(ayD(0x2b5))](0x0,0x0,a3l+0x64,a3m,Qz,0x0,0x258);"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: prerendered arc group passed to overlay composer. SERVED: identical (snippet-only twin).",
+   "name": "arcLayer",
+   "selector": "a3p@u2338#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "x0,0x258);a3o[\"opacity\"]=0.7,a3n['add'](new Kr[(\"arc\")](0x0,0x0,a3l-0x87-0x64,a3m,Qz,0x0,0x16));var a3p=Kr['pANxEEFMRM'](a3n,0x442,0x442,0x28,null,0x2);a3p['add"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "58);a3o[ayD(0x40e)]=0.7,a3n['add'](new Kr[(ayD(0x2b5))](0x0,0x0,a3l-0x87-0x64,a3m,Qz,0x0,0x16));var a3p=Kr['pANxEEFMRM'](a3n,0x442,0x442,0x28,null,0x2);a3p['add"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: object collecting crosshair bars/ticks sourcing reticle layers. SERVED: identical (snippet-only twin).",
+   "name": "barGroup",
+   "selector": "a3q@u2338#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "n,0x442,0x442,0x28,null,0x2);a3p['add'](a3o),a3p=Kr[\"pANxEEFMRM\"](a3p,0x442,0x442,0x0,null,0x2);var a3q=new Kr[(\"object\")](),a3r=0.9,a3s=0.8;a3q['add'](new Kr[("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "a3n,0x442,0x442,0x28,null,0x2);a3p['add'](a3o),a3p=Kr[ayD(0x217)](a3p,0x442,0x442,0x0,null,0x2);var a3q=new Kr[(ayD(0x478))](),a3r=0.9,a3s=0.8;a3q['add'](new Kr"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: thin dimension of crosshair bars, 0.9 then 3. SERVED: identical (snippet-only twin).",
+   "name": "barThickness",
+   "selector": "a3r@u2338#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "x2);a3p['add'](a3o),a3p=Kr[\"pANxEEFMRM\"](a3p,0x442,0x442,0x0,null,0x2);var a3q=new Kr[(\"object\")](),a3r=0.9,a3s=0.8;a3q['add'](new Kr[(\"QtjDeukbWl\")](0x0,0x0,a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2338",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "x2);a3p['add'](a3o),a3p=Kr[ayD(0x217)](a3p,0x442,0x442,0x0,null,0x2);var a3q=new Kr[(ayD(0x478))](),a3r=0.9,a3s=0.8;a3q['add'](new Kr[(ayD(0x1a1))](0x0,0x0,a3r,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Shared counter over four reset loops both sides. SERVED: identical (snippet-only twin).",
+   "name": "resetLoopIndex",
+   "selector": "a3l@u2325#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2325",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "K']=!![],Gf=![],Sr['blur']=![],Mq['ReDNKHkwk']=![],Mq[\"tGTnWzZUhv\"]=![],Mn['ReDNKHkwk']=![];for(var a3l=0x0;a3l<KC['length'];a3l++){KC[a3l]['s']['display']='non"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2325",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "CGK']=!![],Gf=![],Sr['blur']=![],Mq['ReDNKHkwk']=![],Mq[ayy(0xb64)]=![],Mn['ReDNKHkwk']=![];for(var a3l=0x0;a3l<KC['length'];a3l++){KC[a3l]['s']['display']='non"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Array element with uniforms value zeroed both sides. SERVED: identical (snippet-only twin).",
+   "name": "uniformEntry",
+   "selector": "a3m@u2325#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u2325",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "'elem']['remove']();}Mn['tGTnWzZUhv']=![];for(var a3l=0x0;a3l<Kq['rtuiAWgKjH'][\"length\"];a3l++){var a3m=Kq['rtuiAWgKjH'][a3l];HG(a3m['uniforms']['h'],\"value\"),a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2325",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "lem']['remove']();}Mn['tGTnWzZUhv']=![];for(var a3l=0x0;a3l<Kq['rtuiAWgKjH'][ayy(0x3a2)];a3l++){var a3m=Kq['rtuiAWgKjH'][a3l];HG(a3m['uniforms']['h'],ayy(0x9c5)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Key list driving WF flag reset loop both sides. SERVED: identical (snippet-only twin).",
+   "name": "wfResetKeys",
+   "selector": "a3n@u2325#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u2325",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "update'](0x64),Kq[\"disableGrenderer\"]();for(var a3l=0x0;a3l<0x80;a3l++){a28[a3l]['y']=-0xf423f;}var a3n=HU[WF['name']];for(var a3l=0x0;a3l<a3n['length'];a3l++){"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2325",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "oSiT']['update'](0x64),Kq[ayy(0x3b7)]();for(var a3l=0x0;a3l<0x80;a3l++){a28[a3l]['y']=-0xf423f;}var a3n=HU[WF['name']];for(var a3l=0x0;a3l<a3n['length'];a3l++){"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Hole material passed to InstancedMesh both sides. SERVED: identical (snippet-only twin).",
+   "name": "particleMaterial",
+   "selector": "a3r@u2471#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0.4,0.4,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uo,a3q[\"transparent\"]=!![];var a3r=new usvzFuAsEB[(\"KibzRdopc\")](a3q);a3r['uVuzMlCOokm']=!["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "'](0.4,0.4,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uo,a3q[azc(0xe2f)]=!![];var a3r=new usvzFuAsEB[(azc(0x104b))](a3q);a3r['uVuzMlCOokm']=!["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Effect material passed to InstancedMesh both sides. SERVED: identical (snippet-only twin).",
+   "name": "particleMaterial",
+   "selector": "a3r@u2471#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "15,0.15,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Ur,a3q[\"transparent\"]=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r['uVuzMlCOokm']=![];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "(0.15,0.15,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Ur,a3q[azh(0xe2f)]=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r['uVuzMlCOokm']=![];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Light material passed to InstancedMesh both sides. SERVED: identical (snippet-only twin).",
+   "name": "particleMaterial",
+   "selector": "a3r@u2471#6",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "3q=0x0;a3q<a3p['AUbXpMajF']['length'];a3q++){}a3p['name']=\"light\",a3p['computeVertexNormals']();var a3r=new usvzFuAsEB['KibzRdopc']({'map':Fj(\"textures/light.we"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "0x0;a3q<a3p['AUbXpMajF']['length'];a3q++){}a3p['name']=azm(0x151),a3p['computeVertexNormals']();var a3r=new usvzFuAsEB['KibzRdopc']({'map':Fj(azm(0xb32),null,!!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Blood material passed to InstancedMesh both sides. SERVED: identical (snippet-only twin).",
+   "name": "particleMaterial",
+   "selector": "a3r@u2471#7",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "1.2,1.2,0x1,0x1);a3p[\"computeVertexNormals\"]();var a3q={};a3q['map']=Us,a3q['transparent']=!![];var a3r=new usvzFuAsEB[(\"KibzRdopc\")](a3q);a3r['uVuzMlCOokm']=!["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "eGeometry'](1.2,1.2,0x1,0x1);a3p[azo(0x4ba)]();var a3q={};a3q['map']=Us,a3q['transparent']=!![];var a3r=new usvzFuAsEB[(azo(0x104b))](a3q);a3r['uVuzMlCOokm']=!["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Effect material passed to InstancedMesh both sides. SERVED: identical (snippet-only twin).",
+   "name": "particleMaterial",
+   "selector": "a3r@u2471#8",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "0.2,0.2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Up,a3q[\"transparent\"]=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r[\"uVuzMlCOokm\"]=![];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "'](0.2,0.2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Up,a3q[azq(0xe2f)]=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r[azq(0x496)]=![];var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Explode material passed to InstancedMesh both sides. SERVED: identical (snippet-only twin).",
+   "name": "particleMaterial",
+   "selector": "a3r@u2471#9",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 9,
+    "refCount": 2,
+    "snippet": "45,0.45,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Up,a3q['transparent']=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r[\"uVuzMlCOokm\"]=!![]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 9,
+    "refCount": 2,
+    "snippet": "45,0.45,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Up,a3q['transparent']=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r[azs(0x496)]=!![];va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Smoke material passed to InstancedMesh both sides. SERVED: identical (snippet-only twin).",
+   "name": "particleMaterial",
+   "selector": "a3r@u2471#10",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q[\"map\"]=Uz,a3q['transparent']=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r[\"uVuzMlCOokm\"]=![];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q[azu(0xff7)]=Uz,a3q['transparent']=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r[azu(0x496)]=![];var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new KibzRdopc material, depthWrite off, passed to InstancedMesh. SERVED: identical (snippet-only twin).",
+   "name": "waterSmokeMaterial",
+   "selector": "a3r@u2471#11",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 11,
+    "refCount": 2,
+    "snippet": "0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q[\"map\"]=UC,a3q['transparent']=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r[\"uVuzMlCOokm\"]=![];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 11,
+    "refCount": 2,
+    "snippet": "x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q[azx(0xff7)]=UC,a3q['transparent']=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r[azx(0x496)]=![];var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new KibzRdopc material, depthWrite off, passed to InstancedMesh. SERVED: identical (snippet-only twin).",
+   "name": "wineMaterial",
+   "selector": "a3r@u2471#12",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "0x2,0x2,0x1,0x1);a3p[\"computeVertexNormals\"]();var a3q={};a3q['map']=UF,a3q['transparent']=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r['uVuzMlCOokm']=![];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "eGeometry'](0x2,0x2,0x1,0x1);a3p[azA(0x4ba)]();var a3q={};a3q['map']=UF,a3q['transparent']=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r['uVuzMlCOokm']=![];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new KibzRdopc material, depthWrite off, passed to InstancedMesh. SERVED: identical (snippet-only twin).",
+   "name": "gunsmokeMaterial",
+   "selector": "a3r@u2471#13",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 13,
+    "refCount": 2,
+    "snippet": "0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uz,a3q[\"transparent\"]=!![];var a3r=new usvzFuAsEB[(\"KibzRdopc\")](a3q);a3r['uVuzMlCOokm']=!["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 13,
+    "refCount": 2,
+    "snippet": "'](0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uz,a3q[azD(0xe2f)]=!![];var a3r=new usvzFuAsEB[(azD(0x104b))](a3q);a3r['uVuzMlCOokm']=!["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new KibzRdopc material, depthWrite off, passed to InstancedMesh. SERVED: identical (snippet-only twin).",
+   "name": "shotgunSmokeMaterial",
+   "selector": "a3r@u2471#15",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2471",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "0.3,0.3,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uz,a3q[\"transparent\"]=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r['uVuzMlCOokm']=![];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "'](0.3,0.3,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uz,a3q[azF(0xe2f)]=!![];var a3r=new usvzFuAsEB['KibzRdopc'](a3q);a3r['uVuzMlCOokm']=![];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: faceVertexUvs element with x/y coordinates remapped in loops. SERVED: identical (snippet-only twin).",
+   "name": "uvVertex",
+   "selector": "a3t@u2471#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "Uvs'][0x0]['length'];a3r++){for(var a3s=0x0;a3s<a3p['faceVertexUvs'][0x0][a3r]['length'];a3s++){var a3t=a3p[\"faceVertexUvs\"][0x0][a3r][a3s];a3t['x']==0.5&&(a3t["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "Uvs'][0x0]['length'];a3r++){for(var a3s=0x0;a3s<a3p['faceVertexUvs'][0x0][a3r]['length'];a3s++){var a3t=a3p[aze(0x278)][0x0][a3r][a3s];a3t['x']==0.5&&(a3t['x']="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new InstancedMesh returned with applyPhysics disabled. SERVED: identical (snippet-only twin).",
+   "name": "grassMesh",
+   "selector": "a3t@u2471#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2471",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "ent':!![],'alphaTest':0.9,'side':usvzFuAsEB['DoubleSide'],'minFilter':usvzFuAsEB['NearestFilter']}),a3t=new usvzFuAsEB[(\"InstancedMesh\")](a3p,a3s,a3o);return a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "ent':!![],'alphaTest':0.9,'side':usvzFuAsEB['DoubleSide'],'minFilter':usvzFuAsEB['NearestFilter']}),a3t=new usvzFuAsEB[(azl(0xdbb))](a3p,a3s,a3o);return a3t['ap"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: DoubleSide alphaTest material passed into new InstancedMesh. SERVED: identical (snippet-only twin).",
+   "name": "instancedMaterial",
+   "selector": "a3u@u2471#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "lse a3t['y']==0x0&&(a3t['y']=0.35);}}}a3p['computeVertexNormals'](),a3p['computeFaceNormals']();var a3u=new usvzFuAsEB[(\"KibzRdopc\")]({'map':Uq,'transparent':!!"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "lse a3t['y']==0x0&&(a3t['y']=0.35);}}}a3p['computeVertexNormals'](),a3p['computeFaceNormals']();var a3u=new usvzFuAsEB[(aze(0x104b))]({'map':Uq,'transparent':!!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: created canvas sized and drawn, assigned as texture image. SERVED: identical (snippet-only twin).",
+   "name": "tintCanvas",
+   "selector": "a3w@u2471#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "]='grass',a3p['computeVertexNormals']();var a3r=function(a3u){var azk=o;return;var a3v=a3u['image'],a3w=document['createElement'](\"canvas\"),a3x=a3w['getContext'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "]='grass',a3p['computeVertexNormals']();var a3r=function(a3u){var azk=o;return;var a3v=a3u['image'],a3w=document['createElement'](azk(0x483)),a3x=a3w['getContex"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2d context doing drawImage, gradient fill, fillRect. SERVED: identical (snippet-only twin).",
+   "name": "tintCtx",
+   "selector": "a3x@u2471#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "var a3r=function(a3u){var azk=o;return;var a3v=a3u['image'],a3w=document['createElement'](\"canvas\"),a3x=a3w['getContext']('2d');a3w[\"width\"]=a3w['height']=a3u['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "r a3r=function(a3u){var azk=o;return;var a3v=a3u['image'],a3w=document['createElement'](azk(0x483)),a3x=a3w['getContext']('2d');a3w[azk(0xad0)]=a3w['height']=a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: linear gradient with green stops used as fillStyle. SERVED: identical (snippet-only twin).",
+   "name": "tintGradient",
+   "selector": "a3y@u2471#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a3u['image']['width'],a3x['drawImage'](a3v,0x0,0x0),a3x[\"globalCompositeOperation\"]='source-in';var a3y=a3x[\"createLinearGradient\"](0x0,0x0,0x0,a3w[\"height\"]);a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "]=a3w['height']=a3u['image']['width'],a3x['drawImage'](a3v,0x0,0x0),a3x[azk(0x7c1)]='source-in';var a3y=a3x[azk(0xa66)](0x0,0x0,0x0,a3w[azk(0x300)]);a3y['addCol"
+   }
+  }
+ ]
+}

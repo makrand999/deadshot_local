@@ -234,66 +234,44 @@ test("Free Fire Reload Interruption: Aborts reload action so clip ammo is NOT re
   assert.equal(mockWx.rotation.z, 0, "Viewmodel rotation Z must be reset to 0");
 });
 
-test("Free Fire Weapon Reload Time Increase (+1s / 30 ticks)", () => {
+test("Reload Time Original: patchBundle must NOT add +30 ticks to weapon reload durations", () => {
   const { context } = setupEnvironment();
-
-  // Mock weapon config object as generated in Deadshot bundle
-  const ai1 = (hex) => hex === 0x109e ? "reloadingTicks" : hex === 0x3a2 ? "length" : "";
-  const Hs = {
-    smg: { reloadingTicks: 45, ui: { DMZbIHLgyk: {} } },
-    ar: { reloadingTicks: 51, ui: { DMZbIHLgyk: {} } },
-    awp: { reloadingTicks: 61, ui: { DMZbIHLgyk: {} } },
-    shotgun: { reloadingTicks: 48, ui: { DMZbIHLgyk: {} } },
-  };
-
-  // Simulate bundle patch execution on Hs
-  const Hx = Object.keys(Hs);
-  for (let tf = 0; tf < Hx.length; tf++) {
-    Hs[Hx[tf]].reloadingTicks += 30;
-    Hs[Hx[tf]].ui.DMZbIHLgyk.Reload = (Math.round(Hs[Hx[tf]].reloadingTicks / 30 * 100) / 100) + "s";
-  }
-
-  assert.equal(Hs.smg.reloadingTicks, 75, "SMG reload ticks must increase from 45 to 75 (+1.0s)");
-  assert.equal(Hs.smg.ui.DMZbIHLgyk.Reload, "2.5s", "SMG UI reload display must be 2.5s");
-
-  assert.equal(Hs.ar.reloadingTicks, 81, "AR reload ticks must increase from 51 to 81 (+1.0s)");
-  assert.equal(Hs.ar.ui.DMZbIHLgyk.Reload, "2.7s", "AR UI reload display must be 2.7s");
-
-  assert.equal(Hs.awp.reloadingTicks, 91, "AWP reload ticks must increase from 61 to 91 (+1.0s)");
-  assert.equal(Hs.awp.ui.DMZbIHLgyk.Reload, "3.03s", "AWP UI reload display must be 3.03s");
-
-  assert.equal(Hs.shotgun.reloadingTicks, 78, "Shotgun reload ticks must increase from 48 to 78 (+1.0s)");
-  assert.equal(Hs.shotgun.ui.DMZbIHLgyk.Reload, "2.6s", "Shotgun UI reload display must be 2.6s");
+  // Exact Hs-loop anchor from the game bundle (84e0551 used to inject +=30 here)
+  const hsLoop = "var Hx=Object['keys'](Hs);for(var tf=0x0;tf<Hx[ai1(0x3a2)];tf++){";
+  const patched = context.window.patchBundle(validMockSrc + "\n" + hsLoop + "}");
+  assert.ok(!patched.includes("[ai1(0x109e)]+=30"), "patchBundle must NOT inject the +30 reload-ticks increase");
+  assert.ok(patched.includes("window.__dsHs=Hs"), "Hs diag exposure must be kept for console inspection");
 });
 
-test("Free Fire Manual Reload: Empty magazine (0 ammo) does NOT auto-reload without pressing R", () => {
-  // Test the patched reload condition logic
+test("Auto-Reload Restored: patchBundle must preserve the empty-magazine auto-reload trigger", () => {
+  const { context } = setupEnvironment();
+  // Exact original condition from the game bundle (bb2b26c used to strip the ||ammo==0 clause)
+  const originalCond = "if((a5b[aqH(0x703)]||a56['xqItLdaOH']==0x0)&&!a56['krtmjJROjX']&&a56['xqItLdaOH']<a56[aqH(0x2d5)]['xqItLdaOH']){";
+  const patched = context.window.patchBundle(validMockSrc + "\n" + originalCond + "}");
+  assert.ok(patched.includes("||a56['xqItLdaOH']==0x0"), "patchBundle must NOT strip the empty-magazine (ammo==0) auto-reload clause");
+  assert.ok(patched.includes(originalCond), "original auto-reload condition must survive patching byte-for-byte");
+});
+
+test("Auto-Reload Restored: empty magazine triggers reload without pressing R (original behavior)", () => {
   const aqH = (hex) => hex === 0x703 ? "reload" : hex === 0x2d5 ? "DMZbIHLgyk" : "";
-  const a56 = {
+  const mk = () => ({
     xqItLdaOH: 0, // Empty clip
     krtmjJROjX: false,
     reloadingTicks: 0,
     DMZbIHLgyk: { xqItLdaOH: 30, reloadingTicks: 75 },
-  };
+  });
+  // Original game condition (with the ||ammo==0 clause)
+  const shouldReload = (a5b, a56) =>
+    ((a5b[aqH(0x703)] || a56.xqItLdaOH === 0) && !a56.krtmjJROjX && a56.xqItLdaOH < a56[aqH(0x2d5)].xqItLdaOH);
 
-  // Case 1: Empty magazine, player did NOT press R (a5b.reload = false)
-  const a5b_no_press = { reload: false };
-  let reloadTriggered = false;
-  if ((a5b_no_press[aqH(0x703)]) && !a56.krtmjJROjX && a56.xqItLdaOH < a56[aqH(0x2d5)].xqItLdaOH) {
-    reloadTriggered = true;
-    a56.reloadingTicks = a56.DMZbIHLgyk.reloadingTicks;
-  }
-  assert.equal(reloadTriggered, false, "Empty magazine (0 ammo) must NOT auto-trigger reload");
-  assert.equal(a56.reloadingTicks, 0, "Reloading ticks must remain 0");
+  assert.equal(shouldReload({ reload: false }, mk()), true, "Empty magazine must auto-trigger reload without pressing R");
 
-  // Case 2: Player presses R (a5b.reload = true)
-  const a5b_press = { reload: true };
-  if ((a5b_press[aqH(0x703)]) && !a56.krtmjJROjX && a56.xqItLdaOH < a56[aqH(0x2d5)].xqItLdaOH) {
-    reloadTriggered = true;
-    a56.reloadingTicks = a56.DMZbIHLgyk.reloadingTicks;
-  }
-  assert.equal(reloadTriggered, true, "Pressing R must trigger reload when empty or partially full");
-  assert.equal(a56.reloadingTicks, 75, "Reloading ticks must be set to weapon reload time (75)");
+  const partial = mk(); partial.xqItLdaOH = 10;
+  assert.equal(shouldReload({ reload: true }, partial), true, "Pressing R with partial mag must trigger reload");
+  assert.equal(shouldReload({ reload: false }, partial), false, "Partial mag without R must not reload");
+
+  const full = mk(); full.xqItLdaOH = 30;
+  assert.equal(shouldReload({ reload: true }, full), false, "Full mag must not reload even with R");
 });
 
 

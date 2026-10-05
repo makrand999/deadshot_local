@@ -1,0 +1,12 @@
+# DOSSIER slice-01 (wave 44, 1 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/1] toChange@u0020#0 | kind=var depth=7 refCount=2 | engine/shaders.js
+DECL @775949 (verified):
+ newShapeHoles=[];var mainIdx=0;var tmpPoints;newShapes[mainIdx]=undefined;newShapeHoles[mainIdx]=[];for(var i=0,l=subPaths.length;i<l;i++){tmpPath=subPaths[i];tmpPoints=tmpPath.getPoints();solid=isClockWise(tmpPoints);solid=isCCW?!solid:solid;if(solid){if(!holesFirst&&newShapes[mainIdx])mainIdx++;newShapes[mainIdx]={s:new Shape(),p:tmpPoints};newShapes[mainIdx].s.curves=tmpPath.curves;if(holesFirst)mainIdx++;newShapeHoles[mainIdx]=[];}else{newShapeHoles[mainIdx].push({h:tmpPath,p:tmpPoints[0]});}}if(!newShapes[0])return toShapesNoHoles(subPaths);if(newShapes.length>1){var ambiguous=false;var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-01: propose EVERY binding above.

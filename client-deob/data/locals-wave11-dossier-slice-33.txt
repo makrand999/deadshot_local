@@ -1,0 +1,66 @@
+# DOSSIER slice-33 (wave 11, 11 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/11] oldAutoClear@u0029#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @176 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1086: SEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[2/11] oldClearAlpha@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @253 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@963: pth){qIySEZgti.clear(false,true,false);}if(this.clear)qIySEZgti.clear(qIySEZgti.autoClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[3/11] oldClearColor@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @239 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@949: f(this.clearDepth){qIySEZgti.clear(false,true,false);}if(this.clear)qIySEZgti.clear(qIySEZgti.autoClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[4/11] oldOverrideMaterial@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @267 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1045: toClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[5/11] textureID@u0026#0 | kind=param depth=5 refCount=2 | engine/shaders.js
+DECL @38 (verified):
+usvzFuAsEB.ShaderPass=function(shader,textureID){usvzFuAsEB.Pass.call(this);this.textureID=textureID!==undefined?textureID:'tDiffuse';if(shader instanceof usvzFuAsEB.wPChizNknM){this.uniforms=shader.uniforms;this.material=shader;}else if(shader){this.uniforms=usvzFuAsEB.UniformsUtils.clone(shader.uniforms);this.material=new usvzFuAsEB.wPChizNknM({defines:Object.assign({},shader.defines),uniforms:this.uniforms,vertexShader:shader.vertexShader,fragmentShader:shader.fragmentShader});}this.fsQuad=new usvzFuAsEB.Pass.FullScreenQuad(this.material);};
+USES: refCount=2, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/11] UH@u2462#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var UH,UI,UJ=0x0;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/11] UI@u2462#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @7 (verified):
+var UH,UI,UJ=0x0;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/11] sG@u0332#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var sG=sF,sH={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/11] TC@u2388#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var TC=![],TD=0x0,TE=NJ([-0x63,-0x65,-0x6b,-0x69,-0x5b,-0x63,-0x65,-0x6c,-0x5b]),TF=NJ([-0x66,-0x65,-0x5f,-0x64,-0x6a,-0x5b,-0x68,-0x63,-0x65,-0x6c,-0x5b]),TG=NJ([-0x66,-0x65,-0x5f,-0x64,-0x6a,-0x5b,-0x68,-0x5a,-0x65,-0x6d,-0x64]),TH=NJ([-0x66,-0x65,-0x5f,-0x64,-0x6a,-0x5b,-0x68,-0x6b,-0x66]),TI=NJ([-0x63,-0x65,-0x6b,-0x69,-0x5b]),TJ=NJ([-0x66,-0x65,-0x5f,-0x64,-0x6a,-0x5b,-0x68,-0x4a,-0x6f,-0x66,-0x5b]),TK={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/11] a3o@u2776#0 | kind=param depth=5 refCount=0 | network/handlers.js
+DECL @21 (verified):
+'COCjGf0Sf':function(a3o){},
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/11] NN@u2177#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @50 (verified):
+var NM=function(a3l){requestAnimationFrame(a3l);},NN=0x3**0x4;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-33: propose EVERY binding above.

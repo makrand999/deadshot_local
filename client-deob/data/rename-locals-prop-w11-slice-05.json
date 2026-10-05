@@ -1,0 +1,222 @@
+{
+  "slice": "slice-05",
+  "proposals": [
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @343208 projectPlanes(planes,X,dstOffset,skipTransform) matches three.js WebGLClipping signature; fed camera @342274 projectPlanes(planes,X,0) from init/setState",
+      "name": "clippingCamera",
+      "selector": "aKmLbYuMC@u0020#7"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @397007 WebGLRenderLists.get(scene,X); USES @397208/@397289 cameras.get/set(X,list) — camera-keyed per-camera render-list map",
+      "name": "renderListCamera",
+      "selector": "aKmLbYuMC@u0020#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @404969 setupView(lights,X); USE @405092 viewMatrix=X.slAOJZKzPMm (matrixWorldInverse) — direct camera-member read",
+      "name": "lightsViewCamera",
+      "selector": "aKmLbYuMC@u0020#9"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @407162 setupLightsView(X); USE @407202 lights.setupView(lightsArray,X) passes straight into #9 camera param",
+      "name": "lightsStateCamera",
+      "selector": "aKmLbYuMC@u0020#10"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @412244 shadowmap render(lights,scene,X); USES @414586 renderObject(scene,X,shadow.camera,..) + @414703 VSMPass(shadow,X) camera slots",
+      "name": "shadowRenderCamera",
+      "selector": "aKmLbYuMC@u0020#11"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @414869 VSMPass(shadow,X); USES @415208/@415565 renderBufferDirect(X,null,geometry,shadowMaterial,..) camera-first-arg slot",
+      "name": "vsmPassCamera",
+      "selector": "aKmLbYuMC@u0020#12"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @418396 renderObject(object,X,shadowCamera,light,type); USE @418495 object.layers.test(X.layers) — camera layers check, distinct from shadowCamera sibling",
+      "name": "depthRenderCamera",
+      "selector": "aKmLbYuMC@u0020#13"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @470961 setProjectionFromUnion(X,cameraL,cameraR); USES @471567+ X.position/quaternion/scale/translate/matrixWorld/projectionMatrix.makePerspective",
+      "name": "unionCamera",
+      "selector": "aKmLbYuMC@u0020#14"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @472083 updateCamera(X,parent); body X.matrixWorld.copy/multiplyMatrices(parent..) + X.slAOJZKzPMm invert — XR tracked-camera update",
+      "name": "trackedCamera",
+      "selector": "aKmLbYuMC@u0020#15"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @472331 getCamera(X); USES @472434/@472668/@472811 X.near/X.far/X.parent/X.matrixWorld/X.children copied into cameraVR rig",
+      "name": "sourceCamera",
+      "selector": "aKmLbYuMC@u0020#16"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @473592 var X=cameras[i] in XR onAnimationFrame; USES @473613+ X.matrix.fromArray/X.projectionMatrix.fromArray/X.viewport.set per view",
+      "name": "xrViewCamera",
+      "selector": "aKmLbYuMC@u0020#17"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @499068 renderBufferDirect(X,scene,geometry,material,object,group) canonical signature; USE @499241 setProgram(X,scene,..) camera slot",
+      "name": "drawCamera",
+      "selector": "aKmLbYuMC@u0020#18"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @501177 compile(scene,X); USE @501334 object.layers.test(X.layers) — camera layers check while gathering lights",
+      "name": "compileCamera",
+      "selector": "aKmLbYuMC@u0020#19"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @502363 render(scene,X); USE @502757 X.isCamera guard + @503437 X.projectionMatrix/X.slAOJZKzPMm frustum setup",
+      "name": "renderCamera",
+      "selector": "aKmLbYuMC@u0020#20"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @504897 projectObject(object,X,groupOrder,sortObjects); USE @505914 LOD.object.update(X) camera slot + recursive projectObject(scene,X,..) @503844",
+      "name": "projectCamera",
+      "selector": "aKmLbYuMC@u0020#21"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "DECL @507575 function renderObjects(renderList,scene,…) truncated; USE @508323 forwarded as camera arg to renderObject in else branch",
+      "name": "renderCamera",
+      "selector": "aKmLbYuMC@u0020#22"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @508323 function renderObject(object,scene,…); USE @508394 onBeforeRender(_this,scene,aKmLbYuMC,…) + view-matrix multiply via slAOJZKzPMm",
+      "name": "drawCamera",
+      "selector": "aKmLbYuMC@u0020#23"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @511971 function setProgram(…); USE @513085 projectionMatrix, @513308 far, @513522 matrixWorld, @513697 viewMatrix uniform uploads",
+      "name": "programCamera",
+      "selector": "aKmLbYuMC@u0020#24"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "DECL @534908 LOD block update:function update(…) truncated; three.js LOD.update(camera) signature, refCount=2",
+      "name": "lodCamera",
+      "selector": "aKmLbYuMC@u0020#25"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @726155 function LightShadow(…); USE @726181 this.aKmLbYuMC=aKmLbYuMC shadow-camera ctor assignment",
+      "name": "shadowCamera",
+      "selector": "aKmLbYuMC@u0020#26"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @728532 var aKmLbYuMC=this.aKmLbYuMC in SpotLightShadow.updateMatrices; USE @728789 fov/aspect/far + mPDLPePIID projection update",
+      "name": "spotShadowCamera",
+      "selector": "aKmLbYuMC@u0020#27"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @730680 var aKmLbYuMC=this.aKmLbYuMC in PointLightShadow.updateMatrices; USE @731104 position/up/JoIkrtRxhZ(lookAt) + @731291 projectionMatrix frustum",
+      "name": "pointShadowCamera",
+      "selector": "aKmLbYuMC@u0020#28"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @782203 StereoCamera update(…); USE @783530/@783602 cameraL/cameraR.matrixWorld.copy(aKmLbYuMC.matrixWorld) stereo source camera",
+      "name": "srcCamera",
+      "selector": "aKmLbYuMC@u0020#29"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @838662 setFromCamera(coords,…) truncated; USE @839241 unproject(aKmLbYuMC) + transformDirection(aKmLbYuMC.matrixWorld) + this.aKmLbYuMC assignment",
+      "name": "rayCamera",
+      "selector": "aKmLbYuMC@u0020#30"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @858035 function CameraHelper(aKmLbYuMC); USE @859629 this.aKmLbYuMC=aKmLbYuMC + @859721 _this.matrix=aKmLbYuMC.matrixWorld",
+      "name": "helperCamera",
+      "selector": "aKmLbYuMC@u0020#31"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @861243 function setPoint(point,pointMap,RNQDluasaN,aKmLbYuMC,x,y,z); USE @861291 _vector.set(x,y,z).unproject(aKmLbYuMC)",
+      "name": "unprojectCamera",
+      "selector": "aKmLbYuMC@u0020#32"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @703857 ArcCurve(aX,aY,aRadius,…) + USE @703928 EllipseCurve.call(…,aRadius,aRadius,…) — three.js domain term",
+      "name": "aRadius",
+      "selector": "aRadius@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @722145 Path.arc(aX,aY,aRadius,…) + USE @722145 forwarded to absarc — three.js domain term",
+      "name": "aRadius",
+      "selector": "aRadius@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @722350 Path.absarc(aX,aY,aRadius,…) + USE @722414 forwarded to absellipse(aX,aY,aRadius,aRadius,…) — three.js domain term",
+      "name": "aRadius",
+      "selector": "aRadius@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @701659 EllipseCurve(…,aRotation) + USE @702701 rotation via cos/sin(this.aRotation) — three.js domain term",
+      "name": "aRotation",
+      "selector": "aRotation@u0020#0"
+    }
+  ],
+  "stats": {
+    "rename": 26,
+    "keep": 4,
+    "high": 28,
+    "medium": 2,
+    "low": 0
+  }
+}

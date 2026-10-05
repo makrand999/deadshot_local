@@ -1,0 +1,238 @@
+{
+ "meta": {
+  "wave": 67,
+  "slice": "03a"
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: decodePrimitive bufferView index; fetched via getDependency. SERVED: identical (snippet-only twin).",
+   "name": "dracoBufferViewIndex",
+   "selector": "a4d@u0020#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: glossiness shader chunk replacing metalnessmap_fragment include. SERVED: identical (snippet-only twin).",
+   "name": "metalnessMapFragmentChunk",
+   "selector": "a4d@u0020#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: extendParams texture promise array; awaited via Promise.all. SERVED: identical (snippet-only twin).",
+   "name": "pendingTexturePromises",
+   "selector": "a4d@u0020#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: copySampleValue_ offset t*size*3+size indexing sampleValues. SERVED: identical (snippet-only twin).",
+   "name": "sampleValueOffset",
+   "selector": "a4d@u0020#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: interpolate_ resultBuffer alias; written per-sample then returned. SERVED: identical (snippet-only twin).",
+   "name": "resultBuffer",
+   "selector": "a4d@u0020#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: addMorphTargets NORMAL-present flag; sibling hasPosition pattern. SERVED: identical (snippet-only twin).",
+   "name": "hasNormal",
+   "selector": "a4d@u0020#17"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: extras.targetNames; length-checked building morphTargetDictionary. SERVED: identical (snippet-only twin).",
+   "name": "targetNames",
+   "selector": "a4d@u0020#18"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sorted-keys length loop bound; sibling keyIdx pattern. SERVED: identical (snippet-only twin).",
+   "name": "keyCount",
+   "selector": "a4d@u0020#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: refs/uses cache object assigned to this.lightCache. SERVED: identical (snippet-only twin).",
+   "name": "lightCache",
+   "selector": "a4d@u0020#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: parse() extensions alias; binary-gltf entry nulled after load. SERVED: identical (snippet-only twin).",
+   "name": "parserExtensions",
+   "selector": "a4d@u0020#21"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: _markDefs skins.length loop bound; sibling skinIdx. SERVED: identical (snippet-only twin).",
+   "name": "skinCount",
+   "selector": "a4d@u0020#22"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: _invokeOne mesh plugin param; loadMesh guard plus call. SERVED: identical (snippet-only twin).",
+   "name": "extensionCandidate",
+   "selector": "a4d@u0020#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: _invokeOne bufferView plugin param; loadBufferView guard plus call. SERVED: identical (snippet-only twin).",
+   "name": "extensionCandidate",
+   "selector": "a4d@u0020#25"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead param refCount=0 both sides; unused map element",
+   "selector": "a4d@u0020#28"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadBuffer Promise resolve passed as FileLoader onLoad. SERVED: identical (snippet-only twin).",
+   "name": "resolveBuffer",
+   "selector": "a4d@u0020#29"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadBufferView byteOffset; slice(offset,offset+length); sibling byteLength. SERVED: identical (snippet-only twin).",
+   "name": "byteOffset",
+   "selector": "a4d@u0020#30"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadAccessor bufferView promise array; Promise.all then decodes. SERVED: identical (snippet-only twin).",
+   "name": "pendingBufferViews",
+   "selector": "a4d@u0020#31"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadTexture json.textures entry; extensions and source reads. SERVED: identical (snippet-only twin).",
+   "name": "textureDef",
+   "selector": "a4d@u0020#32"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadTextureImage this.json; textures and samplers reads. SERVED: identical (snippet-only twin).",
+   "name": "gltfJson",
+   "selector": "a4d@u0020#33"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: assignTexture resolved texture; transform-extended then slot-assigned. SERVED: identical (snippet-only twin).",
+   "name": "loadedTexture",
+   "selector": "a4d@u0020#34"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: color-attribute flag; siblings hasTangents/isSkinnedMesh pattern. SERVED: identical (snippet-only twin).",
+   "name": "hasVertexColors",
+   "selector": "a4d@u0020#35"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadMaterial json.materials entry; 26 field reads. SERVED: identical (snippet-only twin).",
+   "name": "materialDef",
+   "selector": "a4d@u0020#36"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: computeBounds Box3; set/expanded; center and radius derived. SERVED: identical (snippet-only twin).",
+   "name": "boundsBox",
+   "selector": "a4d@u0020#37"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: toTrianglesDrawMode position attribute; undefined-check plus count. SERVED: identical (snippet-only twin).",
+   "name": "positionAttribute",
+   "selector": "a4d@u0020#39"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadGeometries inner draco decode plus attributes function. SERVED: identical (snippet-only twin).",
+   "name": "createDracoPrimitive",
+   "selector": "a4d@u0020#40"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadSkin accessor stored into skinResult.inverseBindMatrices. SERVED: identical (snippet-only twin).",
+   "name": "inverseBindAccessor",
+   "selector": "a4d@u0020#42"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadAnimation input-accessor promise array; siblings pendingSamplers/Targets. SERVED: identical (snippet-only twin).",
+   "name": "pendingInputAccessors",
+   "selector": "a4d@u0020#43"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadNode json.nodes entry; 25 field reads. SERVED: identical (snippet-only twin).",
+   "name": "nodeDef",
+   "selector": "a4d@u0020#44"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scene-builder parser param; node/skin dependency loads. SERVED: identical (snippet-only twin).",
+   "name": "sceneParser",
+   "selector": "a4d@u0020#45"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadScene extensions alias; addUnknownExtensions call argument. SERVED: identical (snippet-only twin).",
+   "name": "sceneExtensions",
+   "selector": "a4d@u0020#46"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: GLTFLoader.load resourcePath local; passed into parse call. SERVED: identical (snippet-only twin).",
+   "name": "resourcePath",
+   "selector": "a4e@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: GLTFLoader.parse extensions map; handed to setExtensions. SERVED: identical (snippet-only twin).",
+   "name": "loaderExtensions",
+   "selector": "a4e@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: _loadLight punctual-lights extension object; .lights read. SERVED: identical (snippet-only twin).",
+   "name": "lightsExtension",
+   "selector": "a4e@u0020#2"
+  }
+ ]
+}

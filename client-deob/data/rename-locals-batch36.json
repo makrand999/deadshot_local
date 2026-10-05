@@ -1,0 +1,2025 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 36,
+  "date": "2026-09-28",
+  "merged": 30,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 150,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @719245 CurvePath.getSpacedPoints; USES at @697661/@604514 call getSpacedPoints(divisions)/extrudePath.getSpacedPoints — idiomatic three.js getter name",
+   "name": "getSpacedPoints",
+   "selector": "getSpacedPoints@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @123092 Color.getStyle; refCount=0 — idiomatic getter name, already readable",
+   "name": "getStyle",
+   "selector": "getStyle@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @699204 Curve.getTangent; USES @711828 LineCurve.getTangent override — idiomatic getter name",
+   "name": "getTangent",
+   "selector": "getTangent@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @699514 Curve.getTangentAt(u) via getUtoTmapping; refCount=0 — idiomatic getter name",
+   "name": "getTangentAt",
+   "selector": "getTangentAt@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @489226 renderer getTargetPixelRatio; USES @500388/@500583 scale lineWidth — descriptive, already readable",
+   "name": "getTargetPixelRatio",
+   "selector": "getTargetPixelRatio@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @464211 WebXRController.getTargetRaySpace; USES @467738 getController returns it — idiomatic getter name",
+   "name": "getTargetRaySpace",
+   "selector": "getTargetRaySpace@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @366358 getTexelDecodingFunction(functionName,encoding); USES @380145+ build map/matcap/envMap decoders — descriptive, already readable",
+   "name": "getTexelDecodingFunction",
+   "selector": "getTexelDecodingFunction@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @366562 getTexelEncodingFunction; USES @380617 linearToOutputTexel — descriptive, already readable",
+   "name": "getTexelEncodingFunction",
+   "selector": "getTexelEncodingFunction@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @740454 MaterialLoader.parse getTexture; 19 USES @744474+ resolve map/matcap/bump maps — idiomatic getter name",
+   "name": "getTexture",
+   "selector": "getTexture@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @386758 getTextureEncodingFromMap; 6 USES @388392+ derive map/envMap/lightMap encodings — descriptive, already readable",
+   "name": "getTextureEncodingFromMap",
+   "selector": "getTextureEncodingFromMap@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @366763 getToneMappingFunction; USES @379983 shader chunk builder — descriptive, already readable",
+   "name": "getToneMappingFunction",
+   "selector": "getToneMappingFunction@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @678418 getTrackTypeForValueTypeName; USES @679077 parseKeyframeTrack dispatch — descriptive, already readable",
+   "name": "getTrackTypeForValueTypeName",
+   "selector": "getTrackTypeForValueTypeName@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @150020 getTypedArray after TYPED_ARRAYS table; 5 USES @751164+ deserialize buffers — descriptive, already readable",
+   "name": "getTypedArray",
+   "selector": "getTypedArray@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @111288 Triangle.getUV static; USES @112966+ proto wrapper and raycast UV lookups — idiomatic getter name",
+   "name": "getUV",
+   "selector": "getUV@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @112981 Triangle proto getUV wrapper; USES @174671+ Triangle.getUV raycast calls — idiomatic getter name",
+   "name": "getUV",
+   "selector": "getUV@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @392975 programCache getUniforms; USES @393795 export + @509842 material uniforms — idiomatic getter name",
+   "name": "getUniforms",
+   "selector": "getUniforms@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @698509 Curve.getUtoTmapping arc-length map; USES @697400/@699556 getPointAt/getTangentAt — descriptive, already readable",
+   "name": "getUtoTmapping",
+   "selector": "getUtoTmapping@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @573230 getUvIndex beside getNormalIndex/getColorIndex; 3 USES @572079+ face UV hashing — descriptive, already readable",
+   "name": "getUvIndex",
+   "selector": "getUvIndex@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @800887 Composite.getValue; USES @798153+ PropertyBinding getValue/setValue protocol — idiomatic getter name",
+   "name": "getValue",
+   "selector": "getValue@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @672070 KeyframeTrack.getValueSize; USES @670671+ interpolant stride + validate/optimize — idiomatic getter name",
+   "name": "getValueSize",
+   "selector": "getValueSize@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @803970 GetterByBindingType getValue_array copies resolvedProperty loop — descriptive variant name, already readable",
+   "name": "getValue_array",
+   "selector": "getValue_array@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @804111 GetterByBindingType getValue_arrayElement indexed read — descriptive variant name, already readable",
+   "name": "getValue_arrayElement",
+   "selector": "getValue_arrayElement@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @803884 GetterByBindingType getValue_direct node[propertyName] read — descriptive variant name, already readable",
+   "name": "getValue_direct",
+   "selector": "getValue_direct@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @804216 GetterByBindingType getValue_toArray (4th getter) — descriptive variant name, already readable",
+   "name": "getValue_toArray",
+   "selector": "getValue_toArray@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @806119 getValue:getValue_unbound lazy-bind wrapper; sibling setValue at @806222 — descriptive, already readable",
+   "name": "getValue_unbound",
+   "selector": "getValue_unbound@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @806222 setValue:getValue_unbound lazy-bind wrapper; sibling getValue at @806119 — descriptive, already readable",
+   "name": "getValue_unbound",
+   "selector": "getValue_unbound@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @587631 PolyhedronGeometry getVertexByIndex; 3 USES @586020+ subdivide reads indices — descriptive, already readable",
+   "name": "getVertexByIndex",
+   "selector": "getVertexByIndex@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @727527 LightShadow.getViewport; USES @414340 shadow map viewport loop — idiomatic getter name",
+   "name": "getViewport",
+   "selector": "getViewport@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @726663 LightShadow.getViewportCount; USES @414265 viewport loop bound — idiomatic getter name",
+   "name": "getViewportCount",
+   "selector": "getViewportCount@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @792347 Audio.getVolume beside setLoop/getLoop; refCount=0 — idiomatic getter name",
+   "name": "getVolume",
+   "selector": "getVolume@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @605998 getBevelVec var ptNextShift_x=inNext.x-v_next_y/v_next_len; shifted next-point x, self-descriptive",
+   "name": "ptNextShift_x",
+   "selector": "ptNextShift_x@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @606045 getBevelVec var ptNextShift_y=inNext.y+...; shifted next-point y, self-descriptive",
+   "name": "ptNextShift_y",
+   "selector": "ptNextShift_y@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @605904 getBevelVec var ptPrevShift_x=inPrev.x-v_prev_y/v_prev_len; shifted prev-point x, self-descriptive",
+   "name": "ptPrevShift_x",
+   "selector": "ptPrevShift_x@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @605951 getBevelVec var ptPrevShift_y=inPrev.y+v_prev_x/v_prev_len; shifted prev-point y, self-descriptive",
+   "name": "ptPrevShift_y",
+   "selector": "ptPrevShift_y@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @483860 function refreshUniformsMatcap; USES @475489 isMeshMatcapMaterial dispatch; role clear from name",
+   "name": "refreshUniformsMatcap",
+   "selector": "refreshUniformsMatcap@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @485201 function refreshUniformsNormal; USES @475857 isMeshNormalMaterial dispatch; role clear from name",
+   "name": "refreshUniformsNormal",
+   "selector": "refreshUniformsNormal@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @480408 function refreshUniformsPhong; USES @475156 isMeshPhongMaterial dispatch; role clear from name",
+   "name": "refreshUniformsPhong",
+   "selector": "refreshUniformsPhong@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @482986 function refreshUniformsPhysical; USES @475315 isMeshPhysicalMaterial dispatch; role clear from name",
+   "name": "refreshUniformsPhysical",
+   "selector": "refreshUniformsPhysical@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @479138 function refreshUniformsPoints; USES @476086 isPointsMaterial dispatch; role clear from name",
+   "name": "refreshUniformsPoints",
+   "selector": "refreshUniformsPoints@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @479736 function refreshUniformsSprites; USES @476181 isSpriteMaterial dispatch; role clear from name",
+   "name": "refreshUniformsSprites",
+   "selector": "refreshUniformsSprites@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @481950 function refreshUniformsStandard; USES @483029/@475364 physical+standard dispatch; role clear from name",
+   "name": "refreshUniformsStandard",
+   "selector": "refreshUniformsStandard@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @481197 function refreshUniformsToon; USES @475037 isMeshToonMaterial dispatch; role clear from name",
+   "name": "refreshUniformsToon",
+   "selector": "refreshUniformsToon@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @685681 LoadingManager param regex; handlers.push(regex,loader) URL-matcher, idiomatic name",
+   "name": "regex",
+   "selector": "regex@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @685765 removeHandler param regex; handlers.indexOf(regex) lookup key, idiomatic name",
+   "name": "regex",
+   "selector": "regex@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @685936 getHandler var regex; loop regex.test(file) matcher, idiomatic name",
+   "name": "regex",
+   "selector": "regex@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @497309 function releaseMaterialProgramReference; USES @509444 program cache-key change path; self-descriptive",
+   "name": "releaseMaterialProgramReference",
+   "selector": "releaseMaterialProgramReference@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @393563 function releaseProgram; USES @497441 programCache.releaseProgram(programInfo); self-descriptive",
+   "name": "releaseProgram",
+   "selector": "releaseProgram@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @336994 function releaseStatesOfGeometry; USES @347120 bindingStates.releaseStatesOfGeometry(buffergeometry); self-descriptive",
+   "name": "releaseStatesOfGeometry",
+   "selector": "releaseStatesOfGeometry@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @337380 function releaseStatesOfProgram; USES @384077 bindingStates.releaseStatesOfProgram(this); self-descriptive",
+   "name": "releaseStatesOfProgram",
+   "selector": "releaseStatesOfProgram@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @98018 Object3D remove:function remove(object) child-removal method; idiomatic API name",
+   "name": "remove",
+   "selector": "remove@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @199168 function remove(attribute) deletes GL buffer from WeakMap; USES @199959 return{get,remove,update}; idiomatic",
+   "name": "remove",
+   "selector": "remove@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @394083 WebGLProperties function remove(object); USES properties.remove(material/texture); idiomatic map removal",
+   "name": "remove",
+   "selector": "remove@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @684717 Cache remove:function remove(key) deletes files[key]; idiomatic cache API name",
+   "name": "remove",
+   "selector": "remove@u0020#3",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @812290 AnimationObjectGroup remove:function remove() unbinds objects; idiomatic API name",
+   "name": "remove",
+   "selector": "remove@u0020#4",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @916099 BufferGeometry removeAttribute shim warning; legacy alias of removeAttribute API, keep",
+   "name": "removeAttribute",
+   "selector": "removeAttribute@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @602661 function removeDupEndPts; triangulateShape calls on contour+holes; self-descriptive",
+   "name": "removeDupEndPts",
+   "selector": "removeDupEndPts@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @7098 EventDispatcher removeEventListener:function; standard DOM-style API name, keep",
+   "name": "removeEventListener",
+   "selector": "removeEventListener@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @785138 AudioListener removeFilter disconnects BiquadFilter; self-descriptive API name",
+   "name": "removeFilter",
+   "selector": "removeFilter@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @601505 earcut function removeNode; USES @594583/@596452/@593912 linked-list unlink; self-descriptive",
+   "name": "removeNode",
+   "selector": "removeNode@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @687710 FileLoader var request=new XMLHttpRequest(); USES @688696+ open/addEventListener/send; idiomatic XHR name",
+   "name": "request",
+   "selector": "request@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @665131 Interpolant.prototype evaluate; USES interpolant.evaluate(time) — idiomatic method name",
+   "name": "evaluate",
+   "selector": "evaluate@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @832837 var existingAction=actionsForClip.actionByRoot[rootUuid]; USES blendMode check — descriptive",
+   "name": "existingAction",
+   "selector": "existingAction@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @833331 existingAction:function clip lookup; USES this.existingAction(clip,optionalRoot) — descriptive",
+   "name": "existingAction",
+   "selector": "existingAction@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @59541 Box3 expandByObject; USES setFromObject calls this.expandByObject — idiomatic",
+   "name": "expandByObject",
+   "selector": "expandByObject@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @59202 Box3 expandByPoint(point); USES setFromPoints/boundingBox expandByPoint — idiomatic",
+   "name": "expandByPoint",
+   "selector": "expandByPoint@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @843266 Box2 expandByPoint(point); USES setFromPoints loop — idiomatic",
+   "name": "expandByPoint",
+   "selector": "expandByPoint@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @59418 Box3 expandByScalar(scalar); USES Sphere.getBoundingBox expandByScalar — idiomatic",
+   "name": "expandByScalar",
+   "selector": "expandByScalar@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @843482 Box2 expandByScalar(scalar); USES mirrors Box3 variant — idiomatic",
+   "name": "expandByScalar",
+   "selector": "expandByScalar@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @59308 Box3 expandByVector(vector); USES boundingBox expandByVector — idiomatic",
+   "name": "expandByVector",
+   "selector": "expandByVector@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @843372 Box2 expandByVector(vector); USES mirrors Box3 variant — idiomatic",
+   "name": "expandByVector",
+   "selector": "expandByVector@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @105120 function extractFromCache(cache) strips metadata; USES 7x meta.geometries/materials — descriptive",
+   "name": "extractFromCache",
+   "selector": "extractFromCache@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @133564 function extractFromCache(cache) material variant; USES 2x meta.textures/images — descriptive",
+   "name": "extractFromCache",
+   "selector": "extractFromCache@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @723950 Shape extractPoints; USES shape.extractPoints(curveSegments) — idiomatic",
+   "name": "extractPoints",
+   "selector": "extractPoints@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @898831 Matrix4 extractPosition; no outside USES — idiomatic three.js API name",
+   "name": "extractPosition",
+   "selector": "extractPosition@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75709 Matrix4 extractRotation; USES extractRotation(parent.matrixWorld) — idiomatic",
+   "name": "extractRotation",
+   "selector": "extractRotation@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @748641 LoaderUtils extractUrlBase(url); USES ObjectLoader path resolution — idiomatic",
+   "name": "extractUrlBase",
+   "selector": "extractUrlBase@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @894360 Loader.prototype extractUrlBase deprecated shim; USES delegate to LoaderUtils — idiomatic",
+   "name": "extractUrlBase",
+   "selector": "extractUrlBase@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @904507 Shape extrude deprecated shim; no outside USES — idiomatic API name",
+   "name": "extrude",
+   "selector": "extrude@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @604414 var extrudeByPath=false; USES 4x if(!extrudeByPath) branch — descriptive flag",
+   "name": "extrudeByPath",
+   "selector": "extrudeByPath@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @604151 var extrudePath=options.extrudePath; USES getSpacedPoints/computeFrenetFrames — descriptive",
+   "name": "extrudePath",
+   "selector": "extrudePath@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @759487 var extrudePath=data.options.extrudePath; USES Curves fromJSON restore — descriptive",
+   "name": "extrudePath",
+   "selector": "extrudePath@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @604403 var extrudePts; USES extrudePts[0]/[s]/[steps-1] spaced points — standard Pts abbreviation",
+   "name": "extrudePts",
+   "selector": "extrudePts@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @77811 lookAt(eye,...) param; USES matrix compose — idiomatic three.js param name",
+   "name": "eye",
+   "selector": "eye@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @782764 var eyeSepHalf stereo camera; USES projection offsets — descriptive",
+   "name": "eyeSepHalf",
+   "selector": "eyeSepHalf@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @812643 AnimationObjectGroup firstActiveObject; USES cache swap — descriptive",
+   "name": "firstActiveObject",
+   "selector": "firstActiveObject@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @355906 flatten() firstElem; USES array type check — standard Elem abbreviation",
+   "name": "firstElem",
+   "selector": "firstElem@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @829255 _lendAction firstInactiveAction swap; USES cacheIndex exchange — descriptive",
+   "name": "firstInactiveAction",
+   "selector": "firstInactiveAction@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @830856 _lendBinding firstInactiveBinding swap; USES cacheIndex exchange — descriptive",
+   "name": "firstInactiveBinding",
+   "selector": "firstInactiveBinding@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @829554 _takeBackAction firstInactiveIndex; USES index swap bookkeeping — descriptive",
+   "name": "firstInactiveIndex",
+   "selector": "firstInactiveIndex@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @831169 _takeBackBinding firstInactiveIndex; USES index swap bookkeeping — descriptive",
+   "name": "firstInactiveIndex",
+   "selector": "firstInactiveIndex@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @141619 BufferAttribute getW(index)->array[index*itemSize+3]; USES attribute.getW(index) @45624/@35017/@537116; idiomatic public getter, keep",
+   "name": "getW",
+   "selector": "getW@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @527275 InterleavedBufferAttribute getW(index)->data.array[stride+offset+3]; USES skinWeight.getW(i) @537116 + BufferAttribute twin @141619; idiomatic getter, keep",
+   "name": "getW",
+   "selector": "getW@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @348977 function getWireframeAttribute builds wireframe index attribute; USES geometries.getWireframeAttribute @499552; descriptive readable name, keep",
+   "name": "getWireframeAttribute",
+   "selector": "getWireframeAttribute@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @100233 Object3D getWorldDirection(target) via matrixWorld e[8..10]; USES Camera override @184023/@184110; idiomatic three.js API, keep",
+   "name": "getWorldDirection",
+   "selector": "getWorldDirection@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @184023 Camera getWorldDirection(target) override (-e[8..10]); USES Object3D base @100233/@100320; idiomatic override name, keep",
+   "name": "getWorldDirection",
+   "selector": "getWorldDirection@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @99402 Object3D getWorldPosition(target) via updateWorldMatrix+matrixWorld; USES none outside DECL; idiomatic public API, keep",
+   "name": "getWorldPosition",
+   "selector": "getWorldPosition@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @99664 Object3D getWorldQuaternion(target) via matrixWorld.decompose; USES deprecation string @908869; idiomatic API, keep",
+   "name": "getWorldQuaternion",
+   "selector": "getWorldQuaternion@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @908748 deprecated getWorldRotation() shim logging removal notice; USES none outside DECL; readable compat stub, keep",
+   "name": "getWorldRotation",
+   "selector": "getWorldRotation@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @99948 Object3D getWorldScale(target) via matrixWorld.decompose; USES none outside DECL; idiomatic public API, keep",
+   "name": "getWorldScale",
+   "selector": "getWorldScale@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @141182 BufferAttribute getX(index)->array[index*itemSize]; USES this.getX(i)/attribute.getX @140406/@124888/@162382; idiomatic getter, keep",
+   "name": "getX",
+   "selector": "getX@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @527010 InterleavedBufferAttribute getX(index)->data.array[stride+offset]; USES skinWeight/indexAttr.getX @537032/@561101/@591189; idiomatic getter, keep",
+   "name": "getX",
+   "selector": "getX@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @141325 BufferAttribute getY(index)->array[itemSize+1]; USES this/attribute.getY @140677/@140431/@124917; idiomatic getter, keep",
+   "name": "getY",
+   "selector": "getY@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @527097 InterleavedBufferAttribute getY(index)->data.array[stride+offset+1]; USES this/skinWeight.getY @526484/@537060/@141325; idiomatic getter, keep",
+   "name": "getY",
+   "selector": "getY@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @141472 BufferAttribute getZ(index)->array[itemSize+2]; USES this/attribute.getZ @140702/@140456/@124946; idiomatic getter, keep",
+   "name": "getZ",
+   "selector": "getZ@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @200548 PlaneBufferGeometry var gridX=floor(widthSegments); USES segment/uv/index math @179484/@179388/@178976; readable grid count, keep",
+   "name": "gridX",
+   "selector": "gridX@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @178969 buildPlane var gridX1=gridX+1 (vertex stride); USES index math a/b/c/d @179608/@179654/@200621; readable derived count, keep",
+   "name": "gridX1",
+   "selector": "gridX1@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @58032 Box3.setFromCenterAndSize halfSize=copy(size)*0.5 then min.sub/max.add; USES Box2/GridHelper twins @842247/@853963; readable, keep",
+   "name": "halfSize",
+   "selector": "halfSize@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @842247 Box2.setFromCenterAndSize halfSize=copy(size)*0.5 then min.sub/max.add; USES GridHelper/Box3 twins @853963/@58140; readable, keep",
+   "name": "halfSize",
+   "selector": "halfSize@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @853963 GridHelper halfSize=size/2 for grid line loop; USES k=-halfSize/push @854025/@854076 + Box twins @842355/@58140; readable, keep",
+   "name": "halfSize",
+   "selector": "halfSize@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @44554 quaternion slerp var halfTheta after sinHalfTheta=sqrt(1-cos^2); USES 2 refs inside DECL window only; readable math term, keep",
+   "name": "halfTheta",
+   "selector": "halfTheta@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @819230 AnimationAction halt(duration) timeScale warp method; USES none outside DECL; readable action verb, keep",
+   "name": "halt",
+   "selector": "halt@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @465201 WebXRController update var hand=this._hand; USES joints/pinch @465929/@465994/@466119 + visible @466899; readable XR term, keep",
+   "name": "hand",
+   "selector": "hand@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @465133 update() var handPose=null alongside inputPose/gripPose; USES hand.visible=handPose!==null @466925; readable pose var, keep",
+   "name": "handPose",
+   "selector": "handPose@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @119031 Color.setStyle inner function handleAlpha; USES handleAlpha(color[4]) @119820/@120074 for rgb%/hsl alpha; readable helper, keep",
+   "name": "handleAlpha",
+   "selector": "handleAlpha@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @684945 LoadingManager var handlers registry; USES add/remove/getHandler push/splice/loop @685695/@685782/@685906; readable, keep",
+   "name": "handlers",
+   "selector": "handlers@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @345368 WebGLExtensions has(name) extension probe; USES this.has @346357 + extensions.has @392120/@403272; idiomatic Map-like API, keep",
+   "name": "has",
+   "selector": "has@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @151284 BufferGeometry hasAttribute(name) predicate; USES hasAttribute('morphTarget/MorphNormal') @352872/@352987; idiomatic API, keep",
+   "name": "hasAttribute",
+   "selector": "hasAttribute@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @6886 EventDispatcher hasEventListener(type,listener); USES hasEventListener('dispose') @353793; idiomatic DOM-style API, keep",
+   "name": "hasEventListener",
+   "selector": "hasEventListener@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @571456 geometry converter var hasFaceColor flag; USES if(hasFaceColor) push color index @572403; readable boolean, keep",
+   "name": "hasFaceColor",
+   "selector": "hasFaceColor@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @815131 subscribe_ indicesByPath[path]=index alias of _bindingsIndicesByPath; USES lookup @814523/@814471; readable cache map, keep",
+   "name": "indicesByPath",
+   "selector": "indicesByPath@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @548457 Line.prototype method; USES 15 occ incl @549072/@551717 calls — descriptive API name",
+   "name": "updateMorphTargets",
+   "selector": "updateMorphTargets@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @553375 Points.prototype method; USES 15 occ incl @551717/@548457 — descriptive API name",
+   "name": "updateMorphTargets",
+   "selector": "updateMorphTargets@u0020#3",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @457176 function; USES refCount=1 @459243/@504444 textures.updateMultisampleRenderTarget — descriptive",
+   "name": "updateMultisampleRenderTarget",
+   "selector": "updateMultisampleRenderTarget@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @101649 updateWorldMatrix param; USES @184502/@184581 pass-through — readable flag name",
+   "name": "updateParents",
+   "selector": "updateParents@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @184502 Camera.updateWorldMatrix param; USES @101705/@101649 base-class twin — readable flag name",
+   "name": "updateParents",
+   "selector": "updateParents@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @198598 var; USES @137616/@523971 updateRange={offset,count} idiom — readable three.js API field",
+   "name": "updateRange",
+   "selector": "updateRange@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @456730 function; USES @459188/@504388 textures.updateRenderTargetMipmap — descriptive",
+   "name": "updateRenderTargetMipmap",
+   "selector": "updateRenderTargetMipmap@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @925015 deprecated stub updateShadowMap; refCount=0 — readable API name",
+   "name": "updateShadowMap",
+   "selector": "updateShadowMap@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @493729 setSize param; refCount=1 local flag — readable boolean-ish name",
+   "name": "updateStyle",
+   "selector": "updateStyle@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @555072 nested fn in VideoTexture; refCount=2 — readable helper name",
+   "name": "updateVideo",
+   "selector": "updateVideo@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @458058 function; USES @438342 setTexture2D calls updateVideoTexture(texture) — descriptive",
+   "name": "updateVideoTexture",
+   "selector": "updateVideoTexture@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @348136 function; USES @349200/@349245 getWireframeAttribute refresh — descriptive",
+   "name": "updateWireframeAttribute",
+   "selector": "updateWireframeAttribute@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @101631 Object3D method; USES 17 occ incl @100394/@99561 getWorld* callers — canonical API name",
+   "name": "updateWorldMatrix",
+   "selector": "updateWorldMatrix@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @184484 Camera override; USES 17 occ incl @102059/@101749 — canonical API name",
+   "name": "updateWorldMatrix",
+   "selector": "updateWorldMatrix@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @446945 function; USES @439602 setTextureCube calls uploadCubeTexture — descriptive",
+   "name": "uploadCubeTexture",
+   "selector": "uploadCubeTexture@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @442251 function; USES refCount=3 @439304/@438707 setTexture* callers — descriptive",
+   "name": "uploadTexture",
+   "selector": "uploadTexture@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @684919 LoadingManager closure var; USES @685529/@685549/@685620 resolveURL/setURLModifier — readable",
+   "name": "urlModifier",
+   "selector": "urlModifier@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @694589 CubeTextureLoader.load param; USES @933859/@934106 loader.load(urls) — idiomatic plural",
+   "name": "urls",
+   "selector": "urls@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @933859 ImageUtils.loadTextureCube param; USES @694966/@694807 urls[i]/urls.length — idiomatic plural",
+   "name": "urls",
+   "selector": "urls@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @197620 var; USES 18 occ incl @138170/@137589 attribute.usage GL idiom — readable",
+   "name": "usage",
+   "selector": "usage@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @342284 setState param; USES @512414/@512521 clipping.setState(material,camera,useCache) — readable flag",
+   "name": "useCache",
+   "selector": "useCache@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @512414 var useCache=camera/material match; USES @342806/@342284 passed to setState — readable flag",
+   "name": "useCache",
+   "selector": "useCache@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @415695 getDepthMaterialVariant param; USES @417078/@417172 variant selector bit — readable flag",
+   "name": "useInstancing",
+   "selector": "useInstancing@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @416048 getDistanceMaterialVariant param; USES @417078/@417172 getMaterialVariant(...,useInstancing) — readable",
+   "name": "useInstancing",
+   "selector": "useInstancing@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @417078 var useInstancing=object.isInstancedMesh; USES @416103/@415750 variant params — readable flag",
+   "name": "useInstancing",
+   "selector": "useInstancing@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @415671 getDepthMaterialVariant param; USES @416684/@417148 morphTargets-derived flag — readable",
+   "name": "useMorphing",
+   "selector": "useMorphing@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @416024 getDistanceMaterialVariant param; USES @416684/@417148 passed to getMaterialVariant — readable",
+   "name": "useMorphing",
+   "selector": "useMorphing@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @22435 Texture param; USES @23136/@24170 this.wrapT=wrapT GL wrap idiom — canonical short name",
+   "name": "wrapT",
+   "selector": "wrapT@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @190173 CubeTexture param; USES @191150/@193536 forwarded to Texture.call — canonical short name",
+   "name": "wrapT",
+   "selector": "wrapT@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @193536 DataTexture param; USES @190408/@190173 Texture.call forwarding — canonical short name",
+   "name": "wrapT",
+   "selector": "wrapT@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @567842 for(var _j=0,_jl=faceVertexColors.length); USES _j<_jl color-clone loop — cached color count",
+   "name": "faceVertColorCount",
+   "selector": "_jl@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_jl",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "rix).normalize();}faceCopy.vertexNormals.push(normal);}faceCopy.color.copy(face.color);for(var _j=0,_jl=faceVertexColors.length;_j<_jl;_j++){color=faceVertexCol"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @759383 for(var _j=0,_jl=data.shapes.length) ExtrudeGeometry branch; USES data.shapes[_j] shape loop",
+   "name": "extrudeShapeCount",
+   "selector": "_jl@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_jl",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "rveSegments);break;case'ExtrudeGeometry':case'ExtrudeBufferGeometry':geometryShapes=[];for(var _j=0,_jl=data.shapes.length;_j<_jl;_j++){var _shape=shapes[data.s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "DECL @568234 for(var _j2=0,_jl2=...) inner loop under _i8/_il5 faceVertexUvs layer loop — per-face uv count",
+   "name": "faceUvCount",
+   "selector": "_jl2@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_jl2",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ".faceVertexUvs[_i8];if(this.faceVertexUvs[_i8]===undefined)this.faceVertexUvs[_i8]=[];for(var _j2=0,_jl2=faceVertexUvs2.length;_j2<_jl2;_j2++){var uvs2=faceVert"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @574886 for(var _j3=0,_jl3=morphTargets[_i16].vertices.length); USES clone-push loop — morph vertex count",
+   "name": "morphVertCount",
+   "selector": "_jl3@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_jl3",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "gets[_i16].name;if(morphTargets[_i16].AUbXpMajF!==undefined){morphTarget.AUbXpMajF=[];for(var _j3=0,_jl3=morphTargets[_i16].AUbXpMajF.length;_j3<_jl3;_j3++){mor"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @575095 for(var _j4=0,_jl4=morphTargets[_i16].normals.length); USES clone-push loop — morph normal count",
+   "name": "morphTargetNormalCount",
+   "selector": "_jl4@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_jl4",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ajF[_j3].clone());}}if(morphTargets[_i16].normals!==undefined){morphTarget.normals=[];for(var _j4=0,_jl4=morphTargets[_i16].normals.length;_j4<_jl4;_j4++){morph"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @575463 for(var _j5=0,_jl5=morphNormals[_i17].vertexNormals.length); USES srcVertexNormal copy loop",
+   "name": "morphVertNormalCount",
+   "selector": "_jl5@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_jl5",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "rmal={};if(morphNormals[_i17].vertexNormals!==undefined){morphNormal.vertexNormals=[];for(var _j5=0,_jl5=morphNormals[_i17].vertexNormals.length;_j5<_jl5;_j5++)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @575880 for(var _j6=0,_jl6=...) under faceNormals!==undefined guard mirroring _j5/vertexNormals block — face-normal count",
+   "name": "morphFaceNormalCount",
+   "selector": "_jl6@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_jl6",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "exNormal);}}if(morphNormals[_i17].faceNormals!==undefined){morphNormal.faceNormals=[];for(var _j6=0,_jl6=morphNormals[_i17].faceNormals.length;_j6<_jl6;_j6++){m"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "DECL @607369 holes bevel loop for(var _i2=0,_il=...,_j=_il-1,_k=...) mirroring contour k=_i+1 next-vertex idiom; refCount=4",
+   "name": "nextHoleVertIndex",
+   "selector": "_k@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_k",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "h2<_hl2;_h2++){var _ahole2=holes[_h2];oneHoleMovements=[];for(var _i2=0,_il=_ahole2.length,_j=_il-1,_k=_i2+1;_i2<_il;_i2++,_j++,_k++){if(_j===_il)_j=0;if(_k===_"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "DECL @610693 sidewalls(contour,layeroffset) var _j2=i;var _k2=... wraparound prev-vertex idiom; refCount=4",
+   "name": "prevContourIndex",
+   "selector": "_k2@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_k2",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "-start,1);}function sidewalls(contour,layeroffset){var i=contour.length;while(--i>=0){var _j2=i;var _k2=i-1;if(_k2<0)_k2=contour.length-1;for(var _s=0,sl=steps+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @166551 for(var _key in attributes) toJSON; USES attributes[_key] attributeData loop — attribute name key",
+   "name": "attrName",
+   "selector": "_key@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_key",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tructor.name,array:Array.prototype.slice.call(index.array)};}var attributes=this.attributes;for(var _key in attributes){var attribute=attributes[_key];var attri"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @641721 for(var _key in edges) WireframeGeometry; USES edges[_key] edge-vertex loop — edge map key",
+   "name": "edgeKey",
+   "selector": "_key@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_key",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "dge[0]+','+edge[1];if(edges[key]===undefined){edges[key]={index1:edge[0],index2:edge[1]};}}}for(var _key in edges){var e=edges[_key];var vertex=RNQDluasaN.AUbXp"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @752649 for(var _key in morphAttributes) fromJSON; USES morphAttributes[_key] + morphAttributes[_key]=array",
+   "name": "morphAttrKey",
+   "selector": "_key@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_key",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "ute(key,bufferAttribute);}var morphAttributes=json.data.morphAttributes;if(morphAttributes){for(var _key in morphAttributes){var attributeArray=morphAttributes["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @166807 for(var _key2 in this.morphAttributes) toJSON; USES morphAttributes[_key2]=array — morph attr name",
+   "name": "morphAttrName",
+   "selector": "_key2@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_key2",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ta.data.attributes[_key]=attributeData;}var morphAttributes={};var hasMorphAttributes=false;for(var _key2 in this.morphAttributes){var attributeArray=this.morph"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @642512 var _key2=edge[0]+','+edge[1]; USES edges[_key2] dedupe map — composite edge-key string",
+   "name": "edgeKeyStr",
+   "selector": "_key2@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_key2",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 2,
+    "snippet": " _edge2=indices.getX(_i+(_j+1)%3);edge[0]=Math.min(_edge,_edge2);edge[1]=Math.max(_edge,_edge2);var _key2=edge[0]+','+edge[1];if(edges[_key2]===undefined){edges"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @642624 for(var _key3 in edges) WireframeGeometry indexed path; USES edges[_key3] vertex-push loop [variant edgeKey2: same-scope collision with _key@u0020#1 -> edgeKey, dry-run loop fix]",
+   "name": "edgeKey2",
+   "selector": "_key3@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_key3",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "]+','+edge[1];if(edges[_key2]===undefined){edges[_key2]={index1:edge[0],index2:edge[1]};}}}}for(var _key3 in edges){var _e=edges[_key3];_vertex.fromBufferAttrib"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @103878 for(var _i=0,_l=this.material.length) toJSON; USES serialize material[_i] uuids loop",
+   "name": "materialCount",
+   "selector": "_l@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ton.uuid;}}if(this.material!==undefined){if(Array.isArray(this.material)){var uuids=[];for(var _i=0,_l=this.material.length;_i<_l;_i++){uuids.push(serialize(met"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @140164 for(var _i=0,_l=this.count) applyMatrix3 itemSize===3; USES setXYZ per-item loop",
+   "name": "attrItemCount",
+   "selector": "_l@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "1.applyMatrix3(m);this.setXY(i,_vector2$1.x,_vector2$1.y);}}else if(this.itemSize===3){for(var _i=0,_l=this.count;_i<_l;_i++){_vector$3.fromBufferAttribute(this"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @168393 for(var _i6=0,_l=groups.length) copy; USES addGroup(groups[_i6]) per-group loop",
+   "name": "srcGroupCount",
+   "selector": "_l@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "array;}this.morphTargetsRelative=source.morphTargetsRelative;var groups=source.groups;for(var _i6=0,_l=groups.length;_i6<_l;_i6++){var group=groups[_i6];this.ad"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @348575 for(var _i=0,_l=_array.length/3-1) updateWireframeAttribute non-indexed; USES triplet index-push loop",
+   "name": "wireVertBound",
+   "selector": "_l@u0020#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "a,b,b,c,c,a);}}else{var _array=geometryPosition.array;version=geometryPosition.version;for(var _i=0,_l=_array.length/3-1;_i<_l;_i+=3){var _a=_i+0;var _b=_i+1;va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @507415 for(var _i=0,_l=children.length) projectObject; USES projectObject(children[_i]) recurse loop",
+   "name": "childCount",
+   "selector": "_l@u0020#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "bject,_geometry,_material,groupOrder,_vector3.z,null);}}}}var children=object.children;for(var _i=0,_l=children.length;_i<_l;_i++){if(children[_i].visible){proj"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @545590 for(var _i=1,_l=vertices.length) Line.computeLineDistances; USES cumulative distanceTo loop",
+   "name": "lineVertCount",
+   "selector": "_l@u0020#5",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "F=RNQDluasaN.AUbXpMajF;var _lineDistances=RNQDluasaN.lineDistances;_lineDistances[0]=0;for(var _i=1,_l=AUbXpMajF.length;_i<_l;_i++){_lineDistances[_i]=_lineDist"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @550254 for(var _i=0,_l=vertices.length) LineSegments.computeLineDistances; USES pairwise _start$1/_end$1 loop",
+   "name": "segVertCount",
+   "selector": "_l@u0020#6",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "ometry){var AUbXpMajF=RNQDluasaN.AUbXpMajF;var _lineDistances=RNQDluasaN.lineDistances;for(var _i=0,_l=AUbXpMajF.length;_i<_l;_i+=2){_start$1.copy(AUbXpMajF[_i]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @553225 for(var _i2=0,_l=vertices.length) Line raycast; USES @553249 testPoint(vertices[_i2]) loop",
+   "name": "rayVertCount",
+   "selector": "_l@u0020#7",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "ldSq,matrixWorld,raycaster,loPNdwjKE,this);}}}else{var AUbXpMajF=RNQDluasaN.AUbXpMajF;for(var _i2=0,_l=AUbXpMajF.length;_i2<_l;_i2++){testPoint(AUbXpMajF[_i2],_"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @625552 for(var _i=0,l=shapeHoles.length)+_l twin addShape; USES shapeHole reverse loop — hole count",
+   "name": "holeCount",
+   "selector": "_l@u0020#8",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "shapeHole.reverse();}}var faces=ShapeUtils.triangulateShape(shapeVertices,shapeHoles);for(var _i2=0,_l=shapeHoles.length;_i2<_l;_i2++){var _shapeHole=shapeHoles"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @642327 for(var _i=start,_l=start+count) WireframeGeometry group loop; USES per-triangle edge loop to _l",
+   "name": "groupEnd",
+   "selector": "_l@u0020#9",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l",
+   "binding": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "s.length;o<ol;++o){var group=groups[o];var start=group.start;var count=group.count;for(var _i=start,_l=start+count;_i<_l;_i+=3){for(var _j=0;_j<3;_j++){var _edg"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @547291 for(var _i2=0,_l2=positionAttribute.count-1) Line raycast; USES segment distanceSqToSegment loop",
+   "name": "lastSegIndex",
+   "selector": "_l2@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l2",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "e().GdTYEgIav(this.matrixWorld),index:i,face:null,faceIndex:null,object:this});}}else{for(var _i2=0,_l2=positionAttribute.count-1;_i2<_l2;_i2+=step){vStart.from"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @625680 for(var _i3=0,_l2=shapeVertices.length) addShape; USES vertex.x/y push loop",
+   "name": "shapeVertCount",
+   "selector": "_l2@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l2",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "_i2++){var _shapeHole=shapeHoles[_i2];shapeVertices=shapeVertices.concat(_shapeHole);}for(var _i3=0,_l2=shapeVertices.length;_i3<_l2;_i3++){var vertex=shapeVert"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @642914 for(var _i2=0,_l2=_position.count/3) WireframeGeometry non-indexed; USES per-tri index1/index2 loop",
+   "name": "triCount",
+   "selector": "_l2@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l2",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "sh(_vertex.x,_vertex.y,_vertex.z);}}else{var _position=RNQDluasaN.attributes.position;for(var _i2=0,_l2=_position.count/3;_i2<_l2;_i2++){for(var _j2=0;_j2<3;_j2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @625849 for(var _i4=0,_l3=faces.length) addShape; USES face[0..2]+indexOffset loop — triangulated face count",
+   "name": "shapeFaceCount",
+   "selector": "_l3@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_l3",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ";AUbXpMajF.push(vertex.x,vertex.y,0);normals.push(0,0,1);uvs.push(vertex.x,vertex.y);}for(var _i4=0,_l3=faces.length;_i4<_l3;_i4++){var face=faces[_i4];var a=fa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @549179 module-scope temp Vector3; USES @549891/@550287/@550434 fromBufferAttribute/copy/distanceTo with _end$1",
+   "name": "segStartVec",
+   "selector": "_start$1@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_start$1",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "orphTargets() does not support usvzFuAsEB.Geometry. Use usvzFuAsEB.kwrjVVjSgIH instead.');}}}});var _start$1=new gURkzCzeY();var _end$1=new gURkzCzeY();function"
+   }
+  }
+ ]
+}

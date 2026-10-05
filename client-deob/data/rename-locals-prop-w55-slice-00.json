@@ -1,0 +1,457 @@
+{
+ "meta": {
+  "wave": 55,
+  "slice": "00",
+  "mergedFrom": [
+   "00a",
+   "00b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR POSTs /claimReward, handles ok response; SERVED: XHR POSTs /claimReward, handles ok response (snippet-only twin).",
+   "name": "claimRewardXhr",
+   "selector": "ah3@u2151#30"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Success param compared against computed hash token; SERVED: Success param compared against computed hash token (snippet-only twin).",
+   "name": "receivedAdToken",
+   "selector": "ah3@u2151#31"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Failed param logged and shown in alert; SERVED: Failed param logged and shown in alert (snippet-only twin).",
+   "name": "adFailureReason",
+   "selector": "ah3@u2151#32"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused callback param, refCount zero",
+   "selector": "ah3@u2151#33"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Callbacks object passed to CrazyGames requestAd; SERVED: Callbacks object passed to CrazyGames requestAd (snippet-only twin).",
+   "name": "rewardedAdCallbacks",
+   "selector": "ah3@u2151#34"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused callback param, refCount zero",
+   "selector": "ah3@u2151#35"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Link element with hover states, registered animations; SERVED: Link element with hover states, registered animations (snippet-only twin).",
+   "name": "footerLinkElement",
+   "selector": "ah3@u2151#36"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Empty slot row hidden when member fills; SERVED: Empty slot row hidden when member fills (snippet-only twin).",
+   "name": "emptyPartySlot",
+   "selector": "ah4@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Selected Daily Weekly Event list rendered; SERVED: Selected Daily Weekly Event list rendered (snippet-only twin).",
+   "name": "tabChallengeList",
+   "selector": "ah4@u2151#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR POSTs /claim bonus, refreshes onload; SERVED: XHR POSTs /claim bonus, refreshes onload (snippet-only twin).",
+   "name": "claimBonusXhr",
+   "selector": "ah4@u2151#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bonus added to stored progress, defaults zero; SERVED: Bonus added to stored progress, defaults zero (snippet-only twin).",
+   "name": "liveProgressBonus",
+   "selector": "ah4@u2151#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Live stat value paired with chosen quest; SERVED: Live stat value paired with chosen quest (snippet-only twin).",
+   "name": "selectedQuestBonus",
+   "selector": "ah4@u2151#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused params, refCount zero",
+   "selector": "ah4@u2151#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Script element loads Xsolla widget, appended; SERVED: Script element loads Xsolla widget, appended (snippet-only twin).",
+   "name": "xsollaScriptTag",
+   "selector": "ah4@u2151#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Endpoint path for token XHR POST; SERVED: Endpoint path for token XHR POST (snippet-only twin).",
+   "name": "xsollaTokenPath",
+   "selector": "ah4@u2151#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Endpoint path for token XHR POST; SERVED: Endpoint path for token XHR POST (snippet-only twin).",
+   "name": "xsollaTokenPath",
+   "selector": "ah4@u2151#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Token rewardNum body sent as JSON; SERVED: Token rewardNum body sent as JSON (snippet-only twin).",
+   "name": "claimRewardPayload",
+   "selector": "ah4@u2151#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bitwise rotate used in hash compression; SERVED: Bitwise rotate used in hash compression (snippet-only twin).",
+   "name": "rotateRight",
+   "selector": "ah4@u2151#15"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Only logged, role unprovable",
+   "selector": "ah4@u2151#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Config getKnown rewardedApi chain target; SERVED: Config getKnown rewardedApi chain target (snippet-only twin).",
+   "name": "gptConfigProvider",
+   "selector": "ah4@u2151#17"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused arrow error param, refCount zero",
+   "selector": "ah4@u2151#18"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Link filename appended to location href; SERVED: Link filename appended to location href (snippet-only twin).",
+   "name": "footerLinkHref",
+   "selector": "ah4@u2151#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Row number text stored as num; SERVED: Row number text stored as num (snippet-only twin).",
+   "name": "rosterRowNumLabel",
+   "selector": "ah5@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Filled slot shows name and ready state; SERVED: Filled slot shows name and ready state (snippet-only twin).",
+   "name": "filledPartySlot",
+   "selector": "ah5@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Token body sent to claim endpoint; SERVED: Token body sent to claim endpoint (snippet-only twin).",
+   "name": "claimBonusPayload",
+   "selector": "ah5@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bar right edge constant in layout math; SERVED: Bar right edge constant in layout math (snippet-only twin).",
+   "name": "progressBarMaxX",
+   "selector": "ah5@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop counter over challenge arrays; SERVED: Loop counter over challenge arrays (snippet-only twin).",
+   "name": "challengeIndex",
+   "selector": "ah5@u2151#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bonus status gates claim button display; SERVED: Bonus status gates claim button display (snippet-only twin).",
+   "name": "activeBonusStatus",
+   "selector": "ah5@u2151#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Head element receives script append; SERVED: Head element receives script append (snippet-only twin).",
+   "name": "documentHead",
+   "selector": "ah5@u2151#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR fetches Xsolla token then store; SERVED: XHR fetches Xsolla token then store (snippet-only twin).",
+   "name": "xsollaTokenXhr",
+   "selector": "ah5@u2151#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR fetches Xsolla token then widget; SERVED: XHR fetches Xsolla token then widget (snippet-only twin).",
+   "name": "xsollaTokenXhr",
+   "selector": "ah5@u2151#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Math.pow alias for hash constants; SERVED: Math.pow alias for hash constants (snippet-only twin).",
+   "name": "mathPow",
+   "selector": "ah5@u2151#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Only logged, role unprovable",
+   "selector": "ah5@u2151#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: third ad-success callback param only logged; SERVED: third ad-success callback param only logged (snippet-only twin).",
+   "name": "adSuccessDetail",
+   "selector": "ah5@u2151#12"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused mousedown event param never read",
+   "selector": "ah5@u2151#13"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused mouseup event param never read",
+   "selector": "ah5@u2151#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: holds window.open handle then focuses it; SERVED: holds window.open handle then focuses it (snippet-only twin).",
+   "name": "popupWindow",
+   "selector": "ah5@u2151#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter over hoverElements array; SERVED: loop counter over hoverElements array (snippet-only twin).",
+   "name": "hoverElemIndex",
+   "selector": "ah5@u2151#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rank number split for drawRank display; SERVED: rank number split for drawRank display (snippet-only twin).",
+   "name": "rankValue",
+   "selector": "ah5@u2151#17"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: stashes animation duration across onclick toggle; SERVED: stashes animation duration across onclick toggle (snippet-only twin).",
+   "name": "savedDuration",
+   "selector": "ah5@u2151#18"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: roster name label stored as line name; SERVED: roster name label stored as line name (snippet-only twin).",
+   "name": "nameText",
+   "selector": "ah6@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mode-in-list flag gates team split; SERVED: mode-in-list flag gates team split (snippet-only twin).",
+   "name": "isTeamMode",
+   "selector": "ah6@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: zero x-offset added to bar position; SERVED: zero x-offset added to bar position (snippet-only twin).",
+   "name": "barBaseX",
+   "selector": "ah6@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: global-keys progress added to challenge progress; SERVED: global-keys progress added to challenge progress (snippet-only twin).",
+   "name": "bonusProgress",
+   "selector": "ah6@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: y-offset applied to challenge panel positions; SERVED: y-offset applied to challenge panel positions (snippet-only twin).",
+   "name": "layoutOffsetY",
+   "selector": "ah6@u2151#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused script-load handler param never read",
+   "selector": "ah6@u2151#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: idtoken payload posted for xsolla token; SERVED: idtoken payload posted for xsolla token (snippet-only twin).",
+   "name": "tokenRequestBody",
+   "selector": "ah6@u2151#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: idtoken payload posted in payment flow; SERVED: idtoken payload posted in payment flow (snippet-only twin).",
+   "name": "tokenRequestBody",
+   "selector": "ah6@u2151#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2^32 scale constant in hash function; SERVED: 2^32 scale constant in hash function (snippet-only twin).",
+   "name": "twoPow32",
+   "selector": "ah6@u2151#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ad package salt hashed with nonce; SERVED: ad package salt hashed with nonce (snippet-only twin).",
+   "name": "adTokenSalt",
+   "selector": "ah6@u2151#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current hoverElements entry being transitioned; SERVED: current hoverElements entry being transitioned (snippet-only twin).",
+   "name": "hoverElement",
+   "selector": "ah6@u2151#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: floor division row index for drawRank; SERVED: floor division row index for drawRank (snippet-only twin).",
+   "name": "rankRow",
+   "selector": "ah6@u2151#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sign-in response carrying access or id token; SERVED: sign-in response carrying access or id token (snippet-only twin).",
+   "name": "googleCredential",
+   "selector": "ah6@u2151#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: token wrapped into id_token signin call; SERVED: token wrapped into id_token signin call (snippet-only twin).",
+   "name": "googleIdToken",
+   "selector": "ah6@u2151#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: signin popup width for centering math; SERVED: signin popup width for centering math (snippet-only twin).",
+   "name": "popupWidth",
+   "selector": "ah6@u2151#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: coin value displayed and stored; SERVED: coin value displayed and stored (snippet-only twin).",
+   "name": "coinCount",
+   "selector": "ah6@u2151#17"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: optional username gates login payload branch; SERVED: optional username gates login payload branch (snippet-only twin).",
+   "name": "usernameOverride",
+   "selector": "ah6@u2151#18"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: animated play-button frame updated per tick; SERVED: animated play-button frame updated per tick (snippet-only twin).",
+   "name": "animTarget",
+   "selector": "ah6@u2151#19"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused play-button click param never read",
+   "selector": "ah6@u2151#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: banner bar width synced to camera; SERVED: banner bar width synced to camera (snippet-only twin).",
+   "name": "resizeTarget",
+   "selector": "ah6@u2151#21"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tab name uppercased for scene lookup; SERVED: tab name uppercased for scene lookup (snippet-only twin).",
+   "name": "sceneName",
+   "selector": "ah6@u2151#22"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: boolean toggles settings overlay branch; SERVED: boolean toggles settings overlay branch (snippet-only twin).",
+   "name": "showSettings",
+   "selector": "ah6@u2151#23"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter over prerender canvas list; SERVED: loop counter over prerender canvas list (snippet-only twin).",
+   "name": "canvasIndex",
+   "selector": "ah6@u2151#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: widget visibility toggled by setter; SERVED: widget visibility toggled by setter (snippet-only twin).",
+   "name": "targetWidget",
+   "selector": "ah6@u2151#26"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: category group whose buttons get selected; SERVED: category group whose buttons get selected (snippet-only twin).",
+   "name": "buttonGroup",
+   "selector": "ah6@u2151#27"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+# DOSSIER slice-19 (wave 11, 11 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/11] backfaceCulling@u0417#0 | kind=param depth=7 refCount=1 | combat/raycast.js
+DECL @1027 (verified):
+vzFuAsEB.gURkzCzeY(),at:function(t,target){return target.copy(this.klYMxzxpTL).OpiuFvBcQd(t).add(this.origin);},set:function(origin,klYMxzxpTL){this.origin=origin;this.klYMxzxpTL=klYMxzxpTL;},DLIgdglxgw:function(){this.dest.copy(this.origin).YbYyrgWGnfQ(this.klYMxzxpTL,100);},setFromCamera:function(x,y,aKmLbYuMC){if(aKmLbYuMC&&aKmLbYuMC.isPerspectiveCamera){this.origin.TLgJbfmniE(aKmLbYuMC.matrixWorld);this.klYMxzxpTL.set(x,y,0.5).unproject(aKmLbYuMC).sub(this.origin).normalize();this.aKmLbYuMC=aKmLbYuMC;}else{console.error('threeRaycaster: Unsupported aKmLbYuMC type.');}},kAnjdtJLio:function([...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/11] distanceSquared@u0417#0 | kind=let depth=8 refCount=3 | combat/raycast.js
+DECL @1834 (verified):
+hQxfFGDS(this.origin,this.a);var DdQxE2=sign*this.klYMxzxpTL.dot(this.ktLerTRTAa.UZFffGBjyhk(this.FBFOTIucqfz,this.ktLerTRTAa));if(DdQxE2<0){return null;}var DdE1xQ=sign*this.klYMxzxpTL.dot(this.cgKhuMbVj.cross(this.FBFOTIucqfz));if(DdE1xQ<0){return null;}if(DdQxE2+DdE1xQ>DdN){return null;}var QdN=-sign*this.FBFOTIucqfz.dot(this.normal);if(QdN<0){return null;}return this.at(QdN/DdN,target);},checkIntersection:function(object,wJMEOTpgSvP){'use strict';let x=this.kAnjdtJLio(false,this.point);if(x===null)return null;this.lDTOdGTfm.copy(this.point);this.lDTOdGTfm.GdTYEgIav(object.matrixWorld);let [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/11] faceIndices@u0417#0 | kind=param depth=7 refCount=3 | combat/raycast.js
+DECL @2132 (verified):
+=-sign*this.FBFOTIucqfz.dot(this.normal);if(QdN<0){return null;}return this.at(QdN/DdN,target);},checkIntersection:function(object,wJMEOTpgSvP){'use strict';let x=this.kAnjdtJLio(false,this.point);if(x===null)return null;this.lDTOdGTfm.copy(this.point);this.lDTOdGTfm.GdTYEgIav(object.matrixWorld);let distanceSquared=this.origin.XcYeSlLtjr(this.lDTOdGTfm);if(distanceSquared<this.ogFbLuHEhK||distanceSquared>this.gozFFczNjTy)return null;wJMEOTpgSvP.pLBXqJSbPlZ=distanceSquared;wJMEOTpgSvP.point.copy(this.lDTOdGTfm);wJMEOTpgSvP.object=object;return wJMEOTpgSvP;},KSqqDBREn:function(object,AyXbLxaib,[...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 1 nearest outside DECL window:
+@2957: NdwjKE.array.length){loPNdwjKE.array[loPNdwjKE.length]=new ul();}BhSKyEIxpfR=this.checkIntersection(object,loPNdwjKE.array[loPNdwjKE.length]);if(BhSKyEIxpfR!==null){BhSKyEIxpfR.face.normal.fromArray(AyXbLxaib,index+faceNormalIndex);BhSKyEIxpfR.index=faceIndices[f];loPNdwjKE.length++;}}if(loPNdwjKE.length>0){var shortest=loPNdwjKE.array[0];var index=0;for(var i=1;i<loPNdwjKE.length;i++){if(loPNdwjKE.array[i].pLBXqJSbPlZ<shortest.pLBXqJSbPlZ){shortest=loPNdwjKE.array[i];index=i;}}loPNdwjKE.array[i
+==============================================================================
+[4/11] shortest@u0417#0 | kind=var depth=7 refCount=3 | combat/raycast.js
+DECL @3020 (verified):
+this.a.fromArray(AyXbLxaib,index+faceAIndex);this.cgKhuMbVj.fromArray(AyXbLxaib,index+faceBIndex);this.ktLerTRTAa.fromArray(AyXbLxaib,index+faceCIndex);this.cgKhuMbVj.sub(this.a);this.ktLerTRTAa.sub(this.a);this.normal.UZFffGBjyhk(this.cgKhuMbVj,this.ktLerTRTAa);if(loPNdwjKE.length==loPNdwjKE.array.length){loPNdwjKE.array[loPNdwjKE.length]=new ul();}BhSKyEIxpfR=this.checkIntersection(object,loPNdwjKE.array[loPNdwjKE.length]);if(BhSKyEIxpfR!==null){BhSKyEIxpfR.face.normal.fromArray(AyXbLxaib,index+faceNormalIndex);BhSKyEIxpfR.index=faceIndices[f];loPNdwjKE.length++;}}if(loPNdwjKE.length>0){var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/11] sign@u0417#0 | kind=var depth=7 refCount=5 | combat/raycast.js
+DECL @1109 (verified):
+uFvBcQd(t).add(this.origin);},set:function(origin,klYMxzxpTL){this.origin=origin;this.klYMxzxpTL=klYMxzxpTL;},DLIgdglxgw:function(){this.dest.copy(this.origin).YbYyrgWGnfQ(this.klYMxzxpTL,100);},setFromCamera:function(x,y,aKmLbYuMC){if(aKmLbYuMC&&aKmLbYuMC.isPerspectiveCamera){this.origin.TLgJbfmniE(aKmLbYuMC.matrixWorld);this.klYMxzxpTL.set(x,y,0.5).unproject(aKmLbYuMC).sub(this.origin).normalize();this.aKmLbYuMC=aKmLbYuMC;}else{console.error('threeRaycaster: Unsupported aKmLbYuMC type.');}},kAnjdtJLio:function(backfaceCulling,target){'use strict';var DdN=this.klYMxzxpTL.dot(this.normal);var [...line truncated...]
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/11] useHitboxes@u0417#0 | kind=param depth=7 refCount=1 | combat/raycast.js
+DECL @2154 (verified):
+z.dot(this.normal);if(QdN<0){return null;}return this.at(QdN/DdN,target);},checkIntersection:function(object,wJMEOTpgSvP){'use strict';let x=this.kAnjdtJLio(false,this.point);if(x===null)return null;this.lDTOdGTfm.copy(this.point);this.lDTOdGTfm.GdTYEgIav(object.matrixWorld);let distanceSquared=this.origin.XcYeSlLtjr(this.lDTOdGTfm);if(distanceSquared<this.ogFbLuHEhK||distanceSquared>this.gozFFczNjTy)return null;wJMEOTpgSvP.pLBXqJSbPlZ=distanceSquared;wJMEOTpgSvP.point.copy(this.lDTOdGTfm);wJMEOTpgSvP.object=object;return wJMEOTpgSvP;},KSqqDBREn:function(object,AyXbLxaib,faceIndices,loPNdwjKE,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/11] parameters@u0021#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @117 (verified):
+usvzFuAsEB.EffectComposer=function(qIySEZgti,renderTarget){this.qIySEZgti=qIySEZgti;if(renderTarget===undefined){var parameters={minFilter:usvzFuAsEB.LinearFilter,magFilter:usvzFuAsEB.LinearFilter,format:usvzFuAsEB.RGBAFormat,stencilBuffer:false};var size=qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarget=new usvzFuAsEB.WebGLRenderTarget(this._width*this._pixelRatio,this._height*this._pixelRatio,parameters);renderTarget.texture.name='EffectComposer.rt1';}else{this._pixelRatio=1;this._width=rend[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/11] ra@u0198#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var ra=r9,rb={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/11] KF@u2066#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @64 (verified):
+var Kv=![],Kw=![],Kx=0.3,Ky=0.3,Kz=0.3,KA=![],KB=[],KC=[],KD,KE,KF=![],KG=![],KH=[],KI={},KJ={},KK={},KL=[],KM=0x0,KN=0x0,KO=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/11] VN@u2483#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var VN=0x50,VO=NJ([-0x63,-0x65,-0x6c,-0x5b,-0x63,-0x5b,-0x64,-0x6a,-0x4e]);
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/11] a3s@u2795#0 | kind=var depth=5 refCount=0 | network/dispatch.js
+DECL @165 (verified):
+function a11(){var aCP=ai1;let a3o=a0Z;a0Z=a10,a10=a3o;for(var a3p=0x0;a3p<a10['length'];a3p++){try{var a3q=a10['array'][a3p];a3q=a0Y(a3q);var a3r=new DataView(a3q),a3s=0x0,a3t=0x0,a3u=0x0;while(a3t<a3r['byteLength']){a3u++;if(a3u>0x1f4){window['onerror']("Parsing loop");break;}var a3v=![],a3w;try{a3w=Jg(a3r,a3t);}catch(a3B){window['onerror']('Parse\x20Buffer\x20Error'),console['log'](a3B);var a3x=new Uint8Array(a3q),a3y=[];for(var a3p=0x0;a3p<a3x['length'];a3p++){a3y[a3p]=a3x[a3p];}console['log'](JSON["stringify"](a3y)),a3v=!![];}(a3w==null||a3w==undefined)&&(window["onerror"]('packetOBJ\x20'[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-19: propose EVERY binding above.

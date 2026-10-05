@@ -1,0 +1,157 @@
+# DOSSIER slice-28 (wave 5, 29 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/29] a3i@u0362#0 | kind=var depth=5 refCount=7 | sim/game-loop.js
+DECL @26 (verified):
+function tk(){var anV=ai1,a3i={};return a3i['x']=0x0,a3i['y']=0x0,a3i['x2']=0x0,a3i['y2']=0x0,a3i["scale"]=0x1,a3i["opacity"]=0x1,a3i;}
+USES: refCount=7, 8 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/29] a3o@u2759#0 | kind=param depth=5 refCount=7 | network/handlers.js
+DECL @21 (verified):
+'wM86olr40':function(a3o){var aCr=ai1,a3p={};a3p['name']=a0u[a3o['id']],a3p['id']=a3o['id'],a3p["points"]=a3o['points'],a3p['YlyjPgZsW']=a3o['YlyjPgZsW'],a3p['qKOctHozRiE']=a3o['qKOctHozRiE'],a3p['hsp']=a3o['hsp'];var a3q=a3p;MP[a3o['place']]=a3q;},
+USES: refCount=7, 8 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/29] a3q@u2759#0 | kind=var depth=5 refCount=1 | network/handlers.js
+DECL @218 (verified):
+'wM86olr40':function(a3o){var aCr=ai1,a3p={};a3p['name']=a0u[a3o['id']],a3p['id']=a3o['id'],a3p["points"]=a3o['points'],a3p['YlyjPgZsW']=a3o['YlyjPgZsW'],a3p['qKOctHozRiE']=a3o['qKOctHozRiE'],a3p['hsp']=a3o['hsp'];var a3q=a3p;MP[a3o['place']]=a3q;},
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/29] a3o@u2640#0 | kind=param depth=5 refCount=13 | engine/shaders.js
+DECL @12 (verified):
+function YA(a3o){var aB2=ai1;for(var a3p=a3o['children']['length']-0x1;a3p>=0x0;a3p--){YA(a3o["children"][a3p]);}a3o["RNQDluasaN"]!=undefined&&a3o['RNQDluasaN']['isBufferGeometry']&&a3o['RNQDluasaN']['dispose']();if(a3o['material']!=undefined){var a3q=a3o['material'];!Array["isArray"](a3o['material'])&&(a3q=[a3o["material"]]);for(let a3s=0x0;a3s<a3q['length'];a3s++){let a3t=a3q[a3s];if(a3t["uniforms"]==undefined)a3t['map']!=undefined&&(Fi(a3t['map']),a3t['map']=null);else{let a3u=Object['keys'](a3t['uniforms']);for(var a3r=0x0;a3r<a3u["length"];a3r++){let a3v=a3u[a3r];a3t["uniforms"][a3v]['val[...line truncated...]
+USES: refCount=13, 14 token-occurrences in unit, showing 4 nearest outside DECL window:
+@815: =a3u[a3r];a3t["uniforms"][a3v]['value']&&(a3t['uniforms'][a3v]['value']["isTexture"]||a3t['uniforms'][a3v]['value']['isCubeTexture'])&&(Fi(a3t['uniforms'][a3v]['value']),a3t["uniforms"][a3v]["value"]=null);}}a3t['afCJVYrCGK']=!![],a3t["dispose"]();}}a3o['parent']!=undefined&&a3o['parent']!=null&&a3o["parent"]['remove'](a3o);}
+@841: a3v]['value']&&(a3t['uniforms'][a3v]['value']["isTexture"]||a3t['uniforms'][a3v]['value']['isCubeTexture'])&&(Fi(a3t['uniforms'][a3v]['value']),a3t["uniforms"][a3v]["value"]=null);}}a3t['afCJVYrCGK']=!![],a3t["dispose"]();}}a3o['parent']!=undefined&&a3o['parent']!=null&&a3o["parent"]['remove'](a3o);}
+@862: uniforms'][a3v]['value']["isTexture"]||a3t['uniforms'][a3v]['value']['isCubeTexture'])&&(Fi(a3t['uniforms'][a3v]['value']),a3t["uniforms"][a3v]["value"]=null);}}a3t['afCJVYrCGK']=!![],a3t["dispose"]();}}a3o['parent']!=undefined&&a3o['parent']!=null&&a3o["parent"]['remove'](a3o);}
+@886: ["isTexture"]||a3t['uniforms'][a3v]['value']['isCubeTexture'])&&(Fi(a3t['uniforms'][a3v]['value']),a3t["uniforms"][a3v]["value"]=null);}}a3t['afCJVYrCGK']=!![],a3t["dispose"]();}}a3o['parent']!=undefined&&a3o['parent']!=null&&a3o["parent"]['remove'](a3o);}
+==============================================================================
+[5/29] a3i@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @12 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/29] a3j@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @16 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/29] a3k@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @20 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/29] a3l@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @24 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/29] a3m@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @28 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/29] a3n@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @32 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/29] a3o@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @36 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/29] a3p@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @40 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/29] a3q@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @44 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/29] a3r@u1822#0 | kind=var depth=5 refCount=13 | ui/widgets.js
+DECL @61 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=13, 14 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/29] a3l@u2345#0 | kind=param depth=5 refCount=4 | sim/game-loop.js
+DECL @12 (verified):
+function SL(a3l,a3m,a3n,a3o){var ayF=ai1;if(GK==SK)return;SK=GK,Uk['qcXhPmLRUYO'](a3l,'+'+a3m,a3n,a3o);return;SJ=0x0,nameRepositioner["DgJwEtWhIm"][0x0]['text']=a3l,nameRepositioner['wAijZbUAD'][0x0]['text']=a3l,Kr["pANxEEFMRM"](nameRepositioner,elimCanvas['width'],elimCanvas['height'],0x0,elimName['image']);return;nameRepositioner['add'](new Kr['text'](a3l,-0xfa+0x4,0x0,'#EEE','Verdana',0x28,"bold italic",0x1,'left'));var a3p=Kr['pANxEEFMRM'](nameRepositioner,0x1f4,0x5a,0x0,null,0x1);nameRepositioner['DgJwEtWhIm']=[],elimName['image']=LN(a3p["image"],0x2,"#444",0.6),elimName["width"]=elimName[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/29] a3m@u2345#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @16 (verified):
+function SL(a3l,a3m,a3n,a3o){var ayF=ai1;if(GK==SK)return;SK=GK,Uk['qcXhPmLRUYO'](a3l,'+'+a3m,a3n,a3o);return;SJ=0x0,nameRepositioner["DgJwEtWhIm"][0x0]['text']=a3l,nameRepositioner['wAijZbUAD'][0x0]['text']=a3l,Kr["pANxEEFMRM"](nameRepositioner,elimCanvas['width'],elimCanvas['height'],0x0,elimName['image']);return;nameRepositioner['add'](new Kr['text'](a3l,-0xfa+0x4,0x0,'#EEE','Verdana',0x28,"bold italic",0x1,'left'));var a3p=Kr['pANxEEFMRM'](nameRepositioner,0x1f4,0x5a,0x0,null,0x1);nameRepositioner['DgJwEtWhIm']=[],elimName['image']=LN(a3p["image"],0x2,"#444",0.6),elimName["width"]=elimName[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/29] a3n@u2345#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @20 (verified):
+function SL(a3l,a3m,a3n,a3o){var ayF=ai1;if(GK==SK)return;SK=GK,Uk['qcXhPmLRUYO'](a3l,'+'+a3m,a3n,a3o);return;SJ=0x0,nameRepositioner["DgJwEtWhIm"][0x0]['text']=a3l,nameRepositioner['wAijZbUAD'][0x0]['text']=a3l,Kr["pANxEEFMRM"](nameRepositioner,elimCanvas['width'],elimCanvas['height'],0x0,elimName['image']);return;nameRepositioner['add'](new Kr['text'](a3l,-0xfa+0x4,0x0,'#EEE','Verdana',0x28,"bold italic",0x1,'left'));var a3p=Kr['pANxEEFMRM'](nameRepositioner,0x1f4,0x5a,0x0,null,0x1);nameRepositioner['DgJwEtWhIm']=[],elimName['image']=LN(a3p["image"],0x2,"#444",0.6),elimName["width"]=elimName[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/29] a3o@u2345#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @24 (verified):
+function SL(a3l,a3m,a3n,a3o){var ayF=ai1;if(GK==SK)return;SK=GK,Uk['qcXhPmLRUYO'](a3l,'+'+a3m,a3n,a3o);return;SJ=0x0,nameRepositioner["DgJwEtWhIm"][0x0]['text']=a3l,nameRepositioner['wAijZbUAD'][0x0]['text']=a3l,Kr["pANxEEFMRM"](nameRepositioner,elimCanvas['width'],elimCanvas['height'],0x0,elimName['image']);return;nameRepositioner['add'](new Kr['text'](a3l,-0xfa+0x4,0x0,'#EEE','Verdana',0x28,"bold italic",0x1,'left'));var a3p=Kr['pANxEEFMRM'](nameRepositioner,0x1f4,0x5a,0x0,null,0x1);nameRepositioner['DgJwEtWhIm']=[],elimName['image']=LN(a3p["image"],0x2,"#444",0.6),elimName["width"]=elimName[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/29] a3i@u2064#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @12 (verified):
+function Kt(a3i,a3j,a3k,a3l,a3m,a3n){var aqL=ai1;let a3o=new Kr['image'](Kr['getTempImage'](Ks+a3i+a3j+'.webp'),a3k||0x0,a3l||0x0,a3m||0x12c,a3n||0x12c);return a3o["name"]=a3i,a3o['OJsvWrsPvs']=function(a3p,a3q,a3r,a3s){var aqM=aqL;a3o['invRatio']=0x1/a3q*a3o['size'];try{a3o['name']=='neon'&&(a3p['filter']='hue-rotate('+Math["floor"](-Date['now']()*1.8/0xa%0x168+0x168)+'deg)');let a3t=a3o;a3p['drawImage'](a3t["image"],a3r-a3t['width']*0.5*a3t['invRatio'],a3s-a3t['height']*0.5*a3t['invRatio'],a3t['width']*a3t['invRatio'],a3t['height']*a3t['invRatio']),Kr['drawImages']++;}catch(a3u){if(a3o['imag[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/29] a3j@u2064#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @16 (verified):
+function Kt(a3i,a3j,a3k,a3l,a3m,a3n){var aqL=ai1;let a3o=new Kr['image'](Kr['getTempImage'](Ks+a3i+a3j+'.webp'),a3k||0x0,a3l||0x0,a3m||0x12c,a3n||0x12c);return a3o["name"]=a3i,a3o['OJsvWrsPvs']=function(a3p,a3q,a3r,a3s){var aqM=aqL;a3o['invRatio']=0x1/a3q*a3o['size'];try{a3o['name']=='neon'&&(a3p['filter']='hue-rotate('+Math["floor"](-Date['now']()*1.8/0xa%0x168+0x168)+'deg)');let a3t=a3o;a3p['drawImage'](a3t["image"],a3r-a3t['width']*0.5*a3t['invRatio'],a3s-a3t['height']*0.5*a3t['invRatio'],a3t['width']*a3t['invRatio'],a3t['height']*a3t['invRatio']),Kr['drawImages']++;}catch(a3u){if(a3o['imag[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/29] a3k@u2064#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @20 (verified):
+function Kt(a3i,a3j,a3k,a3l,a3m,a3n){var aqL=ai1;let a3o=new Kr['image'](Kr['getTempImage'](Ks+a3i+a3j+'.webp'),a3k||0x0,a3l||0x0,a3m||0x12c,a3n||0x12c);return a3o["name"]=a3i,a3o['OJsvWrsPvs']=function(a3p,a3q,a3r,a3s){var aqM=aqL;a3o['invRatio']=0x1/a3q*a3o['size'];try{a3o['name']=='neon'&&(a3p['filter']='hue-rotate('+Math["floor"](-Date['now']()*1.8/0xa%0x168+0x168)+'deg)');let a3t=a3o;a3p['drawImage'](a3t["image"],a3r-a3t['width']*0.5*a3t['invRatio'],a3s-a3t['height']*0.5*a3t['invRatio'],a3t['width']*a3t['invRatio'],a3t['height']*a3t['invRatio']),Kr['drawImages']++;}catch(a3u){if(a3o['imag[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/29] a3l@u2064#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @24 (verified):
+function Kt(a3i,a3j,a3k,a3l,a3m,a3n){var aqL=ai1;let a3o=new Kr['image'](Kr['getTempImage'](Ks+a3i+a3j+'.webp'),a3k||0x0,a3l||0x0,a3m||0x12c,a3n||0x12c);return a3o["name"]=a3i,a3o['OJsvWrsPvs']=function(a3p,a3q,a3r,a3s){var aqM=aqL;a3o['invRatio']=0x1/a3q*a3o['size'];try{a3o['name']=='neon'&&(a3p['filter']='hue-rotate('+Math["floor"](-Date['now']()*1.8/0xa%0x168+0x168)+'deg)');let a3t=a3o;a3p['drawImage'](a3t["image"],a3r-a3t['width']*0.5*a3t['invRatio'],a3s-a3t['height']*0.5*a3t['invRatio'],a3t['width']*a3t['invRatio'],a3t['height']*a3t['invRatio']),Kr['drawImages']++;}catch(a3u){if(a3o['imag[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[23/29] a3m@u2064#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @28 (verified):
+function Kt(a3i,a3j,a3k,a3l,a3m,a3n){var aqL=ai1;let a3o=new Kr['image'](Kr['getTempImage'](Ks+a3i+a3j+'.webp'),a3k||0x0,a3l||0x0,a3m||0x12c,a3n||0x12c);return a3o["name"]=a3i,a3o['OJsvWrsPvs']=function(a3p,a3q,a3r,a3s){var aqM=aqL;a3o['invRatio']=0x1/a3q*a3o['size'];try{a3o['name']=='neon'&&(a3p['filter']='hue-rotate('+Math["floor"](-Date['now']()*1.8/0xa%0x168+0x168)+'deg)');let a3t=a3o;a3p['drawImage'](a3t["image"],a3r-a3t['width']*0.5*a3t['invRatio'],a3s-a3t['height']*0.5*a3t['invRatio'],a3t['width']*a3t['invRatio'],a3t['height']*a3t['invRatio']),Kr['drawImages']++;}catch(a3u){if(a3o['imag[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[24/29] a3n@u2064#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @32 (verified):
+function Kt(a3i,a3j,a3k,a3l,a3m,a3n){var aqL=ai1;let a3o=new Kr['image'](Kr['getTempImage'](Ks+a3i+a3j+'.webp'),a3k||0x0,a3l||0x0,a3m||0x12c,a3n||0x12c);return a3o["name"]=a3i,a3o['OJsvWrsPvs']=function(a3p,a3q,a3r,a3s){var aqM=aqL;a3o['invRatio']=0x1/a3q*a3o['size'];try{a3o['name']=='neon'&&(a3p['filter']='hue-rotate('+Math["floor"](-Date['now']()*1.8/0xa%0x168+0x168)+'deg)');let a3t=a3o;a3p['drawImage'](a3t["image"],a3r-a3t['width']*0.5*a3t['invRatio'],a3s-a3t['height']*0.5*a3t['invRatio'],a3t['width']*a3t['invRatio'],a3t['height']*a3t['invRatio']),Kr['drawImages']++;}catch(a3u){if(a3o['imag[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[25/29] a3o@u2064#0 | kind=let depth=6 refCount=8 | ui/widgets.js
+DECL @53 (verified):
+function Kt(a3i,a3j,a3k,a3l,a3m,a3n){var aqL=ai1;let a3o=new Kr['image'](Kr['getTempImage'](Ks+a3i+a3j+'.webp'),a3k||0x0,a3l||0x0,a3m||0x12c,a3n||0x12c);return a3o["name"]=a3i,a3o['OJsvWrsPvs']=function(a3p,a3q,a3r,a3s){var aqM=aqL;a3o['invRatio']=0x1/a3q*a3o['size'];try{a3o['name']=='neon'&&(a3p['filter']='hue-rotate('+Math["floor"](-Date['now']()*1.8/0xa%0x168+0x168)+'deg)');let a3t=a3o;a3p['drawImage'](a3t["image"],a3r-a3t['width']*0.5*a3t['invRatio'],a3s-a3t['height']*0.5*a3t['invRatio'],a3t['width']*a3t['invRatio'],a3t['height']*a3t['invRatio']),Kr['drawImages']++;}catch(a3u){if(a3o['imag[...line truncated...]
+USES: refCount=8, 9 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[26/29] a3u@u2064#0 | kind=catch-param depth=9 refCount=0 | ui/widgets.js
+DECL @583 (verified):
+function Kt(a3i,a3j,a3k,a3l,a3m,a3n){var aqL=ai1;let a3o=new Kr['image'](Kr['getTempImage'](Ks+a3i+a3j+'.webp'),a3k||0x0,a3l||0x0,a3m||0x12c,a3n||0x12c);return a3o["name"]=a3i,a3o['OJsvWrsPvs']=function(a3p,a3q,a3r,a3s){var aqM=aqL;a3o['invRatio']=0x1/a3q*a3o['size'];try{a3o['name']=='neon'&&(a3p['filter']='hue-rotate('+Math["floor"](-Date['now']()*1.8/0xa%0x168+0x168)+'deg)');let a3t=a3o;a3p['drawImage'](a3t["image"],a3r-a3t['width']*0.5*a3t['invRatio'],a3s-a3t['height']*0.5*a3t['invRatio'],a3t['width']*a3t['invRatio'],a3t['height']*a3t['invRatio']),Kr['drawImages']++;}catch(a3u){if(a3o['imag[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[27/29] a3B@u2872#0 | kind=var depth=5 refCount=5 | engine/webgl-renderer.js
+DECL @202 (verified):
+function a38(){var aEj=ai1,a3y={};a3y["antialias"]=![];var a3z=new usvzFuAsEB['WebGL1Renderer'](a3y);a3z['debug']['checkShaderErrors']=![];var a3A=0x400;a3z['setSize'](a3A,a3A),a37['qIySEZgti']=a3z;var a3B=new usvzFuAsEB['QwysDsAqBdy']();a37['scene']=a3B;var a3C=new usvzFuAsEB['lUtmuvURyPI'](-0x1,0x1,0x1,-0x1,-0x5,0x5);a37["aKmLbYuMC"]=a3C,a3C["position"]['z']=0x1,a3C['JoIkrtRxhZ'](new usvzFuAsEB['gURkzCzeY']()),a3B['add'](a3C);var a3D=new usvzFuAsEB['AmbientLight'](0xffffff,0.5);a3B['add'](a3D);var a3E=new usvzFuAsEB['DirectionalLight'](0xffffff,0x1);a3E['position']["set"](0x1,0x0,0x1),a3E['J[...line truncated...]
+USES: refCount=5, 6 token-occurrences in unit, showing 1 nearest outside DECL window:
+@892: )),a3B['add'](a3E);var a3F=0x1,a3G=new usvzFuAsEB[("PlaneGeometry")](0x2,0x2,a3F,a3F),a3H=new usvzFuAsEB['SKCzNEjzurZ']({'map':new usvzFuAsEB['CanvasTexture'](document['createElement']('img'))});a37['mat']=a3H;var a3I=new usvzFuAsEB['Mesh'](a3G,a3H);a3B["add"](a3I);var a3J=new usvzFuAsEB['EffectComposer'](a3z);a37['composer']=a3J,a37["initialized"]=!![];}
+==============================================================================
+[28/29] a3C@u2872#0 | kind=var depth=5 refCount=4 | engine/webgl-renderer.js
+DECL @259 (verified):
+function a38(){var aEj=ai1,a3y={};a3y["antialias"]=![];var a3z=new usvzFuAsEB['WebGL1Renderer'](a3y);a3z['debug']['checkShaderErrors']=![];var a3A=0x400;a3z['setSize'](a3A,a3A),a37['qIySEZgti']=a3z;var a3B=new usvzFuAsEB['QwysDsAqBdy']();a37['scene']=a3B;var a3C=new usvzFuAsEB['lUtmuvURyPI'](-0x1,0x1,0x1,-0x1,-0x5,0x5);a37["aKmLbYuMC"]=a3C,a3C["position"]['z']=0x1,a3C['JoIkrtRxhZ'](new usvzFuAsEB['gURkzCzeY']()),a3B['add'](a3C);var a3D=new usvzFuAsEB['AmbientLight'](0xffffff,0.5);a3B['add'](a3D);var a3E=new usvzFuAsEB['DirectionalLight'](0xffffff,0x1);a3E['position']["set"](0x1,0x0,0x1),a3E['J[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[29/29] a3E@u2872#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @505 (verified):
+function a38(){var aEj=ai1,a3y={};a3y["antialias"]=![];var a3z=new usvzFuAsEB['WebGL1Renderer'](a3y);a3z['debug']['checkShaderErrors']=![];var a3A=0x400;a3z['setSize'](a3A,a3A),a37['qIySEZgti']=a3z;var a3B=new usvzFuAsEB['QwysDsAqBdy']();a37['scene']=a3B;var a3C=new usvzFuAsEB['lUtmuvURyPI'](-0x1,0x1,0x1,-0x1,-0x5,0x5);a37["aKmLbYuMC"]=a3C,a3C["position"]['z']=0x1,a3C['JoIkrtRxhZ'](new usvzFuAsEB['gURkzCzeY']()),a3B['add'](a3C);var a3D=new usvzFuAsEB['AmbientLight'](0xffffff,0.5);a3B['add'](a3D);var a3E=new usvzFuAsEB['DirectionalLight'](0xffffff,0x1);a3E['position']["set"](0x1,0x0,0x1),a3E['J[...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-28: propose EVERY binding above.

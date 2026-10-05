@@ -1,0 +1,223 @@
+{
+ "slice": "05",
+ "stats": {
+  "total": 30,
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @143064 Int8BufferAttribute(array,itemSize,normalized) forwards to BufferAttribute.call; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @143355 Uint8ClampedBufferAttribute(array,itemSize,normalized) forwards to BufferAttribute.call; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @143619 Int16BufferAttribute(array,itemSize,normalized) forwards to BufferAttribute.call; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @143886 Uint16BufferAttribute(array,itemSize,normalized) forwards to BufferAttribute.call; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @144150 Int32BufferAttribute(array,itemSize,normalized) forwards to BufferAttribute.call; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @144419 Uint32BufferAttribute(array,itemSize,normalized) forwards to BufferAttribute.call; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @144754 Float16BufferAttribute(array,itemSize,normalized) forwards to BufferAttribute.call; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @145027 Float32BufferAttribute(array,itemSize,normalized) forwards to BufferAttribute.call; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @164649 var itemSize in toNonIndexed/convertBufferAttribute region; USES refCount=4; already-readable domain name, keep",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#11"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @525905 InterleavedBufferAttribute(interleavedBuffer,itemSize,...) param; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#12"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @749421 InstancedBufferAttribute(array,itemSize,...) param; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#13"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @837073 GLBufferAttribute(buffer,type,itemSize,elementSize,count) assigned to this.itemSize; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#14"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @837615 setItemSize(itemSize){this.itemSize=itemSize} setter param; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#15"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @888480 DynamicBufferAttribute(array,itemSize) forwards to BufferAttribute; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#16"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @888744 Int8Attribute(array,itemSize) forwards to Int8BufferAttribute; USES refCount=1; idiomatic three.js public API param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#17"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @888941 DynamicBufferAttribute(array,itemSize) forwarded to BufferAttribute; USES pass-through x1 — idiomatic three.js param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#18"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @889148 Int8Attribute(array,itemSize) forwarded to Int8BufferAttribute; USES x1 — idiomatic param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#19"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @889369 Uint8Attribute(array,itemSize) forwarded to Uint8BufferAttribute; USES x1 — idiomatic param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#20"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @889570 Uint8ClampedAttribute(array,itemSize) forwarded to Uint8ClampedBufferAttribute; USES x1 — idiomatic param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#21"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @889773 Int16Attribute(array,itemSize) forwarded to Int16BufferAttribute; USES x1 — idiomatic param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#22"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @889974 Uint16Attribute(array,itemSize) forwarded to Uint16BufferAttribute; USES x1 — idiomatic param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#23"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @890179 Int32Attribute(array,itemSize) forwarded to Int32BufferAttribute; USES x1 — idiomatic param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#24"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @890387 Uint32Attribute(array,itemSize) forwarded to Uint32BufferAttribute; USES x1 — idiomatic param",
+   "name": "itemSize",
+   "selector": "itemSize@u0020#25"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @684884 var itemsLoaded=0 in LoadingManager progress tracker; USES x4 — readable counter",
+   "name": "itemsLoaded",
+   "selector": "itemsLoaded@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @684902 var itemsTotal in LoadingManager progress tracker; USES x4 — readable counter",
+   "name": "itemsTotal",
+   "selector": "itemsTotal@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @699004 var lengthAfter=arcLengths[i+1] in getUtoTmapping interpolation; USES x1 — readable",
+   "name": "lengthAfter",
+   "selector": "lengthAfter@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @698973 var lengthBefore=arcLengths[i] in getUtoTmapping interpolation; USES x2 — readable",
+   "name": "lengthBefore",
+   "selector": "lengthBefore@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @905323 lengthManhattan compat shim delegating to manhattanLength(); USES x0 — public deprecated API name",
+   "name": "lengthManhattan",
+   "selector": "lengthManhattan@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @907086 lengthManhattan compat shim on gURkzCzeY delegating to manhattanLength(); USES x0 — public deprecated API name",
+   "name": "lengthManhattan",
+   "selector": "lengthManhattan@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @907509 lengthManhattan compat shim on Vector4 delegating to manhattanLength(); USES x0 — public deprecated API name",
+   "name": "lengthManhattan",
+   "selector": "lengthManhattan@u0020#2"
+  }
+ ]
+}

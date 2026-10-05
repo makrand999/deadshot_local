@@ -1,0 +1,1205 @@
+{
+ "batch": "batch17",
+ "proposals": [
+  {
+   "token": "a2F",
+   "proposedName": "maxFrameStallReports",
+   "confidence": "medium",
+   "evidence": "game-loop.js:4495 declares a2F=0x8; input.js:35 gates frame-stall telemetry on frameStallReportCount<a2F",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a2H",
+   "proposedName": "maxShaderCompileReports",
+   "confidence": "medium",
+   "evidence": "game-loop.js:4495 declares a2H=0x19; input.js:35 gates shader-compile telemetry on shaderCompileReportCount<a2H",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a2I",
+   "proposedName": "frameStallMinMs",
+   "confidence": "medium",
+   "evidence": "game-loop.js:4495 declares a2I=0x64; input.js:35 reports frame-stall only when frame delta a3B>a2I",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a2J",
+   "proposedName": "frameStallMaxMs",
+   "confidence": "medium",
+   "evidence": "game-loop.js:4495 declares a2J=0xbb8; input.js:35 reports frame-stall only when frame delta a3B<a2J",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a2N",
+   "proposedName": "collectNewShaderPrograms",
+   "confidence": "high",
+   "evidence": "game-loop.js:4497 a2N() diffs webglRenderer.info.programs cacheKeys vs knownShaderCacheKeys; input.js:35 feeds result into shader-compile telemetry",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a2R",
+   "proposedName": "longtaskMinDurationMs",
+   "confidence": "medium",
+   "evidence": "game-loop.js:4499 declares a2R=0x96; widgets.js:187 skips longtask entries with duration<a2R before telemetry",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a38",
+   "proposedName": "initPostProcessComposer",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:239 a38() builds offscreen WebGL1Renderer+scene+ortho camera+EffectComposer and sets postProcessComposer.initialized; shaders.js:179 calls it when !initialized",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a3a",
+   "proposedName": "cacheShaderPass",
+   "confidence": "high",
+   "evidence": "game-loop.js:4525 a3a(pass,name,vars) pushes {pass,name,vars} onto shaderPassCache; shaders.js:179 calls a3a(newPass,'paint',radius) after building paint pass",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a3b",
+   "proposedName": "getCachedShaderPass",
+   "confidence": "high",
+   "evidence": "game-loop.js:4527 a3b(name,vars) returns shaderPassCache entry matching name+vars; shaders.js:179 calls a3b('paint',radius) before building a new pass",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a3c",
+   "proposedName": "applyPostProcessEffects",
+   "confidence": "high",
+   "evidence": "shaders.js:179 a3c(image,effects,scale) renders image through composer effect chain and returns processed canvas; game-loop.js:4355 assigns a3c(img,[render,paint,sepia,sharpen]) to texture image",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a3e",
+   "proposedName": "initWeaponSkinPreview",
+   "confidence": "medium",
+   "evidence": "webgl-renderer.js:241 a3e() returns immediately (no-op stub); dead body defines renderWeaponSkinPreview via weaponSkinBakeShaderAlias; called once in renderer init at webgl-renderer.js:89",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "a3h",
+   "proposedName": "initPickupMarkers",
+   "confidence": "high",
+   "evidence": "shaders.js:181 a3h(scene) defines pickupTypeDefs (HEALTH REGEN/MOON JUMP/OVERSHIELD/INVISIBILITY/kc) and createPickupMarker adding meshes to scene; game-loop.js:4095 calls a3h(worldScene)",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "combineGeometries",
+   "proposedName": "mergeGeometries",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:59 declares function merging geos[] into one Geometry with scale; engine/assets-draco.js:19 calls combineGeometries(a5t) to merge map scene geometries when userData materials missing",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "fpsCounter",
+   "proposedName": "fpsMeter",
+   "confidence": "high",
+   "evidence": "world/modes.js:7 declares {startTime,frameNumber,getFPS}; sim/input.js:35 calls fpsCounter[getFPS]() to paint party fpscounter overlay text/fillStyle",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "loadSettings",
+   "proposedName": "loadClientSettings",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3793 parses localStorage.settings into clientSettings + settingsOptions defaults; sim/game-loop.js:3807 invokes loadSettings() at boot",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "p9",
+   "proposedName": "initOverlayLayer",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 p9 assigns global overlayLayer={ortho camera,scene,objs,add/render/resize}; engine/webgl-renderer.js:89 calls p9() at boot; 19 overlayLayer[add] uses for nametag/hitmarker/crosshair widgets",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "pb",
+   "proposedName": "playerNametag",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 pb renders canvas name text + team colors + healthObj bar + triangle marker; world/weapons.js:25 new pb()->threeNametag with FySNkXPfbF(playerNamesMap) + recycledNametagPool",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "pc",
+   "proposedName": "hitmarkerDisplay",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 pc builds 4-rect X (45-degree rotated) hitmarker with bloom update; sim/game-loop.js:3879 new pc()->hitmarkerOverlay; network/handlers.js:31 fires jWTjxRTVr + hitmarker sounds on hit",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "pd",
+   "proposedName": "damageDirectionWidget",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 pd builds red #F44 arc indicator via canvasUiToolkit; sim/game-loop.js:4061 new pd->damageDirectionIndicator; network/handlers.js:71 QGDDdjtGNO(angle) on damage",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "pg",
+   "proposedName": "crosshairScopeRenderer",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 pg builds scope black bars + circle arcs + crosshair lines; combat/scope-crosshair.js:29 new pg->crosshairRenderer; combat/fire.js:11 spread CNFryyAhIm/kKvlNMkUeyL updates",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "ph",
+   "proposedName": "speedLinesEffect",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 ph builds instanced alpha-fade speed-line planes; sim/game-loop.js:3883 new ph()->slideSpeedLines; combat/fire.js:11 show/hide on visualSlideTicksLeft",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "pi",
+   "proposedName": "slideKeyHint",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 pi renders [CTRL]>>> key prompt canvas with setText; sim/game-loop.js:3887 new pi->slideKeyPrompt; sim/input.js:15 setText(keyBindingMapAlias) + fire.js show/hide",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "pj",
+   "proposedName": "warningToastPopup",
+   "confidence": "medium",
+   "evidence": "engine/shaders.js:19 pj renders 'Try not to shoot your teammates!' toast, show-once alreadyShowed + auto-hide timer + setText; sole instance S8 (game-loop.js:3891) never referenced elsewhere",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "pk",
+   "proposedName": "objectiveMarkerBadge",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 pk renders gold icon + OBJECTIVE canvas billboard; sim/game-loop.js:3891 new pk()->objectiveMarker; network/handlers.js:41 bNHuMCEmWbb(m:ss) timer text",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "qK",
+   "proposedName": "defaultMapGeometryShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:175 var qK=defaultMapGeometryShader; engine/assets-draco.js:19 var a4H=qK default shader in material factory a4g",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "qS",
+   "proposedName": "treeLeavesClipShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:183 var qS=treeLeavesClipShader; engine/assets-draco.js:19 a3P[TreeLeaves_clip_nobake]=qS material preset map",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "qU",
+   "proposedName": "waterScrollShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:185 var qU=waterScrollShader; engine/assets-draco.js:19 a3P[Water_Scroll_nobake]=qU material preset map",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "qW",
+   "proposedName": "bush2ShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:187 var qW=bush2Shader; engine/assets-draco.js:19 a3P[Bush2]=qW material preset map",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "qY",
+   "proposedName": "bush3ShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:189 var qY=bush3Shader; engine/assets-draco.js:19 a3P[Bush3]=qY material preset map",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "qc",
+   "proposedName": "stackBlurProcessImage",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:17 function qc draws image to canvas then stack-blurs via stackBlurCanvasRGBA/RGB; sim/game-loop.js:151 stackBlurLib[processImage]=qc",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "qr",
+   "proposedName": "skinnedBasicVertexShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:159 var qr=skinnedBasicVertexShader; engine/shaders.js:145 vertexShader=qr[vertex] when animated in MeshBasicReplacement",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "r4",
+   "proposedName": "tarpsDynamicShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:195 var r4=tarpsDynamicShader; engine/assets-draco.js:19 a3P[TarpsDynamic]=r4 (shaders.js:9 r4 hits are GLSL string contents, excluded)",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "r6",
+   "proposedName": "tireTracksMultiplyShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:197 var r6=tireTracksMultiplyShader; engine/assets-draco.js:19 a3P[TireTracks_multiply_nobake]=r6 (shaders.js:9 r6 hits are GLSL string contents, excluded)",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "r8",
+   "proposedName": "animatedGrassPresetAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:199 var r8=animatedGrassPreset; engine/assets-draco.js:19 a3P[animatedgrass]=r8 material preset map",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "rA",
+   "proposedName": "finalOutputPassShader",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:89 rA={uniforms:finalOutputPassUniforms,vertical gaussian blur fragment}; engine/webgl-renderer.js:123 finalOutputPass=new ShaderPass(rA)",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "rE",
+   "proposedName": "sharpenPassShader",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:91 rE={uniforms:sharpenPassUniforms,3x3 sharpen kernel fragment}; engine/shaders.js:179 ShaderPass(rE) selected for a3H==sharpen",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "rI",
+   "proposedName": "sepiaShaderDef",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:93 var rI={uniforms:sepiaPassUniforms,...sepia GLSL...}; engine/shaders.js:179 new ShaderPass(rI) when pass=='sepia'",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "rO",
+   "proposedName": "paintShaderDef",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:97 var rO={uniforms:paintShaderUniforms,...kuwahara paint GLSL...}; engine/shaders.js:179 clone of rO with radius injected when pass=='paint'",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "rg",
+   "proposedName": "trimSheet2PresetAlias",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:79 var rg=trimSheet2Preset (alias decl); engine/assets-draco.js:19 a3P[TrimSheet2]=rg (mesh-material map use). bootstrap.js:15 + shaders.js:37,127 hits are .rg GLSL string content, not identifiers",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "rh",
+   "proposedName": "puddlePreset",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:79 var rh={transparent,animated,cubemap+displacement addUniforms,...}; engine/assets-draco.js:19 a3P[Puddle]=rh",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "ri",
+   "proposedName": "windowsDoorsPreset",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:79 var ri={opaque,needsNormal,HDRI cubemap reflections,...}; engine/assets-draco.js:19 a3P[WindowsDoors]=ri",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "rv",
+   "proposedName": "horizontalBlurShaderDef",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:87 var rv={uniforms:horizontalBlurPassUniforms,...}; engine/webgl-renderer.js:121 var horizontalBlurPass=new ShaderPass(rv)",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "sT",
+   "proposedName": "sniperVertexShaderTemplate",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:137 var sT=\"...sniper vertex GLSL with //sniper vertex params...\"; engine/shaders.js:139 var a3q=sT then replace sniper vertex/params placeholders",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "sW",
+   "proposedName": "bezierNewtonIterations",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:141 sW=0x4 (=4, classic NEWTON_ITERATIONS) beside bezierSampleCount/Step; ui/widgets.js:35 for(a3m=0;a3m<sW;++a3m) Newton-Raphson refine loop in t9",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "sX",
+   "proposedName": "bezierNewtonMinSlope",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:141 sX=0.001 (classic NEWTON_MIN_SLOPE); characters/animation.js:5 if(a3v>=sX) slope check choosing Newton t9 vs bisection t8",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "sY",
+   "proposedName": "bezierSubdivisionPrecision",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:141 sY=1e-7 (classic SUBDIVISION_PRECISION); ui/widgets.js:33 while(abs(a3n)>sY...) bisection tolerance in t8",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "sZ",
+   "proposedName": "bezierSubdivisionMaxIterations",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:141 sZ=0xa (=10, classic SUBDIVISION_MAX_ITERATIONS); ui/widgets.js:33 while(...&&++a3p<sZ) bisection iteration cap in t8",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "saveSettings",
+   "proposedName": "persistClientSettings",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3791 function saveSettings(){localStorage.settings=JSON.stringify(clientSettings)}; sim/game-loop.js:3811 saveSettings() called by saveAndApplySettings",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "sn",
+   "proposedName": "circleBlurShader",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:111 declares var sn={uniforms:circleBlurPassUniforms,vertexShader,fragmentShader:circle-blur GLSL}; :179 JSON-clones sn for 'blur' ShaderPass (2 more sn hits on :9 are GLSL string contents, not identifiers)",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "t8",
+   "proposedName": "bezierBinarySubdivide",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:33 declares function t8 bisection loop solving evalBezierCurve; characters/animation.js:5 calls t8 as fallback solver when bezierSlope<sX",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "t9",
+   "proposedName": "bezierNewtonIterate",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:35 declares function t9 Newton-Raphson loop via bezierSlope/evalBezierCurve; characters/animation.js:5 calls t9 when slope>=sX",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "tE",
+   "proposedName": "initSoundRegistry",
+   "confidence": "high",
+   "evidence": "combat/effects.js:5 declares function tE installing resumeAudioContext/playAudioBuffer/registerSound/playCachedSound and registering weapon sounds into audioSampleCache; sim/game-loop.js:3717 calls tE(),initAudioListener()",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "tF",
+   "proposedName": "hiddenSelectClassName",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:467 declares var tF=\"s-hidden\" beside customSelectClassName; characters/animation.js:9 classList.add(tF) hides native select when building custom select",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "tR",
+   "proposedName": "settingsRootDiv",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:479 declares var tR among settings vars; ui/menu.js:5 assigns tR=div#settingsDiv appended to document.body (single strong site)",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "ta",
+   "proposedName": "linearEasing",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:435 declares function ta identity return; characters/animation.js:5 tb returns ta when bezier control points are linear",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "tb",
+   "proposedName": "createBezierEasing",
+   "confidence": "high",
+   "evidence": "characters/animation.js:5 declares function tb cubic-bezier factory with x-range check returning sampled easing fn; sim/game-loop.js:441 tb(ti[0..3]) parses easingFunctions entries",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "td",
+   "proposedName": "easedLerp",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:39 declares function td(a,b,t,ease)=a+(b-a)*ease(t); engine/shaders.js:19 td() lerps health bar via healthLerp/lerpFunc",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "tm",
+   "proposedName": "touchPointer",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:449 declares function tm touch-point factory {x,y,canvas-scale,hitbox-test}; ui/widgets.js:41 new tm() per changedTouch pushed to touchPointerList (4 tm hits on shaders.js:9 are GLSL string contents)",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "tn",
+   "proposedName": "canvasSceneManager",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:41 declares function tn returning scene manager {scenes,makeContainer,element,resize,touch/mouse/wheel wiring}; combat/scope-crosshair.js:19 new tn(toolkit,renderer) inside createMenuSceneManager",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "tp",
+   "proposedName": "createRankHelper",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:45 declares function tp building Silver/Gold/Platinum/Diamond/Champ tiers returning {drawRank,getRankColor,getRankName}; sim/game-loop.js:3917 rankHelper=tp()",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "u8",
+   "proposedName": "insertSettingsSectionSorted",
+   "confidence": "high",
+   "evidence": "widgets.js:51 decl inserts element into settingsListElement in getSettingsCategoryIndex order; widgets.js:57 called by getOrCreateSettingsSection",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "ua",
+   "proposedName": "setupSettingsScroll",
+   "confidence": "high",
+   "evidence": "mesh-pool.js:5 decl attaches wheel/scroll/touch handlers + refreshScrollbar guarded by settingsScrollReady; menu.js:5 called with (settingsScrollContainer,settingsListElement)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "uc",
+   "proposedName": "syncActiveSettingsCategory",
+   "confidence": "high",
+   "evidence": "widgets.js:55 decl walks settingsSections by offsetTop vs scrollTop and calls activateSettingsCategory; mesh-pool.js:5 called from scroll listener",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "ue",
+   "proposedName": "buildSettingsPanel",
+   "confidence": "high",
+   "evidence": "menu.js:5 decl builds settingsDiv/pages/scroll/list DOM and rows via ug plus uh/uj/collectSettingsValues; menu.js:11 called as ue(settingsOptions)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "ug",
+   "proposedName": "createSettingRow",
+   "confidence": "high",
+   "evidence": "animation.js:7 decl builds .setting div with label and select/slider/toggle/input control by type; menu.js:5 called per settings definition",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "uh",
+   "proposedName": "initSettingsSliders",
+   "confidence": "high",
+   "evidence": "widgets.js:59 decl wires .sldr range+number input sync handlers with collectSettingsValues; menu.js:5 called during settings panel build",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "uj",
+   "proposedName": "initCustomSelects",
+   "confidence": "high",
+   "evidence": "animation.js:9 decl converts native selects into custom dropdown divs with option lists; menu.js:5 called during settings panel build",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zYkfnulmBd",
+   "proposedName": "updateParticleEffects",
+   "confidence": "high",
+   "evidence": "game-loop.js:4111 decl steps stepEffectPhysics and updates effectMeshPool/effectInstancePools per frame; fire.js:11 called each frame next to updatePickupMarkers",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "EZ",
+   "proposedName": "EZ",
+   "confidence": "low",
+   "evidence": "map-table.js:11 single bare identifier in uninitialized var list; zero identifier-position uses; role unknowable",
+   "verdict": "abstain",
+   "slice": 5
+  },
+  {
+   "token": "F0",
+   "proposedName": "F0",
+   "confidence": "low",
+   "evidence": "map-table.js:11 single bare identifier in uninitialized var list; zero identifier-position uses; role unknowable",
+   "verdict": "abstain",
+   "slice": 5
+  },
+  {
+   "token": "F1",
+   "proposedName": "F1",
+   "confidence": "low",
+   "evidence": "map-table.js:11 single bare identifier in uninitialized var list; zero identifier-position uses; role unknowable",
+   "verdict": "abstain",
+   "slice": 5
+  },
+  {
+   "token": "F2",
+   "proposedName": "F2",
+   "confidence": "low",
+   "evidence": "map-table.js:11 single bare identifier in uninitialized var list; zero identifier-position uses; role unknowable",
+   "verdict": "abstain",
+   "slice": 5
+  },
+  {
+   "token": "F3",
+   "proposedName": "F3",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...F2,F3,F4...) declares bare F3; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "F4",
+   "proposedName": "F4",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...F3,F4,F5...) declares bare F4; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "F5",
+   "proposedName": "F5",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...F4,F5,F6...) declares bare F5; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "F6",
+   "proposedName": "F6",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...F5,F6,F7...) declares bare F6; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "F7",
+   "proposedName": "F7",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...F6,F7,F8...) declares bare F7; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "F8",
+   "proposedName": "F8",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...F7,F8,F9...) declares bare F8; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "F9",
+   "proposedName": "F9",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...F8,F9,Fa...) declares bare F9; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "FD",
+   "proposedName": "FD",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail enableSimProfiling=![],FD=0x0,FE=0x0,...) declares FD init 0; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "FE",
+   "proposedName": "FE",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail FD=0x0,FE=0x0,perfFrameTimestamp=0x0,...) declares FE init 0; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "FI",
+   "proposedName": "FI",
+   "confidence": "low",
+   "evidence": "world/modes.js:11 (u1711: FI=Object[\"keys\"](perfCountersAlias)) declares FI as write-only snapshot of perf-counter keys; never read elsewhere; data/inventory.json records count=1: dead alias, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "Fa",
+   "proposedName": "Fa",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...F9,Fa,Fb...) declares bare Fa; token-aware scan finds no other identifier position (engine/shaders.js:9 Fa is inside regex literal, not identifier) and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "Fb",
+   "proposedName": "Fb",
+   "confidence": "low",
+   "evidence": "world/map-table.js:11 (u1709 var-chain tail ...Fa,Fb,Fc...) declares bare Fb; token-aware scan of all src modules finds no other identifier position and data/inventory.json records count=1: zero uses, dead declaration, role unknowable",
+   "verdict": "abstain",
+   "slice": 6
+  },
+  {
+   "token": "Fc",
+   "proposedName": "Fc",
+   "confidence": "low",
+   "evidence": "client-deob/src/world/map-table.js:11 bare var declarator in giant var statement; sole identifier occurrence in src, zero uses, no initializer — role unknowable",
+   "verdict": "abstain",
+   "slice": 7
+  },
+  {
+   "token": "Fe",
+   "proposedName": "Fe",
+   "confidence": "low",
+   "evidence": "client-deob/src/world/map-table.js:11 bare var declarator in giant var statement; sole identifier occurrence in src, zero uses, no initializer — role unknowable",
+   "verdict": "abstain",
+   "slice": 7
+  },
+  {
+   "token": "GM",
+   "proposedName": "sampleFrameDelta",
+   "confidence": "medium",
+   "evidence": "client-deob/src/sim/game-loop.js:3055 fn pushes Date.now()-nowMs into frameDeltaSamples, flushes after 100 samples; sole occurrence in src (0 call sites)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "GP",
+   "proposedName": "dumpPositionLog",
+   "confidence": "medium",
+   "evidence": "client-deob/src/sim/game-loop.js:3061 fn console.logs JSON.stringify(debugPositionLog); sole occurrence in src (0 call sites)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "GS",
+   "proposedName": "resetObjectTransform",
+   "confidence": "medium",
+   "evidence": "client-deob/src/sim/game-loop.js:3067 fn zeroes rotation xyz and position, sets scale to 1 (identity transform); sole occurrence in src (0 call sites)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "GX",
+   "proposedName": "lerp",
+   "confidence": "medium",
+   "evidence": "client-deob/src/ui/widgets.js:69 fn returns (b-a)*t+a, body-identical to sibling lerpValue at line 67; sole occurrence in src (0 call sites)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "GY",
+   "proposedName": "inverseLerp",
+   "confidence": "medium",
+   "evidence": "client-deob/src/ui/widgets.js:71 fn returns (v-min)/(max-min), inverse of sibling lerp GX pattern; sole occurrence in src (0 call sites)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "Gd",
+   "proposedName": "diagonalMoveFactor",
+   "confidence": "medium",
+   "evidence": "client-deob/src/sim/game-loop.js:3043 Gd=Math.sqrt(2)/2 among moveDirectionSin/moveDirectionCos vars; sole occurrence in src (0 uses)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "HI",
+   "proposedName": "cancelAllTweens",
+   "confidence": "medium",
+   "evidence": "client-deob/src/sim/game-loop.js:3171 fn drains activeTweenList via recycleTween+splice; sole occurrence in src (0 call sites)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "I6",
+   "proposedName": "int16TypeCode",
+   "confidence": "medium",
+   "evidence": "client-deob/src/sim/game-loop.js:3187 I6=0x3 with typeNameList[3]='Int16' (:3051); siblings uint8TypeCode/float32TypeCode; sole occurrence (0 uses)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "J7",
+   "proposedName": "templateAliasKeyList",
+   "confidence": "medium",
+   "evidence": "client-deob/src/sim/game-loop.js:3383 J7=Object.keys(templateKeyAliasMap); sibling templateKeyList; sole occurrence in src (0 uses)",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "JV",
+   "proposedName": "JV",
+   "confidence": "low",
+   "evidence": "client-deob/src/sim/game-loop.js:3477 JV=tempTextureMap pure alias; sole occurrence in src, zero uses — dead alias",
+   "verdict": "abstain",
+   "slice": 7
+  },
+  {
+   "token": "Jt",
+   "proposedName": "slideSpeed",
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:3395 var Jt=round(sqrt(baseMoveSpeed*slideSpeedMultiplier)) beside siblings slideSpeedSq/slideMoveSpeed; no other uses",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "Jw",
+   "proposedName": "slideMoveSpeedSq",
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:3395 Jw=round(baseMoveSpeed*(mult-0.05)) is squared form of sibling slideMoveSpeed; no other uses",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "K9",
+   "proposedName": "materialPresetKeys",
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:3525 K9=Object.keys(materialPresetMapAlias); no other uses",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "KF",
+   "proposedName": "KF",
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3575 bare KF=false flag between claimReward/isEditingMobileLayout; zero uses, role unknowable",
+   "verdict": "abstain",
+   "slice": 8
+  },
+  {
+   "token": "Kh",
+   "proposedName": "roomStylePresets",
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:3553 Kh=[7 *RoomStylePreset objects]; no other uses",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "Ki",
+   "proposedName": "formatDateWithOrdinal",
+   "confidence": "medium",
+   "evidence": "src/ui/widgets.js:107 function Ki maps mon abbrev to Month + st/nd/rd/th suffix; never called",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "LM",
+   "proposedName": "LM",
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3623 LM=tintWorkCanvas.getContext(2d) duplicates tintWorkContext same line; dead alias, zero uses",
+   "verdict": "abstain",
+   "slice": 8
+  },
+  {
+   "token": "LO",
+   "proposedName": "shadeCanvasBottom",
+   "confidence": "medium",
+   "evidence": "src/ui/widgets.js:133 fills bottom 5/9 of canvas black source-atop at alpha; never called",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "LQ",
+   "proposedName": "padAndOutlineCanvas",
+   "confidence": "medium",
+   "evidence": "src/ui/widgets.js:137 LQ=padCanvas then applyImageOutline passthrough; never called",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "LR",
+   "proposedName": "eraseCanvasWithMask",
+   "confidence": "medium",
+   "evidence": "src/ui/widgets.js:139 destination-out drawImage erases canvas through mask; never called",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "Lv",
+   "proposedName": "msPerWeek",
+   "confidence": "medium",
+   "evidence": "src/ui/challenges.js:5 Lv=MS_PER_DAY*0x7 beside msPerSecond/MS_PER_* consts; no other uses",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "MO",
+   "proposedName": "MO",
+   "confidence": "low",
+   "evidence": "src/ui/menu.js:7 bare var MO between buildMatchEndBanner/leaderboardEntries, no initializer; zero uses, role unknowable",
+   "verdict": "abstain",
+   "slice": 8
+  },
+  {
+   "token": "Mv",
+   "proposedName": "Mv",
+   "confidence": "low",
+   "evidence": "src/ui/menu.js:7 bare var between lobbyHomeScene,Mw; 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: never assigned/read, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "Mz",
+   "proposedName": "Mz",
+   "confidence": "low",
+   "evidence": "src/ui/menu.js:7 bare var between podiumAvatarImage,matchEndTitleText; 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: never assigned/read, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "N7",
+   "proposedName": "N7",
+   "confidence": "low",
+   "evidence": "src/ui/menu.js:7 bare var between menuTabScenes,skinPreviewContainer; 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: never assigned/read, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "NN",
+   "proposedName": "NN",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:75 NN=0x3**0x4 (=81) beside scheduleNextFrame; 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: dead constant, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "NR",
+   "proposedName": "NR",
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3689 NR=![] beside matrixUpdateCount,matrixUpdateFrameId; 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: dead flag, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "NY",
+   "proposedName": "NY",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 NY=eval(win+dow) window alias; 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: dead alias, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "NZ",
+   "proposedName": "NZ",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 NZ=new TextDecoder(utf-8); 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: dead decoder instance, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "Ne",
+   "proposedName": "Ne",
+   "confidence": "low",
+   "evidence": "src/ui/menu.js:7 bare var between mobileRightShootButton,mobileFireHeld; 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: never assigned/read, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "Nu",
+   "proposedName": "Nu",
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3651 Nu=!![] beside skipSplashTweens; 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: dead flag, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "O0",
+   "proposedName": "O0",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 O0=new Geometry(); 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: dead instance, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "O8",
+   "proposedName": "O8",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 O8=new DataView(seedSyncPacketBuffer); 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: dead packet view, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "OD",
+   "proposedName": "OD",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 OD=new boundingBox(); 1 identifier occurrence in src/ (declaration only, zero uses) — ABSTAIN: dead instance, role unknowable",
+   "verdict": "abstain",
+   "slice": 9
+  },
+  {
+   "token": "OG",
+   "proposedName": "OG",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (OG=[]) between outboundQueue and enemyOutlineUniforms; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead array, role unknowable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "OM",
+   "proposedName": "OM",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (OM=0x0) between resentInputFields and ON; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead numeric, role unknowable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "ON",
+   "proposedName": "ON",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (ON='x') beside yAxisKey='y'; 0 identifier refs in src/** (scope-crosshair.js:19 hit is string content \"WORKING ON TCO ASST\"), 0 bracket-strings; inventory count=1 topDecl var — dead, role unprovable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "OP",
+   "proposedName": "OP",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (OP=null) between cachedPlayerRef and OQ; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead null slot, role unknowable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "OQ",
+   "proposedName": "OQ",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (OQ=null) between OP and OR; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead null slot, role unknowable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "OR",
+   "proposedName": "OR",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (OR=null) between OQ and OS; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead null slot, role unknowable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "OS",
+   "proposedName": "OS",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (OS=null) between OR and OT; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead null slot, role unknowable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "OT",
+   "proposedName": "OT",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (OT=null) between OS and OU; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead null slot, role unknowable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "OU",
+   "proposedName": "OU",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (OU=null) between OT and aimTargetEntity; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead null slot, role unknowable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "Od",
+   "proposedName": "Od",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (Od=new usvzFuAsEB[(\"vFgdYWoMXeQ\")]()) beside pointerCoords; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead vector temp, role unprovable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "Of",
+   "proposedName": "Of",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (Of=new usvzFuAsEB['gURkzCzeY']()) beside impactPointScratch; 0 identifier refs in src/** (shaders.js:9 hit is string content 'Needs Power Of Two'), 0 bracket-strings; inventory count=1 topDecl var — dead vector temp, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "Oh",
+   "proposedName": "Oh",
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 decl only (Oh=new usvzFuAsEB[(\"gURkzCzeY\")]()) between impactPointScratch and Oi; 0 identifier refs in src/**, 0 bracket-strings; inventory count=1 topDecl var — dead vector temp, role unprovable, abstain",
+   "verdict": "abstain",
+   "slice": 10
+  },
+  {
+   "token": "Oj",
+   "proposedName": "Oj",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares Oj=new THREE-Vector3 (gURkzCzeY); 0 other identifier hits in src => dead slot, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "Ok",
+   "proposedName": "Ok",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares Ok=new THREE-Vector3 (gURkzCzeY); 0 other identifier hits in src => dead slot, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "Om",
+   "proposedName": "Om",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares Om=new THREE-Vector3 (gURkzCzeY); 0 other identifier hits in src => dead slot, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "P3",
+   "proposedName": "P3",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares P3=![](false) flag; 0 other identifier hits in src => dead flag, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "P4",
+   "proposedName": "P4",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares P4=![](false) flag; 0 other identifier hits in src => dead flag, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "P5",
+   "proposedName": "P5",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares P5=![](false) flag; 0 other identifier hits in src => dead flag, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "P6",
+   "proposedName": "P6",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares P6=![](false) flag; 0 other identifier hits in src => dead flag, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "P7",
+   "proposedName": "P7",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares P7=![](false) flag; 0 other identifier hits in src => dead flag, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "PO",
+   "proposedName": "PO",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares PO=0x0 numeric slot; 0 other identifier hits in src => dead slot, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "PP",
+   "proposedName": "PP",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares PP=0x0 numeric slot; 0 other identifier hits in src => dead slot, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "PQ",
+   "proposedName": "PQ",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares PQ=0x0 numeric slot; 0 other identifier hits in src => dead slot, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "PS",
+   "proposedName": "PS",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:87 declares PS=0x0 numeric slot; 0 other identifier hits in src => dead slot, role unknowable",
+   "verdict": "abstain",
+   "slice": 11
+  },
+  {
+   "token": "PT",
+   "proposedName": "PT",
+   "confidence": "low",
+   "evidence": "ABSTAIN dead slot: sole identifier occurrence is decl engine/webgl-renderer.js:87 (PT=0x0 in renderer state var block); zero reads/writes anywhere else; all other PT hits are substrings of longer identifiers",
+   "verdict": "abstain",
+   "slice": 12
+  },
+  {
+   "token": "PU",
+   "proposedName": "PU",
+   "confidence": "low",
+   "evidence": "ABSTAIN dead slot: sole identifier occurrence is decl engine/webgl-renderer.js:87 (PU=0x0 in renderer state var block); zero reads/writes anywhere else; other PU hits are substrings (PUYitUjkOj, PUNCTUAL, GPU) or strings",
+   "verdict": "abstain",
+   "slice": 12
+  },
+  {
+   "token": "PV",
+   "proposedName": "PV",
+   "confidence": "low",
+   "evidence": "ABSTAIN dead slot: sole identifier occurrence is decl engine/webgl-renderer.js:87 (PV=0x0 in renderer state var block); zero reads/writes anywhere else; all other PV hits are substrings of longer identifiers",
+   "verdict": "abstain",
+   "slice": 12
+  },
+  {
+   "token": "PW",
+   "proposedName": "PW",
+   "confidence": "low",
+   "evidence": "ABSTAIN dead slot: sole identifier occurrence is decl engine/webgl-renderer.js:87 (PW=0x0 in renderer state var block); zero reads/writes anywhere else; only other PW hit is base64 string content in assets-draco.js:9",
+   "verdict": "abstain",
+   "slice": 12
+  },
+  {
+   "token": "PX",
+   "proposedName": "PX",
+   "confidence": "low",
+   "evidence": "ABSTAIN dead slot: sole identifier occurrence is decl engine/webgl-renderer.js:87 (PX=0x0 in renderer state var block); zero reads/writes anywhere else; other PX hits are cameraPX identifier in shaders.js:9",
+   "verdict": "abstain",
+   "slice": 12
+  },
+  {
+   "token": "PY",
+   "proposedName": "PY",
+   "confidence": "low",
+   "evidence": "ABSTAIN dead slot: sole identifier occurrence is decl engine/webgl-renderer.js:87 (PY=0x0 in renderer state var block); zero reads/writes anywhere else; other PY hits are cameraPY/rotZEYPYo identifiers or string contents (ANISOTROPY, discord URL)",
+   "verdict": "abstain",
+   "slice": 12
+  }
+ ]
+}

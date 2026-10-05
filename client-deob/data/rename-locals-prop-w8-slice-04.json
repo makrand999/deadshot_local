@@ -1,0 +1,222 @@
+{
+  "slice": "slice-04",
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @822093 var loopCount=this._loopCount; USES @822891/@823329/@823464 loop counting + 'loop' event dispatch — readable domain term",
+      "name": "loopCount",
+      "selector": "loopCount@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @822830 var loopDelta=Math.floor(time/duration); USES in-scope wrap math — readable domain term",
+      "name": "loopDelta",
+      "selector": "loopDelta@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @370394 function loopReplacer(match,start,end,snippet); USES string.replace(unrollLoopPattern,loopReplacer) — descriptive real words",
+      "name": "loopReplacer",
+      "selector": "loopReplacer@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @8835 randInt(low,high); USES low+Math.floor(...*(high-low+1)) — idiomatic range-bound param",
+      "name": "low",
+      "selector": "low@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @8926 randFloat(low,high); USES low+Math.random()*(high-low) — idiomatic range-bound param",
+      "name": "low",
+      "selector": "low@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @698715 var low=0,high=il-1 in getUtoTmapping binary search; USES while(low<=high) — idiomatic search bound",
+      "name": "low",
+      "selector": "low@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @30531 m11=te[0] in setAxisAngleFromRotationMatrix; USES @30802/@31484 trace/quaternion math — canonical three.js matrix element",
+      "name": "m11",
+      "selector": "m11@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @41074 m11=te[0] in Quaternion.setFromRotationMatrix; USES @41171/@41308 trace>0 branch — canonical three.js matrix element",
+      "name": "m11",
+      "selector": "m11@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @88182 m11=te[0] in Euler.setFromRotationMatrix; USES @88446/@88854 atan2 order switch — canonical three.js matrix element",
+      "name": "m11",
+      "selector": "m11@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @30541 m12=te[4] in setAxisAngleFromRotationMatrix; USES @31368/@31459 axis-angle math — canonical three.js matrix element",
+      "name": "m12",
+      "selector": "m12@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @41084 m12=te[4] in Quaternion.setFromRotationMatrix; USES @41292/@41406 branch math — canonical three.js matrix element",
+      "name": "m12",
+      "selector": "m12@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @88192 m12=te[4] in Euler.setFromRotationMatrix; USES @88806/@89265 atan2 order switch — canonical three.js matrix element",
+      "name": "m12",
+      "selector": "m12@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @30551 m13=te[8] in setAxisAngleFromRotationMatrix; USES @31344/@31436 axis-angle math — canonical three.js matrix element",
+      "name": "m13",
+      "selector": "m13@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @41094 m13=te[8] in Quaternion.setFromRotationMatrix; USES @41268/@41427 branch math — canonical three.js matrix element",
+      "name": "m13",
+      "selector": "m13@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @88202 m13=te[8] in Euler.setFromRotationMatrix; USES @89214/@89351 atan2 order switch — canonical three.js matrix element",
+      "name": "m13",
+      "selector": "m13@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @30561 m21=te[1]; USES @31364 (m21-m12) — three.js matrix-element idiom in setAxisAngleFromRotationMatrix",
+      "name": "m21",
+      "selector": "m21@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @41104 m21=te[1]; USES @41288 (m21-m12)*s — three.js matrix-element idiom in Quaternion.setFromRotationMatrix",
+      "name": "m21",
+      "selector": "m21@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @88216 m21=te[1]; USES @88850 atan2(m21,m22) — three.js matrix-element idiom in Euler.setFromRotationMatrix",
+      "name": "m21",
+      "selector": "m21@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @30571 m22=te[5]; USES @31488 (m11+m22+m33-1) trace — three.js matrix-element idiom in setAxisAngleFromRotationMatrix",
+      "name": "m22",
+      "selector": "m22@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @41114 m22=te[5]; USES @41312 trace=m11+m22+m33 — three.js matrix-element idiom in Quaternion.setFromRotationMatrix",
+      "name": "m22",
+      "selector": "m22@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @88226 m22=te[5]; USES @89036 atan2(-m12,m22) — three.js matrix-element idiom in Euler.setFromRotationMatrix",
+      "name": "m22",
+      "selector": "m22@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @30581 m23=te[9]; USES @31328 (m32-m23) — three.js matrix-element idiom in setAxisAngleFromRotationMatrix",
+      "name": "m23",
+      "selector": "m23@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @41124 m23=te[9]; USES @41252 (m32-m23)*s — three.js matrix-element idiom in Quaternion.setFromRotationMatrix",
+      "name": "m23",
+      "selector": "m23@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @88236 m23=te[9]; USES @89141 atan2(-m23,m22) — three.js matrix-element idiom in Euler.setFromRotationMatrix",
+      "name": "m23",
+      "selector": "m23@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @30591 m31=te[2]; USES @31348 (m13-m31) — three.js matrix-element idiom in setAxisAngleFromRotationMatrix",
+      "name": "m31",
+      "selector": "m31@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @41134 m31=te[2]; USES @41272 (m13-m31)*s — three.js matrix-element idiom in Quaternion.setFromRotationMatrix",
+      "name": "m31",
+      "selector": "m31@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @88250 m31=te[2]; USES @88901 atan2(-m31,m33) — three.js matrix-element idiom in Euler.setFromRotationMatrix",
+      "name": "m31",
+      "selector": "m31@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @30601 m32=te[6]; USES @31324 (m32-m23) — three.js matrix-element idiom in setAxisAngleFromRotationMatrix",
+      "name": "m32",
+      "selector": "m32@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @41144 m32=te[6]; USES @41248 (m32-m23)*s — three.js matrix-element idiom in Quaternion.setFromRotationMatrix",
+      "name": "m32",
+      "selector": "m32@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @88260 m32=te[6]; USES @88959 asin(clamp(m32,-1,1)) — three.js matrix-element idiom in Euler.setFromRotationMatrix",
+      "name": "m32",
+      "selector": "m32@u0020#2"
+    }
+  ],
+  "stats": {
+    "rename": 0,
+    "keep": 30,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

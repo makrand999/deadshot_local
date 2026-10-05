@@ -1,0 +1,131 @@
+# DOSSIER slice-30 (wave 7, 22 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/22] BasisFile@u0045#0 | kind=var depth=9 refCount=1 | engine/webgl-renderer.js
+DECL @821 (verified):
+nary);break;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/22] _BasisFile@u0045#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @90 (verified):
+usvzFuAsEB.BasisTextureLoader.BasisWorker=function(){var config;var transcoderPending;var _BasisFile;onmessage=function(e){var message=e.data;switch(message.type){case'init':config=message.config;init(message.transcoderBinary);break;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',i[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 2 nearest outside DECL window:
+@860: id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var basisFile=new _BasisFile(new Uint8Array(buffer));var width=basisFile.getImageWidth(0,0);var height=basisFile.getImageHeight(0,0);var levels=basisFile.getNumLevels(0);var hasAlp
+@948: erPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var basisFile=new _BasisFile(new Uint8Array(buffer));var width=basisFile.getImageWidth(0,0);var height=basisFile.getImageHeight(0,0);var levels=basisFile.getNumLevels(0);var hasAlpha=basisFile.getHasAlpha();function cleanup(){basisFile.close();basisFile.delete();}if(!
+==============================================================================
+[3/22] basisFile@u0045#0 | kind=var depth=7 refCount=11 | engine/webgl-renderer.js
+DECL @934 (verified):
+message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var [...line truncated...]
+USES: refCount=11, 12 token-occurrences in unit, showing 4 nearest outside DECL window:
+@1566: row new Error('usvzFuAsEB.BasisTextureLoader:\tInvalid .basis file');}if(!basisFile.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){clea
+@1611: \tInvalid .basis file');}if(!basisFile.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextur
+@1666: ()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .transcodeImage failed.');}mipmaps.push({data:
+@1739: coding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .transcodeImage failed.');}mipmaps.push({data:dst,width:mipWidth,height:mipHeight});}cleanup();return{width,height,hasA
+==============================================================================
+[4/22] initializeBasis@u0045#0 | kind=var depth=9 refCount=1 | engine/webgl-renderer.js
+DECL @831 (verified):
+k;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/22] status@u0045#0 | kind=var depth=7 refCount=1 | engine/webgl-renderer.js
+DECL @1732 (verified):
+ha();function cleanup(){basisFile.close();basisFile.delete();}if(!hasAlpha){switch(config.format){case 9:config.format=8;break;default:break;}}if(!width||!height||!levels){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader:\tInvalid .basis file');}if(!basisFile.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/22] a3j@u1829#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @16 (verified):
+function HM(a3i,a3j,a3k,a3l,a3m,a3n){HJ(a3i),a3i['shaking']=!![],HC['push'](new HA(a3i,a3j,a3k,a3l,a3m||tc['ixjwTFmpU'],a3n));}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/22] a3k@u1829#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @20 (verified):
+function HM(a3i,a3j,a3k,a3l,a3m,a3n){HJ(a3i),a3i['shaking']=!![],HC['push'](new HA(a3i,a3j,a3k,a3l,a3m||tc['ixjwTFmpU'],a3n));}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/22] a3l@u1829#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @24 (verified):
+function HM(a3i,a3j,a3k,a3l,a3m,a3n){HJ(a3i),a3i['shaking']=!![],HC['push'](new HA(a3i,a3j,a3k,a3l,a3m||tc['ixjwTFmpU'],a3n));}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/22] a3m@u1829#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @28 (verified):
+function HM(a3i,a3j,a3k,a3l,a3m,a3n){HJ(a3i),a3i['shaking']=!![],HC['push'](new HA(a3i,a3j,a3k,a3l,a3m||tc['ixjwTFmpU'],a3n));}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/22] a3n@u1829#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @32 (verified):
+function HM(a3i,a3j,a3k,a3l,a3m,a3n){HJ(a3i),a3i['shaking']=!![],HC['push'](new HA(a3i,a3j,a3k,a3l,a3m||tc['ixjwTFmpU'],a3n));}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/22] a3w@u2722#0 | kind=param depth=7 refCount=2 | world/weapons.js
+DECL @1173 (verified):
+,a3t['D']=a3s['qKOctHozRiE'],a3t['HS%']=a3s["hsp"]+'%',a3t["Weapon"]=Hx[a3s['eXABYtRfN']],a3t['Ping']=a3s["XtXwXgeZP"],a3t["PGiJSCklzq"]=a3s['PhbhpxFxPP'],a3t['JgVHFEBAE']=a3s['JgVHFEBAE'],a3t["TxJblhJNah"]=a3s['TxJblhJNah'],a3t["MKlfqUMku"]=a3s["MKlfqUMku"],a3t["points"]=a3s['points'],a3t['id']=a3r["MqaFuSJOX"];var a3u=a3s["points"]['toString']();a3s['points']>0x3e7&&(a3u=a3u["replace"](/\B(?=(\d{3})+(?!\d))/g,'.'),a3u=a3u['substr'](0x0,a3u['length']-0x1),a3u+='k'),a3t["Score"]=a3u,a3t['nVWfbVYjbV']=a3s['nVWfbVYjbV'];}KL['length']=a3q;a0D=='Confirm'||a0D=='Team\x20KC'?KL['sort'](function(a3v,[...line truncated...]
+USES: refCount=2, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/22] a3n@u2428#0 | kind=param depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @20 (verified):
+Fg=function(a3l,a3m,a3n){var az4=ai1;a3n==undefined&&(a3n=![]);if(OJ[a3l]==undefined){var a3o=Fj(a3l,function(a3r){var az3=o;if(OJ[a3l]==undefined)return;for(var a3s=0x0;a3s<OJ[a3l]["length"];a3s++){OJ[a3l][a3s]['cb']!=undefined&&(OJ[a3l][a3s]['cb'](a3r),OJ[a3l][a3s]['cb']=null);}OJ[a3l]=a3r;},a3n);a3o["anisotropy"]=Fu['capabilities']['getMaxAnisotropy']();Qt!=null&&(a3o["anisotropy"]=Qt);if(Gj||!![]){}a3o['minFilter']=usvzFuAsEB["LinearMipmapNearestFilter"],a3o['src']=a3l,a3o["uses"]=0x1;var a3p={};return a3p['t']=a3o,a3p['cb']=a3m,OJ[a3l]=[a3p],a3o;}else{if(OJ[a3l]['isTexture']){var a3o=OJ[a[...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/22] a3l@u2205#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function QK(a3l){var a3m=tD/tC;typeof RZ=='number'&&!isNaN(RZ)&&(a3m=RZ),tt(a3m),QJ(a3l);}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/22] a3o@u2732#0 | kind=param depth=5 refCount=1 | network/handlers.js
+DECL @21 (verified):
+'v3j2TU68H':function(a3o){a0T=a3o['tdkZouYda'],SW['MqaFuSJOX']=a0T;},
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/22] a3i@u0148#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @16 (verified):
+var ql=function(a3i){(window['requestAnimationFrame']||window['webkitRequestAnimationFrame']||window['mozRequestAnimationFrame']||window['oRequestAnimationFrame']||window['msRequestAnimationFrame']||function(a3j){setTimeout(a3j,0x3e8/0x3c);})(a3i);},qm={};
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/22] a3j@u0148#0 | kind=param depth=7 refCount=1 | engine/webgl-renderer.js
+DECL @208 (verified):
+var ql=function(a3i){(window['requestAnimationFrame']||window['webkitRequestAnimationFrame']||window['mozRequestAnimationFrame']||window['oRequestAnimationFrame']||window['msRequestAnimationFrame']||function(a3j){setTimeout(a3j,0x3e8/0x3c);})(a3i);},qm={};
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/22] a3k@u2076#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @12 (verified):
+function KW(a3k){var aqS=ai1,a3l;try{a3l=localStorage[a3k];}catch(a3m){console["log"]("Read Error"),console["log"](a3m);}return a3l;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/22] a3B@u2425#2 | kind=const depth=12 refCount=1 | engine/webgl-renderer.js
+DECL @1702 (verified):
+mage',a3l,"image onerror",a3C),a3z(new Error('Failed\x20to\x20load\x20image\x20after\x20'+(a3p+0x1)+" attempts: "+a3l));}},a3A['src']=a3l;});};if(a3r)a3s=Ow['load'](a3l,a3m);else{let a3w=![],a3x=!![];a3o&&(a3x=![]);if(!a3x){a3t=new Image(),a3t["src"]=a3l;if(a3w)a3s=new usvzFuAsEB['Texture']();else{let a3y=document['createElement']('canvas');a3y['width']=a3y['height']=0x1,a3s=new usvzFuAsEB['CanvasTexture'](a3y);}}if(a3x){a3s=new usvzFuAsEB[("CanvasTexture")]();const a3z=()=>{return fetch(a3l)['then'](a3A=>{if(!a3A['ok'])throw new Error('HTTP\x20'+a3A['status']+':\x20'+a3A['statusText']);const [...line truncated...]
+USES: refCount=1, 30 token-occurrences in unit, showing 8 nearest outside DECL window:
+@2402: ght"]&a3s['image']['height']-0x1)!=0x0)&&(a3s['flipY']=![]),a3s['afCJVYrCGK']=!![],a3m(a3s),a3m=null,a3A=null;});};a3u(a3z)["catch"](a3A=>{var ayT=ayQ;console['error']('ImageBitmap\x20Load\x20Error\x20after\x20all\x20retries:',a3A,a3l),a3v()["then"](a3B=>{var ayU=ayT;a3s['image']=a3B,a3s["afCJVYrCGK"]=!![],a3m(a3s),a3m=null;})['catch'](a3B=>{var ayV=ayT;console['error']("Final fallback Image load also failed:",a3B,a3l);});});}else{if(a3t['decode']!=undefined){const a3A=()=>{var ayW=ayQ;return a3
+@2433: 1)!=0x0)&&(a3s['flipY']=![]),a3s['afCJVYrCGK']=!![],a3m(a3s),a3m=null,a3A=null;});};a3u(a3z)["catch"](a3A=>{var ayT=ayQ;console['error']('ImageBitmap\x20Load\x20Error\x20after\x20all\x20retries:',a3A,a3l),a3v()["then"](a3B=>{var ayU=ayT;a3s['image']=a3B,a3s["afCJVYrCGK"]=!![],a3m(a3s),a3m=null;})['catch'](a3B=>{var ayV=ayT;console['error']("Final fallback Image load also failed:",a3B,a3l);});});}else{if(a3t['decode']!=undefined){const a3A=()=>{var ayW=ayQ;return a3v(a3t)['then'](a3B=>{return a3B
+@953: ]=()=>{var ayO=ayN;if(a3x<a3p){const a3D=a3q*Math['pow'](0x2,a3x);console["warn"]('Image\x20load\x20attempt\x20'+(a3x+0x1)+'\x20failed\x20for\x20'+a3l+", retrying in "+a3D+'ms...');var a3B={};a3B['attempt']=a3x+0x1,a1n("image",a3l,'image\x20onerror',a3B),setTimeout(()=>{var ayP=ayO;a3v(null,a3x+0x1)["then"](a3y)['catch'](a3z);},a3D);}else{var a3C={};a3C['attempt']=a3x+0x1,a3C["final"]=!![],a1n('image',a3l,"image onerror",a3C),a3z(new Error('Failed\x20to\x20load\x20image\x20after\x20'+(a3p+0x1)+"
+@2490: 3s),a3m=null,a3A=null;});};a3u(a3z)["catch"](a3A=>{var ayT=ayQ;console['error']('ImageBitmap\x20Load\x20Error\x20after\x20all\x20retries:',a3A,a3l),a3v()["then"](a3B=>{var ayU=ayT;a3s['image']=a3B,a3s["afCJVYrCGK"]=!![],a3m(a3s),a3m=null;})['catch'](a3B=>{var ayV=ayT;console['error']("Final fallback Image load also failed:",a3B,a3l);});});}else{if(a3t['decode']!=undefined){const a3A=()=>{var ayW=ayQ;return a3v(a3t)['then'](a3B=>{return a3B['decode']();})["then"](()=>{var ayX=ayW;if(a3w)a3s['imag
+@895: =a3w||new Image();a3A["onload"]=()=>a3y(a3A),a3A['onerror']=()=>{var ayO=ayN;if(a3x<a3p){const a3D=a3q*Math['pow'](0x2,a3x);console["warn"]('Image\x20load\x20attempt\x20'+(a3x+0x1)+'\x20failed\x20for\x20'+a3l+", retrying in "+a3D+'ms...');var a3B={};a3B['attempt']=a3x+0x1,a1n("image",a3l,'image\x20onerror',a3B),setTimeout(()=>{var ayP=ayO;a3v(null,a3x+0x1)["then"](a3y)['catch'](a3z);},a3D);}else{var a3C={};a3C['attempt']=a3x+0x1,a3C["final"]=!![],a1n('image',a3l,"image onerror",a3C),a3z(new Erro
+@888: nst a3A=a3w||new Image();a3A["onload"]=()=>a3y(a3A),a3A['onerror']=()=>{var ayO=ayN;if(a3x<a3p){const a3D=a3q*Math['pow'](0x2,a3x);console["warn"]('Image\x20load\x20attempt\x20'+(a3x+0x1)+'\x20failed\x20for\x20'+a3l+", retrying in "+a3D+'ms...');var a3B={};a3B['attempt']=a3x+0x1,a1n("image",a3l,'image\x20onerror',a3B),setTimeout(()=>{var ayP=ayO;a3v(null,a3x+0x1)["then"](a3y)['catch'](a3z);},a3D);}else{var a3C={};a3C['attempt']=a3x+0x1,a3C["final"]=!![],a1n('image',a3l,"image onerror",a3C),a3z(n
+@2566: r']('ImageBitmap\x20Load\x20Error\x20after\x20all\x20retries:',a3A,a3l),a3v()["then"](a3B=>{var ayU=ayT;a3s['image']=a3B,a3s["afCJVYrCGK"]=!![],a3m(a3s),a3m=null;})['catch'](a3B=>{var ayV=ayT;console['error']("Final fallback Image load also failed:",a3B,a3l);});});}else{if(a3t['decode']!=undefined){const a3A=()=>{var ayW=ayQ;return a3v(a3t)['then'](a3B=>{return a3B['decode']();})["then"](()=>{var ayX=ayW;if(a3w)a3s['image']=a3t,a3s["decoded"]=!![],a3t['decoded']=!![],a3s['afCJVYrCGK']=!![];else{
+@2667: yT;a3s['image']=a3B,a3s["afCJVYrCGK"]=!![],a3m(a3s),a3m=null;})['catch'](a3B=>{var ayV=ayT;console['error']("Final fallback Image load also failed:",a3B,a3l);});});}else{if(a3t['decode']!=undefined){const a3A=()=>{var ayW=ayQ;return a3v(a3t)['then'](a3B=>{return a3B['decode']();})["then"](()=>{var ayX=ayW;if(a3w)a3s['image']=a3t,a3s["decoded"]=!![],a3t['decoded']=!![],a3s['afCJVYrCGK']=!![];else{let a3B=a3s['image'],a3C=a3B["getContext"]('2d');a3C['imageSmoothingEnabled']=!![],a3B['width']=a3t['
+==============================================================================
+[19/22] rK@u0244#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var rK=rJ,rL={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/22] Se@u2316#0 | kind=class depth=4 refCount=0 | sim/game-loop.js
+DECL @6 (verified):
+class Se{#pf;#pfi=0x2a;static #psf;static #psfwi=0x2a;}
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/22] a3s@u2742#0 | kind=var depth=5 refCount=0 | network/handlers.js
+DECL @753 (verified):
+['y']<0x0){WY[RY]['y']+=Qz;}X7=Math['KkKRLGFtA'](Math["max"](-WU,Math['min'](WU,X7))),WY[RY]['y']=Math['KkKRLGFtA'](WY[RY]['y']),T2['mPDLPePIID']();if(OY!=undefined)for(var a3p=0x0;a3p<OY['map']['length'];a3p++){for(var a3q=0x0;a3q<OY['map'][a3p]['length'];a3q++){if(OY['map'][a3p][a3q]==undefined)continue;if(Array['isArray'](OY["map"][a3p][a3q]))for(let a3t=0x0;a3t<OY["map"][a3p][a3q]['length'];a3t++){OY["map"][a3p][a3q][a3t]["cXlFeDeYwuS"]=![];}}}SW["d2J6H770A10"]=![],SW['zBgadyCVYk']['OUsPgMLOT']=![],R6=![],Y6=0x0,Pz=!![],a0s=GK,W5();for(var a3r=0x0;a3r<Kq['rtuiAWgKjH']['length'];a3r++){var [...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/22] a3m@u2108#0 | kind=var depth=5 refCount=0 | ui/widgets.js
+DECL @33 (verified):
+function LO(a3k,a3l){var ar2=ai1,a3m=a3k,a3n=a3k['getContext']('2d');return a3n['resetTransform'](),a3n['globalCompositeOperation']='source-atop',a3n['fillStyle']='#000',a3n["globalAlpha"]=a3l||0.1,a3n['fillRect'](0x0,a3k['height']*0x4/0x9,a3k['width'],a3k["height"]),a3n['globalCompositeOperation']="source-over",a3n['globalAlpha']=0x1,a3k;}
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-30: propose EVERY binding above.

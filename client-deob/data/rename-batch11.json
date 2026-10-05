@@ -1,0 +1,1205 @@
+{
+ "batch": "batch11",
+ "proposals": [
+  {
+   "token": "xL",
+   "proposedName": "mapNavPointXl",
+   "confidence": "high",
+   "evidence": "game-loop.js:1325 var xL + :1327 xyz coords; map-table.js:11 points=[mapNavPointXh..Xk,xL,xM,xN]",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xM",
+   "proposedName": "mapNavPointXm",
+   "confidence": "high",
+   "evidence": "game-loop.js:1329 var xM + :1331 xyz coords; map-table.js:11 points=[...,xL,xM,xN]",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xN",
+   "proposedName": "mapNavPointXn",
+   "confidence": "high",
+   "evidence": "game-loop.js:1333 var xN + :1335 xyz coords; map-table.js:11 points=[...,xL,xM,xN]",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xO",
+   "proposedName": "midnightSunColor",
+   "confidence": "high",
+   "evidence": "game-loop.js:1337 var xO + :1339 rgb-ish xyz; :2015 midnightLightData[sunColor]=xO; mirrors sunsetSunColor",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xP",
+   "proposedName": "midnightSunDirection",
+   "confidence": "high",
+   "evidence": "game-loop.js:1341 var xP + :1343 xyz; :2015 midnightLightData[sunDirection]=xP; mirrors sunsetSunDirection",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xQ",
+   "proposedName": "mapLightPositionXQ",
+   "confidence": "high",
+   "evidence": "game-loop.js:1345 var xQ + :1347 xyz; :1351 xR[position]=xQ, xR in midnightLightData lights :2015",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xS",
+   "proposedName": "mapLightPositionXS",
+   "confidence": "high",
+   "evidence": "game-loop.js:1353 var xS + :1355 xyz; :1359 xT[position]=xS, xT in midnightLightData lights :2015",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xU",
+   "proposedName": "mapLightPositionXU",
+   "confidence": "high",
+   "evidence": "game-loop.js:1361 var xU + :1363 xyz; :1367 xV[position]=xU, xV in midnightLightData lights :2015",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xW",
+   "proposedName": "mapLightPositionXW",
+   "confidence": "high",
+   "evidence": "game-loop.js:1369 var xW + :1371 xyz; :1375 xX[position]=xW, xX in midnightLightData lights :2015",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xY",
+   "proposedName": "mapLightPositionXY",
+   "confidence": "high",
+   "evidence": "game-loop.js:1377 var xY + :1379 xyz; :1383 xZ[position]=xY preset Blue, xZ in lights :2015",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xi",
+   "proposedName": "cinematicSegmentShoothouseA",
+   "confidence": "high",
+   "evidence": "game-loop.js:1213 var xi; :1215 start=xg/end=xh/time=12000; assets-draco.js:15 shoothouse cinematicScenes=[xi,xl]",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xl",
+   "proposedName": "cinematicSegmentShoothouseB",
+   "confidence": "high",
+   "evidence": "game-loop.js:1225 var xl; :1227 start=xj/end=xk/time=15000; assets-draco.js:15 shoothouse cinematicScenes=[xi,xl]",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "xn",
+   "proposedName": "dust2SpawnPoint",
+   "confidence": "high",
+   "evidence": "game-loop.js:1231 var xn + :1233 x/y/z coords; map-table.js:5 dust2MapConfig['spawns']=[xn]",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "xu",
+   "proposedName": "cameraSegmentXu",
+   "confidence": "high",
+   "evidence": "game-loop.js:1259 var xu + :1261 start/end/time; map-table.js:5 cinematicScenes=[cameraSegmentXr,xu]; sibling xr->cameraSegmentXr",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "y4",
+   "proposedName": "lightPositionY4",
+   "confidence": "high",
+   "evidence": "game-loop.js:1401 var y4 + :1403 x/y/z; :1407 y5 preset Purple position=y4; :2015 lights[] includes y5; siblings y0/y2->lightPositionY0/Y2",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "y6",
+   "proposedName": "lightPositionY6",
+   "confidence": "high",
+   "evidence": "game-loop.js:1409 var y6 + :1411 x/y/z; :1415 y7 preset Blue position=y6; :2015 lights[] includes y7",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "y8",
+   "proposedName": "lightPositionY8",
+   "confidence": "high",
+   "evidence": "game-loop.js:1417 var y8 + :1419 x/y/z; :1423 y9 preset Blue position=y8; :2015 lights[] includes y9",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "yA",
+   "proposedName": "lightPositionYA",
+   "confidence": "high",
+   "evidence": "game-loop.js:1529 var yA + :1531 x/y/z; :1535 yB preset Purple position=yA; :2015 lights[] includes yB",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "yC",
+   "proposedName": "lightPositionYC",
+   "confidence": "high",
+   "evidence": "game-loop.js:1537 var yC + :1539 x/y/z; :1543 yD preset Purple position=yC; :2015 lights[] includes yD",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "yE",
+   "proposedName": "lightPositionYE",
+   "confidence": "high",
+   "evidence": "game-loop.js:1545 var yE + :1547 x/y/z; :1551 yF preset SubwayLogo position=yE; :2015 lights[] includes yF",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "yG",
+   "proposedName": "lightPositionYG",
+   "confidence": "high",
+   "evidence": "game-loop.js:1553 var yG + :1555 x/y/z; :1559 yH preset BuildingLight position=yG; :2015 lights[] includes yH",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "yI",
+   "proposedName": "lightPositionYI",
+   "confidence": "high",
+   "evidence": "game-loop.js:1561 var yI + :1563 x/y/z; :1567 yJ preset BuildingLight position=yI; :2015 lights[] includes yJ",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "yK",
+   "proposedName": "lightPositionYK",
+   "confidence": "high",
+   "evidence": "game-loop.js:1569 var yK + :1571 x/y/z; :1575 yL preset BuildingLight position=yK; :2015 lights[] includes yL",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "yM",
+   "proposedName": "lightPositionYM",
+   "confidence": "high",
+   "evidence": "game-loop.js:1577 var yM + :1579 x/y/z; :1583 yN preset BuildingLight position=yM; :2015 lights[] includes yN",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "yO",
+   "proposedName": "mapLightPositionYO",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1585 var yO={}; :1587 sets x/y/z coords; :1591 yP[preset]=Orange,yP[position]=yO; yP in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yQ",
+   "proposedName": "mapLightPositionYQ",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1593 var yQ={}; :1595 sets x/y/z coords; :1599 yR[preset]=Orange,yR[position]=yQ; yR in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yS",
+   "proposedName": "mapLightPositionYS",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1601 var yS={}; :1603 sets x/y/z coords; :1607 yT[preset]=Orange,yT[position]=yS; yT in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yU",
+   "proposedName": "mapLightPositionYU",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1609 var yU={}; :1611 sets x/y/z coords; :1615 yV[preset]=Blue,yV[position]=yU; yV in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yW",
+   "proposedName": "mapLightPositionYW",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1617 var yW={}; :1619 sets x/y/z coords; :1623 yX[preset]=Blue,yX[position]=yW; yX in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yY",
+   "proposedName": "mapLightPositionYY",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1625 var yY={}; :1627 sets x/y/z coords; :1631 yZ[preset]=Blue,yZ[position]=yY; yZ in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "ya",
+   "proposedName": "mapLightPositionYa",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1425 var ya={}; :1427 sets x/y/z coords; :1431 yb[preset]=BuildingLight,yb[position]=ya; yb in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yc",
+   "proposedName": "mapLightPositionYc",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1433 var yc={}; :1435 sets x/y/z coords; :1439 yd[preset]=BuildingLight,yd[position]=yc; yd in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "ye",
+   "proposedName": "mapLightPositionYe",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1441 var ye={}; :1443 sets x/y/z coords; :1447 yf[preset]=BuildingLight,yf[position]=ye; yf in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yg",
+   "proposedName": "mapLightPositionYg",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1449 var yg={}; :1451 sets x/y/z coords; :1455 yh[preset]=BuildingLight,yh[position]=yg; yh in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yi",
+   "proposedName": "mapLightPositionYi",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1457 var yi={}; :1459 sets x/y/z coords; :1463 yj[preset]=BuildingLight,yj[position]=yi; yj in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "yk",
+   "proposedName": "mapLightPositionYk",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1465 var yk={}; :1467 sets x/y/z coords; :1471 yl[preset]=BuildingLight,yl[position]=yk; yl in midnightLightData.lights :2015",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "ym",
+   "proposedName": "mapLightPositionYm",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1473 var ym; :1475 xyz(-1.78,3.35,-6.25); :1479 yn preset BuildingLight position=ym",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "yo",
+   "proposedName": "mapLightPositionYo",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1481 var yo; :1483 xyz(-2.28,3.35,-6.01); :1487 yp preset BuildingLight position=yo",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "yq",
+   "proposedName": "mapLightPositionYq",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1489 var yq; :1491 xyz(-2.78,2.31,-5.77); :1495 yr preset BuildingLight position=yq",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "ys",
+   "proposedName": "mapLightPositionYs",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1497 var ys; :1499 xyz(-3.03,2.32,-5.65); :1503 neonBuildingLight05 preset BuildingLight position=ys",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "yu",
+   "proposedName": "mapLightPositionYu",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1505 var yu; :1507 xyz(-0.28,1.42,-6.41); :1511 yv preset BuildingLight position=yu",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "yw",
+   "proposedName": "mapLightPositionYw",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1513 var yw; :1515 xyz(-0.51,0.98,-6.34); :1519 yx preset BuildingLight position=yw",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "z4",
+   "proposedName": "mapLightPositionZ4",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1649 var z4; :1651 xyz(-1.2,0.33,-5.84); :1655 z5 preset Reflection1 position=z4",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "z6",
+   "proposedName": "mapLightPositionZ6",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1657 var z6; :1659 xyz(-1.75,0.33,-5.58); :1663 z7 preset Reflection1 position=z6",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "z8",
+   "proposedName": "mapLightPositionZ8",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1665 var z8; :1667 xyz(-2.28,0.33,-5.32); :1671 z9 preset Reflection1 position=z8",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "zA",
+   "proposedName": "mapLightPositionZA",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1777 var zA; :1779 xyz(2.515,1.6275,-5.46); :1783 zB preset Blue position=zA",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "zC",
+   "proposedName": "mapLightPositionZC",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1785 var zC; :1787 xyz(2.53,1.26,-5.46); :1791 zD preset Blue position=zC",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "zE",
+   "proposedName": "mapLightPositionZE",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:1793 var zE; :1795 xyz(2.5325,0.84,-5.44); :1799 zF preset Blue position=zE",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "zG",
+   "proposedName": "mapLightPositionZG",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1801 var zG={}; :1803 sets x/y/z coords; :1807 zH['preset']=\"default\",zH[\"position\"]=zG",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zI",
+   "proposedName": "mapLightPositionZI",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1809 var zI={}; :1811 sets x/y/z coords; :1815 zJ['preset']=\"White\",zJ[\"position\"]=zI",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zK",
+   "proposedName": "mapLightPositionZK",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1817 var zK={}; :1819 sets x/y/z coords; :1823 zL['preset']='White',zL['position']=zK",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zM",
+   "proposedName": "mapLightPositionZM",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1825 var zM={}; :1827 sets x/y/z coords; :1831 zN['preset']='White',zN['position']=zM",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zO",
+   "proposedName": "mapLightPositionZO",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1833 var zO={}; :1835 sets x/y/z coords; :1839 zP['preset']=\"White\",zP[\"position\"]=zO",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zQ",
+   "proposedName": "mapLightPositionZQ",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1841 var zQ={}; :1843 sets x/y/z coords; :1847 zR['preset']=\"White\",zR['position']=zQ",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zS",
+   "proposedName": "mapLightPositionZS",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1849 var zS={}; :1851 sets x/y/z coords; :1855 zT['preset']=\"White\",zT['position']=zS",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zU",
+   "proposedName": "mapLightPositionZU",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1857 var zU={}; :1859 sets x/y/z coords; :1863 zV['preset']='White',zV[\"position\"]=zU",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zW",
+   "proposedName": "mapLightPositionZW",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1865 var zW={}; :1867 sets x/y/z coords; :1871 zX['preset']='White',zX[\"position\"]=zW",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zY",
+   "proposedName": "mapLightPositionZY",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1873 var zY={}; :1875 sets x/y/z coords; :1879 zZ['preset']='White',zZ[\"position\"]=zY",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "za",
+   "proposedName": "mapLightPositionZa",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1673 var za={}; :1675 sets x/y/z coords; :1679 zb['preset']=\"ReflectionPink\",zb['position']=za",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "zc",
+   "proposedName": "mapLightPositionZc",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1681 var zc={}; :1683 sets x/y/z coords; :1687 zd['preset']='OrangeReflection',zd[\"position\"]=zc",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "ze",
+   "proposedName": "mapLightPositionZe",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1689 var ze={}; :1691 ze xyz(-0.089,0.3275,-4.712); :1695 zf preset PurpleReflection position=ze",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zg",
+   "proposedName": "mapLightPositionZg",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1697 var zg={}; :1699 zg xyz(-2.7475,1.1025,-5.043); :1703 zh preset Orange position=zg",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zi",
+   "proposedName": "mapLightPositionZi",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1705 var zi={}; :1707 zi xyz(-2.78,1.1025,-4.896); :1711 zj preset Orange position=zi",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zk",
+   "proposedName": "mapLightPositionZk",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1713 var zk={}; :1715 zk xyz(-2.77,1.1025,-4.739); :1719 zl preset Orange position=zk",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zm",
+   "proposedName": "mapLightPositionZm",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1721 var zm={}; :1723 zm xyz(-2.7425,1.034,-4.4475); :1727 zn preset Blue position=zm",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zo",
+   "proposedName": "mapLightPositionZo",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1729 var zo={}; :1731 zo xyz(-2.7575,1.0225,-4.070); :1735 zp preset Blue position=zo (scope-crosshair.js:23 'zo'+'om' is string content, not identifier)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zq",
+   "proposedName": "mapLightPositionZq",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1737 var zq={}; :1739 zq xyz(-2.7875,1.095,-4.24); :1743 zr preset Blue position=zq",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zs",
+   "proposedName": "mapLightPositionZs",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1745 var zs={}; :1747 zs xyz(-0.0025,1.47,-5.2975); :1751 zt preset Green position=zs",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zu",
+   "proposedName": "mapLightPositionZu",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1753 var zu={}; :1755 zu xyz(-0.1525,1.536,-5.51); :1759 zv preset Green position=zu",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zw",
+   "proposedName": "mapLightPositionZw",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1761 var zw={}; :1763 zw xyz(-0.2675,1.522,-5.73); :1767 zx preset Green position=zw (shaders.js:7 .zw hits are GLSL swizzles in strings, not identifiers)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "zy",
+   "proposedName": "mapLightPositionZy",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1769 var zy={}; :1771 zy xyz(-0.38,1.465,-5.9675); :1775 mapLightPresetZz(Pink).position=zy (consumer already renamed)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "A1",
+   "proposedName": "mapLightPresetA1",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1885 var A1={}; :1887 A1 preset White position=mapLightPositionA0; :2015 A1 in midnightLightData lights array with sibling presets",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "BA",
+   "proposedName": "defaultLightPointBa",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2263 var BA; :2265 preset 'default' position=mapLightPositionBz; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BE",
+   "proposedName": "purpleLightPointBe",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2279 var BE; :2281 preset Purple position=mapLightPositionBD; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BG",
+   "proposedName": "purpleLightPointBg",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2287 var BG; :2289 preset Purple position=mapLightPositionBF; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BI",
+   "proposedName": "purpleLightPointBi",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2295 var BI; :2297 preset Purple position=mapLightPositionBh; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BK",
+   "proposedName": "blueLightPointBk",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2303 var BK; :2305 preset Blue position=mapLightPositionBj; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BM",
+   "proposedName": "blueLightPointBm",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2311 var BM; :2313 preset Blue position=mapLightPositionBl; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BO",
+   "proposedName": "buildingLightPointBo",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2319 var BO; :2321 preset BuildingLight position=mapLightPositionBn; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BQ",
+   "proposedName": "buildingLightPointBq",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2327 var BQ; :2329 preset BuildingLight position=mapLightPositionBp; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BS",
+   "proposedName": "buildingLightPointBs",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2335 var BS; :2337 preset BuildingLight position=mapLightPositionBr; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BU",
+   "proposedName": "buildingLightPointBu",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2343 var BU; :2345 preset BuildingLight position=mapLightPositionBT; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BW",
+   "proposedName": "buildingLightPointBw",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2351 var BW; :2353 preset BuildingLight position=mapLightPositionBV; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "BY",
+   "proposedName": "buildingLightPointBy",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2359 var BY; :2361 preset BuildingLight position=mapLightPositionBX; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "Bf",
+   "proposedName": "cineStartFrameBf",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2179 var Bf; :2181 Bf{position,JoIkrtRxhZ}; :2189 neonCinematicSceneA.start=Bf",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Bg",
+   "proposedName": "cineEndFrameBg",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2183 var Bg; :2185 Bg{position,JoIkrtRxhZ}; :2189 neonCinematicSceneA.end=Bg",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Bi",
+   "proposedName": "cineStartFrameBi",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2191 var Bi; :2193 Bi{position,JoIkrtRxhZ}; :2201 neonCinematicSceneB.start=Bi",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Bj",
+   "proposedName": "cineEndFrameBj",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2195 var Bj; :2197 Bj{position,JoIkrtRxhZ}; :2201 neonCinematicSceneB.end=Bj",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Bu",
+   "proposedName": "defaultLightPointBu",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2239 var Bu; :2241 Bu{preset:default,position:mapLightPositionBt}; :2905 member of sunsetLightData.lights",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Bw",
+   "proposedName": "defaultLightPointBw",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2247 var Bw; :2249 Bw{preset:default,position:mapLightPositionBv}; :2905 member of sunsetLightData.lights",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "By",
+   "proposedName": "defaultLightPointBy",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2255 var By; :2257 By{preset:default,position:mapLightPositionBx}; :2905 member of sunsetLightData.lights (scope-crosshair.js:19 hits are string contents)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "C0",
+   "proposedName": "mapLightC0",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2367 var C0; :2369 C0{preset:BuildingLight,position:mapLightPositionBZ}; :2905 member of sunsetLightData.lights",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "C4",
+   "proposedName": "mapLightC4",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2383 var C4; :2385 C4{preset:BuildingLight,position:mapLightPositionC3}; :2905 member of sunsetLightData.lights",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "C6",
+   "proposedName": "mapLightC6",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2391 var C6; :2393 C6{preset:BuildingLight,position:mapLightPositionC5}; :2905 member of sunsetLightData.lights",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "C8",
+   "proposedName": "mapLightC8",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2399 var C8; :2401 C8{preset:BuildingLight,position:mapLightPositionC7}; :2905 member of sunsetLightData.lights",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "CC",
+   "proposedName": "blueLightPointCc",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2519 var CC; :2521 CC{preset:Blue,position:mapLightPositionCB}; :2905 member of sunsetLightData.lights",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "CE",
+   "proposedName": "blueLightPointCE",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2527 var CE={}; :2529 preset Blue position=mapLightPositionCD; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CG",
+   "proposedName": "blueLightPointCG",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2535 var CG={}; :2537 preset Blue position=mapLightPositionCF; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CI",
+   "proposedName": "reflection1LightPointCI",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2543 var CI={}; :2545 preset Reflection1 position=mapLightPositionCH; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CK",
+   "proposedName": "reflection1LightPointCK",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2551 var CK={}; :2553 preset Reflection1 position=mapLightPositionCJ; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CM",
+   "proposedName": "reflection1LightPointCM",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2559 var CM={}; :2561 preset Reflection1 position=mapLightPositionCL; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CO",
+   "proposedName": "reflectionPinkLightPointCO",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2567 var CO={}; :2569 preset ReflectionPink position=mapLightPositionCN; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CQ",
+   "proposedName": "orangeReflectionLightPointCQ",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2575 var CQ={}; :2577 preset OrangeReflection position=mapLightPositionCP; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CS",
+   "proposedName": "purpleReflectionLightPointCS",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2583 var CS={}; :2585 preset PurpleReflection position=mapLightPositionCR; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CU",
+   "proposedName": "orangeLightPointCU",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2591 var CU={}; :2593 preset Orange position=mapLightPositionCT; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "CY",
+   "proposedName": "orangeLightPointCY",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2607 var CY={}; :2609 preset Orange position=mapLightPositionCX; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "Ca",
+   "proposedName": "buildingLightPointCa",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2407 var Ca={}; :2409 preset BuildingLight position=mapLightPositionC9; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "Cc",
+   "proposedName": "purpleLightPointCc",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2415 var Cc={}; :2417 preset Purple position=mapLightPositionCb; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "Ce",
+   "proposedName": "purpleLightPointCe",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2423 var Ce={}; :2425 preset=Purple+position=mapLightPositionCd; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Cg",
+   "proposedName": "purpleLightPointCg",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2431 var Cg={}; :2433 preset=Purple+position=mapLightPositionCf; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Ci",
+   "proposedName": "subwayLogoLightPointCi",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2439 var Ci={}; :2441 preset=SubwayLogo+position=mapLightPositionCh; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Ck",
+   "proposedName": "buildingLightPointCk",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2447 var Ck={}; :2449 preset=BuildingLight+position=mapLightPositionCj; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Cm",
+   "proposedName": "buildingLightPointCm",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2455 var Cm={}; :2457 preset=BuildingLight+position=mapLightPositionCl; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Co",
+   "proposedName": "buildingLightPointCo",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2463 var Co={}; :2465 preset=BuildingLight+position=mapLightPositionCn; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Cq",
+   "proposedName": "buildingLightPointCq",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2471 var Cq={}; :2473 preset=BuildingLight+position=mapLightPositionCp; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Cs",
+   "proposedName": "orangeLightPointCs",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2479 var Cs={}; :2481 preset=Orange+position=mapLightPositionCr; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Cu",
+   "proposedName": "orangeLightPointCu",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2487 var Cu={}; :2489 preset=Orange+position=mapLightPositionCt; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Cw",
+   "proposedName": "orangeLightPointCw",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2495 var Cw={}; :2497 preset=Orange+position=mapLightPositionCv; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "Cy",
+   "proposedName": "blueLightPointCy",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2503 var Cy={}; :2505 preset=Blue+position=mapLightPositionCx; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "D0",
+   "proposedName": "blueLightPointD0",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2615 var D0={}; :2617 preset=Blue+position=mapLightPositionCZ; :2905 in sunsetLightData lights[]",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "D2",
+   "proposedName": "mapLightD2",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2623 var D2={}; :2625 preset Blue position=mapLightPositionD1; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "D4",
+   "proposedName": "mapLightD4",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2631 var D4={}; :2633 preset Blue position=mapLightPositionD3; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "D6",
+   "proposedName": "mapLightD6",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2639 var D6={}; :2641 preset Green position=mapLightPositionD5; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "D8",
+   "proposedName": "mapLightD8",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2647 var D8={}; :2649 preset Green position=mapLightPositionD7; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "DA",
+   "proposedName": "mapLightDA",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2759 var DA={}; :2761 preset White position=mapLightPositionDz; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "DC",
+   "proposedName": "mapLightDC",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2767 var DC={}; :2769 preset White position=mapLightPositionDB; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "DE",
+   "proposedName": "mapLightDE",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2775 var DE={}; :2777 preset White position=mapLightPositionDD; :2905 member of sunsetLightData lights array (scope-crosshair.js 'DE' is string content, excluded)",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "Da",
+   "proposedName": "mapLightDa",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2655 var Da={}; :2657 preset Green position=mapLightPositionD9; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "Dc",
+   "proposedName": "mapLightDc",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2663 var Dc={}; :2665 preset Pink position=mapLightPositionDb; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "De",
+   "proposedName": "mapLightDe",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2671 var De={}; :2673 preset Blue position=mapLightPositionDd; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "DeadshotKTX2Module",
+   "proposedName": "ktx2LoaderModule",
+   "confidence": "high",
+   "evidence": "engine/assets-draco.js:9 var DeadshotKTX2Module = bundled KTX2Loader module (KTX2 parse, basis transcoder, KTX2Loader class); :11 usvzFuAsEB.KTX2Loader=DeadshotKTX2Module.KTX2Loader",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "Dg",
+   "proposedName": "mapLightDg",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2679 var Dg={}; :2681 preset Blue position=mapLightPositionDf; :2905 member of sunsetLightData lights array",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "Di",
+   "proposedName": "blueLightPointDi",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2687 var Di; :2689 preset Blue position=mapLightPositionDh; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Dk",
+   "proposedName": "defaultLightPointDk",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2695 var Dk; :2697 preset default position=mapLightPositionDj; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Dm",
+   "proposedName": "whiteLightPointDm",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2703 var Dm; :2705 preset White position=mapLightPositionDl; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Do",
+   "proposedName": "whiteLightPointDo",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2711 var Do; :2713 preset White position=mapLightPositionDn; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Dq",
+   "proposedName": "whiteLightPointDq",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2719 var Dq; :2721 preset White position=mapLightPositionDp; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Ds",
+   "proposedName": "whiteLightPointDs",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2727 var Ds; :2729 preset White position=mapLightPositionDr; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Du",
+   "proposedName": "whiteLightPointDu",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2735 var Du; :2737 preset White position=mapLightPositionDt; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Dw",
+   "proposedName": "whiteLightPointDw",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2743 var Dw; :2745 preset White position=mapLightPositionDv; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Dy",
+   "proposedName": "whiteLightPointDy",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:2751 var Dy; :2753 preset White position=mapLightPositionDx; :2905 member of sunsetLightData lights",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "EG",
+   "proposedName": "cameraWaypointEg",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:3017 var EG; :3019 position+JoIkrtRxhZ; :3027 start of cinematicSegmentEI (Forest map cinematicScenes)",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "EH",
+   "proposedName": "cameraWaypointEh",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:3021 var EH; :3023 position+JoIkrtRxhZ; :3027 end of cinematicSegmentEI (Forest map cinematicScenes)",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "EJ",
+   "proposedName": "cameraWaypointEj",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:3029 var EJ; :3031 position+JoIkrtRxhZ; :3039 start of cinematicSegmentEL (Forest map cinematicScenes)",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "EK",
+   "proposedName": "cinematicSegmentELEnd",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:3033 var EK, :3035 EK position+JoIkrtRxhZ camera pose, :3039 cinematicSegmentEL end=EK",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "EO",
+   "proposedName": "buildCollisionGrid",
+   "confidence": "high",
+   "evidence": "combat/fire.js:5 EO=function(geo,filter) builds spatial face-index grid; engine/assets-draco.js:19 x2 collisionWorld fkXbORMTcl=EO(geometry); world/map-table.js:11 module export",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "ET",
+   "proposedName": "segmentSegmentClosestPoint",
+   "confidence": "high",
+   "evidence": "combat/fire.js:5 ET=function(segA0,segA1,segB0,segB1) returns closest-point params+distSq; sim/input.js:33 and :35 ET(lagCompensationVector,raycastScratchB,rayOriginCopy,raycastScratchD)[z] hit-test vs threshold",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "Ec",
+   "proposedName": "cinematicSegmentSandstormAStart",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:2909 var Ec, :2911 Ec position+JoIkrtRxhZ camera pose, :2919 cinematicSegmentSandstormA start=Ec",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "Ed",
+   "proposedName": "cinematicSegmentSandstormAEnd",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:2913 var Ed, :2915 Ed position+JoIkrtRxhZ camera pose, :2919 cinematicSegmentSandstormA end=Ed",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "Ej",
+   "proposedName": "cinematicSegmentSandstormBEnd",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:2933 var Ej, :2935 Ej position+JoIkrtRxhZ camera pose, :2939 cinematicSegmentSandstormB end=Ej",
+   "verdict": "rename",
+   "slice": 12
+  }
+ ]
+}

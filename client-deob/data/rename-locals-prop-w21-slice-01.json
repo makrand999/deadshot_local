@@ -1,0 +1,223 @@
+{
+ "slice": "01",
+ "stats": {
+  "total": 30,
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @500963 var in WebGLInfo update scope; USES render.triangles/lines/points scaled by instanceCount — already-readable domain term",
+   "name": "instanceCount",
+   "selector": "instanceCount@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @542609 var in InstancedMesh raycast; refCount=4 — already-readable domain term",
+   "name": "instanceId",
+   "selector": "instanceId@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @767473 var in ObjectLoader InstancedMesh case; USES this.instanceMatrix BufferAttribute — already-readable three.js API term",
+   "name": "instanceMatrix",
+   "selector": "instanceMatrix@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @354149 var in onInstancedMeshDispose; refCount=4 event.target mesh — already-readable domain term",
+   "name": "instancedMesh",
+   "selector": "instancedMesh@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @705477 var in CatmullRomCurve3.getPoint; USES Math.floor(p) segment index p0..p3 — already-readable idiom",
+   "name": "intPoint",
+   "selector": "intPoint@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @716540 var in SplineCurve.getPoint; USES Math.floor(p) segment index p0..p3 — already-readable idiom",
+   "name": "intPoint",
+   "selector": "intPoint@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @400002 var in WebGLLights setup; USES color.multiplyScalar(intensity) per light type — already-readable domain term",
+   "name": "intensity",
+   "selector": "intensity@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @724709 param of Light(color,intensity); USES default 1, this.intensity=intensity — already-readable API term",
+   "name": "intensity",
+   "selector": "intensity@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @725710 param of HemisphereLight; USES forwarded to Light.call — already-readable API term",
+   "name": "intensity",
+   "selector": "intensity@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @728938 param of SpotLight; USES forwarded to Light.call — already-readable API term",
+   "name": "intensity",
+   "selector": "intensity@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @731400 param of PointLight; USES forwarded to Light.call — already-readable API term",
+   "name": "intensity",
+   "selector": "intensity@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @734882 param of DirectionalLight; USES forwarded to Light.call — already-readable API term",
+   "name": "intensity",
+   "selector": "intensity@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @735391 param of AmbientLight; USES forwarded to Light.call — already-readable API term",
+   "name": "intensity",
+   "selector": "intensity@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @735606 param of RectAreaLight; USES forwarded to Light.call — already-readable API term",
+   "name": "intensity",
+   "selector": "intensity@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @739238 param of LightProbe(sh,intensity); USES forwarded to Light.call — already-readable API term",
+   "name": "intensity",
+   "selector": "intensity@u0020#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @780470 HemisphereLightProbe(skyColor,groundColor,intensity) param passed to LightProbe.call; USES @781237 AmbientLightProbe twin; readable domain term",
+   "name": "intensity",
+   "selector": "intensity@u0020#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @781237 AmbientLightProbe(color,intensity) param passed to LightProbe.call; USES @780470 HemisphereLightProbe twin; readable domain term",
+   "name": "intensity",
+   "selector": "intensity@u0020#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @546447 var alongside vStart/vEnd/interSegment in Line raycast; USES distanceSqToSegment out-param + applyMatrix4/distanceTo; readable three.js idiom",
+   "name": "interRay",
+   "selector": "interRay@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @546414 var alongside vStart/vEnd/interRay in Line raycast; USES distanceSqToSegment out-param + clone().applyMatrix4 hit point; readable three.js idiom",
+   "name": "interSegment",
+   "selector": "interSegment@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @525887 InterleavedBufferAttribute(interleavedBuffer,...) param stored as this.data; USES @530655 Sprite twin; readable three.js API term",
+   "name": "interleavedBuffer",
+   "selector": "interleavedBuffer@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @530655 var interleavedBuffer=new InterleavedBuffer(float32Array,5) in Sprite; USES passed to InterleavedBufferAttribute x2; readable three.js API term",
+   "name": "interleavedBuffer",
+   "selector": "interleavedBuffer@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @751054 var interleavedBuffer=interleavedBuffers[uuid] JSON entry in getInterleavedBuffer; USES .buffer/.type/.stride/.uuid reads; readable domain term",
+   "name": "interleavedBuffer",
+   "selector": "interleavedBuffer@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @752007 var interleavedBuffer=getInterleavedBuffer(...) in parse attributes loop; USES new InterleavedBufferAttribute(...); readable three.js API term",
+   "name": "interleavedBuffer",
+   "selector": "interleavedBuffer@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @750840 var interleavedBufferMap={} cache in BufferGeometryLoader.parse; USES 3 refs in getInterleavedBuffer memoize; readable domain term",
+   "name": "interleavedBufferMap",
+   "selector": "interleavedBufferMap@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @751007 var interleavedBuffers=json.interleavedBuffers in getInterleavedBuffer; USES [uuid] lookup; readable JSON-field term",
+   "name": "interleavedBuffers",
+   "selector": "interleavedBuffers@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @435021 getInternalFormat(internalFormatName,...) param in WebGL textures; USES 4 refs; readable GL domain term",
+   "name": "internalFormatName",
+   "selector": "internalFormatName@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @663815 var interpolant in animation subclip/track helper; USES 2 refs; readable animation domain term",
+   "name": "interpolant",
+   "selector": "interpolant@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @816090 var interpolant=tracks[i].createInterpolant(null) in AnimationAction ctor; USES interpolants[i] store + settings; readable three.js API term",
+   "name": "interpolant",
+   "selector": "interpolant@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @819441 var interpolant=this._timeScaleInterpolant in warp(); USES null-check/lend + parameterPositions/sampleValues; readable three.js API term",
+   "name": "interpolant",
+   "selector": "interpolant@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @821213 var interpolant=this._weightInterpolant in _updateWeight; USES evaluate(time) + parameterPositions; readable three.js API term",
+   "name": "interpolant",
+   "selector": "interpolant@u0020#3"
+  }
+ ]
+}

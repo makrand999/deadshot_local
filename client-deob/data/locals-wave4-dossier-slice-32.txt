@@ -1,0 +1,129 @@
+# DOSSIER slice-32 (wave 4, 20 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/20] a3l@u2203#0 | kind=param depth=5 refCount=8 | sim/game-loop.js
+DECL @12 (verified):
+function QI(a3l,a3m){var axy=ai1;if(a3l==undefined||a3l['gain']==undefined||a3l['gain']['gain']==undefined)return![];var a3n=a3l['localVolume']*tD*QH(a3l);if(isNaN(parseFloat(a3n)))return window["onerror"]("Vol 1: vol: "+a3m+", localVolume: "+a3l["localVolume"]),![];if(!a3l["gain"]['gain']['setValueAtTime'](parseFloat(a3n),0x0))return window['onerror']("Vol 2: vol: "+a3m+',\x20localVolume:\x20'+a3l['localVolume']),![];return!![];}
+USES: refCount=8, 9 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/20] a3m@u2203#0 | kind=param depth=5 refCount=2 | sim/game-loop.js
+DECL @16 (verified):
+function QI(a3l,a3m){var axy=ai1;if(a3l==undefined||a3l['gain']==undefined||a3l['gain']['gain']==undefined)return![];var a3n=a3l['localVolume']*tD*QH(a3l);if(isNaN(parseFloat(a3n)))return window["onerror"]("Vol 1: vol: "+a3m+", localVolume: "+a3l["localVolume"]),![];if(!a3l["gain"]['gain']['setValueAtTime'](parseFloat(a3n),0x0))return window['onerror']("Vol 2: vol: "+a3m+',\x20localVolume:\x20'+a3l['localVolume']),![];return!![];}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/20] a3n@u2203#0 | kind=var depth=5 refCount=2 | sim/game-loop.js
+DECL @121 (verified):
+function QI(a3l,a3m){var axy=ai1;if(a3l==undefined||a3l['gain']==undefined||a3l['gain']['gain']==undefined)return![];var a3n=a3l['localVolume']*tD*QH(a3l);if(isNaN(parseFloat(a3n)))return window["onerror"]("Vol 1: vol: "+a3m+", localVolume: "+a3l["localVolume"]),![];if(!a3l["gain"]['gain']['setValueAtTime'](parseFloat(a3n),0x0))return window['onerror']("Vol 2: vol: "+a3m+',\x20localVolume:\x20'+a3l['localVolume']),![];return!![];}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/20] a3A@u0366#2 | kind=param depth=7 refCount=2 | ui/widgets.js
+DECL @664 (verified):
+teElement']('canvas');a3k["width"]=a3i,a3k['height']=a3j;var a3l=a3k["getContext"]('2d'),a3m=[];function a3n(){var aoA=aoz;a3m=[];for(var a3A=0x0;a3A<0x3c;a3A++){a3m['push']({'x':Math["random"]()*(a3i+0xc8)-0x64,'y':Math['random']()*(a3j+0xc8)-0x64,'vx':Math["random"]()-0.5,'vy':Math["random"]()-0.5});}var a3B=0.8;for(var a3A=0x0;a3A<a3m['length'];a3A++){var a3C=a3m[a3A];while(Math['abs'](a3C['vx'])<0.2){a3C['vx']=Math['random']()-0.5;}while(Math['abs'](a3C['vy'])<0.2){a3C['vy']=Math['random']()-0.5;}a3C['vx']*=a3B,a3C['vy']*=a3B;}}var a3o={};a3o['x']=0x0,a3o['y']=0x0;var a3p=a3o;function a3q([...line truncated...]
+USES: refCount=2, 20 token-occurrences in unit, showing 7 nearest outside DECL window:
+@1548: ['sqrt'](a3F),a3l['beginPath'](),a3l['globalAlpha']=0x1-a3F/a3r,a3l['globalAlpha']=(0x1-a3l['globalAlpha'])*a3l["globalAlpha"]+a3l['globalAlpha'],a3l['moveTo'](a3C['x'],a3C['y']),a3l['lineTo'](a3E['x'],a3E['y']),a3l['stroke']());}a3C['x']+=a3C['vx']*a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a
+@1572: Path'](),a3l['globalAlpha']=0x1-a3F/a3r,a3l['globalAlpha']=(0x1-a3l['globalAlpha'])*a3l["globalAlpha"]+a3l['globalAlpha'],a3l['moveTo'](a3C['x'],a3C['y']),a3l['lineTo'](a3E['x'],a3E['y']),a3l['stroke']());}a3C['x']+=a3C['vx']*a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n()
+@1745: 'x'],a3E['y']),a3l['stroke']());}a3C['x']+=a3C['vx']*a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+@1779: 3C['x']+=a3C['vx']*a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+@1805: ['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+@1837: i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+@1846: a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+==============================================================================
+[5/20] a3B@u0366#1 | kind=param depth=7 refCount=2 | ui/widgets.js
+DECL @668 (verified):
+ement']('canvas');a3k["width"]=a3i,a3k['height']=a3j;var a3l=a3k["getContext"]('2d'),a3m=[];function a3n(){var aoA=aoz;a3m=[];for(var a3A=0x0;a3A<0x3c;a3A++){a3m['push']({'x':Math["random"]()*(a3i+0xc8)-0x64,'y':Math['random']()*(a3j+0xc8)-0x64,'vx':Math["random"]()-0.5,'vy':Math["random"]()-0.5});}var a3B=0.8;for(var a3A=0x0;a3A<a3m['length'];a3A++){var a3C=a3m[a3A];while(Math['abs'](a3C['vx'])<0.2){a3C['vx']=Math['random']()-0.5;}while(Math['abs'](a3C['vy'])<0.2){a3C['vy']=Math['random']()-0.5;}a3C['vx']*=a3B,a3C['vy']*=a3B;}}var a3o={};a3o['x']=0x0,a3o['y']=0x0;var a3p=a3o;function a3q(a3A,[...line truncated...]
+USES: refCount=2, 14 token-occurrences in unit, showing 3 nearest outside DECL window:
+@1749: ,a3E['y']),a3l['stroke']());}a3C['x']+=a3C['vx']*a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+@1797: *a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+@1813: 3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+==============================================================================
+[6/20] a3E@u0366#0 | kind=var depth=7 refCount=3 | ui/widgets.js
+DECL @1250 (verified):
+;function a3q(a3A,a3B){return a3p['x']=a3B['x']-a3A['x'],a3p['y']=a3B['y']-a3A['y'],a3p['x']*a3p['x']+a3p['y']*a3p['y'];}var a3r=0x78,a3s=a3r*a3r,a3t=0x4,a3u=a3t/0x2;a3l["lineWidth"]=0x2;var a3v='#FFF';function a3w(a3A){var aoB=aoz;a3A=Math['max'](Math['min'](a3A,0x4),0.5),a3l["globalAlpha"]=0x1,a3l['lineWidth']=0x4,a3l['clearRect'](0x0,0x0,a3i,a3j),a3l['fillStyle']='#000',a3l['fillStyle']="#FFF",a3l['strokeStyle']='#FFF',a3l["fillStyle"]=a3v,a3l['strokeStyle']=a3v;for(var a3B=0x0;a3B<a3m['length'];a3B++){var a3C=a3m[a3B];a3l['globalAlpha']=0x1;for(var a3D=a3B+0x1;a3D<a3m['length'];a3D++){var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/20] a3F@u0366#0 | kind=var depth=7 refCount=4 | ui/widgets.js
+DECL @1263 (verified):
+(a3A,a3B){return a3p['x']=a3B['x']-a3A['x'],a3p['y']=a3B['y']-a3A['y'],a3p['x']*a3p['x']+a3p['y']*a3p['y'];}var a3r=0x78,a3s=a3r*a3r,a3t=0x4,a3u=a3t/0x2;a3l["lineWidth"]=0x2;var a3v='#FFF';function a3w(a3A){var aoB=aoz;a3A=Math['max'](Math['min'](a3A,0x4),0.5),a3l["globalAlpha"]=0x1,a3l['lineWidth']=0x4,a3l['clearRect'](0x0,0x0,a3i,a3j),a3l['fillStyle']='#000',a3l['fillStyle']="#FFF",a3l['strokeStyle']='#FFF',a3l["fillStyle"]=a3v,a3l['strokeStyle']=a3v;for(var a3B=0x0;a3B<a3m['length'];a3B++){var a3C=a3m[a3B];a3l['globalAlpha']=0x1;for(var a3D=a3B+0x1;a3D<a3m['length'];a3D++){var a3E=a3m[a3D],[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/20] a3i@u0366#0 | kind=var depth=5 refCount=7 | ui/widgets.js
+DECL @26 (verified):
+function to(){var aoz=ai1,a3i=0x384,a3j=0x12c,a3k=document['createElement']('canvas');a3k["width"]=a3i,a3k['height']=a3j;var a3l=a3k["getContext"]('2d'),a3m=[];function a3n(){var aoA=aoz;a3m=[];for(var a3A=0x0;a3A<0x3c;a3A++){a3m['push']({'x':Math["random"]()*(a3i+0xc8)-0x64,'y':Math['random']()*(a3j+0xc8)-0x64,'vx':Math["random"]()-0.5,'vy':Math["random"]()-0.5});}var a3B=0.8;for(var a3A=0x0;a3A<a3m['length'];a3A++){var a3C=a3m[a3A];while(Math['abs'](a3C['vx'])<0.2){a3C['vx']=Math['random']()-0.5;}while(Math['abs'](a3C['vy'])<0.2){a3C['vy']=Math['random']()-0.5;}a3C['vx']*=a3B,a3C['vy']*=a3B;[...line truncated...]
+USES: refCount=7, 8 token-occurrences in unit, showing 5 nearest outside DECL window:
+@993: a3p['x']+a3p['y']*a3p['y'];}var a3r=0x78,a3s=a3r*a3r,a3t=0x4,a3u=a3t/0x2;a3l["lineWidth"]=0x2;var a3v='#FFF';function a3w(a3A){var aoB=aoz;a3A=Math['max'](Math['min'](a3A,0x4),0.5),a3l["globalAlpha"]=0x1,a3l['lineWidth']=0x4,a3l['clearRect'](0x0,0x0,a3i,a3j),a3l['fillStyle']='#000',a3l['fillStyle']="#FFF",a3l['strokeStyle']='#FFF',a3l["fillStyle"]=a3v,a3l['strokeStyle']=a3v;for(var a3B=0x0;a3B<a3m['length'];a3B++){var a3C=a3m[a3B];a3l['globalAlpha']=0x1;for(var a3D=a3B+0x1;a3D<a3m['length'];a3D+
+@1585: 'globalAlpha']=0x1-a3F/a3r,a3l['globalAlpha']=(0x1-a3l['globalAlpha'])*a3l["globalAlpha"]+a3l['globalAlpha'],a3l['moveTo'](a3C['x'],a3C['y']),a3l['lineTo'](a3E['x'],a3E['y']),a3l['stroke']());}a3C['x']+=a3C['vx']*a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3
+@1606: F/a3r,a3l['globalAlpha']=(0x1-a3l['globalAlpha'])*a3l["globalAlpha"]+a3l['globalAlpha'],a3l['moveTo'](a3C['x'],a3C['y']),a3l['lineTo'](a3E['x'],a3E['y']),a3l['stroke']());}a3C['x']+=a3C['vx']*a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a
+@1683: balAlpha'],a3l['moveTo'](a3C['x'],a3C['y']),a3l['lineTo'](a3E['x'],a3E['y']),a3l['stroke']());}a3C['x']+=a3C['vx']*a3A,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['s
+@1801: ,a3C['y']+=a3C['vy']*a3A,a3C['x']>a3i+0x64&&(a3C['x']-=a3i+0xc8),a3C['y']>a3j+0x64&&(a3C['y']-=a3j+0xc8),a3C['x']<-0x64&&(a3C['x']+=a3i+0xc8),a3C['y']<-0x64&&(a3C['y']+=a3j+0xc8);}}function a3x(a3A,a3B){var aoC=aoz;a3k["width"]=a3A,a3k['height']=a3B,a3i=a3A,a3j=a3B,a3n();}function a3y(a3A){a3v=a3A;}var a3z={};return a3z["canvas"]=a3k,a3z['update']=a3w,a3z['adjustSize']=a3x,a3z['setColor']=a3y,a3z;}
+==============================================================================
+[9/20] a3o@u0366#0 | kind=var depth=5 refCount=3 | ui/widgets.js
+DECL @606 (verified):
+on to(){var aoz=ai1,a3i=0x384,a3j=0x12c,a3k=document['createElement']('canvas');a3k["width"]=a3i,a3k['height']=a3j;var a3l=a3k["getContext"]('2d'),a3m=[];function a3n(){var aoA=aoz;a3m=[];for(var a3A=0x0;a3A<0x3c;a3A++){a3m['push']({'x':Math["random"]()*(a3i+0xc8)-0x64,'y':Math['random']()*(a3j+0xc8)-0x64,'vx':Math["random"]()-0.5,'vy':Math["random"]()-0.5});}var a3B=0.8;for(var a3A=0x0;a3A<a3m['length'];a3A++){var a3C=a3m[a3A];while(Math['abs'](a3C['vx'])<0.2){a3C['vx']=Math['random']()-0.5;}while(Math['abs'](a3C['vy'])<0.2){a3C['vy']=Math['random']()-0.5;}a3C['vx']*=a3B,a3C['vy']*=a3B;}}var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/20] a3p@u0366#0 | kind=var depth=5 refCount=6 | ui/widgets.js
+DECL @643 (verified):
+2c,a3k=document['createElement']('canvas');a3k["width"]=a3i,a3k['height']=a3j;var a3l=a3k["getContext"]('2d'),a3m=[];function a3n(){var aoA=aoz;a3m=[];for(var a3A=0x0;a3A<0x3c;a3A++){a3m['push']({'x':Math["random"]()*(a3i+0xc8)-0x64,'y':Math['random']()*(a3j+0xc8)-0x64,'vx':Math["random"]()-0.5,'vy':Math["random"]()-0.5});}var a3B=0.8;for(var a3A=0x0;a3A<a3m['length'];a3A++){var a3C=a3m[a3A];while(Math['abs'](a3C['vx'])<0.2){a3C['vx']=Math['random']()-0.5;}while(Math['abs'](a3C['vy'])<0.2){a3C['vy']=Math['random']()-0.5;}a3C['vx']*=a3B,a3C['vy']*=a3B;}}var a3o={};a3o['x']=0x0,a3o['y']=0x0;var [...line truncated...]
+USES: refCount=6, 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/20] a3q@u0366#0 | kind=function depth=6 refCount=1 | ui/widgets.js
+DECL @660 (verified):
+createElement']('canvas');a3k["width"]=a3i,a3k['height']=a3j;var a3l=a3k["getContext"]('2d'),a3m=[];function a3n(){var aoA=aoz;a3m=[];for(var a3A=0x0;a3A<0x3c;a3A++){a3m['push']({'x':Math["random"]()*(a3i+0xc8)-0x64,'y':Math['random']()*(a3j+0xc8)-0x64,'vx':Math["random"]()-0.5,'vy':Math["random"]()-0.5});}var a3B=0.8;for(var a3A=0x0;a3A<a3m['length'];a3A++){var a3C=a3m[a3A];while(Math['abs'](a3C['vx'])<0.2){a3C['vx']=Math['random']()-0.5;}while(Math['abs'](a3C['vy'])<0.2){a3C['vy']=Math['random']()-0.5;}a3C['vx']*=a3B,a3C['vy']*=a3B;}}var a3o={};a3o['x']=0x0,a3o['y']=0x0;var a3p=a3o;function [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1267: ]='#000',a3l['fillStyle']="#FFF",a3l['strokeStyle']='#FFF',a3l["fillStyle"]=a3v,a3l['strokeStyle']=a3v;for(var a3B=0x0;a3B<a3m['length'];a3B++){var a3C=a3m[a3B];a3l['globalAlpha']=0x1;for(var a3D=a3B+0x1;a3D<a3m['length'];a3D++){var a3E=a3m[a3D],a3F=a3q(a3C,a3E);a3F<a3s&&(a3F=Math['sqrt'](a3F),a3l['beginPath'](),a3l['globalAlpha']=0x1-a3F/a3r,a3l['globalAlpha']=(0x1-a3l['globalAlpha'])*a3l["globalAlpha"]+a3l['globalAlpha'],a3l['moveTo'](a3C['x'],a3C['y']),a3l['lineTo'](a3E['x'],a3E['y']),a3l['st
+==============================================================================
+[12/20] a3k@u2102#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @12 (verified):
+function LF(a3k,a3l,a3m){var aqX=ai1;a3l['width']=a3k['width'],a3l['height']=a3k['height'];let a3n=a3l['getContext']('2d');a3n['clearRect'](0x0,0x0,a3l['width'],a3l["height"]),a3n['drawImage'](a3k,0x0,0x0,a3l['width'],a3l['height']),a3m!==undefined&&(a3n['globalCompositeOperation']='source-in',a3n["fillStyle"]=a3m,a3n['fillRect'](0x0,0x0,a3l["width"],a3l["height"]));}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/20] a3l@u2102#0 | kind=param depth=5 refCount=9 | ui/widgets.js
+DECL @16 (verified):
+function LF(a3k,a3l,a3m){var aqX=ai1;a3l['width']=a3k['width'],a3l['height']=a3k['height'];let a3n=a3l['getContext']('2d');a3n['clearRect'](0x0,0x0,a3l['width'],a3l["height"]),a3n['drawImage'](a3k,0x0,0x0,a3l['width'],a3l['height']),a3m!==undefined&&(a3n['globalCompositeOperation']='source-in',a3n["fillStyle"]=a3m,a3n['fillRect'](0x0,0x0,a3l["width"],a3l["height"]));}
+USES: refCount=9, 10 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/20] a3m@u2102#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @20 (verified):
+function LF(a3k,a3l,a3m){var aqX=ai1;a3l['width']=a3k['width'],a3l['height']=a3k['height'];let a3n=a3l['getContext']('2d');a3n['clearRect'](0x0,0x0,a3l['width'],a3l["height"]),a3n['drawImage'](a3k,0x0,0x0,a3l['width'],a3l['height']),a3m!==undefined&&(a3n['globalCompositeOperation']='source-in',a3n["fillStyle"]=a3m,a3n['fillRect'](0x0,0x0,a3l["width"],a3l["height"]));}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/20] a3n@u2102#0 | kind=let depth=6 refCount=5 | ui/widgets.js
+DECL @95 (verified):
+function LF(a3k,a3l,a3m){var aqX=ai1;a3l['width']=a3k['width'],a3l['height']=a3k['height'];let a3n=a3l['getContext']('2d');a3n['clearRect'](0x0,0x0,a3l['width'],a3l["height"]),a3n['drawImage'](a3k,0x0,0x0,a3l['width'],a3l['height']),a3m!==undefined&&(a3n['globalCompositeOperation']='source-in',a3n["fillStyle"]=a3m,a3n['fillRect'](0x0,0x0,a3l["width"],a3l["height"]));}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/20] a3o@u2493#0 | kind=param depth=5 refCount=3 | sim/game-loop.js
+DECL @12 (verified):
+function W0(a3o){VZ=a3o;for(var a3p=0x0;a3p<Tf['children']['length'];a3p++){var a3q=Tf['children'][a3p];a3q['position']['x']=Math['cos'](a3p*Math['PI']/0x2)*a3o,a3q['position']['y']=Math['sin'](a3p*Math['PI']/0x2)*a3o;}}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/20] a3p@u2493#0 | kind=var depth=5 refCount=5 | sim/game-loop.js
+DECL @32 (verified):
+function W0(a3o){VZ=a3o;for(var a3p=0x0;a3p<Tf['children']['length'];a3p++){var a3q=Tf['children'][a3p];a3q['position']['x']=Math['cos'](a3p*Math['PI']/0x2)*a3o,a3q['position']['y']=Math['sin'](a3p*Math['PI']/0x2)*a3o;}}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/20] a3q@u2493#0 | kind=var depth=5 refCount=2 | sim/game-loop.js
+DECL @80 (verified):
+function W0(a3o){VZ=a3o;for(var a3p=0x0;a3p<Tf['children']['length'];a3p++){var a3q=Tf['children'][a3p];a3q['position']['x']=Math['cos'](a3p*Math['PI']/0x2)*a3o,a3q['position']['y']=Math['sin'](a3p*Math['PI']/0x2)*a3o;}}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/20] a3t@u2610#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @995 (verified):
+ormals"]();if(Yb['indexOf'](a3y['material']['name'])!=-0x1){var a3z=a3y["material"]['name'];a3y['material']['map']=Y9[a3y['material']['name']]['map'],a3y["material"]['map']['flipY']=![],a3y['material']['side']=usvzFuAsEB["FrontSide"],a3y['material']=new usvzFuAsEB[("KibzRdopc")]({'name':a3z,'map':a3y['material']['map'],'skinning':!![],'side':usvzFuAsEB['FrontSide']});if(a3z=='ar'){}else{if(a3z=='smg'){}else{if(a3z=='awp'){}}}};a3s++;}}),a3o['scene']['scale']['CNFryyAhIm'](0.016),Xv=a3o,Xw[a3p]=a3o,Xx[a3p]['push'](a3o);if(a3p==0x1)Yf=a3o['animations'];else{if(Yf!=undefined&&a3p!=0x0){}}for(var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/20] a3y@u2610#0 | kind=param depth=7 refCount=15 | engine/webgl-renderer.js
+DECL @162 (verified):
+function Yg(a3o,a3p){var aAF=ai1;a3o["scene"]['disable']();var a3q=a3o['scene']['children'][0x0],a3r,a3s=0x0;XY(a3o['scene']),a3o['scene']['XOVWraMIAg'](function(a3y){var aAG=aAF;if(a3y['HxZQduRmkmK']!=undefined)return;if(a3y instanceof usvzFuAsEB['Mesh']){a3y['RNQDluasaN']["removeAttribute"]("color"),a3r=a3y,a3y['position']['y']-=0x2,a3y["receiveShadow"]=![],a3y['RNQDluasaN']["computeVertexNormals"]();if(Yb['indexOf'](a3y['material']['name'])!=-0x1){var a3z=a3y["material"]['name'];a3y['material']['map']=Y9[a3y['material']['name']]['map'],a3y["material"]['map']['flipY']=![],a3y['material']['si[...line truncated...]
+USES: refCount=15, 22 token-occurrences in unit, showing 6 nearest outside DECL window:
+@1332: xEEFMRM"],a3u['isSelf'],a3p,a3u["noNwTwgnGyn"]);}XI[a3p]=[],Kq['renderPlayer'](XX({},!![],![],a3p,!![]),a3p);var a3v=XX({"KWC92ef2Y9":new HR()},![],!![],a3p);(YdshJUELZK==undefined||a3p==0x0)&&(YdshJUELZK=a3v);a3v["r23ZS3L2g"]['XOVWraMIAg'](function(a3y){var aAH=aAF;a3y['material']!=undefined&&(a3y["material"]['uniforms']['squeeze']!=undefined&&(a3y['material']['uniforms']['squeeze']['value']=0x1,a3y['material']['uniforms']['squeeze']['afCJVYrCGK']=!![],a3y['material']["side"]=GG?usvzFuAsEB["Bac
+@1349: Self'],a3p,a3u["noNwTwgnGyn"]);}XI[a3p]=[],Kq['renderPlayer'](XX({},!![],![],a3p,!![]),a3p);var a3v=XX({"KWC92ef2Y9":new HR()},![],!![],a3p);(YdshJUELZK==undefined||a3p==0x0)&&(YdshJUELZK=a3v);a3v["r23ZS3L2g"]['XOVWraMIAg'](function(a3y){var aAH=aAF;a3y['material']!=undefined&&(a3y["material"]['uniforms']['squeeze']!=undefined&&(a3y['material']['uniforms']['squeeze']['value']=0x1,a3y['material']['uniforms']['squeeze']['afCJVYrCGK']=!![],a3y['material']["side"]=GG?usvzFuAsEB["BackSide"]:usvzFuAsE
+@1378: );}XI[a3p]=[],Kq['renderPlayer'](XX({},!![],![],a3p,!![]),a3p);var a3v=XX({"KWC92ef2Y9":new HR()},![],!![],a3p);(YdshJUELZK==undefined||a3p==0x0)&&(YdshJUELZK=a3v);a3v["r23ZS3L2g"]['XOVWraMIAg'](function(a3y){var aAH=aAF;a3y['material']!=undefined&&(a3y["material"]['uniforms']['squeeze']!=undefined&&(a3y['material']['uniforms']['squeeze']['value']=0x1,a3y['material']['uniforms']['squeeze']['afCJVYrCGK']=!![],a3y['material']["side"]=GG?usvzFuAsEB["BackSide"]:usvzFuAsEB['FrontSide']));}),a3v['gunT
+@1430: !![]),a3p);var a3v=XX({"KWC92ef2Y9":new HR()},![],!![],a3p);(YdshJUELZK==undefined||a3p==0x0)&&(YdshJUELZK=a3v);a3v["r23ZS3L2g"]['XOVWraMIAg'](function(a3y){var aAH=aAF;a3y['material']!=undefined&&(a3y["material"]['uniforms']['squeeze']!=undefined&&(a3y['material']['uniforms']['squeeze']['value']=0x1,a3y['material']['uniforms']['squeeze']['afCJVYrCGK']=!![],a3y['material']["side"]=GG?usvzFuAsEB["BackSide"]:usvzFuAsEB['FrontSide']));}),a3v['gunType']='ar',a3v["r23ZS3L2g"]['disable'](),a3v["r23ZS3
+@1482: [],a3p);(YdshJUELZK==undefined||a3p==0x0)&&(YdshJUELZK=a3v);a3v["r23ZS3L2g"]['XOVWraMIAg'](function(a3y){var aAH=aAF;a3y['material']!=undefined&&(a3y["material"]['uniforms']['squeeze']!=undefined&&(a3y['material']['uniforms']['squeeze']['value']=0x1,a3y['material']['uniforms']['squeeze']['afCJVYrCGK']=!![],a3y['material']["side"]=GG?usvzFuAsEB["BackSide"]:usvzFuAsEB['FrontSide']));}),a3v['gunType']='ar',a3v["r23ZS3L2g"]['disable'](),a3v["r23ZS3L2g"]["scale"]["CNFryyAhIm"](0.014),a3v["r23ZS3L2g"]
+@1540: );a3v["r23ZS3L2g"]['XOVWraMIAg'](function(a3y){var aAH=aAF;a3y['material']!=undefined&&(a3y["material"]['uniforms']['squeeze']!=undefined&&(a3y['material']['uniforms']['squeeze']['value']=0x1,a3y['material']['uniforms']['squeeze']['afCJVYrCGK']=!![],a3y['material']["side"]=GG?usvzFuAsEB["BackSide"]:usvzFuAsEB['FrontSide']));}),a3v['gunType']='ar',a3v["r23ZS3L2g"]['disable'](),a3v["r23ZS3L2g"]["scale"]["CNFryyAhIm"](0.014),a3v["r23ZS3L2g"][RY]['y']=Math['PI'],a3v["r23ZS3L2g"]["position"]['y']-=0.
+==============================================================================
+END slice-32: propose EVERY binding above.

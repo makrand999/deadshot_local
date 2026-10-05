@@ -1,0 +1,223 @@
+{
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @597639 eliminateHole(hole,outerNode) param; 2 refs bridging/filtering outer ring node; readable earcut-domain name.",
+      "name": "outerNode",
+      "selector": "outerNode@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @621892 RingBufferGeometry(innerRadius,outerRadius,...) param; 6 refs (radiusStep, UV normalize); canonical three.js Ring API name.",
+      "name": "outerRadius",
+      "selector": "outerRadius@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @623736 RingGeometry(innerRadius,outerRadius,...) param; 2 refs forwarding to RingBufferGeometry; canonical three.js Ring API name.",
+      "name": "outerRadius",
+      "selector": "outerRadius@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @777944 createPath glyph outline var; 16 refs indexing outline[i] for moveTo/lineTo/curve path ops; already-readable font-domain term.",
+      "name": "outline",
+      "selector": "outline@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @978 Object.assign polyfill var output=Object(target); 2 refs copying nextKey props; idiomatic accumulator name.",
+      "name": "output",
+      "selector": "output@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @24951 Texture.toJSON output object; 3 refs (image uuid, meta cache, return); idiomatic serializer name.",
+      "name": "output",
+      "selector": "output@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @102184 Object3D.toJSON output object; 10 refs attaching geometries/materials/textures/object; idiomatic serializer name.",
+      "name": "output",
+      "selector": "output@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @872550 saved renderer outputEncoding var; 1 ref restoring qIySEZgti.outputEncoding after PMREM cube render; well-known engine term.",
+      "name": "outputEncoding",
+      "selector": "outputEncoding@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @876903 PMREM blur var outputSize=_sizeLods[lodOut]; 4 refs computing blur viewport x/y; already-readable.",
+      "name": "outputSize",
+      "selector": "outputSize@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @871217 PMREM method param outputTarget; 4 refs selecting ping-pong vs cubeUV render target; already-readable.",
+      "name": "outputTarget",
+      "selector": "outputTarget@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @507590 renderObjects local overrideMaterial; 2 refs choosing override vs object material; canonical Scene/render term.",
+      "name": "overrideMaterial",
+      "selector": "overrideMaterial@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @64298 satForAxes var p0=v0.dot(_testAxis); 2 refs in max/min SAT overlap test; symmetric math temp with sibling p1/p2 in same scope — renaming one breaks the trio.",
+      "name": "p0",
+      "selector": "p0@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @194191 Frustum(p0,p1,p2,p3,p4,p5) ctor param; 2 refs defaulting planes[0]; positional plane param symmetric with p1-p5 siblings; hub has no finer canonical name.",
+      "name": "p0",
+      "selector": "p0@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @194458 Frustum.set(p0,p1,p2,p3,p4,p5) param; 1 ref planes[0].copy(p0); positional plane param symmetric with p1-p5 siblings.",
+      "name": "p0",
+      "selector": "p0@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @619217 ParametricBufferGeometry var p0=new Vector3; 8 refs as func(u,v,p0) sample point; symmetric temp with sibling p1/pu/pv in same scope.",
+      "name": "p0",
+      "selector": "p0@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @705664 CatmullRomCurve3.getPoint var p0=points[(intPoint-1)%l]; 9 refs (p0.x/y/z into initCatmullRom/initNonuniform); canonical control-point name symmetric with sibling p1/p2/p3.",
+      "name": "p0",
+      "selector": "p0@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @707667 CatmullRom(t,p0,p1,p2,p3) param; 1 ref v0=(p2-p0)*0.5; canonical spline control-point param symmetric with p1/p2/p3 siblings.",
+      "name": "p0",
+      "selector": "p0@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @707982 QuadraticBezier(t,p0,p1,p2) param; 1 ref QuadraticBezierP0(t,p0); canonical bezier control-point param symmetric with p1/p2 siblings.",
+      "name": "p0",
+      "selector": "p0@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @708299 CubicBezier(t,p0,p1,p2,p3) param; 1 ref CubicBezierP0(t,p0); canonical bezier control-point param symmetric with p1/p2/p3 siblings.",
+      "name": "p0",
+      "selector": "p0@u0020#7"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @716589 SplineCurve.getPoint var p0=points[intPoint-1]; 2 refs feeding CatmullRom(weight,p0.x,...) per axis; canonical control-point name with sibling p1/p2/p3.",
+      "name": "p0",
+      "selector": "p0@u0020#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @95123 translateOnAxis(axis,pLBXqJSbPlZ) param; 1 ref _v1.multiplyScalar(pLBXqJSbPlZ); three.js translateOnAxis(axis,distance) scalar — 'distance' taken so travelDistance.",
+      "name": "travelDistance",
+      "selector": "pLBXqJSbPlZ@u0020#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @95281 translateX(pLBXqJSbPlZ) param; 1 ref forwarded to translateOnAxis(_xAxis,·); X-axis travel scalar; sibling scope has no moveDistance.",
+      "name": "moveDistance",
+      "selector": "pLBXqJSbPlZ@u0020#1"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @95375 translateY(pLBXqJSbPlZ) param; 1 ref forwarded to translateOnAxis(_yAxis,·); Y-axis travel scalar; sibling scope has no shiftDistance.",
+      "name": "shiftDistance",
+      "selector": "pLBXqJSbPlZ@u0020#2"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @95469 translateZ(pLBXqJSbPlZ) param; 1 ref forwarded to translateOnAxis(_zAxis,·); Z-axis travel scalar; sibling scope has no stepDistance.",
+      "name": "stepDistance",
+      "selector": "pLBXqJSbPlZ@u0020#3"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @175195 checkIntersection var =ray.origin.distanceTo(_intersectionPointWorld); 3 refs (near/far guard + returned intersection record field); ray-hit distance.",
+      "name": "intersectionDistance",
+      "selector": "pLBXqJSbPlZ@u0020#4"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @196219 Frustum.intersectsSphere var =planes[i].distanceToPoint(center); 1 ref compared to negRadius; signed plane-to-center distance.",
+      "name": "planeDistance",
+      "selector": "pLBXqJSbPlZ@u0020#5"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @400032 WebGLLights var =light.pLBXqJSbPlZ; 1 ref _uniforms.pLBXqJSbPlZ=·; three.js Light.distance cutoff (property slots untouched).",
+      "name": "lightDistance",
+      "selector": "pLBXqJSbPlZ@u0020#6"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @465821 XRHand var =indexTip.position.distanceTo(thumbTip.position); 2 refs vs distanceToPinch±threshold driving pinchend/pinchstart; fingertip gap.",
+      "name": "pinchDistance",
+      "selector": "pLBXqJSbPlZ@u0020#7"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @532446 Sprite raycast var =ray.origin.distanceTo(_intersectPoint); 3 refs (near/far guard + pushed intersection record field); sprite ray-hit distance.",
+      "name": "spriteHitDistance",
+      "selector": "pLBXqJSbPlZ@u0020#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @534042 LOD.addLevel(object,pLBXqJSbPlZ) param; 6 refs (default 0, Math.abs, sorted splice by distance); hub-confirmed LOD level distance threshold.",
+      "name": "levelDistance",
+      "selector": "pLBXqJSbPlZ@u0020#9"
+    }
+  ],
+  "slice": "05",
+  "stats": {
+    "total": 30,
+    "rename": 10,
+    "keep": 20,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

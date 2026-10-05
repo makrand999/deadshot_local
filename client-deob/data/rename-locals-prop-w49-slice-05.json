@@ -1,0 +1,222 @@
+{
+ "meta": {
+  "wave": 49,
+  "slice": "05",
+  "mergedFrom": [
+   "05a",
+   "05b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 filter body reads a3i['faces'][a3j] and a3i['faceVertexUvs']; SERVED side shows the same a3i['faces'][a3j] access with only string-key obfuscation shifted.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 SERVED DECL both show filter:function(a3i,a3j,a3k) with a3l=a3i['faces'][a3j]; same geometry-object role on both sides.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED filter bodies both bind the face via a3l=a3i['faces'][a3j]; identical geometry-holder role on both sides.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3l=a3i['faces'][a3j] and SERVED a3l=a3i[apQ(0xd8a)][a3j] (obfuscated 'faces' key); same geometry object on both sides.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both VM9 and SERVED filter bodies read a3i['faces'][a3j] to fetch the face; geometry-holder role confirmed on both sides.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 uses a3j as the faces subscript (a3i['faces'][a3j], faceVertexUvs[0][a3j][0]); SERVED preserves a3i[..][a3j] indexing on both DECL and USES.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED both index faces with a3j (a3l=a3i['faces'][a3j]); face-index role identical on both sides.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3i['faces'][a3j] and SERVED a3i['faces'][a3j] with guard on a3k[a3l[..]]; a3j is the face subscript on both sides.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides bind the current face through a3i[faces-key][a3j]; a3j is consistently the face index on VM9 and SERVED.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED filter bodies both use a3j solely as the faces-array subscript; role agrees on both sides.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 repeatedly calls a3k[a3m]['indexOf']('<MaterialName>') with a3m=materialIndex; SERVED shows identical a3k[a3m]['indexOf'] texture/material checks.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3k[a3l['materialIndex']]['indexOf']('Barrel'/'Machines'/...) and SERVED a3k[a3l[..]]['indexOf'](..) with obfuscated keys; material-name list on both sides.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 checks a3k[materialIndex].indexOf('Coloredmetalpipe'/'glass'/...) and SERVED mirrors the same a3k[..].indexOf material probes; role matches.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 loops a3k[a3m]['indexOf'](a3n[a3o]) over foliage material names; SERVED keeps the same try{indexOf} loop over material names.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED both iterate material-name probes (a3k[a3m]['indexOf']('Grass'/'Flag'/...)) to set collision/skip flags; same list role.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 binds a3l=a3i[\"faces\"][a3j] then reads/writes vertexColors, materialIndex, collision and skip; SERVED shows the same a3i[faces-key][a3j] face fetch with identical flag writes.",
+   "name": "face",
+   "selector": "a3l@u1709#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3l=a3i['faces'][a3j] with vertexColors/collision probes per material; SERVED mirrors the same faces-subscript fetch and collision writes with only key obfuscation shifted.",
+   "name": "face",
+   "selector": "a3l@u1709#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 fetches a3l=a3i['faces'][a3j], guards on materialIndex, and toggles collision/skip flags; SERVED keeps the identical face-fetch plus flag-toggle shape.",
+   "name": "face",
+   "selector": "a3l@u1709#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3l=a3i[\"faces\"][a3j] drives vertexColors indexOf comparisons that set collision/skip; SERVED shows the same faces-indexed face with matching flag writes.",
+   "name": "face",
+   "selector": "a3l@u1709#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 binds a3l=a3i['faces'][a3j] and unconditionally clears its collision flag after the probe loop; SERVED preserves the same faces-subscript face binding.",
+   "name": "face",
+   "selector": "a3l@u1709#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3m=a3l[\"materialIndex\"] with oldMaterialIndex fallback, used as the a3k[a3m] subscript; SERVED shows the same materialIndex-with-fallback subscript on both DECL and USES.",
+   "name": "faceMaterialIndex",
+   "selector": "a3m@u1709#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 assigns a3m=a3k[materialIndex]['indexOf']('Barrel'/'Machines'/'Beams'/...) and compares it against the vertex-color slot; SERVED repeats the same per-material indexOf-then-compare pattern.",
+   "name": "matchedTextureIndex",
+   "selector": "a3m@u1709#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 reassigns a3m=a3k[materialIndex]['indexOf'](...) per texture ('Coloredmetalpipe', 'redmetal', 'glass', ...) for vertex-color equality tests; SERVED mirrors the same repeated indexOf probes.",
+   "name": "matchedTextureIndex",
+   "selector": "a3m@u1709#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3m=a3l['materialIndex'] with oldMaterialIndex fallback feeds every a3k[a3m]['indexOf'] probe; SERVED keeps the identical fallback-then-subscript role.",
+   "name": "faceMaterialIndex",
+   "selector": "a3m@u1709#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3m=a3l[\"materialIndex\"] with oldMaterialIndex fallback is the a3k[a3m] subscript for the Asphalt probe; SERVED preserves the same fallback material-index subscript.",
+   "name": "faceMaterialIndex",
+   "selector": "a3m@u1709#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 assigns a3n=a3k[a3m]['indexOf']('TextureAtlas'/...) per material and compares against the vertex-color slot; SERVED repeats the same indexOf-result-then-compare role.",
+   "name": "matchedTextureIndex",
+   "selector": "a3n@u1709#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 declares a3n as a foliage/prop material-name array looped via a3k[a3m]['indexOf'] to clear collision (and skip some); SERVED keeps the same name-list loop with matching flag writes.",
+   "name": "noCollisionTextures",
+   "selector": "a3n@u1709#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3n=['Wood','Bush2','Bush3','Material'] is looped with indexOf probes that clear the face collision flag; SERVED shows the same short name-list loop clearing collision.",
+   "name": "noCollisionTextures",
+   "selector": "a3n@u1709#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3n=[\"Asphalt\"] is looped via indexOf to clear collision before the unconditional collision reset; SERVED preserves the same single-entry probe-list loop.",
+   "name": "noCollisionTextures",
+   "selector": "a3n@u1709#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 a3n is a long material-name array probed via indexOf to clear collision/skip most entries but re-enable collision for CaveWall/CaveFloor; SERVED keeps the same probe-list with the same mixed flag writes.",
+   "name": "collisionProbeNames",
+   "selector": "a3n@u1709#4"
+  }
+ ]
+}

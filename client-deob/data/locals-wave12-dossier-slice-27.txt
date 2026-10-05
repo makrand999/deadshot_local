@@ -1,0 +1,63 @@
+# DOSSIER slice-27 (wave 12, 10 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/10] BasisFile@u0045#0 | kind=var depth=9 refCount=1 | engine/webgl-renderer.js
+DECL @821 (verified):
+nary);break;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/10] _BasisFile@u0045#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @90 (verified):
+usvzFuAsEB.BasisTextureLoader.BasisWorker=function(){var config;var transcoderPending;var _BasisFile;onmessage=function(e){var message=e.data;switch(message.type){case'init':config=message.config;init(message.transcoderBinary);break;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',i[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 2 nearest outside DECL window:
+@860: id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var basisFile=new _BasisFile(new Uint8Array(buffer));var width=basisFile.getImageWidth(0,0);var height=basisFile.getImageHeight(0,0);var levels=basisFile.getNumLevels(0);var hasAlp
+@948: erPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var basisFile=new _BasisFile(new Uint8Array(buffer));var width=basisFile.getImageWidth(0,0);var height=basisFile.getImageHeight(0,0);var levels=basisFile.getNumLevels(0);var hasAlpha=basisFile.getHasAlpha();function cleanup(){basisFile.close();basisFile.delete();}if(!
+==============================================================================
+[3/10] basisFile@u0045#0 | kind=var depth=7 refCount=11 | engine/webgl-renderer.js
+DECL @934 (verified):
+message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var [...line truncated...]
+USES: refCount=11, 12 token-occurrences in unit, showing 4 nearest outside DECL window:
+@1566: row new Error('usvzFuAsEB.BasisTextureLoader:\tInvalid .basis file');}if(!basisFile.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){clea
+@1611: \tInvalid .basis file');}if(!basisFile.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextur
+@1666: ()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .transcodeImage failed.');}mipmaps.push({data:
+@1739: coding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .transcodeImage failed.');}mipmaps.push({data:dst,width:mipWidth,height:mipHeight});}cleanup();return{width,height,hasA
+==============================================================================
+[4/10] initializeBasis@u0045#0 | kind=var depth=9 refCount=1 | engine/webgl-renderer.js
+DECL @831 (verified):
+k;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/10] textureID@u0026#0 | kind=param depth=5 refCount=2 | engine/shaders.js
+DECL @38 (verified):
+usvzFuAsEB.ShaderPass=function(shader,textureID){usvzFuAsEB.Pass.call(this);this.textureID=textureID!==undefined?textureID:'tDiffuse';if(shader instanceof usvzFuAsEB.wPChizNknM){this.uniforms=shader.uniforms;this.material=shader;}else if(shader){this.uniforms=usvzFuAsEB.UniformsUtils.clone(shader.uniforms);this.material=new usvzFuAsEB.wPChizNknM({defines:Object.assign({},shader.defines),uniforms:this.uniforms,vertexShader:shader.vertexShader,fragmentShader:shader.fragmentShader});}this.fsQuad=new usvzFuAsEB.Pass.FullScreenQuad(this.material);};
+USES: refCount=2, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/10] Sl@u2321#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @13 (verified):
+var Si,Sj,Sk,Sl,Sm,Sn=NJ([-0x6a,-0x65,-0x6b,-0x59,-0x5e,-0x69,-0x6a,-0x57,-0x68,-0x6a]),So=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/10] Sm@u2321#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @16 (verified):
+var Si,Sj,Sk,Sl,Sm,Sn=NJ([-0x6a,-0x65,-0x6b,-0x59,-0x5e,-0x69,-0x6a,-0x57,-0x68,-0x6a]),So=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/10] KF@u2066#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @64 (verified):
+var Kv=![],Kw=![],Kx=0.3,Ky=0.3,Kz=0.3,KA=![],KB=[],KC=[],KD,KE,KF=![],KG=![],KH=[],KI={},KJ={},KK={},KL=[],KM=0x0,KN=0x0,KO=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/10] Uy@u2455#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @10 (verified):
+if(Pb)var Uy=0x11;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/10] a0K@u2785#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var a0K=![],a0L=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-27: propose EVERY binding above.

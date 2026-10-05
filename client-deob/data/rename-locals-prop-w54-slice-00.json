@@ -1,0 +1,462 @@
+{
+ "meta": {
+  "wave": 54,
+  "slice": "00",
+  "mergedFrom": [
+   "00a",
+   "00b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "write-only sentinel stores never read anywhere",
+   "selector": "a3z@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "write-only latch set never read",
+   "selector": "a42@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "write-only latch set never read",
+   "selector": "a43@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: OR of forward strafe input drives movement bloom; SERVED: OR of forward strafe input drives movement bloom (snippet-only twin).",
+   "name": "anyMoveInput",
+   "selector": "a46@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: set with collision bounds gates position pushout apply; SERVED: set with collision bounds gates position pushout apply (snippet-only twin).",
+   "name": "wallPushFlag",
+   "selector": "a47@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: set with collision bounds gates velocity damping; SERVED: set with collision bounds gates velocity damping (snippet-only twin).",
+   "name": "wallDampFlag",
+   "selector": "a48@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: latches ground contact drives grounded rampNormal updates; SERVED: latches ground contact drives grounded rampNormal updates (snippet-only twin).",
+   "name": "groundHitFlag",
+   "selector": "a49@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: vertical lift offset plus penetration depth threshold; SERVED: vertical lift offset plus penetration depth threshold (snippet-only twin).",
+   "name": "collideStepHeight",
+   "selector": "a4A@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: hop-chain speed base overwritten slide default; SERVED: hop-chain speed base overwritten slide default (snippet-only twin).",
+   "name": "hopSpeedBase",
+   "selector": "a4B@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: crouch height cut plus uncrouch probe offset; SERVED: crouch height cut plus uncrouch probe offset (snippet-only twin).",
+   "name": "crouchHeadroomDrop",
+   "selector": "a4C@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount zero never used",
+   "selector": "a4D@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: vertical penetration gate plus probe radius scale; SERVED: vertical penetration gate plus probe radius scale (snippet-only twin).",
+   "name": "penetrationDepthLimit",
+   "selector": "a4E@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: default collider radius broadphase narrowphase slide default; SERVED: default collider radius broadphase narrowphase slide default (snippet-only twin).",
+   "name": "playerCollideRadius",
+   "selector": "a4F@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: halves wall pushout plus alternate slide factor; SERVED: halves wall pushout plus alternate slide factor (snippet-only twin).",
+   "name": "pushoutDampFactor",
+   "selector": "a4G@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: grounded slide vertical velocity versus jump velocity; SERVED: grounded slide vertical velocity versus jump velocity (snippet-only twin).",
+   "name": "slideRiseVelocity",
+   "selector": "a4H@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: broadphase top narrow check scoped speed damp; SERVED: broadphase top narrow check scoped speed damp (snippet-only twin).",
+   "name": "upperHeightBound",
+   "selector": "a4I@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: hop slide scaling plus rise clamp factor; SERVED: hop slide scaling plus rise clamp factor (snippet-only twin).",
+   "name": "moveSpeedScale",
+   "selector": "a4J@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: alternate radius box bottom alternate slide factor; SERVED: alternate radius box bottom alternate slide factor (snippet-only twin).",
+   "name": "altCollideRadius",
+   "selector": "a4K@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: high-speed two-substep trigger scale; SERVED: high-speed two-substep trigger scale (snippet-only twin).",
+   "name": "substepSpeedThreshold",
+   "selector": "a4L@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slide duration ticks start window progress fraction; SERVED: slide duration ticks start window progress fraction (snippet-only twin).",
+   "name": "slideTickMax",
+   "selector": "a4M@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: boolean sphere-versus-mesh headroom query; SERVED: boolean sphere-versus-mesh headroom query (snippet-only twin).",
+   "name": "meshProximityProbe",
+   "selector": "a4N@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inter-player pushout direction scratch vector; SERVED: inter-player pushout direction scratch vector (snippet-only twin).",
+   "name": "playerShoveDir",
+   "selector": "a4Y@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scratch other-player position wrapper; SERVED: scratch other-player position wrapper (snippet-only twin).",
+   "name": "peerPosHolder",
+   "selector": "a4Z@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sin table fill plus pool preallocate counter; SERVED: sin table fill plus pool preallocate counter (snippet-only twin).",
+   "name": "initLoopIndex",
+   "selector": "a4h@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: grid cell size feeds reciprocal sibling; SERVED: grid cell size feeds reciprocal sibling (snippet-only twin).",
+   "name": "cellSize",
+   "selector": "a4i@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: world-to-cell scale in traversal plus clamp; SERVED: world-to-cell scale in traversal plus clamp (snippet-only twin).",
+   "name": "recipCellSize",
+   "selector": "a4j@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clamps scales floors position to cell; SERVED: clamps scales floors position to cell (snippet-only twin).",
+   "name": "worldToCell",
+   "selector": "a4k@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: builds verts edges plus edge updater; SERVED: builds verts edges plus edge updater (snippet-only twin).",
+   "name": "triScratchFactory",
+   "selector": "a4l@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shared face triangle for closest-point queries; SERVED: shared face triangle for closest-point queries (snippet-only twin).",
+   "name": "scratchTri",
+   "selector": "a4m@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: degenerate dot-product guard threshold; SERVED: degenerate dot-product guard threshold (snippet-only twin).",
+   "name": "epsilonTolerance",
+   "selector": "a4n@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: point-minus-vertex-a scratch in closest-point; SERVED: point-minus-vertex-a scratch in closest-point (snippet-only twin).",
+   "name": "pointMinusA",
+   "selector": "a4o@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: point-minus-vertex-b scratch in closest-point; SERVED: point-minus-vertex-b scratch in closest-point (snippet-only twin).",
+   "name": "pointMinusB",
+   "selector": "a4p@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: point-minus-c plus closest-point accumulator; SERVED: point-minus-c plus closest-point accumulator (snippet-only twin).",
+   "name": "closestPointScratch",
+   "selector": "a4q@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Barycentric closest point on triangle from probe; SERVED: Barycentric closest point on triangle from probe (snippet-only twin).",
+   "name": "closestPointOnTriangle",
+   "selector": "a4r@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Scratch vector holds segment params plus distance; SERVED: Scratch vector holds segment params plus distance (snippet-only twin).",
+   "name": "segClosestParams",
+   "selector": "a4s@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Barycentric edge test returns triangle containment boolean; SERVED: Barycentric edge test returns triangle containment boolean (snippet-only twin).",
+   "name": "isPointInTriangle",
+   "selector": "a4t@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Reusable face plane struct assigned into a4d; SERVED: Reusable face plane struct assigned into a4d (snippet-only twin).",
+   "name": "sharedFacePlane",
+   "selector": "a4u@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Default speed constant assigned to movement accumulator; SERVED: Default speed constant assigned to movement accumulator (snippet-only twin).",
+   "name": "walkBaseSpeed",
+   "selector": "a4v@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Slower speed when aiming flag set; SERVED: Slower speed when aiming flag set (snippet-only twin).",
+   "name": "aimedStillSpeed",
+   "selector": "a4w@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Speed multiplier while aiming and moving; SERVED: Speed multiplier while aiming and moving (snippet-only twin).",
+   "name": "aimedMoveMultiplier",
+   "selector": "a4x@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Speed factor applied for weapon type two; SERVED: Speed factor applied for weapon type two (snippet-only twin).",
+   "name": "weaponTypeSpeedMult",
+   "selector": "a4y@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Global movement speed scale factor; SERVED: Global movement speed scale factor (snippet-only twin).",
+   "name": "moveSpeedScale2",
+   "selector": "a4z@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Object3D child prepended into children array; SERVED: Object3D child prepended into children array (snippet-only twin).",
+   "name": "childObject",
+   "selector": "a55@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Target object receiving xyz components; SERVED: Target object receiving xyz components (snippet-only twin).",
+   "name": "copyIntoTarget",
+   "selector": "a55@u1970#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Source object providing velocity components; SERVED: Source object providing velocity components (snippet-only twin).",
+   "name": "velocitySource",
+   "selector": "a55@u1970#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Target object receiving velocity components; SERVED: Target object receiving velocity components (snippet-only twin).",
+   "name": "velocityTarget",
+   "selector": "a55@u1970#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Source providing packed xyz fields; SERVED: Source providing packed xyz fields (snippet-only twin).",
+   "name": "packedCoordSource",
+   "selector": "a55@u1970#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Target receiving packed xyz fields; SERVED: Target receiving packed xyz fields (snippet-only twin).",
+   "name": "packedCoordTarget",
+   "selector": "a55@u1970#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Squared length feeding inverse-square-root normalize; SERVED: Squared length feeding inverse-square-root normalize (snippet-only twin).",
+   "name": "lenSq",
+   "selector": "a55@u1970#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Provides endPos startPos for voxel mapping; SERVED: Provides endPos startPos for voxel mapping (snippet-only twin).",
+   "name": "voxelGrid",
+   "selector": "a55@u1970#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Provides endPos startPos for voxel mapping; SERVED: Provides endPos startPos for voxel mapping (snippet-only twin).",
+   "name": "voxelGrid",
+   "selector": "a55@u1970#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Query point projected onto triangle struct; SERVED: Query point projected onto triangle struct (snippet-only twin).",
+   "name": "probePoint",
+   "selector": "a55@u1970#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Segment start subtracted from both endpoints; SERVED: Segment start subtracted from both endpoints (snippet-only twin).",
+   "name": "segStart",
+   "selector": "a55@u1970#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Test point xz in triangle containment check; SERVED: Test point xz in triangle containment check (snippet-only twin).",
+   "name": "triTestPoint",
+   "selector": "a55@u1970#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Geometry supplying faces array per index; SERVED: Geometry supplying faces array per index (snippet-only twin).",
+   "name": "faceGeometry",
+   "selector": "a55@u1970#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Level holding spatial map plus metadata; SERVED: Level holding spatial map plus metadata (snippet-only twin).",
+   "name": "levelData",
+   "selector": "a55@u1970#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: Object tested for required spatial property; SERVED: Object tested for required spatial property (snippet-only twin).",
+   "name": "spatialCandidate",
+   "selector": "a55@u1970#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Reverse loop index shifting children array; SERVED: Reverse loop index shifting children array (snippet-only twin).",
+   "name": "childIndex",
+   "selector": "a56@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Lerp endpoint vector blended toward; SERVED: Lerp endpoint vector blended toward (snippet-only twin).",
+   "name": "lerpTarget",
+   "selector": "a56@u1970#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Source point copied into output vector; SERVED: Source point copied into output vector (snippet-only twin).",
+   "name": "sourcePoint",
+   "selector": "a56@u1970#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Signed triangle area bounding sub-area tests; SERVED: Signed triangle area bounding sub-area tests (snippet-only twin).",
+   "name": "signedArea",
+   "selector": "a59@u1970#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Pass count doubled on teleport condition; SERVED: Pass count doubled on teleport condition (snippet-only twin).",
+   "name": "simPassCount",
+   "selector": "a5J@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Flag set when position pre-adjusted; SERVED: Flag set when position pre-adjusted (snippet-only twin).",
+   "name": "positionAdjusted",
+   "selector": "a5K@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding never read",
+   "selector": "a5L@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over simulation passes; SERVED: Loop index over simulation passes (snippet-only twin).",
+   "name": "passIndex",
+   "selector": "a5M@u1970#0"
+  }
+ ]
+}

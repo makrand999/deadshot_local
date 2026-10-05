@@ -1,0 +1,223 @@
+{
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @527186 InterleavedBufferAttribute getZ(index) accessor; USES show getX/getY/getZ/getW family — idiomatic accessor name.",
+      "name": "getZ",
+      "selector": "getZ@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @665310 Interpolant evaluate scope; readable English name with clear intent — already-readable.",
+      "name": "giveUpAt",
+      "selector": "giveUpAt@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @435040 getInternalFormat param; USES pass it to texImage calls — well-known GL engine term.",
+      "name": "glFormat",
+      "selector": "glFormat@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @443000 uploadTexture: glFormat=utils.convert(texture.format); 10 USES in texImage2D/3D calls — well-known GL term.",
+      "name": "glFormat",
+      "selector": "glFormat@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @447639 setTextureCube: glFormat=utils.convert(texture.format); 7 USES in cube texImage2D — well-known GL term.",
+      "name": "glFormat",
+      "selector": "glFormat@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @449449 setupFrameBufferTexture: glFormat=utils.convert(renderTarget.texture.format); 2 USES — well-known GL term.",
+      "name": "glFormat",
+      "selector": "glFormat@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @451066 setupRenderBufferStorage: glFormat=utils.convert(renderTarget.texture.format); 1 USE — well-known GL term.",
+      "name": "glFormat",
+      "selector": "glFormat@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @454922 renderTarget setup: glFormat=utils.convert(renderTarget.texture.format); 1 USE — well-known GL term.",
+      "name": "glFormat",
+      "selector": "glFormat@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @520001 copyTextureToTexture scope; USES in texSubImage2D/compressedTexSubImage2D — well-known GL term.",
+      "name": "glFormat",
+      "selector": "glFormat@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @520347 copyFramebufferToTexture: glFormat=utils.convert(texture.format); 3 USES incl. copyTexImage2D — well-known GL term.",
+      "name": "glFormat",
+      "selector": "glFormat@u0020#7"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @382331 WebGLProgram: glFragmentShader=WebGLShader(gl,...); 5 USES incl. getShaderErrors/deleteShader — well-known GL term.",
+      "name": "glFragmentShader",
+      "selector": "glFragmentShader@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @443078 uploadTexture: glInternalFormat=getInternalFormat(...); 17 USES in texImage/depth-format fixups — well-known GL term.",
+      "name": "glInternalFormat",
+      "selector": "glInternalFormat@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @447713 setTextureCube: glInternalFormat=getInternalFormat(...); 6 USES in cube texImage2D — well-known GL term.",
+      "name": "glInternalFormat",
+      "selector": "glInternalFormat@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @449557 setupFrameBufferTexture: glInternalFormat=getInternalFormat(...); 1 USE in texImage2D — well-known GL term.",
+      "name": "glInternalFormat",
+      "selector": "glInternalFormat@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @450119 setupRenderBufferStorage: glInternalFormat=33189 depth default; 4 USES in renderbufferStorage — well-known GL term.",
+      "name": "glInternalFormat",
+      "selector": "glInternalFormat@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @455030 var glInternalFormat=getInternalFormat(...) in multisample framebuffer setup; USES x1 in renderbufferStorageMultisample — canonical WebGL internal-format local.",
+      "name": "glInternalFormat",
+      "selector": "glInternalFormat@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @435049 param glType of getInternalFormat(internalFormatName,glFormat,glType); USES x9 in format/type switch cascade — canonical WebGL texImage param name.",
+      "name": "glType",
+      "selector": "glType@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @443043 var glType=utils.convert(texture.type) in uploadTexture; USES x11 in DepthFormat fixes + texImage2D/3D calls — canonical WebGL local.",
+      "name": "glType",
+      "selector": "glType@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @447678 var glType=utils.convert(texture.type) in setTextureCube; USES x6 in cubemap texImage2D per-face uploads — canonical WebGL local.",
+      "name": "glType",
+      "selector": "glType@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @449505 var glType=utils.convert(renderTarget.texture.type) in setupFrameBufferTexture; USES x2 (getInternalFormat + texImage2D) — canonical WebGL local.",
+      "name": "glType",
+      "selector": "glType@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @451122 var glType=utils.convert(renderTarget.texture.type) in setupRenderBufferStorage; USES x1 in getInternalFormat — canonical WebGL local.",
+      "name": "glType",
+      "selector": "glType@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @454978 var glType=utils.convert(renderTarget.texture.type) in multisample renderbuffer setup; USES x1 in getInternalFormat — canonical WebGL local.",
+      "name": "glType",
+      "selector": "glType@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @520393 var glType=utils.convert(dstTexture.format...) in copyTextureToTexture; USES x2 in texSubImage2D — canonical WebGL local.",
+      "name": "glType",
+      "selector": "glType@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @423385 var glVersion in WebGLState capability init; USES x4 (version-dependent state paths) — self-descriptive GL version local.",
+      "name": "glVersion",
+      "selector": "glVersion@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @382279 var glVertexShader compiled shader handle in WebGLProgram; USES x5 (info log, error check, deleteShader, this.vertexShader) — canonical shader-handle name.",
+      "name": "glVertexShader",
+      "selector": "glVertexShader@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @341572 var globalState in WebGLClipping; USES x4 (projectPlanes dstArray copy + resetGlobalState uniform default) — self-descriptive clipping-state name.",
+      "name": "globalState",
+      "selector": "globalState@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @777699 var glyph=... in Font createPath(char,scale,offsetX,offsetY,data); USES x6 (glyph.ha advance + outline walk) — idiomatic font term.",
+      "name": "glyph",
+      "selector": "glyph@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @227659 var gradientmap_pars_fragment shader-chunk string; USES x1 + #include <gradientmap_pars_fragment> registry key — canonical three.js chunk name, must match include.",
+      "name": "gradientmap_pars_fragment",
+      "selector": "gradientmap_pars_fragment@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @628339 var grid=[] vertex-index rows in SphereBufferGeometry; USES x5 (grid.push + grid[_iy][_ix] quad triangulation) — idiomatic geometry-builder name.",
+      "name": "grid",
+      "selector": "grid@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @178810 param gridX of BoxGeometry buildPlane; USES x4 (uv ix/gridX + index a/b/c/d with gridX1) — idiomatic segment-count param.",
+      "name": "gridX",
+      "selector": "gridX@u0020#0"
+    }
+  ],
+  "slice": "07",
+  "stats": {
+    "total": 30,
+    "rename": 0,
+    "keep": 30,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

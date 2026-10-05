@@ -1,0 +1,222 @@
+{
+ "meta": {
+  "wave": 49,
+  "slice": "01",
+  "mergedFrom": [
+   "01a",
+   "01b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3P=a3z[0x6] on VM9 (@34876) and SERVED (@35082) sides, then mixes it into out[0x2]/[0x6]/[0xa]; same cached-source-element role both sides.",
+   "name": "srcElem06",
+   "selector": "a3P@u0008#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3Q=a3z[0x7] on VM9 (@34876) and SERVED (@35082) sides, then mixes it into out[0x3]/[0x7]/[0xb]; identical role both sides.",
+   "name": "srcElem07",
+   "selector": "a3Q@u0008#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3R=a3z[0x8] on VM9 (@34876) and SERVED (@35082) sides, then mixes it into out[0x0]/[0x4]/[0x8] via rot entries; identical role both sides.",
+   "name": "srcElem08",
+   "selector": "a3R@u0008#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3S=a3z[0x9] on VM9 (@34876) and SERVED (@35082) sides, then mixes it into out[0x1]/[0x5]/[0x9]; identical role both sides (rotSrcElem* spelling avoids taken srcElem09).",
+   "name": "rotSrcElem09",
+   "selector": "a3S@u0008#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "lookAt caches a3S=a3A[0x0] (center x) on VM9 (@39713) and SERVED (@39879) sides, used in eye-center coincidence tests and z-axis a3I=a3M-a3S; identical role both sides.",
+   "name": "centerVecX",
+   "selector": "a3S@u0008#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3T=a3z[0xa] on VM9 (@34889) and SERVED (@35095) sides, then mixes it into out[0x2]/[0x6]/[0xa]; identical role both sides (spelling avoids taken srcElem10).",
+   "name": "rotSrcElem10",
+   "selector": "a3T@u0008#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "lookAt caches a3T=a3A[0x1] (center y) on VM9 (@39713) and SERVED (@39892) sides, used in eye-center tests and z-axis a3J=a3N-a3T; identical role both sides.",
+   "name": "centerY",
+   "selector": "a3T@u0008#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3U=a3z[0xb] on VM9 (@34902) and SERVED (@35108) sides, then mixes it into out[0x3]/[0x7]/[0xb]; identical role both sides (spelling avoids taken srcElem11).",
+   "name": "rotSrcElem11",
+   "selector": "a3U@u0008#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "lookAt caches a3U=a3A[0x2] (center z) on VM9 (@39713) and SERVED (@39905) sides, used in eye-center tests and z-axis a3K=a3O-a3U; identical role both sides.",
+   "name": "centerZ",
+   "selector": "a3U@u0008#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate computes a3V=x*x*t+c (rotation submatrix b00) on VM9 (@34889) and SERVED (@35108) sides, consumed by out[0x0..0x3]; identical role both sides.",
+   "name": "rotEntry00",
+   "selector": "a3V@u0008#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate computes a3W=y*x*t+z*s (rotation submatrix b01) on VM9 (@34889) and SERVED (@35108) sides, consumed by out[0x0..0x3]; identical role both sides.",
+   "name": "rotEntry01",
+   "selector": "a3W@u0008#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate computes a3X=z*x*t-y*s (rotation submatrix b02) on VM9 (@34889) and SERVED (@35108) sides, consumed by out[0x0..0x3]; identical role both sides.",
+   "name": "rotEntry02",
+   "selector": "a3X@u0008#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate computes a3Y=x*y*t-z*s (rotation submatrix b10) on VM9 (@34889) and SERVED (@35108) sides, consumed by out[0x4..0x7]; identical role both sides.",
+   "name": "rotEntry10",
+   "selector": "a3Y@u0008#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "UMD factory param receives glMatrix/vec2/vec3/vec4/mat2 namespaces via guarded typeof attaches on VM9 (@312/@4633) and SERVED (@316/@4666) sides; same export-target role both sides.",
+   "name": "exportsTarget",
+   "selector": "a3k@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Module epsilon var a3l=0.000001 on VM9 (@341) and SERVED (@345) sides, used as the Math.abs(...)< a3l near-zero threshold in rotate and lookAt; identical role both sides.",
+   "name": "epsilon",
+   "selector": "a3l@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets it to Float32Array-or-Array and every create/clone/fromValues does `new a3m(n)`; SERVED DECL identical and nearest uses also `new a3m(0x2/0x3)`. Reassignable via setMatrixArrayType on both sides.",
+   "name": "matrixArrayType",
+   "selector": "a3m@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL aliases Math[\"random\"] and all uses are `a3n()` calls inside vec2/vec3/vec4 random fns; SERVED DECL aliases Math[ai4(0x4bd)] with the same random-fn call sites.",
+   "name": "matrixRandom",
+   "selector": "a3n@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL window shows setMatrixArrayType/toRadian attached and export `a3k[\"glMatrix\"]=a3o`; SERVED window shows the same attachments and export via ai4(0xe1e). Core glMatrix namespace object.",
+   "name": "glMatrix",
+   "selector": "a3o@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL is Math['PI']/0xb4 and toRadian returns `a3y*a3p`; SERVED DECL identical with toRadian `return a3y*a3p`. Degrees-to-radians multiplier on both sides.",
+   "name": "degToRadFactor",
+   "selector": "a3p@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 attaches vec2 ops (add/subtract/multiply/divide/min/max) and exports `a3k['vec2']=a3q` with str 'vec2(...)'; SERVED shows the same op attachments and vec2 export.",
+   "name": "vec2",
+   "selector": "a3q@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 attaches 3-component ops (create/clone use `new a3m(0x3)`) and exports `a3k['vec3']=a3r` with str 'vec3(...)'; SERVED shows the same 3-wide ops and vec3 export.",
+   "name": "vec3",
+   "selector": "a3r@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 attaches transpose/invert/adjoint/determinant/multiply/rotate/scale over 4 elements with str 'mat2(...' and export `a3k[\"mat2\"]=a3t`; SERVED shows the same mat2 method set.",
+   "name": "mat2",
+   "selector": "a3t@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 attaches create/clone/copy/identity/invert/determinant/multiply/rotate/scale/translate over 6 elements with str 'mat2d(...'; SERVED DECL/uses show the same 6-element mat2d method set.",
+   "name": "mat2d",
+   "selector": "a3u@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 create uses `new a3m(0x10)` with 16-element identity/transpose/invert/adjoint/determinant/multiply and export `a3k['mat4']=a3w`; SERVED shows the same 16-wide mat4 method set.",
+   "name": "mat4",
+   "selector": "a3w@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 create returns [0,0,0,1] with rotationTo/setAxes/setAxisAngle/fromMat3 and clone/copy/set aliased from vec4; SERVED shows the same quaternion API and vec4 aliases.",
+   "name": "quat",
+   "selector": "a3x@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 sole param of setMatrixArrayType, body assigns it to the array-type var (`a3m=a3y`); SERVED DECL shows the identical setter shape. Replacement array constructor.",
+   "name": "newArrayType",
+   "selector": "a3y@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 sole param of toRadian, body returns `a3y*a3p` (times PI/180); SERVED DECL shows the same `return a3y*a3p`. Angle in degrees on both sides.",
+   "name": "degreesInput",
+   "selector": "a3y@u0008#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 local in vec2 create: `new a3m(0x2)`, zeroed and returned; SERVED DECL window shows the same `new a3m(0x2)` zero-init-and-return shape. Fresh vec2 instance.",
+   "name": "newVec2",
+   "selector": "a3y@u0008#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 param of vec2 clone copied element-wise into a fresh `new a3m(0x2)`; SERVED clone shows the same copy-from-param shape. Source vector being cloned.",
+   "name": "vecToClone",
+   "selector": "a3y@u0008#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 first param of vec2 fromValues stored at index 0 (`a3A[0x0]=a3y`); SERVED fromValues shows the same index-0 store. X component value.",
+   "name": "xValue",
+   "selector": "a3y@u0008#5"
+  }
+ ]
+}

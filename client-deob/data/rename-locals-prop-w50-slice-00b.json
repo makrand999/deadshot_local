@@ -1,0 +1,230 @@
+{
+ "meta": {
+  "slice": "00b",
+  "wave": 50
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter resetting shader uniforms each entry; SERVED: loop counter resetting shader uniforms each entry (snippet-only twin).",
+   "name": "shaderIdx",
+   "selector": "ahl@u2151#17"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: negative half-width origin positioning progress bar; SERVED: negative half-width origin positioning progress bar (snippet-only twin).",
+   "name": "barOriginX",
+   "selector": "ahl@u2151#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: stashed glow intensity across particle transform math; SERVED: stashed glow intensity across particle transform math (snippet-only twin).",
+   "name": "savedGlow",
+   "selector": "ahl@u2151#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rounded rank points delta shown green/red; SERVED: rounded rank points delta shown green/red (snippet-only twin).",
+   "name": "rankDelta",
+   "selector": "ahl@u2151#21"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Score column descriptor in sections table; SERVED: Score column descriptor in sections table (snippet-only twin).",
+   "name": "scoreColumn",
+   "selector": "ahl@u2151#22"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over sections rows in scoreboard; SERVED: loop index over sections rows in scoreboard (snippet-only twin).",
+   "name": "rowIdx",
+   "selector": "ahl@u2151#23"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vertical offset aligning event reward icons; SERVED: vertical offset aligning event reward icons (snippet-only twin).",
+   "name": "iconOffsetY",
+   "selector": "ahm@u2151#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Both sides show dead callback param never read (ahm@u2151#1).",
+   "selector": "ahm@u2151#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Both sides show dead callback param never read (ahm@u2151#2).",
+   "selector": "ahm@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: canvas client width driving orthographic frustum; SERVED: canvas client width driving orthographic frustum (snippet-only twin).",
+   "name": "canvasWidth2",
+   "selector": "ahm@u2151#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: normalized crosshair alpha passed to setColor; SERVED: normalized crosshair alpha passed to setColor (snippet-only twin).",
+   "name": "xhairAlpha",
+   "selector": "ahm@u2151#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: parent re-adding item to front z-order; SERVED: parent re-adding item to front z-order (snippet-only twin).",
+   "name": "itemParent",
+   "selector": "ahm@u2151#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Object keys of material uniforms iterated; SERVED: Object keys of material uniforms iterated (snippet-only twin).",
+   "name": "uniformKeys",
+   "selector": "ahm@u2151#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: skin key honoring useLink override mapping; SERVED: skin key honoring useLink override mapping (snippet-only twin).",
+   "name": "resolvedSkinKey",
+   "selector": "ahm@u2151#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: side gradient image width constant 0x82; SERVED: side gradient image width constant 0x82 (snippet-only twin).",
+   "name": "gradientWidth",
+   "selector": "ahm@u2151#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: leaderboard name text label pushed aev; SERVED: leaderboard name text label pushed aev (snippet-only twin).",
+   "name": "nameLabel",
+   "selector": "ahm@u2151#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: page-size times page index offset; SERVED: page-size times page index offset (snippet-only twin).",
+   "name": "pageOffset",
+   "selector": "ahm@u2151#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slide distance in panel transition tweens; SERVED: slide distance in panel transition tweens (snippet-only twin).",
+   "name": "slideDist",
+   "selector": "ahm@u2151#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shader entry with uniforms reset; SERVED: shader entry with uniforms reset (snippet-only twin).",
+   "name": "shaderEntry",
+   "selector": "ahm@u2151#17"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cosine x offset positioning rank particle; SERVED: cosine x offset positioning rank particle (snippet-only twin).",
+   "name": "particleX",
+   "selector": "ahm@u2151#18"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: animation delay base for rank tweens; SERVED: animation delay base for rank tweens (snippet-only twin).",
+   "name": "rankAnimDelay",
+   "selector": "ahm@u2151#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: K kills column descriptor in sections; SERVED: K kills column descriptor in sections (snippet-only twin).",
+   "name": "killsColumn",
+   "selector": "ahm@u2151#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: column descriptor in scoreboard render loops; SERVED: column descriptor in scoreboard render loops (snippet-only twin).",
+   "name": "columnDef",
+   "selector": "ahm@u2151#21"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: computed old-rank progress passed agx; SERVED: computed old-rank progress passed agx (snippet-only twin).",
+   "name": "oldRankValue",
+   "selector": "ahn@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: canvas client height driving orthographic frustum; SERVED: canvas client height driving orthographic frustum (snippet-only twin).",
+   "name": "canvasHeight2",
+   "selector": "ahn@u2151#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: combined rgb crosshair color passed setColor; SERVED: combined rgb crosshair color passed setColor (snippet-only twin).",
+   "name": "xhairColor",
+   "selector": "ahn@u2151#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: press-scale config assigned to button element; SERVED: press-scale config assigned to button element (snippet-only twin).",
+   "name": "pressScale",
+   "selector": "ahn@u2151#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: side gradient image reused left mirrored; SERVED: side gradient image reused left mirrored (snippet-only twin).",
+   "name": "gradientImg",
+   "selector": "ahn@u2151#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: leaderboard value text label pushed aew; SERVED: leaderboard value text label pushed aew (snippet-only twin).",
+   "name": "valueLabel",
+   "selector": "ahn@u2151#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: direction sign multiplying slide tween distance; SERVED: direction sign multiplying slide tween distance (snippet-only twin).",
+   "name": "slideDir",
+   "selector": "ahn@u2151#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: canvas style shown with opacity tween; SERVED: canvas style shown with opacity tween (snippet-only twin).",
+   "name": "canvasStyle",
+   "selector": "ahn@u2151#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sine y offset positioning rank particle; SERVED: sine y offset positioning rank particle (snippet-only twin).",
+   "name": "particleY",
+   "selector": "ahn@u2151#12"
+  }
+ ]
+}

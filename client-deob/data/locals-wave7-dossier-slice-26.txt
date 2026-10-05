@@ -1,0 +1,139 @@
+# DOSSIER slice-26 (wave 7, 22 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/22] pixelHeight@u0046#0 | kind=const depth=8 refCount=2 | engine/assets-draco.js
+DECL @59224 (verified):
+result;}};var FORMAT_MAP={[Ae]:RGBAFormat,[pe]:RGBAFormat,[Ot]:RGBAFormat,[Ft]:RGBAFormat,[de]:RGFormat,[se]:RGFormat,[yt]:RGFormat,[dt]:RGFormat,[xe]:RedFormat,[$t]:RedFormat,[gt]:RedFormat,[ct]:RedFormat};var TYPE_MAP={[Ae]:FloatType,[pe]:HalfFloatType,[Ot]:UnsignedByteType,[Ft]:UnsignedByteType,[de]:FloatType,[se]:HalfFloatType,[yt]:UnsignedByteType,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {vkFormat,pixelWidth,[...line truncated...]
+USES: refCount=2, 5 token-occurrences in unit, showing 4 nearest outside DECL window:
+@60175: R_ELEMENT);}else if(TYPE_MAP[vkFormat]===HalfFloatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture)
+@60222: oatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loader_exports);})())
+@5607: e[10]!==Ti[10]||e[11]!==Ti[11])throw new Error('Missing KTX 2.0 identifier.');const n2=new Si(),i=17*Uint32Array.BYTES_PER_ELEMENT,s=new Ii(t2,Ti.length,i,true);n2.vkFormat=s._nextUint32(),n2.typeSize=s._nextUint32(),n2.pixelWidth=s._nextUint32(),n2.pixelHeight=s._nextUint32(),n2.pixelDepth=s._nextUint32(),n2.layerCount=s._nextUint32(),n2.faceCount=s._nextUint32();const a=s._nextUint32();n2.supercompressionScheme=s._nextUint32();const r=s._nextUint32(),o=s._nextUint32(),l=s._nextUint32(),f=s._ne
+@3602: 0;}};var t=0;var n=2;var p=1;var x=2;var nt=0;var ct=9;var gt=15;var yt=16;var dt=22;var Ot=37;var Ft=43;var $t=76;var se=83;var pe=97;var xe=100;var de=103;var Ae=109;var Si=class{constructor(){this.vkFormat=0,this.typeSize=1,this.pixelWidth=0,this.pixelHeight=0,this.pixelDepth=0,this.layerCount=0,this.faceCount=1,this.supercompressionScheme=0,this.levels=[],this.dataFormatDescriptor=[{vendorId:0,descriptorType:0,descriptorBlockSize:0,versionNumber:2,colorModel:0,colorPrimaries:1,transferFuncti
+==============================================================================
+[2/22] pixelWidth@u0046#0 | kind=const depth=8 refCount=2 | engine/assets-draco.js
+DECL @59213 (verified):
+th;}return result;}};var FORMAT_MAP={[Ae]:RGBAFormat,[pe]:RGBAFormat,[Ot]:RGBAFormat,[Ft]:RGBAFormat,[de]:RGFormat,[se]:RGFormat,[yt]:RGFormat,[dt]:RGFormat,[xe]:RedFormat,[$t]:RedFormat,[gt]:RedFormat,[ct]:RedFormat};var TYPE_MAP={[Ae]:FloatType,[pe]:HalfFloatType,[Ot]:UnsignedByteType,[Ft]:UnsignedByteType,[de]:FloatType,[se]:HalfFloatType,[yt]:UnsignedByteType,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {vkFormat,[...line truncated...]
+USES: refCount=2, 5 token-occurrences in unit, showing 4 nearest outside DECL window:
+@60164: ay.BYTES_PER_ELEMENT);}else if(TYPE_MAP[vkFormat]===HalfFloatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resol
+@60211: t]===HalfFloatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loader_exp
+@5577: ||e[8]!==Ti[8]||e[9]!==Ti[9]||e[10]!==Ti[10]||e[11]!==Ti[11])throw new Error('Missing KTX 2.0 identifier.');const n2=new Si(),i=17*Uint32Array.BYTES_PER_ELEMENT,s=new Ii(t2,Ti.length,i,true);n2.vkFormat=s._nextUint32(),n2.typeSize=s._nextUint32(),n2.pixelWidth=s._nextUint32(),n2.pixelHeight=s._nextUint32(),n2.pixelDepth=s._nextUint32(),n2.layerCount=s._nextUint32(),n2.faceCount=s._nextUint32();const a=s._nextUint32();n2.supercompressionScheme=s._nextUint32();const r=s._nextUint32(),o=s._nextUint
+@3584: this.workerStatus=0;}};var t=0;var n=2;var p=1;var x=2;var nt=0;var ct=9;var gt=15;var yt=16;var dt=22;var Ot=37;var Ft=43;var $t=76;var se=83;var pe=97;var xe=100;var de=103;var Ae=109;var Si=class{constructor(){this.vkFormat=0,this.typeSize=1,this.pixelWidth=0,this.pixelHeight=0,this.pixelDepth=0,this.layerCount=0,this.faceCount=1,this.supercompressionScheme=0,this.levels=[],this.dataFormatDescriptor=[{vendorId:0,descriptorType:0,descriptorBlockSize:0,versionNumber:2,colorModel:0,colorPrimarie
+==============================================================================
+[3/22] result@u0046#0 | kind=const depth=10 refCount=2 | engine/assets-draco.js
+DECL @58475 (verified):
+width)&&isPowerOfTwo(height)))continue;transcoderFormat=opt.transcoderFormat[hasAlpha?1:0];engineFormat=opt.engineFormat[hasAlpha?1:0];return{transcoderFormat,engineFormat};}console.warn('usvzFuAsEB.KTX2Loader: No suitable compressed texture format found. Decoding to RGBA32.');transcoderFormat=TranscoderFormat.RGBA32;engineFormat=EngineFormat.RGBAFormat;return{transcoderFormat,engineFormat};}function isPowerOfTwo(value){if(value<=2)return true;return(value&value-1)===0&&value!==0;}function concat(arrays){let totalByteLength=0;for(const array of arrays){totalByteLength+=array.byteLength;}const [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/22] sRGBEncoding@u0046#0 | kind=var depth=5 refCount=4 | engine/assets-draco.js
+DECL @1812 (verified):
+mat=usvzFuAsEB.RedFormat;var RGB_ETC1_Format=usvzFuAsEB.RGB_ETC1_Format;var RGB_ETC2_Format=usvzFuAsEB.RGB_ETC2_Format;var RGB_PVRTC_4BPPV1_Format=usvzFuAsEB.RGB_PVRTC_4BPPV1_Format;var RGB_S3TC_DXT1_Format=usvzFuAsEB.RGB_S3TC_DXT1_Format;var RGBA_ASTC_4x4_Format=usvzFuAsEB.RGBA_ASTC_4x4_Format;var RGBA_BPTC_Format=usvzFuAsEB.RGBA_BPTC_Format;var RGBA_ETC2_EAC_Format=usvzFuAsEB.RGBA_ETC2_EAC_Format;var RGBA_PVRTC_4BPPV1_Format=usvzFuAsEB.RGBA_PVRTC_4BPPV1_Format;var RGBA_S3TC_DXT5_Format=usvzFuAsEB.RGBA_S3TC_DXT5_Format;var RGBAFormat=usvzFuAsEB.RGBAFormat;var RGFormat=usvzFuAsEB.RGFormat;var [...line truncated...]
+USES: refCount=4, 6 token-occurrences in unit, showing 4 nearest outside DECL window:
+@51747: dTexture(mipmaps,width,height,format,UnsignedByteType);texture.minFilter=mipmaps.length===1?LinearFilter:LinearMipmapLinearFilter;texture.magFilter=LinearFilter;texture.generateMipmaps=false;texture.afCJVYrCGK=true;texture.encoding=dfdTransferFn===x?sRGBEncoding:LinearEncoding;texture.premultiplyAlpha=!!(dfdFlags&p);return texture;}async _createTexture(buffer,config={}){const container=Pi(new Uint8Array(buffer));if(container.vkFormat!==nt){return createDataTexture(container);}const taskConfig=co
+@59103: atType,[pe]:HalfFloatType,[Ot]:UnsignedByteType,[Ft]:UnsignedByteType,[de]:FloatType,[se]:HalfFloatType,[yt]:UnsignedByteType,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {vkFormat,pixelWidth,pixelHeight,pixelDepth}=container;if(FORMAT_MAP[vkFormat]===void 0){throw new Error('usvzFuAsEB.KTX2Loader: Unsupported vkFormat.
+@59121: oatType,[Ot]:UnsignedByteType,[Ft]:UnsignedByteType,[de]:FloatType,[se]:HalfFloatType,[yt]:UnsignedByteType,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {vkFormat,pixelWidth,pixelHeight,pixelDepth}=container;if(FORMAT_MAP[vkFormat]===void 0){throw new Error('usvzFuAsEB.KTX2Loader: Unsupported vkFormat.');}const level=co
+@59139: nedByteType,[Ft]:UnsignedByteType,[de]:FloatType,[se]:HalfFloatType,[yt]:UnsignedByteType,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {vkFormat,pixelWidth,pixelHeight,pixelDepth}=container;if(FORMAT_MAP[vkFormat]===void 0){throw new Error('usvzFuAsEB.KTX2Loader: Unsupported vkFormat.');}const level=container.levels[0];
+==============================================================================
+[5/22] status@u0046#0 | kind=const depth=12 refCount=1 | engine/assets-draco.js
+DECL @55313 (verified):
+up();throw new Error('usvzFuAsEB.KTX2Loader:\tInvalid texture');}if(!ktx2File.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.KTX2Loader: .startTranscoding failed');}const mipmaps=[];for(let mip=0;mip<levels;mip++){const layerMips=[];let mipWidth,mipHeight;for(let layer=0;layer<layers;layer++){const levelInfo=ktx2File.getImageLevelInfo(mip,layer,0);mipWidth=levelInfo.origWidth<4?levelInfo.origWidth:levelInfo.width;mipHeight=levelInfo.origHeight<4?levelInfo.origHeight:levelInfo.height;const dst=new Uint8Array(ktx2File.getImageTranscodedSizeInBytes(mip,layer,0,transcoderFormat));const [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/22] texturePending@u0046#0 | kind=const depth=9 refCount=2 | engine/assets-draco.js
+DECL @52008 (verified):
+yTexture(mipmaps,width,height,container.layerCount,format,UnsignedByteType):new CompressedTexture(mipmaps,width,height,format,UnsignedByteType);texture.minFilter=mipmaps.length===1?LinearFilter:LinearMipmapLinearFilter;texture.magFilter=LinearFilter;texture.generateMipmaps=false;texture.afCJVYrCGK=true;texture.encoding=dfdTransferFn===x?sRGBEncoding:LinearEncoding;texture.premultiplyAlpha=!!(dfdFlags&p);return texture;}async _createTexture(buffer,config={}){const container=Pi(new Uint8Array(buffer));if(container.vkFormat!==nt){return createDataTexture(container);}const taskConfig=config;const [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/22] totalByteLength@u0046#0 | kind=let depth=10 refCount=2 | engine/assets-draco.js
+DECL @58389 (verified):
+sAlpha&&opt.transcoderFormat.length<2)continue;if(opt.needsPowerOfTwo&&!(isPowerOfTwo(width)&&isPowerOfTwo(height)))continue;transcoderFormat=opt.transcoderFormat[hasAlpha?1:0];engineFormat=opt.engineFormat[hasAlpha?1:0];return{transcoderFormat,engineFormat};}console.warn('usvzFuAsEB.KTX2Loader: No suitable compressed texture format found. Decoding to RGBA32.');transcoderFormat=TranscoderFormat.RGBA32;engineFormat=EngineFormat.RGBAFormat;return{transcoderFormat,engineFormat};}function isPowerOfTwo(value){if(value<=2)return true;return(value&value-1)===0&&value!==0;}function concat(arrays){let [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/22] transcodeResult@u0046#0 | kind=param depth=8 refCount=1 | engine/assets-draco.js
+DECL @51193 (verified):
+urn this.transcoderPending;}load(url,onLoad,onProgress,onError){if(this.workerConfig===null){throw new Error('usvzFuAsEB.KTX2Loader: Missing initialization with \'.detectSupport( qIySEZgti )\'.');}const loader=new FileLoader(this.manager);loader.setResponseType('arraybuffer');loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{if(_taskCache.has(buffer)){const cachedTask=_taskCache.get(buffer);return cachedTask.promise.then(onLoad).catch(onError);}this._createTexture(buffer).then(texture=>onLoad?onLoad(texture):null).catch(onError);},onProgress,onError);}_createTextureFrom([...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/22] view@u0046#0 | kind=let depth=8 refCount=5 | engine/assets-draco.js
+DECL @59407 (verified):
+dFormat,[ct]:RedFormat};var TYPE_MAP={[Ae]:FloatType,[pe]:HalfFloatType,[Ot]:UnsignedByteType,[Ft]:UnsignedByteType,[de]:FloatType,[se]:HalfFloatType,[yt]:UnsignedByteType,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {vkFormat,pixelWidth,pixelHeight,pixelDepth}=container;if(FORMAT_MAP[vkFormat]===void 0){throw new Error('usvzFuAsEB.KTX2Loader: Unsupported vkFormat.');}const level=container.levels[0];let levelData;let [...line truncated...]
+USES: refCount=5, 6 token-occurrences in unit, showing 3 nearest outside DECL window:
+@60098: elData.buffer,levelData.byteOffset,levelData.byteLength/Float32Array.BYTES_PER_ELEMENT);}else if(TYPE_MAP[vkFormat]===HalfFloatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFo
+@60159: 32Array.BYTES_PER_ELEMENT);}else if(TYPE_MAP[vkFormat]===HalfFloatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.
+@60206: Format]===HalfFloatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loade
+==============================================================================
+[10/22] vkFormat@u0046#0 | kind=const depth=8 refCount=6 | engine/assets-draco.js
+DECL @59204 (verified):
+.byteLength;}return result;}};var FORMAT_MAP={[Ae]:RGBAFormat,[pe]:RGBAFormat,[Ot]:RGBAFormat,[Ft]:RGBAFormat,[de]:RGFormat,[se]:RGFormat,[yt]:RGFormat,[dt]:RGFormat,[xe]:RedFormat,[$t]:RedFormat,[gt]:RedFormat,[ct]:RedFormat};var TYPE_MAP={[Ae]:FloatType,[pe]:HalfFloatType,[Ot]:UnsignedByteType,[Ft]:UnsignedByteType,[de]:FloatType,[se]:HalfFloatType,[yt]:UnsignedByteType,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {[...line truncated...]
+USES: refCount=6, 11 token-occurrences in unit, showing 7 nearest outside DECL window:
+@59954: else{throw new Error('usvzFuAsEB.KTX2Loader: Unsupported supercompressionScheme.');}if(TYPE_MAP[vkFormat]===FloatType){view=new Float32Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Float32Array.BYTES_PER_ELEMENT);}else if(TYPE_MAP[vkFormat]===HalfFloatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTextur
+@60268: ,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loader_exports);})());
+@60304: Length/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loader_exports);})());
+@60344: lse{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loader_exports);})());
+@51926: pmaps=false;texture.afCJVYrCGK=true;texture.encoding=dfdTransferFn===x?sRGBEncoding:LinearEncoding;texture.premultiplyAlpha=!!(dfdFlags&p);return texture;}async _createTexture(buffer,config={}){const container=Pi(new Uint8Array(buffer));if(container.vkFormat!==nt){return createDataTexture(container);}const taskConfig=config;const texturePending=this.init().then(()=>{return this.workerPool.postMessage({type:'transcode',buffer,taskConfig},[buffer]);}).then(e=>this._createTextureFrom(e.data,contain
+@5521: ||e[4]!==Ti[4]||e[5]!==Ti[5]||e[6]!==Ti[6]||e[7]!==Ti[7]||e[8]!==Ti[8]||e[9]!==Ti[9]||e[10]!==Ti[10]||e[11]!==Ti[11])throw new Error('Missing KTX 2.0 identifier.');const n2=new Si(),i=17*Uint32Array.BYTES_PER_ELEMENT,s=new Ii(t2,Ti.length,i,true);n2.vkFormat=s._nextUint32(),n2.typeSize=s._nextUint32(),n2.pixelWidth=s._nextUint32(),n2.pixelHeight=s._nextUint32(),n2.pixelDepth=s._nextUint32(),n2.layerCount=s._nextUint32(),n2.faceCount=s._nextUint32();const a=s._nextUint32();n2.supercompressionSche
+@3552: rs.length=0;this.queue.length=0;this.workerStatus=0;}};var t=0;var n=2;var p=1;var x=2;var nt=0;var ct=9;var gt=15;var yt=16;var dt=22;var Ot=37;var Ft=43;var $t=76;var se=83;var pe=97;var xe=100;var de=103;var Ae=109;var Si=class{constructor(){this.vkFormat=0,this.typeSize=1,this.pixelWidth=0,this.pixelHeight=0,this.pixelDepth=0,this.layerCount=0,this.faceCount=1,this.supercompressionScheme=0,this.levels=[],this.dataFormatDescriptor=[{vendorId:0,descriptorType:0,descriptorBlockSize:0,versionNum
+==============================================================================
+[11/22] workerCreator@u0046#0 | kind=param depth=7 refCount=1 | engine/assets-draco.js
+DECL @2812 (verified):
+_initWorker(workerId){if(!this.workers[workerId]){const worker=this.workerCreator();worker.addEventListener('message',this._onMessage.bind(this,workerId));this.workers[workerId]=worker;}}_getIdleWorker(){for(let i=0;i<this.pool;i++)if(!(this.workerStatus&1<<i))return i;return-1;}_onMessage(workerId,msg){const resolve=this.workersResolve[workerId];resolve&&resolve(msg);if(this.queue.length){const {resolve:resolve2,msg:msg2,transfer}=this.queue.shift();this.workersResolve[workerId]=resolve2;this.workers[workerId].postMessage(msg2,transfer);}else{this.workerStatus^=1<<workerId;}}setWorkerCreator([...line truncated...]
+USES: refCount=1, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/22] zstd@u0046#0 | kind=const depth=12 refCount=2 | engine/assets-draco.js
+DECL @59577 (verified):
+e,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {vkFormat,pixelWidth,pixelHeight,pixelDepth}=container;if(FORMAT_MAP[vkFormat]===void 0){throw new Error('usvzFuAsEB.KTX2Loader: Unsupported vkFormat.');}const level=container.levels[0];let levelData;let view;if(container.supercompressionScheme===t){levelData=level.levelData;}else if(container.supercompressionScheme===n){if(!_zstd){_zstd=new Promise(async resolve=>{const [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/22] a3i@u0354#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function ta(a3i){return a3i;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/22] a3o@u2552#0 | kind=param depth=5 refCount=2 | ui/party-lobby.js
+DECL @12 (verified):
+function Xc(a3o){a3o!=undefined&&(X3=a3o),X4=X1*X5/X6*1.1*X3,Kq['MqaFuSJOX']==0x2&&(X4=X1*X3,X4/=0x4);}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/22] Xv@u2575#0 | kind=var depth=3 refCount=1 | characters/rigs.js
+DECL @4 (verified):
+var Xv,Xw=new Array(0x5),Xx=new Array(0x5);
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/22] result@u0146#0 | kind=var depth=5 refCount=1 | world/modes.js
+DECL @141 (verified):
+var fpsCounter={startTime:0,frameNumber:0,getFPS:function(){this.frameNumber++;var d=new Date().getTime(),IUTkaCQgos=(d-this.startTime)/1000,result=Math.floor(this.frameNumber/IUTkaCQgos);if(IUTkaCQgos>1){this.startTime=new Date().getTime();this.frameNumber=0;}return result;}};
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/22] a3q@u1818#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @44 (verified):
+function Hz(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqb=ai1,a3r={};return a3r['obj']=a3i,a3r['param']=a3j,a3r["old"]=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r["delay"]=a3n||0x0,a3r['IUTkaCQgos']=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/22] parameters@u0021#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @117 (verified):
+usvzFuAsEB.EffectComposer=function(qIySEZgti,renderTarget){this.qIySEZgti=qIySEZgti;if(renderTarget===undefined){var parameters={minFilter:usvzFuAsEB.LinearFilter,magFilter:usvzFuAsEB.LinearFilter,format:usvzFuAsEB.RGBAFormat,stencilBuffer:false};var size=qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarget=new usvzFuAsEB.WebGLRenderTarget(this._width*this._pixelRatio,this._height*this._pixelRatio,parameters);renderTarget.texture.name='EffectComposer.rt1';}else{this._pixelRatio=1;this._width=rend[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/22] ra@u0198#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var ra=r9,rb={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/22] Nu@u2152#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @12 (verified):
+var Nt=!![],Nu=!![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/22] a0m@u2724#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var a0m=[],a0n=![],a0o=new GQ();
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/22] a3w@u2140#0 | kind=var depth=5 refCount=0 | characters/animation.js
+DECL @612 (verified):
+a3k){var arP=ai1;return;var a3l=0.75,a3m=new a3k[("image")](a3k['getImage']('promo/kruster.png'),0x46,0x1e,0x5a0*a3l,0x1ea*a3l);Mc["DgJwEtWhIm"]=[a3m];return;Md=a3k['pANxEEFMRM'](Mb,0x2bc,0x12c,0x0,null,0x4);var a3n=Md["image"];a3n['madebygameio']=![];var a3o=Md['image']['getContext']('2d');a3o['fillStyle']="#FFF",a3o['resetTransform'](),a3o['globalCompositeOperation']='source-in',a3o['fillRect'](0x0,0x0,a3n['width'],a3n['height']);var a3p=0x0,a3q=0x0,a3r=0x38,a3s=0x8c,a3t=!![];a3t&&(a3p=-0x20,a3q=0x5,a3p=0xc,a3s=0x82);a3p=-0x23,a3q=0x3,a3r=0x32,a3s=0x64;var a3u=!![];if(a3u){var a3v=0x12c*0x2,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-26: propose EVERY binding above.

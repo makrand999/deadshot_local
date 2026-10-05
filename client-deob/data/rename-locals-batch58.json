@@ -1,0 +1,4332 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 58,
+  "date": "2026-09-29",
+  "merged": 177,
+  "heldLow": 0,
+  "heldInvalid": 1,
+  "kept": 5,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Reused loop index scanning gamepads then polling buttons; SERVED: identical (snippet-only twin).",
+   "name": "inputLoopIndex",
+   "selector": "a3l@u2226#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "function R7(){var axG=ai1;QS=null,QT=navigator[\"getGamepads\"]();for(var a3l=0x0;a3l<QT['length'];a3l++){if(QT[a3l]!=null){QS=QT[a3l]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "function R7(){var axG=ai1;QS=null,QT=navigator[axG(0xb42)]();for(var a3l=0x0;a3l<QT['length'];a3l++){if(QT[a3l]!=null){QS=QT[a3l]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Deadzoned axes[2] value, normalized and scaled; SERVED: identical (snippet-only twin).",
+   "name": "rightStickX",
+   "selector": "a3m@u2226#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "omFzxq\"]=QU(0x3));for(var a3l=0x0;a3l<0x8;a3l++){QY[a3l]=QU(a3l);}if(QS['axes'][\"length\"]>=0x4){var a3m=QX(QS['axes'][0x2]),a3n=QX(QS[\"axes\"][0x3]),a3o=Math[\"sq"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "xdff)]=QU(0x3));for(var a3l=0x0;a3l<0x8;a3l++){QY[a3l]=QU(a3l);}if(QS['axes'][axG(0x3a2)]>=0x4){var a3m=QX(QS['axes'][0x2]),a3n=QX(QS[axG(0xf3a)][0x3]),a3o=Math"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Deadzoned axes[3] value, normalized and scaled; SERVED: identical (snippet-only twin).",
+   "name": "rightStickY",
+   "selector": "a3n@u2226#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "r a3l=0x0;a3l<0x8;a3l++){QY[a3l]=QU(a3l);}if(QS['axes'][\"length\"]>=0x4){var a3m=QX(QS['axes'][0x2]),a3n=QX(QS[\"axes\"][0x3]),a3o=Math[\"sqrt\"](a3m*a3m+a3n*a3n);a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "a3l=0x0;a3l<0x8;a3l++){QY[a3l]=QU(a3l);}if(QS['axes'][axG(0x3a2)]>=0x4){var a3m=QX(QS['axes'][0x2]),a3n=QX(QS[axG(0xf3a)][0x3]),a3o=Math[axG(0xba3)](a3m*a3m+a3n"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Stick vector length, clamped then pow-curved; SERVED: identical (snippet-only twin).",
+   "name": "rightStickMagnitude",
+   "selector": "a3o@u2226#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "{QY[a3l]=QU(a3l);}if(QS['axes'][\"length\"]>=0x4){var a3m=QX(QS['axes'][0x2]),a3n=QX(QS[\"axes\"][0x3]),a3o=Math[\"sqrt\"](a3m*a3m+a3n*a3n);a3o>0x1&&(a3o=0x1);a3o>0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "l]=QU(a3l);}if(QS['axes'][axG(0x3a2)]>=0x4){var a3m=QX(QS['axes'][0x2]),a3n=QX(QS[axG(0xf3a)][0x3]),a3o=Math[axG(0xba3)](a3m*a3m+a3n*a3n);a3o>0x1&&(a3o=0x1);a3o"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 0.45 threshold mapping stick deflection to directions; SERVED: identical (snippet-only twin).",
+   "name": "axisThreshold",
+   "selector": "a3q@u2226#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "=R1['right']=R1['up']=R1['down']=![];if(Oe['length']()>0x2d){Oe['divideScalar'](Oe[\"length\"]());var a3q=0.45;if(Oe['x']>a3q)R1['right']=!![];else Oe['x']<-a3q&&"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "1['right']=R1['up']=R1['down']=![];if(Oe['length']()>0x2d){Oe['divideScalar'](Oe[axG(0x3a2)]());var a3q=0.45;if(Oe['x']>a3q)R1['right']=!![];else Oe['x']<-a3q&&"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: atan2 angle of discrete direction keys; SERVED: identical (snippet-only twin).",
+   "name": "discreteDirAngle",
+   "selector": "a3r@u2226#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "['x']<-a3q&&(R1['left']=!![]);if(Oe['y']>a3q)R1[\"down\"]=!![];else Oe['y']<-a3q&&(R1['up']=!![]);var a3r=Math['atan2']((R1['up']?-0x1:0x0)+(R1['down']?0x1:0x0),("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2226",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "]<-a3q&&(R1['left']=!![]);if(Oe['y']>a3q)R1[axG(0xa96)]=!![];else Oe['y']<-a3q&&(R1['up']=!![]);var a3r=Math['atan2']((R1['up']?-0x1:0x0)+(R1['down']?0x1:0x0),("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 squaredLength caches input z for x2+y2+z2; SERVED: identical (snippet-only twin).",
+   "name": "compZ",
+   "selector": "a3B@u0008#17",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "3B*a3B);},a3r[\"len\"]=a3r['length'],a3r[\"squaredLength\"]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return a3z*a3z+a3A*a3A+a3B*a3B;},a3r['sqrLen']="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "3B*a3B);},a3r[ai4(0x512)]=a3r['length'],a3r[ai4(0x430)]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return a3z*a3z+a3A*a3A+a3B*a3B;},a3r['sqrLen']="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 cross caches a[0]; feeds out[1],out[2] products; SERVED: identical (snippet-only twin).",
+   "name": "crossVecAx",
+   "selector": "a3B@u0008#19",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 2,
+    "snippet": "turn a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1]+a3y[0x2]*a3z[0x2];},a3r[\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 2,
+    "snippet": "n a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1]+a3y[0x2]*a3z[0x2];},a3r[ai4(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 random uniform z in [-1,1]; SERVED: identical (snippet-only twin).",
+   "name": "randomZ",
+   "selector": "a3B@u0008#21",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 21,
+    "refCount": 3,
+    "snippet": "2]-a3E),a3y;},a3r[\"random\"]=function(a3y,a3z){var aib=ai4;a3z=a3z||0x1;var a3A=a3n()*0x2*Math['PI'],a3B=a3n()*0x2-0x1,a3C=Math['sqrt'](0x1-a3B*a3B)*a3z;return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 21,
+    "refCount": 3,
+    "snippet": "-a3E),a3y;},a3r[ai4(0x4bd)]=function(a3y,a3z){var aib=ai4;a3z=a3z||0x1;var a3A=a3n()*0x2*Math['PI'],a3B=a3n()*0x2-0x1,a3C=Math['sqrt'](0x1-a3B*a3B)*a3z;return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 transformMat4 caches x input; SERVED: identical (snippet-only twin).",
+   "name": "vecX",
+   "selector": "a3B@u0008#22",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 3,
+    "snippet": "a3y[0x1]=Math[\"sin\"](a3A)*a3C,a3y[0x2]=a3B*a3z,a3y;},a3r['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2];return a3y[0x0]=a3A[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 3,
+    "snippet": "x1]=Math[aib(0xbd6)](a3A)*a3C,a3y[0x2]=a3B*a3z,a3y;},a3r['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2];return a3y[0x0]=a3A[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 forEach offset param; defaults 0, loop init; SERVED: identical (snippet-only twin).",
+   "name": "arrayOffset",
+   "selector": "a3B@u0008#28",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 28,
+    "refCount": 4,
+    "snippet": "]+a3A[0x2],a3y;},a3r[\"forEach\"]=(function(){var aif=ai4,a3y=a3r[\"create\"]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 28,
+    "refCount": 4,
+    "snippet": "3A[0x2],a3y;},a3r[ai4(0x68f)]=(function(){var aif=ai4,a3y=a3r[aif(0xf2a)]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 squaredDistance holds b[1]-a[1] squared sum; SERVED: identical (snippet-only twin).",
+   "name": "diffY",
+   "selector": "a3B@u0008#33",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 33,
+    "refCount": 2,
+    "snippet": "},a3s['dist']=a3s[\"pLBXqJSbPlZ\"],a3s['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z[0x2]-a3y[0x2],a3D=a3z[0x3]-a3y"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 33,
+    "refCount": 2,
+    "snippet": "D);},a3s['dist']=a3s[ai4(0x439)],a3s['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z[0x2]-a3y[0x2],a3D=a3z[0x3]-a3y"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 length caches input z under sqrt; SERVED: identical (snippet-only twin).",
+   "name": "lenZElem",
+   "selector": "a3B@u0008#34",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 34,
+    "refCount": 2,
+    "snippet": "D;},a3s['sqrDist']=a3s[\"squaredDistance\"],a3s['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return Math['sqrt'](a3z*a3z+a3A*a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 34,
+    "refCount": 2,
+    "snippet": "+a3D*a3D;},a3s['sqrDist']=a3s[ai4(0xa8b)],a3s['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return Math['sqrt'](a3z*a3z+a3A*a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 squaredLength caches input z squared sum; SERVED: identical (snippet-only twin).",
+   "name": "sqrLenZElem",
+   "selector": "a3B@u0008#35",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 35,
+    "refCount": 2,
+    "snippet": "3C*a3C);},a3s['len']=a3s[\"length\"],a3s['squaredLength']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return a3z*a3z+a3A*a3A+a3B*a3B+a3C"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 35,
+    "refCount": 2,
+    "snippet": "*a3C);},a3s['len']=a3s[ai4(0x3a2)],a3s['squaredLength']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return a3z*a3z+a3A*a3A+a3B*a3B+a3C"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 normalize caches y input; SERVED: identical (snippet-only twin).",
+   "name": "vecY",
+   "selector": "a3B@u0008#36",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 2,
+    "snippet": "0x2]=-a3z[0x2],a3y[0x3]=-a3z[0x3],a3y;},a3s[\"normalize\"]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3A+a3B*a3B+a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 2,
+    "snippet": "[0x2]=-a3z[0x2],a3y[0x3]=-a3z[0x3],a3y;},a3s[ai4(0xfc6)]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3A+a3B*a3B+a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 transformMat4 caches x input; SERVED: identical (snippet-only twin).",
+   "name": "vecX",
+   "selector": "a3B@u0008#38",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 38,
+    "refCount": 4,
+    "snippet": "normalize\"](a3y,a3y),a3s['scale'](a3y,a3y,a3z),a3y;},a3s['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3];return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 38,
+    "refCount": 4,
+    "snippet": "aik(0xfc6)](a3y,a3y),a3s['scale'](a3y,a3y,a3z),a3y;},a3s['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3];return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 transformQuat caches x input; SERVED: identical (snippet-only twin).",
+   "name": "vecX",
+   "selector": "a3B@u0008#39",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "x3]*a3B+a3A[0x7]*a3C+a3A[0xb]*a3D+a3A[0xf]*a3E,a3y;},a3s[\"transformQuat\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "a3A[0x3]*a3B+a3A[0x7]*a3C+a3A[0xb]*a3D+a3A[0xf]*a3E,a3y;},a3s[ai4(0xdc5)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 invert caches src[1] for det/adjugate; SERVED: identical (snippet-only twin).",
+   "name": "srcElem1",
+   "selector": "a3B@u0008#41",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 2,
+    "snippet": "],a3y[0x2]=a3z[0x1],a3y[0x3]=a3z[0x3];return a3y;},a3t[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3D-a3C*a3B;r"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 2,
+    "snippet": "a3y[0x2]=a3z[0x1],a3y[0x3]=a3z[0x3];return a3y;},a3t[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3D-a3C*a3B;r"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d invert caches src[1] for cofactors; SERVED: identical (snippet-only twin).",
+   "name": "srcElem1",
+   "selector": "a3B@u0008#46",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 46,
+    "refCount": 3,
+    "snippet": "]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 46,
+    "refCount": 3,
+    "snippet": "0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d multiply caches a[0] element; SERVED: identical (snippet-only twin).",
+   "name": "srcElem0",
+   "selector": "a3B@u0008#47",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 47,
+    "refCount": 3,
+    "snippet": "unction(a3y){return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 47,
+    "refCount": 3,
+    "snippet": "unction(a3y){return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d rotate caches src[0] for rotation; SERVED: identical (snippet-only twin).",
+   "name": "srcElem0",
+   "selector": "a3B@u0008#48",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 48,
+    "refCount": 2,
+    "snippet": "3C*a3L+a3E*a3M+a3G,a3y;},a3u[\"mul\"]=a3u['multiply'],a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 48,
+    "refCount": 2,
+    "snippet": "L+a3E*a3M+a3G,a3y;},a3u[ai4(0xcfe)]=a3u['multiply'],a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat3 translate caches src[0] passthrough row; SERVED: identical (snippet-only twin).",
+   "name": "mElem0",
+   "selector": "a3B@u0008#56",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 56,
+    "refCount": 2,
+    "snippet": "a3Q*a3D+a3R*a3G+a3S*a3J,a3y;},a3v['mul']=a3v['multiply'],a3v[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 56,
+    "refCount": 2,
+    "snippet": "=a3Q*a3D+a3R*a3G+a3S*a3J,a3y;},a3v['mul']=a3v['multiply'],a3v[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: normalFromMat4 caches src mat4[1] cofactors; SERVED: identical (snippet-only twin).",
+   "name": "srcElem1",
+   "selector": "a3B@u0008#60",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 60,
+    "refCount": 5,
+    "snippet": "3y[0x5]=a3L+a3N,a3y[0x8]=0x1-a3H-a3J,a3y;},a3v[\"normalFromMat4\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 60,
+    "refCount": 5,
+    "snippet": "-a3O,a3y[0x5]=a3L+a3N,a3y[0x8]=0x1-a3H-a3J,a3y;},a3v[ai4(0x449)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 adjoint caches src[1] cofactor expansion; SERVED: identical (snippet-only twin).",
+   "name": "srcElem1",
+   "selector": "a3B@u0008#63",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 63,
+    "refCount": 15,
+    "snippet": "3y[0xf]=(a3I*a3T-a3J*a3R+a3K*a3Q)*a42,a3y):null;},a3w[\"adjoint\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 63,
+    "refCount": 15,
+    "snippet": "y[0xf]=(a3I*a3T-a3J*a3R+a3K*a3Q)*a42,a3y):null;},a3w[ai4(0x1b5)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 translate reads vec x for row; SERVED: identical (snippet-only twin).",
+   "name": "transX",
+   "selector": "a3B@u0008#66",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 66,
+    "refCount": 8,
+    "snippet": "a3S*a3I+a3T*a3M+a3U*a3Q,a3y;},a3w['mul']=a3w['multiply'],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 66,
+    "refCount": 8,
+    "snippet": "+a3S*a3I+a3T*a3M+a3U*a3Q,a3y;},a3w['mul']=a3w['multiply'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotateX holds sin(rad) rotation mix; SERVED: identical (snippet-only twin).",
+   "name": "sinAngle",
+   "selector": "a3B@u0008#69",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 69,
+    "refCount": 8,
+    "snippet": "z[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf]),a3y);},a3w[\"rotateX\"]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[\"sin\"](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 69,
+    "refCount": 8,
+    "snippet": "[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf]),a3y);},a3w[ai4(0x4a0)]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[air(0xbd6)](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotateY holds sin(rad) rotation mix; SERVED: identical (snippet-only twin).",
+   "name": "sinAngle",
+   "selector": "a3B@u0008#70",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 70,
+    "refCount": 8,
+    "snippet": "xa]=a3J*a3C-a3F*a3B,a3y[0xb]=a3K*a3C-a3G*a3B,a3y;},a3w[\"rotateY\"]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[\"sin\"](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 70,
+    "refCount": 8,
+    "snippet": "a]=a3J*a3C-a3F*a3B,a3y[0xb]=a3K*a3C-a3G*a3B,a3y;},a3w[ai4(0xfbc)]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[ais(0xbd6)](a3A),a3C=Math[ais(0xb69)](a3A),a3D=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotateZ holds sin(rad) rotation mix; SERVED: identical (snippet-only twin).",
+   "name": "sinAngle",
+   "selector": "a3B@u0008#71",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 71,
+    "refCount": 8,
+    "snippet": "xa]=a3F*a3B+a3J*a3C,a3y[0xb]=a3G*a3B+a3K*a3C,a3y;},a3w['rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 71,
+    "refCount": 8,
+    "snippet": "xa]=a3F*a3B+a3J*a3C,a3y[0xb]=a3G*a3B+a3K*a3C,a3y;},a3w['rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[ait(0xb69)](a3A),a3D=a3z[0x0],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: perspective near param; depth terms nf; SERVED: identical (snippet-only twin).",
+   "name": "nearPlane",
+   "selector": "a3B@u0008#75",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 75,
+    "refCount": 3,
+    "snippet": "x0,a3y[0xd]=0x0,a3y[0xe]=a3E*a3D*0x2*a3H,a3y[0xf]=0x0,a3y;},a3w[\"perspective\"]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[\"tan\"](a3z/0x2),a3E=0x1/(a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 75,
+    "refCount": 3,
+    "snippet": "]=0x0,a3y[0xd]=0x0,a3y[0xe]=a3E*a3D*0x2*a3H,a3y[0xf]=0x0,a3y;},a3w[ai4(0x5fc)]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[aiu(0x49d)](a3z/0x2),a3E=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ortho bottom param; 1/(b-t) y-scale; SERVED: identical (snippet-only twin).",
+   "name": "bottom",
+   "selector": "a3B@u0008#76",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 76,
+    "refCount": 2,
+    "snippet": "0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[\"ortho\"]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 76,
+    "refCount": 2,
+    "snippet": "]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[ai4(0x508)]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: setAxisAngle sin(half angle) axis scaler; SERVED: identical (snippet-only twin).",
+   "name": "sinHalfAngle",
+   "selector": "a3B@u0008#80",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 80,
+    "refCount": 3,
+    "snippet": ",a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3x['setAxisAngle']=function(a3y,a3z,a3A){var aiz=ai4;a3A*=0.5;var a3B=Math[\"sin\"](a3A);return a3y[0x0]=a3B*a3z[0x0],a3y[0x1]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 80,
+    "refCount": 3,
+    "snippet": ",a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3x['setAxisAngle']=function(a3y,a3z,a3A){var aiz=ai4;a3A*=0.5;var a3B=Math[aiz(0xbd6)](a3A);return a3y[0x0]=a3B*a3z[0x0],a3y[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat multiply caches lhs q[0] Hamilton; SERVED: identical (snippet-only twin).",
+   "name": "quatX",
+   "selector": "a3B@u0008#81",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 81,
+    "refCount": 4,
+    "snippet": "x2],a3y[0x3]=Math[\"cos\"](a3A),a3y;},a3x[\"add\"]=a3s['add'],a3x[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 81,
+    "refCount": 4,
+    "snippet": "3]=Math[aiz(0xb69)](a3A),a3y;},a3x[ai4(0x8da)]=a3s['add'],a3x[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat calculateW caches input y copy; SERVED: identical (snippet-only twin).",
+   "name": "quatY",
+   "selector": "a3B@u0008#85",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 85,
+    "refCount": 3,
+    "snippet": "a3E*a3F,a3y[0x3]=a3E*a3G-a3D*a3F,a3y;},a3x[\"calculateW\"]=function(a3y,a3z){var aiD=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2];return a3y[0x0]=a3A,a3y[0x1]=a3B,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 85,
+    "refCount": 3,
+    "snippet": "G+a3E*a3F,a3y[0x3]=a3E*a3G-a3D*a3F,a3y;},a3x[ai4(0xf6c)]=function(a3y,a3z){var aiD=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2];return a3y[0x0]=a3A,a3y[0x1]=a3B,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat slerp t param weights sin blends; SERVED: identical (snippet-only twin).",
+   "name": "slerpT",
+   "selector": "a3B@u0008#86",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 86,
+    "refCount": 4,
+    "snippet": "a3B-a3C*a3C)),a3y;},a3x['dot']=a3s[\"dot\"],a3x[\"lerp\"]=a3s['lerp'],a3x[\"slerp\"]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 86,
+    "refCount": 4,
+    "snippet": ",a3y;},a3x['dot']=a3s[ai4(0xbe8)],a3x[ai4(0x108e)]=a3s['lerp'],a3x[ai4(0xbd7)]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fromMat3 sqrt factor rescaled 0.5/sqrt multiplier; SERVED: identical (snippet-only twin).",
+   "name": "quatScale",
+   "selector": "a3B@u0008#88",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0008",
+    "index": 88,
+    "refCount": 14,
+    "snippet": "ize']=a3s[\"normalize\"],a3x['fromMat3']=function(a3y,a3z){var aiF=ai4,a3A=a3z[0x0]+a3z[0x4]+a3z[0x8],a3B;if(a3A>0x0)a3B=Math[\"sqrt\"](a3A+0x1),a3y[0x3]=0.5*a3B,a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 88,
+    "refCount": 14,
+    "snippet": "lize']=a3s[ai4(0xfc6)],a3x['fromMat3']=function(a3y,a3z){var aiF=ai4,a3A=a3z[0x0]+a3z[0x4]+a3z[0x8],a3B;if(a3A>0x0)a3B=Math[aiF(0xba3)](a3A+0x1),a3y[0x3]=0.5*a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 normalize inverted length factor; SERVED: identical (snippet-only twin).",
+   "name": "invLen",
+   "selector": "a3C@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "],a3y[0x1]=-a3z[0x1],a3y;},a3q['normalize']=function(a3y,a3z){var ai6=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3A*a3A+a3B*a3B;return a3C>0x0&&(a3C=0x1/Math[\"sqrt\"](a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "],a3y[0x1]=-a3z[0x1],a3y;},a3q['normalize']=function(a3y,a3z){var ai6=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3A*a3A+a3B*a3B;return a3C>0x0&&(a3C=0x1/Math[ai6(0xba3)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 lerp caches start a[0] blend; SERVED: identical (snippet-only twin).",
+   "name": "lerpStartX",
+   "selector": "a3C@u0008#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "*a3A[0x0];return a3y[0x0]=a3y[0x1]=0x0,a3y[0x2]=a3B,a3y;},a3q[\"lerp\"]=function(a3y,a3z,a3A,a3B){var a3C=a3z[0x0],a3D=a3z[0x1];return a3y[0x0]=a3C+a3B*(a3A[0x0]-"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "0x0];return a3y[0x0]=a3y[0x1]=0x0,a3y[0x2]=a3B,a3y;},a3q[ai4(0x108e)]=function(a3y,a3z,a3A,a3B){var a3C=a3z[0x0],a3D=a3z[0x1];return a3y[0x0]=a3C+a3B*(a3A[0x0]-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 transformMat2d caches input y; SERVED: identical (snippet-only twin).",
+   "name": "vecY",
+   "selector": "a3C@u0008#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C,a3y;},a3q[\"transformMat2d\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0x0]*a3B+a3A[0x2]*a3C+a3A[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "a3C,a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C,a3y;},a3q[ai4(0xb66)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0x0]*a3B+a3A[0x2]*a3C+a3A[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 transformMat3 caches input y; SERVED: identical (snippet-only twin).",
+   "name": "vecY",
+   "selector": "a3C@u0008#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "3A[0x1]*a3B+a3A[0x3]*a3C+a3A[0x5],a3y;},a3q[\"transformMat3\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0x0]*a3B+a3A[0x3]*a3C+a3A[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "x1]=a3A[0x1]*a3B+a3A[0x3]*a3C+a3A[0x5],a3y;},a3q[ai4(0x811)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0x0]*a3B+a3A[0x3]*a3C+a3A[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 distance z-delta squared in sqrt; SERVED: identical (snippet-only twin).",
+   "name": "diffZ",
+   "selector": "a3C@u0008#7",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 7,
+    "refCount": 2,
+    "snippet": ",a3y;},a3r['pLBXqJSbPlZ']=function(a3y,a3z){var aia=ai4,a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z[0x2]-a3y[0x2];return Math[\"sqrt\"](a3A*a3A+a3B*a3B+a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 7,
+    "refCount": 2,
+    "snippet": ",a3y;},a3r['pLBXqJSbPlZ']=function(a3y,a3z){var aia=ai4,a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z[0x2]-a3y[0x2];return Math[aia(0xba3)](a3A*a3A+a3B*a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 cross caches a[1] operand; SERVED: identical (snippet-only twin).",
+   "name": "crossVecAy",
+   "selector": "a3C@u0008#10",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "*a3z[0x0]+a3y[0x1]*a3z[0x1]+a3y[0x2]*a3z[0x2];},a3r[\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "z[0x0]+a3y[0x1]*a3z[0x1]+a3y[0x2]*a3z[0x2];},a3r[ai4(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 random disc radius scales cos sin; SERVED: identical (snippet-only twin).",
+   "name": "radialScale",
+   "selector": "a3C@u0008#12",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "\"random\"]=function(a3y,a3z){var aib=ai4;a3z=a3z||0x1;var a3A=a3n()*0x2*Math['PI'],a3B=a3n()*0x2-0x1,a3C=Math['sqrt'](0x1-a3B*a3B)*a3z;return a3y[0x0]=Math['cos'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "4(0x4bd)]=function(a3y,a3z){var aib=ai4;a3z=a3z||0x1;var a3A=a3n()*0x2*Math['PI'],a3B=a3n()*0x2-0x1,a3C=Math['sqrt'](0x1-a3B*a3B)*a3z;return a3y[0x0]=Math['cos'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 transformMat4 input y across rows; SERVED: identical (snippet-only twin).",
+   "name": "vecY",
+   "selector": "a3C@u0008#13",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "[\"sin\"](a3A)*a3C,a3y[0x2]=a3B*a3z,a3y;},a3r['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2];return a3y[0x0]=a3A[0x0]*a3B+a3A[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "0xbd6)](a3A)*a3C,a3y[0x2]=a3B*a3z,a3y;},a3r['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2];return a3y[0x0]=a3A[0x0]*a3B+a3A[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 forEach count param bounds loop; SERVED: identical (snippet-only twin).",
+   "name": "vecCount",
+   "selector": "a3C@u0008#19",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 2,
+    "snippet": "A[0x2],a3y;},a3r[\"forEach\"]=(function(){var aif=ai4,a3y=a3r[\"create\"]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3B=0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 2,
+    "snippet": "x2],a3y;},a3r[ai4(0x68f)]=(function(){var aif=ai4,a3y=a3r[aif(0xf2a)]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3B=0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 squaredDistance z-delta squared sum; SERVED: identical (snippet-only twin).",
+   "name": "diffZ",
+   "selector": "a3C@u0008#23",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "XqJSbPlZ\"],a3s['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z[0x2]-a3y[0x2],a3D=a3z[0x3]-a3y[0x3];return a3A*a3A+a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "i4(0x439)],a3s['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z[0x2]-a3y[0x2],a3D=a3z[0x3]-a3y[0x3];return a3A*a3A+a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 length w component squared sum; SERVED: identical (snippet-only twin).",
+   "name": "lenWElem",
+   "selector": "a3C@u0008#24",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 24,
+    "refCount": 2,
+    "snippet": "ist']=a3s[\"squaredDistance\"],a3s['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return Math['sqrt'](a3z*a3z+a3A*a3A+a3B*a3B+a3C"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 24,
+    "refCount": 2,
+    "snippet": "s['sqrDist']=a3s[ai4(0xa8b)],a3s['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return Math['sqrt'](a3z*a3z+a3A*a3A+a3B*a3B+a3C"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 squaredLength w component squared sum; SERVED: identical (snippet-only twin).",
+   "name": "sqrLenWElem",
+   "selector": "a3C@u0008#25",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 25,
+    "refCount": 2,
+    "snippet": "['len']=a3s[\"length\"],a3s['squaredLength']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C;},a3s['s"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 25,
+    "refCount": 2,
+    "snippet": "len']=a3s[ai4(0x3a2)],a3s['squaredLength']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C;},a3s['s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 normalize cached z in lensq; SERVED: identical (snippet-only twin).",
+   "name": "vecZ",
+   "selector": "a3C@u0008#26",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 2,
+    "snippet": "],a3y[0x3]=-a3z[0x3],a3y;},a3s[\"normalize\"]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 2,
+    "snippet": "2],a3y[0x3]=-a3z[0x3],a3y;},a3s[ai4(0xfc6)]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 transformQuat input y four products; SERVED: identical (snippet-only twin).",
+   "name": "vecY",
+   "selector": "a3C@u0008#29",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 29,
+    "refCount": 4,
+    "snippet": "x7]*a3C+a3A[0xb]*a3D+a3A[0xf]*a3E,a3y;},a3s[\"transformQuat\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 29,
+    "refCount": 4,
+    "snippet": "a3A[0x7]*a3C+a3A[0xb]*a3D+a3A[0xf]*a3E,a3y;},a3s[ai4(0xdc5)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 invert input entry2 det out2; SERVED: identical (snippet-only twin).",
+   "name": "srcElem2",
+   "selector": "a3C@u0008#31",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 31,
+    "refCount": 2,
+    "snippet": "z[0x1],a3y[0x3]=a3z[0x3];return a3y;},a3t[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3D-a3C*a3B;return a3E?(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 31,
+    "refCount": 2,
+    "snippet": "0x1],a3y[0x3]=a3z[0x3];return a3y;},a3t[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3D-a3C*a3B;return a3E?(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d invert input entry2 det out2 out4; SERVED: identical (snippet-only twin).",
+   "name": "srcElem2",
+   "selector": "a3C@u0008#35",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 35,
+    "refCount": 3,
+    "snippet": "]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3A*"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 35,
+    "refCount": 3,
+    "snippet": "0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3A*"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d multiply caches a[1] element; SERVED: identical (snippet-only twin).",
+   "name": "srcElem1",
+   "selector": "a3C@u0008#36",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 3,
+    "snippet": "return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 3,
+    "snippet": "return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d rotate caches a[1] element; SERVED: identical (snippet-only twin).",
+   "name": "srcElem1",
+   "selector": "a3C@u0008#37",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 37,
+    "refCount": 2,
+    "snippet": "M+a3G,a3y;},a3u[\"mul\"]=a3u['multiply'],a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 37,
+    "refCount": 2,
+    "snippet": ",a3y;},a3u[ai4(0xcfe)]=a3u['multiply'],a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat3 translate input entry1 out1 out7; SERVED: identical (snippet-only twin).",
+   "name": "mElem1",
+   "selector": "a3C@u0008#45",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 45,
+    "refCount": 2,
+    "snippet": "3G+a3S*a3J,a3y;},a3v['mul']=a3v['multiply'],a3v[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 45,
+    "refCount": 2,
+    "snippet": "a3G+a3S*a3J,a3y;},a3v['mul']=a3v['multiply'],a3v[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: normalFromMat4 entry2 minors out3 out4; SERVED: identical (snippet-only twin).",
+   "name": "srcElem2",
+   "selector": "a3C@u0008#49",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 49,
+    "refCount": 5,
+    "snippet": "3N,a3y[0x8]=0x1-a3H-a3J,a3y;},a3v[\"normalFromMat4\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 49,
+    "refCount": 5,
+    "snippet": "=a3L+a3N,a3y[0x8]=0x1-a3H-a3J,a3y;},a3v[ai4(0x449)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 adjoint input entry2 eighteen cofactors; SERVED: identical (snippet-only twin).",
+   "name": "srcElem2",
+   "selector": "a3C@u0008#52",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 52,
+    "refCount": 18,
+    "snippet": "a3T-a3J*a3R+a3K*a3Q)*a42,a3y):null;},a3w[\"adjoint\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 52,
+    "refCount": 18,
+    "snippet": "3T-a3J*a3R+a3K*a3Q)*a42,a3y):null;},a3w[ai4(0x1b5)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 translate vector y eight products; SERVED: identical (snippet-only twin).",
+   "name": "transY",
+   "selector": "a3C@u0008#55",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 55,
+    "refCount": 8,
+    "snippet": "3M+a3U*a3Q,a3y;},a3w['mul']=a3w['multiply'],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 55,
+    "refCount": 8,
+    "snippet": "a3M+a3U*a3Q,a3y;},a3w['mul']=a3w['multiply'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotate normalized axis x eleven uses; SERVED: identical (snippet-only twin).",
+   "name": "axisX",
+   "selector": "a3C@u0008#57",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 57,
+    "refCount": 11,
+    "snippet": "[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf],a3y;},a3w['rotate']=function(a3y,a3z,a3A,a3B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 57,
+    "refCount": 11,
+    "snippet": "[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf],a3y;},a3w['rotate']=function(a3y,a3z,a3A,a3B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotateX cosine eight blends; SERVED: identical (snippet-only twin).",
+   "name": "cosAngle",
+   "selector": "a3C@u0008#58",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 58,
+    "refCount": 8,
+    "snippet": "xe],a3y[0xf]=a3z[0xf]),a3y);},a3w[\"rotateX\"]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[\"sin\"](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 58,
+    "refCount": 8,
+    "snippet": "y[0xf]=a3z[0xf]),a3y);},a3w[ai4(0x4a0)]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[air(0xbd6)](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotateY cosine eight blends; SERVED: identical (snippet-only twin).",
+   "name": "cosAngle",
+   "selector": "a3C@u0008#59",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 59,
+    "refCount": 8,
+    "snippet": "3y[0xb]=a3K*a3C-a3G*a3B,a3y;},a3w[\"rotateY\"]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[\"sin\"](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 59,
+    "refCount": 8,
+    "snippet": "]=a3K*a3C-a3G*a3B,a3y;},a3w[ai4(0xfbc)]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[ais(0xbd6)](a3A),a3C=Math[ais(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotateZ cosine eight blends; SERVED: identical (snippet-only twin).",
+   "name": "cosAngle",
+   "selector": "a3C@u0008#60",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 60,
+    "refCount": 8,
+    "snippet": "3y[0xb]=a3G*a3B+a3K*a3C,a3y;},a3w['rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 60,
+    "refCount": 8,
+    "snippet": "3y[0xb]=a3G*a3B+a3K*a3C,a3y;},a3w['rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[ait(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: perspective far plane denom out10 out14; SERVED: identical (snippet-only twin).",
+   "name": "farPlane",
+   "selector": "a3C@u0008#64",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 64,
+    "refCount": 3,
+    "snippet": "3y[0xd]=0x0,a3y[0xe]=a3E*a3D*0x2*a3H,a3y[0xf]=0x0,a3y;},a3w[\"perspective\"]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[\"tan\"](a3z/0x2),a3E=0x1/(a3B-a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 64,
+    "refCount": 3,
+    "snippet": "0,a3y[0xd]=0x0,a3y[0xe]=a3E*a3D*0x2*a3H,a3y[0xf]=0x0,a3y;},a3w[ai4(0x5fc)]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[aiu(0x49d)](a3z/0x2),a3E=0x1/("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ortho top plane denom out13; SERVED: identical (snippet-only twin).",
+   "name": "orthoTop",
+   "selector": "a3C@u0008#65",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 65,
+    "refCount": 2,
+    "snippet": "=0x0,a3y[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[\"ortho\"]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 65,
+    "refCount": 2,
+    "snippet": "0,a3y[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[ai4(0x508)]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat multiply first-operand y four lanes; SERVED: identical (snippet-only twin).",
+   "name": "quatAy",
+   "selector": "a3C@u0008#69",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 69,
+    "refCount": 4,
+    "snippet": "Math[\"cos\"](a3A),a3y;},a3x[\"add\"]=a3s['add'],a3x[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A[0x0],a3G=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 69,
+    "refCount": 4,
+    "snippet": "xb69)](a3A),a3y;},a3x[ai4(0x8da)]=a3s['add'],a3x[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A[0x0],a3G=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateX input y out1 out2; SERVED: identical (snippet-only twin).",
+   "name": "quatY",
+   "selector": "a3C@u0008#70",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 70,
+    "refCount": 2,
+    "snippet": "3x['scale']=a3s['scale'],a3x['rotateX']=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[\"sin\"](a3A),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 70,
+    "refCount": 2,
+    "snippet": "3x['scale']=a3s['scale'],a3x['rotateX']=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[aiA(0xbd6)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateZ input y out0 out1; SERVED: identical (snippet-only twin).",
+   "name": "quatY",
+   "selector": "a3C@u0008#72",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 72,
+    "refCount": 2,
+    "snippet": "3]=a3E*a3G-a3C*a3F,a3y;},a3x['rotateZ']=function(a3y,a3z,a3A){var aiC=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[\"sin\"](a3A),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 72,
+    "refCount": 2,
+    "snippet": "3]=a3E*a3G-a3C*a3F,a3y;},a3x['rotateZ']=function(a3y,a3z,a3A){var aiC=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[aiC(0xbd6)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat calculateW input z out2 lensq; SERVED: identical (snippet-only twin).",
+   "name": "quatZ",
+   "selector": "a3C@u0008#73",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 73,
+    "refCount": 3,
+    "snippet": "x3]=a3E*a3G-a3D*a3F,a3y;},a3x[\"calculateW\"]=function(a3y,a3z){var aiD=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2];return a3y[0x0]=a3A,a3y[0x1]=a3B,a3y[0x2]=a3C,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 73,
+    "refCount": 3,
+    "snippet": "[0x3]=a3E*a3G-a3D*a3F,a3y;},a3x[ai4(0xf6c)]=function(a3y,a3z){var aiD=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2];return a3y[0x0]=a3A,a3y[0x1]=a3B,a3y[0x2]=a3C,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat slerp first-operand x dot out0; SERVED: identical (snippet-only twin).",
+   "name": "fromQuatX",
+   "selector": "a3C@u0008#74",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0008",
+    "index": 74,
+    "refCount": 2,
+    "snippet": ";},a3x['dot']=a3s[\"dot\"],a3x[\"lerp\"]=a3s['lerp'],a3x[\"slerp\"]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F=a3z[0x3],a3G=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 74,
+    "refCount": 2,
+    "snippet": "=a3s[ai4(0xbe8)],a3x[ai4(0x108e)]=a3s['lerp'],a3x[ai4(0xbd7)]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F=a3z[0x3],a3G=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 cross second-input x out1 out2; SERVED: identical (snippet-only twin).",
+   "name": "vecBX",
+   "selector": "a3E@u0008#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "]+a3y[0x2]*a3z[0x2];},a3r[\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2];return a3y[0x0]=a3C*a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "3y[0x2]*a3z[0x2];},a3r[ai4(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2];return a3y[0x0]=a3C*a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 forEach callback arg passthrough; SERVED: identical (snippet-only twin).",
+   "name": "vec3ForEachArg",
+   "selector": "a3E@u0008#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "3y;},a3r[\"forEach\"]=(function(){var aif=ai4,a3y=a3r[\"create\"]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3B=0x0),a3C?a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "},a3r[ai4(0x68f)]=(function(){var aif=ai4,a3y=a3r[aif(0xf2a)]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3B=0x0),a3C?a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 normalize sqlen then inverse length; SERVED: identical (snippet-only twin).",
+   "name": "invLen",
+   "selector": "a3E@u0008#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 7,
+    "snippet": ",a3s[\"normalize\"]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3D;return a3E>0x0&&(a3E=0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 7,
+    "snippet": "},a3s[ai4(0xfc6)]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3D;return a3E>0x0&&(a3E=0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: passive-false options for touchstart listener; SERVED: identical (snippet-only twin).",
+   "name": "touchstartOpts",
+   "selector": "a3A@u0365#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "chend\",a3x,a3y);var a3z={};a3z[\"passive\"]=![],window['addEventListener']('touchcancel',a3x,a3z);var a3A={};a3A[\"passive\"]=![],window[\"addEventListener\"](\"touchs"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "x870),a3x,a3y);var a3z={};a3z[aor(0x8c3)]=![],window['addEventListener']('touchcancel',a3x,a3z);var a3A={};a3A[aor(0x8c3)]=![],window[aor(0xa9a)](aor(0xcc4),a3x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: passive-false options for scroll preventDefault listener; SERVED: identical (snippet-only twin).",
+   "name": "scrollListenerOpts",
+   "selector": "a3B@u0365#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "[a3F];a3G['hovering']&&a3G['ReDNKHkwk']&&(a3G['onscroll']&&a3G[\"onscroll\"](a3C[\"deltaY\"]));}}});var a3B={};return a3B[\"passive\"]=![],window['addEventListener']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "3F];a3G['hovering']&&a3G['ReDNKHkwk']&&(a3G['onscroll']&&a3G[aoy(0xbd9)](a3C[aoy(0x410)]));}}});var a3B={};return a3B[aor(0x8c3)]=![],window['addEventListener']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: makeContainer x assigned to position.x; SERVED: identical (snippet-only twin).",
+   "name": "boxX",
+   "selector": "a3C@u0365#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ts':new GR(),'resizeElements':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][(\"objec"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ts':new GR(),'resizeElements':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][(anZ(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over resizeElements invoking func; SERVED: identical (snippet-only twin).",
+   "name": "resizeIdx",
+   "selector": "a3C@u0365#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "j']=a3C,a3E['func']=a3D,this[\"resizeElements\"]['push'](a3E);},'resize':function(){var ao1=o;for(var a3C=0x0;a3C<this[\"resizeElements\"][\"length\"];a3C++){try{this"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "3E['obj']=a3C,a3E['func']=a3D,this[ao0(0xe43)]['push'](a3E);},'resize':function(){var ao1=o;for(var a3C=0x0;a3C<this[ao1(0xe43)][ao1(0x3a2)];a3C++){try{this['re"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: element factory input stored as r23ZS3L2g; SERVED: identical (snippet-only twin).",
+   "name": "displayObject",
+   "selector": "a3C@u0365#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "func'](this['resizeElements'][a3C][\"obj\"]);}catch(a3D){console['error'](a3D);}}},'element':function(a3C){var ao4=o,a3D={\"r23ZS3L2g\":a3C,'manager':this,'oNdPPkNK"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "](this['resizeElements'][a3C][ao1(0x9a0)]);}catch(a3D){console['error'](a3D);}}},'element':function(a3C){var ao4=o,a3D={\"r23ZS3L2g\":a3C,'manager':this,'oNdPPkNK"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new scene element pushed to scenes; SERVED: identical (snippet-only twin).",
+   "name": "scene",
+   "selector": "a3C@u0365#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 10,
+    "snippet": "eys'](a3E);},set 'onhover'(a3E){this['hoverEvent']=a3E;}};return a3D;},'scene':function(){var aok=o,a3C=this['element'](a3i['scene']());return this[\"scenes\"]['p"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 10,
+    "snippet": "eys'](a3E);},set 'onhover'(a3E){this['hoverEvent']=a3E;}};return a3D;},'scene':function(){var aok=o,a3C=this['element'](a3i['scene']());return this[aok(0x8dc)]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scene moved to front of scenes; SERVED: identical (snippet-only twin).",
+   "name": "scene",
+   "selector": "a3C@u0365#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "['splice'](this[\"scenes\"]['indexOf'](a3C),0x1),this['scenes'][\"push\"](a3C);},'aaeyZuCrUvt':function(a3C){var aoo=o;if(this['scenes'][\"indexOf\"](a3C)==-0x1)retur"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "ce'](this[aon(0x8dc)]['indexOf'](a3C),0x1),this['scenes'][aon(0xf1e)](a3C);},'aaeyZuCrUvt':function(a3C){var aoo=o;if(this['scenes'][aoo(0xfad)](a3C)==-0x1)retu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scene moved to back of scenes; SERVED: identical (snippet-only twin).",
+   "name": "scene",
+   "selector": "a3C@u0365#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "ice'](this['scenes'][\"indexOf\"](a3C),0x1),this[\"scenes\"]['splice'](0x0,0x0,a3C);},'update':function(a3C,a3D){var aop=o;Gk&&tl['length']>0x0&&(a3D=tl);for(let a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "'](this['scenes'][aoo(0xfad)](a3C),0x1),this[aoo(0x8dc)]['splice'](0x0,0x0,a3C);},'update':function(a3C,a3D){var aop=o;Gk&&tl['length']>0x0&&(a3D=tl);for(let a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mouse event checked which, forwarded to handlers; SERVED: identical (snippet-only twin).",
+   "name": "mouseEvent",
+   "selector": "a3C@u0365#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 8,
+    "refCount": 10,
+    "snippet": "J;if(a3J=='pointer')tu('hoverover');else{}}else a3K&&tu(\"hoverover\");}},a3l='',a3m=0x0;function a3n(a3C,a3D,a3E){var aoq=o;if(a3C!=undefined&&a3C!=null&&a3C['wh"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 8,
+    "refCount": 10,
+    "snippet": "3J;if(a3J=='pointer')tu('hoverover');else{}}else a3K&&tu(aop(0x5ba));}},a3l='',a3m=0x0;function a3n(a3C,a3D,a3E){var aoq=o;if(a3C!=undefined&&a3C!=null&&a3C['wh"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mousedown event forwarded to a3n handler; SERVED: identical (snippet-only twin).",
+   "name": "mouseEvent",
+   "selector": "a3C@u0365#9",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "};a3o[\"capture\"]=!![],a3o[\"passive\"]=!![],document['body']['addEventListener'](\"mousedown\",function(a3C){a3n(a3C,![],!![]);},a3o);function a3p(a3C){var aos=aor;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 9,
+    "refCount": 1,
+    "snippet": ";a3o[aor(0x243)]=!![],a3o[aor(0x8c3)]=!![],document['body']['addEventListener'](aor(0x5c2),function(a3C){a3n(a3C,![],!![]);},a3o);function a3p(a3C){var aos=aor;"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: touch event read for changedTouches, preventDefault; SERVED: identical (snippet-only twin).",
+   "name": "touchEvent",
+   "selector": "a3C@u0365#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 10,
+    "refCount": 8,
+    "snippet": "ocument['body']['addEventListener'](\"mousedown\",function(a3C){a3n(a3C,![],!![]);},a3o);function a3p(a3C){var aos=aor;L1&&document['body']['requestFullscreen']()"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 10,
+    "refCount": 8,
+    "snippet": "document['body']['addEventListener'](aor(0x5c2),function(a3C){a3n(a3C,![],!![]);},a3o);function a3p(a3C){var aos=aor;L1&&document['body']['requestFullscreen']()"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: touchmove event scanned for untracked touches; SERVED: identical (snippet-only twin).",
+   "name": "touchMoveEvent",
+   "selector": "a3C@u0365#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 11,
+    "refCount": 5,
+    "snippet": "\"touchstart\",a3p,a3q);var a3r={};a3r['passive']=![],window['addEventListener'](\"touchmove\",function(a3C){var aot=aor;for(let a3D=0x0;a3D<a3C['touches']['length'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 11,
+    "refCount": 5,
+    "snippet": "](aor(0xcc4),a3p,a3q);var a3r={};a3r['passive']=![],window['addEventListener'](aor(0x10a4),function(a3C){var aot=aor;for(let a3D=0x0;a3D<a3C['touches']['length'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mouseup event which-button guard checked; SERVED: identical (snippet-only twin).",
+   "name": "mouseUpEvent",
+   "selector": "a3C@u0365#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 12,
+    "refCount": 3,
+    "snippet": "entDefault\"],a3F['stopPropagation']=a3C['stopPropagation'],a3p(a3F);}},a3r);var a3s=[];function a3t(a3C,a3D){var aou=aor;if(a3C!=undefined&&a3C['which']!=undefi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 12,
+    "refCount": 3,
+    "snippet": "[aot(0xd6a)],a3F['stopPropagation']=a3C['stopPropagation'],a3p(a3F);}},a3r);var a3s=[];function a3t(a3C,a3D){var aou=aor;if(a3C!=undefined&&a3C['which']!=undefi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mouseup listener event forwarded to a3t; SERVED: identical (snippet-only twin).",
+   "name": "mouseUpEvent",
+   "selector": "a3C@u0365#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "={};a3u[\"capture\"]=!![],a3u['passive']=!![],document['body']['addEventListener']('mouseup',function(a3C){a3t(a3C);},a3u);function a3v(a3C){var aow=aor;if(tl['le"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "{};a3u[aor(0x243)]=!![],a3u['passive']=!![],document['body']['addEventListener']('mouseup',function(a3C){a3t(a3C);},a3u);function a3v(a3C){var aow=aor;if(tl['le"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: touch event cancelled via preventDefault stopPropagation; SERVED: identical (snippet-only twin).",
+   "name": "touchEvent",
+   "selector": "a3C@u0365#17",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "\"]=![],window[\"addEventListener\"](\"touchstart\",a3x,a3A),window[\"addEventListener\"]('wheel',function(a3C){var aoy=aor;if(Kq[\"pointerLocked\"])return;for(var a3D=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "A={};a3A[aor(0x8c3)]=![],window[aor(0xa9a)](aor(0xcc4),a3x,a3A),window[aor(0xa9a)]('wheel',function(a3C){var aoy=aor;if(Kq[aoy(0x551)])return;for(var a3D=0x0;a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scroll event preventDefault only; SERVED: identical (snippet-only twin).",
+   "name": "scrollEvent",
+   "selector": "a3C@u0365#18",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0365",
+    "index": 18,
+    "refCount": 1,
+    "snippet": "[\"deltaY\"]));}}});var a3B={};return a3B[\"passive\"]=![],window['addEventListener'](\"scroll\",function(a3C){a3C['preventDefault']();},a3B),a3k;}"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 18,
+    "refCount": 1,
+    "snippet": "0x410)]));}}});var a3B={};return a3B[aor(0x8c3)]=![],window['addEventListener'](aor(0x935),function(a3C){a3C['preventDefault']();},a3B),a3k;}"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: makeContainer width assigned to width; SERVED: identical (snippet-only twin).",
+   "name": "boxWidth",
+   "selector": "a3E@u0365#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "GR(),'resizeElements':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][(\"object\")]();r"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "GR(),'resizeElements':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][(anZ(0x478))]()"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: resize obj-func record pushed to resizeElements; SERVED: identical (snippet-only twin).",
+   "name": "resizeEntry",
+   "selector": "a3E@u0365#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "sition']['y']=a3D,a3G['width']=a3E,a3G['height']=a3F,a3G;},'yhikrzIhlK':function(a3C,a3D){var ao0=o,a3E={};a3E['obj']=a3C,a3E['func']=a3D,this[\"resizeElements\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "sition']['y']=a3D,a3G['width']=a3E,a3G['height']=a3F,a3G;},'yhikrzIhlK':function(a3C,a3D){var ao0=o,a3E={};a3E['obj']=a3C,a3E['func']=a3D,this[ao0(0xe43)]['push"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: easing function stored as easeFunc fallback linear; SERVED: identical (snippet-only twin).",
+   "name": "easeFunc",
+   "selector": "a3E@u0365#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "![],'iQzpbKKrtiD':!![],'changeCursor':!![],'useCasualHitbox':!![],'hoverElements':[],set 'easeType'(a3E){var ao2=o;typeof a3E!=\"function\"&&(a3E=tc['linear']),th"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "![],'iQzpbKKrtiD':!![],'changeCursor':!![],'useCasualHitbox':!![],'hoverElements':[],set 'easeType'(a3E){var ao2=o;typeof a3E!=ao2(0x20a)&&(a3E=tc['linear']),th"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: child appended to visual object; SERVED: identical (snippet-only twin).",
+   "name": "childNode",
+   "selector": "a3E@u0365#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "w a3i['vFgdYWoMXeQ'](),'hovering':![],'mousedown':![],'draggable':![],'dragging':![],'add':function(a3E){var ao5=ao4;return this[\"r23ZS3L2g\"][\"add\"](a3E);},'otY"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "w a3i['vFgdYWoMXeQ'](),'hovering':![],'mousedown':![],'draggable':![],'dragging':![],'add':function(a3E){var ao5=ao4;return this[ao5(0xc7e)][ao5(0x8da)](a3E);},"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: child removed from visual object; SERVED: identical (snippet-only twin).",
+   "name": "childNode",
+   "selector": "a3E@u0365#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "ng':![],'add':function(a3E){var ao5=ao4;return this[\"r23ZS3L2g\"][\"add\"](a3E);},'otYTUIhzc':function(a3E){return this[\"r23ZS3L2g\"]['otYTUIhzc'](a3E);},'setCurren"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "![],'add':function(a3E){var ao5=ao4;return this[ao5(0xc7e)][ao5(0x8da)](a3E);},'otYTUIhzc':function(a3E){return this[\"r23ZS3L2g\"]['otYTUIhzc'](a3E);},'setCurren"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: force flag rebuilds casual state; SERVED: identical (snippet-only twin).",
+   "name": "forceRebuild",
+   "selector": "a3E@u0365#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "ze']=this[\"r23ZS3L2g\"]['size'],a3E['opacity']=this[\"r23ZS3L2g\"]['opacity'];},'xhOdNSwMWQd':function(a3E){var ao7=ao4;if(this[\"casual\"]!=undefined&&!a3E)return;t"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "ize']=this[\"r23ZS3L2g\"]['size'],a3E['opacity']=this[ao6(0xc7e)]['opacity'];},'xhOdNSwMWQd':function(a3E){var ao7=ao4;if(this[ao7(0x248)]!=undefined&&!a3E)return"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: callback invoked then forwarded to visual; SERVED: identical (snippet-only twin).",
+   "name": "elementCallback",
+   "selector": "a3E@u0365#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "fined&&(this[\"FShYTnMIW\"]['y']=this[\"xZ99d3OY82\"]['y']=this['casual']['y']);},'XOVWraMIAg':function(a3E){var ao9=ao4;a3E(this),this[\"r23ZS3L2g\"]['XOVWraMIAg'](a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "efined&&(this[ao8(0xa05)]['y']=this[\"xZ99d3OY82\"]['y']=this['casual']['y']);},'XOVWraMIAg':function(a3E){var ao9=ao4;a3E(this),this[ao9(0xc7e)]['XOVWraMIAg'](a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: target values stored as transition endpoint; SERVED: identical (snippet-only twin).",
+   "name": "targetState",
+   "selector": "a3E@u0365#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "g':function(a3E){var ao9=ao4;a3E(this),this[\"r23ZS3L2g\"]['XOVWraMIAg'](a3E);},'HDpQschGFg':function(a3E,a3F){var aoa=ao4;!this['casual']&&this['xhOdNSwMWQd'](),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "Ag':function(a3E){var ao9=ao4;a3E(this),this[ao9(0xc7e)]['XOVWraMIAg'](a3E);},'HDpQschGFg':function(a3E,a3F){var aoa=ao4;!this['casual']&&this['xhOdNSwMWQd'](),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index scanning transitioningElements for self; SERVED: identical (snippet-only twin).",
+   "name": "transitionIdx",
+   "selector": "a3E@u0365#9",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 9,
+    "refCount": 4,
+    "snippet": "'][\"transitioningElements\"]['nyCcnsjbx'](this);},'removeTransitions':function(){var aob=ao4;for(var a3E=0x0;a3E<this['manager']['transitioningElements']['length"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 9,
+    "refCount": 4,
+    "snippet": "this['manager'][aoa(0x2f4)]['nyCcnsjbx'](this);},'removeTransitions':function(){var aob=ao4;for(var a3E=0x0;a3E<this['manager']['transitioningElements']['length"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: target values applied onto visual properties; SERVED: identical (snippet-only twin).",
+   "name": "targetState",
+   "selector": "a3E@u0365#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "s']),this[\"manager\"]['transitioningElements']['splice'](a3E,0x1);return;}},'transitionNow':function(a3E,a3F){var aoc=ao4;!a3F&&(a3F=Object['keys'](a3E));for(var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "]),this[aob(0x1070)]['transitioningElements']['splice'](a3E,0x1);return;}},'transitionNow':function(a3E,a3F){var aoc=ao4;!a3F&&(a3F=Object['keys'](a3E));for(var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: element added to hoverElements list; SERVED: identical (snippet-only twin).",
+   "name": "hoverElement",
+   "selector": "a3E@u0365#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "](this[\"hidden\"],Object['keys'](this['hidden'])),this[\"isVisible\"]=![];},'addHoverElement':function(a3E){var aoh=ao4;this['hoverElements']['indexOf'](a3E)==-0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "this[aog(0x59d)],Object['keys'](this['hidden'])),this[aog(0x10b2)]=![];},'addHoverElement':function(a3E){var aoh=ao4;this['hoverElements']['indexOf'](a3E)==-0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: element located in hoverElements for removal; SERVED: identical (snippet-only twin).",
+   "name": "hoverElement",
+   "selector": "a3E@u0365#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "lements']['indexOf'](a3E)==-0x1&&this['hoverElements'][\"push\"](a3E);},'removeHoverElement':function(a3E){var aoi=ao4,a3F=this[\"hoverElements\"]['indexOf'](a3E);a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "nts']['indexOf'](a3E)==-0x1&&this['hoverElements'][aoh(0xf1e)](a3E);},'removeHoverElement':function(a3E){var aoi=ao4,a3F=this[aoi(0xc61)]['indexOf'](a3E);a3F!=-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hover state stored as hoverObj, keys enumerated; SERVED: identical (snippet-only twin).",
+   "name": "hoverState",
+   "selector": "a3E@u0365#14",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "[\"hoverElements\"]['indexOf'](a3E);a3F!=-0x1&&this['hoverElements'][\"splice\"](a3F,0x1);},set 'hover'(a3E){var aoj=ao4;this[\"xhOdNSwMWQd\"](),this[\"hoverObj\"]=a3E,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "his[aoi(0xc61)]['indexOf'](a3E);a3F!=-0x1&&this['hoverElements'][aoi(0x5de)](a3F,0x1);},set 'hover'(a3E){var aoj=ao4;this[aoj(0xddf)](),this[aoj(0x2fd)]=a3E,thi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hover callback stored as hoverEvent; SERVED: identical (snippet-only twin).",
+   "name": "hoverHandler",
+   "selector": "a3E@u0365#15",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 15,
+    "refCount": 1,
+    "snippet": "s[\"xhOdNSwMWQd\"](),this[\"hoverObj\"]=a3E,this['hoverProperties']=Object['keys'](a3E);},set 'onhover'(a3E){this['hoverEvent']=a3E;}};return a3D;},'scene':function"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 15,
+    "refCount": 1,
+    "snippet": "this[aoj(0xddf)](),this[aoj(0x2fd)]=a3E,this['hoverProperties']=Object['keys'](a3E);},set 'onhover'(a3E){this['hoverEvent']=a3E;}};return a3D;},'scene':function"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over element arrays in update; SERVED: identical (snippet-only twin).",
+   "name": "elemIdx",
+   "selector": "a3E@u0365#16",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 16,
+    "refCount": 11,
+    "snippet": "];a3U++){a3D[a3U]['afCJVYrCGK']&&(a3D[a3U]['LrAPqsjYfmN'](a3j),a3D[a3U][\"afCJVYrCGK\"]=![]);}for(var a3E=0x0;a3E<this['transitioningElements'][\"length\"];a3E++){v"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 16,
+    "refCount": 11,
+    "snippet": "2)];a3U++){a3D[a3U]['afCJVYrCGK']&&(a3D[a3U]['LrAPqsjYfmN'](a3j),a3D[a3U][aop(0xd69)]=![]);}for(var a3E=0x0;a3E<this['transitioningElements'][aop(0x3a2)];a3E++)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag gates pointer-lock click branch; SERVED: identical (snippet-only twin).",
+   "name": "allowPointerClick",
+   "selector": "a3E@u0365#19",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 19,
+    "refCount": 1,
+    "snippet": "=='pointer')tu('hoverover');else{}}else a3K&&tu(\"hoverover\");}},a3l='',a3m=0x0;function a3n(a3C,a3D,a3E){var aoq=o;if(a3C!=undefined&&a3C!=null&&a3C['which']!=u"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 19,
+    "refCount": 1,
+    "snippet": "J=='pointer')tu('hoverover');else{}}else a3K&&tu(aop(0x5ba));}},a3l='',a3m=0x0;function a3n(a3C,a3D,a3E){var aoq=o;if(a3C!=undefined&&a3C!=null&&a3C['which']!=u"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "never incremented; always-zero preventDefault guard",
+   "selector": "a3E@u0365#20",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag skips already-tracked touches; SERVED: identical (snippet-only twin).",
+   "name": "alreadyTracked",
+   "selector": "a3E@u0365#21",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 21,
+    "refCount": 2,
+    "snippet": "ner'](\"touchmove\",function(a3C){var aot=aor;for(let a3D=0x0;a3D<a3C['touches']['length'];a3D++){let a3E=![];for(let a3G=0x0;a3G<tl[\"length\"];a3G++){tl[a3G][\"ide"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 21,
+    "refCount": 2,
+    "snippet": "ner'](aor(0x10a4),function(a3C){var aot=aor;for(let a3D=0x0;a3D<a3C['touches']['length'];a3D++){let a3E=![];for(let a3G=0x0;a3G<tl[aot(0x3a2)];a3G++){tl[a3G][ao"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: nested mouseup dispatcher over hoverElements; SERVED: identical (snippet-only twin).",
+   "name": "dispatchMouseUp",
+   "selector": "a3E@u0365#22",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "!=0x1)return;if(Kq[\"pointerLocked\"]||window['uiDisabled'])return;a3D==undefined&&(a3D=a3s);function a3E(a3F){var aov=aou;for(let a3K=0x0;a3K<a3k[\"scenes\"]['leng"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "ich']!=0x1)return;if(Kq[aou(0x551)]||window['uiDisabled'])return;a3D==undefined&&(a3D=a3s);function a3E(a3F){var aov=aou;for(let a3K=0x0;a3K<a3k[aov(0x8dc)]['le"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current scene in wheel handler loop; SERVED: identical (snippet-only twin).",
+   "name": "wheelScene",
+   "selector": "a3E@u0365#25",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0365",
+    "index": 25,
+    "refCount": 5,
+    "snippet": "for(var a3D=0x0;a3D<a3k['scenes'][\"length\"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E[\"overlay\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 25,
+    "refCount": 5,
+    "snippet": "r(var a3D=0x0;a3D<a3k['scenes'][aoy(0x3a2)];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E[aoy(0x829)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: height param assigned to container; SERVED: identical (snippet-only twin).",
+   "name": "containerHeight",
+   "selector": "a3F@u0365#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",'resizeElements':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][(\"object\")]();retur"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",'resizeElements':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][(anZ(0x478))]();ret"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: property key list stored as transitionProps; SERVED: identical (snippet-only twin).",
+   "name": "transitionKeys",
+   "selector": "a3F@u0365#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "unction(a3E){var ao9=ao4;a3E(this),this[\"r23ZS3L2g\"]['XOVWraMIAg'](a3E);},'HDpQschGFg':function(a3E,a3F){var aoa=ao4;!this['casual']&&this['xhOdNSwMWQd'](),!a3F"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "function(a3E){var ao9=ao4;a3E(this),this[ao9(0xc7e)]['XOVWraMIAg'](a3E);},'HDpQschGFg':function(a3E,a3F){var aoa=ao4;!this['casual']&&this['xhOdNSwMWQd'](),!a3F"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: property key list applied by transitionNow; SERVED: identical (snippet-only twin).",
+   "name": "transitionKeys",
+   "selector": "a3F@u0365#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 2,
+    "refCount": 4,
+    "snippet": ",this[\"manager\"]['transitioningElements']['splice'](a3E,0x1);return;}},'transitionNow':function(a3E,a3F){var aoc=ao4;!a3F&&(a3F=Object['keys'](a3E));for(var a3G"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "his[aob(0x1070)]['transitioningElements']['splice'](a3E,0x1);return;}},'transitionNow':function(a3E,a3F){var aoc=ao4;!a3F&&(a3F=Object['keys'](a3E));for(var a3G"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current hover element reset in loop; SERVED: identical (snippet-only twin).",
+   "name": "hoverElement",
+   "selector": "a3F@u0365#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "s['casual'],this['hoverProperties']);for(var a3E=0x0;a3E<this['hoverElements']['length'];a3E++){var a3F=this['hoverElements'][a3E];a3F[\"removeTransitions\"](),a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "s['casual'],this['hoverProperties']);for(var a3E=0x0;a3E<this['hoverElements']['length'];a3E++){var a3F=this['hoverElements'][a3E];a3F[aod(0x41f)](),a3F['transi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: indexOf result locating hover element; SERVED: identical (snippet-only twin).",
+   "name": "hoverIndex",
+   "selector": "a3F@u0365#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "f'](a3E)==-0x1&&this['hoverElements'][\"push\"](a3E);},'removeHoverElement':function(a3E){var aoi=ao4,a3F=this[\"hoverElements\"]['indexOf'](a3E);a3F!=-0x1&&this['h"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "a3E)==-0x1&&this['hoverElements'][aoh(0xf1e)](a3E);},'removeHoverElement':function(a3E){var aoi=ao4,a3F=this[aoi(0xc61)]['indexOf'](a3E);a3F!=-0x1&&this['hoverE"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current element interpolated in update loop; SERVED: identical (snippet-only twin).",
+   "name": "transitioningElement",
+   "selector": "a3F@u0365#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 5,
+    "refCount": 25,
+    "snippet": "a3D[a3U][\"afCJVYrCGK\"]=![]);}for(var a3E=0x0;a3E<this['transitioningElements'][\"length\"];a3E++){var a3F=this['transitioningElements']['array'][a3E];a3F['time']+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 5,
+    "refCount": 25,
+    "snippet": "a3D[a3U][aop(0xd69)]=![]);}for(var a3E=0x0;a3E<this['transitioningElements'][aop(0x3a2)];a3E++){var a3F=this['transitioningElements']['array'][a3E];a3F['time']+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag returned when mousedown hits element; SERVED: identical (snippet-only twin).",
+   "name": "mouseDownHandled",
+   "selector": "a3F@u0365#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "touch\")==-0x1)return;if(Kq['pointerLocked']||window['uiDisabled'])return;a3m=Date[\"now\"](),tr();var a3F=![];for(var a3G=0x0;a3G<a3k['scenes'][\"length\"];a3G++){i"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "))==-0x1)return;if(Kq['pointerLocked']||window['uiDisabled'])return;a3m=Date[aoq(0x1c2)](),tr();var a3F=![];for(var a3G=0x0;a3G<a3k['scenes'][aoq(0x3a2)];a3G++)"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding assigned never read",
+   "selector": "a3F@u0365#7",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fake event object forwarded to touchstart; SERVED: identical (snippet-only twin).",
+   "name": "syntheticTouchEvent",
+   "selector": "a3F@u0365#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 8,
+    "refCount": 4,
+    "snippet": "\"];a3G++){tl[a3G][\"identifier\"]==a3C['touches'][a3D]['identifier']&&(a3E=!![]);}if(a3E)continue;let a3F={};a3F['chan'+'gedTouches']=[a3C['touches'][a3D]],a3F['p"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 8,
+    "refCount": 4,
+    "snippet": "a2)];a3G++){tl[a3G][aot(0x3b2)]==a3C['touches'][a3D]['identifier']&&(a3E=!![]);}if(a3E)continue;let a3F={};a3F['chan'+'gedTouches']=[a3C['touches'][a3D]],a3F['p"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: pointer array scanned for hover collisions; SERVED: identical (snippet-only twin).",
+   "name": "pointerList",
+   "selector": "a3F@u0365#9",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 9,
+    "refCount": 4,
+    "snippet": "1)return;if(Kq[\"pointerLocked\"]||window['uiDisabled'])return;a3D==undefined&&(a3D=a3s);function a3E(a3F){var aov=aou;for(let a3K=0x0;a3K<a3k[\"scenes\"]['length']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 9,
+    "refCount": 4,
+    "snippet": "]!=0x1)return;if(Kq[aou(0x551)]||window['uiDisabled'])return;a3D==undefined&&(a3D=a3s);function a3E(a3F){var aov=aou;for(let a3K=0x0;a3K<a3k[aov(0x8dc)]['length"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over changedTouches in touchend; SERVED: identical (snippet-only twin).",
+   "name": "touchIndex",
+   "selector": "a3F@u0365#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "on a3v(a3C){var aow=aor;if(tl['length']==0x0)return;let a3D=a3C['chan'+'gedTouches'],a3E=[];for(let a3F=0x0;a3F<a3D['length'];a3F++){for(let a3G=0x0;a3G<tl[\"len"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "on a3v(a3C){var aow=aor;if(tl['length']==0x0)return;let a3D=a3C['chan'+'gedTouches'],a3E=[];for(let a3F=0x0;a3F<a3D['length'];a3F++){for(let a3G=0x0;a3G<tl[aow("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scene loop index in touchmove scroll; SERVED: identical (snippet-only twin).",
+   "name": "sceneIndex",
+   "selector": "a3F@u0365#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 11,
+    "refCount": 8,
+    "snippet": "+Math[\"pow\"](a3L['y']-a3L[\"startY\"],0x2));if(a3M>0x14){let a3O=a3L['y']-a3L[\"oldY\"],a3P=![];for(var a3F=0x0;a3F<a3k['scenes']['length'];a3F++){if(!a3k['scenes']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 11,
+    "refCount": 8,
+    "snippet": "x326)](a3L['y']-a3L[aox(0xe2b)],0x2));if(a3M>0x14){let a3O=a3L['y']-a3L[aox(0xed6)],a3P=![];for(var a3F=0x0;a3F<a3k['scenes']['length'];a3F++){if(!a3k['scenes']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: element loop index in wheel handler; SERVED: identical (snippet-only twin).",
+   "name": "elementIndex",
+   "selector": "a3F@u0365#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0365",
+    "index": 13,
+    "refCount": 6,
+    "snippet": "NKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E[\"overlay\"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 13,
+    "refCount": 6,
+    "snippet": "KHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E[aoy(0x829)])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new container positioned sized returned; SERVED: identical (snippet-only twin).",
+   "name": "newContainer",
+   "selector": "a3G@u0365#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "s':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][(\"object\")]();return a3G['position"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "s':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][(anZ(0x478))]();return a3G['positi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over transition property keys; SERVED: identical (snippet-only twin).",
+   "name": "propIndex",
+   "selector": "a3G@u0365#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "x1);return;}},'transitionNow':function(a3E,a3F){var aoc=ao4;!a3F&&(a3F=Object['keys'](a3E));for(var a3G=0x0;a3G<a3F[\"length\"];a3G++){var a3H=a3F[a3G];a3H=='x'||"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "x1);return;}},'transitionNow':function(a3E,a3F){var aoc=ao4;!a3F&&(a3F=Object['keys'](a3E));for(var a3G=0x0;a3G<a3F[aoc(0x3a2)];a3G++){var a3H=a3F[a3G];a3H=='x'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: normalized time ratio fed to easeFunc; SERVED: identical (snippet-only twin).",
+   "name": "transitionProgress",
+   "selector": "a3G@u0365#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "p'],this['transitioningElements']['remove'](a3E),a3F['transitionNow'](a3F[\"xZ99d3OY82\"]),a3E--);var a3G=a3F['time']/a3F[\"oNdPPkNKFp\"];for(var a3H=0x0;a3H<a3F['t"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "p'],this['transitioningElements']['remove'](a3E),a3F['transitionNow'](a3F[\"xZ99d3OY82\"]),a3E--);var a3G=a3F['time']/a3F[aop(0xa8a)];for(var a3H=0x0;a3H<a3F['tra"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scene loop index in mousedown handler; SERVED: identical (snippet-only twin).",
+   "name": "sceneIndex",
+   "selector": "a3G@u0365#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "turn;if(Kq['pointerLocked']||window['uiDisabled'])return;a3m=Date[\"now\"](),tr();var a3F=![];for(var a3G=0x0;a3G<a3k['scenes'][\"length\"];a3G++){if(!a3k['scenes']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "if(Kq['pointerLocked']||window['uiDisabled'])return;a3m=Date[aoq(0x1c2)](),tr();var a3F=![];for(var a3G=0x0;a3G<a3k['scenes'][aoq(0x3a2)];a3G++){if(!a3k['scenes"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over changedTouches in touchstart; SERVED: identical (snippet-only twin).",
+   "name": "touchIndex",
+   "selector": "a3G@u0365#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 6,
+    "snippet": "or;L1&&document['body']['requestFullscreen']();var a3D=a3C['chan'+\"gedTouches\"];let a3E=0x0;for(let a3G=0x0;a3G<a3D['length'];a3G++){for(let a3I=0x0;a3I<tl[\"len"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 6,
+    "snippet": "=aor;L1&&document['body']['requestFullscreen']();var a3D=a3C['chan'+aos(0x32a)];let a3E=0x0;for(let a3G=0x0;a3G<a3D['length'];a3G++){for(let a3I=0x0;a3I<tl[aos("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index scanning tracked touches list; SERVED: identical (snippet-only twin).",
+   "name": "trackedTouchIndex",
+   "selector": "a3G@u0365#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "\",function(a3C){var aot=aor;for(let a3D=0x0;a3D<a3C['touches']['length'];a3D++){let a3E=![];for(let a3G=0x0;a3G<tl[\"length\"];a3G++){tl[a3G][\"identifier\"]==a3C['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "),function(a3C){var aot=aor;for(let a3D=0x0;a3D<a3C['touches']['length'];a3D++){let a3E=![];for(let a3G=0x0;a3G<tl[aot(0x3a2)];a3G++){tl[a3G][aot(0x3b2)]==a3C['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over hoverElements in dispatch; SERVED: identical (snippet-only twin).",
+   "name": "hoverIndex",
+   "selector": "a3G@u0365#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "NKHkwk'])continue;let a3L=a3k['scenes'][a3K];if(a3k[\"hasOverlay\"]&&!a3L[\"overlay\"])continue;for(var a3G=0x0;a3G<a3L[\"hoverElements\"][\"length\"];a3G++){var a3H=a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "DNKHkwk'])continue;let a3L=a3k['scenes'][a3K];if(a3k[aov(0x8a9)]&&!a3L[aov(0x829)])continue;for(var a3G=0x0;a3G<a3L[aov(0xc61)][aov(0x3a2)];a3G++){var a3H=a3L['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tracked-touch index with splice removal; SERVED: identical (snippet-only twin).",
+   "name": "trackedTouchIndex",
+   "selector": "a3G@u0365#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 7,
+    "refCount": 6,
+    "snippet": "0x0)return;let a3D=a3C['chan'+'gedTouches'],a3E=[];for(let a3F=0x0;a3F<a3D['length'];a3F++){for(let a3G=0x0;a3G<tl[\"length\"];a3G++){a3D[a3F]['identifier']==tl[a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 7,
+    "refCount": 6,
+    "snippet": "0x0)return;let a3D=a3C['chan'+'gedTouches'],a3E=[];for(let a3F=0x0;a3F<a3D['length'];a3F++){for(let a3G=0x0;a3G<tl[aow(0x3a2)];a3G++){a3D[a3F]['identifier']==tl"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current scene in touchmove scroll loop; SERVED: identical (snippet-only twin).",
+   "name": "scrollScene",
+   "selector": "a3G@u0365#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "for(var a3F=0x0;a3F<a3k['scenes']['length'];a3F++){if(!a3k['scenes'][a3F]['ReDNKHkwk'])continue;var a3G=a3k['scenes'][a3F];if(a3k[\"hasOverlay\"]&&!a3G['overlay']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "for(var a3F=0x0;a3F<a3k['scenes']['length'];a3F++){if(!a3k['scenes'][a3F]['ReDNKHkwk'])continue;var a3G=a3k['scenes'][a3F];if(a3k[aox(0x8a9)]&&!a3G['overlay'])c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: element receiving onscroll in wheel handler; SERVED: identical (snippet-only twin).",
+   "name": "scrollTarget",
+   "selector": "a3G@u0365#9",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0365",
+    "index": 9,
+    "refCount": 7,
+    "snippet": "'hasOverlay']&&!a3E[\"overlay\"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G[\"onscroll\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 9,
+    "refCount": 7,
+    "snippet": "hasOverlay']&&!a3E[aoy(0x829)])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G[aoy(0xbd9)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current property key compared x/y; SERVED: identical (snippet-only twin).",
+   "name": "propKey",
+   "selector": "a3H@u0365#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "n(a3E,a3F){var aoc=ao4;!a3F&&(a3F=Object['keys'](a3E));for(var a3G=0x0;a3G<a3F[\"length\"];a3G++){var a3H=a3F[a3G];a3H=='x'||a3H=='y'?this[\"r23ZS3L2g\"][\"position\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "a3E,a3F){var aoc=ao4;!a3F&&(a3F=Object['keys'](a3E));for(var a3G=0x0;a3G<a3F[aoc(0x3a2)];a3G++){var a3H=a3F[a3G];a3H=='x'||a3H=='y'?this[\"r23ZS3L2g\"][aoc(0x215)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: index over transitionProps in update interpolation; SERVED: identical (snippet-only twin).",
+   "name": "propIndex",
+   "selector": "a3H@u0365#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0365",
+    "index": 1,
+    "refCount": 10,
+    "snippet": "](a3E),a3F['transitionNow'](a3F[\"xZ99d3OY82\"]),a3E--);var a3G=a3F['time']/a3F[\"oNdPPkNKFp\"];for(var a3H=0x0;a3H<a3F['transitionProps'][\"length\"];a3H++){var a3I="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 1,
+    "refCount": 10,
+    "snippet": "e'](a3E),a3F['transitionNow'](a3F[\"xZ99d3OY82\"]),a3E--);var a3G=a3F['time']/a3F[aop(0xa8a)];for(var a3H=0x0;a3H<a3F['transitionProps'][aop(0x3a2)];a3H++){var a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current scene in mousedown dispatch loop; SERVED: identical (snippet-only twin).",
+   "name": "mouseDownScene",
+   "selector": "a3H@u0365#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "for(var a3G=0x0;a3G<a3k['scenes'][\"length\"];a3G++){if(!a3k['scenes'][a3G]['ReDNKHkwk'])continue;var a3H=a3k['scenes'][a3G];if(a3k['hasOverlay']&&!a3H[\"overlay\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "r(var a3G=0x0;a3G<a3k['scenes'][aoq(0x3a2)];a3G++){if(!a3k['scenes'][a3G]['ReDNKHkwk'])continue;var a3H=a3k['scenes'][a3G];if(a3k['hasOverlay']&&!a3H[aoq(0x829)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new tracked pointer initialized pushed; SERVED: identical (snippet-only twin).",
+   "name": "newTouchPointer",
+   "selector": "a3H@u0365#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0365",
+    "index": 5,
+    "refCount": 13,
+    "snippet": "(let a3I=0x0;a3I<tl[\"length\"];a3I++){if(tl[a3I]['identifier']==a3D[a3G][\"identifier\"])continue;}let a3H=new tm();a3H['identifier']=a3D[a3G]['identifier'],a3H['x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 5,
+    "refCount": 13,
+    "snippet": "(let a3I=0x0;a3I<tl[aos(0x3a2)];a3I++){if(tl[a3I]['identifier']==a3D[a3G][aos(0x3b2)])continue;}let a3H=new tm();a3H['identifier']=a3D[a3G]['identifier'],a3H['x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hover element tested clicked released; SERVED: identical (snippet-only twin).",
+   "name": "hoverElement",
+   "selector": "a3H@u0365#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 30,
+    "snippet": "asOverlay\"]&&!a3L[\"overlay\"])continue;for(var a3G=0x0;a3G<a3L[\"hoverElements\"][\"length\"];a3G++){var a3H=a3L['hoverElements'][a3G],a3I=![];for(var a3J=0x0;a3J<a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 6,
+    "refCount": 30,
+    "snippet": "k[aov(0x8a9)]&&!a3L[aov(0x829)])continue;for(var a3G=0x0;a3G<a3L[aov(0xc61)][aov(0x3a2)];a3G++){var a3H=a3L['hoverElements'][a3G],a3I=![];for(var a3J=0x0;a3J<a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over hoverElements in scroll; SERVED: identical (snippet-only twin).",
+   "name": "hoverIndex",
+   "selector": "a3H@u0365#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0365",
+    "index": 7,
+    "refCount": 3,
+    "snippet": "NKHkwk'])continue;var a3G=a3k['scenes'][a3F];if(a3k[\"hasOverlay\"]&&!a3G['overlay'])continue;for(var a3H=0x0;a3H<a3G['hoverElements']['length'];a3H++){var a3I=a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0365",
+    "index": 7,
+    "refCount": 3,
+    "snippet": "eDNKHkwk'])continue;var a3G=a3k['scenes'][a3F];if(a3k[aox(0x8a9)]&&!a3G['overlay'])continue;for(var a3H=0x0;a3H<a3G['hoverElements']['length'];a3H++){var a3I=a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: abs yaw-delta vs prior frame, wrap-fixed, throttles listener update; SERVED: identical (snippet-only twin).",
+   "name": "angleDelta",
+   "selector": "a3A@u0375#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 4,
+    "snippet": ")](),a3x=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[\"QTOKQmNlEY\"]['DefaultUp'][\"clone\"](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Mat"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "(),a3x=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[aoV(0x1001)]['DefaultUp'][aoV(0xae2)](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Mat"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: gain-setter arg scaled into setValueAtTime on; SERVED: identical (snippet-only twin).",
+   "name": "gainValue",
+   "selector": "a3B@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "3w,'rand':a3x-a3w,'volume':a3y,'audioCategory':'sfx','gain':tB[\"createGain\"](),'avLenDzTQ':function(a3B){var aoP=aoO;this['gain']['gain'][\"setValueAtTime\"](pars"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ":a3w,'rand':a3x-a3w,'volume':a3y,'audioCategory':'sfx','gain':tB[aoO(0x16a)](),'avLenDzTQ':function(a3B){var aoP=aoO;this['gain']['gain'][aoP(0x804)](parseFloat"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: decoded audio buffer stored to sample, loop flag set; SERVED: identical (snippet-only twin).",
+   "name": "decodedSample",
+   "selector": "a3B@u0375#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "oat(a3B*tD*a3l(this)),0x0);},'cbs':[]},a3A!=undefined&&tx[a3u][\"cbs\"]['push'](a3A),a3i(a3v,function(a3B){var aoQ=aoO;tx[a3u]['sample']=a3B,tx[a3u]['gain'][\"gain"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "3B*tD*a3l(this)),0x0);},'cbs':[]},a3A!=undefined&&tx[a3u][aoO(0x580)]['push'](a3A),a3i(a3v,function(a3B){var aoQ=aoO;tx[a3u]['sample']=a3B,tx[a3u]['gain'][aoQ(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: wrap-adjusted current yaw feeding delta recompute; SERVED: identical (snippet-only twin).",
+   "name": "adjustedAngle",
+   "selector": "a3B@u0375#2",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[\"QTOKQmNlEY\"]['DefaultUp'][\"clone\"](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Math['abs']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "ew usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[aoV(0x1001)]['DefaultUp'][aoV(0xae2)](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Math['abs']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index draining loaded-callback queue after decode; SERVED: identical (snippet-only twin).",
+   "name": "cbIndex",
+   "selector": "a3C@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "n']['connect'](tB[\"destination\"]);a3z!=undefined&&(a3B['loop']=!![]);tx[a3u][\"loaded\"]=!![];for(let a3C=0x0;a3C<tx[a3u][\"cbs\"][\"length\"];a3C++){tx[a3u]['cbs'][a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "in']['connect'](tB[aoQ(0x1b6)]);a3z!=undefined&&(a3B['loop']=!![]);tx[a3u][aoQ(0xcec)]=!![];for(let a3C=0x0;a3C<tx[a3u][aoQ(0x580)][aoQ(0x3a2)];a3C++){tx[a3u]['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: wrap-adjusted prior yaw feeding delta recompute; SERVED: identical (snippet-only twin).",
+   "name": "adjustedPrevAngle",
+   "selector": "a3C@u0375#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 4,
+    "snippet": " usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[\"QTOKQmNlEY\"]['DefaultUp'][\"clone\"](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Math['abs'](a3F"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "svzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[aoV(0x1001)]['DefaultUp'][aoV(0xae2)](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Math['abs'](a3F"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: force flag bypassing throttle gate in listener updater; SERVED: identical (snippet-only twin).",
+   "name": "forceListenerUpdate",
+   "selector": "a3E@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "eY'](),a3y=usvzFuAsEB[\"QTOKQmNlEY\"]['DefaultUp'][\"clone\"](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Math['abs'](a3F-a3z);if(a3A>3.14){a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "'](),a3y=usvzFuAsEB[aoV(0x1001)]['DefaultUp'][aoV(0xae2)](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Math['abs'](a3F-a3z);if(a3A>3.14){a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: incoming yaw compared to stored, then stored; SERVED: identical (snippet-only twin).",
+   "name": "currentAngle",
+   "selector": "a3F@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "(),a3y=usvzFuAsEB[\"QTOKQmNlEY\"]['DefaultUp'][\"clone\"](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Math['abs'](a3F-a3z);if(a3A>3.14){a3B=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ",a3y=usvzFuAsEB[aoV(0x1001)]['DefaultUp'][aoV(0xae2)](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV;a3A=Math['abs'](a3F-a3z);if(a3A>3.14){a3B=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: caught listener exception passed to console logger; SERVED: identical (snippet-only twin).",
+   "name": "listenerError",
+   "selector": "a3G@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "z']),tB['listener'][\"setOrientation\"](a3x['x'],a3x['y'],a3x['z'],a3y['x'],a3y['y'],a3y['z']);}catch(a3G){console[\"log\"](a3G);}};};}"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3u['z']),tB['listener'][aoW(0x102e)](a3x['x'],a3x['y'],a3x['z'],a3y['x'],a3y['y'],a3y['z']);}catch(a3G){console[aoW(0xc04)](a3G);}};};}"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding, refCount=0, never read",
+   "selector": "a3j@u0375#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: resume-once latch set in resume handler, gates playback; SERVED: identical (snippet-only twin).",
+   "name": "audioUnlocked",
+   "selector": "a3k@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ion(a3w){return tB['decodeAudioData'](a3w,function(a3x){a3v(a3x);},function(a3x){});});}var a3j=![],a3k=![];tr=function(){var aoM=o;if(a3k)return;a3k=!![],tB[\"r"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ion(a3w){return tB['decodeAudioData'](a3w,function(a3x){a3v(a3x);},function(a3x){});});}var a3j=![],a3k=![];tr=function(){var aoM=o;if(a3k)return;a3k=!![],tB[ao"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: category-volume multiplier via window hook, defaults one; SERVED: identical (snippet-only twin).",
+   "name": "getCategoryVolume",
+   "selector": "a3l@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "x[\"playbackRate\"]['value']=a3u[\"low\"]+Math['random']()*a3u['rand'],a3x[\"start\"](0x0),a3x;};function a3l(a3u){if(window['getAudioCategoryVolume']==undefined)retu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "N(0x7ff)]['value']=a3u[aoN(0x49a)]+Math['random']()*a3u['rand'],a3x[aoN(0x9a6)](0x0),a3x;};function a3l(a3u){if(window['getAudioCategoryVolume']==undefined)retu"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "single use inside empty conditional, role unprovable",
+   "selector": "a3n@u0375#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index registering grass and concrete step sounds; SERVED: identical (snippet-only twin).",
+   "name": "stepIndex",
+   "selector": "a3o@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "rDSPeMAYa',\"audio/flesh.mp3\",1.3,1.3,0.7),a3m('gB4Cncy3f4',\"audio/hitmark.mp3\",0.5,0.5,0.8);for(var a3o=0x0;a3o<0x4;a3o++){a3m(\"grass_step\"+a3o,'audio/step'+a3o"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 10,
+    "snippet": ",1.3,0.8),a3m('hrDSPeMAYa',aoR(0x834),1.3,1.3,0.7),a3m('gB4Cncy3f4',aoR(0xb30),0.5,0.5,0.8);for(var a3o=0x0;a3o<0x4;a3o++){a3m(aoR(0xc0)+a3o,'audio/step'+a3o+'."
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: base playback rate for concrete step registrations; SERVED: identical (snippet-only twin).",
+   "name": "stepBaseRate",
+   "selector": "a3p@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ".15),a3m(\"loud_grass\"+a3o,'audio/step'+a3o+'.mp3',0.75,0.8,0.5);}for(var a3o=0x0;a3o<0x3;a3o++){var a3p=1.2;a3m('pl_step'+a3o,'audio/concrete'+a3o+'.mp3',a3p,a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",0.15),a3m(aoR(0xf23)+a3o,'audio/step'+a3o+'.mp3',0.75,0.8,0.5);}for(var a3o=0x0;a3o<0x3;a3o++){var a3p=1.2;a3m('pl_step'+a3o,'audio/concrete'+a3o+'.mp3',a3p,a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scratch playback rate reused across sound registrations; SERVED: identical (snippet-only twin).",
+   "name": "rateScratch",
+   "selector": "a3q@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "=0x0;a3o<0x3;a3o++){var a3p=1.2;a3m('pl_step'+a3o,'audio/concrete'+a3o+'.mp3',a3p,a3p+0.3,0.4);}var a3q=1.4;a3m(\"land\",'audio/concrete0.mp3',a3q,a3q,1.5),a3q=0."
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "=0x0;a3o<0x3;a3o++){var a3p=1.2;a3m('pl_step'+a3o,'audio/concrete'+a3o+'.mp3',a3p,a3p+0.3,0.4);}var a3q=1.4;a3m(aoR(0x87e),'audio/concrete0.mp3',a3q,a3q,1.5),a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: pool array of created panner nodes with positions; SERVED: identical (snippet-only twin).",
+   "name": "pannerPool",
+   "selector": "a3r@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ain'][\"gain\"][\"setValueAtTime\"](parseFloat(tx[a3v[a3w]]['volume']*tD*a3l(tx[a3v[a3w]])),0x0);}};var a3r=[];function a3s(a3u){return a3r['push']({'pos':a3u,'UDYr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'gain'][aoT(0x969)][aoT(0x804)](parseFloat(tx[a3v[a3w]]['volume']*tD*a3l(tx[a3v[a3w]])),0x0);}};var a3r=[];function a3s(a3u){return a3r['push']({'pos':a3u,'UDYr"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: throttle counter gating listener orientation refresh; SERVED: identical (snippet-only twin).",
+   "name": "throttleCount",
+   "selector": "a3t@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "('Panner\\x20is\\x20undefined');return;}a3y[\"setPosition\"](a3v['x']*tA,a3v['y']*tA,a3v['z']*tA);};var a3t=0x0;tq=function(){var aoV=aoR,a3u=new usvzFuAsEB['gURkzC"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "g']('Panner\\x20is\\x20undefined');return;}a3y[aoU(0x784)](a3v['x']*tA,a3v['y']*tA,a3v['z']*tA);};var a3t=0x0;tq=function(){var aoV=aoR,a3u=new usvzFuAsEB['gURkzC"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tw param; reads sample/gain/low/rand, builds buffer source; SERVED: identical (snippet-only twin).",
+   "name": "soundEntry",
+   "selector": "a3u@u0375#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "});}var a3j=![],a3k=![];tr=function(){var aoM=o;if(a3k)return;a3k=!![],tB[\"resume\"]();},tw=function(a3u,a3v,a3w){var aoN=o;if(a3u==undefined||a3u['sample']==und"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 6,
+    "snippet": ";}var a3j=![],a3k=![];tr=function(){var aoM=o;if(a3k)return;a3k=!![],tB[aoM(0xbfd)]();},tw=function(a3u,a3v,a3w){var aoN=o;if(a3u==undefined||a3u['sample']==und"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a3l param; reads audioCategory for volume lookup; SERVED: identical (snippet-only twin).",
+   "name": "soundEntry",
+   "selector": "a3u@u0375#2",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "laybackRate\"]['value']=a3u[\"low\"]+Math['random']()*a3u['rand'],a3x[\"start\"](0x0),a3x;};function a3l(a3u){if(window['getAudioCategoryVolume']==undefined)return 0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "7ff)]['value']=a3u[aoN(0x49a)]+Math['random']()*a3u['rand'],a3x[aoN(0x9a6)](0x0),a3x;};function a3l(a3u){if(window['getAudioCategoryVolume']==undefined)return 0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tu param; keys audioSampleCache lookup, forwarded once; SERVED: identical (snippet-only twin).",
+   "name": "soundName",
+   "selector": "a3u@u0375#4",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0375",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "];for(let a3C=0x0;a3C<tx[a3u][\"cbs\"][\"length\"];a3C++){tx[a3u]['cbs'][a3C]();}});}ty=a3m,tu=function(a3u,a3v){return tw(tx[a3u],null,a3v);};var a3n=![];a3m('matr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "et a3C=0x0;a3C<tx[a3u][aoQ(0x580)][aoQ(0x3a2)];a3C++){tx[a3u]['cbs'][a3C]();}});}ty=a3m,tu=function(a3u,a3v){return tw(tx[a3u],null,a3v);};var a3n=![];a3m('matr"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tv param; clamped 0-3, selects kill pitch/volume tiers; SERVED: identical (snippet-only twin).",
+   "name": "streakCount",
+   "selector": "a3u@u0375#5",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0375",
+    "index": 5,
+    "refCount": 12,
+    "snippet": "en',\"audio/death.mp3\",0.4,0.4,0.1),a3m(\"qD6M1FU5HDG\",'audio/confirm.mp3',0.66,0.66,0.8),tv=function(a3u){var aoS=aoR;a3u=a3u-0x1;a3u>0x3&&(a3u=0x3);var a3v=0x1;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 5,
+    "refCount": 12,
+    "snippet": "a3m('caseopen',aoR(0x19a),0.4,0.4,0.1),a3m(aoR(0xae),'audio/confirm.mp3',0.66,0.66,0.8),tv=function(a3u){var aoS=aoR;a3u=a3u-0x1;a3u>0x3&&(a3u=0x3);var a3v=0x1;"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tt param; scales global gain, resets all sounds; SERVED: identical (snippet-only twin).",
+   "name": "masterVolume",
+   "selector": "a3u@u0375#6",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0375",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "x]['gain']['gain'][\"setValueAtTime\"](parseFloat(a3w*tD*a3l(tx[a3x])),0x0),tu(a3x,![]);},tt=function(a3u){var aoT=aoR;!isNaN(a3u)&&(tD=a3u*tC);var a3v=Object['ke"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 6,
+    "refCount": 3,
+    "snippet": ",tx[a3x]['gain']['gain'][aoS(0x804)](parseFloat(a3w*tD*a3l(tx[a3x])),0x0),tu(a3x,![]);},tt=function(a3u){var aoT=aoR;!isNaN(a3u)&&(tD=a3u*tC);var a3v=Object['ke"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a3s param; stored as panner entry pos; SERVED: identical (snippet-only twin).",
+   "name": "soundPos",
+   "selector": "a3u@u0375#7",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0375",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "lueAtTime\"](parseFloat(tx[a3v[a3w]]['volume']*tD*a3l(tx[a3v[a3w]])),0x0);}};var a3r=[];function a3s(a3u){return a3r['push']({'pos':a3u,'UDYrzIiOP':tB['createPan"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "aoT(0x804)](parseFloat(tx[a3v[a3w]]['volume']*tD*a3l(tx[a3v[a3w]])),0x0);}};var a3r=[];function a3s(a3u){return a3r['push']({'pos':a3u,'UDYrzIiOP':tB['createPan"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tq vector; decompose target, listener setPosition; SERVED: identical (snippet-only twin).",
+   "name": "listenerPos",
+   "selector": "a3u@u0375#9",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0375",
+    "index": 9,
+    "refCount": 5,
+    "snippet": "rn;}a3y[\"setPosition\"](a3v['x']*tA,a3v['y']*tA,a3v['z']*tA);};var a3t=0x0;tq=function(){var aoV=aoR,a3u=new usvzFuAsEB['gURkzCzeY'](),a3v=new usvzFuAsEB[(\"ooGSY"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 9,
+    "refCount": 5,
+    "snippet": "eturn;}a3y[aoU(0x784)](a3v['x']*tA,a3v['y']*tA,a3v['z']*tA);};var a3t=0x0;tq=function(){var aoV=aoR,a3u=new usvzFuAsEB['gURkzCzeY'](),a3v=new usvzFuAsEB[(aoV(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fetch then param; arrayBuffer called once; SERVED: identical (snippet-only twin).",
+   "name": "fetchResponse",
+   "selector": "a3w@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "function tE(){var aoR=ai1;tx={};function a3i(a3u,a3v){var aoL=o;return fetch(a3u)['then'](function(a3w){return a3w['arrayBuffer']();})[\"then\"](function(a3w){re"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "function tE(){var aoR=ai1;tx={};function a3i(a3u,a3v){var aoL=o;return fetch(a3u)['then'](function(a3w){return a3w['arrayBuffer']();})[aoL(0x4d6)](function(a3w"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: decodeAudioData input from arrayBuffer then; SERVED: identical (snippet-only twin).",
+   "name": "audioArrayBuffer",
+   "selector": "a3w@u0375#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "){var aoL=o;return fetch(a3u)['then'](function(a3w){return a3w['arrayBuffer']();})[\"then\"](function(a3w){return tB['decodeAudioData'](a3w,function(a3x){a3v(a3x)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "r aoL=o;return fetch(a3u)['then'](function(a3w){return a3w['arrayBuffer']();})[aoL(0x4d6)](function(a3w){return tB['decodeAudioData'](a3w,function(a3x){a3v(a3x)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tw param; assigned to source loop flag; SERVED: identical (snippet-only twin).",
+   "name": "shouldLoop",
+   "selector": "a3w@u0375#2",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "a3j=![],a3k=![];tr=function(){var aoM=o;if(a3k)return;a3k=!![],tB[\"resume\"]();},tw=function(a3u,a3v,a3w){var aoN=o;if(a3u==undefined||a3u['sample']==undefined)r"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "j=![],a3k=![];tr=function(){var aoM=o;if(a3k)return;a3k=!![],tB[aoM(0xbfd)]();},tw=function(a3u,a3v,a3w){var aoN=o;if(a3u==undefined||a3u['sample']==undefined)r"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tt loop counter over sound-name keys; SERVED: identical (snippet-only twin).",
+   "name": "keyIndex",
+   "selector": "a3w@u0375#5",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0375",
+    "index": 5,
+    "refCount": 6,
+    "snippet": "a3x,![]);},tt=function(a3u){var aoT=aoR;!isNaN(a3u)&&(tD=a3u*tC);var a3v=Object['keys'](tx);for(var a3w=0x0;a3w<a3v[\"length\"];a3w++){isNaN(tx[a3v[a3w]][\"volume\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 5,
+    "refCount": 6,
+    "snippet": "a3x,![]);},tt=function(a3u){var aoT=aoR;!isNaN(a3u)&&(tD=a3u*tC);var a3v=Object['keys'](tx);for(var a3w=0x0;a3w<a3v[aoT(0x3a2)];a3w++){isNaN(tx[a3v[a3w]][aoT(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: tq vector; third decompose argument, scale slot; SERVED: identical (snippet-only twin).",
+   "name": "scaleVec",
+   "selector": "a3w@u0375#7",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0375",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "0x0;tq=function(){var aoV=aoR,a3u=new usvzFuAsEB['gURkzCzeY'](),a3v=new usvzFuAsEB[(\"ooGSYjPde\")](),a3w=new usvzFuAsEB[(\"gURkzCzeY\")](),a3x=new usvzFuAsEB['gURk"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "=0x0;tq=function(){var aoV=aoR,a3u=new usvzFuAsEB['gURkzCzeY'](),a3v=new usvzFuAsEB[(aoV(0xdf9))](),a3w=new usvzFuAsEB[(aoV(0x736))](),a3x=new usvzFuAsEB['gURkz"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: decode success param; passed to load callback; SERVED: identical (snippet-only twin).",
+   "name": "decodedBuffer",
+   "selector": "a3x@u0375#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3w){return a3w['arrayBuffer']();})[\"then\"](function(a3w){return tB['decodeAudioData'](a3w,function(a3x){a3v(a3x);},function(a3x){});});}var a3j=![],a3k=![];tr="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "{return a3w['arrayBuffer']();})[aoL(0x4d6)](function(a3w){return tB['decodeAudioData'](a3w,function(a3x){a3v(a3x);},function(a3x){});});}var a3j=![],a3k=![];tr="
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount zero, empty error callback",
+   "selector": "a3x@u0375#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tw buffer source; looped, connected, started, returned; SERVED: identical (snippet-only twin).",
+   "name": "bufferSource",
+   "selector": "a3x@u0375#2",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "nction(a3u,a3v,a3w){var aoN=o;if(a3u==undefined||a3u['sample']==undefined)return;if(!a3k)return;var a3x=tB[\"createBufferSource\"]();return a3x['buffer']=a3u[\"sam"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "nction(a3u,a3v,a3w){var aoN=o;if(a3u==undefined||a3u['sample']==undefined)return;if(!a3k)return;var a3x=tB[aoN(0x7dd)]();return a3x['buffer']=a3u[aoN(0xfed)],a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tq forward vector; set, rotated, orients listener; SERVED: identical (snippet-only twin).",
+   "name": "forwardVec",
+   "selector": "a3x@u0375#6",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u0375",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "w usvzFuAsEB['gURkzCzeY'](),a3v=new usvzFuAsEB[(\"ooGSYjPde\")](),a3w=new usvzFuAsEB[(\"gURkzCzeY\")](),a3x=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[\"QTOKQmNlEY"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "new usvzFuAsEB['gURkzCzeY'](),a3v=new usvzFuAsEB[(aoV(0xdf9))](),a3w=new usvzFuAsEB[(aoV(0x736))](),a3x=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[aoV(0x1001)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: DefaultUp clone; listener orientation up vector; SERVED: identical (snippet-only twin).",
+   "name": "upVec",
+   "selector": "a3y@u0375#2",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "w usvzFuAsEB[(\"ooGSYjPde\")](),a3w=new usvzFuAsEB[(\"gURkzCzeY\")](),a3x=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[\"QTOKQmNlEY\"]['DefaultUp'][\"clone\"](),a3z=0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "new usvzFuAsEB[(aoV(0xdf9))](),a3w=new usvzFuAsEB[(aoV(0x736))](),a3x=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[aoV(0x1001)]['DefaultUp'][aoV(0xae2)](),a3z=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: last listener angle; wrap compare, updated; SERVED: identical (snippet-only twin).",
+   "name": "prevAngle",
+   "selector": "a3z@u0375#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "RkzCzeY\")](),a3x=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[\"QTOKQmNlEY\"]['DefaultUp'][\"clone\"](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0375",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "0x736))](),a3x=new usvzFuAsEB['gURkzCzeY'](),a3y=usvzFuAsEB[aoV(0x1001)]['DefaultUp'][aoV(0xae2)](),a3z=0x0,a3A=0x0,a3B,a3C;ts=function(a3D,a3E,a3F){var aoW=aoV"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter trimming chars and Number-converting fields; SERVED: same with ai1-decoded length key.; SERVED: identical (snippet-only twin).",
+   "name": "trimScanIndex",
+   "selector": "th@u0360#0",
+   "slice": "slice-04",
+   "disposition": "heldInvalid",
+   "reason": "cross-unit top-level redecl: th already renamed file-wide by th@u2470#0->variantIdx (LD2); same (scope,token) cannot take two names (LD5 precedent: batch49 heldInvalid)",
+   "token": "th",
+   "binding": {
+    "unit": "u0360",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "for(var tf=0x0;tf<te['length'];tf++){if(typeof tc[te[tf]]=='string'){var tg=tc[te[tf]];for(var th=0x0;th<tg[\"length\"];th++){if(!isNaN(tg['charAt'](th))){tg"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0360",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "for(var tf=0x0;tf<te['length'];tf++){if(typeof tc[te[tf]]=='string'){var tg=tc[te[tf]];for(var th=0x0;th<tg[ai1(0x3a2)];th++){if(!isNaN(tg['charAt'](th))){"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: reused for-loop counter over KC and shader lists; SERVED: identical (snippet-only twin).",
+   "name": "loopIdx",
+   "selector": "a3o@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "function W4(){var azS=ai1;Mn['ReDNKHkwk']=![],Mn['tGTnWzZUhv']=![];for(var a3o=0x0;a3o<KC['length'];a3o++){KC[a3o]['s']['display']=\"non"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "function W4(){var azS=ai1;Mn['ReDNKHkwk']=![],Mn['tGTnWzZUhv']=![];for(var a3o=0x0;a3o<KC['length'];a3o++){KC[a3o]['s']['display']=azS("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: init 0x5dc feeds HL duration args, scaled 1.8x; SERVED: identical (snippet-only twin).",
+   "name": "baseDuration",
+   "selector": "a3p@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 24,
+    "snippet": ";Mm['ReDNKHkwk']=![],Mm['tGTnWzZUhv']=!![],Rj(),Mq['ReDNKHkwk']=![],Mq[\"tGTnWzZUhv\"]=![],W6=0x0;var a3p=0x5dc,a3q=a3p*1.5;MH[\"opacity\"]=0x0,MI['opacity']=0x0,MA"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 24,
+    "snippet": "]);Mm['ReDNKHkwk']=![],Mm['tGTnWzZUhv']=!![],Rj(),Mq['ReDNKHkwk']=![],Mq[azS(0xb64)]=![],W6=0x0;var a3p=0x5dc,a3q=a3p*1.5;MH[azS(0x40e)]=0x0,MI['opacity']=0x0,M"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: derived a3p*1.5 used as HL delay argument; SERVED: identical (snippet-only twin).",
+   "name": "baseDelay",
+   "selector": "a3q@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "Hkwk']=![],Mm['tGTnWzZUhv']=!![],Rj(),Mq['ReDNKHkwk']=![],Mq[\"tGTnWzZUhv\"]=![],W6=0x0;var a3p=0x5dc,a3q=a3p*1.5;MH[\"opacity\"]=0x0,MI['opacity']=0x0,MA['opacity'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "NKHkwk']=![],Mm['tGTnWzZUhv']=!![],Rj(),Mq['ReDNKHkwk']=![],Mq[azS(0xb64)]=![],W6=0x0;var a3p=0x5dc,a3q=a3p*1.5;MH[azS(0x40e)]=0x0,MI['opacity']=0x0,MA['opacity"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: array element with uniforms tweened per iteration; SERVED: identical (snippet-only twin).",
+   "name": "shaderItem",
+   "selector": "a3r@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "p'][\"opacity\"]=0x0,Kq['hidePrerenders']();for(var a3o=0x0;a3o<Kq['rtuiAWgKjH']['length'];a3o++){var a3r=Kq['rtuiAWgKjH'][a3o];HL(a3r[\"uniforms\"]['h'],'value',a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "'][azS(0x40e)]=0x0,Kq['hidePrerenders']();for(var a3o=0x0;a3o<Kq['rtuiAWgKjH']['length'];a3o++){var a3r=Kq['rtuiAWgKjH'][a3o];HL(a3r[azS(0x29b)]['h'],'value',a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: dummy object tweened to fire delayed callback; SERVED: identical (snippet-only twin).",
+   "name": "delayTween",
+   "selector": "a3t@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "th',MH[\"width\"],MH['ogWidth'],a3p/0x2,a3p/0x2),HL(MJ,'opacity',0x0,0.87,a3p*0x2,0x12c),a3p*=1.8;var a3t={};a3t['a']=0x0,HL(a3t,'a',0x0,0x1,0x0,a3q+0x1f4,tc['lin"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",MH[azS(0xad0)],MH['ogWidth'],a3p/0x2,a3p/0x2),HL(MJ,'opacity',0x0,0.87,a3p*0x2,0x12c),a3p*=1.8;var a3t={};a3t['a']=0x0,HL(a3t,'a',0x0,0x1,0x0,a3q+0x1f4,tc['lin"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: reassigned target arrays looped for position tweens; SERVED: identical (snippet-only twin).",
+   "name": "tweenTargets",
+   "selector": "a3u@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 20,
+    "snippet": ",HL(N1[\"r23ZS3L2g\"],\"opacity\",0x0,0x1,a3p*0x3,a3q),HL(Kq['eglp'],\"opacity\",0x0,0x1,a3p*0x3,a3q);var a3u=[MK,MM,Kq['HmUBHsPNgO'],N0[\"r23ZS3L2g\"],N1[\"r23ZS3L2g\"],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "HL(N1[azS(0xc7e)],azS(0x40e),0x0,0x1,a3p*0x3,a3q),HL(Kq['eglp'],azS(0x40e),0x0,0x1,a3p*0x3,a3q);var a3u=[MK,MM,Kq['HmUBHsPNgO'],N0[azS(0xc7e)],N1[\"r23ZS3L2g\"],K"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: MB copy styled from MA, size opacity tweens; SERVED: identical (snippet-only twin).",
+   "name": "labelClone",
+   "selector": "a3w@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 6,
+    "snippet": ",a3q);}var a3v=1.1;Gj&&(a3v=1.5);HG(MG,'size'),HL(MG,\"size\",a3v,1.1,a3p*0.5,a3q),MG[\"size\"]=a3v;var a3w=MB;a3w[\"text\"]=MA['text'],a3w['opacity']=0x0,a3w[\"fillSt"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "ar a3v=1.1;Gj&&(a3v=1.5);HG(MG,'size'),HL(MG,azS(0xe8c),a3v,1.1,a3p*0.5,a3q),MG[azS(0xe8c)]=a3v;var a3w=MB;a3w[azS(0x5a6)]=MA['text'],a3w['opacity']=0x0,a3w[azS"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: derived a3q-0x4c4 delay for label tweens; SERVED: identical (snippet-only twin).",
+   "name": "labelDelay",
+   "selector": "a3x@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ize\"]=a3v;var a3w=MB;a3w[\"text\"]=MA['text'],a3w['opacity']=0x0,a3w[\"fillStyle\"]=MA[\"fillStyle\"];var a3x=a3q-0x4c4;HL(a3w,\"size\",0x1,1.6,0x8fc,a3x),HL(a3w,'opaci"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "c)]=a3v;var a3w=MB;a3w[azS(0x5a6)]=MA['text'],a3w['opacity']=0x0,a3w[azS(0xfee)]=MA[azS(0xfee)];var a3x=a3q-0x4c4;HL(a3w,azS(0xe8c),0x1,1.6,0x8fc,a3x),HL(a3w,'o"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: let counter iterating tween target array; SERVED: identical (snippet-only twin).",
+   "name": "targetIdx",
+   "selector": "a3y@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "*0x3,a3q);var a3u=[MK,MM,Kq['HmUBHsPNgO'],N0[\"r23ZS3L2g\"],N1[\"r23ZS3L2g\"],Kq['eglp'],ME,MD];for(let a3y=0x0;a3y<a3u['length'];a3y++){a3u[a3y]['IiFzPLpZAQ']==und"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "p*0x3,a3q);var a3u=[MK,MM,Kq['HmUBHsPNgO'],N0[azS(0xc7e)],N1[\"r23ZS3L2g\"],Kq['eglp'],ME,MD];for(let a3y=0x0;a3y<a3u['length'];a3y++){a3u[a3y]['IiFzPLpZAQ']==und"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: let counter iterating second target group; SERVED: identical (snippet-only twin).",
+   "name": "groupIdx",
+   "selector": "a3z@u2499#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "on'],'y',a3u[a3y]['IiFzPLpZAQ']+0x46,a3u[a3y]['IiFzPLpZAQ'],a3p*0.7,a3q);}a3u=[MH,MI,MA,MC];for(let a3z=0x0;a3z<a3u[\"length\"];a3z++){a3u[a3z][\"IiFzPLpZAQ\"]==und"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2499",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "on'],'y',a3u[a3y]['IiFzPLpZAQ']+0x46,a3u[a3y]['IiFzPLpZAQ'],a3p*0.7,a3q);}a3u=[MH,MI,MA,MC];for(let a3z=0x0;a3z<a3u[azS(0x3a2)];a3z++){a3u[a3z][azS(0x544)]==und"
+   }
+  }
+ ]
+}

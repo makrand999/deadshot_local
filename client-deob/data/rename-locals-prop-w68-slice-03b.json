@@ -1,0 +1,253 @@
+{
+ "meta": {
+  "wave": 68,
+  "slice": "03b"
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {type:mimeType} object passed into new Blob. SERVED: identical (snippet-only twin).",
+   "name": "blobOptions",
+   "selector": "a4m@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Promise reject forwarded as loader error callback. SERVED: identical (snippet-only twin).",
+   "name": "imageLoadReject",
+   "selector": "a4m@u0020#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Sampler entry feeding mag/min/wrap filter lookups. SERVED: identical (snippet-only twin).",
+   "name": "textureSampler",
+   "selector": "a4m@u0020#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Material alphaMode tested for BLEND versus MASK. SERVED: identical (snippet-only twin).",
+   "name": "alphaMode",
+   "selector": "a4m@u0020#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Morph target entry read for POSITION accessor. SERVED: identical (snippet-only twin).",
+   "name": "morphTarget",
+   "selector": "a4m@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Primitive passed to Draco decodePrimitive then rebuild. SERVED: identical (snippet-only twin).",
+   "name": "dracoPrimitive",
+   "selector": "a4m@u0020#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Collects per-primitive meshes, single or Group. SERVED: identical (snippet-only twin).",
+   "name": "builtMeshes",
+   "selector": "a4m@u0020#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Animation channel target node-or-id index. SERVED: identical (snippet-only twin).",
+   "name": "channelTargetNode",
+   "selector": "a4m@u0020#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: extensionsRequired list checked for unknown extension. SERVED: identical (snippet-only twin).",
+   "name": "requiredExtensions",
+   "selector": "a4n@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Previous spline segment base offset into samples. SERVED: identical (snippet-only twin).",
+   "name": "prevSampleBase",
+   "selector": "a4n@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Blob handed to createObjectURL for texture. SERVED: identical (snippet-only twin).",
+   "name": "imageBlob",
+   "selector": "a4n@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Resolve callback, wrapped for ImageBitmap loader path. SERVED: identical (snippet-only twin).",
+   "name": "imageResolve",
+   "selector": "a4n@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {type:textures,index} association record for texture. SERVED: identical (snippet-only twin).",
+   "name": "textureAssoc",
+   "selector": "a4n@u0020#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Plugin queried for getMaterialType in invokeOne. SERVED: identical (snippet-only twin).",
+   "name": "materialPlugin",
+   "selector": "a4n@u0020#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Plugin queried for extendMaterialParams in invokeAll. SERVED: identical (snippet-only twin).",
+   "name": "materialPlugin",
+   "selector": "a4n@u0020#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Constructed material configured, named, registered, returned. SERVED: identical (snippet-only twin).",
+   "name": "builtMaterial",
+   "selector": "a4n@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: New Sphere from Box3 center and radius. SERVED: identical (snippet-only twin).",
+   "name": "boundingSphere",
+   "selector": "a4n@u0020#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Draco-decoded result passed to geometry builder. SERVED: identical (snippet-only twin).",
+   "name": "decodedGeometry",
+   "selector": "a4n@u0020#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Counter over primitives then over built meshes. SERVED: identical (snippet-only twin).",
+   "name": "primLoopIndex",
+   "selector": "a4n@u0020#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Animation sampler input accessor index resolved. SERVED: identical (snippet-only twin).",
+   "name": "inputAccessorId",
+   "selector": "a4n@u0020#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: GLB parse exception forwarded to error callback. SERVED: identical (snippet-only twin).",
+   "name": "parseError",
+   "selector": "a4o@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Decoded Draco geometry whose attributes get normalized. SERVED: identical (snippet-only twin).",
+   "name": "dracoGeometry",
+   "selector": "a4o@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Built BufferAttribute, sparse-patched, then returned. SERVED: identical (snippet-only twin).",
+   "name": "resultAttribute",
+   "selector": "a4o@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {type:materials,index} association record for material. SERVED: identical (snippet-only twin).",
+   "name": "materialAssoc",
+   "selector": "a4o@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop limit over primitives then meshes. SERVED: identical (snippet-only twin).",
+   "name": "loopBound",
+   "selector": "a4o@u0020#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Animation sampler output accessor index resolved. SERVED: identical (snippet-only twin).",
+   "name": "outputAccessorId",
+   "selector": "a4o@u0020#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: For-in key over decoded Draco attributes. SERVED: identical (snippet-only twin).",
+   "name": "dracoAttribKey",
+   "selector": "a4p@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Floor of byteOffset over stride for cache. SERVED: identical (snippet-only twin).",
+   "name": "interleaveBlockIndex",
+   "selector": "a4p@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loaded geometry fed to Mesh/Line/Points constructors. SERVED: identical (snippet-only twin).",
+   "name": "primGeometry",
+   "selector": "a4p@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: All-settled node/accessor/target arrays destructured by index. SERVED: identical (snippet-only twin).",
+   "name": "animDepResults",
+   "selector": "a4p@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Single Draco attribute receiving normalized flag. SERVED: identical (snippet-only twin).",
+   "name": "dracoAttribute",
+   "selector": "a4q@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: InterleavedBuffer cache key for get and add. SERVED: identical (snippet-only twin).",
+   "name": "interleaveCacheKey",
+   "selector": "a4q@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Primitive definition dispatching construction by mode. SERVED: identical (snippet-only twin).",
+   "name": "meshPrimitive",
+   "selector": "a4q@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Resolved animation target nodes array iterated. SERVED: identical (snippet-only twin).",
+   "name": "animTargetNodes",
+   "selector": "a4q@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Normalized flag copied onto Draco attribute. SERVED: identical (snippet-only twin).",
+   "name": "dracoNormalized",
+   "selector": "a4r@u0020#0"
+  }
+ ]
+}

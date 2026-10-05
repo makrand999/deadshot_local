@@ -1,0 +1,222 @@
+{
+ "proposals": [
+  {
+   "selector": "progUniforms@u0020#0",
+   "action": "keep",
+   "name": "progUniforms",
+   "confidence": "high",
+   "evidence": "DECL @511780 var assigned materialProperties.program.getUniforms(); seqWithValue uniforms list build; already-readable program-uniforms abbreviation, canonical three.js WebGLPrograms domain term"
+  },
+  {
+   "selector": "program@u0020#0",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @329046 param of binding-state setup fn; USES program.id compared/stored, passed to setupVertexAttributes; canonical WebGL program term"
+  },
+  {
+   "selector": "program@u0020#1",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @330319 param of getBindingState; USES programMap[program.id] keying binding-state cache; canonical WebGL program term"
+  },
+  {
+   "selector": "program@u0020#2",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @333541 param of setupVertexAttributes; USES program.getAttributes() for attribute location map; canonical WebGL program term"
+  },
+  {
+   "selector": "program@u0020#3",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @337403 param of releaseStatesOfProgram; USES programMap[program.id] deletion across geometries; canonical WebGL program term"
+  },
+  {
+   "selector": "program@u0020#4",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @351448 param of WebGLMorphtargets update; USES program.getUniforms().setValue morphTarget uniforms; canonical WebGL program term"
+  },
+  {
+   "selector": "program@u0020#5",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @364318 param of WebGLUniforms ctor; USES gl.getProgramParameter/getActiveUniform/getUniformLocation; canonical GL program handle term"
+  },
+  {
+   "selector": "program@u0020#6",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @368356 param of fetchAttributeLocations; USES gl.getProgramParameter/getActiveAttrib/getAttribLocation; canonical GL program handle term"
+  },
+  {
+   "selector": "program@u0020#7",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @373096 var gl.createProgram(); 12 USES attachShader/bindAttribLocation/linkProgram/getProgramInfoLog; canonical GL program term"
+  },
+  {
+   "selector": "program@u0020#8",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @393238 var in acquireProgram cache lookup/new WebGLProgram; 6 USES cacheKey/usedTimes/return; canonical program-cache term"
+  },
+  {
+   "selector": "program@u0020#9",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @393578 param of releaseProgram; USES program cache eviction path; canonical program-cache term"
+  },
+  {
+   "selector": "program@u0020#10",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @424638 param of useProgram state fn; USES gl.useProgram-style current-program tracking; canonical GL program term"
+  },
+  {
+   "selector": "program@u0020#11",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @497509 param renderObjectImmediate path; USES forwarded to renderBufferImmediate; canonical program term"
+  },
+  {
+   "selector": "program@u0020#12",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @497640 param of renderBufferImmediate; USES program.getAttributes() for immediate-mode attribs; canonical program term"
+  },
+  {
+   "selector": "program@u0020#13",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @499222 var setProgram() result in renderBufferDirect; USES bindingStates setup call; canonical program term"
+  },
+  {
+   "selector": "program@u0020#14",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @509262 var materialProperties.program in initMaterial; 4 USES cacheKey compare/acquire/store; canonical program-cache term"
+  },
+  {
+   "selector": "program@u0020#15",
+   "action": "keep",
+   "name": "program",
+   "confidence": "high",
+   "evidence": "DECL @512753 var materialProperties.program in setProgram; 3 USES p_uniforms getUniforms + state.useProgram; canonical program term"
+  },
+  {
+   "selector": "programAttribute@u0020#0",
+   "action": "keep",
+   "name": "programAttribute",
+   "confidence": "high",
+   "evidence": "DECL @333932 var programAttributes[name] location index; 21 USES enableAttribute/vertexAttribPointer/divisor calls; canonical attribute-location term"
+  },
+  {
+   "selector": "programAttributes@u0020#0",
+   "action": "keep",
+   "name": "programAttributes",
+   "confidence": "high",
+   "evidence": "DECL @333784 var program.getAttributes() map; USES iterated for name->location binding loop; canonical attribute-map term"
+  },
+  {
+   "selector": "programAttributes@u0020#1",
+   "action": "keep",
+   "name": "programAttributes",
+   "confidence": "high",
+   "evidence": "DECL @497998 var program.getAttributes() in renderBufferImmediate; 8 USES .position/.normal/.uv/.color attrib setup; canonical attribute-map term"
+  },
+  {
+   "selector": "programCache@u0020#0",
+   "action": "keep",
+   "name": "programCache",
+   "confidence": "high",
+   "evidence": "DECL @490680 var WebGLPrograms instance; 7 USES getParameters/getProgramCacheKey/getUniforms/acquireProgram/releaseProgram; canonical renderer subsystem term"
+  },
+  {
+   "selector": "programCacheKey@u0020#0",
+   "action": "keep",
+   "name": "programCacheKey",
+   "confidence": "high",
+   "evidence": "DECL @509198 var getProgramCacheKey(parameters); USES cacheKey compare + acquireProgram key; canonical cache-key term"
+  },
+  {
+   "selector": "programChange@u0020#0",
+   "action": "keep",
+   "name": "programChange",
+   "confidence": "high",
+   "evidence": "DECL @509301 var bool flag in initMaterial; 3 USES version/shaderID checks gating acquireProgram; already-readable change-flag term"
+  },
+  {
+   "selector": "programId@u0020#0",
+   "action": "keep",
+   "name": "programId",
+   "confidence": "high",
+   "evidence": "DECL @336749 var for-in key over programMap in dispose; USES stateMap lookup + delete; already-readable cache-key loop term"
+  },
+  {
+   "selector": "programId@u0020#1",
+   "action": "keep",
+   "name": "programId",
+   "confidence": "high",
+   "evidence": "DECL @337133 var for-in key over programMap in releaseStatesOfGeometry; USES stateMap lookup + delete; already-readable cache-key loop term"
+  },
+  {
+   "selector": "programIdCount@u0020#0",
+   "action": "keep",
+   "name": "programIdCount",
+   "confidence": "high",
+   "evidence": "DECL @365312 module-level counter; USES this.id=programIdCount++ unique program ids; already-readable counter term"
+  },
+  {
+   "selector": "programInfo@u0020#0",
+   "action": "keep",
+   "name": "programInfo",
+   "confidence": "high",
+   "evidence": "DECL @497355 var properties.get(material).program; USES undefined-check + releaseProgram; already-readable program-handle term"
+  },
+  {
+   "selector": "programLog@u0020#0",
+   "action": "keep",
+   "name": "programLog",
+   "confidence": "high",
+   "evidence": "DECL @382728 var gl.getProgramInfoLog(program).trim(); 4 USES diagnostics/warn/console error paths; canonical shader-log term"
+  },
+  {
+   "selector": "protoProps@u0020#0",
+   "action": "keep",
+   "name": "protoProps",
+   "confidence": "high",
+   "evidence": "DECL @10668 param of Babel _createClass helper; USES _defineProperties(Constructor.prototype) loop; canonical transpiler-helper term"
+  },
+  {
+   "selector": "prototypeAction@u0020#0",
+   "action": "keep",
+   "name": "prototypeAction",
+   "confidence": "high",
+   "evidence": "DECL @824714 param of _bindAction; USES parsedPath reuse + knownActions[0] prototype chain; already-readable AnimationMixer domain term"
+  }
+ ],
+ "slice": "02",
+ "stats": {
+  "high": 30,
+  "medium": 0,
+  "low": 0,
+  "rename": 0,
+  "keep": 30
+ }
+}

@@ -1,0 +1,66 @@
+# DOSSIER slice-29 (wave 11, 11 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/11] context@u0022#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @943 (verified):
+sLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this.qIySEZgti.getRenderTarget();var maskActive=false;var pass,i,il=this.passes.length;for(i=0;i<il;i++){pass=this.passes[i];if(pass.ReDNKHkwk===false)continue;pass.renderToScreen=this.renderToScreen&&this.isLastEnabledPass(i);pass.render(this.qIySEZgti,this.writeBuffer,this.readBuffer,deltaTime,maskActive);if(pass.needsSwap){if(maskActive){var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/11] currentRenderTarget@u0022#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @576 (verified):
+Object.assign(usvzFuAsEB.EffectComposer.prototype,{swapBuffers:function(){var tmp=this.readBuffer;this.readBuffer=this.writeBuffer;this.writeBuffer=tmp;},addPass:function(pass){this.passes.push(pass);pass.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);},insertPass:function(pass,index){this.passes.splice(index,0,pass);},isLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1414: etFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZgti.setRenderTarget(currentRenderTarget);},reset:function(renderTarget){if(renderTarget===undefined){var size=this.qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=this.qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarge
+==============================================================================
+[3/11] deltaTime@u0022#0 | kind=param depth=5 refCount=4 | engine/webgl-renderer.js
+DECL @502 (verified):
+Object.assign(usvzFuAsEB.EffectComposer.prototype,{swapBuffers:function(){var tmp=this.readBuffer;this.readBuffer=this.writeBuffer;this.writeBuffer=tmp;},addPass:function(pass){this.passes.push(pass);pass.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);},insertPass:function(pass,index){this.passes.splice(index,0,pass);},isLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1144: askActive);if(pass.needsSwap){if(maskActive){var context=this.qIySEZgti.getContext();var stencil=this.qIySEZgti.state.buffers.stencil;stencil.setFunc(context.NOTEQUAL,1,4294967295);this.copyPass.render(this.qIySEZgti,this.writeBuffer,this.readBuffer,deltaTime);stencil.setFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZ
+==============================================================================
+[4/11] effectiveHeight@u0022#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @2107 (verified):
+s.qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=this.qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarget=this.renderTarget1.clone(true);renderTarget.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);}this.renderTarget1.dispose();this.renderTarget2.dispose();this.renderTarget1=renderTarget;this.renderTarget2=renderTarget.clone(true);this.writeBuffer=this.renderTarget1;this.readBuffer=this.renderTarget2;},setSize:function(width,height){this._width=width;this._height=height;var effectiveWidth=this._width*this._pixelRatio;var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/11] effectiveWidth@u0022#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @2059 (verified):
+arget){if(renderTarget===undefined){var size=this.qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=this.qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarget=this.renderTarget1.clone(true);renderTarget.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);}this.renderTarget1.dispose();this.renderTarget2.dispose();this.renderTarget1=renderTarget;this.renderTarget2=renderTarget.clone(true);this.writeBuffer=this.renderTarget1;this.readBuffer=this.renderTarget2;},setSize:function(width,height){this._width=width;this._height=height;var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/11] maskActive@u0022#0 | kind=var depth=5 refCount=4 | engine/webgl-renderer.js
+DECL @633 (verified):
+mposer.prototype,{swapBuffers:function(){var tmp=this.readBuffer;this.readBuffer=this.writeBuffer;this.writeBuffer=tmp;},addPass:function(pass){this.passes.push(pass);pass.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);},insertPass:function(pass,index){this.passes.splice(index,0,pass);},isLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this.qIySEZgti.getRenderTarget();var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 2 nearest outside DECL window:
+@1296: ntext.NOTEQUAL,1,4294967295);this.copyPass.render(this.qIySEZgti,this.writeBuffer,this.readBuffer,deltaTime);stencil.setFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZgti.setRenderTarget(currentRenderTarget);},reset:function(renderTarget){if(renderTarget===undefined){var size=this.qIySEZgti.getSize(new usvzFuAsEB.vFgd
+@1363: is.writeBuffer,this.readBuffer,deltaTime);stencil.setFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZgti.setRenderTarget(currentRenderTarget);},reset:function(renderTarget){if(renderTarget===undefined){var size=this.qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=this.qIySEZgti.getPixelRatio();this._wi
+==============================================================================
+[7/11] passIndex@u0022#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @369 (verified):
+Object.assign(usvzFuAsEB.EffectComposer.prototype,{swapBuffers:function(){var tmp=this.readBuffer;this.readBuffer=this.writeBuffer;this.writeBuffer=tmp;},addPass:function(pass){this.passes.push(pass);pass.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);},insertPass:function(pass,index){this.passes.splice(index,0,pass);},isLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/11] pixelRatio@u0022#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @2390 (verified):
+Target1.dispose();this.renderTarget2.dispose();this.renderTarget1=renderTarget;this.renderTarget2=renderTarget.clone(true);this.writeBuffer=this.renderTarget1;this.readBuffer=this.renderTarget2;},setSize:function(width,height){this._width=width;this._height=height;var effectiveWidth=this._width*this._pixelRatio;var effectiveHeight=this._height*this._pixelRatio;this.renderTarget1.setSize(effectiveWidth,effectiveHeight);this.renderTarget2.setSize(effectiveWidth,effectiveHeight);for(var i=0;i<this.passes.length;i++){this.passes[i].setSize(effectiveWidth,effectiveHeight);}},setPixelRatio:function([...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/11] RA@u2265#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @70 (verified):
+var Ry=NJ([-0x6a,-0x65,-0x6b,-0x59,-0x5e,-0x63,-0x65,-0x6c,-0x5b]),Rz,RA,RB=0x0;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/11] a0m@u2724#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var a0m=[],a0n=![],a0o=new GQ();
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/11] a3k@u0160#0 | kind=param depth=5 refCount=0 | engine/shaders.js
+DECL @45 (verified):
+var qx=qw,qy={'addUniforms':function(a3i,a3j,a3k,a3l){var anC=ai1,a3m=a3l['substr'](a3l['indexOf'](':')+0x1)["split"](',');a3m[0x0]=='Moss1'&&(a3m[0x0]="moss1"),a3i['mapa']={'value':a3j('maps/newmlab/out/compressedTextures/'+a3m[0x0]+'.webp')},a3i["mapb"]={'value':a3j('maps/newmlab/out/compressedTextures/'+a3m[0x1]+'.webp')};},'vertex':'\x0a#include\x20<uv2_pars_vertex>\x0avarying\x20vec2\x20vUvv;\x0avarying\x20float\x20mixVal;\x0avarying\x20vec3\x20vColor;\x0a\x0auniform\x20mat4\x20worldProjection;\x0a\x0avoid\x20main()\x20{\x0avUvv\x20=\x20uv;\x0avUv2\x20=\x20uv2;\x0amixVal\x20=\x20color.b;\[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-29: propose EVERY binding above.

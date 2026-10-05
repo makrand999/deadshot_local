@@ -1,0 +1,1205 @@
+{
+ "batch": "batch15",
+ "proposals": [
+  {
+   "token": "VC",
+   "proposedName": "fallbackEffectInstance",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4101 decl var VC=new createEffectInstance(); :4103 acquireEffectInstance returns VC when pool exhausted (hole-half branch + full-count branch)",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "VM",
+   "proposedName": "orientTracerEffect",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4113 decl function VM sets tracer parent pos/scale/matrix/opacity; combat/fire.js:7 VM(tracer,bulletHitPoint,muzzle,dist,opacity) local shot; characters/weapon-attach.js:31 VM(tracer,hit,muzzle,dist,2) entity shot",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "VS",
+   "proposedName": "crosshairMaterialParams",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4119 var VS={}; :4121 VS['color']=0xffffff; engine/webgl-renderer.js:159 new KibzRdopc(VS) builds crosshair bar material VT",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "VU",
+   "proposedName": "crosshairBarScale",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:159 decl VU=0.1; :161 PlaneGeometry(w*VU,h*VU) scales all 4 crosshair bars",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "VV",
+   "proposedName": "crosshairBarLength",
+   "confidence": "medium",
+   "evidence": "engine/webgl-renderer.js:159 decl VV=0x3; :161 default bar length dim, swapped with VW on odd-index bars",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "VW",
+   "proposedName": "crosshairBarWidth",
+   "confidence": "medium",
+   "evidence": "engine/webgl-renderer.js:159 decl VW=0.5; :161 default bar width dim, swapped with VV on odd-index bars",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "VZ",
+   "proposedName": "crosshairSpread",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4123 var VZ=0.5; :4125 W0 stores VZ + sets bar radius; :4127 W0(VZ) init; combat/fire.js:11 per-frame W0(weaponSpread)",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "Vo",
+   "proposedName": "effectUpdateCallbacks",
+   "confidence": "high",
+   "evidence": "combat/effects.js:9 decl Vo=[]; engine/webgl-renderer.js:155 Vo[i]=particleEffectDefs.update; sim/game-loop.js:4111 Vo[w](p,x) expiry check drives swap-remove",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "W0",
+   "proposedName": "setCrosshairSpread",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4125 decl sets VZ + repositions crosshairBarGroup children radially; :4127 init call; combat/fire.js:11 per-frame W0(spread) in gameLoop",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "WI",
+   "proposedName": "rebuildKeyBindings",
+   "confidence": "high",
+   "evidence": "sim/input.js:15 decl rebuilds keyBindingTable + liveKeyState + shoot/ADS/slide prompt texts; ui/party-lobby.js:27 called at init and inside saveKeyBindings",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "WJ",
+   "proposedName": "blockedCtrlKeyCodes",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4171 WJ=[0x53,0x57,0x44,0x46,0x74] S/W/D/F/t; :4173 push(0x52 R); sim/input.js:17 ctrlKey+WJ.includes(keyCode) -> preventDefault",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "WO",
+   "proposedName": "lastAdsToggleMs",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4181 var WO=getNowMs(); :4183 engageAdsAim debounces toggle on |frameTimestampMs-WO|>0x64 then WO=now",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "WR",
+   "proposedName": "requestPointerLockWithFallback",
+   "confidence": "high",
+   "evidence": "sim/input.js:21 def WR(el) calls el.requestPointerLock({unadjustedMovement}) with NotSupportedError fallback + partyController.resume(); sim/game-loop.js:4191 acquirePointerLock=WR; characters/animation.js:35 WR(pageBody) on first click",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Wb",
+   "proposedName": "entitySnapshotTickRate",
+   "confidence": "high",
+   "evidence": "core/constants.js:25 decl Wb=Wa=BASE_TICK_RATE/G2 (29.5); drives snapshotIntervalMs=0x3e8/Wb (:25) and Wi=0x3e8/Wb (:27)",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Wi",
+   "proposedName": "entityInterpIntervalMs",
+   "confidence": "medium",
+   "evidence": "core/constants.js:27 decl Wi=0x3e8/Wb (~33.9ms), copied to Wj; combat/fire.js:11 divisor in interpFactorPk=(nowMs-Wk)/Wi",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Wl",
+   "proposedName": "entityInterpDelayMs",
+   "confidence": "high",
+   "evidence": "core/constants.js:27 decl Wl=0x21*windowTickCount (99ms); combat/fire.js:11 render-time delay in nowMs-Wl queue drain and interpFactorPk=(nowMs-Wl-...)/(...)",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Wv",
+   "proposedName": "shootKeyHeld",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4147 decl Wv=false beside fireTriggerHeld; sim/input.js:17 Wv=a3p in 'shoot' key branch; sim/input.js:9 reset false on respawn; write-only mirror of shoot key held state",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Ww",
+   "proposedName": "adsKeyHeld",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4147 decl Ww=false beside fireTriggerHeld; sim/input.js:17 Ww=a3p in 'ads' key branch alongside engage/disengageAdsAim; sim/input.js:9 reset false on respawn; write-only mirror of ads key held state",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "XK",
+   "proposedName": "addCachedWeaponClone",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4243 def XK(key,group) clones weaponMeshCache[key] into group; called by cloneWeaponMesh (engine/webgl-renderer.js:177) and flushPendingWeaponClones (:4245)",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "XP",
+   "proposedName": "tweenOpacityToTarget",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4249 def XP tweens obj.opacity toward obj.EafIbhzQZQ target; sim/input.js:35 called twice on entity yW38T38y4 plates in nametag visibility block",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Xa",
+   "proposedName": "ignoreDeathLookSpikes",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4199 decl Xa=true beside lastDeathLookInputMs; sim/input.js:31 gates dropping huge (|x|>129/|y|>109) death-cam deltas; world/modes.js:25 re-armed true by raw-mouse setting onchange",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Xl",
+   "proposedName": "resizeDebounceDelayMs",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4221 decl Xl=0x23 (35); used as setTimeout delay for resize debounce (:4223) and visualViewport resize (:4225) beside resizeDebounceTimer",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Y1",
+   "proposedName": "weaponBobOffset",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:181 decl Y1=new Vector3() beside weaponOffsetVector/adsWeaponOffset; combat/fire.js:11 zeroed every frame then added into hip/ads weapon-position lerp, so always contributes 0 (placeholder bob/sway offset)",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Y3",
+   "proposedName": "awpHipOffsetBias",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:181 decl Y3=Vector3(0.1,-0.08,0.1), scaled by 0.15 (:4251); world/weapons.js:27 AWP-class-only (0x2) lerp target weaponOffsetVector.lerp(Y3,0.2) in equipWeaponClass",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "YF",
+   "proposedName": "ktx2InitAttempted",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4315 declares YF=![] beside ktx2LoaderInstance; engine/assets-draco.js:17 YH guards if(YF)return loader then sets YF=true (one-shot init flag)",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "YH",
+   "proposedName": "getKtx2Loader",
+   "confidence": "high",
+   "evidence": "engine/assets-draco.js:17 function YH creates/caches KTX2Loader singleton; called by YI() in sim/game-loop.js:4317 and by ktx2 lightmap path a4s=YH() in assets-draco.js:19",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "YM",
+   "proposedName": "currentMapName",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:203 declares YM=''; engine/assets-draco.js:19 assigns YM=collisionWorld['name']; ui/party-lobby.js:7 sends YM in bridge payload beside game mode",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "Yf",
+   "proposedName": "defaultRigAnimations",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4267 declares Yf; engine/webgl-renderer.js:187 assigns Yf=a3o['animations'] when rig slot==0x1 (rigged_untextured default rig); only other read is dead empty if-block",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "Yi",
+   "proposedName": "useCompressedRigs",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4269 declares Yi=true; sim/game-loop.js:4271 getRigAssetUrl returns character/compressed/ path if(Yi); only other site is dead empty if(Yi&&(a3q||a3r)){} in characters/weapon-attach.js:27",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "Yq",
+   "proposedName": "envmapTexture",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4289 Yq=loadTextureCached('textures/envmap.webp'); engine/webgl-renderer.js:193 partyController['envmap']=Yq; engine/shaders.js:165 envmap uniform value=Yq",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "Ys",
+   "proposedName": "defaultAoContext",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4295 Ys=defaultAoCanvas.getContext('2d'); sim/game-loop.js:4297 Ys.fillStyle='#777', Ys.fillRect(0,0,1,1) paints 1x1 default AO texel",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "Yv",
+   "proposedName": "mapContentGroupPreexists",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4301-4303 var Yv=false then typeof mapContentGroup!='undefined'&&(Yv=true); engine/assets-draco.js:19 Z7 skips map asset init unless !Yv (double-eval guard)",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "Z7",
+   "proposedName": "loadMap",
+   "confidence": "high",
+   "evidence": "engine/assets-draco.js:19 function Z7(mapKey,lightmapIdx) 52KB map loader; network/handlers.js:77 calls Z7(map,lm) on map-load-dispatched; sim/game-loop.js:4329 Z6 test hook calls Z7('neon',0)",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "ZG",
+   "proposedName": "skyboxMapUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4367-4373 var ZG={}; ZG['value']=skyboxTexture; ZH['map']=ZG (three.js {value} uniform object for skybox map)",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "ZH",
+   "proposedName": "skyboxUniforms",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4371-4373 var ZH={}; ZH['map']=ZG; engine/shaders.js:173 skyboxMaterial uniforms:ZH",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "ZI",
+   "proposedName": "skyboxDefines",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4375-4377 var ZI={}; ZI['MULT_VALUE']=''; engine/shaders.js:173 skyboxMaterial defines:ZI",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "ZK",
+   "proposedName": "vlitagAdsEnabled",
+   "confidence": "medium",
+   "evidence": "decl client-deob/src/sim/game-loop.js:4381 var ZK=false; use :4389 if(!ZK){} empty; use :4391 if(ZK) injects cdn.vlitag.com scripts else venatus hb.vntsm.com",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "ZN",
+   "proposedName": "respawnAdsHidden",
+   "confidence": "medium",
+   "evidence": "decl client-deob/src/sim/game-loop.js:4387 var ZN=false; use client-deob/src/sim/input.js:35 guard !ZN hides respawnAdSlots then ZN=true + resizeGameRenderer",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "ZP",
+   "proposedName": "panoramaTextureMap",
+   "confidence": "medium",
+   "evidence": "decl client-deob/src/sim/game-loop.js:4395 var ZP; use client-deob/src/engine/webgl-renderer.js:217 guard if(ZP!=undefined)return + assign ZP=material.map for panoramaCylinderMesh",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "ZT",
+   "proposedName": "buildPanoramaMesh",
+   "confidence": "high",
+   "evidence": "def client-deob/src/engine/webgl-renderer.js:217 function ZT composites sand+mountains canvas into panoramaCylinderMesh; calls client-deob/src/sim/game-loop.js:4397,4399 after each texture loads",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Zc",
+   "proposedName": "cloneCanvasResized",
+   "confidence": "high",
+   "evidence": "def client-deob/src/sim/game-loop.js:4339 function Zc clones canvas with optional floorToPowerOfTwo resize; uses client-deob/src/characters/animation.js:21 tintSpriteImage backup + client-deob/src/sim/game-loop.js:4349 Zh POT resize",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Zf",
+   "proposedName": "isPowerOfTwoInt",
+   "confidence": "medium",
+   "evidence": "def client-deob/src/sim/game-loop.js:4345 function Zf returns !(v&v-1); use client-deob/src/engine/shaders.js:5 Texture ctor rejects NPOT wrap/mipmap when !Zf(width)||!Zf(height)",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Zy",
+   "proposedName": "discSpriteSource",
+   "confidence": "high",
+   "evidence": "decl client-deob/src/sim/game-loop.js:4359 var Zy=new uiToolkit.object; uses :4361 Zy.add(white circle) + :4363 prerendered via pANxEEFMRM into discSpriteCanvas",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "a0E",
+   "proposedName": "seenEntityIds",
+   "confidence": "medium",
+   "evidence": "decl client-deob/src/network/handlers.js:7 var a0E=[]; use :23 K11Co2hvi1l handler indexOf+push of tdkZouYda entity id",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "a0N",
+   "proposedName": "a0N",
+   "confidence": "low",
+   "evidence": "decl client-deob/src/sim/game-loop.js:4441 var a0N={}; :4443 a0N.a=0; :4445 var mapFinalizeTween=a0N with zero later direct uses; reason: dead alias of mapFinalizeTween",
+   "verdict": "abstain",
+   "slice": 3
+  },
+  {
+   "token": "a0Q",
+   "proposedName": "postProcessCompiled",
+   "confidence": "medium",
+   "evidence": "decl client-deob/src/sim/game-loop.js:4445 var a0Q=false; use client-deob/src/engine/webgl-renderer.js:227 a0R guards !a0Q then sets true after compiling postProcessPasses materials",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "a0R",
+   "proposedName": "prewarmShaders",
+   "confidence": "high",
+   "evidence": "def client-deob/src/engine/webgl-renderer.js:227 function a0R compiles worldScene+overlay+postProcess, catch 'prewarmShaders failed'; calls client-deob/src/engine/shaders.js:175 x2 in finalizeMapLoad (immediate + setTimeout)",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "a0k",
+   "proposedName": "rebuildLeaderboard",
+   "confidence": "high",
+   "evidence": "def client-deob/src/world/weapons.js:29 function a0k builds/sorts leaderboardDataKl from entityList+localPlayer, calls partyController.ml; calls client-deob/src/network/handlers.js:69 game-over + client-deob/src/sim/input.js:35 on leaderboardDirty",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "a0p",
+   "proposedName": "updateCharacterAnim",
+   "confidence": "high",
+   "evidence": "characters/animation.js:27 decl selects+plays char anims (local: reloadFP/selfAim/aimAnimFP/jumpFP; remote: run/idle/crouch/jump/death); called combat/fire.js:11 a0p(localWeaponRig) and network/handlers.js:23 a0p(remoteEntity)",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a0q",
+   "proposedName": "clearHudFeedback",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4427 decl forces update(0x2710) on damageDirectionIndicator/elimBanner/damageFlashOverlayA+B/hitmarkerOverlay/slideSpeedLines; called network/handlers.js:45 death handler and sim/input.js:9 respawn flow",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a0r",
+   "proposedName": "snapshotStateFlags",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:225 decl var a0r=new makePlayerStateFlags(); network/handlers.js:35 server-snapshot handler uses it as decodeInputBitset target then copies each playerStateFlagKeys entry onto localPlayer",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a0w",
+   "proposedName": "playerRankMap",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:225 decl a0w=[] beside playerWeaponMap/playerNamesMap/playerClanMap; network/handlers.js:47 sets a0w[id]=msg rank; world/weapons.js:29 reads leaderboard row rank from a0w[playerId]",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a15",
+   "proposedName": "loadSessionHardTimeoutMs",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4449 decl a15=0xafc8 beside loadSessionState/loadSessionTimeoutMs; network/matchmaker.js:5 uses it as hardTimeout setTimeout delay and as reported timeoutMs for hard-timeout milestone",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a17",
+   "proposedName": "maxLoadSessionEvents",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4449 decl a17=0x28 beside loadSessionState vars; sim/game-loop.js:4459 recordLoadMilestone caps events length at a17 and splices oldest overflow",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a1E",
+   "proposedName": "startMatchmaking",
+   "confidence": "high",
+   "evidence": "network/matchmaker.js:15 decl guards matchmakingActive/region/network, shows matchmaking scene, connects matchmaker socket with retry and queues matchmake packet; called core/bitfield.js:33 play flow and sim/game-loop.js:3871 post-ad resume",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a1I",
+   "proposedName": "makeLookInputEvent",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4481 decl factory returns {x:0,y:0,which:0}; sim/game-loop.js:4483 preallocates 20 into inputEventQueue; characters/animation.js:35 pushes new a1I() then fills x/y/which from mouse movementX/movementY/eventWhich",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a1T",
+   "proposedName": "mirrorForLeftHand",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4485 decl mirrors vector x through worldCamera when leftHandedEnabled else identity; combat/fire.js:7 calls it twice on muzzleWorldPosition (muzzle flash + pellet origin)",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a1V",
+   "proposedName": "measureAimError",
+   "confidence": "high",
+   "evidence": "sim/input.js:33 decl updates aim camera from pitch, builds lag-compensated target point, returns center-ray closest-approach distance via segmentSegmentClosestPoint; ui/widgets.js:185 calls it twice to score candidate yaw/pitch deltas",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a1W",
+   "proposedName": "applyAimAssist",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:185 decl iteratively searches yaw/pitch scale factors minimizing measureAimError vs aimTargetEntity, returns scaled look deltas; called sim/input.js:7 gamepad right-stick and ui/widgets.js:183 touch look",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a1c",
+   "proposedName": "cloneJsonData",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4457 decl JSON round-trip deep clone with {value:formatErrorMessage} fallback; called sim/game-loop.js:4459 recordLoadMilestone to clone milestone data and sim/game-loop.js:4465 recordAssetFailure to clone extra",
+   "verdict": "rename",
+   "slice": 4
+  },
+  {
+   "token": "a1f",
+   "proposedName": "syncLoadSessionMapState",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:177 def syncs loadSessionState.map (loadedTextures/neededTextures/finishedMapLoad/loadedMap/loadedLightmap) + capabilities; called network/matchmaker.js:7 (a1h reason classifier) and :9 (a1i report builder) before reading state",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a20",
+   "proposedName": "gameClockOffsetMs",
+   "confidence": "high",
+   "evidence": "combat/fire.js:9 decl =0; fire.js:11 gameLoop nowMs=getNowMs()-a20 and spike clamp >0xbb8ms absorbs into a20=getNowMs()-nowMs",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a2E",
+   "proposedName": "frameStallReportCount",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4495 decl =0 cap a2F=8; sim/input.js:35 frame-stall branch if(a3B>a2I&&a3B<a2J&&a2E<a2F){a2E++;reportPerfTelemetry({type:'frame-stall',...})}",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a2G",
+   "proposedName": "shaderCompileReportCount",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4495 decl =0 cap a2H=0x19; sim/input.js:35 if(a2G<a2H){a2G++;reportPerfTelemetry({type:'shader-compile',programCount,...})}",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a2Q",
+   "proposedName": "maxLongtaskReports",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4499 decl =0xf beside longtaskReportCount; ui/widgets.js:187 PerformanceObserver longtask guards longtaskReportCount>=a2Q (early return + loop break)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a2V",
+   "proposedName": "frameTimeHistoryReady",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4503 decl beside frameTimeHistory(60)/frameTimeCursor; game-loop.js:4507 smoothFrameDelta warmup branch if(!a2V) fills raw then sets a2V=true, else returns moving average",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a2f",
+   "proposedName": "releaseSplitMesh",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4489 def clears splitParent/splitReplacement, pushes to splitMeshPool; called by a2g (:4491) and a2i (:4493) when restoring originals",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a2g",
+   "proposedName": "restoreSplitMeshes",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4491 def swaps splitReplacement children back to originals via a2f; called sim/input.js:35 a2g(mapContentGroup) on occlusion cell change and engine/assets-draco.js:19 on map unload",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a2l",
+   "proposedName": "overlayCompilePending",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4495 decl false; sim/input.js:35 one-shot a2l&&(webglRenderer.compile(overlayLayer.scene,...),a2l=false); never set true (3 identifier positions total) so currently dead but role clear",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a36",
+   "proposedName": "postProcessComposerState",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4517 var a36={} + :4519 initialized=false + :4521 var postProcessComposer=a36; composer configured engine/webgl-renderer.js:239 (offscreen renderer/scene/camera) amid shaderPassCache context",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a3d",
+   "proposedName": "renderWeaponSkinPreview",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4529 decl; engine/webgl-renderer.js:241 body bakes skin preview from weapon table a3D(vector/ar/awp model+mask+texture) x skin table a3K(rustic/cherry/...) + /experiments/skins images + wear decode; only caller Ye (:4265, uncalled) encodes wear; assignment sits after return in a3e so dead code, role clear from body",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "a3f",
+   "proposedName": "createPickupMarker",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4531 decl; engine/shaders.js:181 body builds marker Mesh from pickupTypeDefs[type] (tNoise/tDudv uniforms, originalOpacity); called engine/webgl-renderer.js:151 in freeMarkerPool acquire on cache miss",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "combineHitboxes",
+   "proposedName": "mergeHitboxesIntoGeo",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:61 declares function combineHitboxes(geo,hitboxes) appending hitbox faces with f.hitbox=true; called engine/assets-draco.js:19 x2 (map-cache fast path, full map load)",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "faceHitboxIndex",
+   "proposedName": "faceHitboxFlagOffset",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3085 var faceHitboxIndex=12; written sim/game-loop.js:3099 (face.hitbox?1:0); read combat/raycast.js:5 to skip hitbox faces",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "faceMaxIndex",
+   "proposedName": "faceAabbMaxOffset",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3091 var faceMaxIndex=15; written sim/game-loop.js:3099 (face.aabb.max.toArray); read combat/fire.js:5 into collision AABB max",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "faceMinIndex",
+   "proposedName": "faceAabbMinOffset",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3093 var faceMinIndex=18; written sim/game-loop.js:3099 (face.aabb.min.toArray); read combat/fire.js:5 into collision AABB min",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "faceSoundIndex",
+   "proposedName": "faceSoundOffset",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3097 var faceSoundIndex=22; written sim/game-loop.js:3099 (face.UVCeyZNLZ||0); read combat/fire.js:5 as hit surface sound id",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "makeAABB",
+   "proposedName": "buildFaceAabb",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3099 declares function makeAABB(face,verts,AyXbLxaib,index) writing per-face buffer entry; called engine/webgl-renderer.js:63 x2 (BufferGeometry and Geometry paths)",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "makeGeoAABBs",
+   "proposedName": "buildGeoFaceAabbs",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:63 declares function makeGeoAABBs(geo) allocating Float32Array face buffer; called engine/assets-draco.js:19 x2",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "p6",
+   "proposedName": "deepMergeOptions",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:11 declares function p6(a3i,a3j) recursive deep key-merge incl self-call; called engine/webgl-renderer.js:43 to apply widget options",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "pf",
+   "proposedName": "bannerToast",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:19 declares pf constructor building Eliminated-banner/toast 3D overlay; new pf at sim/game-loop.js:4053 (elimBanner) and :4057 (toastNotifier)",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "q4",
+   "proposedName": "defaultEquippedSkins",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:141 var q4=[4 default skin defs]; assigned to partyController[equippedSkins] characters/mesh-pool.js:9 and combat/scope-crosshair.js:19",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "q6",
+   "proposedName": "randomWeaponNames",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:141 var q6=[smg,ar,awp,shotgun]; single use site ui/widgets.js:13 random weapon pick in rollSpinReward",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "qA",
+   "proposedName": "waterShaderAlias",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:165 var qA=waterShader alias; single use site engine/assets-draco.js:19 qA[fragment]/qA[vertex] for water1 skybox material",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "qC",
+   "proposedName": "waterfallShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:167 var qC=waterfallShader; assets-draco.js:19 qC['fragment']/['vertex'] for skybox material 'waterfall1'",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qE",
+   "proposedName": "auroraShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:169 var qE=auroraShader; assets-draco.js:19 qE['fragment']/['vertex'] for skybox material 'aurora'",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qG",
+   "proposedName": "skyboxWaterShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:171 var qG=skyboxWaterShader; assets-draco.js:19 qG['fragment']/['vertex'] for skybox material 'Water'",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qM",
+   "proposedName": "gltfLightmapShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:177 var qM=gltfLightmapShader; assets-draco.js:19 qM['vertex']/['fragment'] for USE_LIGHTMAP gltf ShaderMaterial",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qd",
+   "proposedName": "getCanvasImageData",
+   "confidence": "high",
+   "evidence": "widgets.js:19 function qd(canvas,x,y,w,h) returns getImageData (TypeError mentions processCanvasRGB(A)); called by qe (:21) and qg (:25)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qe",
+   "proposedName": "stackBlurCanvasRGBA",
+   "confidence": "high",
+   "evidence": "widgets.js:21 function qe blurs canvas via qd+qf+putImageData; game-loop.js:151 stackBlurLib['processCanvasRGBA']=qe; called by qc (:17)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qf",
+   "proposedName": "stackBlurImageDataRGBA",
+   "confidence": "high",
+   "evidence": "widgets.js:23 function qf is alpha-aware ImageData RGBA stack-blur; game-loop.js:151 stackBlurLib['processImageDataRGBA']=qf; called by qe (:21)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qg",
+   "proposedName": "stackBlurCanvasRGB",
+   "confidence": "high",
+   "evidence": "widgets.js:25 function qg blurs canvas via qd+qh+putImageData; game-loop.js:151 stackBlurLib['processCanvasRGB']=qg; called by qc (:17)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qh",
+   "proposedName": "stackBlurImageDataRGB",
+   "confidence": "high",
+   "evidence": "widgets.js:27 function qh is RGB-only ImageData stack-blur (no alpha); game-loop.js:151 stackBlurLib['processImageDataRGB']=qh; called by qg (:25)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qn",
+   "proposedName": "skyboxShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:155 var qn=skyboxShader; shaders.js:173 qn['vertex']/['fragment'] for skyboxMaterial (BackSide)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qp",
+   "proposedName": "meshBasicReplacementShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:157 var qp=meshBasicReplacementShader; shaders.js:145 MeshBasicReplacement factory uses qp['fragment']/['vertex']",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qt",
+   "proposedName": "captureProgressShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:161 var qt=captureProgressShader; shaders.js:19 capturePointDisplay 'Capturing C' mesh uses qt['vertex']/['fragment']",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "qv",
+   "proposedName": "capturePennantShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:163 var qv=capturePennantShader; shaders.js capturePointDisplay reads qv['vertex']+qv['fragment']",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rB",
+   "proposedName": "sharpenDiffuseUniform",
+   "confidence": "high",
+   "evidence": "shaders.js:89 var rB={}; game-loop.js:249 rB['value']=null; :257 sharpenPassUniforms['tDiffuse']=rB",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rC",
+   "proposedName": "sharpenRadiusUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:251 var rC={}; :253 rC['value']=0x4; :257 sharpenPassUniforms['radius']=rC",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rF",
+   "proposedName": "sepiaDiffuseUniform",
+   "confidence": "high",
+   "evidence": "shaders.js:91 var rF={}; game-loop.js:259 rF['value']=null; :267 sepiaPassUniforms['tDiffuse']=rF",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rG",
+   "proposedName": "sepiaRadiusUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:261 var rG={}; :263 rG['value']=0x4; :267 sepiaPassUniforms['radius']=rG",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rL",
+   "proposedName": "paintDiffuseUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:269 var rL={}; :271 rL['value']=null; :279 paintShaderUniforms['tDiffuse']=rL",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rM",
+   "proposedName": "paintRadiusUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:273 var rM={}; :275 rM['value']=0x4; :279 paintShaderUniforms['radius']=rM",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rP",
+   "proposedName": "kuwaharaDiffuseUniform",
+   "confidence": "high",
+   "evidence": "shaders.js:97 var rP={}; game-loop.js:281 rP['value']=null; :293 kuwaharaShaderUniforms['tDiffuse']=rP",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rQ",
+   "proposedName": "kuwaharaHUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:283 var rQ={}; :285 rQ['value']=1/512; :293 kuwaharaShaderUniforms['h']=rQ",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rR",
+   "proposedName": "kuwaharaRadiusUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:287 var rR={}; :289 rR['value']=0x4; :293 kuwaharaShaderUniforms['radius']=rR",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rV",
+   "proposedName": "radialGlowDiffuseUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:297 var rV={}; :299 rV['value']=null; :311 radialGlowShaderUniforms['tDiffuse']=rV",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rW",
+   "proposedName": "radialGlowHUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:301 var rW={}; :303 rW['value']=1/512; :311 radialGlowShaderUniforms['h']=rW",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "rX",
+   "proposedName": "radialGlowRadiusUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:305 var rX={}; :307 rX['value']=0x4; :311 radialGlowShaderUniforms['radius']=rX",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "rc",
+   "proposedName": "bushShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:203 var rc=bushShader; engine/assets-draco.js:19 rc['fragment']+rc['vertex'] build 'Bush' skybox material",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "rn",
+   "proposedName": "circularBlurDiffuseUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:209 var rn={}; :211 rn['value']=null; :219 circularBlurPassUniforms['tDiffuse']=rn",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "ro",
+   "proposedName": "circularBlurStepUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:213 var ro={}; :215 ro['value']=0x1; :219 circularBlurPassUniforms['h']=ro",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "rs",
+   "proposedName": "horizontalBlurStepUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:223 var rs={}; :225 rs['value']=0x1; :233 horizontalBlurPassUniforms['h']=rs (xbox.buttons['rs'] is string, excluded)",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "rt",
+   "proposedName": "horizontalBlurResUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:227 var rt={}; :229 rt['value']=0x1; :233 horizontalBlurPassUniforms['res']=rt (6 other 'rt' hits are quoted string keys, excluded)",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "rw",
+   "proposedName": "finalOutputDiffuseUniform",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:87 var rv={...},rw={}; sim/game-loop.js:235 rw['value']=null; :247 finalOutputPassUniforms['tDiffuse']=rw",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "rx",
+   "proposedName": "finalOutputStepUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:237 var rx={}; :239 rx['value']=0x1; :247 finalOutputPassUniforms['h']=rx (106 other hits are quoted ['rx'] string keys, excluded)",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "ry",
+   "proposedName": "finalOutputResUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:241 var ry={}; :243 ry['value']=0x1; :247 finalOutputPassUniforms['res']=ry (106 other hits are quoted ['ry'] string keys, excluded)",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "s5",
+   "proposedName": "lightmapUncompressShaderAlias",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:329 var s5=lightmapUncompressShader; engine/shaders.js:179 s5['uniforms']['lightMapIntensity'] set + new ShaderPass(s5) for 'uncompress'",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "s6",
+   "proposedName": "sunsetDiffuseUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:329 var s6={}; :331 s6['value']=null; :339 sunsetShaderUniforms['tDiffuse']=s6",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "s7",
+   "proposedName": "sunsetLightMapIntensityUniform",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:333 var s7={}; :335 s7['value']=0x1; :339 sunsetShaderUniforms['lightMapIntensity']=s7",
+   "verdict": "rename",
+   "slice": 9
+  },
+  {
+   "token": "sK",
+   "proposedName": "pickupBoxShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:421 var sK=pickupBoxShaderDef; shaders.js:181 sK[vertexShader/fragmentShader] builds pickup-type materials",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "sM",
+   "proposedName": "weaponSkinBakeShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:423 var sM=weaponSkinBakeShaderDef; webgl-renderer.js:241 sM[vertexShader/fragmentShader] bakes weapon skins",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "sO",
+   "proposedName": "hardpointShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:425 var sO=hardpointShader; shaders.js:169 sO[vertexShader/fragmentShader] builds hardpoint markers",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "sQ",
+   "proposedName": "damageFlashShaderAlias",
+   "confidence": "high",
+   "evidence": "game-loop.js:427 var sQ=damageFlashShader; shaders.js:19 createDamageFlashOverlay uses sQ[vertex/fragment]",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "selfTraverse",
+   "proposedName": "applyWeaponShadeLighting",
+   "confidence": "high",
+   "evidence": "shaders.js:147 def updates weapon material sun/shade uniforms; fire.js:11 weapon rig traverse(selfTraverse)",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "sg",
+   "proposedName": "maxFilterDiffuseUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:357 decl sg, :359 value=null, :367 maxFilterPassUniforms[tDiffuse]=sg",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "sj",
+   "proposedName": "maxFilterShader",
+   "confidence": "high",
+   "evidence": "shaders.js:109 def sj={uniforms:maxFilterPassUniforms,...}; :179 max branch new ShaderPass(sj)",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "sk",
+   "proposedName": "circleBlurDiffuseUniform",
+   "confidence": "high",
+   "evidence": "shaders.js:109 decl sk={}; game-loop.js:369 value=null, :377 circleBlurPassUniforms[tDiffuse]=sk",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "so",
+   "proposedName": "squareBlurDiffuseUniform",
+   "confidence": "high",
+   "evidence": "shaders.js:111 decl so={}; game-loop.js:379 value=null, :387 blurPassUniformsSq[tDiffuse]=so",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "sp",
+   "proposedName": "squareBlurStepUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:381 decl sp, :383 value=1/512, :387 blurPassUniformsSq[h]=sp; bitfield/handlers ['sp'] are string keys",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "ss",
+   "proposedName": "boxBlurDiffuseUniform",
+   "confidence": "high",
+   "evidence": "shaders.js:113 decl ss={}; game-loop.js:389 value=null, :397 boxBlurPassUniforms[tDiffuse]=ss",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "st",
+   "proposedName": "boxBlurStepUniform",
+   "confidence": "high",
+   "evidence": "game-loop.js:391 decl st, :393 value=1/512, :397 boxBlurPassUniforms[h]=st; other st hits are string/GLSL contents",
+   "verdict": "rename",
+   "slice": 10
+  },
+  {
+   "token": "t4",
+   "proposedName": "bezierCoeffB",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:431 (3*x2-6*x1); used ui/widgets.js:29 evalBezierCurve + ui/widgets.js:31 t7; sibling bezierCoeffA",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "t5",
+   "proposedName": "bezierCoeffC",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:433 (3*x); used ui/widgets.js:29 evalBezierCurve + ui/widgets.js:31 t7; sibling bezierCoeffA",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "t7",
+   "proposedName": "bezierSlope",
+   "confidence": "high",
+   "evidence": "decl ui/widgets.js:31 (3A*t^2+2B*t+C derivative of evalBezierCurve); used ui/widgets.js:35 Newton solver t9 + characters/animation.js:5 easing factory tb",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "tH",
+   "proposedName": "customOptionListClass",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:467 (\"new-option\"); used characters/animation.js:9 classList.add on option ul + sim/game-loop.js:473 querySelector close; sibling customSelectClassName",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "tK",
+   "proposedName": "measureSelectWidth",
+   "confidence": "high",
+   "evidence": "decl ui/widgets.js:47 (temp-select computed-width measure, returns px); used characters/animation.js:9 x2 to set minWidth",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "tL",
+   "proposedName": "closeCustomSelects",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:473 (removes open/active, toggles option lists shut); used characters/animation.js:9 option-click + sim/game-loop.js:475 document-click",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "threeRaycaster",
+   "proposedName": "customRaycaster",
+   "confidence": "high",
+   "evidence": "decl combat/raycast.js:5 (Moller-Trumbore triangle raycaster factory, setFromCamera); exported combat/raycast.js:7; instantiated combat/raycast.js:9 as bulletRaycaster",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "tq",
+   "proposedName": "initAudioListener",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:451 var; def combat/effects.js:5 (allocs listener scratch vectors, defines ts closure); called sim/game-loop.js:3717 at startup",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "tr",
+   "proposedName": "resumeAudioContext",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:451 var; def combat/effects.js:5 (one-shot audioContext.resume); called ui/widgets.js:41 mousedown handler; shaders.js hits are GLSL string contents",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "ts",
+   "proposedName": "updateAudioListener",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:451 var; def combat/effects.js:5 (throttled listener setPosition/setOrientation from camera); called sim/input.js:35 every frame; shop-locker hit is blocklist string",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "tv",
+   "proposedName": "playKillStreakSound",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:451 var; def combat/effects.js:5 (pitches 'kill' sample by streak count); called network/handlers.js:57 hit/kill packet handler",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "u7",
+   "proposedName": "getSettingsCategoryIndex",
+   "confidence": "high",
+   "evidence": "decl sim/game-loop.js:507 (index of category id in platformOptionList); used ui/widgets.js:51 x2 for settings-section insert order; sibling getSettingsCategoryLabel",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "uf",
+   "proposedName": "settingsLabelFontSize",
+   "confidence": "high",
+   "evidence": "animation.js:7 var uf='21px'; used as fontSize for settings label <p> and select dropdown",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "xo",
+   "proposedName": "dust2SunsetLightPreset",
+   "confidence": "high",
+   "evidence": "game-loop.js:1235 var xo={} + xo.sunset=true; map-table.js:5 dust2MapConfig.lightmaps=[xo]",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "$",
+   "proposedName": "$",
+   "confidence": "low",
+   "evidence": "game-loop.js:3653 var $=3; game-loop.js:3655 if($ in{'a':'b'}){7;} dead no-op; all 25 other matches are regex/string contents",
+   "verdict": "abstain",
+   "slice": 12
+  },
+  {
+   "token": "EV",
+   "proposedName": "isLineOfSightBlocked",
+   "confidence": "high",
+   "evidence": "fire.js:5 EV=function returns raycastGridDistance<0.1 true/false occlusion test; map-table.js:11 re-exported with collision API",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "FB",
+   "proposedName": "enableUsernameChange",
+   "confidence": "medium",
+   "evidence": "map-table.js:11 FB=!![] global flag; scope-crosshair.js:19 FB&&(...) gates change-username UI block on account page",
+   "verdict": "rename",
+   "slice": 12
+  },
+  {
+   "token": "FS",
+   "proposedName": "regionDisplayNames",
+   "confidence": "medium",
+   "evidence": "constants.js:7 var FS=regionTable alias; scope-crosshair.js:19 FS[partyInfo.region] renders region display name",
+   "verdict": "rename",
+   "slice": 12
+  }
+ ]
+}

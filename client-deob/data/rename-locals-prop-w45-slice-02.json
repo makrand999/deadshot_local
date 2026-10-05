@@ -1,0 +1,219 @@
+{
+ "meta": {
+  "wave": 45,
+  "slice": "02",
+  "mergedFrom": [
+   "02a",
+   "02b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 groups it with sibling rgba-white stops a8u/a8v fed to createLinearGradient addColorStop calls; SERVED shows the same shape (a8w=arY(0x746) passed as the center-stop color at a3M/0x64).",
+   "name": "gradientCenterColor",
+   "selector": "a8w@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 constructs new a3k['QtjDeukbWl'] (UIPanel) 3840x200 '#000', tweaks height/position, and adds it to positioned container a7m; SERVED repeats the identical construction, position tweak, and add on both sides.",
+   "name": "backdropPanel",
+   "selector": "a8x@u2151#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "VM9 is just var a8y=a8x with refCount=0 (dead alias, never read); SERVED is identical (servedRefCount=0), so no observable role exists on either side.",
+   "selector": "a8y@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 news a UIContainer, anchors its position to the player rig, and adds 'Latest Update:' texts plus a Patch Notes button; SERVED repeats the same container setup and the same add() calls for the update/patch-notes rows.",
+   "name": "patchNotesGroup",
+   "selector": "a8z@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 body is a thin wrapper over window['updateSettingValue'](key,value) called for xhair RGB, slider, and toggle keys; SERVED has the identical wrapper body and call sites (obfuscated keys), mirroring sibling getter a90.",
+   "name": "setCrosshairSetting",
+   "selector": "a91@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 queries .crosshair-settings-scroll/.crosshair-settings-list and toggles can-scroll-up/down classes, called from layout plus wheel/scroll/touch handlers; SERVED shows the same queries, toggles, and handler call sites.",
+   "name": "updateScrollIndicators",
+   "selector": "a92@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 builds a WebGLRenderer from the given canvas element and is consumed as 'preview':a93(querySelector('.crosshair-preview-canvas')); SERVED has the same renderer construction and the same preview-canvas call site.",
+   "name": "createPreviewRenderer",
+   "selector": "a93@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 body is just window['updateCrosshairPreview'](), invoked after every slider, color, and toggle change; SERVED shows the identical one-line body and the same post-change call sites.",
+   "name": "refreshCrosshairPreview",
+   "selector": "a94@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 clamps Number(ah6) to 0-255 and returns a 2-digit hex slice, consumed 3x by a97; SERVED shows the identical clamp+toString(16)+slice body and the same triple use in a97.",
+   "name": "byteToHex",
+   "selector": "a96@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 returns '#'+byteToHex(xhairred)+byteToHex(xhairgreen)+byteToHex(xhairblue) and seeds the color input plus invalid-input fallback; SERVED has the same hex assembly and the same two call sites.",
+   "name": "getCrosshairHex",
+   "selector": "a97@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 builds a crosshair-color row (color input + hex text span with validation) and is placed as a99(ah7,'Color:'); SERVED shows the same row template and the same 'Color:' placement alongside sibling builders a95/a98.",
+   "name": "addColorSetting",
+   "selector": "a99@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 is an array of locker card elements (push/indexOf/splice/length loops, isEquipped flags, reset to []); SERVED repeats the same push/splice/iterate/reset pattern over the same card elements.",
+   "name": "skinCardList",
+   "selector": "a9A@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 fills a9B[i] from 'promo/rarity/rarityImg'+i and reads a9B[pX.rarity] as the card badge image; SERVED shows the same per-rarity fill and the same rarity-indexed read in acl().",
+   "name": "rarityImages",
+   "selector": "a9B@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 stores per-rarity canvases logged as 'rarityOval'+i and assigns a9C[rarity] to card/inspect image slots; SERVED repeats the same rarityOval fill and the same rarity-indexed image assignments.",
+   "name": "rarityOvals",
+   "selector": "a9C@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 declares it beside the rarity arrays and assigns it a fresh canvas each loop iteration before a9B[i]=a9D; SERVED shows the same declaration and the same per-iteration a9B[a9E]=a9D handoff.",
+   "name": "rarityImageCanvas",
+   "selector": "a9D@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'var a9E=a3M' loop index over rarity color array a9x (a9x[a9E] fillStyle, a9C[a9E], 'rarityOval'+a9E), later holds pX skin 'rarity'; served shows the identical loop/indexing with matching refCount.",
+   "name": "rarityIdx",
+   "selector": "a9E@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'var a9F=a9D/getContext('2d')' reused on both rarity canvases for drawImage/fillRect tinting; served shows the same getContext('2d') decl and tint calls (obfuscated drawImage key).",
+   "name": "rarityCtx",
+   "selector": "a9F@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: document.createElement('canvas') sized from the oval template, tinted, stored as a9C[a9E] ('rarityOval'+a9E); served shows the identical canvas decl and a9C[a9E] store.",
+   "name": "rarityOvalCanvas",
+   "selector": "a9G@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a8H('LOCKER') root container holding the locker content object, skin cards, and scroll overlays; served shows the identical 'LOCKER' decl and add/removeElement uses.",
+   "name": "lockerRoot",
+   "selector": "a9H@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fresh object added to the locker root receiving non-equipped skin cards, with an onscroll handler animating its y position; served shows the same add-to-locker and scroll-position uses.",
+   "name": "skinListContent",
+   "selector": "a9I@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first SHOP scene holding the prize-wheel content group (incl. 'PRIZE WHEEL' title); Back-button host and onclick navigation target; served shows the same scene decl and content add.",
+   "name": "prizeWheelScene",
+   "selector": "a9J@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: second SHOP scene and the default (a9O=a9K, a9P=a9K), holding View Bundle / NEW!!! / neon-bg elements; served shows the same decl and default-scene assignment.",
+   "name": "shopMainScene",
+   "selector": "a9K@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: third SHOP scene holding the 'Please log in to use the Shop' prompt, shown when logged out; served shows the same decl and login-prompt add.",
+   "name": "shopLoginScene",
+   "selector": "a9L@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fourth SHOP scene, 'View Bundle' navigation target with onSceneSwitch applying the skin and neon skin buttons added; served shows the same decl, switch handler, and adds.",
+   "name": "bundleDetailScene",
+   "selector": "a9M@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fifth SHOP scene holding 'Purchase Gems' header, gem options, and 'Buy Gems' navigation target; served shows the same decl and gem-option adds.",
+   "name": "gemPurchaseScene",
+   "selector": "a9N@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: const 0x14 used as the shared y anchor for prize-wheel title, content group, and overlay positions; served shows the identical value and y-position uses.",
+   "name": "prizeWheelBaseY",
+   "selector": "a9R@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: object added to the prize-wheel scene holding title, images, legend swatches, and stencil masks, opacity-toggled by the login gate; served shows the same decl and content adds.",
+   "name": "prizeWheelContent",
+   "selector": "a9S@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: createTextElement 'PRIZE WHEEL' title with Encode Sans font added to the wheel content; served shows the same construction (string obfuscated) and add.",
+   "name": "prizeWheelTitle",
+   "selector": "a9T@u2151#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "VM9 and served agree it is a null-texture image with only size/opacity set, but neither side reveals what it displays or its purpose in the wheel layout.",
+   "selector": "a9U@u2151#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "VM9 and served agree it is an empty-string centered text element with only opacity set, but neither side reveals its intended label content or role.",
+   "selector": "a9V@u2151#0"
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+{
+ "slice": "slice-02",
+ "proposals": [
+  {
+   "selector": "LensFlare@u0020#0",
+   "action": "keep",
+   "name": "LensFlare",
+   "confidence": "high",
+   "evidence": "DECL @935100 exports.LensFlare @942438; canonical three.js class name"
+  },
+  {
+   "selector": "LessDepth@u0020#0",
+   "action": "keep",
+   "name": "LessDepth",
+   "confidence": "high",
+   "evidence": "DECL @2204 var LessDepth=2; canonical GL depth-func enum, exported @942466"
+  },
+  {
+   "selector": "LessEqualDepth@u0020#0",
+   "action": "keep",
+   "name": "LessEqualDepth",
+   "confidence": "high",
+   "evidence": "DECL @2220; used this.depthFunc=LessEqualDepth @126737 + depthBuffer.setFunc @424315"
+  },
+  {
+   "selector": "LessEqualStencilFunc@u0020#0",
+   "action": "keep",
+   "name": "LessEqualStencilFunc",
+   "confidence": "high",
+   "evidence": "DECL @6114 stencil enum block; exported @942532"
+  },
+  {
+   "selector": "LessStencilFunc@u0020#0",
+   "action": "keep",
+   "name": "LessStencilFunc",
+   "confidence": "high",
+   "evidence": "DECL @6065 stencil enum block; exported @942582"
+  },
+  {
+   "selector": "Light@u0020#0",
+   "action": "keep",
+   "name": "Light",
+   "confidence": "high",
+   "evidence": "DECL @724697 function Light; base class Light.call @725721/@728982/@731429"
+  },
+  {
+   "selector": "LightProbe@u0020#0",
+   "action": "keep",
+   "name": "LightProbe",
+   "confidence": "high",
+   "evidence": "DECL @739224 function LightProbe; subclassed @780481/@781048/@781248"
+  },
+  {
+   "selector": "LightShadow@u0020#0",
+   "action": "keep",
+   "name": "LightShadow",
+   "confidence": "high",
+   "evidence": "DECL @726143 function LightShadow; subclassed Spot/Point/Directional @728287/@729886/@734537"
+  },
+  {
+   "selector": "Line@u0020#0",
+   "action": "keep",
+   "name": "Line",
+   "confidence": "high",
+   "evidence": "DECL @544306 function Line; Line.call @549067/@550519; exported"
+  },
+  {
+   "selector": "LineBasicMaterial@u0020#0",
+   "action": "keep",
+   "name": "LineBasicMaterial",
+   "confidence": "high",
+   "evidence": "DECL @543502; default material new LineBasicMaterial @544421; subclassed LineDashedMaterial @658254"
+  },
+  {
+   "selector": "LineCurve@u0020#0",
+   "action": "keep",
+   "name": "LineCurve",
+   "confidence": "high",
+   "evidence": "DECL @711163 function LineCurve; Curves registry @717751; new LineCurve @718326/@721289"
+  },
+  {
+   "selector": "LineCurve3@u0020#0",
+   "action": "keep",
+   "name": "LineCurve3",
+   "confidence": "high",
+   "evidence": "DECL @712428; Curves registry @717771; exported @942782"
+  },
+  {
+   "selector": "LineDashedMaterial@u0020#0",
+   "action": "keep",
+   "name": "LineDashedMaterial",
+   "confidence": "high",
+   "evidence": "DECL @658223; Materials registry @659299; shader map @385068"
+  },
+  {
+   "selector": "LineLoop@u0020#0",
+   "action": "keep",
+   "name": "LineLoop",
+   "confidence": "high",
+   "evidence": "DECL @550489; ObjectLoader case LineLoop @767779; glTF LINE_LOOP @1004093"
+  },
+  {
+   "selector": "LinePieces@u0020#0",
+   "action": "keep",
+   "name": "LinePieces",
+   "confidence": "high",
+   "evidence": "DECL @886830 var LinePieces=1; exported @942884"
+  },
+  {
+   "selector": "LineStrip@u0020#0",
+   "action": "keep",
+   "name": "LineStrip",
+   "confidence": "high",
+   "evidence": "DECL @886814 var LineStrip=0; exported @942946"
+  },
+  {
+   "selector": "LinearInterpolant@u0020#0",
+   "action": "keep",
+   "name": "LinearInterpolant",
+   "confidence": "high",
+   "evidence": "DECL @668477; InterpolantFactoryMethodLinear @670786; _lendControlInterpolant @831658"
+  },
+  {
+   "selector": "LinearMipMapLinearFilter@u0020#0",
+   "action": "keep",
+   "name": "LinearMipMapLinearFilter",
+   "confidence": "high",
+   "evidence": "DECL @3129 texture-filter enum; exported @943090"
+  },
+  {
+   "selector": "LinearMipMapNearestFilter@u0020#0",
+   "action": "keep",
+   "name": "LinearMipMapNearestFilter",
+   "confidence": "high",
+   "evidence": "DECL @3060 texture-filter enum; exported @943148"
+  },
+  {
+   "selector": "LinearMipmapNearestFilter@u0020#0",
+   "action": "keep",
+   "name": "LinearMipmapNearestFilter",
+   "confidence": "high",
+   "evidence": "DECL @3025; filterToGL @440117; TEXTURE_FILTER @771679; glTF map @979224"
+  },
+  {
+   "selector": "LinearToSRGB@u0020#0",
+   "action": "keep",
+   "name": "LinearToSRGB",
+   "confidence": "high",
+   "evidence": "DECL @117899 color util; copyLinearToSRGB @122008/@122037/@122066"
+  },
+  {
+   "selector": "LinearToneMapping@u0020#0",
+   "action": "keep",
+   "name": "LinearToneMapping",
+   "confidence": "high",
+   "evidence": "DECL @2403 tone-mapping enum; switch case @366857; exported @943326"
+  },
+  {
+   "selector": "LoaderUtils@u0020#0",
+   "action": "keep",
+   "name": "LoaderUtils",
+   "confidence": "high",
+   "evidence": "DECL @748345 var LoaderUtils; extractUrlBase @754359/@894467; glTF decodeText @957579"
+  },
+  {
+   "selector": "LoadingManager@u0020#0",
+   "action": "keep",
+   "name": "LoadingManager",
+   "confidence": "high",
+   "evidence": "DECL @684803; DefaultLoadingManager @686095; ImageLoader @761733; exported @943424"
+  },
+  {
+   "selector": "LogLuvEncoding@u0020#0",
+   "action": "keep",
+   "name": "LogLuvEncoding",
+   "confidence": "high",
+   "evidence": "DECL @5623 encoding enum; getEncodingComponents case @365903; exported @943462"
+  },
+  {
+   "selector": "LoopOnce@u0020#0",
+   "action": "keep",
+   "name": "LoopOnce",
+   "confidence": "high",
+   "evidence": "DECL @5161 anim-loop enum; _updateTime @822265; exported @943500"
+  },
+  {
+   "selector": "LoopPingPong@u0020#0",
+   "action": "keep",
+   "name": "LoopPingPong",
+   "confidence": "high",
+   "evidence": "DECL @5199 anim-loop enum; _updateTime @822139; exported @943526"
+  },
+  {
+   "selector": "LoopRepeat@u0020#0",
+   "action": "keep",
+   "name": "LoopRepeat",
+   "confidence": "high",
+   "evidence": "DECL @5179 anim-loop enum; default this.loop=LoopRepeat @816447; exported @943560"
+  },
+  {
+   "selector": "LuminanceAlphaFormat@u0020#0",
+   "action": "keep",
+   "name": "LuminanceAlphaFormat",
+   "confidence": "high",
+   "evidence": "DECL @3542 pixel-format enum; convert() case @460151; exported @943590"
+  },
+  {
+   "selector": "LuminanceFormat@u0020#0",
+   "action": "keep",
+   "name": "LuminanceFormat",
+   "confidence": "high",
+   "evidence": "DECL @3517 pixel-format enum; convert() case @460116; exported @943640"
+  }
+ ],
+ "stats": {
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ }
+}

@@ -1,0 +1,64 @@
+# DOSSIER slice-23 (wave 12, 11 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/11] tempKeys@u2252#0 | kind=var depth=5 refCount=6 | sim/game-loop.js
+DECL @225 (verified):
+function loadSettings(){var mNZeiqoUotp;try{try{if(localStorage.settings!=undefined){mNZeiqoUotp=JSON.parse(localStorage.settings);Rz=JSON.parse(JSON.stringify(mNZeiqoUotp));}}catch(e){}if(mNZeiqoUotp==undefined){return;}var tempKeys=Object.keys(mNZeiqoUotp);for(var i=0;i<tempKeys.length;i++){for(var j=0;j<Rw.length;j++){if(Rw[j].id==tempKeys[i]){if(tempKeys[i]==undefined){continue;}Rw[j].default=mNZeiqoUotp[tempKeys[i]];if(tempKeys[i]=='region'){Rw[j].default='';}if(mNZeiqoUotp.version==undefined&&tempKeys[i]=='sensitivity'){if(Rw[j].default!=1){Rw[j].default*=1.4;}}break;}}}}catch(e){}}
+USES: refCount=6, 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/11] FullScreenQuad@u0025#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @158 (verified):
+usvzFuAsEB.Pass.FullScreenQuad=(function(){var aKmLbYuMC=new usvzFuAsEB.lUtmuvURyPI(-1,1,1,-1,0,1);var RNQDluasaN=new usvzFuAsEB.PlaneBufferGeometry(2,2);var FullScreenQuad=function(material){this._mesh=new usvzFuAsEB.Mesh(RNQDluasaN,material);};Object.defineProperty(FullScreenQuad.prototype,'material',{get:function(){return this._mesh.material;},set:function(value){this._mesh.material=value;}});Object.assign(FullScreenQuad.prototype,{dispose:function(){this._mesh.RNQDluasaN.dispose();},render:function(qIySEZgti){qIySEZgti.render(this._mesh,aKmLbYuMC);}});return FullScreenQuad;}());
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/11] W3@u2497#0 | kind=var depth=3 refCount=1 | sim/game-loop.js
+DECL @4 (verified):
+var W3=!![];
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/11] Xv@u2575#0 | kind=var depth=3 refCount=1 | characters/rigs.js
+DECL @4 (verified):
+var Xv,Xw=new Array(0x5),Xx=new Array(0x5);
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/11] faceLength@u1747#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @69 (verified):
+function makeGeoAABBs(geo){'use strict';if(geo.isBufferGeometry){var faceLength=geo.index.count/3;var AyXbLxaib;if(pZ){AyXbLxaib=new Float32Array(new SharedArrayBuffer(faceBufferLength*faceLength*4));}else{AyXbLxaib=new Float32Array(faceBufferLength*faceLength);}var min=new usvzFuAsEB.gURkzCzeY();var max=new usvzFuAsEB.gURkzCzeY();var verts=[];for(var i=0;i<3;i++){verts[i]=new usvzFuAsEB.gURkzCzeY();}var faceObj={a:0,b:1,c:2};for(var x=0;x<geo.index.count/3;x++){var face=geo.faces[x];face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}var AyXbLxaib;if(pZ&&false[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/11] faceObj@u1747#0 | kind=var depth=5 refCount=0 | engine/webgl-renderer.js
+DECL @408 (verified):
+function makeGeoAABBs(geo){'use strict';if(geo.isBufferGeometry){var faceLength=geo.index.count/3;var AyXbLxaib;if(pZ){AyXbLxaib=new Float32Array(new SharedArrayBuffer(faceBufferLength*faceLength*4));}else{AyXbLxaib=new Float32Array(faceBufferLength*faceLength);}var min=new usvzFuAsEB.gURkzCzeY();var max=new usvzFuAsEB.gURkzCzeY();var verts=[];for(var i=0;i<3;i++){verts[i]=new usvzFuAsEB.gURkzCzeY();}var faceObj={a:0,b:1,c:2};for(var x=0;x<geo.index.count/3;x++){var face=geo.faces[x];face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}var AyXbLxaib;if(pZ&&false[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/11] UU@u2469#0 | kind=var depth=3 refCount=1 | engine/webgl-renderer.js
+DECL @151 (verified):
+var UR=NJ([-0x6d,-0x5e,-0x5f,-0x59,-0x5e]),US=new usvzFuAsEB['Texture']({'image':Kr['pANxEEFMRM'](new Kr['QtjDeukbWl'](),0x100,0x100)['image']}),UT=[],UU=[];
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/11] sG@u0332#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var sG=sF,sH={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/11] TC@u2388#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var TC=![],TD=0x0,TE=NJ([-0x63,-0x65,-0x6b,-0x69,-0x5b,-0x63,-0x65,-0x6c,-0x5b]),TF=NJ([-0x66,-0x65,-0x5f,-0x64,-0x6a,-0x5b,-0x68,-0x63,-0x65,-0x6c,-0x5b]),TG=NJ([-0x66,-0x65,-0x5f,-0x64,-0x6a,-0x5b,-0x68,-0x5a,-0x65,-0x6d,-0x64]),TH=NJ([-0x66,-0x65,-0x5f,-0x64,-0x6a,-0x5b,-0x68,-0x6b,-0x66]),TI=NJ([-0x63,-0x65,-0x6b,-0x69,-0x5b]),TJ=NJ([-0x66,-0x65,-0x5f,-0x64,-0x6a,-0x5b,-0x68,-0x4a,-0x6f,-0x66,-0x5b]),TK={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/11] a3s@u2742#0 | kind=var depth=5 refCount=0 | network/handlers.js
+DECL @753 (verified):
+['y']<0x0){WY[RY]['y']+=Qz;}X7=Math['KkKRLGFtA'](Math["max"](-WU,Math['min'](WU,X7))),WY[RY]['y']=Math['KkKRLGFtA'](WY[RY]['y']),T2['mPDLPePIID']();if(OY!=undefined)for(var a3p=0x0;a3p<OY['map']['length'];a3p++){for(var a3q=0x0;a3q<OY['map'][a3p]['length'];a3q++){if(OY['map'][a3p][a3q]==undefined)continue;if(Array['isArray'](OY["map"][a3p][a3q]))for(let a3t=0x0;a3t<OY["map"][a3p][a3q]['length'];a3t++){OY["map"][a3p][a3q][a3t]["cXlFeDeYwuS"]=![];}}}SW["d2J6H770A10"]=![],SW['zBgadyCVYk']['OUsPgMLOT']=![],R6=![],Y6=0x0,Pz=!![],a0s=GK,W5();for(var a3r=0x0;a3r<Kq['rtuiAWgKjH']['length'];a3r++){var [...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/11] a3j@u0204#0 | kind=param depth=5 refCount=0 | engine/shaders.js
+DECL @94 (verified):
+var rg=rf,rh={'transparent':!![],'animated':!![],'doubleSided':![],'addUniforms':function(a3i,a3j){var anD=ai1;a3i['lightmap']=a3i['ao'],a3i['displacement']={'value':Fj("/maps/neon/out/compressedTextures/displacement.webp")};var a3k=new usvzFuAsEB[("CubeTextureLoader")]();a3k['setPath']('/maps/neon/out/compressedTextures/');var a3l=[];for(var a3m=0x0;a3m<0x6;a3m++){a3l["push"]("cubemap0f"+a3m+'.webp');}a3i["cubemap"]={'value':a3k['load'](a3l)},a3i['cubemap']['value']['flipY']=!![];var a3n={};a3n["value"]=0x0,a3i['justLightmap']=a3n;},'vertex':'\x0a#include\x20<uv2_pars_vertex>\x0a#include\x20<[...line truncated...]
+USES: refCount=0, 3 token-occurrences in unit, showing 2 nearest outside DECL window:
+@3799: x20reflectivity\x20+\x20originalTexture.xyz\x20*\x20(\x201.0\x20-\x20reflectivity\x20);\x0agl_FragColor.a\x20=\x20originalTexture.a;\x0a}\x0a}\x0a'},ri={'transparent':![],'animated':![],'doubleSided':![],'needsNormal':!![],'addUniforms':function(a3i,a3j,a3k){var anE=ai1;a3i['lightmap']=a3i['ao'];let a3l=new usvzFuAsEB['WebGLCubeRenderTarget'](0x80,0x80);var a3m={};a3m['value']=a3l['texture'],a3i['cubemap']=a3m,a3j('/maps/neon/out/compressedTextures/hdri.webp',function(a3o){a3l['fromEquirectangul
+@3963: t':![],'animated':![],'doubleSided':![],'needsNormal':!![],'addUniforms':function(a3i,a3j,a3k){var anE=ai1;a3i['lightmap']=a3i['ao'];let a3l=new usvzFuAsEB['WebGLCubeRenderTarget'](0x80,0x80);var a3m={};a3m['value']=a3l['texture'],a3i['cubemap']=a3m,a3j('/maps/neon/out/compressedTextures/hdri.webp',function(a3o){a3l['fromEquirectangularTexture'](a3k,a3o),a3i['cubemap']['afCJVYrCGK']=!![];}),a3i['cubemap']['value']['flipY']=!![];var a3n={};a3n["value"]=0x0,a3i['justLightmap']=a3n;},'vertex':'\x0a
+==============================================================================
+END slice-23: propose EVERY binding above.

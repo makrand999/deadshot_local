@@ -1,0 +1,2263 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 32,
+  "date": "2026-09-28",
+  "merged": 64,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 116,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @187878 param of PerspectiveCamera(fov,aspect,near,far); USES forward far to 6 CubeCamera faces — idiomatic camera far-plane name",
+   "name": "far",
+   "selector": "far@u0020#3",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @471241 var far in setProjectionFromUnion from projL elements; USES far2=far+zOffset and top2/bottom2 scaling — readable far-plane value",
+   "name": "far",
+   "selector": "far@u0020#4",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @522072 param of Fog(color,near,far); USES nearby fog.far reads — idiomatic fog far-distance name",
+   "name": "far",
+   "selector": "far@u0020#5",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @728662 var far=light.distance||camera.far in SpotLightShadow.updateMatrices; USES compare/assign camera.far — readable far-plane value",
+   "name": "far",
+   "selector": "far@u0020#6",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @732095 param of OrthographicCamera(left,right,top,bottom,near,far); USES this.far=far and makeOrthographic — idiomatic camera far-plane name",
+   "name": "far",
+   "selector": "far@u0020#7",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @837772 param of Raycaster(origin,direction,near,far); USES this.far=far||Infinity — idiomatic raycaster far bound",
+   "name": "far",
+   "selector": "far@u0020#8",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @869972 param of PMREMGenerator.fromScene(scene,sigma,near,far); USES forward to _sceneToCubeUV(scene,near,far) — idiomatic far-plane arg",
+   "name": "far",
+   "selector": "far@u0020#9",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @872359 param of _sceneToCubeUV(scene,near,far); USES new PerspectiveCamera(fov,aspect,near,far) — idiomatic far-plane arg",
+   "name": "far",
+   "selector": "far@u0020#10",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @901519 param of Matrix4.makeFrustum(left,right,bottom,top,near,far); USES forward to makePerspective — idiomatic frustum far plane",
+   "name": "far",
+   "selector": "far@u0020#11",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @471840 var far2=far+zOffset in setProjectionFromUnion; USES makePerspective(...,near2,far2) — readable adjusted-far local",
+   "name": "far2",
+   "selector": "far2@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @368329 function fetchAttributeLocations(gl,program); USES cachedAttributes=fetchAttributeLocations(gl,program) — descriptive readable name",
+   "name": "fetchAttributeLocations",
+   "selector": "fetchAttributeLocations@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @772658 var fetchOptions in ImageBitmapLoader.load; USES 2 refs building fetch request — readable fetch-options name",
+   "name": "fetchOptions",
+   "selector": "fetchOptions@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @795137 param of AudioAnalyser(audio,fftSize); USES 3 refs configuring analyser FFT size — standard WebAudio term",
+   "name": "fftSize",
+   "selector": "fftSize@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @684559 param of Cache.add(key,file); USES this.files[key]=file — idiomatic cached-file name",
+   "name": "file",
+   "selector": "file@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @685886 param of LoadingManager.getHandler(file); USES regex.test(file) loader match — idiomatic filename param",
+   "name": "file",
+   "selector": "file@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @931966 param of deprecated Audio.load(file); USES audioLoader.load(file,...) — idiomatic file param",
+   "name": "file",
+   "selector": "file@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @878367 var fill in PMREM/lod-plane geometry setup; USES 1 ref — plain-English token, already readable",
+   "name": "fill",
+   "selector": "fill@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @911336 param of PerspectiveCamera.setLens(focalLength,filmGauge); USES 2 refs setting film gauge — standard camera term",
+   "name": "filmGauge",
+   "selector": "filmGauge@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @791230 param of Audio.setFilter(filter); USES assign/connect this.filter chain — idiomatic audio-filter name",
+   "name": "filter",
+   "selector": "filter@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @368587 function filterEmptyLine; USES 5 refs as chunks.filter(filterEmptyLine) predicate — descriptive readable name",
+   "name": "filterEmptyLine",
+   "selector": "filterEmptyLine@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @435919 function filterFallback; USES texParameteri(...,filterFallback(mag/minFilter)) — descriptive readable name",
+   "name": "filterFallback",
+   "selector": "filterFallback@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @593967 function filterPoints in earcut; USES 8 refs filtering polygon linked lists — descriptive readable name",
+   "name": "filterPoints",
+   "selector": "filterPoints@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @439926 var filterToGL map; USES filterToGL[magFilter]/[minFilter] for texParameteri — descriptive readable name",
+   "name": "filterToGL",
+   "selector": "filterToGL@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @680760 AnimationClip.findByName; USES AnimationClip.findByName(root,clip) lookups — descriptive readable name",
+   "name": "findByName",
+   "selector": "findByName@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @597619 function findHoleBridge(hole,outerNode) in earcut; USES called by eliminateHole — descriptive readable name",
+   "name": "findHoleBridge",
+   "selector": "findHoleBridge@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @802927 PropertyBinding.findNode; USES findNode(rootNode,nodeName) node resolution — descriptive readable name",
+   "name": "findNode",
+   "selector": "findNode@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @396549 function finish in render-list builder; USES currentRenderList.finish() before sort — idiomatic lifecycle name",
+   "name": "finish",
+   "selector": "finish@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @812907 var firstActive in AnimationObjectGroup add; USES swap cached/active bindings — descriptive readable name",
+   "name": "firstActive",
+   "selector": "firstActive@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @811468 var firstActiveIndex=--nCachedObjects in add(); USES 5 refs swapping bindings arrays — descriptive readable name",
+   "name": "firstActiveIndex",
+   "selector": "firstActiveIndex@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @813494 var firstActiveIndex=--nCachedObjects in uncache(); USES 5 refs swapping bindings arrays — descriptive readable name",
+   "name": "firstActiveIndex",
+   "selector": "firstActiveIndex@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @556549 CanvasTexture(canvas,mapping,wrapS,wrapT,...) forwards wrapT to Texture.call; idiomatic three.js texture-wrap param, USES @555802/@554803 same role in sibling ctors",
+   "name": "wrapT",
+   "selector": "wrapT@u0020#6",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @439755 wrappingToGL lookup; USES @440387/@440497 wrappingToGL[texture.wrapS/wrapT/wrapR] in setTextureParameters; already readable",
+   "name": "wrappingToGL",
+   "selector": "wrappingToGL@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @674110 var writeIndex=1 in KeyframeTrack.optimize compaction loop; 10 USES e.g. @674715 times[writeIndex]=times[i]; idiomatic cursor name",
+   "name": "writeIndex",
+   "selector": "writeIndex@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @674570 writeOffset=writeIndex*stride in optimize; idiomatic strided-write companion to readOffset",
+   "name": "writeOffset",
+   "selector": "writeOffset@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @17807 Matrix3.extractBasis(xAxis,...) param; USES xAxis.setFromMatrix3Column; idiomatic axis-vector name",
+   "name": "xAxis",
+   "selector": "xAxis@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75377 Matrix4.extractBasis(xAxis,...) param; USES xAxis.setFromMatrixColumn(this,0); idiomatic",
+   "name": "xAxis",
+   "selector": "xAxis@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75548 Matrix4.makeBasis(xAxis,...) param; 3 USES reading xAxis.x/.y/.z; idiomatic",
+   "name": "xAxis",
+   "selector": "xAxis@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @471493 xOffset stereo-projection term in setProjectionFromUnion next to zOffset/left/right; idiomatic",
+   "name": "xOffset",
+   "selector": "xOffset@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @701610 EllipseCurve(aX,aY,xRadius,...) param assigned this.xRadius @701753; idiomatic geometry name",
+   "name": "xRadius",
+   "selector": "xRadius@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @722509 Path.ellipse(...,xRadius,...) param forwarded to absellipse; idiomatic, matches EllipseCurve usage",
+   "name": "xRadius",
+   "selector": "xRadius@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @722762 Path.absellipse(...,xRadius,...) param; idiomatic ellipse-radius name",
+   "name": "xRadius",
+   "selector": "xRadius@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @329020 function xdgCWeCpd(object,material,program,geometry,index) in WebGLBindingStates; called bindingStates.xdgCWeCpd(object,material,program,geometry,index) @499615; signature+call match three.js BindingStates.setup",
+   "name": "setup",
+   "selector": "xdgCWeCpd@u0020#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "xdgCWeCpd",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "r bindingStates={};var defaultState=createBindingState(null);var currentState=defaultState;function xdgCWeCpd(object,material,program,RNQDluasaN,index){var upda"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @399619 function xdgCWeCpd(lights) in WebGLLights; called lights.xdgCWeCpd(lightsArray) @407113 from setupLights and exported beside setupView @406704; matches three.js Lights.setup",
+   "name": "setup",
+   "selector": "xdgCWeCpd@u0020#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "xdgCWeCpd",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "zCzeY());}var vector3=new gURkzCzeY();var matrix4=new Matrix4();var matrix42=new Matrix4();function xdgCWeCpd(lights){var r=0,g=0,b=0;for(var _i=0;_i<9;_i++){st"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "DECL @97426 Object3D method after add; body shifts children right and sets children[0]=object like sibling prepend but never dispatches _addedEvent; silent front-insert",
+   "name": "prependSilent",
+   "selector": "xlUBzfMxe@u0020#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "xlUBzfMxe",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 0,
+    "snippet": "EY.add: object not an instance of usvzFuAsEB.QTOKQmNlEY.',object);}return this;},xlUBzfMxe:function xlUBzfMxe(object){if(arguments.length>1){for(var i=0;i<argum"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @782936 xmax stereo-frustum bound beside xmin/ymax in update projection block; idiomatic",
+   "name": "xmax",
+   "selector": "xmax@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @782931 xmin stereo-frustum bound beside xmax/ymax; idiomatic",
+   "name": "xmin",
+   "selector": "xmin@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @17813 Matrix3.extractBasis(...,yAxis,...) param; USES yAxis.setFromMatrix3Column; idiomatic",
+   "name": "yAxis",
+   "selector": "yAxis@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75383 Matrix4.extractBasis(...,yAxis,...) param; USES yAxis.setFromMatrixColumn(this,1); idiomatic",
+   "name": "yAxis",
+   "selector": "yAxis@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75554 Matrix4.makeBasis(...,yAxis,...) param; 3 USES reading yAxis.x/.y/.z; idiomatic",
+   "name": "yAxis",
+   "selector": "yAxis@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @701618 EllipseCurve(...,yRadius,...) param assigned this.yRadius; idiomatic",
+   "name": "yRadius",
+   "selector": "yRadius@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @722517 Path.ellipse(...,yRadius,...) param forwarded to absellipse; idiomatic",
+   "name": "yRadius",
+   "selector": "yRadius@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @722770 Path.absellipse(...,yRadius,...) param; idiomatic",
+   "name": "yRadius",
+   "selector": "yRadius@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @782851 ymax=near*tan(...) stereo-frustum bound; idiomatic",
+   "name": "ymax",
+   "selector": "ymax@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @17819 Matrix3.extractBasis(...,zAxis) param; USES zAxis.setFromMatrix3Column; idiomatic",
+   "name": "zAxis",
+   "selector": "zAxis@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75389 Matrix4.extractBasis(...,zAxis) param; USES zAxis.setFromMatrixColumn(this,2); idiomatic",
+   "name": "zAxis",
+   "selector": "zAxis@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75560 Matrix4.makeBasis(...,zAxis) param; 3 USES reading zAxis.x/.y/.z; idiomatic",
+   "name": "zAxis",
+   "selector": "zAxis@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @471457 zOffset=ipd/(-leftFov+rightFov) in setProjectionFromUnion; idiomatic stereo term",
+   "name": "zOffset",
+   "selector": "zOffset@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @599091 earcut z-order curve function; USES @595488/@595531 zOrder(minTX,...)/zOrder(maxTX,...); idiomatic algorithm name",
+   "name": "zOrder",
+   "selector": "zOrder@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @736564 SphericalHarmonics3.prototype.zero method; idiomatic reset-to-zero name",
+   "name": "zero",
+   "selector": "zero@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "DECL @96246 Object3D method before add; body mirrors add exactly but shifts children right, sets children[0]=object and dispatches _addedEvent; front-insert child",
+   "name": "prepend",
+   "selector": "zuYSmsDYXXy@u0020#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "zuYSmsDYXXy",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 0,
+    "snippet": "_q1.setFromRotationMatrix(_m1$1);this.jWFyoTPALsS.premultiply(_q1.invert());}},zuYSmsDYXXy:function zuYSmsDYXXy(object){if(arguments.length>1){for(var i=0;i<arg"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010797 for(a4j=0,a4k=skin.joints.length) loop bound; sibling a4j already jointIndex; USES a4j<a4k in loadScene skin branch",
+   "name": "jointCount",
+   "selector": "a4k@u0020#28",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4k",
+   "binding": {
+    "unit": "u0020",
+    "index": 28,
+    "refCount": 2,
+    "snippet": "(function(a4h){return a4f['XOVWraMIAg'](function(a4i){var akK=o;if(!a4i['isMesh'])return;var a4j=[],a4k=[];for(var a4l=0x0,a4m=a4h['length'];a4l<a4m;a4l++){var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1011388 var a4k=[] collects Matrix4 inverses; USES a4k.push(a4o) + new Skeleton(a4j,a4k) (three.js boneInverses)",
+   "name": "boneInverses",
+   "selector": "a4k@u0020#29",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4k",
+   "binding": {
+    "unit": "u0020",
+    "index": 29,
+    "refCount": 1,
+    "snippet": "[];if(a4e['children']){var a4h=a4e['children'];for(var a4i=0x0,a4j=a4h['length'];a4i<a4j;a4i++){var a4k=a4h[a4i];a4g['push'](a49(a4k,a4f,a4c,a4d));}}return Prom"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @999609 for(a4k=0,a4l=targets.length) loop bound in morph-target bounds loop; sibling a4k already targetIndex; USES a4k<a4l",
+   "name": "targetCount",
+   "selector": "a4l@u0020#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4l",
+   "binding": {
+    "unit": "u0020",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "=undefined){var a4i=new usvzFuAsEB['gURkzCzeY'](),a4j=new usvzFuAsEB['gURkzCzeY']();for(var a4k=0x0,a4l=a4h['length'];a4k<a4l;a4k++){var a4m=a4h[a4k];if(a4m['PO"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1002571 var a4l={primitive,promise} stored in primitiveCache; USES a4l.primitive/a4l.promise/a4c[a4i]=a4l in loadGeometries",
+   "name": "cacheEntry",
+   "selector": "a4l@u0020#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4l",
+   "binding": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "3l['KHR_DRACO_MESH_COMPRESSION']]?a4k=a4d(a4h):a4k=a47(new usvzFuAsEB['kwrjVVjSgIH'](),a4h,a4a);var a4l={};a4l['primitive']=a4h,a4l['promise']=a4k,a4c[a4i]=a4l,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010812 for(a4l=0,...) loop index over resolved joint nodes; USES a4n=a4h[a4l] in loadScene skin traverse",
+   "name": "jointNodeIndex",
+   "selector": "a4l@u0020#16",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4l",
+   "binding": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 5,
+    "snippet": "return a4f['XOVWraMIAg'](function(a4i){var akK=o;if(!a4i['isMesh'])return;var a4j=[],a4k=[];for(var a4l=0x0,a4m=a4h['length'];a4l<a4m;a4l++){var a4n=a4h[a4l];if"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @989457 a4m=accessor.normalized===true flag; USES passed to BufferAttribute/InterleavedBufferAttribute ctors in loadAccessor",
+   "name": "normalized",
+   "selector": "a4m@u0020#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4m",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "0x0,a4l=a4c['bufferView']!==undefined?a4b['bufferViews'][a4c['bufferView']]['byteStride']:undefined,a4m=a4c['normalized']===!![],a4n,a4o;if(a4l&&a4l!==a4j){var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010820 a4m=resolved-joints.length loop bound; USES a4l<a4m in loadScene skin traverse",
+   "name": "jointNodeCount",
+   "selector": "a4m@u0020#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4m",
+   "binding": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "4f['XOVWraMIAg'](function(a4i){var akK=o;if(!a4i['isMesh'])return;var a4j=[],a4k=[];for(var a4l=0x0,a4m=a4h['length'];a4l<a4m;a4l++){var a4n=a4h[a4l];if(a4n){a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @970270 Promise executor param in draco decodePrimitive; USES a4n(decodedGeometry) after decodeDracoFile (resolve role; 'resolve' already taken)",
+   "name": "resolveGeometry",
+   "selector": "a4n@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4n",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "];}}return a4a['getDependency']('bufferView',a4d)['then'](function(a4m){return new Promise(function(a4n){a4c['decodeDracoFile'](a4m,function(a4o){var ajs=o;for("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @989486 var a4n=new TypedArray(...) backing store; USES new BufferAttribute(a4n,...)/InterleavedBuffer(a4n,...) in loadAccessor",
+   "name": "typedArray",
+   "selector": "a4n@u0020#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4n",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "ndefined?a4b['bufferViews'][a4c['bufferView']]['byteStride']:undefined,a4m=a4c['normalized']===!![],a4n,a4o;if(a4l&&a4l!==a4j){var a4p=Math['floor'](a4k/a4l),a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010857 var a4n=resolvedJoints[a4l] per-joint node; USES if(a4n) joints.push(a4n)",
+   "name": "jointNode",
+   "selector": "a4n@u0020#15",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4n",
+   "binding": {
+    "unit": "u0020",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "K=o;if(!a4i['isMesh'])return;var a4j=[],a4k=[];for(var a4l=0x0,a4m=a4h['length'];a4l<a4m;a4l++){var a4n=a4h[a4l];if(a4n){a4j['push'](a4n);var a4o=new usvzFuAsEB"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978219 a4o=-2t^3+3t^2 cubic Hermite weight (three.js s2; s2 is rename-map key); USES a4q=1-a4o + result accumulation in interpolate_",
+   "name": "splineS2",
+   "selector": "a4o@u0020#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4o",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "g=a4f*0x2,a4h=a4f*0x3,a4i=a4c-a4a,a4j=(a4b-a4a)/a4i,a4k=a4j*a4j,a4l=a4k*a4j,a4m=a49*a4h,a4n=a4m-a4h,a4o=-0x2*a4l+0x3*a4k,a4p=a4l-a4k,a4q=0x1-a4o,a4r=a4p-a4k+a4j"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @992077 ImageBitmap loader callback param; USES new CanvasTexture(a4o) in loadTexture",
+   "name": "imageBitmap",
+   "selector": "a4o@u0020#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4o",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "rn new Promise(function(a4l,a4m){var akc=o,a4n=a4l;a4b['isImageBitmapLoader']===!![]&&(a4n=function(a4o){a4l(new usvzFuAsEB['CanvasTexture'](a4o));}),a4b['load'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010899 var a4o=new Matrix4 from inverseBindMatrices array; USES boneInverses.push(a4o)",
+   "name": "boneInverse",
+   "selector": "a4o@u0020#9",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4o",
+   "binding": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 2,
+    "snippet": "k=[];for(var a4l=0x0,a4m=a4h['length'];a4l<a4m;a4l++){var a4n=a4h[a4l];if(a4n){a4j['push'](a4n);var a4o=new usvzFuAsEB['Matrix4']();a4g['inverseBindMatrices']!="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978240 a4p=t^3-t^2 cubic Hermite weight (three.js s3; s3 is rename-map key); USES result accumulation in interpolate_",
+   "name": "splineS3",
+   "selector": "a4p@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4p",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 2,
+    "snippet": ",a4i=a4c-a4a,a4j=(a4b-a4a)/a4i,a4k=a4j*a4j,a4l=a4k*a4j,a4m=a49*a4h,a4n=a4m-a4h,a4o=-0x2*a4l+0x3*a4k,a4p=a4l-a4k,a4q=0x1-a4o,a4r=a4p-a4k+a4j;for(var a4s=0x0;a4s!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978252 a4q=1-a4o cubic Hermite weight (three.js s0; s0 is rename-map key); USES result accumulation in interpolate_",
+   "name": "splineS0",
+   "selector": "a4q@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4q",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": ",a4j=(a4b-a4a)/a4i,a4k=a4j*a4j,a4l=a4k*a4j,a4m=a49*a4h,a4n=a4m-a4h,a4o=-0x2*a4l+0x3*a4k,a4p=a4l-a4k,a4q=0x1-a4o,a4r=a4p-a4k+a4j;for(var a4s=0x0;a4s!==a4f;a4s++)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978264 interpolate_: a4r=a4p-a4k+a4j (4th Hermite basis s1); USES refCount=1 in a4d[a4s]=a4q*a4t+a4r*a4u+...",
+   "name": "hermiteS1",
+   "selector": "a4r@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4r",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "a)/a4i,a4k=a4j*a4j,a4l=a4k*a4j,a4m=a49*a4h,a4n=a4m-a4h,a4o=-0x2*a4l+0x3*a4k,a4p=a4l-a4k,a4q=0x1-a4o,a4r=a4p-a4k+a4j;for(var a4s=0x0;a4s!==a4f;a4s++){var a4t=a4e"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978288 interpolate_: for(var a4s=0;a4s!==a4f;a4s++) loop index over valueSize components; USES refCount=7",
+   "name": "valueIdx",
+   "selector": "a4s@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4s",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "4k*a4j,a4m=a49*a4h,a4n=a4m-a4h,a4o=-0x2*a4l+0x3*a4k,a4p=a4l-a4k,a4q=0x1-a4o,a4r=a4p-a4k+a4j;for(var a4s=0x0;a4s!==a4f;a4s++){var a4t=a4e[a4n+a4s+a4f],a4u=a4e[a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978317 interpolate_: a4t=a4e[a4n+a4s+a4f] prev-knot point value p0; USES refCount=1 in result blend",
+   "name": "prevPoint",
+   "selector": "a4t@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4t",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "h,a4o=-0x2*a4l+0x3*a4k,a4p=a4l-a4k,a4q=0x1-a4o,a4r=a4p-a4k+a4j;for(var a4s=0x0;a4s!==a4f;a4s++){var a4t=a4e[a4n+a4s+a4f],a4u=a4e[a4n+a4s+a4g]*a4i,a4v=a4e[a4m+a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006549 anim loader: a4t=a4p[0x3] resolves a4f pushes of a4k (channel samplers); USES a4B=a4t[a4w] then a4B[interpolation]",
+   "name": "samplers",
+   "selector": "a4t@u0020#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4t",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "a4f),Promise['all'](a4g)])['then'](function(a4p){var akz=aky,a4q=a4p[0x0],a4r=a4p[0x1],a4s=a4p[0x2],a4t=a4p[0x3],a4u=a4p[0x4],a4v=[];for(var a4w=0x0,a4x=a4q['le"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978338 interpolate_: a4u=a4e[a4n+a4s+a4g]*a4i prev-knot tangent m0 scaled by dt; USES refCount=1 in result blend",
+   "name": "prevTangent",
+   "selector": "a4u@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4u",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "k,a4p=a4l-a4k,a4q=0x1-a4o,a4r=a4p-a4k+a4j;for(var a4s=0x0;a4s!==a4f;a4s++){var a4t=a4e[a4n+a4s+a4f],a4u=a4e[a4n+a4s+a4g]*a4i,a4v=a4e[a4m+a4s+a4f],a4w=a4e[a4m+a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006562 anim loader: a4u=a4p[0x4] resolves a4g pushes of a4l (channel targets); USES a4C=a4u[a4w] then switch on a4C[path]",
+   "name": "targets",
+   "selector": "a4u@u0020#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4u",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "'all'](a4g)])['then'](function(a4p){var akz=aky,a4q=a4p[0x0],a4r=a4p[0x1],a4s=a4p[0x2],a4t=a4p[0x3],a4u=a4p[0x4],a4v=[];for(var a4w=0x0,a4x=a4q['length'];a4w<a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978363 interpolate_: a4v=a4e[a4m+a4s+a4f] next-knot point value p1; USES refCount=1 in result blend",
+   "name": "nextPoint",
+   "selector": "a4v@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4v",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",a4r=a4p-a4k+a4j;for(var a4s=0x0;a4s!==a4f;a4s++){var a4t=a4e[a4n+a4s+a4f],a4u=a4e[a4n+a4s+a4g]*a4i,a4v=a4e[a4m+a4s+a4f],a4w=a4e[a4m+a4s]*a4i;a4d[a4s]=a4q*a4t+a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006575 anim loader: a4v=[] collects KeyframeTracks; USES refCount=2: a4v[push](a4M) and new AnimationClip(a4N,undefined,a4v)",
+   "name": "tracks",
+   "selector": "a4v@u0020#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4v",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "['then'](function(a4p){var akz=aky,a4q=a4p[0x0],a4r=a4p[0x1],a4s=a4p[0x2],a4t=a4p[0x3],a4u=a4p[0x4],a4v=[];for(var a4w=0x0,a4x=a4q['length'];a4w<a4x;a4w++){var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978384 interpolate_: a4w=a4e[a4m+a4s]*a4i next-knot tangent m1 scaled by dt; USES refCount=1 in result blend",
+   "name": "nextTangent",
+   "selector": "a4w@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4w",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "var a4s=0x0;a4s!==a4f;a4s++){var a4t=a4e[a4n+a4s+a4f],a4u=a4e[a4n+a4s+a4g]*a4i,a4v=a4e[a4m+a4s+a4f],a4w=a4e[a4m+a4s]*a4i;a4d[a4s]=a4q*a4t+a4r*a4u+a4o*a4v+a4p*a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006590 anim loader: for(var a4w=0;a4w<a4x;a4w++) channel loop index; USES refCount=7 indexing a4q/a4r/a4s/a4t/a4u",
+   "name": "channelIdx",
+   "selector": "a4w@u0020#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4w",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 7,
+    "snippet": "on(a4p){var akz=aky,a4q=a4p[0x0],a4r=a4p[0x1],a4s=a4p[0x2],a4t=a4p[0x3],a4u=a4p[0x4],a4v=[];for(var a4w=0x0,a4x=a4q['length'];a4w<a4x;a4w++){var a4y=a4q[a4w],a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006598 anim loader: a4x=a4q[length] loop bound over resolved nodes; USES refCount=1 in loop condition",
+   "name": "nodeCount",
+   "selector": "a4x@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4x",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "var akz=aky,a4q=a4p[0x0],a4r=a4p[0x1],a4s=a4p[0x2],a4t=a4p[0x3],a4u=a4p[0x4],a4v=[];for(var a4w=0x0,a4x=a4q['length'];a4w<a4x;a4w++){var a4y=a4q[a4w],a4z=a4r[a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006635 anim loader: a4y=a4q[a4w] per-channel node; USES refCount=7 incl updateMatrix and undefined-continue",
+   "name": "animNode",
+   "selector": "a4y@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4y",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 7,
+    "snippet": ",a4s=a4p[0x2],a4t=a4p[0x3],a4u=a4p[0x4],a4v=[];for(var a4w=0x0,a4x=a4q['length'];a4w<a4x;a4w++){var a4y=a4q[a4w],a4z=a4r[a4w],a4A=a4s[a4w],a4B=a4t[a4w],a4C=a4u["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006648 anim loader: a4z=a4r[a4w] per-channel input accessor; USES a4z[array] as times in KeyframeTrack ctor @1007946",
+   "name": "inputAccessor",
+   "selector": "a4z@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4z",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": ",a4t=a4p[0x3],a4u=a4p[0x4],a4v=[];for(var a4w=0x0,a4x=a4q['length'];a4w<a4x;a4w++){var a4y=a4q[a4w],a4z=a4r[a4w],a4A=a4s[a4w],a4B=a4t[a4w],a4C=a4u[a4w];if(a4y=="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @721688 Path.bezierCurveTo param alongside aCP1y/aCP2x/aCP2y/aX/aY; USES forwarded to CubicBezierCurve control point x",
+   "name": "cp1x",
+   "selector": "aCP1x@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aCP1x",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ".curves.push(curve);this.currentPoint.set(aX,aY);return this;},bezierCurveTo:function bezierCurveTo(aCP1x,aCP1y,aCP2x,aCP2y,aX,aY){var curve=new CubicBezierCurv"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @773642 ShapePath.bezierCurveTo param; USES forwarded to currentPath.bezierCurveTo(aCP1x,...) first control-point x",
+   "name": "cp1x",
+   "selector": "aCP1x@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aCP1x",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "is.currentPath.quadraticCurveTo(aCPx,aCPy,aX,aY);return this;},bezierCurveTo:function bezierCurveTo(aCP1x,aCP1y,aCP2x,aCP2y,aX,aY){this.currentPath.bezierCurveT"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @173053 var _start2=Math.max(_group.start,drawRange.start) loop-start clamp; refCount=1 group-material raycast loop bound",
+   "name": "_start2",
+   "selector": "_start2@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @173549 var _start3=Math.max(0,drawRange.start) loop-start clamp; refCount=1 non-indexed raycast loop bound",
+   "name": "_start3",
+   "selector": "_start3@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @845136 module-scope Line3 scratch vec; USES @846514/@846571 _startEnd.subVectors(end,start) + dot products for closest-point parameter",
+   "name": "_startEnd",
+   "selector": "_startEnd@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @663601 var startIndex=referenceOffset slice bound; refCount=2 AnimationUtils.arraySlice clamping branch",
+   "name": "_startIndex",
+   "selector": "_startIndex@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @663866 var _startIndex=lastIndex*referenceValueSize+referenceOffset; refCount=1 late-time arraySlice bound",
+   "name": "_startIndex2",
+   "selector": "_startIndex2@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @845108 module-scope Line3 scratch vec; USES @846476/@846630 _startP.subVectors(point,start) for closest-point parameter",
+   "name": "_startP",
+   "selector": "_startP@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @412538 var _state=_renderer.state; USES @414479 _state.viewport(_viewport) in shadow-map render loop",
+   "name": "_state",
+   "selector": "_state@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @487326 var _stencil=parameters.stencil renderer option; USES @489608 contextAttributes stencil:_stencil for getContext",
+   "name": "_stencil",
+   "selector": "_stencil@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @800565 module-scope PropertyBinding list; USES @802601 _supportedObjectNames.indexOf(objectName) in parseTrackName",
+   "name": "_supportedObjectNames",
+   "selector": "_supportedObjectNames@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @609004 var _t=_b/bevelSegments bevel param in ExtrudeGeometry loop; refCount=2 idiomatic short math temp",
+   "name": "_t",
+   "selector": "_t@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @829475 _takeBackAction in AnimationMixer memory manager; USES @826603 this._takeBackAction(action) on deactivate",
+   "name": "_takeBackAction",
+   "selector": "_takeBackAction@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @831085 _takeBackBinding in AnimationMixer memory manager; USES @826570 this._takeBackBinding(binding) on deactivate",
+   "name": "_takeBackBinding",
+   "selector": "_takeBackBinding@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @831899 _takeBackControlInterpolant factory-recycle; USES @819952/@818628 stopWarping/stopFading return interpolant",
+   "name": "_takeBackControlInterpolant",
+   "selector": "_takeBackControlInterpolant@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @92130 var _target=new Vector3 module scratch; USES @95781-@96019 lookAt target copy/set + Matrix4.lookAt args",
+   "name": "_target",
+   "selector": "_target@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @169066 var _tempA=new Vector3 morph scratch; USES @175960-@176260 fromBufferAttribute + addScaledVector per influence",
+   "name": "_tempA",
+   "selector": "_tempA@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @169093 var _tempB=new Vector3 morph scratch; USES @176005-@176307 fromBufferAttribute(b) + addScaledVector per influence",
+   "name": "_tempB",
+   "selector": "_tempB@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @169120 var _tempC=new Vector3 morph scratch; USES @176050-@176354 fromBufferAttribute(c) + addScaledVector per influence",
+   "name": "_tempC",
+   "selector": "_tempC@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @64885 module-scope SAT scratch axis; USES @64164-@64281 fromArray + dot/extent tests in satForAxes",
+   "name": "_testAxis",
+   "selector": "_testAxis@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @873774 PMREM _textureToCubeUV cube-face render; USES @871568 this._textureToCubeUV(texture,cubeUVRenderTarget) in _fromTexture",
+   "name": "_textureToCubeUV",
+   "selector": "_textureToCubeUV@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @700746 var _theta=Math.acos(clamp(normals dot)) parallel-transport frames; refCount=4 closed-curve correction",
+   "name": "_theta",
+   "selector": "_theta@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @773970 var _tmpPath=inSubpaths[i] in toShapesNoHoles; refCount=1 source path for shape conversion",
+   "name": "_tmpPath",
+   "selector": "_tmpPath@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @773997 var _tmpShape=new Shape(); refCount=2 _tmpShape.curves=_tmpPath.curves conversion target",
+   "name": "_tmpShape",
+   "selector": "_tmpShape@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @613173 helper function _toJSON; USES @612010 ExtrudeBufferGeometry toJSON delegates return _toJSON(shapes,options,data)",
+   "name": "_toJSON",
+   "selector": "_toJSON@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @614087 helper function _toJSON$1; refCount=1 ExtrudeGeometry toJSON delegates return _toJSON$1(shapes,options,data)",
+   "name": "_toJSON$1",
+   "selector": "_toJSON$1@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @626268 helper function _toJSON$2; refCount=1 ShapeBufferGeometry toJSON delegates return _toJSON$2(shapes,data)",
+   "name": "_toJSON$2",
+   "selector": "_toJSON$2@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @627209 helper function _toJSON$3; refCount=1 ShapeGeometry toJSON delegates return _toJSON$3(shapes,data)",
+   "name": "_toJSON$3",
+   "selector": "_toJSON$3@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @800486 module-scope track-name regex; USES @802205 _trackRe.exec(trackName) in parseTrackName",
+   "name": "_trackRe",
+   "selector": "_trackRe@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @488835 var _transparentSort renderer sort hook; USES @495599 setter + @503757 currentRenderList.sort(_opaqueSort,_transparentSort)",
+   "name": "_transparentSort",
+   "selector": "_transparentSort@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @590313 module-scope scratch Triangle; USES @591320-@592031 vertex reads + getNormal + edge hashing in mergeVertices",
+   "name": "_triangle",
+   "selector": "_triangle@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000477 param of .then(function(a4k){a49.setAttribute(a4j,a4k)}) resolving getDependency(accessor) in GLTF primitive-attribute loader",
+   "name": "bufferAttribute",
+   "selector": "a4k@u0020#21",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4k",
+   "binding": {
+    "unit": "u0020",
+    "index": 21,
+    "refCount": 1,
+    "snippet": "ributes'],a4d=[];function a4e(a4i,a4j){return a4b['getDependency']('accessor',a4i)['then'](function(a4k){a49['setAttribute'](a4j,a4k);});}for(var a4f in a4c){va"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @515251 function markUniformsLightsNeedsUpdate amid uniform-upload code; refCount=0, self-descriptive three.js-style name, already readable",
+   "name": "markUniformsLightsNeedsUpdate",
+   "selector": "markUniformsLightsNeedsUpdate@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @457551 var mask in updateMultisampleRenderTarget (blit mask); USES bitmask ops; idiomatic GL/renderer term, already readable",
+   "name": "mask",
+   "selector": "mask@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @355830 var mat2array beside mat3/mat4 arrays; USES @357929/@357989 mat2array.set + uniformMatrix2fv; idiomatic scratch-buffer name",
+   "name": "mat2array",
+   "selector": "mat2array@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @355796 var mat3array beside mat4array; USES @358257/@358317 mat3array.set + uniformMatrix3fv; idiomatic scratch-buffer name",
+   "name": "mat3array",
+   "selector": "mat3array@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @355761 var mat4array Float32Array(16); USES @358585/@358645 mat4array.set + uniformMatrix4fv; idiomatic scratch-buffer name",
+   "name": "mat4array",
+   "selector": "mat4array@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @339157 var maxAnisotropy in WebGLCapabilities; refCount=5 local capability value; idiomatic GL capability name, already readable",
+   "name": "maxAnisotropy",
+   "selector": "maxAnisotropy@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @340583 var maxAttributes=gl.getParameter(34921); USES @341252/@341266 exposed on capabilities object; idiomatic GL limit name",
+   "name": "maxAttributes",
+   "selector": "maxAttributes@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @386536 var maxBones in getMaxBones (min of vertex-matrix budget vs bones.length); USES warn + return; idiomatic skinning term",
+   "name": "maxBones",
+   "selector": "maxBones@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @387354 var maxBones=getMaxBones(object) in getParameters; USES @390603/@390614 skinning&&maxBones>0 params; idiomatic skinning term",
+   "name": "maxBones",
+   "selector": "maxBones@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @872886 var maxComponent in PMREM/env code; USES shader maxComponent pattern; idiomatic descriptive name, already readable",
+   "name": "maxComponent",
+   "selector": "maxComponent@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @340541 var maxCubemapSize=gl.getParameter(34076); USES @341222/@341237 capabilities export; idiomatic GL limit name",
+   "name": "maxCubemapSize",
+   "selector": "maxCubemapSize@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @432688 var maxCubemapSize=capabilities.maxCubemapSize in WebGLTextures; USES @447482 resizeImage clamp; idiomatic GL limit name",
+   "name": "maxCubemapSize",
+   "selector": "maxCubemapSize@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @340708 var maxFragmentUniforms=gl.getParameter(36349); USES @341340/@341360 capabilities export; idiomatic GL limit name",
+   "name": "maxFragmentUniforms",
+   "selector": "maxFragmentUniforms@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @477136 var maxMipLevel for envMap uniforms; USES @318562/@252922 uniform + shader refs; idiomatic mipmap term, already readable",
+   "name": "maxMipLevel",
+   "selector": "maxMipLevel@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @340098 var maxPrecision=getMaxPrecision(precision) fallback in WebGLCapabilities; refCount=4 local; idiomatic precision term",
+   "name": "maxPrecision",
+   "selector": "maxPrecision@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @65415 var maxRadiusSq=0 in Sphere.setFromPoints; USES max-accumulate + sqrt for radius; idiomatic bounding-sphere term",
+   "name": "maxRadiusSq",
+   "selector": "maxRadiusSq@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @160774 var maxRadiusSq=0 in computeBoundingSphere; USES @161422 sqrt for boundingSphere.radius; idiomatic bounding-sphere term",
+   "name": "maxRadiusSq",
+   "selector": "maxRadiusSq@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @340930 var maxSamples=gl.getParameter(36183) in WebGLCapabilities; USES capabilities export; idiomatic MSAA term, already readable",
+   "name": "maxSamples",
+   "selector": "maxSamples@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @432782 var maxSamples=capabilities.maxSamples in WebGLTextures; USES @458013 getRenderTargetSamples clamp; idiomatic MSAA term",
+   "name": "maxSamples",
+   "selector": "maxSamples@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @879236 param maxSamples of _getBlurShader; USES Float32Array(maxSamples) + defines n; idiomatic blur-kernel size name",
+   "name": "maxSamples",
+   "selector": "maxSamples@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @433235 param maxSize of resizeImage; refCount=3 clamps image dims; idiomatic size-limit name, already readable",
+   "name": "maxSize",
+   "selector": "maxSize@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @595387 var maxTX in isEarHashed (triangle max x bound); refCount=1 hash-grid bound; idiomatic earcut abbreviation, already readable",
+   "name": "maxTX",
+   "selector": "maxTX@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @595433 var maxTY in isEarHashed (triangle max y bound); refCount=1 hash-grid bound; idiomatic earcut abbreviation, already readable",
+   "name": "maxTY",
+   "selector": "maxTY@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @340500 var maxTextureSize=gl.getParameter(3379); USES @341192/@341207 capabilities export; idiomatic GL limit name",
+   "name": "maxTextureSize",
+   "selector": "maxTextureSize@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @411309 param maxTextureSize of WebGLShadowMap; USES @413125+ shadow-map clamping; idiomatic GL limit name",
+   "name": "maxTextureSize",
+   "selector": "maxTextureSize@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @432735 var maxTextureSize=capabilities.maxTextureSize in WebGLTextures; USES @442937 resizeImage clamp; idiomatic GL limit name",
+   "name": "maxTextureSize",
+   "selector": "maxTextureSize@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @340416 var maxTextures=gl.getParameter(34930); USES @341132/@341144 capabilities export; idiomatic GL limit name",
+   "name": "maxTextures",
+   "selector": "maxTextures@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @423303 var maxTextures=gl.getParameter(35661) in WebGLState; USES @429905 activeTexture slot default; idiomatic GL limit name",
+   "name": "maxTextures",
+   "selector": "maxTextures@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @432647 var maxTextures=capabilities.maxTextures in WebGLTextures; USES @438056/@438184 allocateTextureUnit guard; idiomatic GL limit name",
+   "name": "maxTextures",
+   "selector": "maxTextures@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @13831 param maxVal of clampScalar(minVal,maxVal); USES Math.min(maxVal,...) clamps; idiomatic clamp-bound name, already readable",
+   "name": "maxVal",
+   "selector": "maxVal@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @104270 toJSON animations loop; USES @104340 for(_i3<this.animations.length) animation=this.animations[_i3] — animation index",
+   "name": "animIndex",
+   "selector": "_i3@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_i3",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "this.children[_i2].toJSON(meta).object);}}if(this.animations.length>0){object.animations=[];for(var _i3=0;_i3<this.animations.length;_i3++){var animation=this.a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @162329 computeVertexNormals indexed branch for(_i3=0,_il3=index.count;+=3); USES vA/vB/vC=index.getX(_i3+0/1/2) — step-3 index cursor",
+   "name": "indexCursor",
+   "selector": "_i3@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_i3",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "),nB=new gURkzCzeY(),nC=new gURkzCzeY();var cb=new gURkzCzeY(),ab=new gURkzCzeY();if(index){for(var _i3=0,_il3=index.count;_i3<_il3;_i3+=3){var vA=index.getX(_i"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @173660 raycast for(_i3=_start3,_il3=_end3;+=3); USES _a3/_b3/_c3=_i3/+1/+2 into checkBufferGeometryIntersection — raycast triangle cursor",
+   "name": "rayTriCursor",
+   "selector": "_i3@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_i3",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "h.max(0,drawRange.start);var _end3=Math.min(position.count,drawRange.start+drawRange.count);for(var _i3=_start3,_il3=_end3;_i3<_il3;_i3+=3){var _a3=_i3;var _b3="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @351910 morph update; USES @352069/@352116 for(_i3<8) selecting top influences into workInfluences[_i3] — top-influence rank index",
+   "name": "topInfluenceIndex",
+   "selector": "_i3@u0020#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_i3",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 10,
+    "snippet": "_i2];influence[0]=_i2;influence[1]=objectInfluences[_i2];}influences.sort(absNumericalSort);for(var _i3=0;_i3<8;_i3++){if(_i3<length&&influences[_i3][1]){workIn"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @405122 setupView for(_i3<lights.length); USES light=lights[_i3] dispatching directional/point/spot uniforms — lights loop index",
+   "name": "lightLoopIndex",
+   "selector": "_i3@u0020#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_i3",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "var spotLength=0;var rectAreaLength=0;var hemiLength=0;var viewMatrix=aKmLbYuMC.slAOJZKzPMm;for(var _i3=0,l=lights.length;_i3<l;_i3++){var light=lights[_i3];if("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @125991 Face3.copy for(_i=0,_il=source.vertexColors.length); USES bound check cloning vertexColors — cached vertex-color count",
+   "name": "vertexColorCount",
+   "selector": "_il@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ".vertexNormals.length;i<il;i++){this.vertexNormals[i]=source.vertexNormals[i].clone();}for(var _i=0,_il=source.vertexColors.length;_i<_il;_i++){this.vertexColor"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @160801 computeBoundingSphere for(_i=0,_il=position.count); USES bound check over fromBufferAttribute(position) — cached position count",
+   "name": "positionCount",
+   "selector": "_il@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "ox$2.expandByPoint(_boxMorphTargets.max);}}}_box$2.getCenter(center);var maxRadiusSq=0;for(var _i=0,_il=position.count;_i<_il;_i++){_vector$4.fromBufferAttribut"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @172555 raycast for(_i=_start,_il=_end;+=3) with _end=min(index.count,...); USES triangle-walk bound — cached index end",
+   "name": "indexEnd",
+   "selector": "_il@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "0,drawRange.start);var _end=Math.min(index.count,drawRange.start+drawRange.count);for(var _i=_start,_il=_end;_i<_il;_i+=3){var _a=index.getX(_i);var _b=index.ge"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @444934 setTexture2D for(_i=0,_il=mipmaps.length); USES compressedTexImage2D per mipmap[_i] — cached mipmap count",
+   "name": "mipmapCount",
+   "selector": "_il@u0020#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "e,image.data);textureProperties.__maxMipLevel=0;}}else if(texture.isCompressedTexture){for(var _i=0,_il=mipmaps.length;_i<_il;_i++){mipmap=mipmaps[_i];if(textur"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @539769 Skeleton.pose for(_i=0,_il=this.bones.length); USES _bone=this.bones[_i] matrix fixup — cached bone count",
+   "name": "boneCount",
+   "selector": "_il@u0020#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "var bone=this.bones[i];if(bone){bone.matrixWorld.copy(this.boneInverses[i]).invert();}}for(var _i=0,_il=this.bones.length;_i<_il;_i++){var _bone=this.bones[_i];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @558374 Geometry.applyMatrix4 for(_i=0,_il=this.faces.length); USES face=this.faces[_i] normal transform — cached apply-matrix face count",
+   "name": "applyFaceCount",
+   "selector": "_il@u0020#5",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il",
+   "binding": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "this.AUbXpMajF.length;i<il;i++){var vertex=this.AUbXpMajF[i];vertex.GdTYEgIav(matrix);}for(var _i=0,_il=this.faces.length;_i<_il;_i++){var face=this.faces[_i];f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @607341 extrude bevel for(_i2=0,_il=_ahole2.length,_j=_il-1); USES getBevelVec per hole point — cached hole-point count",
+   "name": "holePointCount",
+   "selector": "_il@u0020#6",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il",
+   "binding": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "ar _h2=0,_hl2=holes.length;_h2<_hl2;_h2++){var _ahole2=holes[_h2];oneHoleMovements=[];for(var _i2=0,_il=_ahole2.length,_j=_il-1,_k=_i2+1;_i2<_il;_i2++,_j++,_k++"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @689186 FileLoader error branch; USES @689211 for(_i2=0,_il=callbacks.length) _callback.onError fan-out — cached callback count",
+   "name": "callbackCount",
+   "selector": "_il@u0020#7",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il",
+   "binding": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "ks[_i];if(callback.onLoad)callback.onLoad(response);}scope.manager.itemEnd(url);}else{for(var _i2=0,_il=callbacks.length;_i2<_il;_i2++){var _callback=callbacks["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @574697 Geometry.copy var morphTargets=source.morphTargets;for(_i16=0,_il10=...) — cached morph-target count",
+   "name": "morphTargetCount",
+   "selector": "_il10@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il10",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ne());}this.faceVertexUvs[_i15].push(uvsCopy);}}var morphTargets=source.morphTargets;for(var _i16=0,_il10=morphTargets.length;_i16<_il10;_i16++){var morphTarget"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @575307 Geometry.copy var morphNormals=source.morphNormals;for(_i17=0,_il11=...) — cached morph-normal count",
+   "name": "morphNormalCount",
+   "selector": "_il11@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il11",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "clone());}}this.morphTargets.push(morphTarget);}var morphNormals=source.morphNormals;for(var _i17=0,_il11=morphNormals.length;_i17<_il11;_i17++){var morphNormal"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @576102 Geometry.copy var skinWeights=source.skinWeights;for(_i18=0,_il12=...) — cached skin-weight count",
+   "name": "skinWeightCount",
+   "selector": "_il12@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il12",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "].clone());}}this.morphNormals.push(morphNormal);}var skinWeights=source.skinWeights;for(var _i18=0,_il12=skinWeights.length;_i18<_il12;_i18++){this.skinWeights"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @576246 Geometry.copy for(_i19=0,_il13=skinIndices.length) pushing skinIndices clones — cached skin-index count",
+   "name": "skinIndexCount",
+   "selector": "_il13@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il13",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "this.skinWeights.push(skinWeights[_i18].clone());}var skinIndices=source.skinIndices;for(var _i19=0,_il13=skinIndices.length;_i19<_il13;_i19++){this.skinIndices"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @576394 Geometry.copy var lineDistances=source.lineDistances;for(_i20=0,_il14=...) — cached line-distance count",
+   "name": "lineDistanceCount",
+   "selector": "_il14@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il14",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ".skinIndices.push(skinIndices[_i19].clone());}var lineDistances=source.lineDistances;for(var _i20=0,_il14=lineDistances.length;_i20<_il14;_i20++){this.lineDista"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @160982 computeBoundingSphere for(_i2=0,_il2=morphAttributesPosition.length); USES morph-attribute loop — cached morph-attribute count",
+   "name": "morphAttributeCount",
+   "selector": "_il2@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il2",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "iusSq=Math.max(maxRadiusSq,center.XcYeSlLtjr(_vector$4));}if(morphAttributesPosition){for(var _i2=0,_il2=morphAttributesPosition.length;_i2<_il2;_i2++){var _mor"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @172941 raycast for(_i2=0,_il2=groups.length); USES _group=groups[_i2] multi-material dispatch — cached group count",
+   "name": "groupCount",
+   "selector": "_il2@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il2",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "dwjKE.push(BhSKyEIxpfR);}}}}else if(position!==undefined){if(Array.isArray(material)){for(var _i2=0,_il2=groups.length;_i2<_il2;_i2++){var _group=groups[_i2];va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @445853 uploadTexture for(_i2=0,_il2=mipmaps.length); USES texImage2D per mipmap[_i2] — cached mip-level count",
+   "name": "mipLevelCount",
+   "selector": "_il2@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il2",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "mage.data);textureProperties.__maxMipLevel=0;}else{if(mipmaps.length>0&&supportsMips){for(var _i2=0,_il2=mipmaps.length;_i2<_il2;_i2++){mipmap=mipmaps[_i2];stat"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @564886 computeMorphNormals for(_i5=0,_il2=this.morphTargets.length); USES morphNormals[_i5] setup — cached morph-target total",
+   "name": "morphTargetTotal",
+   "selector": "_il2@u0020#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il2",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "s[i].copy(face.vertexNormals[i]);}}}var tmpGeo=new Geometry();tmpGeo.faces=this.faces;for(var _i5=0,_il2=this.morphTargets.length;_i5<_il2;_i5++){if(!this.morph"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @607774 extrude bevel for(_i3=0,_il2=contour.length); USES scalePt2(contour[_i3],...) ring — cached contour-point count",
+   "name": "contourPointCount",
+   "selector": "_il2@u0020#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il2",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "elThickness*Math.cos(t*Math.PI/2);var _bs=bevelSize*Math.sin(t*Math.PI/2)+bevelOffset;for(var _i3=0,_il2=contour.length;_i3<_il2;_i3++){var vert=scalePt2(contou"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @162335 computeVertexNormals for(_i3=0,_il3=index.count); USES step-3 bound for triplet walk — cached index total",
+   "name": "indexTotal",
+   "selector": "_il3@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il3",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ew gURkzCzeY(),nC=new gURkzCzeY();var cb=new gURkzCzeY(),ab=new gURkzCzeY();if(index){for(var _i3=0,_il3=index.count;_i3<_il3;_i3+=3){var vA=index.getX(_i3+0);v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @173672 raycast for(_i3=_start3,_il3=_end3) with _end3=min(position.count,...); USES triangle-walk bound — cached position end",
+   "name": "positionEnd",
+   "selector": "_il3@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il3",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "Range.start);var _end3=Math.min(position.count,drawRange.start+drawRange.count);for(var _i3=_start3,_il3=_end3;_i3<_il3;_i3+=3){var _a3=_i3;var _b3=_i3+1;var _c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @567146 Geometry.merge for(_i6=0,_il3=colors2.length); USES colors1.push(colors2[_i6].clone()) — cached merge color count",
+   "name": "mergeColorCount",
+   "selector": "_il3@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il3",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "lone();if(matrix!==undefined)vertexCopy.GdTYEgIav(matrix);vertices1.push(vertexCopy);}for(var _i6=0,_il3=colors2.length;_i6<_il3;_i6++){colors1.push(colors2[_i6"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @608011 extrude bevel for(_i4=0,_il3=_ahole3.length); USES scalePt2(_ahole3[_i4],...) hole ring — cached hole-vertex count",
+   "name": "holeVertexCount",
+   "selector": "_il3@u0020#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il3",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "es.length;_h3<_hl3;_h3++){var _ahole3=holes[_h3];oneHoleMovements=holesMovements[_h3];for(var _i4=0,_il3=_ahole3.length;_i4<_il3;_i4++){var _vert=scalePt2(_ahol"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @162945 computeVertexNormals non-indexed for(_i4=0,_il4=positionAttribute.count;+=3); USES triplet accumulation — cached position-attribute count",
+   "name": "positionAttrCount",
+   "selector": "_il4@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il4",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "lAttribute.setXYZ(vB,nB.x,nB.y,nB.z);normalAttribute.setXYZ(vC,nC.x,nC.y,nC.z);}}else{for(var _i4=0,_il4=positionAttribute.count;_i4<_il4;_i4+=3){pA.fromBufferA"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @567232 Geometry.merge for(_i7=0,_il4=faces2.length); USES face=faces2[_i7] Face3 copy — cached merge face count",
+   "name": "mergeFaceCount",
+   "selector": "_il4@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "_il4",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "for(var _i6=0,_il3=colors2.length;_i6<_il3;_i6++){colors1.push(colors2[_i6].clone());}for(var _i7=0,_il4=faces2.length;_i7<_il4;_i7++){var face=faces2[_i7];var "
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @179443 BoxGeometry for(_iy<gridY) index loop; USES refCount=6 a/b/c/d corner math — idiomatic y-grid counter; rename to iy would collide with outer iy (mirrors kept _ix siblings)",
+   "name": "_iy",
+   "selector": "_iy@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  }
+ ]
+}

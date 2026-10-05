@@ -1,0 +1,4993 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 54,
+  "date": "2026-09-29",
+  "merged": 198,
+  "heldLow": 1,
+  "heldInvalid": 0,
+  "kept": 24,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "write-only sentinel stores never read anywhere",
+   "selector": "a3z@u1970#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "write-only latch set never read",
+   "selector": "a42@u1970#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "write-only latch set never read",
+   "selector": "a43@u1970#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: OR of forward strafe input drives movement bloom; SERVED: OR of forward strafe input drives movement bloom (snippet-only twin).",
+   "name": "anyMoveInput",
+   "selector": "a46@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a46",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "FtA'](0.18);a3Y=Math[\"KkKRLGFtA\"](0.27);var a3Z=![],a40=![],a41=![],a42=![],a43=![],a44=![],a45=![],a46=![],a47=![],a48=![],a49=![],a4a=![],a4b=![],a4c=null,a4d"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "GFtA'](0.18);a3Y=Math[aqu(0xb00)](0.27);var a3Z=![],a40=![],a41=![],a42=![],a43=![],a44=![],a45=![],a46=![],a47=![],a48=![],a49=![],a4a=![],a4b=![],a4c=null,a4d"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: set with collision bounds gates position pushout apply; SERVED: set with collision bounds gates position pushout apply (snippet-only twin).",
+   "name": "wallPushFlag",
+   "selector": "a47@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a47",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "18);a3Y=Math[\"KkKRLGFtA\"](0.27);var a3Z=![],a40=![],a41=![],a42=![],a43=![],a44=![],a45=![],a46=![],a47=![],a48=![],a49=![],a4a=![],a4b=![],a4c=null,a4d=null,a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": ".18);a3Y=Math[aqu(0xb00)](0.27);var a3Z=![],a40=![],a41=![],a42=![],a43=![],a44=![],a45=![],a46=![],a47=![],a48=![],a49=![],a4a=![],a4b=![],a4c=null,a4d=null,a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: set with collision bounds gates velocity damping; SERVED: set with collision bounds gates velocity damping (snippet-only twin).",
+   "name": "wallDampFlag",
+   "selector": "a48@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a48",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "Math[\"KkKRLGFtA\"](0.27);var a3Z=![],a40=![],a41=![],a42=![],a43=![],a44=![],a45=![],a46=![],a47=![],a48=![],a49=![],a4a=![],a4b=![],a4c=null,a4d=null,a4e=null,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "=Math[aqu(0xb00)](0.27);var a3Z=![],a40=![],a41=![],a42=![],a43=![],a44=![],a45=![],a46=![],a47=![],a48=![],a49=![],a4a=![],a4b=![],a4c=null,a4d=null,a4e=null,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: latches ground contact drives grounded rampNormal updates; SERVED: latches ground contact drives grounded rampNormal updates (snippet-only twin).",
+   "name": "groundHitFlag",
+   "selector": "a49@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a49",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "KRLGFtA\"](0.27);var a3Z=![],a40=![],a41=![],a42=![],a43=![],a44=![],a45=![],a46=![],a47=![],a48=![],a49=![],a4a=![],a4b=![],a4c=null,a4d=null,a4e=null,a4f=null;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "u(0xb00)](0.27);var a3Z=![],a40=![],a41=![],a42=![],a43=![],a44=![],a45=![],a46=![],a47=![],a48=![],a49=![],a4a=![],a4b=![],a4c=null,a4d=null,a4e=null,a4f=null;"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: vertical lift offset plus penetration depth threshold; SERVED: vertical lift offset plus penetration depth threshold (snippet-only twin).",
+   "name": "collideStepHeight",
+   "selector": "a4A@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "02),a4x=Math[\"KkKRLGFtA\"](0.45),a4y=Math[\"KkKRLGFtA\"](0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'](1.28),a4A=Math['KkKRLGFtA'](0.1),a4B=Math['KkKRLGFtA'](0.2),a4C=Ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "0002),a4x=Math[aqu(0xb00)](0.45),a4y=Math[aqu(0xb00)](0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'](1.28),a4A=Math['KkKRLGFtA'](0.1),a4B=Math['KkKRLGFtA'](0.2),a4C=Ma"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: hop-chain speed base overwritten slide default; SERVED: hop-chain speed base overwritten slide default (snippet-only twin).",
+   "name": "hopSpeedBase",
+   "selector": "a4B@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ".45),a4y=Math[\"KkKRLGFtA\"](0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'](1.28),a4A=Math['KkKRLGFtA'](0.1),a4B=Math['KkKRLGFtA'](0.2),a4C=Math[\"KkKRLGFtA\"](0.3),a4D=Ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0.45),a4y=Math[aqu(0xb00)](0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'](1.28),a4A=Math['KkKRLGFtA'](0.1),a4B=Math['KkKRLGFtA'](0.2),a4C=Math[aqu(0xb00)](0.3),a4D=Mat"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: crouch height cut plus uncrouch probe offset; SERVED: crouch height cut plus uncrouch probe offset (snippet-only twin).",
+   "name": "crouchHeadroomDrop",
+   "selector": "a4C@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4C",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'](1.28),a4A=Math['KkKRLGFtA'](0.1),a4B=Math['KkKRLGFtA'](0.2),a4C=Math[\"KkKRLGFtA\"](0.3),a4D=Math['KkKRLGFtA'](0.35),a4E=M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'](1.28),a4A=Math['KkKRLGFtA'](0.1),a4B=Math['KkKRLGFtA'](0.2),a4C=Math[aqu(0xb00)](0.3),a4D=Math['KkKRLGFtA'](0.35),a4E=Ma"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount zero never used",
+   "selector": "a4D@u1970#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: vertical penetration gate plus probe radius scale; SERVED: vertical penetration gate plus probe radius scale (snippet-only twin).",
+   "name": "penetrationDepthLimit",
+   "selector": "a4E@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4E",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'KkKRLGFtA'](0.1),a4B=Math['KkKRLGFtA'](0.2),a4C=Math[\"KkKRLGFtA\"](0.3),a4D=Math['KkKRLGFtA'](0.35),a4E=Math['KkKRLGFtA'](0.4),a4F=Math[\"KkKRLGFtA\"](0.45),a4G=M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['KkKRLGFtA'](0.1),a4B=Math['KkKRLGFtA'](0.2),a4C=Math[aqu(0xb00)](0.3),a4D=Math['KkKRLGFtA'](0.35),a4E=Math['KkKRLGFtA'](0.4),a4F=Math[aqu(0xb00)](0.45),a4G=Ma"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: default collider radius broadphase narrowphase slide default; SERVED: default collider radius broadphase narrowphase slide default (snippet-only twin).",
+   "name": "playerCollideRadius",
+   "selector": "a4F@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4F",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'KkKRLGFtA'](0.2),a4C=Math[\"KkKRLGFtA\"](0.3),a4D=Math['KkKRLGFtA'](0.35),a4E=Math['KkKRLGFtA'](0.4),a4F=Math[\"KkKRLGFtA\"](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "['KkKRLGFtA'](0.2),a4C=Math[aqu(0xb00)](0.3),a4D=Math['KkKRLGFtA'](0.35),a4E=Math['KkKRLGFtA'](0.4),a4F=Math[aqu(0xb00)](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Ma"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: halves wall pushout plus alternate slide factor; SERVED: halves wall pushout plus alternate slide factor (snippet-only twin).",
+   "name": "pushoutDampFactor",
+   "selector": "a4G@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4G",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "KkKRLGFtA\"](0.3),a4D=Math['KkKRLGFtA'](0.35),a4E=Math['KkKRLGFtA'](0.4),a4F=Math[\"KkKRLGFtA\"](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Math[\"KkKRLGFtA\"](0.6),a4I=Ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "[aqu(0xb00)](0.3),a4D=Math['KkKRLGFtA'](0.35),a4E=Math['KkKRLGFtA'](0.4),a4F=Math[aqu(0xb00)](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Math[aqu(0xb00)](0.6),a4I=Mat"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: grounded slide vertical velocity versus jump velocity; SERVED: grounded slide vertical velocity versus jump velocity (snippet-only twin).",
+   "name": "slideRiseVelocity",
+   "selector": "a4H@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4H",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "KkKRLGFtA'](0.35),a4E=Math['KkKRLGFtA'](0.4),a4F=Math[\"KkKRLGFtA\"](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Math[\"KkKRLGFtA\"](0.6),a4I=Math[\"KkKRLGFtA\"](0.7),a4J=Ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "'KkKRLGFtA'](0.35),a4E=Math['KkKRLGFtA'](0.4),a4F=Math[aqu(0xb00)](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Math[aqu(0xb00)](0.6),a4I=Math[aqu(0xb00)](0.7),a4J=Math"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: broadphase top narrow check scoped speed damp; SERVED: broadphase top narrow check scoped speed damp (snippet-only twin).",
+   "name": "upperHeightBound",
+   "selector": "a4I@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4I",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'KkKRLGFtA'](0.4),a4F=Math[\"KkKRLGFtA\"](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Math[\"KkKRLGFtA\"](0.6),a4I=Math[\"KkKRLGFtA\"](0.7),a4J=Math[\"KkKRLGFtA\"](0.8),a4K=Ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "h['KkKRLGFtA'](0.4),a4F=Math[aqu(0xb00)](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Math[aqu(0xb00)](0.6),a4I=Math[aqu(0xb00)](0.7),a4J=Math[aqu(0xb00)](0.8),a4K=Math"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: hop slide scaling plus rise clamp factor; SERVED: hop slide scaling plus rise clamp factor (snippet-only twin).",
+   "name": "moveSpeedScale",
+   "selector": "a4J@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4J",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "\"KkKRLGFtA\"](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Math[\"KkKRLGFtA\"](0.6),a4I=Math[\"KkKRLGFtA\"](0.7),a4J=Math[\"KkKRLGFtA\"](0.8),a4K=Math[\"KkKRLGFtA\"](0.9),a4L=Ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "th[aqu(0xb00)](0.45),a4G=Math['KkKRLGFtA'](0.5),a4H=Math[aqu(0xb00)](0.6),a4I=Math[aqu(0xb00)](0.7),a4J=Math[aqu(0xb00)](0.8),a4K=Math[aqu(0xb00)](0.9),a4L=Math"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: alternate radius box bottom alternate slide factor; SERVED: alternate radius box bottom alternate slide factor (snippet-only twin).",
+   "name": "altCollideRadius",
+   "selector": "a4K@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4K",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['KkKRLGFtA'](0.5),a4H=Math[\"KkKRLGFtA\"](0.6),a4I=Math[\"KkKRLGFtA\"](0.7),a4J=Math[\"KkKRLGFtA\"](0.8),a4K=Math[\"KkKRLGFtA\"](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ath['KkKRLGFtA'](0.5),a4H=Math[aqu(0xb00)](0.6),a4I=Math[aqu(0xb00)](0.7),a4J=Math[aqu(0xb00)](0.8),a4K=Math[aqu(0xb00)](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: high-speed two-substep trigger scale; SERVED: high-speed two-substep trigger scale (snippet-only twin).",
+   "name": "substepSpeedThreshold",
+   "selector": "a4L@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4L",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "[\"KkKRLGFtA\"](0.6),a4I=Math[\"KkKRLGFtA\"](0.7),a4J=Math[\"KkKRLGFtA\"](0.8),a4K=Math[\"KkKRLGFtA\"](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "Math[aqu(0xb00)](0.6),a4I=Math[aqu(0xb00)](0.7),a4J=Math[aqu(0xb00)](0.8),a4K=Math[aqu(0xb00)](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slide duration ticks start window progress fraction; SERVED: slide duration ticks start window progress fraction (snippet-only twin).",
+   "name": "slideTickMax",
+   "selector": "a4M@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4M",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "\"KkKRLGFtA\"](0.7),a4J=Math[\"KkKRLGFtA\"](0.8),a4K=Math[\"KkKRLGFtA\"](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "th[aqu(0xb00)](0.7),a4J=Math[aqu(0xb00)](0.8),a4K=Math[aqu(0xb00)](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: boolean sphere-versus-mesh headroom query; SERVED: boolean sphere-versus-mesh headroom query (snippet-only twin).",
+   "name": "meshProximityProbe",
+   "selector": "a4N@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4N",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a4J=Math[\"KkKRLGFtA\"](0.8),a4K=Math[\"KkKRLGFtA\"](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "),a4J=Math[aqu(0xb00)](0.8),a4K=Math[aqu(0xb00)](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inter-player pushout direction scratch vector; SERVED: inter-player pushout direction scratch vector (snippet-only twin).",
+   "name": "playerShoveDir",
+   "selector": "a4Y@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Y",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "a<0.1)return!![];return![];},EW=function(a55){var aqI=aqu;return a55[\"fkXbORMTcl\"]!=undefined;};var a4Y=new usvzFuAsEB['gURkzCzeY'](),a4Z={'position':new usvzFu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "a5a<0.1)return!![];return![];},EW=function(a55){var aqI=aqu;return a55[aqI(0xefa)]!=undefined;};var a4Y=new usvzFuAsEB['gURkzCzeY'](),a4Z={'position':new usvzFu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scratch other-player position wrapper; SERVED: scratch other-player position wrapper (snippet-only twin).",
+   "name": "peerPosHolder",
+   "selector": "a4Z@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Z",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "nction(a55){var aqI=aqu;return a55[\"fkXbORMTcl\"]!=undefined;};var a4Y=new usvzFuAsEB['gURkzCzeY'](),a4Z={'position':new usvzFuAsEB['gURkzCzeY']()},a50=new usvzF"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "function(a55){var aqI=aqu;return a55[aqI(0xefa)]!=undefined;};var a4Y=new usvzFuAsEB['gURkzCzeY'](),a4Z={'position':new usvzFuAsEB['gURkzCzeY']()},a50=new usvzF"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sin table fill plus pool preallocate counter; SERVED: sin table fill plus pool preallocate counter (snippet-only twin).",
+   "name": "initLoopIndex",
+   "selector": "a4h@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "![],a4a=![],a4b=![],a4c=null,a4d=null,a4e=null,a4f=null;Jx=[],Jy=[];var a4g=Math['PI']/0x80;for(var a4h=0x0;a4h<0x100;a4h++){Jx[a4h]=Math['KkKRLGFtA'](Math[\"sin"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "![],a4a=![],a4b=![],a4c=null,a4d=null,a4e=null,a4f=null;Jx=[],Jy=[];var a4g=Math['PI']/0x80;for(var a4h=0x0;a4h<0x100;a4h++){Jx[a4h]=Math['KkKRLGFtA'](Math[aqu("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: grid cell size feeds reciprocal sibling; SERVED: grid cell size feeds reciprocal sibling (snippet-only twin).",
+   "name": "cellSize",
+   "selector": "a4i@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4i",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "x[a4h]=Math['KkKRLGFtA'](Math[\"sin\"](a4h*a4g)),Jy[a4h]=Math[\"KkKRLGFtA\"](Math[\"cos\"](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;re"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "th['KkKRLGFtA'](Math[aqu(0xbd6)](a4h*a4g)),Jy[a4h]=Math[aqu(0xb00)](Math[aqu(0xb69)](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;re"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: world-to-cell scale in traversal plus clamp; SERVED: world-to-cell scale in traversal plus clamp (snippet-only twin).",
+   "name": "recipCellSize",
+   "selector": "a4j@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4j",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "ath['KkKRLGFtA'](Math[\"sin\"](a4h*a4g)),Jy[a4h]=Math[\"KkKRLGFtA\"](Math[\"cos\"](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "LGFtA'](Math[aqu(0xbd6)](a4h*a4g)),Jy[a4h]=Math[aqu(0xb00)](Math[aqu(0xb69)](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clamps scales floors position to cell; SERVED: clamps scales floors position to cell (snippet-only twin).",
+   "name": "worldToCell",
+   "selector": "a4k@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4k",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "[\"sin\"](a4h*a4g)),Jy[a4h]=Math[\"KkKRLGFtA\"](Math[\"cos\"](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57['copy'](a56)['min']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "6)](a4h*a4g)),Jy[a4h]=Math[aqu(0xb00)](Math[aqu(0xb69)](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57['copy'](a56)['min']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: builds verts edges plus edge updater; SERVED: builds verts edges plus edge updater (snippet-only twin).",
+   "name": "triScratchFactory",
+   "selector": "a4l@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4l",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "uAsEB['gURkzCzeY'](),Fn=new usvzFuAsEB['gURkzCzeY'](),Fo=new usvzFuAsEB[(\"vFgdYWoMXeQ\")]();function a4l(){return{'a':new usvzFuAsEB['gURkzCzeY'](),'b':new usvzF"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "vzFuAsEB['gURkzCzeY'](),Fn=new usvzFuAsEB['gURkzCzeY'](),Fo=new usvzFuAsEB[(aqu(0x5ee))]();function a4l(){return{'a':new usvzFuAsEB['gURkzCzeY'](),'b':new usvzF"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shared face triangle for closest-point queries; SERVED: shared face triangle for closest-point queries (snippet-only twin).",
+   "name": "scratchTri",
+   "selector": "a4m@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4m",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 17,
+    "snippet": "is['ab']['bLuhQxfFGDS'](this['b'],this['a']),this['ac'][\"bLuhQxfFGDS\"](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 17,
+    "snippet": ";this['ab']['bLuhQxfFGDS'](this['b'],this['a']),this['ac'][aqC(0xb55)](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: degenerate dot-product guard threshold; SERVED: degenerate dot-product guard threshold (snippet-only twin).",
+   "name": "epsilonTolerance",
+   "selector": "a4n@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4n",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "QxfFGDS'](this['b'],this['a']),this['ac'][\"bLuhQxfFGDS\"](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use str"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "LuhQxfFGDS'](this['b'],this['a']),this['ac'][aqC(0xb55)](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use str"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: point-minus-vertex-a scratch in closest-point; SERVED: point-minus-vertex-a scratch in closest-point (snippet-only twin).",
+   "name": "pointMinusA",
+   "selector": "a4o@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4o",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "(this['b'],this['a']),this['ac'][\"bLuhQxfFGDS\"](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "S'](this['b'],this['a']),this['ac'][aqC(0xb55)](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: point-minus-vertex-b scratch in closest-point; SERVED: point-minus-vertex-b scratch in closest-point (snippet-only twin).",
+   "name": "pointMinusB",
+   "selector": "a4p@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4p",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "b'],this['a']),this['ac'][\"bLuhQxfFGDS\"](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var aqD=aqu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "s['b'],this['a']),this['ac'][aqC(0xb55)](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var aqD=aqu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: point-minus-c plus closest-point accumulator; SERVED: point-minus-c plus closest-point accumulator (snippet-only twin).",
+   "name": "closestPointScratch",
+   "selector": "a4q@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4q",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "s['a']),this['ac'][\"bLuhQxfFGDS\"](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var aqD=aqu;a4o=Fl"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "this['a']),this['ac'][aqC(0xb55)](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var aqD=aqu;a4o=Fl"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Barycentric closest point on triangle from probe; SERVED: Barycentric closest point on triangle from probe (snippet-only twin).",
+   "name": "closestPointOnTriangle",
+   "selector": "a4r@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4r",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "'][\"bLuhQxfFGDS\"](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var aqD=aqu;a4o=Fl['bLuhQxfFGDS']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "'ac'][aqC(0xb55)](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var aqD=aqu;a4o=Fl['bLuhQxfFGDS']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Scratch vector holds segment params plus distance; SERVED: Scratch vector holds segment params plus distance (snippet-only twin).",
+   "name": "segClosestParams",
+   "selector": "a4s@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4s",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ";if(a58>=a59)return Fn[\"bLuhQxfFGDS\"](a57,a56),Fn['dot'](Fn);return Fm['dot'](Fm)-a58*a58/a59;};var a4s=new usvzFuAsEB['gURkzCzeY']();ET=function(a55,a56,a57,a5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "Fl);if(a58>=a59)return Fn[aqE(0xb55)](a57,a56),Fn['dot'](Fn);return Fm['dot'](Fm)-a58*a58/a59;};var a4s=new usvzFuAsEB['gURkzCzeY']();ET=function(a55,a56,a57,a5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Barycentric edge test returns triangle containment boolean; SERVED: Barycentric edge test returns triangle containment boolean (snippet-only twin).",
+   "name": "isPointInTriangle",
+   "selector": "a4t@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4t",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "add'](a55),Fm['OpiuFvBcQd'](a5b),Fm['add'](a57),Fl[\"sub\"](Fm),a4s['z']=Fl[\"dot\"](Fl),a4s;};function a4t(a55,a56,a57,a58){var a59=0.5*(-a57['z']*a58['x']+a56['z'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",Fm['OpiuFvBcQd'](a5b),Fm['add'](a57),Fl[aqF(0xf08)](Fm),a4s['z']=Fl[aqF(0xbe8)](Fl),a4s;};function a4t(a55,a56,a57,a58){var a59=0.5*(-a57['z']*a58['x']+a56['z'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Reusable face plane struct assigned into a4d; SERVED: Reusable face plane struct assigned into a4d (snippet-only twin).",
+   "name": "sharedFacePlane",
+   "selector": "a4u@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4u",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "z'])*a55['x']+(a57['x']-a56['x'])*a55['z'])*a5a;return a5b>=0x0&&a5c>=0x0&&a5b+a5c<0x2*a59*a5a;}var a4u={'normal':new usvzFuAsEB[(\"gURkzCzeY\")](),'dVal':0x0,'a'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "z'])*a55['x']+(a57['x']-a56['x'])*a55['z'])*a5a;return a5b>=0x0&&a5c>=0x0&&a5b+a5c<0x2*a59*a5a;}var a4u={'normal':new usvzFuAsEB[(aqu(0x736))](),'dVal':0x0,'a':"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Default speed constant assigned to movement accumulator; SERVED: Default speed constant assigned to movement accumulator (snippet-only twin).",
+   "name": "walkBaseSpeed",
+   "selector": "a4v@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4v",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "zeY\")](),\"e7ljOM94l\":{'max':new usvzFuAsEB['gURkzCzeY'](),'min':new usvzFuAsEB['gURkzCzeY']()}};let a4v=Math['KkKRLGFtA'](0.008),a4w=Math[\"KkKRLGFtA\"](0.0002),a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "736))](),\"e7ljOM94l\":{'max':new usvzFuAsEB['gURkzCzeY'](),'min':new usvzFuAsEB['gURkzCzeY']()}};let a4v=Math['KkKRLGFtA'](0.008),a4w=Math[aqu(0xb00)](0.0002),a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Slower speed when aiming flag set; SERVED: Slower speed when aiming flag set (snippet-only twin).",
+   "name": "aimedStillSpeed",
+   "selector": "a4w@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4w",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ew usvzFuAsEB['gURkzCzeY'](),'min':new usvzFuAsEB['gURkzCzeY']()}};let a4v=Math['KkKRLGFtA'](0.008),a4w=Math[\"KkKRLGFtA\"](0.0002),a4x=Math[\"KkKRLGFtA\"](0.45),a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ew usvzFuAsEB['gURkzCzeY'](),'min':new usvzFuAsEB['gURkzCzeY']()}};let a4v=Math['KkKRLGFtA'](0.008),a4w=Math[aqu(0xb00)](0.0002),a4x=Math[aqu(0xb00)](0.45),a4y="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Speed multiplier while aiming and moving; SERVED: Speed multiplier while aiming and moving (snippet-only twin).",
+   "name": "aimedMoveMultiplier",
+   "selector": "a4x@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4x",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "min':new usvzFuAsEB['gURkzCzeY']()}};let a4v=Math['KkKRLGFtA'](0.008),a4w=Math[\"KkKRLGFtA\"](0.0002),a4x=Math[\"KkKRLGFtA\"](0.45),a4y=Math[\"KkKRLGFtA\"](0.85);a4y="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "'min':new usvzFuAsEB['gURkzCzeY']()}};let a4v=Math['KkKRLGFtA'](0.008),a4w=Math[aqu(0xb00)](0.0002),a4x=Math[aqu(0xb00)](0.45),a4y=Math[aqu(0xb00)](0.85);a4y=0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Speed factor applied for weapon type two; SERVED: Speed factor applied for weapon type two (snippet-only twin).",
+   "name": "weaponTypeSpeedMult",
+   "selector": "a4y@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4y",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "eY']()}};let a4v=Math['KkKRLGFtA'](0.008),a4w=Math[\"KkKRLGFtA\"](0.0002),a4x=Math[\"KkKRLGFtA\"](0.45),a4y=Math[\"KkKRLGFtA\"](0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "CzeY']()}};let a4v=Math['KkKRLGFtA'](0.008),a4w=Math[aqu(0xb00)](0.0002),a4x=Math[aqu(0xb00)](0.45),a4y=Math[aqu(0xb00)](0.85);a4y=0x1;let a4z=Math['KkKRLGFtA']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Global movement speed scale factor; SERVED: Global movement speed scale factor (snippet-only twin).",
+   "name": "moveSpeedScale2",
+   "selector": "a4z@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": "",
+   "token": "a4z",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "),a4w=Math[\"KkKRLGFtA\"](0.0002),a4x=Math[\"KkKRLGFtA\"](0.45),a4y=Math[\"KkKRLGFtA\"](0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'](1.28),a4A=Math['KkKRLGFtA'](0.1),a4B=M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "008),a4w=Math[aqu(0xb00)](0.0002),a4x=Math[aqu(0xb00)](0.45),a4y=Math[aqu(0xb00)](0.85);a4y=0x1;let a4z=Math['KkKRLGFtA'](1.28),a4A=Math['KkKRLGFtA'](0.1),a4B=M"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Object3D child prepended into children array; SERVED: Object3D child prepended into children array (snippet-only twin).",
+   "name": "childObject",
+   "selector": "a55@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "function Jz(){'use strict';var aqu=ai1;usvzFuAsEB['QTOKQmNlEY']['prototype'][\"addBefore\"]=function(a55){var aqv=aqu;if(a55===this)return console[\"error\"]('usvz"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "function Jz(){'use strict';var aqu=ai1;usvzFuAsEB['QTOKQmNlEY']['prototype'][aqu(0xe02)]=function(a55){var aqv=aqu;if(a55===this)return console[aqv(0x646)]('u"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Target object receiving xyz components; SERVED: Target object receiving xyz components (snippet-only twin).",
+   "name": "copyIntoTarget",
+   "selector": "a55@u1970#1",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "['z']=Math['KkKRLGFtA'](this['z']),this;},usvzFuAsEB['gURkzCzeY']['prototype']['copyInto']=function(a55){var aqx=aqu;a55[\"JoHdvmpcMvL\"]=this['x'],a55[\"uBHZYKAHa"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "['z']=Math['KkKRLGFtA'](this['z']),this;},usvzFuAsEB['gURkzCzeY']['prototype']['copyInto']=function(a55){var aqx=aqu;a55[aqx(0xdaf)]=this['x'],a55[aqx(0x939)]=t"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Source object providing velocity components; SERVED: Source object providing velocity components (snippet-only twin).",
+   "name": "velocitySource",
+   "selector": "a55@u1970#2",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "his['y'],a55[\"yxEKoSFAg\"]=this['z'];},usvzFuAsEB['gURkzCzeY']['prototype']['copyVelocity']=function(a55){var aqy=aqu;this['x']=a55[\"zjSptXbZfA\"],this['y']=a55[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "this['y'],a55[aqx(0xc14)]=this['z'];},usvzFuAsEB['gURkzCzeY']['prototype']['copyVelocity']=function(a55){var aqy=aqu;this['x']=a55[aqy(0xa03)],this['y']=a55[aqy"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Target object receiving velocity components; SERVED: Target object receiving velocity components (snippet-only twin).",
+   "name": "velocityTarget",
+   "selector": "a55@u1970#3",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "d\"],this['z']=a55['ULHoUFJiqo'];},usvzFuAsEB['gURkzCzeY']['prototype'][\"copyVelocityInto\"]=function(a55){a55['zjSptXbZfA']=this['x'],a55['QoYwfvDUd']=this['y'],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "aqy(0xe4b)],this['z']=a55['ULHoUFJiqo'];},usvzFuAsEB['gURkzCzeY']['prototype'][aqu(0x3a5)]=function(a55){a55['zjSptXbZfA']=this['x'],a55['QoYwfvDUd']=this['y'],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Source providing packed xyz fields; SERVED: Source providing packed xyz fields (snippet-only twin).",
+   "name": "packedCoordSource",
+   "selector": "a55@u1970#5",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "JQCQIlk'],this['z']=a55['KUkUYkavzt'];},usvzFuAsEB[\"gURkzCzeY\"]['prototype']['XyuZKVGIuT']=function(a55){a55['BMflnUjRv']=this['x'],a55['pTWaJQCQIlk']=this['y']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "aJQCQIlk'],this['z']=a55['KUkUYkavzt'];},usvzFuAsEB[aqu(0x736)]['prototype']['XyuZKVGIuT']=function(a55){a55['BMflnUjRv']=this['x'],a55['pTWaJQCQIlk']=this['y']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Target receiving packed xyz fields; SERVED: Target receiving packed xyz fields (snippet-only twin).",
+   "name": "packedCoordTarget",
+   "selector": "a55@u1970#6",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "Ilk']=this['y'],a55['KUkUYkavzt']=this['z'];},usvzFuAsEB['gURkzCzeY']['prototype'][\"lerp\"]=function(a55,a56,a57){var aqz=aqu;this[\"copy\"](a55),this['x']+=(a56['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "=this['y'],a55['KUkUYkavzt']=this['z'];},usvzFuAsEB['gURkzCzeY']['prototype'][aqu(0x108e)]=function(a55,a56,a57){var aqz=aqu;this[aqz(0x609)](a55),this['x']+=(a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Squared length feeding inverse-square-root normalize; SERVED: Squared length feeding inverse-square-root normalize (snippet-only twin).",
+   "name": "lenSq",
+   "selector": "a55@u1970#7",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "rray(a3i),a3k=new Uint32Array(a3i);usvzFuAsEB[\"gURkzCzeY\"]['prototype']['normalize']=function(){var a55=this['x']*this['x']+this['y']*this['y']+this['z']*this['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "Array(a3i),a3k=new Uint32Array(a3i);usvzFuAsEB[aqu(0x736)]['prototype']['normalize']=function(){var a55=this['x']*this['x']+this['y']*this['y']+this['z']*this['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Provides endPos startPos for voxel mapping; SERVED: Provides endPos startPos for voxel mapping (snippet-only twin).",
+   "name": "voxelGrid",
+   "selector": "a55@u1970#8",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "n\"](a4h*a4g)),Jy[a4h]=Math[\"KkKRLGFtA\"](Math[\"cos\"](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57['copy'](a56)['min'](a55["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "a4h*a4g)),Jy[a4h]=Math[aqu(0xb00)](Math[aqu(0xb69)](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57['copy'](a56)['min'](a55["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Provides endPos startPos for voxel mapping; SERVED: Provides endPos startPos for voxel mapping (snippet-only twin).",
+   "name": "voxelGrid",
+   "selector": "a55@u1970#9",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "x\"](a55[\"startPos\"])[\"sub\"](a55['startPos']),a57[\"OpiuFvBcQd\"](a4j),a57['floor'](),a57;}EY=function(a55,a56,a57,a58){var aqB=aqu;return a57['copy'](a56)['min']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "(a55[aqA(0xf40)])[aqA(0xf08)](a55['startPos']),a57[aqA(0x30f)](a4j),a57['floor'](),a57;}EY=function(a55,a56,a57,a58){var aqB=aqu;return a57['copy'](a56)['min']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Query point projected onto triangle struct; SERVED: Query point projected onto triangle struct (snippet-only twin).",
+   "name": "probePoint",
+   "selector": "a55@u1970#10",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "bLuhQxfFGDS\"](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var aqD=aqu;a4o=Fl['bLuhQxfFGDS'](a55,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "][aqC(0xb55)](this['c'],this['a']);}};}var a4m=new a4l(),a4n=1e-7,a4o=Fl,a4p=Fl,a4q=Fl;function a4r(a55,a56){'use strict';var aqD=aqu;a4o=Fl['bLuhQxfFGDS'](a55,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Segment start subtracted from both endpoints; SERVED: Segment start subtracted from both endpoints (snippet-only twin).",
+   "name": "segStart",
+   "selector": "a55@u1970#11",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 11,
+    "refCount": 2,
+    "snippet": "turn a4q['copy'](a56['a'])[\"YbYyrgWGnfQ\"](a56['ab'],a5h)['YbYyrgWGnfQ'](a56['ac'],a5i);}ES=function(a55,a56,a57){'use strict';var aqE=aqu;Fl[\"bLuhQxfFGDS\"](a56,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 11,
+    "refCount": 2,
+    "snippet": ";return a4q['copy'](a56['a'])[aqD(0x69c)](a56['ab'],a5h)['YbYyrgWGnfQ'](a56['ac'],a5i);}ES=function(a55,a56,a57){'use strict';var aqE=aqu;Fl[aqE(0xb55)](a56,a55"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Test point xz in triangle containment check; SERVED: Test point xz in triangle containment check (snippet-only twin).",
+   "name": "triTestPoint",
+   "selector": "a55@u1970#13",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 13,
+    "refCount": 4,
+    "snippet": "](a55),Fm['OpiuFvBcQd'](a5b),Fm['add'](a57),Fl[\"sub\"](Fm),a4s['z']=Fl[\"dot\"](Fl),a4s;};function a4t(a55,a56,a57,a58){var a59=0.5*(-a57['z']*a58['x']+a56['z']*(-"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 13,
+    "refCount": 4,
+    "snippet": "'OpiuFvBcQd'](a5b),Fm['add'](a57),Fl[aqF(0xf08)](Fm),a4s['z']=Fl[aqF(0xbe8)](Fl),a4s;};function a4t(a55,a56,a57,a58){var a59=0.5*(-a57['z']*a58['x']+a56['z']*(-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Geometry supplying faces array per index; SERVED: Geometry supplying faces array per index (snippet-only twin).",
+   "name": "faceGeometry",
+   "selector": "a55@u1970#14",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 14,
+    "refCount": 1,
+    "snippet": "Math[\"KkKRLGFtA\"](0.8),a4K=Math[\"KkKRLGFtA\"](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 14,
+    "refCount": 1,
+    "snippet": "J=Math[aqu(0xb00)](0.8),a4K=Math[aqu(0xb00)](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Level holding spatial map plus metadata; SERVED: Level holding spatial map plus metadata (snippet-only twin).",
+   "name": "levelData",
+   "selector": "a55@u1970#15",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u1970",
+    "index": 15,
+    "refCount": 4,
+    "snippet": "\"copy\"](a4r(a58,a4m));var a5f=a3t['XcYeSlLtjr'](a58);if(a5f<a5a)return!![];}}return![];}EN=function(a55,a56,a57){'use strict';var aqH=aqu;var a58=a55['fkXbORMTc"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 15,
+    "refCount": 4,
+    "snippet": "0x609)](a4r(a58,a4m));var a5f=a3t['XcYeSlLtjr'](a58);if(a5f<a5a)return!![];}}return![];}EN=function(a55,a56,a57){'use strict';var aqH=aqu;var a58=a55['fkXbORMTc"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: Object tested for required spatial property; SERVED: Object tested for required spatial property (snippet-only twin).",
+   "name": "spatialCandidate",
+   "selector": "a55@u1970#19",
+   "slice": "slice-00",
+   "disposition": "held-low",
+   "reason": "low confidence: held for review"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Reverse loop index shifting children array; SERVED: Reverse loop index shifting children array (snippet-only twin).",
+   "name": "childIndex",
+   "selector": "a56@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a56",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "5&&a55['isObject3D']){a55[\"parent\"]!==null&&a55[\"parent\"][\"remove\"](a55);a55['parent']=this;for(var a56=this['children'][\"length\"]-0x1;a56>=0x0;a56--){this[\"chi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "['isObject3D']){a55[aqv(0x8cb)]!==null&&a55[aqv(0x8cb)][aqv(0x944)](a55);a55['parent']=this;for(var a56=this['children'][aqv(0x3a2)]-0x1;a56>=0x0;a56--){this[aq"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Lerp endpoint vector blended toward; SERVED: Lerp endpoint vector blended toward (snippet-only twin).",
+   "name": "lerpTarget",
+   "selector": "a56@u1970#1",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a56",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "]=this['y'],a55['KUkUYkavzt']=this['z'];},usvzFuAsEB['gURkzCzeY']['prototype'][\"lerp\"]=function(a55,a56,a57){var aqz=aqu;this[\"copy\"](a55),this['x']+=(a56['x']-"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "s['y'],a55['KUkUYkavzt']=this['z'];},usvzFuAsEB['gURkzCzeY']['prototype'][aqu(0x108e)]=function(a55,a56,a57){var aqz=aqu;this[aqz(0x609)](a55),this['x']+=(a56['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Source point copied into output vector; SERVED: Source point copied into output vector (snippet-only twin).",
+   "name": "sourcePoint",
+   "selector": "a56@u1970#3",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a56",
+   "binding": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "a4h*a4g)),Jy[a4h]=Math[\"KkKRLGFtA\"](Math[\"cos\"](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57['copy'](a56)['min'](a55['end"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "a4g)),Jy[a4h]=Math[aqu(0xb00)](Math[aqu(0xb69)](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57['copy'](a56)['min'](a55['end"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Signed triangle area bounding sub-area tests; SERVED: Signed triangle area bounding sub-area tests (snippet-only twin).",
+   "name": "signedArea",
+   "selector": "a59@u1970#3",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a59",
+   "binding": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "'](a5b),Fm['add'](a57),Fl[\"sub\"](Fm),a4s['z']=Fl[\"dot\"](Fl),a4s;};function a4t(a55,a56,a57,a58){var a59=0.5*(-a57['z']*a58['x']+a56['z']*(-a57['x']+a58['x'])+a5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "['add'](a57),Fl[aqF(0xf08)](Fm),a4s['z']=Fl[aqF(0xbe8)](Fl),a4s;};function a4t(a55,a56,a57,a58){var a59=0.5*(-a57['z']*a58['x']+a56['z']*(-a57['x']+a58['x'])+a5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Pass count doubled on teleport condition; SERVED: Pass count doubled on teleport condition (snippet-only twin).",
+   "name": "simPassCount",
+   "selector": "a5J@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5J",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a3R=a3U*a3S,a3Q=0x8,a3z=a3A=a3B=a3C=a3D=a3E=a3F=a3G=0x0,a47=![],a48=![],a49=![],a4a=![];var a5I=![],a5J=0x1,a5K=![],a5L=![];FC&&(FH[\"simulateB\"]+=performance[\"n"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a3R=a3U*a3S,a3Q=0x8,a3z=a3A=a3B=a3C=a3D=a3E=a3F=a3G=0x0,a47=![],a48=![],a49=![],a4a=![];var a5I=![],a5J=0x1,a5K=![],a5L=![];FC&&(FH[aqH(0x5d7)]+=performance[aqH"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Flag set when position pre-adjusted; SERVED: Flag set when position pre-adjusted (snippet-only twin).",
+   "name": "positionAdjusted",
+   "selector": "a5K@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5K",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3S,a3Q=0x8,a3z=a3A=a3B=a3C=a3D=a3E=a3F=a3G=0x0,a47=![],a48=![],a49=![],a4a=![];var a5I=![],a5J=0x1,a5K=![],a5L=![];FC&&(FH[\"simulateB\"]+=performance[\"now\"]()-F"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3S,a3Q=0x8,a3z=a3A=a3B=a3C=a3D=a3E=a3F=a3G=0x0,a47=![],a48=![],a49=![],a4a=![];var a5I=![],a5J=0x1,a5K=![],a5L=![];FC&&(FH[aqH(0x5d7)]+=performance[aqH(0x1c2)]"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding never read",
+   "selector": "a5L@u1970#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over simulation passes; SERVED: Loop index over simulation passes (snippet-only twin).",
+   "name": "passIndex",
+   "selector": "a5M@u1970#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5M",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "DI\"]!=0x0||a56['GBKteThUrkj'])&&(a5J=0x2,a56[\"position\"][\"add\"](a56[\"yoghpvfQE\"]),a5K=!![]);for(var a5M=0x0;a5M<a5J;a5M++){a5J==0x2&&(a56['position']['YbYyrgWGn"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "!=0x0||a56['GBKteThUrkj'])&&(a5J=0x2,a56[aqH(0x215)][aqH(0x8da)](a56[aqH(0x48b)]),a5K=!![]);for(var a5M=0x0;a5M<a5J;a5M++){a5J==0x2&&(a56['position']['YbYyrgWGn"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over Daily/Weekly/All buttons calling unstick; SERVED: Loop index over Daily/Weekly/All buttons calling unstick (snippet-only twin).",
+   "name": "periodTabIdx",
+   "selector": "aht@u2151#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aht",
+   "binding": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "][\"set\"](ahh*ahi-ahi,-0x118),ahs['xhOdNSwMWQd'](!![]),ahs['onclick']=function(){var awt=aws;for(var aht=0x0;aht<aey['length'];aht++){aey[aht][\"unstick\"]();}ahr["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "(0xc71)](ahh*ahi-ahi,-0x118),ahs['xhOdNSwMWQd'](!![]),ahs['onclick']=function(){var awt=aws;for(var aht=0x0;aht<aey['length'];aht++){aey[aht][awt(0x5a7)]();}ahr"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Tween-complete callback param resetting addX to zero; SERVED: Tween-complete callback param resetting addX to zero (snippet-only twin).",
+   "name": "tweenedDom",
+   "selector": "aht@u2151#7",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aht",
+   "binding": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "hs=0x0;ahs<Mr[\"doms\"][\"length\"];ahs++){HL(Mr['doms'][ahs],\"addX\",0x0,-ahm*ahn,ahl,0x0,null,function(aht){aht['addX']=0x0;});}if(N6[ahh][\"doms\"]!=undefined)for(l"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "<Mr[aww(0x130)][aww(0x3a2)];ahs++){HL(Mr['doms'][ahs],aww(0x32b),0x0,-ahm*ahn,ahl,0x0,null,function(aht){aht['addX']=0x0;});}if(N6[ahh][aww(0x130)]!=undefined)f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over next-tab doms adding addX tweens; SERVED: Loop index over next-tab doms adding addX tweens (snippet-only twin).",
+   "name": "nextDomsIdx",
+   "selector": "aht@u2151#8",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aht",
+   "binding": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "\",0x0,-ahm*ahn,ahl,0x0,null,function(aht){aht['addX']=0x0;});}if(N6[ahh][\"doms\"]!=undefined)for(let aht=0x0;aht<N6[ahh]['doms']['length'];aht++){HL(N6[ahh][\"dom"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "0,-ahm*ahn,ahl,0x0,null,function(aht){aht['addX']=0x0;});}if(N6[ahh][aww(0x130)]!=undefined)for(let aht=0x0;aht<N6[ahh]['doms']['length'];aht++){HL(N6[ahh][aww("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Alias of scoreboard container receiving added row objects; SERVED: Alias of scoreboard container receiving added row objects (snippet-only twin).",
+   "name": "listContainer",
+   "selector": "aht@u2151#10",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aht",
+   "binding": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "gth'];ahl++){ahs[ahk[ahl]['name']]=ahk[ahl]['name'];}ahs[\"Place\"]='',ahh['splice'](0x0,0x0,ahs);var aht=agz[\"container\"];ahi+=0x1;var ahu=0x0;for(var ahl=0x0;ah"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "'];ahl++){ahs[ahk[ahl]['name']]=ahk[ahl]['name'];}ahs[axe(0x54e)]='',ahh['splice'](0x0,0x0,ahs);var aht=agz[axe(0xe46)];ahi+=0x1;var ahu=0x0;for(var ahl=0x0;ahl"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Settings category label text element holding hover states; SERVED: Settings category label text element holding hover states (snippet-only twin).",
+   "name": "categoryLabel",
+   "selector": "ahu@u2151#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahu",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "'y']=ahq,ahr['casual']=ahs;var aht={};aht['y']=ahq+ahi,ahr['JaFgtqWxnF']=aht,ahr['mdtime']=0.09;var ahu=a3m['element'](new a3k['text'](ahp[\"label\"],ahd,0x0,ah9,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "'y']=ahq,ahr['casual']=ahs;var aht={};aht['y']=ahq+ahi,ahr['JaFgtqWxnF']=aht,ahr['mdtime']=0.09;var ahu=a3m['element'](new a3k['text'](ahp[atZ(0x192)],ahd,0x0,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Round-rectangle hover highlight element with shown/hidden states; SERVED: Round-rectangle hover highlight element with shown/hidden states (snippet-only twin).",
+   "name": "hoverOutline",
+   "selector": "ahu@u2151#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahu",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 14,
+    "snippet": "on\"]['y']+0x7);ahs[\"r23ZS3L2g\"]['opacity']=ahs['hidden'][\"opacity\"],ahl[\"addHoverElement\"](ahs);var ahu=new a3k[(\"roundRectangle\")](0x0,0x0,0x92,0x92,0x9,'#FFF'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 14,
+    "snippet": "avr(0x215)]['y']+0x7);ahs[avr(0xc7e)]['opacity']=ahs['hidden'][avr(0x40e)],ahl[avr(0x5f6)](ahs);var ahu=new a3k[(avr(0x9e0))](0x0,0x0,0x92,0x92,0x9,'#FFF');ahu["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Tween-complete callback param resetting addX to zero; SERVED: Tween-complete callback param resetting addX to zero (snippet-only twin).",
+   "name": "tweenedDom",
+   "selector": "ahu@u2151#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahu",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "t<N6[ahh]['doms']['length'];aht++){HL(N6[ahh][\"doms\"][aht],'addX',ahm*ahn,0x0,ahl,0x0,null,function(ahu){ahu['addX']=0x0;});}Mr['tGTnWzZUhv']=!![],Mr=N6[ahh];}}"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "[ahh]['doms']['length'];aht++){HL(N6[ahh][aww(0x130)][aht],'addX',ahm*ahn,0x0,ahl,0x0,null,function(ahu){ahu['addX']=0x0;});}Mr['tGTnWzZUhv']=!![],Mr=N6[ahh];}}"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Panel height scalar reused for borders then gradients; SERVED: Panel height scalar reused for borders then gradients (snippet-only twin).",
+   "name": "panelHeight",
+   "selector": "ahu@u2151#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahu",
+   "binding": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 7,
+    "snippet": "k'])continue;ahr+=ahs[aht]['width'];}agz['totalWidth']=ahr,agz[\"boxes\"]=[],agz['containers']=[];var ahu=0x1b;agz['height']=ahu,agz['tdmContainer']=new a3k[(\"obj"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 7,
+    "snippet": ")continue;ahr+=ahs[aht]['width'];}agz['totalWidth']=ahr,agz[axb(0x93c)]=[],agz['containers']=[];var ahu=0x1b;agz['height']=ahu,agz['tdmContainer']=new a3k[(axb("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Running Y cursor stacking scoreboard rows downward; SERVED: Running Y cursor stacking scoreboard rows downward (snippet-only twin).",
+   "name": "rowYOffset",
+   "selector": "ahu@u2151#6",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahu",
+   "binding": {
+    "unit": "u2151",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "=ahk[ahl]['name'];}ahs[\"Place\"]='',ahh['splice'](0x0,0x0,ahs);var aht=agz[\"container\"];ahi+=0x1;var ahu=0x0;for(var ahl=0x0;ahl<agz[\"boxes\"][\"length\"];ahl++){ag"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "hk[ahl]['name'];}ahs[axe(0x54e)]='',ahh['splice'](0x0,0x0,ahs);var aht=agz[axe(0xe46)];ahi+=0x1;var ahu=0x0;for(var ahl=0x0;ahl<agz[axe(0x93c)][axe(0x3a2)];ahl+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Hidden-state descriptor holding opacity 0.5 for label; SERVED: Hidden-state descriptor holding opacity 0.5 for label (snippet-only twin).",
+   "name": "labelHiddenState",
+   "selector": "ahv@u2151#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahv",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "](ahp[\"label\"],ahd,0x0,ah9,'Encode\\x20Sans',aha,'',0x1,'left'));ahu[\"easeType\"]=tc['ixjwTFmpU'];var ahv={};ahv['opacity']=0.5,ahu[\"hidden\"]=ahv;var ahw={};ahw['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "hp[atZ(0x192)],ahd,0x0,ah9,'Encode\\x20Sans',aha,'',0x1,'left'));ahu[atZ(0xb4c)]=tc['ixjwTFmpU'];var ahv={};ahv['opacity']=0.5,ahu[atZ(0x59d)]=ahv;var ahw={};ahw"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over Kills/Wins buttons calling unstick; SERVED: Loop index over Kills/Wins buttons calling unstick (snippet-only twin).",
+   "name": "statTabIdx",
+   "selector": "ahv@u2151#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahv",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "set'](ahh*ahi-ahi/0x2,-0xd7),ahk['xhOdNSwMWQd'](!![]),ahk[\"onclick\"]=function(){var awu=aws;for(var ahv=0x0;ahv<aez[\"length\"];ahv++){aez[ahv]['unstick']();}ahu["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "et'](ahh*ahi-ahi/0x2,-0xd7),ahk['xhOdNSwMWQd'](!![]),ahk[aws(0xbd0)]=function(){var awu=aws;for(var ahv=0x0;ahv<aez[awu(0x3a2)];ahv++){aez[ahv]['unstick']();}ah"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: X inset constant positioning gradients and score text; SERVED: X inset constant positioning gradients and score text (snippet-only twin).",
+   "name": "gradientInsetX",
+   "selector": "ahv@u2151#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahv",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "u+0x3,'#EEE',1.5,0x1)),agz['topBorder']=new a3k[(\"QtjDeukbWl\")](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "ahu+0x3,'#EEE',1.5,0x1)),agz['topBorder']=new a3k[(axb(0x1a1))](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Blue-branch points accumulator compared for VICTORY verdict; SERVED: Blue-branch points accumulator compared for VICTORY verdict (snippet-only twin).",
+   "name": "myTeamScore",
+   "selector": "ahv@u2151#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahv",
+   "binding": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "var ahu=0x0;for(var ahl=0x0;ahl<agz[\"boxes\"][\"length\"];ahl++){agz['boxes'][ahl]['opacity']=0x0;}var ahv=0x0,ahw=0x0;for(var ahl=0x0;ahl<ahh[\"length\"];ahl++){var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "hu=0x0;for(var ahl=0x0;ahl<agz[axe(0x93c)][axe(0x3a2)];ahl++){agz['boxes'][ahl]['opacity']=0x0;}var ahv=0x0,ahw=0x0;for(var ahl=0x0;ahl<ahh[axe(0x3a2)];ahl++){v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Shown-state descriptor holding opacity 1 for label; SERVED: Shown-state descriptor holding opacity 1 for label (snippet-only twin).",
+   "name": "labelShownState",
+   "selector": "ahw@u2151#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahw",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "'',0x1,'left'));ahu[\"easeType\"]=tc['ixjwTFmpU'];var ahv={};ahv['opacity']=0.5,ahu[\"hidden\"]=ahv;var ahw={};ahw['opacity']=0x1,ahu['shown']=ahw,ahu[\"r23ZS3L2g\"]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",0x1,'left'));ahu[atZ(0xb4c)]=tc['ixjwTFmpU'];var ahv={};ahv['opacity']=0.5,ahu[atZ(0x59d)]=ahv;var ahw={};ahw['opacity']=0x1,ahu['shown']=ahw,ahu[\"r23ZS3L2g\"]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Y offset constant stacking name and class labels; SERVED: Y offset constant stacking name and class labels (snippet-only twin).",
+   "name": "labelOffsetY",
+   "selector": "ahw@u2151#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahw",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "\"easeType\"]=tc['ixjwTFmpU'],ahl['addHoverElement'](ahu);!Gj&&ahk['otYTUIhzc'](ahu[\"r23ZS3L2g\"]);var ahw=0x6,ahx=Mj(Kq['pkghYgdlX'],pX[aha]['name'],0x0,0x20+ahw,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "avr(0xb4c)]=tc['ixjwTFmpU'],ahl['addHoverElement'](ahu);!Gj&&ahk['otYTUIhzc'](ahu[\"r23ZS3L2g\"]);var ahw=0x6,ahx=Mj(Kq['pkghYgdlX'],pX[aha]['name'],0x0,0x20+ahw,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Gradient image width constant minus trim margin; SERVED: Gradient image width constant minus trim margin (snippet-only twin).",
+   "name": "gradientWidth",
+   "selector": "ahw@u2151#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahw",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "0x1)),agz['topBorder']=new a3k[(\"QtjDeukbWl\")](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,ahB=0xf0;ahz*=ahy"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "5,0x1)),agz['topBorder']=new a3k[(axb(0x1a1))](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,ahB=0xf0;ahz*=ahy"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Red-branch points accumulator compared for VICTORY verdict; SERVED: Red-branch points accumulator compared for VICTORY verdict (snippet-only twin).",
+   "name": "enemyTeamScore",
+   "selector": "ahw@u2151#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahw",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "0x0;for(var ahl=0x0;ahl<agz[\"boxes\"][\"length\"];ahl++){agz['boxes'][ahl]['opacity']=0x0;}var ahv=0x0,ahw=0x0;for(var ahl=0x0;ahl<ahh[\"length\"];ahl++){var ahx;agz"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "or(var ahl=0x0;ahl<agz[axe(0x93c)][axe(0x3a2)];ahl++){agz['boxes'][ahl]['opacity']=0x0;}var ahv=0x0,ahw=0x0;for(var ahl=0x0;ahl<ahh[axe(0x3a2)];ahl++){var ahx;a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: settings row hover bar element both sides; SERVED: settings row hover bar element both sides (snippet-only twin).",
+   "name": "hoverBarElem",
+   "selector": "ahx@u2151#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahx",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "=0x1,ahu['shown']=ahw,ahu[\"r23ZS3L2g\"][\"opacity\"]=0.5,ahr[\"r23ZS3L2g\"]['add'](ahu[\"r23ZS3L2g\"]);var ahx=a3m['element'](new a3k[(\"QtjDeukbWl\")](ahc,ahq,ahf,ahh,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "0x1,ahu['shown']=ahw,ahu[\"r23ZS3L2g\"][atZ(0x40e)]=0.5,ahr[\"r23ZS3L2g\"]['add'](ahu[\"r23ZS3L2g\"]);var ahx=a3m['element'](new a3k[(atZ(0x1a1))](ahc,ahq,ahf,ahh,ah9"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: text label showing skin name added to card; SERVED: text label showing skin name added to card (snippet-only twin).",
+   "name": "skinNameLabel",
+   "selector": "ahx@u2151#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahx",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "e\"]=tc['ixjwTFmpU'],ahl['addHoverElement'](ahu);!Gj&&ahk['otYTUIhzc'](ahu[\"r23ZS3L2g\"]);var ahw=0x6,ahx=Mj(Kq['pkghYgdlX'],pX[aha]['name'],0x0,0x20+ahw,0x12,'ce"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "c)]=tc['ixjwTFmpU'],ahl['addHoverElement'](ahu);!Gj&&ahk['otYTUIhzc'](ahu[\"r23ZS3L2g\"]);var ahw=0x6,ahx=Mj(Kq['pkghYgdlX'],pX[aha]['name'],0x0,0x20+ahw,0x12,'ce"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: zero inset subtracted from gradient image dimensions; SERVED: zero inset subtracted from gradient image dimensions (snippet-only twin).",
+   "name": "gradientInset",
+   "selector": "ahx@u2151#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahx",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "['topBorder']=new a3k[(\"QtjDeukbWl\")](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,ahB=0xf0;ahz*=ahy,ahA*=ahy"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "gz['topBorder']=new a3k[(axb(0x1a1))](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,ahB=0xf0;ahz*=ahy,ahA*=ahy"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: reused per-row container positioned and filled; SERVED: reused per-row container positioned and filled (snippet-only twin).",
+   "name": "rowContainer",
+   "selector": "ahx@u2151#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahx",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 8,
+    "snippet": "{agz['boxes'][ahl]['opacity']=0x0;}var ahv=0x0,ahw=0x0;for(var ahl=0x0;ahl<ahh[\"length\"];ahl++){var ahx;agz['containers'][ahl]!=undefined?ahx=agz['containers']["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 8,
+    "snippet": "gz['boxes'][ahl]['opacity']=0x0;}var ahv=0x0,ahw=0x0;for(var ahl=0x0;ahl<ahh[axe(0x3a2)];ahl++){var ahx;agz['containers'][ahl]!=undefined?ahx=agz['containers']["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hidden x-opacity preset assigned to hover bar; SERVED: hidden x-opacity preset assigned to hover bar (snippet-only twin).",
+   "name": "hoverHiddenState",
+   "selector": "ahy@u2151#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahy",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "]['add'](ahu[\"r23ZS3L2g\"]);var ahx=a3m['element'](new a3k[(\"QtjDeukbWl\")](ahc,ahq,ahf,ahh,ah9,0x0)),ahy={};ahy['x']=ahc-ahj,ahy[\"opacity\"]=0x0,ahx['hidden']=ahy"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "g\"]['add'](ahu[\"r23ZS3L2g\"]);var ahx=a3m['element'](new a3k[(atZ(0x1a1))](ahc,ahq,ahf,ahh,ah9,0x0)),ahy={};ahy['x']=ahc-ahj,ahy[atZ(0x40e)]=0x0,ahx['hidden']=ah"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: second text label showing wear text styling; SERVED: second text label showing wear text styling (snippet-only twin).",
+   "name": "skinWearLabel",
+   "selector": "ahy@u2151#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahy",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "!![]);ahx['wAijZbUAD'][0x0][\"opacity\"]=0.2,ahx['wAijZbUAD'][0x0]['opacity']=0x0,ahk[\"add\"](ahx);var ahy=Mj(Kq[\"pkghYgdlX\"],a9t[ahd],0x0,0x2f+ahw,0xd,'center',''"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "ahx['wAijZbUAD'][0x0][avr(0x40e)]=0.2,ahx['wAijZbUAD'][0x0]['opacity']=0x0,ahk[avr(0x8da)](ahx);var ahy=Mj(Kq[avr(0x232)],a9t[ahd],0x0,0x2f+ahw,0xd,'center','',"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 0.7 multiplier scaling RGB gradient channels; SERVED: 0.7 multiplier scaling RGB gradient channels (snippet-only twin).",
+   "name": "colorScale",
+   "selector": "ahy@u2151#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahy",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "der']=new a3k[(\"QtjDeukbWl\")](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,ahB=0xf0;ahz*=ahy,ahA*=ahy,ahB*=ah"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "order']=new a3k[(axb(0x1a1))](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,ahB=0xf0;ahz*=ahy,ahA*=ahy,ahB*=ah"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: last row y sizing container height; SERVED: last row y sizing container height (snippet-only twin).",
+   "name": "contentHeight",
+   "selector": "ahy@u2151#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahy",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "dd\"](ahx));ahx['position']['y']=ahu,ahu+=ahp+ahq;ahl==ahi&&(ahu+=0x4,ahx[\"position\"]['y']+=0x2);var ahy=ahx[\"position\"]['y'],ahz,ahA=ahh[ahl],ahB=0.8;if(agz['bo"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "da)](ahx));ahx['position']['y']=ahu,ahu+=ahp+ahq;ahl==ahi&&(ahu+=0x4,ahx[axe(0x215)]['y']+=0x2);var ahy=ahx[axe(0x215)]['y'],ahz,ahA=ahh[ahl],ahB=0.8;if(agz['bo"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shown x-opacity preset assigned to hover bar; SERVED: shown x-opacity preset assigned to hover bar (snippet-only twin).",
+   "name": "hoverShownState",
+   "selector": "ahz@u2151#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahz",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ukbWl\")](ahc,ahq,ahf,ahh,ah9,0x0)),ahy={};ahy['x']=ahc-ahj,ahy[\"opacity\"]=0x0,ahx['hidden']=ahy;var ahz={};ahz['x']=ahc,ahz['opacity']=0.9,ahx['shown']=ahz,ahx["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "x1a1))](ahc,ahq,ahf,ahh,ah9,0x0)),ahy={};ahy['x']=ahc-ahj,ahy[atZ(0x40e)]=0x0,ahx['hidden']=ahy;var ahz={};ahz['x']=ahc,ahz['opacity']=0.9,ahx['shown']=ahz,ahx["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: validateCollision point param checking y bounds; SERVED: validateCollision point param checking y bounds (snippet-only twin).",
+   "name": "collisionPoint",
+   "selector": "ahz@u2151#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahz",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "t ahm=aha;pX[aha][\"useLink\"]!=undefined&&(ahm=pX[aha][\"useLink\"]);ahl['validateCollision']=function(ahz){if(ahz['y']<-0x14a)return![];if(Gj&&ahz['y']<-0x10e)ret"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "ahm=aha;pX[aha][avr(0xfbd)]!=undefined&&(ahm=pX[aha][avr(0xfbd)]);ahl['validateCollision']=function(ahz){if(ahz['y']<-0x14a)return![];if(Gj&&ahz['y']<-0x10e)ret"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter splicing equipped list entries; SERVED: loop counter splicing equipped list entries (snippet-only twin).",
+   "name": "equipIndex",
+   "selector": "ahz@u2151#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahz",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "rn![];return!![];},ahl[\"onclick\"]=function(){var avs=avr;if(Kq['yxWZJtFahs']!=null){if(ahg){for(var ahz=0x0;ahz<Kq['yxWZJtFahs']['length'];ahz++){var ahA=Kq[\"yx"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "n![];return!![];},ahl[avr(0xbd0)]=function(){var avs=avr;if(Kq['yxWZJtFahs']!=null){if(ahg){for(var ahz=0x0;ahz<Kq['yxWZJtFahs']['length'];ahz++){var ahA=Kq[avs"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: mousedown handler arg supplying press preset; SERVED: mousedown handler arg supplying press preset (snippet-only twin).",
+   "name": "evtElem",
+   "selector": "ahz@u2151#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahz",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "'],ahl[\"easeType\"]=tc['ixjwTFmpU'],ahl[\"LdYCqNCVkiq\"]=ahl[\"oNdPPkNKFp\"],ahl[\"onmousedown\"]=function(ahz){var avt=avr;ahl[\"oNdPPkNKFp\"]=Kq['buttonMouseDownTime']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "ttonTime'],ahl[avr(0xb4c)]=tc['ixjwTFmpU'],ahl[avr(0x775)]=ahl[avr(0xa8a)],ahl[avr(0x5d1)]=function(ahz){var avt=avr;ahl[avt(0xa8a)]=Kq['buttonMouseDownTime'],a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: click handler arg supplying casual preset; SERVED: click handler arg supplying casual preset (snippet-only twin).",
+   "name": "evtElem",
+   "selector": "ahz@u2151#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahz",
+   "binding": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "PPkNKFp\"]=Kq['buttonMouseDownTime'],ahl['HDpQschGFg'](ahz['JaFgtqWxnF']);},ahl['onclick2']=function(ahz){var avu=avr;ahl[\"HDpQschGFg\"](ahz['casual']),ahl[\"oNdPP"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "t(0xa8a)]=Kq['buttonMouseDownTime'],ahl['HDpQschGFg'](ahz['JaFgtqWxnF']);},ahl['onclick2']=function(ahz){var avu=avr;ahl[avu(0xac6)](ahz['casual']),ahl[avu(0xa8"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: mouseup handler arg supplying casual preset; SERVED: mouseup handler arg supplying casual preset (snippet-only twin).",
+   "name": "evtElem",
+   "selector": "ahz@u2151#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahz",
+   "binding": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "r;ahl[\"HDpQschGFg\"](ahz['casual']),ahl[\"oNdPPkNKFp\"]=ahl[\"LdYCqNCVkiq\"];},ahl[\"onmouseup\"]=function(ahz){var avv=avr;ahl[\"HDpQschGFg\"](ahz[\"casual\"]),ahl['oNdPP"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "r avu=avr;ahl[avu(0xac6)](ahz['casual']),ahl[avu(0xa8a)]=ahl[avu(0x775)];},ahl[avr(0x1f7)]=function(ahz){var avv=avr;ahl[avv(0xac6)](ahz[avv(0x248)]),ahl['oNdPP"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: red channel scaled into rgba gradients; SERVED: red channel scaled into rgba gradients (snippet-only twin).",
+   "name": "redChan",
+   "selector": "ahz@u2151#6",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahz",
+   "binding": {
+    "unit": "u2151",
+    "index": 6,
+    "refCount": 9,
+    "snippet": "w a3k[(\"QtjDeukbWl\")](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,ahB=0xf0;ahz*=ahy,ahA*=ahy,ahB*=ahy;var ah"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 6,
+    "refCount": 9,
+    "snippet": "new a3k[(axb(0x1a1))](0x0,0x1,ahr,ahu+0x2,'#999',0.6);var ahv=0xf,ahu=0x32,ahw=0x96,ahx=0x0,ahy=0.7,ahz=0x46,ahA=0xa3,ahB=0xf0;ahz*=ahy,ahA*=ahy,ahB*=ahy;var ah"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: reused per-row box holding texts highlight; SERVED: reused per-row box holding texts highlight (snippet-only twin).",
+   "name": "rowBox",
+   "selector": "ahz@u2151#7",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ahz",
+   "binding": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 36,
+    "snippet": "]['y']=ahu,ahu+=ahp+ahq;ahl==ahi&&(ahu+=0x4,ahx[\"position\"]['y']+=0x2);var ahy=ahx[\"position\"]['y'],ahz,ahA=ahh[ahl],ahB=0.8;if(agz['boxes'][ahl]!=undefined)ahz"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 36,
+    "snippet": "]['y']=ahu,ahu+=ahp+ahq;ahl==ahi&&(ahu+=0x4,ahx[axe(0x215)]['y']+=0x2);var ahy=ahx[axe(0x215)]['y'],ahz,ahA=ahh[ahl],ahB=0.8;if(agz['boxes'][ahl]!=undefined)ahz"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "already idiomatic signin endpoint path string",
+   "selector": "link@u2151#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scales velocity xz after wall contact 0.9/0.95; SERVED: scales velocity xz after wall contact 0.9/0.95 (snippet-only twin).",
+   "name": "wallFriction",
+   "selector": "a5N@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5N",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "a56['FhTtfqADI']=0x0,a56[\"rwqlTAHEiNf\"]=Math['min'](a56[\"rwqlTAHEiNf\"],0x22)));if(a5I){}if(a48){var a5N=0.9;!a56[\"vQ5Ra371n0\"]&&(a5N=0.95),a5N=Math['KkKRLGFtA']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "01)&&(a56['FhTtfqADI']=0x0,a56[aqH(0xdeb)]=Math['min'](a56[aqH(0xdeb)],0x22)));if(a5I){}if(a48){var a5N=0.9;!a56[\"vQ5Ra371n0\"]&&(a5N=0.95),a5N=Math['KkKRLGFtA']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: damps velocity xz by 0.7 on landing; SERVED: damps velocity xz by 0.7 on landing (snippet-only twin).",
+   "name": "landingFriction",
+   "selector": "a5O@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5O",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "\"copy\"](a3v)):a56[\"rampNormal\"]['set'](0x0,-0x1,0x0);if(!a56['hhUYpsfkFuA']&&a56[\"vQ5Ra371n0\"]){var a5O=0.7;a56[\"ZCqcFaraRfT\"]=a56[\"position\"]['y'],a56[\"UECOkwD"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "H(0x609)](a3v)):a56[aqH(0xfd8)]['set'](0x0,-0x1,0x0);if(!a56['hhUYpsfkFuA']&&a56[\"vQ5Ra371n0\"]){var a5O=0.7;a56[aqH(0xdd4)]=a56[aqH(0x215)]['y'],a56[aqH(0x2fc)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: damps grounded velocity xz by 0.76; SERVED: damps grounded velocity xz by 0.76 (snippet-only twin).",
+   "name": "groundFriction",
+   "selector": "a5P@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5P",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a56[\"FhTtfqADI\"]>0x0?a56[\"yoghpvfQE\"]['y']=a4H:a56['yoghpvfQE']['y']=a3Y;a56[\"LgTIfDCCqp\"]=!![];var a5P=Math['KkKRLGFtA'](0.76);a56['yoghpvfQE']['x']*=a5P,a56['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "5c){a56[aqH(0x9dc)]>0x0?a56[aqH(0x48b)]['y']=a4H:a56['yoghpvfQE']['y']=a3Y;a56[aqH(0x8a3)]=!![];var a5P=Math['KkKRLGFtA'](0.76);a56['yoghpvfQE']['x']*=a5P,a56['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: upper clamp for falling vertical velocity; SERVED: upper clamp for falling vertical velocity (snippet-only twin).",
+   "name": "fallSpeedCap",
+   "selector": "a5Q@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5Q",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a56[\"yoghpvfQE\"]['y']+=Math['KkKRLGFtA'](0.023):a56['yoghpvfQE']['y']+=Math['KkKRLGFtA'](0.036);var a5Q=Math[\"KkKRLGFtA\"](Math['KkKRLGFtA'](a3P)*0x2*a4J);a56['y"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "?a56[aqH(0x48b)]['y']+=Math['KkKRLGFtA'](0.023):a56['yoghpvfQE']['y']+=Math['KkKRLGFtA'](0.036);var a5Q=Math[aqH(0xb00)](Math['KkKRLGFtA'](a3P)*0x2*a4J);a56['yo"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: crouch want from input slide/crouch keys; SERVED: crouch want from input slide/crouch keys (snippet-only twin).",
+   "name": "crouchIntent",
+   "selector": "a5R@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5R",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "rwqlTAHEiNf\"],0x22),a56['LgTIfDCCqp']=![],a56['iTjsaDmze']=![],a5c=!![],a56[\"OR31tL0jer\"]=!![];}var a5R=a5b['FhTtfqADI']>0x3||a5b[\"HpsuHliFMHL\"]||a5b[\"MFUoomFzx"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "6[aqH(0xdeb)],0x22),a56['LgTIfDCCqp']=![],a56['iTjsaDmze']=![],a5c=!![],a56[\"OR31tL0jer\"]=!![];}var a5R=a5b['FhTtfqADI']>0x3||a5b[aqH(0x692)]||a5b[aqH(0xdff)];i"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "feeds only dead binding a5T",
+   "selector": "a5S@u1970#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding never read",
+   "selector": "a5T@u1970#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: stance bloom table feeding bloomTarget selection; SERVED: stance bloom table feeding bloomTarget selection (snippet-only twin).",
+   "name": "bloomPresets",
+   "selector": "a5V@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5V",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "UC']=Math[\"KkKRLGFtA\"](a56[\"MJDEjokblUC\"]),a56['npSDTRYmp']=Math['KkKRLGFtA'](a56[\"npSDTRYmp\"]);var a5V=a56['DMZbIHLgyk']['VehNrzoThC'];a56['VehNrzoThC']==undef"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "jokblUC']=Math[aqH(0xb00)](a56[aqH(0x608)]),a56['npSDTRYmp']=Math['KkKRLGFtA'](a56[aqH(0xb61)]);var a5V=a56['DMZbIHLgyk']['VehNrzoThC'];a56['VehNrzoThC']==undef"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: rotation-derived sin/cos lookup index; consumers dead; SERVED: rotation-derived sin/cos lookup index; consumers dead (snippet-only twin).",
+   "name": "trigTableIndex",
+   "selector": "a5W@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5W",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "56['VehNrzoThC']+=a56['DMZbIHLgyk'][\"shotBloom\"],a56[\"lnYwEVhYr\"]=![];if(a56['eXABYtRfN']==0x3){var a5W=(a56[\"rotation\"]['y']+0x80)%0x100,a5X=Jx[a5W],a5Y=Jy[a5W"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a56['VehNrzoThC']+=a56['DMZbIHLgyk'][aqH(0x6bf)],a56[aqH(0x10ab)]=![];if(a56['eXABYtRfN']==0x3){var a5W=(a56[aqH(0x90d)]['y']+0x80)%0x100,a5X=Jx[a5W],a5Y=Jy[a5W"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding never read",
+   "selector": "a5X@u1970#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding never read",
+   "selector": "a5Y@u1970#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clamped pitch factor added to vertical velocity; SERVED: clamped pitch factor added to vertical velocity (snippet-only twin).",
+   "name": "recoilPitchKick",
+   "selector": "a5Z@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5Z",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "r\"]=![];if(a56['eXABYtRfN']==0x3){var a5W=(a56[\"rotation\"]['y']+0x80)%0x100,a5X=Jx[a5W],a5Y=Jy[a5W],a5Z=Jh(Math['KkKRLGFtA']((a56['rotation']['x']-0x40)/0x40)*1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "b)]=![];if(a56['eXABYtRfN']==0x3){var a5W=(a56[aqH(0x90d)]['y']+0x80)%0x100,a5X=Jx[a5W],a5Y=Jy[a5W],a5Z=Jh(Math['KkKRLGFtA']((a56['rotation']['x']-0x40)/0x40)*1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: dot of ac edge versus b-relative vector; SERVED: dot of ac edge versus b-relative vector (snippet-only twin).",
+   "name": "projAcFromB",
+   "selector": "a5a@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5a",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "7<=a4n&&a58<=a4n)return a56['a'];a4p=a4o[\"bLuhQxfFGDS\"](a55,a56['b']);var a59=a56['ab']['dot'](a4p),a5a=a56['ac']['dot'](a4p);if(a59>=0x0&&a5a<=a59)return a56['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "(a57<=a4n&&a58<=a4n)return a56['a'];a4p=a4o[aqD(0xb55)](a55,a56['b']);var a59=a56['ab']['dot'](a4p),a5a=a56['ac']['dot'](a4p);if(a59>=0x0&&a5a<=a59)return a56['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clamped closest param along segment A; SERVED: clamped closest param along segment A (snippet-only twin).",
+   "name": "segAParam",
+   "selector": "a5a@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5a",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 9,
+    "snippet": "ned&&(a59=0x1);Fl[\"bLuhQxfFGDS\"](a56,a55),Fm[\"bLuhQxfFGDS\"](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[\"dot\"](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](Fn"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 9,
+    "snippet": "undefined&&(a59=0x1);Fl[aqF(0xb55)](a56,a55),Fm[aqF(0xb55)](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[aqF(0xbe8)](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squared query radius distance threshold; SERVED: squared query radius distance threshold (snippet-only twin).",
+   "name": "queryRadiusSq",
+   "selector": "a5a@u1970#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5a",
+   "binding": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "KkKRLGFtA\"](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0;a5b<a56;a5b++){var a5c=a4u,a5d=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "aqu(0xb00)](0.9),a4L=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0;a5b<a56;a5b++){var a5c=a4u,a5d=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clamped closest param along segment B; SERVED: clamped closest param along segment B (snippet-only twin).",
+   "name": "segBParam",
+   "selector": "a5b@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5b",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 9,
+    "snippet": "&(a59=0x1);Fl[\"bLuhQxfFGDS\"](a56,a55),Fm[\"bLuhQxfFGDS\"](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[\"dot\"](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](Fn);if"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 9,
+    "snippet": "fined&&(a59=0x1);Fl[aqF(0xb55)](a56,a55),Fm[aqF(0xb55)](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[aqF(0xbe8)](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](F"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter over collision faces; SERVED: loop counter over collision faces (snippet-only twin).",
+   "name": "faceIndex",
+   "selector": "a5b@u1970#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5b",
+   "binding": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0;a5b<a56;a5b++){var a5c=a4u,a5d=a55[\"faces\"][a5b]*fac"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "=Math['KkKRLGFtA'](0.95),a4M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0;a5b<a56;a5b++){var a5c=a4u,a5d=a55[aqG(0xd8a)][a5b]*"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: input state with up/down/left/right/space; SERVED: input state with up/down/left/right/space (snippet-only twin).",
+   "name": "playerInput",
+   "selector": "a5b@u1970#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5b",
+   "binding": {
+    "unit": "u1970",
+    "index": 4,
+    "refCount": 29,
+    "snippet": "ThC']['still'])&&console['log'](a56['DMZbIHLgyk']);a56['JFoSCliucUc'][\"copy\"](a56[\"yoghpvfQE\"]);var a5b=a56['zBgadyCVYk'];a56['xqItLdaOH']>a56['DMZbIHLgyk']['xq"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 4,
+    "refCount": 29,
+    "snippet": "']['still'])&&console['log'](a56['DMZbIHLgyk']);a56['JFoSCliucUc'][aqH(0x609)](a56[aqH(0x48b)]);var a5b=a56['zBgadyCVYk'];a56['xqItLdaOH']>a56['DMZbIHLgyk']['xq"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: dot of ab edge versus c-relative vector; SERVED: dot of ab edge versus c-relative vector (snippet-only twin).",
+   "name": "projAbFromC",
+   "selector": "a5c@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5c",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "4o['copy'](a56['ab'])['OpiuFvBcQd'](a5h)['add'](a56['a']);a4q=a4p[\"copy\"](a55)[\"sub\"](a56['c']);var a5c=a56['ab'][\"dot\"](a4q),a5d=a56['ac']['dot'](a4q);if(a5d>="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "](a56['ab'])['OpiuFvBcQd'](a5h)['add'](a56['a']);a4q=a4p[aqD(0x609)](a55)[aqD(0xf08)](a56['c']);var a5c=a56['ab'][aqD(0xbe8)](a4q),a5d=a56['ac']['dot'](a4q);if("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squared length of segment A direction; SERVED: squared length of segment A direction (snippet-only twin).",
+   "name": "segADirLenSq",
+   "selector": "a5c@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5c",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "9=0x1);Fl[\"bLuhQxfFGDS\"](a56,a55),Fm[\"bLuhQxfFGDS\"](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[\"dot\"](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](Fn);if(a5c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "d&&(a59=0x1);Fl[aqF(0xb55)](a56,a55),Fm[aqF(0xb55)](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[aqF(0xbe8)](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](Fn);i"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scratch face-plane struct alias; SERVED: scratch face-plane struct alias (snippet-only twin).",
+   "name": "workFacePlane",
+   "selector": "a5c@u1970#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5c",
+   "binding": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0;a5b<a56;a5b++){var a5c=a4u,a5d=a55[\"faces\"][a5b]*faceBufferLength;a5c[\"normal\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "M=0x23;function a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0;a5b<a56;a5b++){var a5c=a4u,a5d=a55[aqG(0xd8a)][a5b]*faceBufferLength;a5c[aqG(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: jump-executed flag suppressing ground handling; SERVED: jump-executed flag suppressing ground handling (snippet-only twin).",
+   "name": "didJump",
+   "selector": "a5c@u1970#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5c",
+   "binding": {
+    "unit": "u1970",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "*Math['KkKRLGFtA'](0.54)),a56[\"W91ldgW19d\"]&&(a3M*=a4x)):(a3M=a4v,a56[\"W91ldgW19d\"]&&(a3M=a4w));var a5c=![];a44=a5b['up']&&!a5b['down']||a5b[\"down\"]&&!a5b['up']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "047)*Math['KkKRLGFtA'](0.54)),a56[aqH(0x7cc)]&&(a3M*=a4x)):(a3M=a4v,a56[aqH(0x7cc)]&&(a3M=a4w));var a5c=![];a44=a5b['up']&&!a5b['down']||a5b[aqH(0xa96)]&&!a5b['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: dot of ac edge versus c-relative vector; SERVED: dot of ac edge versus c-relative vector (snippet-only twin).",
+   "name": "projAcFromC",
+   "selector": "a5d@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5d",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "uFvBcQd'](a5h)['add'](a56['a']);a4q=a4p[\"copy\"](a55)[\"sub\"](a56['c']);var a5c=a56['ab'][\"dot\"](a4q),a5d=a56['ac']['dot'](a4q);if(a5d>=0x0&&a5c<=a5d)return a56['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "['add'](a56['a']);a4q=a4p[aqD(0x609)](a55)[aqD(0xf08)](a56['c']);var a5c=a56['ab'][aqD(0xbe8)](a4q),a5d=a56['ac']['dot'](a4q);if(a5d>=0x0&&a5c<=a5d)return a56['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squared length of segment B direction; SERVED: squared length of segment B direction (snippet-only twin).",
+   "name": "segBDirLenSq",
+   "selector": "a5d@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5d",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "FGDS\"](a56,a55),Fm[\"bLuhQxfFGDS\"](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[\"dot\"](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](Fn);if(a5c<=a4n){if(a5d<=a4n"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "55)](a56,a55),Fm[aqF(0xb55)](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[aqF(0xbe8)](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](Fn);if(a5c<=a4n){if(a5d<=a4n"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: face buffer offset for current face; SERVED: face buffer offset for current face (snippet-only twin).",
+   "name": "faceBufOffset",
+   "selector": "a5d@u1970#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5d",
+   "binding": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "unction a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0;a5b<a56;a5b++){var a5c=a4u,a5d=a55[\"faces\"][a5b]*faceBufferLength;a5c[\"normal\"]['fromAr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "unction a4N(a55,a56,a57,a58,a59){var aqG=aqu,a5a=a59*a59;for(var a5b=0x0;a5b<a56;a5b++){var a5c=a4u,a5d=a55[aqG(0xd8a)][a5b]*faceBufferLength;a5c[aqG(0x363)]['f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: strafe direction angle complementing forward angle; SERVED: strafe direction angle complementing forward angle (snippet-only twin).",
+   "name": "strafeDirAngle",
+   "selector": "a5d@u1970#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5d",
+   "binding": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "|a56[\"FhTtfqADI\"]>0x0){a3K=0x0,a3L=a56['rotation']['y']+0x80+0x40;a44&&a5b['down']&&(a3L+=0x80);var a5d=a56['rotation']['y']+0x100;a45&&a5b[\"right\"]&&(a5d+=0x80"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "||a56[aqH(0x9dc)]>0x0){a3K=0x0,a3L=a56['rotation']['y']+0x80+0x40;a44&&a5b['down']&&(a3L+=0x80);var a5d=a56['rotation']['y']+0x100;a45&&a5b[aqH(0xff3)]&&(a5d+=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: barycentric edge determinant vb term; SERVED: barycentric edge determinant vb term (snippet-only twin).",
+   "name": "baryVb",
+   "selector": "a5e@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5e",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ");var a5c=a56['ab'][\"dot\"](a4q),a5d=a56['ac']['dot'](a4q);if(a5d>=0x0&&a5c<=a5d)return a56['c'];var a5e=a5c*a58-a57*a5d;if(a5e<=0x0&&a58>=0x0&&a5d<=0x0)return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": " a5c=a56['ab'][aqD(0xbe8)](a4q),a5d=a56['ac']['dot'](a4q);if(a5d>=0x0&&a5c<=a5d)return a56['c'];var a5e=a5c*a58-a57*a5d;if(a5e<=0x0&&a58>=0x0&&a5d<=0x0)return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: dot of segment B direction with origin separation; SERVED: dot of segment B direction with origin separation (snippet-only twin).",
+   "name": "segBDirDotSep",
+   "selector": "a5e@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5e",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "[\"bLuhQxfFGDS\"](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[\"dot\"](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](Fn);if(a5c<=a4n){if(a5d<=a4n)return a4s['x']=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "qF(0xb55)](a58,a57),Fn['bLuhQxfFGDS'](a55,a57);var a5a,a5b,a5c=Fl[aqF(0xbe8)](Fl),a5d=Fm['dot'](Fm),a5e=Fm['dot'](Fn);if(a5c<=a4n){if(a5d<=a4n)return a4s['x']=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner loop counter over height samples; SERVED: inner loop counter over height samples (snippet-only twin).",
+   "name": "sampleIndex",
+   "selector": "a5e@u1970#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5e",
+   "binding": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "mArray\"](a57,a5d+faceBIndex),a4m['c']['fromArray'](a57,a5d+faceCIndex),a4m[\"TKcRHxerzJH\"]();for(var a5e=0x0;a5e<a3D;a5e++){a3t[\"copy\"](a4r(a58,a4m));var a5f=a3t"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "qG(0x10c5)](a57,a5d+faceBIndex),a4m['c']['fromArray'](a57,a5d+faceCIndex),a4m[aqG(0x19b)]();for(var a5e=0x0;a5e<a3D;a5e++){a3t[aqG(0x609)](a4r(a58,a4m));var a5f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: velocity projection along move direction; SERVED: velocity projection along move direction (snippet-only twin).",
+   "name": "moveDirSpeed",
+   "selector": "a5e@u1970#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5e",
+   "binding": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "{a3w['x']=Gb,a3w['y']=-Ga,a3x['x']=a56[\"yoghpvfQE\"]['x'],a3x['y']=a56['yoghpvfQE']['z'],a5l=a3x;var a5e=a5l[\"dot\"](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "){a3w['x']=Gb,a3w['y']=-Ga,a3x['x']=a56[aqH(0x48b)]['x'],a3x['y']=a56['yoghpvfQE']['z'],a5l=a3x;var a5e=a5l[aqH(0xbe8)](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: third triangle edge determinant feeding barycentric denominator; SERVED: third triangle edge determinant feeding barycentric denominator (snippet-only twin).",
+   "name": "triEdgeDetC",
+   "selector": "a5f@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5f",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0&&a5d<=0x0)return a5i=a58/(a58-a5d),a4q['copy'](a56['ac'])['OpiuFvBcQd'](a5i)[\"add\"](a56['a']);var a5f=a59*a5d-a5c*a5a;if(a5f<=0x0&&a5a-a59>=0x0&&a5c-a5d>=0x0)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "d<=0x0)return a5i=a58/(a58-a5d),a4q['copy'](a56['ac'])['OpiuFvBcQd'](a5i)[aqD(0x8da)](a56['a']);var a5f=a59*a5d-a5c*a5a;if(a5f<=0x0&&a5a-a59>=0x0&&a5c-a5d>=0x0)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fl dot Fn connector term in segment-segment closest computation; SERVED: Fl dot Fn connector term in segment-segment closest computation (snippet-only twin).",
+   "name": "segDirConnDot",
+   "selector": "a5f@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5f",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "turn a4s['x']=0x0,a4s['y']=0x0,a4s['z']=Fn['dot'](Fn),a4s;a5a=0x0,a5b=Jh(a5e/a5d,0x0,0x1);}else{var a5f=Fl[\"dot\"](Fn);if(a5d<=a4n)a5b=0x0,a5a=Jh(-a5f/a5c,0x0,a5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "turn a4s['x']=0x0,a4s['y']=0x0,a4s['z']=Fn['dot'](Fn),a4s;a5a=0x0,a5b=Jh(a5e/a5d,0x0,0x1);}else{var a5f=Fl[aqF(0xbe8)](Fn);if(a5d<=a4n)a5b=0x0,a5a=Jh(-a5f/a5c,0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: projected-point distance squared compared against radius squared; SERVED: projected-point distance squared compared against radius squared (snippet-only twin).",
+   "name": "projDistSq",
+   "selector": "a5f@u1970#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5f",
+   "binding": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "7,a5d+faceCIndex),a4m[\"TKcRHxerzJH\"]();for(var a5e=0x0;a5e<a3D;a5e++){a3t[\"copy\"](a4r(a58,a4m));var a5f=a3t['XcYeSlLtjr'](a58);if(a5f<a5a)return!![];}}return![]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 1,
+    "snippet": ",a5d+faceCIndex),a4m[aqG(0x19b)]();for(var a5e=0x0;a5e<a3D;a5e++){a3t[aqG(0x609)](a4r(a58,a4m));var a5f=a3t['XcYeSlLtjr'](a58);if(a5f<a5a)return!![];}}return![]"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount zero assigned never read",
+   "selector": "a5f@u1970#3",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fl dot Fm segment-direction dot in denominator terms; SERVED: Fl dot Fm segment-direction dot in denominator terms (snippet-only twin).",
+   "name": "segDirDot",
+   "selector": "a5g@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5g",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "(a5e/a5d,0x0,0x1);}else{var a5f=Fl[\"dot\"](Fn);if(a5d<=a4n)a5b=0x0,a5a=Jh(-a5f/a5c,0x0,a59);else{var a5g=Fl['dot'](Fm),a5h=a5c*a5d-a5g*a5g;a5h!=0x0?a5a=Jh((a5g*a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "a5d,0x0,0x1);}else{var a5f=Fl[aqF(0xbe8)](Fn);if(a5d<=a4n)a5b=0x0,a5a=Jh(-a5f/a5c,0x0,a59);else{var a5g=Fl['dot'](Fm),a5h=a5c*a5d-a5g*a5g;a5h!=0x0?a5a=Jh((a5g*a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: clamped-difference gain scaling velocity x/z increments; SERVED: clamped-difference gain scaling velocity x/z increments (snippet-only twin).",
+   "name": "stepGain",
+   "selector": "a5g@u1970#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5g",
+   "binding": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "pvfQE\"]['x'],a3x['y']=a56['yoghpvfQE']['z'],a5l=a3x;var a5e=a5l[\"dot\"](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,a5i=Math['KkKRLGFtA'](1.4),a5j=Math[\"KkKRLGF"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 6,
+    "snippet": ")]['x'],a3x['y']=a56['yoghpvfQE']['z'],a5l=a3x;var a5e=a5l[aqH(0xbe8)](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,a5i=Math['KkKRLGFtA'](1.4),a5j=Math[aqH(0xb0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: edge-t reused as barycentric weight for ab edge; SERVED: edge-t reused as barycentric weight for ab edge (snippet-only twin).",
+   "name": "triWeightU",
+   "selector": "a5h@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5h",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "4q['copy'](a56['c'])['sub'](a56['b'])['OpiuFvBcQd'](a5i)['add'](a56['b']);var a5g=0x1/(a5f+a5e+a5b),a5h=a5e*a5g,a5i=a5b*a5g;return a4q['copy'](a56['a'])[\"YbYyrg"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "4q['copy'](a56['c'])['sub'](a56['b'])['OpiuFvBcQd'](a5i)['add'](a56['b']);var a5g=0x1/(a5f+a5e+a5b),a5h=a5e*a5g,a5i=a5b*a5g;return a4q['copy'](a56['a'])[aqD(0x6"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: segment-pair determinant denominator with zero guard; SERVED: segment-pair determinant denominator with zero guard (snippet-only twin).",
+   "name": "segDenom",
+   "selector": "a5h@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5h",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "}else{var a5f=Fl[\"dot\"](Fn);if(a5d<=a4n)a5b=0x0,a5a=Jh(-a5f/a5c,0x0,a59);else{var a5g=Fl['dot'](Fm),a5h=a5c*a5d-a5g*a5g;a5h!=0x0?a5a=Jh((a5g*a5e-a5f*a5d)/a5h,0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "{var a5f=Fl[aqF(0xbe8)](Fn);if(a5d<=a4n)a5b=0x0,a5a=Jh(-a5f/a5c,0x0,a59);else{var a5g=Fl['dot'](Fm),a5h=a5c*a5d-a5g*a5g;a5h!=0x0?a5a=Jh((a5g*a5e-a5f*a5d)/a5h,0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: velocity-wish dot clamped then differenced for gain; SERVED: velocity-wish dot clamped then differenced for gain (snippet-only twin).",
+   "name": "clampedWishDot",
+   "selector": "a5h@u1970#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5h",
+   "binding": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "'x'],a3x['y']=a56['yoghpvfQE']['z'],a5l=a3x;var a5e=a5l[\"dot\"](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,a5i=Math['KkKRLGFtA'](1.4),a5j=Math[\"KkKRLGFtA\"](Mat"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "a3x['y']=a56['yoghpvfQE']['z'],a5l=a3x;var a5e=a5l[aqH(0xbe8)](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,a5i=Math['KkKRLGFtA'](1.4),a5j=Math[aqH(0xb00)](Math"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: edge-t reused as barycentric weight for ac edge; SERVED: edge-t reused as barycentric weight for ac edge (snippet-only twin).",
+   "name": "triWeightV",
+   "selector": "a5i@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5i",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "56['c'])['sub'](a56['b'])['OpiuFvBcQd'](a5i)['add'](a56['b']);var a5g=0x1/(a5f+a5e+a5b),a5h=a5e*a5g,a5i=a5b*a5g;return a4q['copy'](a56['a'])[\"YbYyrgWGnfQ\"](a56["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "56['c'])['sub'](a56['b'])['OpiuFvBcQd'](a5i)['add'](a56['b']);var a5g=0x1/(a5f+a5e+a5b),a5h=a5e*a5g,a5i=a5b*a5g;return a4q['copy'](a56['a'])[aqD(0x69c)](a56['ab"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: constant 1.4 input scaled into strafe threshold; SERVED: constant 1.4 input scaled into strafe threshold (snippet-only twin).",
+   "name": "slideRateBase",
+   "selector": "a5i@u1970#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5i",
+   "binding": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "['y']=a56['yoghpvfQE']['z'],a5l=a3x;var a5e=a5l[\"dot\"](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,a5i=Math['KkKRLGFtA'](1.4),a5j=Math[\"KkKRLGFtA\"](Math['KkKRL"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "=a56['yoghpvfQE']['z'],a5l=a3x;var a5e=a5l[aqH(0xbe8)](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,a5i=Math['KkKRLGFtA'](1.4),a5j=Math[aqH(0xb00)](Math['KkKRLG"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: threshold differenced against clamped dot for step; SERVED: threshold differenced against clamped dot for step (snippet-only twin).",
+   "name": "moveDotThreshold",
+   "selector": "a5j@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5j",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",a5l=a3x;var a5e=a5l[\"dot\"](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,a5i=Math['KkKRLGFtA'](1.4),a5j=Math[\"KkKRLGFtA\"](Math['KkKRLGFtA'](0.027)*a5i);a5h=Jh(a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a3x;var a5e=a5l[aqH(0xbe8)](a3w),a5f=0.2-a5e;if(![]){var a5g=0x1,a5h=a5e,a5i=Math['KkKRLGFtA'](1.4),a5j=Math[aqH(0xb00)](Math['KkKRLGFtA'](0.027)*a5i);a5h=Jh(a5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: velocity-vector alias dotted once for projection scalar; SERVED: velocity-vector alias dotted once for projection scalar (snippet-only twin).",
+   "name": "projVelVec",
+   "selector": "a5k@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5k",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "]+=Math['KkKRLGFtA'](a3w['x']*a5g),a56[\"yoghpvfQE\"]['z']+=Math[\"KkKRLGFtA\"](a3w['y']*a5g);}else{var a5k=a3x,a5l=a3w,a5m=a5k['dot'](a5l)/a5l['RalTGIIEA']();a3y[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "x']+=Math['KkKRLGFtA'](a3w['x']*a5g),a56[aqH(0x48b)]['z']+=Math[aqH(0xb00)](a3w['y']*a5g);}else{var a5k=a3x,a5l=a3w,a5m=a5k['dot'](a5l)/a5l['RalTGIIEA']();a3y[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: wish-direction alias projected onto and copied from; SERVED: wish-direction alias projected onto and copied from (snippet-only twin).",
+   "name": "wishDirVec",
+   "selector": "a5l@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5l",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "'KkKRLGFtA'](a3w['x']*a5g),a56[\"yoghpvfQE\"]['z']+=Math[\"KkKRLGFtA\"](a3w['y']*a5g);}else{var a5k=a3x,a5l=a3w,a5m=a5k['dot'](a5l)/a5l['RalTGIIEA']();a3y[\"copy\"](a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "h['KkKRLGFtA'](a3w['x']*a5g),a56[aqH(0x48b)]['z']+=Math[aqH(0xb00)](a3w['y']*a5g);}else{var a5k=a3x,a5l=a3w,a5m=a5k['dot'](a5l)/a5l['RalTGIIEA']();a3y[aqH(0x609"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: dot-over-lengthsquared projection scalar multiplying copied vector; SERVED: dot-over-lengthsquared projection scalar multiplying copied vector (snippet-only twin).",
+   "name": "projScale",
+   "selector": "a5m@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5m",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "tA'](a3w['x']*a5g),a56[\"yoghpvfQE\"]['z']+=Math[\"KkKRLGFtA\"](a3w['y']*a5g);}else{var a5k=a3x,a5l=a3w,a5m=a5k['dot'](a5l)/a5l['RalTGIIEA']();a3y[\"copy\"](a5l),a3y["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "GFtA'](a3w['x']*a5g),a56[aqH(0x48b)]['z']+=Math[aqH(0xb00)](a3w['y']*a5g);}else{var a5k=a3x,a5l=a3w,a5m=a5k['dot'](a5l)/a5l['RalTGIIEA']();a3y[aqH(0x609)](a5l),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: boolean flag whether wish opposes projected vector; SERVED: boolean flag whether wish opposes projected vector (snippet-only twin).",
+   "name": "isWishOpposed",
+   "selector": "a5n@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5n",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": " a5k=a3x,a5l=a3w,a5m=a5k['dot'](a5l)/a5l['RalTGIIEA']();a3y[\"copy\"](a5l),a3y[\"OpiuFvBcQd\"](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0."
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "5k=a3x,a5l=a3w,a5m=a5k['dot'](a5l)/a5l['RalTGIIEA']();a3y[aqH(0x609)](a5l),a3y[aqH(0x30f)](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0."
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: projected vector length compared with tolerance bounds; SERVED: projected vector length compared with tolerance bounds (snippet-only twin).",
+   "name": "projLen",
+   "selector": "a5o@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5o",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'dot'](a5l)/a5l['RalTGIIEA']();a3y[\"copy\"](a5l),a3y[\"OpiuFvBcQd\"](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0.3,a5r=Math['sqrt'](GT(a56"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ot'](a5l)/a5l['RalTGIIEA']();a3y[aqH(0x609)](a5l),a3y[aqH(0x30f)](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0.3,a5r=Math['sqrt'](GT(a56"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: constant 0.02 tolerance bounding projection length; SERVED: constant 0.02 tolerance bounding projection length (snippet-only twin).",
+   "name": "projLenTol",
+   "selector": "a5p@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5p",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "TGIIEA']();a3y[\"copy\"](a5l),a3y[\"OpiuFvBcQd\"](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0.3,a5r=Math['sqrt'](GT(a56['yoghpvfQE']));if(("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "IIEA']();a3y[aqH(0x609)](a5l),a3y[aqH(0x30f)](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0.3,a5r=Math['sqrt'](GT(a56['yoghpvfQE']));if(("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: constant 0.3 scaling normalized correction vector; SERVED: constant 0.3 scaling normalized correction vector (snippet-only twin).",
+   "name": "correctScale",
+   "selector": "a5q@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5q",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ");a3y[\"copy\"](a5l),a3y[\"OpiuFvBcQd\"](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0.3,a5r=Math['sqrt'](GT(a56['yoghpvfQE']));if((a5o<a5p||"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3y[aqH(0x609)](a5l),a3y[aqH(0x30f)](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0.3,a5r=Math['sqrt'](GT(a56['yoghpvfQE']));if((a5o<a5p||"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: sqrt of velocity metric used as speed reference; SERVED: sqrt of velocity metric used as speed reference (snippet-only twin).",
+   "name": "velSpeed",
+   "selector": "a5r@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5r",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "opy\"](a5l),a3y[\"OpiuFvBcQd\"](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0.3,a5r=Math['sqrt'](GT(a56['yoghpvfQE']));if((a5o<a5p||a5n)&&a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "0x609)](a5l),a3y[aqH(0x30f)](a5m);var a5n=a3w['dot'](a3y)<=0x0,a5o=a3y['length'](),a5p=0.02,a5q=0.3,a5r=Math['sqrt'](GT(a56['yoghpvfQE']));if((a5o<a5p||a5n)&&a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: normalized wish copy clamped then added to velocity; SERVED: normalized wish copy clamped then added to velocity (snippet-only twin).",
+   "name": "velPushVec",
+   "selector": "a5s@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5s",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "h['sqrt'](GT(a56['yoghpvfQE']));if((a5o<a5p||a5n)&&a3w[\"dot\"](a3y)>Math[\"KkKRLGFtA\"](-0.9)*a5r){var a5s=a3y[\"copy\"](a3w)['normalize']()['OpiuFvBcQd'](a5q);!a5n?"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "qrt'](GT(a56['yoghpvfQE']));if((a5o<a5p||a5n)&&a3w[aqH(0xbe8)](a3y)>Math[aqH(0xb00)](-0.9)*a5r){var a5s=a3y[aqH(0x609)](a3w)['normalize']()['OpiuFvBcQd'](a5q);!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: mode-dependent base factor scaling slide velocity terms; SERVED: mode-dependent base factor scaling slide velocity terms (snippet-only twin).",
+   "name": "slideBaseScale",
+   "selector": "a5t@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5t",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "RLGFtA'](Ga*a3M)*Math['KkKRLGFtA'](0.08);}}}else{if(a56[\"FhTtfqADI\"]>0x0&&a56['FhTtfqADI']<a4M){var a5t=a4B,a5u=a4J;a5u=a56['FhTtfqADI']/a4M*a4J*a56['slideSpeed"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "KRLGFtA'](Ga*a3M)*Math['KkKRLGFtA'](0.08);}}}else{if(a56[aqH(0x9dc)]>0x0&&a56['FhTtfqADI']<a4M){var a5t=a4B,a5u=a4J;a5u=a56['FhTtfqADI']/a4M*a4J*a56['slideSpeed"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: slide-amount-proportional factor scaling slide velocity terms; SERVED: slide-amount-proportional factor scaling slide velocity terms (snippet-only twin).",
+   "name": "slidePropScale",
+   "selector": "a5u@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5u",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "(Ga*a3M)*Math['KkKRLGFtA'](0.08);}}}else{if(a56[\"FhTtfqADI\"]>0x0&&a56['FhTtfqADI']<a4M){var a5t=a4B,a5u=a4J;a5u=a56['FhTtfqADI']/a4M*a4J*a56['slideSpeed'],a5t=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "](Ga*a3M)*Math['KkKRLGFtA'](0.08);}}}else{if(a56[aqH(0x9dc)]>0x0&&a56['FhTtfqADI']<a4M){var a5t=a4B,a5u=a4J;a5u=a56['FhTtfqADI']/a4M*a4J*a56['slideSpeed'],a5t=a"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "always-false flag never set true role unprovable",
+   "selector": "a5v@u1970#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: clamped speed metric driving slide stat and steps; SERVED: clamped speed metric driving slide stat and steps (snippet-only twin).",
+   "name": "slideSpeedMag",
+   "selector": "a5w@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5w",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "oghpvfQE']['z']-=Math[\"KkKRLGFtA\"](Ga*a3M);}}a56[\"zkT2rWLY297\"][\"sub\"](a56['position']);var a5v=![],a5w=GT(a56[\"zkT2rWLY297\"]);if(a56['FhTtfqADI']>0x0||a56['GBK"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "vfQE']['z']-=Math[aqH(0xb00)](Ga*a3M);}}a56[\"zkT2rWLY297\"][aqH(0xf08)](a56['position']);var a5v=![],a5w=GT(a56[\"zkT2rWLY297\"]);if(a56['FhTtfqADI']>0x0||a56['GBK"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount zero assigned never read",
+   "selector": "a5x@u1970#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: collision-face index counter into filtered faces array; SERVED: collision-face index counter into filtered faces array (snippet-only twin).",
+   "name": "collFaceCount",
+   "selector": "a5y@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5y",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "56['position']['z']+a3P);FC&&(FH[\"simulateA\"]+=performance['now']()-FF,FF=performance[\"now\"]());var a5y=0x0,a5z=0x0;a4k(a58,a3l[\"min\"],a58['minBox']),a4k(a58,a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "position']['z']+a3P);FC&&(FH[aqH(0xa5e)]+=performance['now']()-FF,FF=performance[aqH(0x1c2)]());var a5y=0x0,a5z=0x0;a4k(a58,a3l[aqH(0x40a)],a58['minBox']),a4k(a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: broad-phase face index counter into gathered faces; SERVED: broad-phase face index counter into gathered faces (snippet-only twin).",
+   "name": "candFaceCount",
+   "selector": "a5z@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5z",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "tion']['z']+a3P);FC&&(FH[\"simulateA\"]+=performance['now']()-FF,FF=performance[\"now\"]());var a5y=0x0,a5z=0x0;a4k(a58,a3l[\"min\"],a58['minBox']),a4k(a58,a3l[\"max\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "']['z']+a3P);FC&&(FH[aqH(0xa5e)]+=performance['now']()-FF,FF=performance[aqH(0x1c2)]());var a5y=0x0,a5z=0x0;a4k(a58,a3l[aqH(0x40a)],a58['minBox']),a4k(a58,a3l[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: constant 0.25 scaling vertical recoil adjustment; SERVED: constant 0.25 scaling vertical recoil adjustment (snippet-only twin).",
+   "name": "vertKickScale",
+   "selector": "a60@u1970#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a60",
+   "binding": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "th['KkKRLGFtA']((a56['rotation']['x']-0x40)/0x40)*1.2,-0x1,0x1);Math['abs'](a5Z)<0.1&&(a5Z=0x0);var a60=0.25;a56[\"yoghpvfQE\"]['y']+=a5Z*a60,a56[\"qrIIvwuqycB\"]=!"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1970",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "th['KkKRLGFtA']((a56['rotation']['x']-0x40)/0x40)*1.2,-0x1,0x1);Math['abs'](a5Z)<0.1&&(a5Z=0x0);var a60=0.25;a56[aqH(0x48b)]['y']+=a5Z*a60,a56[aqH(0x54d)]=!![];"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount zero never read either side",
+   "selector": "UZ@u2471#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead empty-array binding never read either side",
+   "selector": "V0@u2471#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead empty-array binding never read either side",
+   "selector": "V4@u2471#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead empty-array binding never read either side",
+   "selector": "V5@u2471#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead empty-array binding never read either side",
+   "selector": "V6@u2471#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead empty-array binding never read either side",
+   "selector": "V7@u2471#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead empty-array binding never read either side",
+   "selector": "V8@u2471#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead empty-array binding never read either side",
+   "selector": "V9@u2471#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hole update timer mesh alpha mutated eight uses both sides; SERVED: hole update timer mesh alpha mutated eight uses both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 1,
+    "refCount": 8,
+    "snippet": "EB[(\"InstancedMesh\")](toBuffer(a3p),a3r,a3o);return a3s[\"applyPhysics\"]=![],a3s;},'update':function(a3o,a3p){var azd=ai1;a3o['abMNQQaLK']+=FJ/0x6,a3o['abMNQQaLK"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 1,
+    "refCount": 8,
+    "snippet": " usvzFuAsEB[(azc(0xdbb))](toBuffer(a3p),a3r,a3o);return a3s[azc(0x863)]=![],a3s;},'update':function(a3o,a3p){var azd=ai1;a3o['abMNQQaLK']+=FJ/0x6,a3o['abMNQQaLK"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused instance param empty body role unprovable",
+   "selector": "a3o@u2471#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: T1P0 create count sole InstancedMesh argument both sides; SERVED: T1P0 create count sole InstancedMesh argument both sides (snippet-only twin).",
+   "name": "instanceCount",
+   "selector": "a3o@u2471#3",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "ha\"]['afCJVYrCGK']=!![];},'instance':function(a3o){}},'T1P0J19B02U':{'count':0x46,'create':function(a3o){var aze=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x10/0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "ad)]['afCJVYrCGK']=!![];},'instance':function(a3o){}},'T1P0J19B02U':{'count':0x46,'create':function(a3o){var aze=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x10/0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: T1P0 instance record matrices flags set both sides; SERVED: T1P0 instance record matrices flags set both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#4",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 4,
+    "refCount": 15,
+    "snippet": "':![]}),a3v=new usvzFuAsEB['InstancedMesh'](toBuffer(a3p),a3u,a3o);return a3v;},'instance':function(a3o){var azf=ai1;a3o['m1']=new usvzFuAsEB[(\"Matrix4\")](),a3o"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 4,
+    "refCount": 15,
+    "snippet": "':![]}),a3v=new usvzFuAsEB['InstancedMesh'](toBuffer(a3p),a3u,a3o);return a3v;},'instance':function(a3o){var azf=ai1;a3o['m1']=new usvzFuAsEB[(azf(0x350))](),a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: T1P0 update timer child matrices mesh offsets mutated both sides; SERVED: T1P0 update timer child matrices mesh offsets mutated both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#5",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 5,
+    "refCount": 22,
+    "snippet": ",a3o['alwaysUpdateMatrix']=![],a3o[\"neverUpdateMatrix\"]=!![],a3o['opacity']=0.7;},'update':function(a3o,a3p){var azg=ai1;a3o['abMNQQaLK']+=FJ*a3o[\"clPJAbVChXM\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 5,
+    "refCount": 22,
+    "snippet": "ate']=![],a3o['alwaysUpdateMatrix']=![],a3o[azf(0x6b6)]=!![],a3o['opacity']=0.7;},'update':function(a3o,a3p){var azg=ai1;a3o['abMNQQaLK']+=FJ*a3o[azg(0xf68)]*0."
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: n0007 create count sole InstancedMesh argument both sides; SERVED: n0007 create count sole InstancedMesh argument both sides (snippet-only twin).",
+   "name": "instanceCount",
+   "selector": "a3o@u2471#6",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "asaN\"][\"attributes\"]['uvRepeat']['afCJVYrCGK']=!![];}},\"n0007K83X2\":{'count':0x96,'create':function(a3o){var azh=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.15,0."
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "(0xbac)][azg(0x672)]['uvRepeat']['afCJVYrCGK']=!![];}},\"n0007K83X2\":{'count':0x96,'create':function(a3o){var azh=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.15,0."
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: n0007 update timer billboard mesh alpha mutated both sides; SERVED: n0007 update timer billboard mesh alpha mutated both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#7",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 7,
+    "refCount": 7,
+    "snippet": "uffer(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0.09,a3s;},'update':function(a3o,a3p){var azi=ai1;a3o[\"abMNQQaLK\"]+=FJ,a3o[\"JoIkrtRxhZ\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 7,
+    "refCount": 7,
+    "snippet": "uffer(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0.09,a3s;},'update':function(a3o,a3p){var azi=ai1;a3o[azi(0xa01)]+=FJ,a3o[azi(0xf5f)](WY["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: n0007 instance matrix flags initialized both sides; SERVED: n0007 instance matrix flags initialized both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#8",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "0x2bc,a3o['mesh']['RNQDluasaN']['attributes']['alpha'][\"afCJVYrCGK\"]=!![],![];},'instance':function(a3o){var azj=ai1;a3o['alwaysUpdateMatrix']=!![],a3o[\"matrixU"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "]/0x2bc,a3o['mesh']['RNQDluasaN']['attributes']['alpha'][azi(0xd69)]=!![],![];},'instance':function(a3o){var azj=ai1;a3o['alwaysUpdateMatrix']=!![],a3o[azj(0x63"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: grass create count sole InstancedMesh argument both sides; SERVED: grass create count sole InstancedMesh argument both sides (snippet-only twin).",
+   "name": "instanceCount",
+   "selector": "a3o@u2471#9",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "rix']=!![],a3o[\"matrixUpdate\"]=!![];}},'grass':{'count':UJ,'updateFrequency':0x64,'create':function(a3o){var azl=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](1.2,1.2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "eMatrix']=!![],a3o[azj(0x637)]=!![];}},'grass':{'count':UJ,'updateFrequency':0x64,'create':function(a3o){var azl=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](1.2,1.2"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused update params empty body role unprovable",
+   "selector": "a3o@u2471#10",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blood update timer billboard alpha faded both sides; SERVED: blood update timer billboard alpha faded both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#16",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 16,
+    "refCount": 7,
+    "snippet": "uffer(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0.09,a3s;},'update':function(a3o,a3p){var azp=ai1;a3o['abMNQQaLK']+=FJ,a3o[\"JoIkrtRxhZ\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 16,
+    "refCount": 7,
+    "snippet": "toBuffer(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[azo(0xf9f)]=0.09,a3s;},'update':function(a3o,a3p){var azp=ai1;a3o['abMNQQaLK']+=FJ,a3o[azp(0xf5f)](WY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blood instance matrix flag initialized both sides; SERVED: blood instance matrix flag initialized both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#17",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 17,
+    "refCount": 1,
+    "snippet": ")/1.9,a3o[\"mesh\"][\"RNQDluasaN\"]['attributes'][\"alpha\"]['afCJVYrCGK']=!![],![];},'instance':function(a3o){a3o['alwaysUpdateMatrix']=!![];}},\"CVO0H4H5n4F\":{'count"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 17,
+    "refCount": 1,
+    "snippet": ",a3o[azp(0x6eb)][azp(0xbac)]['attributes'][azp(0xcad)]['afCJVYrCGK']=!![],![];},'instance':function(a3o){a3o['alwaysUpdateMatrix']=!![];}},\"CVO0H4H5n4F\":{'count"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: CVO0 instance matrix flag initialized both sides; SERVED: CVO0 instance matrix flag initialized both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#20",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 20,
+    "refCount": 1,
+    "snippet": ")/0x2,a3o[\"mesh\"][\"RNQDluasaN\"][\"attributes\"][\"alpha\"]['afCJVYrCGK']=!![],![];},'instance':function(a3o){a3o['alwaysUpdateMatrix']=!![];}},'explode':{'count':0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 20,
+    "refCount": 1,
+    "snippet": "x2,a3o[azr(0x6eb)][azr(0xbac)][azr(0x672)][azr(0xcad)]['afCJVYrCGK']=!![],![];},'instance':function(a3o){a3o['alwaysUpdateMatrix']=!![];}},'explode':{'count':0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: explode update timer billboard alpha faded both sides; SERVED: explode update timer billboard alpha faded both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#22",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 22,
+    "refCount": 7,
+    "snippet": "AsEB['InstancedMesh'](toBuffer(a3p),a3r,a3o);return a3s['applyPhysics']=![],a3s;},'update':function(a3o,a3p){var azt=ai1;a3o['abMNQQaLK']+=FJ,a3o[\"JoIkrtRxhZ\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 22,
+    "refCount": 7,
+    "snippet": "AsEB['InstancedMesh'](toBuffer(a3p),a3r,a3o);return a3s['applyPhysics']=![],a3s;},'update':function(a3o,a3p){var azt=ai1;a3o['abMNQQaLK']+=FJ,a3o[azt(0xf5f)](WY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: explode instance matrix flags initialized both sides; SERVED: explode instance matrix flags initialized both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#23",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 23,
+    "refCount": 2,
+    "snippet": ")/0x3,a3o['mesh'][\"RNQDluasaN\"]['attributes']['alpha']['afCJVYrCGK']=!![],![];},'instance':function(a3o){a3o['alwaysUpdateMatrix']=!![],a3o['matrixUpdate']=!![]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "96)/0x3,a3o['mesh'][azt(0xbac)]['attributes']['alpha']['afCJVYrCGK']=!![],![];},'instance':function(a3o){a3o['alwaysUpdateMatrix']=!![],a3o['matrixUpdate']=!![]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: smoke create count sole InstancedMesh argument both sides; SERVED: smoke create count sole InstancedMesh argument both sides (snippet-only twin).",
+   "name": "instanceCount",
+   "selector": "a3o@u2471#24",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 24,
+    "refCount": 1,
+    "snippet": "{a3o['alwaysUpdateMatrix']=!![],a3o['matrixUpdate']=!![];}},'smoke':{'count':0x64,'create':function(a3o){var azu=ai1,a3p=new usvzFuAsEB[(\"PlaneGeometry\")](0x2,0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 24,
+    "refCount": 1,
+    "snippet": "{a3o['alwaysUpdateMatrix']=!![],a3o['matrixUpdate']=!![];}},'smoke':{'count':0x64,'create':function(a3o){var azu=ai1,a3p=new usvzFuAsEB[(azu(0x64d))](0x2,0x2,0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: smoke instance matrix flags multiplier initialized both sides; SERVED: smoke instance matrix flags multiplier initialized both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#26",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "ier'],a3o['mesh']['RNQDluasaN'][\"attributes\"]['alpha'][\"afCJVYrCGK\"]=!![],![];},'instance':function(a3o){var azw=ai1;a3o[\"alwaysUpdateMatrix\"]=!![],a3o['matrixU"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "tiplier'],a3o['mesh']['RNQDluasaN'][azv(0x672)]['alpha'][azv(0xd69)]=!![],![];},'instance':function(a3o){var azw=ai1;a3o[azw(0xe67)]=!![],a3o['matrixUpdate']=!!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: waterSmoke create count sole InstancedMesh argument both sides; SERVED: waterSmoke create count sole InstancedMesh argument both sides (snippet-only twin).",
+   "name": "instanceCount",
+   "selector": "a3o@u2471#27",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 27,
+    "refCount": 1,
+    "snippet": "a3o['matrixUpdate']=!![],a3o[\"alphaMultiplier\"]=0x1;}},'waterSmoke':{'count':0x64,'create':function(a3o){var azx=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 27,
+    "refCount": 1,
+    "snippet": "=!![],a3o['matrixUpdate']=!![],a3o[azw(0x105c)]=0x1;}},'waterSmoke':{'count':0x64,'create':function(a3o){var azx=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: waterSmoke update timer alpha faded both sides; SERVED: waterSmoke update timer alpha faded both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#28",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 28,
+    "refCount": 7,
+    "snippet": "uffer(a3p),a3r,a3o);return a3s[\"applyPhysics\"]=!![],a3s[\"b07h9038x4Y\"]=0.05,a3s;},'update':function(a3o,a3p){var azy=ai1;a3o['abMNQQaLK']+=FJ/0x3,a3o['JoIkrtRxh"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 28,
+    "refCount": 7,
+    "snippet": "h'](toBuffer(a3p),a3r,a3o);return a3s[azx(0x863)]=!![],a3s[azx(0xf9f)]=0.05,a3s;},'update':function(a3o,a3p){var azy=ai1;a3o['abMNQQaLK']+=FJ/0x3,a3o['JoIkrtRxh"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: waterSmoke instance matrix flags initialized both sides; SERVED: waterSmoke instance matrix flags initialized both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#29",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 29,
+    "refCount": 2,
+    "snippet": ",0x1),a3o['mesh']['RNQDluasaN']['attributes']['alpha']['afCJVYrCGK']=!![],![];},'instance':function(a3o){var azz=ai1;a3o['alwaysUpdateMatrix']=!![],a3o[\"matrixU"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 29,
+    "refCount": 2,
+    "snippet": ",0x1),a3o['mesh']['RNQDluasaN']['attributes']['alpha']['afCJVYrCGK']=!![],![];},'instance':function(a3o){var azz=ai1;a3o['alwaysUpdateMatrix']=!![],a3o[azz(0x63"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: wine create count sole InstancedMesh argument both sides; SERVED: wine create count sole InstancedMesh argument both sides (snippet-only twin).",
+   "name": "instanceCount",
+   "selector": "a3o@u2471#30",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 30,
+    "refCount": 1,
+    "snippet": "1;a3o['alwaysUpdateMatrix']=!![],a3o[\"matrixUpdate\"]=!![];}},'wine':{'count':0x64,'create':function(a3o){var azA=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 30,
+    "refCount": 1,
+    "snippet": "z=ai1;a3o['alwaysUpdateMatrix']=!![],a3o[azz(0x637)]=!![];}},'wine':{'count':0x64,'create':function(a3o){var azA=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: wine update timer scale alpha mutated both sides; SERVED: wine update timer scale alpha mutated both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#31",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 31,
+    "refCount": 9,
+    "snippet": "uffer(a3p),a3r,a3o);return a3s[\"applyPhysics\"]=!![],a3s[\"b07h9038x4Y\"]=0.12,a3s;},'update':function(a3o,a3p){var azB=ai1;a3o['abMNQQaLK']+=FJ/0x3,a3o[\"JoIkrtRxh"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 31,
+    "refCount": 9,
+    "snippet": "(toBuffer(a3p),a3r,a3o);return a3s[azA(0x863)]=!![],a3s[\"b07h9038x4Y\"]=0.12,a3s;},'update':function(a3o,a3p){var azB=ai1;a3o['abMNQQaLK']+=FJ/0x3,a3o[azB(0xf5f)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: wine instance matrix flags initialized both sides; SERVED: wine instance matrix flags initialized both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#32",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 32,
+    "refCount": 2,
+    "snippet": "+0.2),a3o[\"mesh\"]['RNQDluasaN']['attributes']['alpha'][\"afCJVYrCGK\"]=!![],![];},'instance':function(a3o){var azC=ai1;a3o[\"alwaysUpdateMatrix\"]=!![],a3o['matrixU"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 32,
+    "refCount": 2,
+    "snippet": ".2),a3o[azB(0x6eb)]['RNQDluasaN']['attributes']['alpha'][azB(0xd69)]=!![],![];},'instance':function(a3o){var azC=ai1;a3o[azC(0xe67)]=!![],a3o['matrixUpdate']=!!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: gunsmoke create count sole InstancedMesh argument both sides; SERVED: gunsmoke create count sole InstancedMesh argument both sides (snippet-only twin).",
+   "name": "instanceCount",
+   "selector": "a3o@u2471#33",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 33,
+    "refCount": 1,
+    "snippet": "o[\"alwaysUpdateMatrix\"]=!![],a3o['matrixUpdate']=!![];}},'gunsmoke':{'count':0x96,'create':function(a3o){var azD=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 33,
+    "refCount": 1,
+    "snippet": "azC=ai1;a3o[azC(0xe67)]=!![],a3o['matrixUpdate']=!![];}},'gunsmoke':{'count':0x96,'create':function(a3o){var azD=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: gunsmoke update timer scale alpha velocity mutated both sides; SERVED: gunsmoke update timer scale alpha velocity mutated both sides (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#34",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 34,
+    "refCount": 20,
+    "snippet": "Buffer(a3p),a3r,a3o);return a3s[\"applyPhysics\"]=!![],a3s[\"b07h9038x4Y\"]=0x0,a3s;},'update':function(a3o,a3p){var azE=ai1;a3o[\"abMNQQaLK\"]+=FJ/1.7,a3o[\"JoIkrtRxh"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 34,
+    "refCount": 20,
+    "snippet": "b))](toBuffer(a3p),a3r,a3o);return a3s[azD(0x863)]=!![],a3s[azD(0xf9f)]=0x0,a3s;},'update':function(a3o,a3p){var azE=ai1;a3o[azE(0xa01)]+=FJ/1.7,a3o[azE(0xf5f)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: gunsmoke instance param sets matrix flags both sides; SERVED: gunsmoke instance param sets matrix flags both sides (snippet-only twin).",
+   "name": "effectItem",
+   "selector": "a3o@u2471#35",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 35,
+    "refCount": 2,
+    "snippet": "=0.99,a3o[\"mesh\"]['RNQDluasaN']['attributes'][\"alpha\"]['afCJVYrCGK']=!![],![];},'instance':function(a3o){a3o['alwaysUpdateMatrix']=!![],a3o['matrixUpdate']=!![]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 35,
+    "refCount": 2,
+    "snippet": "3o[azE(0x6eb)]['RNQDluasaN']['attributes'][azE(0xcad)]['afCJVYrCGK']=!![],![];},'instance':function(a3o){a3o['alwaysUpdateMatrix']=!![],a3o['matrixUpdate']=!![]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shotgunsmoke update particle age alpha scale velocity; SERVED: shotgunsmoke update particle age alpha scale velocity (snippet-only twin).",
+   "name": "effectInstance",
+   "selector": "a3o@u2471#37",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 37,
+    "refCount": 19,
+    "snippet": "Buffer(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0x0,a3s;},'update':function(a3o,a3p){var azG=ai1;a3o['abMNQQaLK']+=FJ*1.8/1.7;if(a3o[\"ab"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 37,
+    "refCount": 19,
+    "snippet": "Buffer(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0x0,a3s;},'update':function(a3o,a3p){var azG=ai1;a3o['abMNQQaLK']+=FJ*1.8/1.7;if(a3o[azG"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shotgunsmoke instance param sets matrix flags both sides; SERVED: shotgunsmoke instance param sets matrix flags both sides (snippet-only twin).",
+   "name": "effectItem",
+   "selector": "a3o@u2471#38",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2471",
+    "index": 38,
+    "refCount": 2,
+    "snippet": "=0.98,a3o['mesh'][\"RNQDluasaN\"][\"attributes\"][\"alpha\"][\"afCJVYrCGK\"]=!![],![];},'instance':function(a3o){var azH=ai1;a3o[\"alwaysUpdateMatrix\"]=!![],a3o['matrixU"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 38,
+    "refCount": 2,
+    "snippet": "']*=0.98,a3o['mesh'][azG(0xbac)][azG(0x672)][azG(0xcad)][azG(0xd69)]=!![],![];},'instance':function(a3o){var azH=ai1;a3o[azH(0xe67)]=!![],a3o['matrixUpdate']=!!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hole update index into mesh alphas array; SERVED: hole update index into mesh alphas array (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "\"InstancedMesh\")](toBuffer(a3p),a3r,a3o);return a3s[\"applyPhysics\"]=![],a3s;},'update':function(a3o,a3p){var azd=ai1;a3o['abMNQQaLK']+=FJ/0x6,a3o['abMNQQaLK']=M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "zFuAsEB[(azc(0xdbb))](toBuffer(a3p),a3r,a3o);return a3s[azc(0x863)]=![],a3s;},'update':function(a3o,a3p){var azd=ai1;a3o['abMNQQaLK']+=FJ/0x6,a3o['abMNQQaLK']=M"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: T1P0 update index alphas matrix offsets writes; SERVED: T1P0 update index alphas matrix offsets writes (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#3",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 3,
+    "refCount": 6,
+    "snippet": "['alwaysUpdateMatrix']=![],a3o[\"neverUpdateMatrix\"]=!![],a3o['opacity']=0.7;},'update':function(a3o,a3p){var azg=ai1;a3o['abMNQQaLK']+=FJ*a3o[\"clPJAbVChXM\"]*0.8"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 3,
+    "refCount": 6,
+    "snippet": "]=![],a3o['alwaysUpdateMatrix']=![],a3o[azf(0x6b6)]=!![],a3o['opacity']=0.7;},'update':function(a3o,a3p){var azg=ai1;a3o['abMNQQaLK']+=FJ*a3o[azg(0xf68)]*0.85,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: n0007 create PlaneGeometry fed to InstancedMesh; SERVED: n0007 create PlaneGeometry fed to InstancedMesh (snippet-only twin).",
+   "name": "planeGeometry",
+   "selector": "a3p@u2471#4",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "s\"]['uvRepeat']['afCJVYrCGK']=!![];}},\"n0007K83X2\":{'count':0x96,'create':function(a3o){var azh=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.15,0.15,0x1,0x1);a3p['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "2)]['uvRepeat']['afCJVYrCGK']=!![];}},\"n0007K83X2\":{'count':0x96,'create':function(a3o){var azh=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.15,0.15,0x1,0x1);a3p['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: n0007 update index into mesh alphas; SERVED: n0007 update index into mesh alphas (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#5",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "r(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0.09,a3s;},'update':function(a3o,a3p){var azi=ai1;a3o[\"abMNQQaLK\"]+=FJ,a3o[\"JoIkrtRxhZ\"](WY[R"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "r(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0.09,a3s;},'update':function(a3o,a3p){var azi=ai1;a3o[azi(0xa01)]+=FJ,a3o[azi(0xf5f)](WY[RP])"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: grass create PlaneGeometry named grass meshed; SERVED: grass create PlaneGeometry named grass meshed (snippet-only twin).",
+   "name": "planeGeometry",
+   "selector": "a3p@u2471#6",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "atrixUpdate\"]=!![];}},'grass':{'count':UJ,'updateFrequency':0x64,'create':function(a3o){var azl=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](1.2,1.2,0x1,0x1);for(var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "o[azj(0x637)]=!![];}},'grass':{'count':UJ,'updateFrequency':0x64,'create':function(a3o){var azl=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](1.2,1.2,0x1,0x1);for(var"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead param empty update body both sides",
+   "selector": "a3p@u2471#7",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blood create PlaneGeometry fed to InstancedMesh; SERVED: blood create PlaneGeometry fed to InstancedMesh (snippet-only twin).",
+   "name": "planeGeometry",
+   "selector": "a3p@u2471#10",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "K']=!![],![];},'instance':function(a3o){}},'blood':{'count':0x64,'create':function(a3o){var azo=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](1.2,1.2,0x1,0x1);a3p[\"co"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "K']=!![],![];},'instance':function(a3o){}},'blood':{'count':0x64,'create':function(a3o){var azo=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](1.2,1.2,0x1,0x1);a3p[azo"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blood update index into mesh alphas; SERVED: blood update index into mesh alphas (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#11",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 11,
+    "refCount": 1,
+    "snippet": "r(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0.09,a3s;},'update':function(a3o,a3p){var azp=ai1;a3o['abMNQQaLK']+=FJ,a3o[\"JoIkrtRxhZ\"](WY[R"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 11,
+    "refCount": 1,
+    "snippet": "ffer(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[azo(0xf9f)]=0.09,a3s;},'update':function(a3o,a3p){var azp=ai1;a3o['abMNQQaLK']+=FJ,a3o[azp(0xf5f)](WY[RP]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: explode update index into mesh alphas; SERVED: explode update index into mesh alphas (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#15",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 15,
+    "refCount": 1,
+    "snippet": "['InstancedMesh'](toBuffer(a3p),a3r,a3o);return a3s['applyPhysics']=![],a3s;},'update':function(a3o,a3p){var azt=ai1;a3o['abMNQQaLK']+=FJ,a3o[\"JoIkrtRxhZ\"](WY[R"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 15,
+    "refCount": 1,
+    "snippet": "['InstancedMesh'](toBuffer(a3p),a3r,a3o);return a3s['applyPhysics']=![],a3s;},'update':function(a3o,a3p){var azt=ai1;a3o['abMNQQaLK']+=FJ,a3o[azt(0xf5f)](WY[RP]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: smoke create PlaneGeometry fed to InstancedMesh; SERVED: smoke create PlaneGeometry fed to InstancedMesh (snippet-only twin).",
+   "name": "planeGeometry",
+   "selector": "a3p@u2471#16",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "eMatrix']=!![],a3o['matrixUpdate']=!![];}},'smoke':{'count':0x64,'create':function(a3o){var azu=ai1,a3p=new usvzFuAsEB[(\"PlaneGeometry\")](0x2,0x2,0x1,0x1);a3p['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "eMatrix']=!![],a3o['matrixUpdate']=!![];}},'smoke':{'count':0x64,'create':function(a3o){var azu=ai1,a3p=new usvzFuAsEB[(azu(0x64d))](0x2,0x2,0x1,0x1);a3p['compu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: waterSmoke create PlaneGeometry fed to InstancedMesh; SERVED: waterSmoke create PlaneGeometry fed to InstancedMesh (snippet-only twin).",
+   "name": "planeGeometry",
+   "selector": "a3p@u2471#18",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "']=!![],a3o[\"alphaMultiplier\"]=0x1;}},'waterSmoke':{'count':0x64,'create':function(a3o){var azx=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p['co"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "Update']=!![],a3o[azw(0x105c)]=0x1;}},'waterSmoke':{'count':0x64,'create':function(a3o){var azx=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p['co"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: waterSmoke update index into mesh alphas; SERVED: waterSmoke update index into mesh alphas (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#19",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 19,
+    "refCount": 1,
+    "snippet": "r(a3p),a3r,a3o);return a3s[\"applyPhysics\"]=!![],a3s[\"b07h9038x4Y\"]=0.05,a3s;},'update':function(a3o,a3p){var azy=ai1;a3o['abMNQQaLK']+=FJ/0x3,a3o['JoIkrtRxhZ']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 19,
+    "refCount": 1,
+    "snippet": "toBuffer(a3p),a3r,a3o);return a3s[azx(0x863)]=!![],a3s[azx(0xf9f)]=0.05,a3s;},'update':function(a3o,a3p){var azy=ai1;a3o['abMNQQaLK']+=FJ/0x3,a3o['JoIkrtRxhZ']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: wine create PlaneGeometry fed to InstancedMesh; SERVED: wine create PlaneGeometry fed to InstancedMesh (snippet-only twin).",
+   "name": "planeGeometry",
+   "selector": "a3p@u2471#20",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "teMatrix']=!![],a3o[\"matrixUpdate\"]=!![];}},'wine':{'count':0x64,'create':function(a3o){var azA=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p[\"co"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "UpdateMatrix']=!![],a3o[azz(0x637)]=!![];}},'wine':{'count':0x64,'create':function(a3o){var azA=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p[azA"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: wine update index into mesh alphas; SERVED: wine update index into mesh alphas (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#21",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 21,
+    "refCount": 1,
+    "snippet": "r(a3p),a3r,a3o);return a3s[\"applyPhysics\"]=!![],a3s[\"b07h9038x4Y\"]=0.12,a3s;},'update':function(a3o,a3p){var azB=ai1;a3o['abMNQQaLK']+=FJ/0x3,a3o[\"JoIkrtRxhZ\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 21,
+    "refCount": 1,
+    "snippet": "uffer(a3p),a3r,a3o);return a3s[azA(0x863)]=!![],a3s[\"b07h9038x4Y\"]=0.12,a3s;},'update':function(a3o,a3p){var azB=ai1;a3o['abMNQQaLK']+=FJ/0x3,a3o[azB(0xf5f)](WY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: gunsmoke create PlaneGeometry fed to InstancedMesh; SERVED: gunsmoke create PlaneGeometry fed to InstancedMesh (snippet-only twin).",
+   "name": "planeGeometry",
+   "selector": "a3p@u2471#22",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "trix\"]=!![],a3o['matrixUpdate']=!![];}},'gunsmoke':{'count':0x96,'create':function(a3o){var azD=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p['co"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "xe67)]=!![],a3o['matrixUpdate']=!![];}},'gunsmoke':{'count':0x96,'create':function(a3o){var azD=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p['co"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: gunsmoke update index four alphas writes; SERVED: gunsmoke update index four alphas writes (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#23",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 23,
+    "refCount": 4,
+    "snippet": "er(a3p),a3r,a3o);return a3s[\"applyPhysics\"]=!![],a3s[\"b07h9038x4Y\"]=0x0,a3s;},'update':function(a3o,a3p){var azE=ai1;a3o[\"abMNQQaLK\"]+=FJ/1.7,a3o[\"JoIkrtRxhZ\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 23,
+    "refCount": 4,
+    "snippet": "(toBuffer(a3p),a3r,a3o);return a3s[azD(0x863)]=!![],a3s[azD(0xf9f)]=0x0,a3s;},'update':function(a3o,a3p){var azE=ai1;a3o[azE(0xa01)]+=FJ/1.7,a3o[azE(0xf5f)](WY["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shotgunsmoke update index four alphas writes; SERVED: shotgunsmoke update index four alphas writes (snippet-only twin).",
+   "name": "instanceIdx",
+   "selector": "a3p@u2471#25",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2471",
+    "index": 25,
+    "refCount": 4,
+    "snippet": "er(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0x0,a3s;},'update':function(a3o,a3p){var azG=ai1;a3o['abMNQQaLK']+=FJ*1.8/1.7;if(a3o[\"abMNQQ"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 25,
+    "refCount": 4,
+    "snippet": "er(a3p),a3r,a3o);return a3s['applyPhysics']=!![],a3s[\"b07h9038x4Y\"]=0x0,a3s;},'update':function(a3o,a3p){var azG=ai1;a3o['abMNQQaLK']+=FJ*1.8/1.7;if(a3o[azG(0xa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hole material options map transparent to KibzRdopc; SERVED: hole material options map transparent to KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "{var azc=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.4,0.4,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uo,a3q[\"transparent\"]=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "{var azc=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.4,0.4,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uo,a3q[azc(0xe2f)]=!![];var a3r=new usvzFu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: n0007 material options map transparent to KibzRdopc; SERVED: n0007 material options map transparent to KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#3",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "ar azh=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.15,0.15,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Ur,a3q[\"transparent\"]=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "ar azh=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.15,0.15,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Ur,a3q[azh(0xe2f)]=!![];var a3r=new usvzFu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: light vertex loop counter over geometry vertices; SERVED: light vertex loop counter over geometry vertices (snippet-only twin).",
+   "name": "vertIdx",
+   "selector": "a3q@u2471#5",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "x64,'create':function(a3o){var azm=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](4.5,4.5,0x1,0x1);for(var a3q=0x0;a3q<a3p['AUbXpMajF']['length'];a3q++){}a3p['name']=\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "x64,'create':function(a3o){var azm=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](4.5,4.5,0x1,0x1);for(var a3q=0x0;a3q<a3p['AUbXpMajF']['length'];a3q++){}a3p['name']=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blood material options map transparent to KibzRdopc; SERVED: blood material options map transparent to KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#6",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "{var azo=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](1.2,1.2,0x1,0x1);a3p[\"computeVertexNormals\"]();var a3q={};a3q['map']=Us,a3q['transparent']=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "unction(a3o){var azo=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](1.2,1.2,0x1,0x1);a3p[azo(0x4ba)]();var a3q={};a3q['map']=Us,a3q['transparent']=!![];var a3r=new usv"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: CVO flash material options map transparent KibzRdopc; SERVED: CVO flash material options map transparent KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#7",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 7,
+    "refCount": 3,
+    "snippet": "{var azq=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.2,0.2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Up,a3q[\"transparent\"]=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 7,
+    "refCount": 3,
+    "snippet": "{var azq=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.2,0.2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Up,a3q[azq(0xe2f)]=!![];var a3r=new usvzFu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: smoke material options map transparent to KibzRdopc; SERVED: smoke material options map transparent to KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#9",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "ar azu=ai1,a3p=new usvzFuAsEB[(\"PlaneGeometry\")](0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q[\"map\"]=Uz,a3q['transparent']=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "3o){var azu=ai1,a3p=new usvzFuAsEB[(azu(0x64d))](0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q[azu(0xff7)]=Uz,a3q['transparent']=!![];var a3r=ne"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: waterSmoke material options map transparent KibzRdopc; SERVED: waterSmoke material options map transparent KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#10",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "{var azx=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q[\"map\"]=UC,a3q['transparent']=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "{var azx=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q[azx(0xff7)]=UC,a3q['transparent']=!![];var a3r=ne"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: wine material options map transparent to KibzRdopc; SERVED: wine material options map transparent to KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#11",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "{var azA=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p[\"computeVertexNormals\"]();var a3q={};a3q['map']=UF,a3q['transparent']=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "unction(a3o){var azA=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p[azA(0x4ba)]();var a3q={};a3q['map']=UF,a3q['transparent']=!![];var a3r=new usv"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: gunsmoke material options map transparent KibzRdopc; SERVED: gunsmoke material options map transparent KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#12",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 12,
+    "refCount": 3,
+    "snippet": "{var azD=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uz,a3q[\"transparent\"]=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 12,
+    "refCount": 3,
+    "snippet": "{var azD=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0x2,0x2,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uz,a3q[azD(0xe2f)]=!![];var a3r=new usvzFu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: gunsmoke normalized age drives alpha scale easing; SERVED: gunsmoke normalized age drives alpha scale easing (snippet-only twin).",
+   "name": "lifeFraction",
+   "selector": "a3q@u2471#13",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 13,
+    "refCount": 9,
+    "snippet": "MNQQaLK']=0x0,!![];a3o['mesh']['alphas'][a3p]=Math['min']((0x1-a3o['abMNQQaLK']/0x2bc)*0x2,0x1);var a3q=a3o['abMNQQaLK']/0x2bc;a3o['mesh'][\"alphas\"][a3p]=0x1-a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 13,
+    "refCount": 9,
+    "snippet": "MNQQaLK']=0x0,!![];a3o['mesh']['alphas'][a3p]=Math['min']((0x1-a3o['abMNQQaLK']/0x2bc)*0x2,0x1);var a3q=a3o['abMNQQaLK']/0x2bc;a3o['mesh'][azE(0x3dc)][a3p]=0x1-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shotgunsmoke material options map transparent KibzRdopc; SERVED: shotgunsmoke material options map transparent KibzRdopc (snippet-only twin).",
+   "name": "materialOpts",
+   "selector": "a3q@u2471#14",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 14,
+    "refCount": 3,
+    "snippet": "{var azF=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.3,0.3,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uz,a3q[\"transparent\"]=!![];var a3r=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 14,
+    "refCount": 3,
+    "snippet": "{var azF=ai1,a3p=new usvzFuAsEB['PlaneGeometry'](0.3,0.3,0x1,0x1);a3p['computeVertexNormals']();var a3q={};a3q['map']=Uz,a3q[azF(0xe2f)]=!![];var a3r=new usvzFu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shotgunsmoke normalized age drives alpha scale easing; SERVED: shotgunsmoke normalized age drives alpha scale easing (snippet-only twin).",
+   "name": "lifeFraction",
+   "selector": "a3q@u2471#15",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2471",
+    "index": 15,
+    "refCount": 9,
+    "snippet": "MNQQaLK']=0x0,!![];a3o[\"mesh\"][\"alphas\"][a3p]=Math[\"min\"]((0x1-a3o[\"abMNQQaLK\"]/0x2bc)*0x2,0x1);var a3q=a3o['abMNQQaLK']/0x2bc;a3o['mesh']['alphas'][a3p]=0x1-a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2471",
+    "index": 15,
+    "refCount": 9,
+    "snippet": "0x0,!![];a3o[azG(0x6eb)][azG(0x3dc)][a3p]=Math[azG(0x40a)]((0x1-a3o[azG(0xa01)]/0x2bc)*0x2,0x1);var a3q=a3o['abMNQQaLK']/0x2bc;a3o['mesh']['alphas'][a3p]=0x1-a3"
+   }
+  }
+ ]
+}

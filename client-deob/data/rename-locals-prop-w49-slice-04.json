@@ -1,0 +1,221 @@
+{
+ "meta": {
+  "wave": 49,
+  "slice": "04",
+  "mergedFrom": [
+   "04a",
+   "04b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.min computes out[N]=Math.min(a3z[N],a3A[N]) with a3z as first operand (rc=4); served copy identical modulo ai4-decoded 'min' keys (servedRefCount=4).",
+   "name": "minVecA",
+   "selector": "a3z@u0008#64"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.max computes out[N]=Math.max(a3z[N],a3A[N]) with a3z as first operand (rc=4); served copy identical modulo ai4-decoded 'max' keys (servedRefCount=4).",
+   "name": "maxVecA",
+   "selector": "a3z@u0008#65"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.scale computes out[N]=a3z[N]*a3A with a3z the input vector and a3A the scalar (rc=4); served copy identical with only the method key ai4-obfuscated (servedRefCount=4).",
+   "name": "vecToScale",
+   "selector": "a3z@u0008#66"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.squaredDistance diffs a3z[N]-a3y[N] and sums squares with a3z as second point (rc=4); served copy identical modulo dist/sqrDist alias keys (servedRefCount=4).",
+   "name": "sqrDistPointB",
+   "selector": "a3z@u0008#69"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.length caches var a3z=a3y[0x0] then returns sqrt(a3z*a3z+...) (rc=2); served copy identical (servedRefCount=2).",
+   "name": "lenXElem",
+   "selector": "a3z@u0008#70"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.squaredLength caches var a3z=a3y[0x0] then returns a3z*a3z+... (rc=2); served copy identical modulo len/sqrLen alias keys (servedRefCount=2).",
+   "name": "sqrLenXElem",
+   "selector": "a3z@u0008#71"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.negate (dcItcWVWb) writes out[N]=-a3z[N] with a3z the source vector (rc=4); served copy identical (servedRefCount=4).",
+   "name": "vecToNegate",
+   "selector": "a3z@u0008#72"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.normalize reads a3z[0..3] into locals then writes out[N]=a3z[N]*invLen (rc=8); served copy identical with only the method key ai4-obfuscated (servedRefCount=8).",
+   "name": "vecToNormalize",
+   "selector": "a3z@u0008#73"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.transformMat4 caches a3z[0..3] then multiplies by matrix rows into out (rc=4); served copy identical (servedRefCount=4).",
+   "name": "vecToTransform",
+   "selector": "a3z@u0008#77"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.transformQuat caches a3z[0..2] as the vector rotated by quaternion a3A (rc=3); served copy identical with only the method key ai4-obfuscated (servedRefCount=3).",
+   "name": "vecForQuat",
+   "selector": "a3z@u0008#78"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 mat2.transpose reads source a3z lanes into out with an in-place alias branch (rc=7); served copy identical with only the method key ai4-obfuscated (servedRefCount=7).",
+   "name": "matToTranspose",
+   "selector": "a3z@u0008#82"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 mat2.invert reads a3z[0..3] for cofactor/determinant computation (rc=4); served copy identical with only the method key ai4-obfuscated (servedRefCount=4).",
+   "name": "matToInvert",
+   "selector": "a3z@u0008#83"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "On both sides a3z is LDU's 2nd param with a single occurrence, returned untouched in [a3y,a3z,a3A] and never indexed (rc=1, servedRefCount=1); its purpose as an output slot is unclear.",
+   "selector": "a3z@u0008#88"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 mat2d.clone allocates var a3z=new a3m(0x6) and copies 6 lanes into it (rc=7); served copy identical with only the method key ai4-obfuscated (servedRefCount=7).",
+   "name": "cloneMat2d",
+   "selector": "a3z@u0008#89"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 mat2d.invert reads a3z[0..5] for cofactor/determinant computation (rc=6); served copy identical with only the method key ai4-obfuscated (servedRefCount=6).",
+   "name": "mat2dToInvert",
+   "selector": "a3z@u0008#91"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat2d invert(a3y,a3z) reading a3z[0x0..0x5] into cofactors while a3y receives the result; SERVED DECL is the identical invert body with the same read/write split.",
+   "name": "invertSrcMat2d",
+   "selector": "a3z@u0008#92"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat2d multiply(a3y,a3z,a3A) caching a3z[0x0..0x5] as the left factor combined with a3A into a3y; SERVED DECL preserves the same operand roles.",
+   "name": "mulLeftMat2d",
+   "selector": "a3z@u0008#93"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 fromMat4(a3y,a3z) copying a3z[0x0..0x2,0x4..0x6,0x8..0xa] into a3y; SERVED DECL keeps the same 4x4-to-3x3 source copy.",
+   "name": "fromMatSrc",
+   "selector": "a3z@u0008#98"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 multiply(a3y,a3z,a3A) caching a3z[0x0..0x8] as the left factor combined with a3A into a3y; SERVED DECL preserves the same operand roles.",
+   "name": "mulLeftMat3",
+   "selector": "a3z@u0008#104"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 scale(a3y,a3z,a3A) multiplying a3z elements by the a3A vec2 factors into a3y; SERVED DECL is the same scale body with a3z as the source matrix.",
+   "name": "scaleSrcMat3",
+   "selector": "a3z@u0008#107"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 fromQuat(a3y,a3z) expanding the 4-element a3z quaternion into rotation entries of a3y; SERVED DECL keeps the identical quaternion-to-matrix expansion.",
+   "name": "quatSrc",
+   "selector": "a3z@u0008#109"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 clone(a3y) allocating a3z as a fresh 16-element array filled from a3y and returned; SERVED DECL is the same allocate-fill-return clone body.",
+   "name": "cloneOutMat4",
+   "selector": "a3z@u0008#110"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 adjoint(a3y,a3z) reading all 16 a3z elements into cofactor temporaries written to a3y; SERVED DECL preserves the same source/adjoint-output split.",
+   "name": "adjointSrcMat4",
+   "selector": "a3z@u0008#114"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 multiply(a3y,a3z,a3A) caching a3z[0x0..0xf] as the left factor combined with a3A into a3y; SERVED DECL preserves the same operand roles.",
+   "name": "mulLeftMat4",
+   "selector": "a3z@u0008#117"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL tail shows the generic mat4 rotate copying a3z[0xc..0xf] into a3y under an a3z!==a3y alias guard; SERVED DECL keeps the same source-matrix guard and copy.",
+   "name": "rotateSrcMat4",
+   "selector": "a3z@u0008#120"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 rotateX(a3y,a3z,a3A) rotating rows cached from a3z by sin/cos of a3A into a3y; SERVED DECL is the same rotateX body with a3z as source.",
+   "name": "rotateXSrc",
+   "selector": "a3z@u0008#121"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 rotateY(a3y,a3z,a3A) rotating rows cached from a3z by sin/cos of a3A into a3y; SERVED DECL is the same rotateY body with a3z as source.",
+   "name": "rotateYSrc",
+   "selector": "a3z@u0008#122"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows the frustum builder using a3z as the left bound (1/(a3A-a3z), (a3A+a3z) terms); SERVED DECL keeps the identical left/right/bottom/top/near/far formula with a3z as left.",
+   "name": "leftPlane",
+   "selector": "a3z@u0008#126"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows perspective(a3y,a3z,...) computing 1/tan(a3z/2) as the vertical field-of-view term; SERVED DECL keeps the same fovy/aspect/near/far perspective formula.",
+   "name": "fovY",
+   "selector": "a3z@u0008#127"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows setAxes returning function(a3z,...) writing the result into a3z via fromMat3 then normalize; SERVED DECL keeps a3z as the same double-written quaternion output.",
+   "name": "outputQuat",
+   "selector": "a3z@u0008#131"
+  }
+ ]
+}

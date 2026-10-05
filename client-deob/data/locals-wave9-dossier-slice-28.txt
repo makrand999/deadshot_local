@@ -1,0 +1,72 @@
+# DOSSIER slice-28 (wave 9, 12 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/12] a3N@u1970#0 | kind=var depth=5 refCount=0 | combat/fire.js
+DECL @2886 (verified):
+1.5-a56*a3j[0x0]*a3j[0x0]));};var a3l=new GV(),a3m=new usvzFuAsEB['Geometry'](),a3n=new usvzFuAsEB['Geometry'](),a3o=new Array(0x3),a3p=new usvzFuAsEB[("gURkzCzeY")](),a3q=new usvzFuAsEB['gURkzCzeY'](),a3r=new usvzFuAsEB['gURkzCzeY'](),a3s=new usvzFuAsEB['gURkzCzeY'](),a3t=new usvzFuAsEB[("gURkzCzeY")](),a3u=new usvzFuAsEB['gURkzCzeY'](),a3v=new usvzFuAsEB[("gURkzCzeY")](),a3w=new usvzFuAsEB[("vFgdYWoMXeQ")](),a3x=new usvzFuAsEB['vFgdYWoMXeQ'](),a3y=new usvzFuAsEB[("vFgdYWoMXeQ")](),a3z=0x0,a3A=0x0,a3B=0x0,a3C=0x0,a3D=0x0,a3E=0x0,a3F=0x0,a3G=0x0,a3H=0x0,a3I=0x0,a3J=0x0,a3K=0x0,a3L=0x0,a3M=0x0,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/12] a54@u1970#0 | kind=var depth=5 refCount=0 | combat/fire.js
+DECL @36358 (verified):
+lxgw();Ff.RNQDluasaN=a55.RNQDluasaN;var loPNdwjKE=ER(a55,Ff,a58,a59);if(loPNdwjKE==null||loPNdwjKE.length==0){return 0;}return ES(a56,loPNdwjKE.array[0].point,a57);},EV=function(a55,a56,a57,a58,a59){if(!EW(a55))return;var a5a=EU(a55,a56,a57,a58,a59);if(a5a==null)return!![];if(a5a<0.1)return!![];return![];},EW=function(a55){var aqI=aqu;return a55["fkXbORMTcl"]!=undefined;};var a4Y=new usvzFuAsEB['gURkzCzeY'](),a4Z={'position':new usvzFuAsEB['gURkzCzeY']()},a50=new usvzFuAsEB['gURkzCzeY'](),a51=new usvzFuAsEB['gURkzCzeY'](),a52=new usvzFuAsEB['vFgdYWoMXeQ'](),a53=new usvzFuAsEB['vFgdYWoMXeQ'](),[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/12] faceBox@u1970#0 | kind=var depth=7 refCount=4 | combat/fire.js
+DECL @6918 (verified):
+h(geo.faces[i]);fkXbORMTcl[x][z].faceVertexUvs[0][fkXbORMTcl[x][z].faces.length-1]=geo.faceVertexUvs[0][i];fkXbORMTcl[x][z].faceVertexUvs[1][fkXbORMTcl[x][z].faces.length-1]=geo.faceVertexUvs[1][i];}return spatial;};EQ=function(geo,splitSize,materials){'use strict';var spatial={map:[],startPos:new usvzFuAsEB.gURkzCzeY(),endPos:new usvzFuAsEB.gURkzCzeY(),maxBox:new usvzFuAsEB.gURkzCzeY(),minBox:new usvzFuAsEB.gURkzCzeY()};var fkXbORMTcl=spatial.map;var min=geo.AUbXpMajF[geo.faces[0].a].clone();var max=geo.AUbXpMajF[geo.faces[0].a].clone();var minBox=spatial.minBox;var maxBox=spatial.maxBox;var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 2 nearest outside DECL window:
+@7841: var xa=fkXbORMTcl[x-minBox.x]=[];xa.length=zLength;}var currentBox=new usvzFuAsEB.gURkzCzeY();for(var i=0;i<geo.faces.length;i++){points[0]=geo.AUbXpMajF[geo.faces[i].a];points[1]=geo.AUbXpMajF[geo.faces[i].b];points[2]=geo.AUbXpMajF[geo.faces[i].c];faceBox.setFromPoints(points);faceBox.getCenter(center);EY(spatial,center,currentBox,boxScale);var x=currentBox.x;var z=currentBox.z;if(fkXbORMTcl[x][z]==null){fkXbORMTcl[x][z]=[];for(var j=0;j<materials;j++){var newGeo=new usvzFuAsEB.Geometry();newG
+@7871: [];xa.length=zLength;}var currentBox=new usvzFuAsEB.gURkzCzeY();for(var i=0;i<geo.faces.length;i++){points[0]=geo.AUbXpMajF[geo.faces[i].a];points[1]=geo.AUbXpMajF[geo.faces[i].b];points[2]=geo.AUbXpMajF[geo.faces[i].c];faceBox.setFromPoints(points);faceBox.getCenter(center);EY(spatial,center,currentBox,boxScale);var x=currentBox.x;var z=currentBox.z;if(fkXbORMTcl[x][z]==null){fkXbORMTcl[x][z]=[];for(var j=0;j<materials;j++){var newGeo=new usvzFuAsEB.Geometry();newGeo.AUbXpMajF=geo.AUbXpMajF;new
+==============================================================================
+[4/12] filter@u1970#0 | kind=param depth=7 refCount=2 | combat/fire.js
+DECL @3734 (verified):
+![],a4c=null,a4d=null,a4e=null,a4f=null;Jx=[],Jy=[];var a4g=Math['PI']/0x80;for(var a4h=0x0;a4h<0x100;a4h++){Jx[a4h]=Math['KkKRLGFtA'](Math["sin"](a4h*a4g)),Jy[a4h]=Math["KkKRLGFtA"](Math["cos"](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57['copy'](a56)['min'](a55['endPos'])["max"](a55["startPos"])["sub"](a55['startPos']),a57["OpiuFvBcQd"](a4j),a57['floor'](),a57;}EY=function(a55,a56,a57,a58){var aqB=aqu;return a57['copy'](a56)['min'](a55['endPos'])["max"](a55['startPos'])['sub'](a55['startPos']),a57['OpiuFvBcQd'](a58),a57['floor'](),a57;};EO=function(geo,[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 2 nearest outside DECL window:
+@4546: axBox.y-minBox.y+1;var zLength=maxBox.z-minBox.z+1;for(var x=minBox.x;x<=maxBox.x;x++){var xa=fkXbORMTcl[x-minBox.x]=[];xa.length=yLength;for(var y=minBox.y;y<=maxBox.y;y++){(xa[y-minBox.y]=[]).length=zLength;}}for(var i=0;i<geo.faces.length;i++){if(filter!==undefined&&filter(geo,i)){continue;}var a=geo.faces[i].aabb;a4k(spatial,a.min,minBox);a4k(spatial,a.max,maxBox);for(var x=minBox.x;x<=maxBox.x;x++){for(var y=minBox.y;y<=maxBox.y;y++){for(var z=minBox.z;z<=maxBox.z;z++){if(fkXbORMTcl[x][y][z
+@4566: ar zLength=maxBox.z-minBox.z+1;for(var x=minBox.x;x<=maxBox.x;x++){var xa=fkXbORMTcl[x-minBox.x]=[];xa.length=yLength;for(var y=minBox.y;y<=maxBox.y;y++){(xa[y-minBox.y]=[]).length=zLength;}}for(var i=0;i<geo.faces.length;i++){if(filter!==undefined&&filter(geo,i)){continue;}var a=geo.faces[i].aabb;a4k(spatial,a.min,minBox);a4k(spatial,a.max,maxBox);for(var x=minBox.x;x<=maxBox.x;x++){for(var y=minBox.y;y<=maxBox.y;y++){for(var z=minBox.z;z<=maxBox.z;z++){if(fkXbORMTcl[x][y][z]==null){fkXbORMTcl[
+==============================================================================
+[5/12] materials@u1970#0 | kind=param depth=7 refCount=1 | combat/fire.js
+DECL @6560 (verified):
+tBox=new usvzFuAsEB.gURkzCzeY();for(var i=0;i<geo.faces.length;i++){EY(spatial,geo.faces[i].center,currentBox,boxScale);var x=currentBox.x;var z=currentBox.z;if(fkXbORMTcl[x][z]==null){var newGeo=new usvzFuAsEB.Geometry();newGeo.AUbXpMajF=geo.AUbXpMajF;newGeo.faceVertexUvs[0]=[];newGeo.faceVertexUvs[1]=[];fkXbORMTcl[x][z]=newGeo;}fkXbORMTcl[x][z].faces.push(geo.faces[i]);fkXbORMTcl[x][z].faceVertexUvs[0][fkXbORMTcl[x][z].faces.length-1]=geo.faceVertexUvs[0][i];fkXbORMTcl[x][z].faceVertexUvs[1][fkXbORMTcl[x][z].faces.length-1]=geo.faceVertexUvs[1][i];}return spatial;};EQ=function(geo,splitSize,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@8035: geo.faces[i].b];points[2]=geo.AUbXpMajF[geo.faces[i].c];faceBox.setFromPoints(points);faceBox.getCenter(center);EY(spatial,center,currentBox,boxScale);var x=currentBox.x;var z=currentBox.z;if(fkXbORMTcl[x][z]==null){fkXbORMTcl[x][z]=[];for(var j=0;j<materials;j++){var newGeo=new usvzFuAsEB.Geometry();newGeo.AUbXpMajF=geo.AUbXpMajF;newGeo.faceVertexUvs[0]=[];newGeo.faceVertexUvs[1]=[];fkXbORMTcl[x][z][j]=newGeo;}}var m=geo.faces[i].materialIndex;delete geo.faces[i].materialIndex;if(fkXbORMTcl[x][
+==============================================================================
+[6/12] a00@u2705#0 | kind=var depth=3 refCount=1 | engine/webgl-renderer.js
+DECL @4 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/12] a01@u2705#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @12 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/12] a02@u2705#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @46 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/12] a03@u2705#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @80 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/12] a04@u2705#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @88 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/12] a3s@u2742#0 | kind=var depth=5 refCount=0 | network/handlers.js
+DECL @753 (verified):
+['y']<0x0){WY[RY]['y']+=Qz;}X7=Math['KkKRLGFtA'](Math["max"](-WU,Math['min'](WU,X7))),WY[RY]['y']=Math['KkKRLGFtA'](WY[RY]['y']),T2['mPDLPePIID']();if(OY!=undefined)for(var a3p=0x0;a3p<OY['map']['length'];a3p++){for(var a3q=0x0;a3q<OY['map'][a3p]['length'];a3q++){if(OY['map'][a3p][a3q]==undefined)continue;if(Array['isArray'](OY["map"][a3p][a3q]))for(let a3t=0x0;a3t<OY["map"][a3p][a3q]['length'];a3t++){OY["map"][a3p][a3q][a3t]["cXlFeDeYwuS"]=![];}}}SW["d2J6H770A10"]=![],SW['zBgadyCVYk']['OUsPgMLOT']=![],R6=![],Y6=0x0,Pz=!![],a0s=GK,W5();for(var a3r=0x0;a3r<Kq['rtuiAWgKjH']['length'];a3r++){var [...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/12] a3k@u0160#0 | kind=param depth=5 refCount=0 | engine/shaders.js
+DECL @45 (verified):
+var qx=qw,qy={'addUniforms':function(a3i,a3j,a3k,a3l){var anC=ai1,a3m=a3l['substr'](a3l['indexOf'](':')+0x1)["split"](',');a3m[0x0]=='Moss1'&&(a3m[0x0]="moss1"),a3i['mapa']={'value':a3j('maps/newmlab/out/compressedTextures/'+a3m[0x0]+'.webp')},a3i["mapb"]={'value':a3j('maps/newmlab/out/compressedTextures/'+a3m[0x1]+'.webp')};},'vertex':'\x0a#include\x20<uv2_pars_vertex>\x0avarying\x20vec2\x20vUvv;\x0avarying\x20float\x20mixVal;\x0avarying\x20vec3\x20vColor;\x0a\x0auniform\x20mat4\x20worldProjection;\x0a\x0avoid\x20main()\x20{\x0avUvv\x20=\x20uv;\x0avUv2\x20=\x20uv2;\x0amixVal\x20=\x20color.b;\[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-28: propose EVERY binding above.

@@ -1,0 +1,146 @@
+# DOSSIER slice-23 (wave 5, 27 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/27] useAABBthreshold@u1763#0 | kind=var depth=5 refCount=1 | sim/game-loop.js
+DECL @1262 (verified):
+ex);face.ac.toArray(AyXbLxaib,index+faceCIndex);AyXbLxaib[index+faceAddedIndex]=0;if(face.collision==undefined){AyXbLxaib[index+faceCollisionIndex]=1;}else{AyXbLxaib[index+faceCollisionIndex]=face.collision;}AyXbLxaib[index+faceSoundIndex]=face.UVCeyZNLZ||0;for(var a=0;a<bc.length;a++){var x=bc[a];for(var b=0;b<Ji.length;b++){var y=Ji[b];if(verts[face[x]][y]<face.aabb.min[y]){face.aabb.min[y]=verts[face[x]][y];}if(verts[face[x]][y]>face.aabb.max[y]){face.aabb.max[y]=verts[face[x]][y];}}}face.aabb.max.toArray(AyXbLxaib,index+faceMaxIndex);face.aabb.min.toArray(AyXbLxaib,index+faceMinIndex);var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/27] verts@u1763#0 | kind=param depth=5 refCount=9 | sim/game-loop.js
+DECL @23 (verified):
+function makeAABB(face,verts,AyXbLxaib,index){'use strict';face.aa=verts[face.a];face.ab=verts[face.b];face.ac=verts[face.c];face.aabb.min.copy(verts[face.a]);face.aabb.max.copy(verts[face.a]);index*=faceBufferLength;AyXbLxaib[index+faceHitboxIndex]=face.hitbox?1:0;cgKhuMbVj.bLuhQxfFGDS(face.ab,face.aa);ktLerTRTAa.bLuhQxfFGDS(face.ac,face.aa);normalTemp.UZFffGBjyhk(cgKhuMbVj,ktLerTRTAa);normalTemp.normalize();normalTemp.toArray(AyXbLxaib,index+faceNormalIndex);var n=normalTemp;face.dVal=-(n.x*face.aa.x+n.y*face.aa.y+n.z*face.aa.z);AyXbLxaib[index+faceDvalIndex]=face.dVal;face.aa.toArray(AyXbLx[...line truncated...]
+USES: refCount=9, 10 token-occurrences in unit, showing 4 nearest outside DECL window:
+@1005: lision==undefined){AyXbLxaib[index+faceCollisionIndex]=1;}else{AyXbLxaib[index+faceCollisionIndex]=face.collision;}AyXbLxaib[index+faceSoundIndex]=face.UVCeyZNLZ||0;for(var a=0;a<bc.length;a++){var x=bc[a];for(var b=0;b<Ji.length;b++){var y=Ji[b];if(verts[face[x]][y]<face.aabb.min[y]){face.aabb.min[y]=verts[face[x]][y];}if(verts[face[x]][y]>face.aabb.max[y]){face.aabb.max[y]=verts[face[x]][y];}}}face.aabb.max.toArray(AyXbLxaib,index+faceMaxIndex);face.aabb.min.toArray(AyXbLxaib,index+faceMinInde
+@1058: ]=1;}else{AyXbLxaib[index+faceCollisionIndex]=face.collision;}AyXbLxaib[index+faceSoundIndex]=face.UVCeyZNLZ||0;for(var a=0;a<bc.length;a++){var x=bc[a];for(var b=0;b<Ji.length;b++){var y=Ji[b];if(verts[face[x]][y]<face.aabb.min[y]){face.aabb.min[y]=verts[face[x]][y];}if(verts[face[x]][y]>face.aabb.max[y]){face.aabb.max[y]=verts[face[x]][y];}}}face.aabb.max.toArray(AyXbLxaib,index+faceMaxIndex);face.aabb.min.toArray(AyXbLxaib,index+faceMinIndex);var useAABBthreshold=0.1;Ji.forEach(function(a){if
+@1080: dex+faceCollisionIndex]=face.collision;}AyXbLxaib[index+faceSoundIndex]=face.UVCeyZNLZ||0;for(var a=0;a<bc.length;a++){var x=bc[a];for(var b=0;b<Ji.length;b++){var y=Ji[b];if(verts[face[x]][y]<face.aabb.min[y]){face.aabb.min[y]=verts[face[x]][y];}if(verts[face[x]][y]>face.aabb.max[y]){face.aabb.max[y]=verts[face[x]][y];}}}face.aabb.max.toArray(AyXbLxaib,index+faceMaxIndex);face.aabb.min.toArray(AyXbLxaib,index+faceMinIndex);var useAABBthreshold=0.1;Ji.forEach(function(a){if(face.aabb.max[a]-face
+@1133: ex+faceSoundIndex]=face.UVCeyZNLZ||0;for(var a=0;a<bc.length;a++){var x=bc[a];for(var b=0;b<Ji.length;b++){var y=Ji[b];if(verts[face[x]][y]<face.aabb.min[y]){face.aabb.min[y]=verts[face[x]][y];}if(verts[face[x]][y]>face.aabb.max[y]){face.aabb.max[y]=verts[face[x]][y];}}}face.aabb.max.toArray(AyXbLxaib,index+faceMaxIndex);face.aabb.min.toArray(AyXbLxaib,index+faceMinIndex);var useAABBthreshold=0.1;Ji.forEach(function(a){if(face.aabb.max[a]-face.aabb.min[a]<useAABBthreshold){face.useAABB=true;}});
+==============================================================================
+[3/27] a3o@u2569#0 | kind=param depth=5 refCount=6 | world/weapons.js
+DECL @12 (verified):
+function Xn(a3o){var aA9=ai1;for(var a3p=0x0;a3p<a3o['faces']['length'];a3p++){var a3q=new triangle(),a3r=a3o["faces"][a3p];a3q['a']["copy"](a3o['AUbXpMajF'][a3r['a']]),a3q['b']["copy"](a3o['AUbXpMajF'][a3r['b']]),a3q['c']['copy'](a3o['AUbXpMajF'][a3r['c']]),a3q['TKcRHxerzJH'](),a3o['faces'][a3p]['tri']=a3q;}}
+USES: refCount=6, 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/27] a3p@u2569#0 | kind=var depth=5 refCount=4 | world/weapons.js
+DECL @37 (verified):
+function Xn(a3o){var aA9=ai1;for(var a3p=0x0;a3p<a3o['faces']['length'];a3p++){var a3q=new triangle(),a3r=a3o["faces"][a3p];a3q['a']["copy"](a3o['AUbXpMajF'][a3r['a']]),a3q['b']["copy"](a3o['AUbXpMajF'][a3r['b']]),a3q['c']['copy'](a3o['AUbXpMajF'][a3r['c']]),a3q['TKcRHxerzJH'](),a3o['faces'][a3p]['tri']=a3q;}}
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/27] a3i@u0138#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @12 (verified):
+function qe(a3i,a3j,a3k,a3l,a3m,a3n){var any=ai1;if(isNaN(a3n)||a3n<0x1)return;a3n|=0x0;let a3o=qd(a3i,a3j,a3k,a3l,a3m);a3o=qf(a3o,a3j,a3k,a3l,a3m,a3n),a3i['getContext']('2d')["putImageData"](a3o,a3j,a3k);}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/27] a3j@u0138#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @16 (verified):
+function qe(a3i,a3j,a3k,a3l,a3m,a3n){var any=ai1;if(isNaN(a3n)||a3n<0x1)return;a3n|=0x0;let a3o=qd(a3i,a3j,a3k,a3l,a3m);a3o=qf(a3o,a3j,a3k,a3l,a3m,a3n),a3i['getContext']('2d')["putImageData"](a3o,a3j,a3k);}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/27] a3k@u0138#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @20 (verified):
+function qe(a3i,a3j,a3k,a3l,a3m,a3n){var any=ai1;if(isNaN(a3n)||a3n<0x1)return;a3n|=0x0;let a3o=qd(a3i,a3j,a3k,a3l,a3m);a3o=qf(a3o,a3j,a3k,a3l,a3m,a3n),a3i['getContext']('2d')["putImageData"](a3o,a3j,a3k);}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/27] a3l@u0138#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @24 (verified):
+function qe(a3i,a3j,a3k,a3l,a3m,a3n){var any=ai1;if(isNaN(a3n)||a3n<0x1)return;a3n|=0x0;let a3o=qd(a3i,a3j,a3k,a3l,a3m);a3o=qf(a3o,a3j,a3k,a3l,a3m,a3n),a3i['getContext']('2d')["putImageData"](a3o,a3j,a3k);}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/27] a3m@u0138#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @28 (verified):
+function qe(a3i,a3j,a3k,a3l,a3m,a3n){var any=ai1;if(isNaN(a3n)||a3n<0x1)return;a3n|=0x0;let a3o=qd(a3i,a3j,a3k,a3l,a3m);a3o=qf(a3o,a3j,a3k,a3l,a3m,a3n),a3i['getContext']('2d')["putImageData"](a3o,a3j,a3k);}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/27] a3n@u0138#0 | kind=param depth=5 refCount=4 | ui/widgets.js
+DECL @32 (verified):
+function qe(a3i,a3j,a3k,a3l,a3m,a3n){var any=ai1;if(isNaN(a3n)||a3n<0x1)return;a3n|=0x0;let a3o=qd(a3i,a3j,a3k,a3l,a3m);a3o=qf(a3o,a3j,a3k,a3l,a3m,a3n),a3i['getContext']('2d')["putImageData"](a3o,a3j,a3k);}
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/27] a3o@u0138#0 | kind=let depth=6 refCount=3 | ui/widgets.js
+DECL @92 (verified):
+function qe(a3i,a3j,a3k,a3l,a3m,a3n){var any=ai1;if(isNaN(a3n)||a3n<0x1)return;a3n|=0x0;let a3o=qd(a3i,a3j,a3k,a3l,a3m);a3o=qf(a3o,a3j,a3k,a3l,a3m,a3n),a3i['getContext']('2d')["putImageData"](a3o,a3j,a3k);}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/27] a3i@u0352#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @12 (verified):
+function t8(a3i,a3j,a3k,a3l,a3m){var a3n,a3o,a3p=0x0;do{a3o=a3j+(a3k-a3j)/0x2,a3n=t6(a3o,a3l,a3m)-a3i,a3n>0x0?a3k=a3o:a3j=a3o;}while(Math['abs'](a3n)>sY&&++a3p<sZ);return a3o;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/27] a3j@u0352#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @16 (verified):
+function t8(a3i,a3j,a3k,a3l,a3m){var a3n,a3o,a3p=0x0;do{a3o=a3j+(a3k-a3j)/0x2,a3n=t6(a3o,a3l,a3m)-a3i,a3n>0x0?a3k=a3o:a3j=a3o;}while(Math['abs'](a3n)>sY&&++a3p<sZ);return a3o;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/27] a3k@u0352#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @20 (verified):
+function t8(a3i,a3j,a3k,a3l,a3m){var a3n,a3o,a3p=0x0;do{a3o=a3j+(a3k-a3j)/0x2,a3n=t6(a3o,a3l,a3m)-a3i,a3n>0x0?a3k=a3o:a3j=a3o;}while(Math['abs'](a3n)>sY&&++a3p<sZ);return a3o;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/27] a3l@u0352#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @24 (verified):
+function t8(a3i,a3j,a3k,a3l,a3m){var a3n,a3o,a3p=0x0;do{a3o=a3j+(a3k-a3j)/0x2,a3n=t6(a3o,a3l,a3m)-a3i,a3n>0x0?a3k=a3o:a3j=a3o;}while(Math['abs'](a3n)>sY&&++a3p<sZ);return a3o;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/27] a3m@u0352#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @28 (verified):
+function t8(a3i,a3j,a3k,a3l,a3m){var a3n,a3o,a3p=0x0;do{a3o=a3j+(a3k-a3j)/0x2,a3n=t6(a3o,a3l,a3m)-a3i,a3n>0x0?a3k=a3o:a3j=a3o;}while(Math['abs'](a3n)>sY&&++a3p<sZ);return a3o;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/27] a3n@u0352#0 | kind=var depth=5 refCount=3 | ui/widgets.js
+DECL @37 (verified):
+function t8(a3i,a3j,a3k,a3l,a3m){var a3n,a3o,a3p=0x0;do{a3o=a3j+(a3k-a3j)/0x2,a3n=t6(a3o,a3l,a3m)-a3i,a3n>0x0?a3k=a3o:a3j=a3o;}while(Math['abs'](a3n)>sY&&++a3p<sZ);return a3o;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/27] a3o@u0352#0 | kind=var depth=5 refCount=5 | ui/widgets.js
+DECL @41 (verified):
+function t8(a3i,a3j,a3k,a3l,a3m){var a3n,a3o,a3p=0x0;do{a3o=a3j+(a3k-a3j)/0x2,a3n=t6(a3o,a3l,a3m)-a3i,a3n>0x0?a3k=a3o:a3j=a3o;}while(Math['abs'](a3n)>sY&&++a3p<sZ);return a3o;}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/27] a3p@u0352#0 | kind=var depth=5 refCount=1 | ui/widgets.js
+DECL @45 (verified):
+function t8(a3i,a3j,a3k,a3l,a3m){var a3n,a3o,a3p=0x0;do{a3o=a3j+(a3k-a3j)/0x2,a3n=t6(a3o,a3l,a3m)-a3i,a3n>0x0?a3k=a3o:a3j=a3o;}while(Math['abs'](a3n)>sY&&++a3p<sZ);return a3o;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/27] a3i@u0384#0 | kind=let depth=6 refCount=8 | ui/widgets.js
+DECL @34 (verified):
+function tN(){var ap5=ai1;for(let a3i=0x0;a3i<tQ['length'];a3i++){let a3j=tQ[a3i]['id'],a3k=tQ[a3i]['type'];if(!tQ[a3i]["ReDNKHkwk"])continue;if(tQ[a3i]['hideFromMain']){tP[a3j]=tQ[a3i]['default'];continue;}if(document["getElementById"](a3j)==null)continue;a3k==0x2?tP[a3j]=document["getElementById"](a3j)["checked"]:tP[a3j]=document['getElementById'](a3j)['value'],a3k==0x1&&(tP[a3j]=Number(parseFloat(tP[a3j])['toFixed'](parseFloat(tQ[a3i]['step'])["countDecimals"]())));}tM!=undefined&&tM(tP);}
+USES: refCount=8, 9 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/27] a3o@u2672#0 | kind=param depth=5 refCount=0 | sim/game-loop.js
+DECL @12 (verified):
+function Zw(a3o,a3p,a3q,a3r,a3s){var a3t=arguments['length'],a3u=[];while(a3t--)a3u[a3t]=arguments[a3t];a3u[0x0]=a3u[0x0]['clone'](),Fk['apply'](null,a3u);}
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/27] a3p@u2672#0 | kind=param depth=5 refCount=0 | sim/game-loop.js
+DECL @16 (verified):
+function Zw(a3o,a3p,a3q,a3r,a3s){var a3t=arguments['length'],a3u=[];while(a3t--)a3u[a3t]=arguments[a3t];a3u[0x0]=a3u[0x0]['clone'](),Fk['apply'](null,a3u);}
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[23/27] a3q@u2672#0 | kind=param depth=5 refCount=0 | sim/game-loop.js
+DECL @20 (verified):
+function Zw(a3o,a3p,a3q,a3r,a3s){var a3t=arguments['length'],a3u=[];while(a3t--)a3u[a3t]=arguments[a3t];a3u[0x0]=a3u[0x0]['clone'](),Fk['apply'](null,a3u);}
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[24/27] a3r@u2672#0 | kind=param depth=5 refCount=0 | sim/game-loop.js
+DECL @24 (verified):
+function Zw(a3o,a3p,a3q,a3r,a3s){var a3t=arguments['length'],a3u=[];while(a3t--)a3u[a3t]=arguments[a3t];a3u[0x0]=a3u[0x0]['clone'](),Fk['apply'](null,a3u);}
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[25/27] a3s@u2672#0 | kind=param depth=5 refCount=0 | sim/game-loop.js
+DECL @28 (verified):
+function Zw(a3o,a3p,a3q,a3r,a3s){var a3t=arguments['length'],a3u=[];while(a3t--)a3u[a3t]=arguments[a3t];a3u[0x0]=a3u[0x0]['clone'](),Fk['apply'](null,a3u);}
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[26/27] a3t@u2672#0 | kind=var depth=5 refCount=3 | sim/game-loop.js
+DECL @37 (verified):
+function Zw(a3o,a3p,a3q,a3r,a3s){var a3t=arguments['length'],a3u=[];while(a3t--)a3u[a3t]=arguments[a3t];a3u[0x0]=a3u[0x0]['clone'](),Fk['apply'](null,a3u);}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[27/27] a3u@u2672#0 | kind=var depth=5 refCount=4 | sim/game-loop.js
+DECL @61 (verified):
+function Zw(a3o,a3p,a3q,a3r,a3s){var a3t=arguments['length'],a3u=[];while(a3t--)a3u[a3t]=arguments[a3t];a3u[0x0]=a3u[0x0]['clone'](),Fk['apply'](null,a3u);}
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-23: propose EVERY binding above.

@@ -1,0 +1,71 @@
+# DOSSIER slice-22 (wave 9, 12 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/12] rd@u0200#0 | kind=var depth=3 refCount=6 | sim/game-loop.js
+DECL @10 (verified):
+var rc=rb,rd={};
+USES: refCount=6, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/12] oldAutoClear@u0029#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @176 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1086: SEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[3/12] oldClearAlpha@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @253 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@963: pth){qIySEZgti.clear(false,true,false);}if(this.clear)qIySEZgti.clear(qIySEZgti.autoClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[4/12] oldClearColor@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @239 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@949: f(this.clearDepth){qIySEZgti.clear(false,true,false);}if(this.clear)qIySEZgti.clear(qIySEZgti.autoClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[5/12] oldOverrideMaterial@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @267 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1045: toClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[6/12] MO@u2148#0 | kind=var depth=3 refCount=0 | ui/menu.js
+DECL @88 (verified):
+var Mm,Mn,Mo,Mp,Mq,Mr,Ms,Mt,Mu,Mv,Mw,Mx,My,Mz,MA,MB,MC,MD,ME,MF,MG,MH,MI,MJ,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,N0,N1,N2,N3,N4,N5,N6,N7,N8,N9,Na,Nb,Nc,Nd,Ne,Nf,Ng,Nh,Ni,Nj,Nk,Nl,Nm,Nn,No,Np;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/12] Mv@u2148#0 | kind=var depth=3 refCount=0 | ui/menu.js
+DECL @31 (verified):
+var Mm,Mn,Mo,Mp,Mq,Mr,Ms,Mt,Mu,Mv,Mw,Mx,My,Mz,MA,MB,MC,MD,ME,MF,MG,MH,MI,MJ,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,N0,N1,N2,N3,N4,N5,N6,N7,N8,N9,Na,Nb,Nc,Nd,Ne,Nf,Ng,Nh,Ni,Nj,Nk,Nl,Nm,Nn,No,Np;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/12] Mz@u2148#0 | kind=var depth=3 refCount=0 | ui/menu.js
+DECL @43 (verified):
+var Mm,Mn,Mo,Mp,Mq,Mr,Ms,Mt,Mu,Mv,Mw,Mx,My,Mz,MA,MB,MC,MD,ME,MF,MG,MH,MI,MJ,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,N0,N1,N2,N3,N4,N5,N6,N7,N8,N9,Na,Nb,Nc,Nd,Ne,Nf,Ng,Nh,Ni,Nj,Nk,Nl,Nm,Nn,No,Np;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/12] N7@u2148#0 | kind=var depth=3 refCount=0 | ui/menu.js
+DECL @145 (verified):
+var Mm,Mn,Mo,Mp,Mq,Mr,Ms,Mt,Mu,Mv,Mw,Mx,My,Mz,MA,MB,MC,MD,ME,MF,MG,MH,MI,MJ,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,N0,N1,N2,N3,N4,N5,N6,N7,N8,N9,Na,Nb,Nc,Nd,Ne,Nf,Ng,Nh,Ni,Nj,Nk,Nl,Nm,Nn,No,Np;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/12] Ne@u2148#0 | kind=var depth=3 refCount=0 | ui/menu.js
+DECL @166 (verified):
+var Mm,Mn,Mo,Mp,Mq,Mr,Ms,Mt,Mu,Mv,Mw,Mx,My,Mz,MA,MB,MC,MD,ME,MF,MG,MH,MI,MJ,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,N0,N1,N2,N3,N4,N5,N6,N7,N8,N9,Na,Nb,Nc,Nd,Ne,Nf,Ng,Nh,Ni,Nj,Nk,Nl,Nm,Nn,No,Np;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/12] XD@u2579#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var XD;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/12] a2c@u2842#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @30 (verified):
+var a2a=new GR(),a2b=new GR(),a2c,a2d;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-22: propose EVERY binding above.

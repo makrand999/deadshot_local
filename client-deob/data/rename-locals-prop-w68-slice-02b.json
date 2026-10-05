@@ -1,0 +1,206 @@
+{
+ "meta": {
+  "wave": 68,
+  "slice": "02b"
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: GLTF loader with DRACO loader loading model. SERVED: identical (snippet-only twin).",
+   "name": "gltfLoader",
+   "selector": "a44@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: DRACO loader decoder path configured. SERVED: identical (snippet-only twin).",
+   "name": "dracoLoader",
+   "selector": "a45@u2878#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead store assigned scene never read",
+   "selector": "a46@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: GLTF load callback result providing scene. SERVED: identical (snippet-only twin).",
+   "name": "gltfResult",
+   "selector": "a47@u2878#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused load callback second parameter",
+   "selector": "a48@u2878#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead duplicate scene copy never read",
+   "selector": "a49@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loaded scene traversed collecting meshes. SERVED: identical (snippet-only twin).",
+   "name": "loadedScene",
+   "selector": "a4a@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first mesh then iterated mesh geometry material. SERVED: identical (snippet-only twin).",
+   "name": "currentMesh",
+   "selector": "a4b@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mesh array pushed traversed iterated twice. SERVED: identical (snippet-only twin).",
+   "name": "meshList",
+   "selector": "a4c@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: main skin canvas created sized drawn composited. SERVED: identical (snippet-only twin).",
+   "name": "skinCanvas",
+   "selector": "a4d@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2D context drawing stroking compositing canvases. SERVED: identical (snippet-only twin).",
+   "name": "canvasCtx",
+   "selector": "a4e@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: offscreen canvas feeding WebGL renderer output. SERVED: identical (snippet-only twin).",
+   "name": "renderCanvas",
+   "selector": "a4f@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: renderer options canvas antialias alpha. SERVED: identical (snippet-only twin).",
+   "name": "rendererOptions",
+   "selector": "a4g@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: WebGL renderer clearing rendering scene camera. SERVED: identical (snippet-only twin).",
+   "name": "skinWebglRenderer",
+   "selector": "a4h@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: plane geometry segment count one. SERVED: identical (snippet-only twin).",
+   "name": "planeSegments",
+   "selector": "a4k@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: plane geometry used for quad mesh. SERVED: identical (snippet-only twin).",
+   "name": "planeGeometry",
+   "selector": "a4l@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: primary addition float shader uniform. SERVED: identical (snippet-only twin).",
+   "name": "primaryAdditionUniform",
+   "selector": "a4m@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: primary division float shader uniform. SERVED: identical (snippet-only twin).",
+   "name": "primaryDivisionUniform",
+   "selector": "a4n@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: secondary addition float shader uniform. SERVED: identical (snippet-only twin).",
+   "name": "secondaryAdditionUniform",
+   "selector": "a4o@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shader uniforms textures additions divisions wrapped. SERVED: identical (snippet-only twin).",
+   "name": "shaderUniforms",
+   "selector": "a4p@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: uniform object keys looped wrapping textures. SERVED: identical (snippet-only twin).",
+   "name": "uniformKeys",
+   "selector": "a4q@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shader defines carrying USE_LIGHTMAP flag. SERVED: identical (snippet-only twin).",
+   "name": "shaderDefines",
+   "selector": "a4r@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shader material uniforms shaders defines transparent. SERVED: identical (snippet-only twin).",
+   "name": "shaderMaterial",
+   "selector": "a4s@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quad mesh added to scene. SERVED: identical (snippet-only twin).",
+   "name": "quadMesh",
+   "selector": "a4t@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: material map texture flipped anisotropic. SERVED: identical (snippet-only twin).",
+   "name": "materialMap",
+   "selector": "a4u@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traversed scene child checked as Mesh. SERVED: identical (snippet-only twin).",
+   "name": "traversedChild",
+   "selector": "a4v@u2878#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead material copy overwritten never read",
+   "selector": "a4w@u2878#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: white color material params object. SERVED: identical (snippet-only twin).",
+   "name": "materialParams",
+   "selector": "a4x@u2878#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "already idiomatic readable helper name",
+   "selector": "isVectorClose@u2878#0"
+  }
+ ]
+}

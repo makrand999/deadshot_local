@@ -1,0 +1,72 @@
+# DOSSIER slice-13 (wave 9, 13 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/13] faceBufferLength@u1746#0 | kind=var depth=3 refCount=10 | sim/game-loop.js
+DECL @4 (verified):
+var faceBufferLength=3*6+5;
+USES: refCount=10, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/13] gtag@u2868#0 | kind=function depth=5 refCount=3 | characters/mesh-pool.js
+DECL @164 (verified):
+if(L1){var Sk=document.createElement('script');Sk.async=true;Sk.crossOrigin='anonymous';Sk.src='https://www.googletagmanager.com/gtag/js?id=UA-87346685-5';function gtag(){dataLayer.push(arguments);}gtag('js',new Date());Sk.onload=function(){try{if(gtag!==undefined){gtag('config','G-4T2ZJXRRCK',{cookie_flags:'secure;samesite=none'});}}catch(e){if(!L1){console.log(e);}}};document.head.appendChild(Sk);}
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/13] clearAlpha@u0028#0 | kind=param depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @75 (verified):
+usvzFuAsEB.RenderPass=function(scene,aKmLbYuMC,overrideMaterial,clearColor,clearAlpha){usvzFuAsEB.Pass.call(this);this.scene=scene;this.aKmLbYuMC=aKmLbYuMC;this.overrideMaterial=overrideMaterial;this.clearColor=clearColor;this.clearAlpha=clearAlpha!==undefined?clearAlpha:0;this.clear=true;this.clearDepth=false;this.needsSwap=false;};
+USES: refCount=2, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/13] clearColor@u0028#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @64 (verified):
+usvzFuAsEB.RenderPass=function(scene,aKmLbYuMC,overrideMaterial,clearColor,clearAlpha){usvzFuAsEB.Pass.call(this);this.scene=scene;this.aKmLbYuMC=aKmLbYuMC;this.overrideMaterial=overrideMaterial;this.clearColor=clearColor;this.clearAlpha=clearAlpha!==undefined?clearAlpha:0;this.clear=true;this.clearDepth=false;this.needsSwap=false;};
+USES: refCount=1, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/13] overrideMaterial@u0028#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @47 (verified):
+usvzFuAsEB.RenderPass=function(scene,aKmLbYuMC,overrideMaterial,clearColor,clearAlpha){usvzFuAsEB.Pass.call(this);this.scene=scene;this.aKmLbYuMC=aKmLbYuMC;this.overrideMaterial=overrideMaterial;this.clearColor=clearColor;this.clearAlpha=clearAlpha!==undefined?clearAlpha:0;this.clear=true;this.clearDepth=false;this.needsSwap=false;};
+USES: refCount=1, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/13] Xv@u2575#0 | kind=var depth=3 refCount=1 | characters/rigs.js
+DECL @4 (verified):
+var Xv,Xw=new Array(0x5),Xx=new Array(0x5);
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/13] result@u0146#0 | kind=var depth=5 refCount=1 | world/modes.js
+DECL @141 (verified):
+var fpsCounter={startTime:0,frameNumber:0,getFPS:function(){this.frameNumber++;var d=new Date().getTime(),IUTkaCQgos=(d-this.startTime)/1000,result=Math.floor(this.frameNumber/IUTkaCQgos);if(IUTkaCQgos>1){this.startTime=new Date().getTime();this.frameNumber=0;}return result;}};
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/13] parameters@u0021#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @117 (verified):
+usvzFuAsEB.EffectComposer=function(qIySEZgti,renderTarget){this.qIySEZgti=qIySEZgti;if(renderTarget===undefined){var parameters={minFilter:usvzFuAsEB.LinearFilter,magFilter:usvzFuAsEB.LinearFilter,format:usvzFuAsEB.RGBAFormat,stencilBuffer:false};var size=qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarget=new usvzFuAsEB.WebGLRenderTarget(this._width*this._pixelRatio,this._height*this._pixelRatio,parameters);renderTarget.texture.name='EffectComposer.rt1';}else{this._pixelRatio=1;this._width=rend[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/13] ra@u0198#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var ra=r9,rb={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/13] Nu@u2152#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @12 (verified):
+var Nt=!![],Nu=!![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/13] W1@u2495#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var W1=0x0;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/13] a0K@u2785#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var a0K=![],a0L=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/13] a3o@u2605#1 | kind=param depth=7 refCount=0 | engine/webgl-renderer.js
+DECL @275 (verified):
+for(var tf=0x0;tf<Yb["length"];tf++){var H6=Yb[tf],Yc=Y9[H6];if(Yc["endsWith"]('webp')||Yc['endsWith']('png'))Y9[H6]=new usvzFuAsEB[("KibzRdopc")]({'map':Fg(Y9[H6],function(a3o){})});else{var Yc=Y9[H6];Y9[H6]=new usvzFuAsEB['KibzRdopc'](),Y9[H6]['map']=loadBasis(Yc,function(a3o){basisTexturesLoaded++;if(basisTexturesLoaded>=basisTexturesNeeded){}});}Y9[H6]["link"]=Yc;}
+USES: refCount=0, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-13: propose EVERY binding above.

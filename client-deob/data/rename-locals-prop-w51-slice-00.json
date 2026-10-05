@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "wave": 51,
+    "slice": "00",
+    "mergedFrom": [
+      "00a",
+      "00b"
+    ]
+  },
+  "proposals": [
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: challenge def text/progress/needed/reward, matches sibling challenge defs; SERVED: challenge def text/progress/needed/reward, matches sibling challenge defs (snippet-only twin).",
+      "name": "challengeHeadshot100",
+      "selector": "a6t@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: alias of challenge def feeding tracker title/progress render; SERVED: alias of challenge def feeding tracker title/progress render (snippet-only twin).",
+      "name": "trackedChallenge",
+      "selector": "a6u@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: max(progress/needed,.015); completion check drives checkmark branch; SERVED: max(progress/needed,.015); completion check drives checkmark branch (snippet-only twin).",
+      "name": "initialProgressRatio",
+      "selector": "a6v@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: shared card/toast Y offset, decremented per row; SERVED: shared card/toast Y offset, decremented per row (snippet-only twin).",
+      "name": "trackerYOffset",
+      "selector": "a6w@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: first-child title text, .text rewritten by tracker update; SERVED: first-child title text, .text rewritten by tracker update (snippet-only twin).",
+      "name": "trackerTitleLabel",
+      "selector": "a6x@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: right-aligned count label, text/position updated live; SERVED: right-aligned count label, text/position updated live (snippet-only twin).",
+      "name": "trackerProgressLabel",
+      "selector": "a6y@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: fill bar width/position scaled by progress ratio; SERVED: fill bar width/position scaled by progress ratio (snippet-only twin).",
+      "name": "trackerProgressFill",
+      "selector": "a6z@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: DOM img element loading promo/discordtext.png; SERVED: DOM img element loading promo/discordtext.png (snippet-only twin).",
+      "name": "discordPromoImgEl",
+      "selector": "a70@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: canvas image from promo img, sized into invite button; SERVED: canvas image from promo img, sized into invite button (snippet-only twin).",
+      "name": "discordPromoImage",
+      "selector": "a71@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Join-the-community text label below invite button; SERVED: Join-the-community text label below invite button (snippet-only twin).",
+      "name": "joinCommunityLabel",
+      "selector": "a72@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "low",
+      "evidence": "VM9: constant false gating free-gems ad UI visibility; SERVED: constant false gating free-gems ad UI visibility (snippet-only twin).",
+      "name": "rewardUiFlag",
+      "selector": "a73@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: true iff window.MobileApp; gates mobile ad container; SERVED: true iff window.MobileApp; gates mobile ad container (snippet-only twin).",
+      "name": "isMobileApp",
+      "selector": "a74@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Test Midroll button invoking window.callMidroll; SERVED: Test Midroll button invoking window.callMidroll (snippet-only twin).",
+      "name": "testMidrollButton",
+      "selector": "a75@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: slot reused: +10 label then setText coin balance; SERVED: slot reused: +10 label then setText coin balance (snippet-only twin).",
+      "name": "coinCountLabel",
+      "selector": "a76@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: date+random base36 nonce passed to requestRewardAd; SERVED: date+random base36 nonce passed to requestRewardAd (snippet-only twin).",
+      "name": "makeRewardAdToken",
+      "selector": "a77@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: sha256 digest awaited to verify ad reward token; SERVED: sha256 digest awaited to verify ad reward token (snippet-only twin).",
+      "name": "hashRewardToken",
+      "selector": "a78@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: inner group holding thumbnail plus title labels; SERVED: inner group holding thumbnail plus title labels (snippet-only twin).",
+      "name": "spotlightCardContent",
+      "selector": "a7A@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: thumbnail image anchoring all card label layout; SERVED: thumbnail image anchoring all card label layout (snippet-only twin).",
+      "name": "spotlightThumbnailImage",
+      "selector": "a7B@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: triangle play overlay added onto thumbnail; SERVED: triangle play overlay added onto thumbnail (snippet-only twin).",
+      "name": "spotlightPlayIcon",
+      "selector": "a7C@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Community Spotlight bold heading above thumbnail; SERVED: Community Spotlight bold heading above thumbnail (snippet-only twin).",
+      "name": "spotlightHeading",
+      "selector": "a7D@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: author name label; one far material read; SERVED: author name label; one far material read (snippet-only twin).",
+      "name": "spotlightAuthorLabel",
+      "selector": "a7E@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: date label with opacity derived from author; SERVED: date label with opacity derived from author (snippet-only twin).",
+      "name": "spotlightDateLabel",
+      "selector": "a7F@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: offset wrapper parenting loginPanel into tab scene; SERVED: offset wrapper parenting loginPanel into tab scene (snippet-only twin).",
+      "name": "loginPanelWrapper",
+      "selector": "a7G@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: shared Y offset across lobby menu buttons; SERVED: shared Y offset across lobby menu buttons (snippet-only twin).",
+      "name": "lobbyButtonOffsetY",
+      "selector": "a7H@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: red Leave button reused as Leave Match; SERVED: red Leave button reused as Leave Match (snippet-only twin).",
+      "name": "leaveButton",
+      "selector": "a7I@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: empty scene; overlay follows pause/resume state; SERVED: empty scene; overlay follows pause/resume state (snippet-only twin).",
+      "name": "pauseOverlayScene",
+      "selector": "a8L@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: Save Layout exit hiding editor and prerenders; SERVED: Save Layout exit hiding editor and prerenders (snippet-only twin).",
+      "name": "closeLayoutEditor",
+      "selector": "a8M@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: toggles settings DOM visibility from Edit Layout; SERVED: toggles settings DOM visibility from Edit Layout (snippet-only twin).",
+      "name": "toggleSettingsPanel",
+      "selector": "a8N@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: sets element/container visibility plus dim opacity; SERVED: sets element/container visibility plus dim opacity (snippet-only twin).",
+      "name": "setElementVisible",
+      "selector": "a8O@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: flag set by show/hide settings, guards preview; SERVED: flag set by show/hide settings, guards preview (snippet-only twin).",
+      "name": "isSettingsPanelOpen",
+      "selector": "a8P@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: reveals settings DOM panel at full opacity; SERVED: reveals settings DOM panel at full opacity (snippet-only twin).",
+      "name": "showSettingsPanel",
+      "selector": "a8Q@u2151#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "Both sides show dead function, refCount zero, never called (a8R@u2151#0).",
+      "selector": "a8R@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: header registry iterated by category updater; SERVED: header registry iterated by category updater (snippet-only twin).",
+      "name": "settingsCategoryHeaders",
+      "selector": "a8S@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: loops buttons toggling opacity by selected id; SERVED: loops buttons toggling opacity by selected id (snippet-only twin).",
+      "name": "updateCategoryButtons",
+      "selector": "a8T@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: resets settings scroll styles on show resize; SERVED: resets settings scroll styles on show resize (snippet-only twin).",
+      "name": "layoutCrosshairSettings",
+      "selector": "a8V@u2151#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "Both sides show dead binding never called anywhere (a8W@u2151#0).",
+      "selector": "a8W@u2151#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "Both sides show dead binding never called anywhere (a8X@u2151#0).",
+      "selector": "a8X@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: true on crosshair show false on hide; SERVED: true on crosshair show false on hide (snippet-only twin).",
+      "name": "crosshairSettingsVisible",
+      "selector": "a8Y@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: holds elem plus preview built by a9c; SERVED: holds elem plus preview built by a9c (snippet-only twin).",
+      "name": "crosshairSettingsPanel",
+      "selector": "a8Z@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: Playlists FFA text label opacity only; SERVED: Playlists FFA text label opacity only (snippet-only twin).",
+      "name": "playlistsLabel",
+      "selector": "a8a@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Log In button widget positioned top menu; SERVED: Log In button widget positioned top menu (snippet-only twin).",
+      "name": "loginButton",
+      "selector": "a8b@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: currency HUD root shown after login hidden logout; SERVED: currency HUD root shown after login hidden logout (snippet-only twin).",
+      "name": "accountHudGroup",
+      "selector": "a8c@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: coins icon plus count text positioned group; SERVED: coins icon plus count text positioned group (snippet-only twin).",
+      "name": "coinsDisplayGroup",
+      "selector": "a8d@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: parents coins group repositioned by gems width; SERVED: parents coins group repositioned by gems width (snippet-only twin).",
+      "name": "coinsRowContainer",
+      "selector": "a8e@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: gems count text updated in a8j setter; SERVED: gems count text updated in a8j setter (snippet-only twin).",
+      "name": "gemsCountText",
+      "selector": "a8g@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Sign in with Google oauth button toggled login; SERVED: Sign in with Google oauth button toggled login (snippet-only twin).",
+      "name": "googleSigninButton",
+      "selector": "a8h@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: posts token to signin2 from oauth callbacks; SERVED: posts token to signin2 from oauth callbacks (snippet-only twin).",
+      "name": "signinWithGoogleToken",
+      "selector": "a8i@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: sets coins gems texts and Kq balances; SERVED: sets coins gems texts and Kq balances (snippet-only twin).",
+      "name": "updateCurrencyDisplays",
+      "selector": "a8j@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: img element loaded with user pic cleared logout; SERVED: img element loaded with user pic cleared logout (snippet-only twin).",
+      "name": "profileAvatarImg",
+      "selector": "a8k@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: image sprite wrapping avatar img element; SERVED: image sprite wrapping avatar img element (snippet-only twin).",
+      "name": "profileAvatarSprite",
+      "selector": "a8l@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: username text set on login cleared logout; SERVED: username text set on login cleared logout (snippet-only twin).",
+      "name": "usernameText",
+      "selector": "a8m@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "low",
+      "evidence": "VM9: second profile text only cleared on logout; SERVED: second profile text only cleared on logout (snippet-only twin).",
+      "name": "userSubtitleText",
+      "selector": "a8n@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: current challenge list across daily weekly event; SERVED: current challenge list across daily weekly event (snippet-only twin).",
+      "name": "activeChallengeList",
+      "selector": "a8o@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: posts login refresh after payments claims equips; SERVED: posts login refresh after payments claims equips (snippet-only twin).",
+      "name": "refreshLoginState",
+      "selector": "a8s@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: gradient array cycled in menu animation; SERVED: gradient array cycled in menu animation (snippet-only twin).",
+      "name": "menuGradientStops",
+      "selector": "a8t@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: transparent rgba gradient stop color string; SERVED: transparent rgba gradient stop color string (snippet-only twin).",
+      "name": "gradientTransparent",
+      "selector": "a8u@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: faint white rgba gradient stop color; SERVED: faint white rgba gradient stop color (snippet-only twin).",
+      "name": "gradientFaintColor",
+      "selector": "a8v@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: prize wheel secondary empty text label; SERVED: prize wheel secondary empty text label (snippet-only twin).",
+      "name": "prizeWheelSubLabel",
+      "selector": "a9W@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Unlock Spin button posts spin when affordable; SERVED: Unlock Spin button posts spin when affordable (snippet-only twin).",
+      "name": "unlockSpinButton",
+      "selector": "a9X@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: hidden text style object for spin button; SERVED: hidden text style object for spin button (snippet-only twin).",
+      "name": "unlockSpinHiddenStyle",
+      "selector": "a9Y@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: container parenting spin button opacity toggled; SERVED: container parenting spin button opacity toggled (snippet-only twin).",
+      "name": "unlockSpinWrapper",
+      "selector": "a9Z@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: builds checkbox rows for static dot settings; SERVED: builds checkbox rows for static dot settings (snippet-only twin).",
+      "name": "addCrosshairToggle",
+      "selector": "a9a@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: adds touch scroll listeners to settings list; SERVED: adds touch scroll listeners to settings list (snippet-only twin).",
+      "name": "enableListTouchScroll",
+      "selector": "a9b@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: builds settings div returning elem preview pair; SERVED: builds settings div returning elem preview pair (snippet-only twin).",
+      "name": "buildCrosshairSettings",
+      "selector": "a9c@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: gates mobile layout edit row once; SERVED: gates mobile layout edit row once (snippet-only twin).",
+      "name": "mobileLayoutEnabled",
+      "selector": "a9d@u2151#0"
+    }
+  ]
+}

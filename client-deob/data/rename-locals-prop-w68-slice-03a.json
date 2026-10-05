@@ -1,0 +1,253 @@
+{
+ "meta": {
+  "wave": 68,
+  "slice": "03a"
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: onerror message string checked, prefixed, posted as error. SERVED: identical (snippet-only twin).",
+   "name": "errorText",
+   "selector": "a3p@u2156#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: three hash strings tested via indexOf loop. SERVED: identical (snippet-only twin).",
+   "name": "ignoredErrorIds",
+   "selector": "a3q@u2156#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: loop counter over ignored hash array. SERVED: identical (snippet-only twin).",
+   "name": "ignoredIdx",
+   "selector": "a3r@u2156#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: version/rnd/error payload sent via XHR. SERVED: identical (snippet-only twin).",
+   "name": "errorReport",
+   "selector": "a3t@u2156#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rnd/error object logged to console fallback. SERVED: identical (snippet-only twin).",
+   "name": "consoleErrorEntry",
+   "selector": "a3u@u2156#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: bufferView bytes sniffed via DataView, wrapped Blob. SERVED: identical (snippet-only twin).",
+   "name": "bufferViewData",
+   "selector": "a4k@u0020#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: resolved URI passed once to loader with path. SERVED: identical (snippet-only twin).",
+   "name": "sourceUri",
+   "selector": "a4k@u0020#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: texture gets flipY, name, format, sampler filters. SERVED: identical (snippet-only twin).",
+   "name": "loadedTexture",
+   "selector": "a4k@u0020#17"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cache get-or-create LineBasicMaterial then reuse. SERVED: identical (snippet-only twin).",
+   "name": "cachedLineMaterial",
+   "selector": "a4k@u0020#18"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: pbrMetallicRoughness dict drives color, metalness, roughness. SERVED: identical (snippet-only twin).",
+   "name": "pbrMetallicRoughness",
+   "selector": "a4k@u0020#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: draco-or-build geometry promise cached and pushed. SERVED: identical (snippet-only twin).",
+   "name": "geometryPromise",
+   "selector": "a4k@u0020#22"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: all-but-last results sliced as material list. SERVED: identical (snippet-only twin).",
+   "name": "meshMaterials",
+   "selector": "a4k@u0020#23"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: animation sampler for channel input/output accessors. SERVED: identical (snippet-only twin).",
+   "name": "channelSampler",
+   "selector": "a4k@u0020#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: morph weights length bounds copy loop. SERVED: identical (snippet-only twin).",
+   "name": "weightCount",
+   "selector": "a4k@u0020#25"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: type/index record stored in associations map. SERVED: identical (snippet-only twin).",
+   "name": "nodeAssociation",
+   "selector": "a4k@u0020#26"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: joints length bounds skin node dependency loop. SERVED: identical (snippet-only twin).",
+   "name": "jointsCount",
+   "selector": "a4k@u0020#27"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scene nodes length bounds child load loop. SERVED: identical (snippet-only twin).",
+   "name": "sceneNodeCount",
+   "selector": "a4k@u0020#30"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: plugin callback result registered by name. SERVED: identical (snippet-only twin).",
+   "name": "pluginInstance",
+   "selector": "a4l@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Uint8Array slice fed to meshopt decoder. SERVED: identical (snippet-only twin).",
+   "name": "sourceBytes",
+   "selector": "a4l@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: componentType mapped to typed array constructor. SERVED: identical (snippet-only twin).",
+   "name": "componentTypeCtor",
+   "selector": "a4l@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: for-in key copying extra uniforms over. SERVED: identical (snippet-only twin).",
+   "name": "uniformName",
+   "selector": "a4l@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cubic term t^3 in Hermite interpolation weights. SERVED: identical (snippet-only twin).",
+   "name": "tCubed",
+   "selector": "a4l@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first result set assigns position morph attributes. SERVED: identical (snippet-only twin).",
+   "name": "positionMorphs",
+   "selector": "a4l@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bufferView byteStride drives interleaved buffer math. SERVED: identical (snippet-only twin).",
+   "name": "byteStride",
+   "selector": "a4l@u0020#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: PNG color-type byte tested for alpha. SERVED: identical (snippet-only twin).",
+   "name": "pngColorType",
+   "selector": "a4l@u0020#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: promise resolve called with loaded texture. SERVED: identical (snippet-only twin).",
+   "name": "resolveTexture",
+   "selector": "a4l@u0020#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json samplers dict looked up per texture. SERVED: identical (snippet-only twin).",
+   "name": "samplers",
+   "selector": "a4l@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cache get-or-clone material with feature flags. SERVED: identical (snippet-only twin).",
+   "name": "clonedMaterial",
+   "selector": "a4l@u0020#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: factor array sets color and opacity. SERVED: identical (snippet-only twin).",
+   "name": "baseColorFactor",
+   "selector": "a4l@u0020#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: last result indexed as geometry per primitive. SERVED: identical (snippet-only twin).",
+   "name": "meshGeometries",
+   "selector": "a4l@u0020#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: channel target yields node id and collection. SERVED: identical (snippet-only twin).",
+   "name": "channelTarget",
+   "selector": "a4l@u0020#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: extensionsUsed entry keyed into extension constructors. SERVED: identical (snippet-only twin).",
+   "name": "extensionName",
+   "selector": "a4m@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: bufferView bytes passed to draco file decoder. SERVED: identical (snippet-only twin).",
+   "name": "dracoBufferView",
+   "selector": "a4m@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: scaled index marking interval end offset. SERVED: identical (snippet-only twin).",
+   "name": "intervalEnd",
+   "selector": "a4m@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: second result set assigns normal morph attributes. SERVED: identical (snippet-only twin).",
+   "name": "normalMorphs",
+   "selector": "a4m@u0020#3"
+  }
+ ]
+}

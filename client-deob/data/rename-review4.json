@@ -1,0 +1,1447 @@
+{
+ "batch": "review4",
+ "proposals": [
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3653 'var $=3;' is the sole declaration; src/sim/game-loop.js:3655 'if($ in{\"a\":\"b\"}){7;}' is the only use (always-false junk predicate, dead {7;} body). Acorn identifier scan over src/ and served/src/ (served/sim/game-loop.js:3719,3721) confirms exactly 2 identifier sites; the only string literals '$' (scope-crosshair.js price label, shaders.js regex anchor) are unrelated. Dead obfuscation filler with no role; the token itself is already a valid minimal identifier.",
+   "proposedName": "$",
+   "token": "$",
+   "verdict": "keep"
+  },
+  {
+   "token": "EZ",
+   "proposedName": "EZ",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "map-table.js:11 bare declarator in giant var-chain tail (...,quantizeWorldToGrid,EZ,F0,F1,...discSpriteTexture,...); exactly 1 word-occurrence in src/ and 1 in served/src (declaration only); never assigned, read, or called; sibling F0 is live (5 hits) but EZ itself has zero uses so no role can be inferred; non-numeric bare slot, keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/world/map-table.js:11: sole identifier occurrence, bare uninitialized declarator in chain quantizeWorldToGrid,EZ,F0,F1..F9,Fa,Fb,Fc,discSpriteTexture,...; whole EZ..Fc run decl-only dead (EZ/F1/F2/F3/F4/F9/Fb/Fc/Fe each 1 total word-hit). src/engine/shaders.js:9 F0 hits are GLSL string contents (F_Schlick_RoughnessDependent const vec3 F0) plus '#F00' color strings, not identifiers; same-line Fa hit is regex char-class [A-Fa-f], not identifier. Live neighbor discSpriteTexture (2 hits). Non-numeric slot with zero reads/writes: role unknowable, keep.",
+   "proposedName": "F0",
+   "token": "F0",
+   "verdict": "keep"
+  },
+  {
+   "token": "F1",
+   "proposedName": "F1",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/world/map-table.js:11 bare uninitialized identifier in var chain EZ,F0..F9,Fa,Fb,Fc; whole-src word count=1 (declaration only), served/src count=1, zero bracket-string refs; sibling run mostly dead (F2-F9,Fb,Fc,EZ all count=1; only F0=5 live). Dead slot, role unknowable. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/world/map-table.js:11: bare uninitialized slot in var-chain EZ,F0,F1,F2,F3,F4,F5,F6,F7,F8,F9,Fa,Fb,Fc (all 15 siblings likewise exactly 1 string-stripped identifier occurrence in src/, decl only, zero reads/writes/calls). No initializer, no use sites: role unknowable. Keep.",
+   "proposedName": "F2",
+   "token": "F2",
+   "verdict": "keep"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/world/map-table.js:11: bare declarator in giant var chain (EZ,F0..F9,Fa,Fb,Fc,...), no initializer. Token-aware scan (strings stripped): exactly 1 identifier occurrence in src/ and 1 in served/src/ (the declaration itself), zero reads/writes. Role unknowable; not a numeric slot so spare-slot precedent does not apply.",
+   "proposedName": "F3",
+   "token": "F3",
+   "verdict": "keep"
+  },
+  {
+   "token": "F4",
+   "proposedName": "F4",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/world/map-table.js:11 (u1709, kind=var): bare declarator at brace-depth 0 in the single top-level var statement starting 'var mapTable=', chain segment '...,quantizeWorldToGrid,EZ,F0,F1,F2,F3,F4,F5,...'. Token-aware whole-src scan (strings/comments stripped): exactly 1 identifier occurrence; served/src/world/map-table.js:13 likewise 1. Zero reads/writes. Sibling F-run hits in src/engine/shaders.js:9 are GLSL-string/regex contents (e.g. 'vec3 F0' Schlick param), not JS identifiers. Dead slot, role unknowable."
+  },
+  {
+   "token": "F5",
+   "proposedName": "F5",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/world/map-table.js:11 bare F5 in giant var chain among EZ,F0..F9,Fa,Fb,Fc between collision-grid helpers and discSpriteTexture; token-aware scan: 1 identifier hit in src, 1 in served/src (map-table.js:13); never assigned or read; bare (non-numeric) so spare-slot rule does not apply; role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/world/map-table.js:11: bare F6 in top-level var chain 'EZ,F0,F1,F2,F3,F4,F5,F6,F7,F8,F9,Fa,Fb,Fc' of collision/grid helpers; exactly 1 \\bF6\\b occurrence in src/ (this decl) and 1 in served/src (served/src/world/map-table.js:13, same decl); 0 quoted 'F6'/\"F6\" refs. Dead declaration, role unknowable -> keep.",
+   "proposedName": "F6",
+   "token": "F6",
+   "verdict": "keep"
+  },
+  {
+   "token": "F7",
+   "proposedName": "F7",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src identifier hit: bare declarator in src/world/map-table.js:11 tail chain '...,F6,F7,F8,...' (served/src mirror identical). Zero reads/writes/calls. Siblings F1-F6,F8,F9,Fb,Fc,EZ,Fe likewise count=1 dead bare slots in the same chain. Role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/world/map-table.js:11: sole word-occurrence is bare declarator F8 in the giant file-level var chain (...F6,F7,F8,F9...perfCounterMap={}); zero reads/writes anywhere in src/ or served/src/ (count=1 both). F-series siblings mostly equally dead (F1-F7,F9,Fb,Fc count=1; F0=5, Fa=2). No initializer, no use sites: role unknowable, keep.",
+   "proposedName": "F8",
+   "token": "F8",
+   "verdict": "keep"
+  },
+  {
+   "token": "F9",
+   "proposedName": "F9",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/world/map-table.js:11: bare declarator F9 in var-chain run EZ,F0..F7,F8,F9,Fa,Fb,Fc between quantizeWorldToGrid and discSpriteTexture; JS-aware whole-src scan total=1 (declaration only, zero uses; served/src/world/map-table.js:13 same). Siblings F0-F8,Fa-Fc all count=1 dead too. Bare (uninitialized) slot, role unknowable; spare-slot precedent covers numeric slots only."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/world/map-table.js:11 declares FD=0x0 as a numeric slot in the u1709 global var-chain tail: '...enableSimProfiling=![],FD=0x0,FE=0x0,perfFrameTimestamp=0x0,perfCounterMap={}' (same in served/world/map-table.js:13). Acorn scan of src/ and served/src/ finds exactly 1 identifier site (declaration, zero reads/writes) and zero 'FD' string-key refs. Dead single-use numeric slot; honest spare-slot name per adopted Q1->spareStateSlotQ1 / Q3->spareStateSlotQ3 precedent (rename-map.json entries). spareStateSlotFD collides with no rename-map value and no bare identifier in src/ or served/src/.",
+   "proposedName": "spareStateSlotFD",
+   "token": "FD",
+   "verdict": "propose"
+  },
+  {
+   "token": "FE",
+   "proposedName": "spareStateSlotFE",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "map-table.js:11 tail chain FD=0x0,FE=0x0,perfFrameTimestamp=0x0,perfCounterMap={}; exactly 1 occurrence in src/ and served/src (decl only, zero uses); dead single-use numeric slot; honest spare name per Q1->spareStateSlotQ1 precedent, no role invented; name clear of rename-map values and src identifiers."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/world/modes.js:11 (u1711): FI=Object[\"keys\"](perfCountersAlias) in var perfCountersAlias=perfCounterMap,FI=...,frameDeltaMs=0x0,...; sole identifier occurrence in src/ and served/src/, never read. Referent live: perfCounterMap 10 hits, perfCountersAlias 5 hits (fire.js simulate). Live analog modeOrder=Object[\"keys\"](modeDisplayNames) (u1713) used in network/handlers.js. Literal content-name (keys of perf-counter map); project renames dead/write-only vars descriptively (precedent global->globalScope dead window alias; Si write-only). Medium: dead snapshot, purpose unconfirmed.",
+   "proposedName": "perfCounterKeys",
+   "token": "FI",
+   "verdict": "propose"
+  },
+  {
+   "token": "Fa",
+   "proposedName": "Fa",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/world/map-table.js:11 bare uninitialized identifier, tail of F0..Fc chain; src word count=2 but shaders.js hit is inside regex literal /^\\\\#([A-Fa-f\\\\d]+)$/ char class (not identifier), so 1 true identifier occurrence (declaration only); served/src mirrors (2 raw, same regex); zero string refs. Dead slot. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/world/map-table.js:11: bare uninitialized slot in same EZ,F0..Fc var-chain as F2; sole string-stripped identifier occurrence in src/ (served/src mirror only other hit). Zero uses; neighbors discSpriteTexture/Fe also single-occurrence. Role unknowable. Keep.",
+   "proposedName": "Fb",
+   "token": "Fb",
+   "verdict": "keep"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/world/map-table.js:11: bare declarator in same var chain as F3 (...,Fa,Fb,Fc,discSpriteTexture,...), no initializer. Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses. Dead slot, role unknowable.",
+   "proposedName": "Fc",
+   "token": "Fc",
+   "verdict": "keep"
+  },
+  {
+   "token": "Fe",
+   "proposedName": "Fe",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/world/map-table.js:11 (u1709, kind=var): bare declarator '...,discSpriteTexture,Fe,collisionProxyObject,...' at depth 0 in same top-level var statement as F4. Token-aware whole-src scan: exactly 1 identifier occurrence; served/src/world/map-table.js:13 likewise 1. Zero uses. Dead slot, role unknowable."
+  },
+  {
+   "token": "G0",
+   "proposedName": "G0",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/core/constants.js:7 G0=0x0 beside G1=0x14; sole use src/sim/game-loop.js:3947 localPlayer['position']['x']=G0+0xa is overwritten by x=-0x17 two statements later in same sequence (y=G1 likewise overwritten by y=0x14); served/src parity (game-loop.js:4017); dead value, role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/core/constants.js:7: G1=0x14 (20) beside G0=0x0; sole use src/sim/game-loop.js:3947 top-level expr 'localPlayer[position][y]=G1,...' is a dead write chain where y=G1 is overwritten twice in the same statement (y=0x14 then y=0x32; final pos 0,50,0), as is x=G0+0xa. 2 \\bG1\\b hits in src/ (decl+dead use), same 2 in served/src; 0 quoted refs. Value duplicated by literal overwrite; role unknowable -> keep.",
+   "proposedName": "G1",
+   "token": "G1",
+   "verdict": "keep"
+  },
+  {
+   "token": "H3",
+   "proposedName": "smgBloomTuning",
+   "confidence": "high",
+   "verdict": "rename",
+   "evidence": "Decl src/sim/game-loop.js:3101 'var H3={}'; populated src/characters/weapon-attach.js:5 with 6 per-stance values (still + A8a6k73WsA2/rOXMPlgObCS/j0EB3IT4Ug/XQ9Y5sC5x/OUsPgMLOT); alias src/sim/game-loop.js:3103 'var H4=H3,bloomTuningKeys=getObjectKeys(H4)' (H5 already renamed bloomTuningKeys, H2 renamed getObjectKeys) with per-key transform loop at :3105. Same 6-key set as sibling smgSpreadTuning in weapon-attach.js (which adds crouchWalking/W91ldgW19d); declared adjacent to smg* tuning block (:3107-3129). All 8 src hits accounted for (1 decl + 1 alias + 6 writes). Name parallels smgSpreadTuning; zero collisions in src/ and rename-map targets."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3103 var H4=H3 + keys snapshot; :3105 fround loop H4[H6]=fround(H4[H6]) (4 hits total, all here). H4===H3 same-object alias; u1768 (characters/weapon-attach.js:5) writes 6 movement-state bloom values into H3 BEFORE the u1769 snapshot, so the loop does execute over 6 keys and mutates H3 in place. But H3 itself is write-only: only hits are decl :3101, the u1768 writes, and the H4 alias :3103 (3 total) with zero readers anywhere. Alias of a never-read table: no safe role name, keep.",
+   "proposedName": "H4",
+   "token": "H4",
+   "verdict": "keep"
+  },
+  {
+   "token": "Hw",
+   "proposedName": "loopIndexHw",
+   "confidence": "high",
+   "verdict": "rename",
+   "evidence": "Single global binding, not minified-local reuse: init Hw=0x0 in renderer state chain src/engine/webgl-renderer.js:87 plus inner for(var Hw=0x0;Hw<Ht['length'];Hw++) over Ht physics keys initializing weaponStatsTable[Hu[..]]['VehNrzoThC'][Ht[Hw]] src/world/weapons.js:9 (unit kind=if at top level, so var Hw is the same global; total=5, served/src matches). Outer loop over Hu weapon keys already uses loopIndexHv (Hv->loopIndexHv precedent: shared global loop counter; bare loopIndex exists so Hw suffix is load-bearing). Sole role is inner loop index."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3477 'var JV=tempTextureMap,...' (served:3543) is the sole identifier site in src/ and served/src/; zero reads/writes, zero 'JV' string refs. Pure dead alias of the live tempTextureMap object (populated at game-loop.js:3475). No independent role to name.",
+   "proposedName": "JV",
+   "token": "JV",
+   "verdict": "keep"
+  },
+  {
+   "token": "KF",
+   "proposedName": "KF",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "game-loop.js:3575 KF=![], (boolean false) between claimReward and isEditingMobileLayout in shop/lobby state var list; exactly 1 occurrence in src/ and served/src; dead flag, never read/written; boolean (not numeric) so spare-slot precedent does not apply; role unknowable, keep."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:3623 (u2106): LM=tintWorkCanvas[\"getContext\"]('2d') on same line as tintWorkContext=tintWorkCanvas['getContext']('2d'), so LM is the identical 2d-context object (getContext returns same object); sole identifier occurrence, never read; tintWorkContext live (5 hits). *Alias convention from 6+ live siblings (waterShaderAlias x3, gltfLightmapShaderAlias w/ assets-draco.js:19 uses, etc.); dead-alias rename precedent global->globalScope. Medium: dead dup, kept name documents the duplication.",
+   "proposedName": "tintWorkContextAlias",
+   "token": "LM",
+   "verdict": "propose"
+  },
+  {
+   "token": "MO",
+   "proposedName": "MO",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/ui/menu.js:7 bare uninitialized var between buildMatchEndBanner and leaderboardEntries; whole-src and served/src count=1 (declaration only), zero string refs. Dead menu-namespace slot, no initializer and no reads. Confirmed keep."
+  },
+  {
+   "confidence": "high",
+   "evidence": "Decl src/characters/animation.js:15 function Me(a3k): first statement is bare return (dead stub), but full body below is a menu-logo builder: loads promo/kruster.png, writes menuLogoContainer/menuLogoPrerender, canvas outline/fill, downloadCanvasImage. Both calls pass a UI toolkit: src/combat/scope-crosshair.js:19 Me(a3k) after menuLogoText setup, src/engine/webgl-renderer.js:71 Me(this['pkghYgdlX']). Intended role (prerender menu logo) unambiguous from body + call sites. No collision: name absent from src/ and rename-map.",
+   "proposedName": "prerenderMenuLogo",
+   "token": "Me",
+   "verdict": "rename"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/ui/menu.js:7: bare declarator between lobbyHomeScene and Mw in menu-scene var chain, no initializer. Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses. Dead slot, role unknowable.",
+   "proposedName": "Mv",
+   "token": "Mv",
+   "verdict": "keep"
+  },
+  {
+   "token": "Mw",
+   "proposedName": "Mw",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Decl src/ui/menu.js:7 bare in menu-scene var block (neighbors Mv,Mz both decl-only, 1 hit each). Only writes src/combat/scope-crosshair.js:19 inside createMenuSceneManager: Mw=a3m['scene'](), Mw['name']='f', Mw['ReDNKHkwk']=![] (hidden), immediately before classSelectScene ('g'); scene-letter map on that line runs a=menuSceneA,b=menuScene,c=deathScreenScene,d=menuTabBarScene,e=lobbyHomeScene,f=Mw,g=classSelectScene,h..n. Total 4 src hits (decl+3 writes), served/src parity 4 hits, zero reads: never shown, never consumed. Write-only dead scene slot; adjacency to lobby UI does not establish purpose."
+  },
+  {
+   "token": "Mz",
+   "proposedName": "Mz",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/ui/menu.js:7 bare Mz in var chain between podiumAvatarImage and matchEndTitleText; 1 identifier hit in src, 1 in served/src (menu.js:5); never assigned/read; bare non-numeric; role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/ui/menu.js:7: bare N7 in menu-scene var chain '...,menuTabScenes,N7,skinPreviewContainer,...'; exactly 1 \\bN7\\b occurrence in src/ (this decl) and 1 in served/src (served/src/ui/menu.js:5); 0 quoted refs. Never assigned/read -> keep.",
+   "proposedName": "N7",
+   "token": "N7",
+   "verdict": "keep"
+  },
+  {
+   "token": "NN",
+   "proposedName": "NN",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/engine/webgl-renderer.js:75 'var scheduleNextFrame=function(a3l){...},NN=0x3**0x4' (=81). Declaration only, zero uses. Numeric but value 81 suggests a specific (unknowable) meaning and it sits beside a function, not in a spare-slot chain, so no honest spare name applies; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3689 var matrixUpdateCount=0x0,matrixUpdateFrameId=0x1,NR=![]: sole occurrence (count=1 src+served), zero reads/writes, no string refs. Siblings are live (matrixUpdateCount=3, matrixUpdateFrameId=4) so NR is the dead boolean flag in an otherwise live matrix-update chain; intended flag meaning unknowable, keep.",
+   "proposedName": "NR",
+   "token": "NR",
+   "verdict": "keep"
+  },
+  {
+   "token": "NY",
+   "proposedName": "NY",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:87: var NY=eval('win'+\"dow\") window alias; whole-src scan total=1 (declaration only, zero uses; served/src/engine/webgl-renderer.js:87 same). Dead alias, role unknowable; sibling NZ (TextDecoder) also dead count=1."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 'NZ=new TextDecoder(\"utf-8\")' (served:87) is the sole identifier site in src/ and served/src/; zero uses, zero 'NZ' string refs. Dead decoder instance whose intended decode target is unknowable from the code.",
+   "proposedName": "NZ",
+   "token": "NZ",
+   "verdict": "keep"
+  },
+  {
+   "token": "Ne",
+   "proposedName": "Ne",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "menu.js:7 bare declarator between mobileRightShootButton and mobileFireHeld in menu-scene var list; exactly 1 occurrence in src/ and served/src (decl only); never assigned or read; role unknowable, keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3651 (u2152): var skipSplashTweens=!![],Nu=!![]; sole identifier occurrence in src/ and served/src/, never read. Sibling skipSplashTweens live (4 hits). Boolean dead flag: value known (!![]) but purpose unknowable; non-numeric so no spare-slot name per rules. Keep.",
+   "proposedName": "Nu",
+   "token": "Nu",
+   "verdict": "keep"
+  },
+  {
+   "token": "O0",
+   "proposedName": "O0",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:87 O0=new Geometry() in renderer state var block; whole-src and served/src count=1 (declaration only), zero string refs; live neighbors (inputPacketBuffer etc.) give no role. Dead instance. Confirmed keep."
+  },
+  {
+   "confidence": "high",
+   "evidence": "Decl src/engine/webgl-renderer.js:87 O8=new DataView(seedSyncPacketBuffer), sole identifier occurrence. Sits in exact Buffer/View pair pattern: inputPacketBuffer/inputPacketView, mobileInputPacketBuffer/mobileInputPacketView, shotPacketBuffer/shotPacketView, seedSyncPacketBuffer/O8, classSelectPacketBuffer/classSelectPacketView, skillRatingPacketBuffer/skillRatingPacketView. O8 is the seedSync view; name follows the live siblings exactly. No collision in src/ or rename-map.",
+   "proposedName": "seedSyncPacketView",
+   "token": "O8",
+   "verdict": "rename"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87: OD=new boundingBox() between cachedWorldProjection and resentInputHistory. Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero reads. Dead object instance; not a numeric slot so spare-slot precedent does not apply, and inventing a bounding-box role would be speculation.",
+   "proposedName": "OD",
+   "token": "OD",
+   "verdict": "keep"
+  },
+  {
+   "token": "OG",
+   "proposedName": "OG",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:87: 'OG=[]' in giant var chain between live outboundQueue (22 src hits, CustomList) and live enemyOutlineUniforms (6 src hits). Token-aware whole-src scan: exactly 1 identifier occurrence (the declaration); served/src/engine/webgl-renderer.js:87 likewise 1. Zero reads/writes/pushes. Dead array slot, role unknowable; non-numeric so spare-slot precedent does not apply."
+  },
+  {
+   "token": "OM",
+   "proposedName": "spareStateSlotOM",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/engine/webgl-renderer.js:87 OM=0x0 dead numeric slot in line-87 global var chain between resentInputFields=['val','x','y',...] array and ON='x' axis-key string (then yAxisKey='y', cachedPlayerRef=null, OP..OU=null); 1 identifier hit in src and 1 in served/src (:87); honest spare-slot name, no role invented; clear of rename-map values and bare src identifiers."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:87: ON='x' in chain 'OM=0x0,ON='x',yAxisKey='y''; string-stripped scan of all src/ finds exactly 1 bare ON (this decl) and the only other raw hit (src/combat/scope-crosshair.js:19) is inside string literal 'WORKING ON TCO ASST'; 0 quoted 'ON' refs; served mirrors (1 decl). Sibling OO was project-renamed yAxisKey (data/rename-map.json) and is used as rotation-axis key playerCameraRig[rotationKey][yAxisKey] (src/ui/widgets.js:185, src/sim/input.js:7,31). Value 'x' + immediate adjacency to yAxisKey='y' gives good (not certain) evidence ON is the dead x-axis counterpart -> propose xAxisKey.",
+   "proposedName": "xAxisKey",
+   "token": "ON",
+   "verdict": "propose"
+  },
+  {
+   "token": "OP",
+   "proposedName": "OP",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/engine/webgl-renderer.js:87 '...cachedPlayerRef=null,OP=null,OQ=null,...' null slot in renderer-state var block. Zero reads/writes. Dead null slot (sibling OQ likewise count=1); role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 OQ=null in renderer-state var block between OP and OR: sole occurrence (count=1), zero reads/writes, no bracket-string refs. Whole OP..OU null-pointer block equally dead (OP,OR,OS,OT,OU all count=1). Dead null slot, role unknowable, keep.",
+   "proposedName": "OQ",
+   "token": "OQ",
+   "verdict": "keep"
+  },
+  {
+   "token": "OR",
+   "proposedName": "OR",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:87: OR=null in dead null run OP,OQ,OR,OS,OT,OU (each count=1) between yAxisKey='y'/cachedPlayerRef and aimTargetEntity; whole-src total=1, zero uses (served/src same). Null slot, role unknowable; spare-slot precedent covers numeric slots only."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 declares OS=null inside the renderer-state null-slot run 'OP=null,OQ=null,OR=null,OS=null,OT=null,OU=null' (same in served:87). Exactly 1 identifier site in src/ and served/src/, zero refs of any kind. Dead null slot; not a numeric slot so the spareStateSlot precedent does not apply, and no role evidence exists.",
+   "proposedName": "OS",
+   "token": "OS",
+   "verdict": "keep"
+  },
+  {
+   "token": "OT",
+   "proposedName": "OT",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "webgl-renderer.js:87 OT=null between OS=null and OU=null in renderer object-slot run; exactly 1 occurrence in src/ and served/src; dead null slot, zero refs; non-numeric so spare-slot precedent does not apply; role unknowable, keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87: OU=null in renderer state var block between OT (also decl-only dead, 1 hit) and live aimTargetEntity (8 hits); sole identifier occurrence, zero reads/writes, zero bracket-string refs. Null slot with unknowable role; non-numeric so no spare-slot name per rules. Keep.",
+   "proposedName": "OU",
+   "token": "OU",
+   "verdict": "keep"
+  },
+  {
+   "token": "Od",
+   "proposedName": "Od",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:87 Od=new Vector2() directly beside live pointerCoords=new Vector2(); whole-src and served/src count=1 (declaration only), zero string refs. Dead duplicate vector temp, never referenced. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/engine/webgl-renderer.js:87 Of=new Vector3-class['gURkzCzeY'](), sole occurrence. One of 8+ identical scratch Vector3 temps (impactPointScratch live; scratchVectorOl/tempVector3/scratchVectorFm/scratchVectorFn renamed; Od,Oh,Oi,Oj,Ok,Om all dead single-occurrence). Zero uses; no distinguishing context vs dead siblings. Role unknowable. Keep.",
+   "proposedName": "Of",
+   "token": "Of",
+   "verdict": "keep"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87: Oh=new usvzFuAsEB[(\"gURkzCzeY\")]() (Vector3) between impactPointScratch and Oi in vector-temp chain. Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses. Dead vector temp; siblings Oi/Oj/Ok likewise single-decl temps, role unprovable.",
+   "proposedName": "Oh",
+   "token": "Oh",
+   "verdict": "keep"
+  },
+  {
+   "token": "Oi",
+   "proposedName": "Oi",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Two disjoint bindings, both dead: (1) src/engine/webgl-renderer.js:87 global 'Oi=new Vector3()' in scratch-vector run Oh,Oi,Oj,Ok (siblings Od/Oh/Oj/Ok/Om all decl-only; only Ol/Op renamed as scratch vectors) with zero identifier reads; (2) src/engine/assets-draco.js:9 function-scoped 'var Oi=new Uint8Array([0])' inside ktx2LoaderModule IIFE, sole Oi match on that line (decl-only local). served/src parity 2 hits. Contradictory types (Vector3 vs Uint8Array) make a global rename unsafe; neither binding has any use to name it by."
+  },
+  {
+   "token": "Oj",
+   "proposedName": "Oj",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:87 Oj=new Vector3() in scratch-vector run (...,Oh,Oi,Oj,Ok,scratchVectorOl,Om,...); 1 identifier hit in src and served/src; dead slot but Vector3 (non-numeric) so spare-slot rule does not apply; role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87: Ok=new Vector3('gURkzCzeY') in O-series scratch-vector chain (Of,impactPointScratch,Oh,Oi,Oj,Ok,scratchVectorOl,Om,tempVector3,...); exactly 1 \\bOk\\b hit in src/ and 1 in served/src (same decl); 0 quoted refs. Dead slot; non-numeric so Q1/Q3 spare-slot precedent does not apply; role unknowable -> keep.",
+   "proposedName": "Ok",
+   "token": "Ok",
+   "verdict": "keep"
+  },
+  {
+   "token": "Om",
+   "proposedName": "Om",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/engine/webgl-renderer.js:87 'Om=new ...[gURkzCzeY]()' (THREE Vector3) in scratch-vector chain Oi,Oj,Ok,scratchVectorOl,Om,tempVector3,scratchVectorFm. Zero uses; live siblings already renamed (scratchVectorOl/tempVector3/scratchVectorFm), Om is the dead leftover. Role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Global src/engine/webgl-renderer.js:87 P1=![] among render flags (isNightMap,P1..P7,forceRenderFrame,...): declaration-only, zero global uses (P2..P7 also count=1 excl. shaders.js). 8 of 9 total hits are an unrelated LOCAL shadow: src/engine/shaders.js:9 var P1=new Vector3() tube-geometry scratch (decl + 7 uses in calculatePositionOnCurve/vertex/normal math). Dead global flag slot + shadowed: global rename unsafe/meaningless, keep.",
+   "proposedName": "P1",
+   "token": "P1",
+   "verdict": "keep"
+  },
+  {
+   "token": "P2",
+   "proposedName": "P2",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Two irreconcilable bindings: dead global P2=![], in P1..P7 boolean run src/engine/webgl-renderer.js:87 (P3-P7 all count=1), plus live function-local var P2=new Vector3() inside function TorusKnotBufferGeometry src/engine/shaders.js:9 with 4 code uses (decl; calculatePositionOnCurve(u+0.01,..,P2) arg; sub/cross args); total=5, served/src identical. One global rename cannot cover both; prior abstain confirmed."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87 declares P3=![_] (false) inside the flag run 'P1=![],P2=![],P3=![],P4=![],...' (same in served:87). Exactly 1 identifier site in src/ and served/src/, zero refs. Dead boolean flag whose condition is unknowable; boolean (not numeric) so no spare-slot naming.",
+   "proposedName": "P3",
+   "token": "P3",
+   "verdict": "keep"
+  },
+  {
+   "token": "P4",
+   "proposedName": "P4",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "webgl-renderer.js:87 P4=![], (boolean false) in P1..P7 boolean run between P3 and P5; exactly 1 occurrence in src/ and served/src; dead flag, never read/written; boolean (not numeric) so spare-slot precedent does not apply; role unknowable, keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:87: P5=![], sole identifier occurrence; entire P1..P7 flag run decl-only dead at global scope (P1's 8 other hits are separate three.js tube-geometry locals in shaders.js:9; P4/P6/P7 each 1 total hit). Dead boolean flag, role unknowable; non-numeric so no spare-slot name per rules. Keep.",
+   "proposedName": "P5",
+   "token": "P5",
+   "verdict": "keep"
+  },
+  {
+   "token": "P6",
+   "proposedName": "P6",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:87 P6=false in P1..P7 boolean flag run (P1=9,P2=5 live; P3,P4,P5,P7 count=1 dead like P6); whole-src and served/src count=1, zero string refs. Dead flag, role unprovable. Confirmed keep (boolean, so numeric spare-slot precedent does not apply)."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/engine/webgl-renderer.js:87 P7=![], sole global occurrence; tail of dead boolean-flag chain P1..P7 between isNightMap and forceRenderFrame, all with zero global uses (src/engine/shaders.js:9 P1/P2 hits are shadowed locals inside tube-geometry builder, unrelated). Not a numeric slot so no spare-slot precedent applies. Role unknowable. Keep.",
+   "proposedName": "P7",
+   "token": "P7",
+   "verdict": "keep"
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:87: PO=0x0 dead numeric slot in P* chain (...,scratchPlaneHeight=0x0,PO=0x0,PP=0x0,PQ=0x0,loopIndexHv,...). Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses. Honest spare-slot name per Q1->spareStateSlotQ1/Q3 precedent in data/rename-map.json; no role invented. spareStateSlotPO is a valid camelCase identifier, absent from rename-map names and from src/ identifiers.",
+   "proposedName": "spareStateSlotPO",
+   "token": "PO",
+   "verdict": "propose"
+  },
+  {
+   "token": "PP",
+   "proposedName": "spareStateSlotPP",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/engine/webgl-renderer.js:87: 'PP=0x0' in top-level numeric run '...PO=0x0,PP=0x0,PQ=0x0,loopIndexHv=0x0,Hw=0x0,scratchCanvasElement=0x0,PS..PZ=0x0,Q0=0x0,spareStateSlotQ1=0x0,...'. Token-aware whole-src scan: exactly 1 identifier occurrence; served/src parity 1. Zero uses. Honest spare-slot name per Q1->spareStateSlotQ1 / Q3->spareStateSlotQ3 precedent (data/rename-map.json). No collision: 'spareStateSlotPP' absent from rename-map values (only Q1/Q3 variants exist) and 0 bare-identifier hits in src/."
+  },
+  {
+   "token": "PQ",
+   "proposedName": "spareStateSlotPQ",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/engine/webgl-renderer.js:87 PQ=0x0 dead numeric in end-of-chain numeric scratch run PO=PP=PQ=0x0,loopIndexHv,Hw,scratchCanvasElement,PS..PZ,Q0,spareStateSlotQ1,Q2,spareStateSlotQ3,Q4..Q7; 1 identifier hit in src and served/src; honest spare-slot name per Q1/Q3 precedent; clear of rename-map values and bare src identifiers."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:87: PS=0x0 dead numeric slot inside the long 0x0 state chain 'PO=0x0,PP=0x0,PQ=0x0,...,PS=0x0,PT=0x0,...,PZ=0x0,Q0=0x0,spareStateSlotQ1=0x0,Q2=0x0,spareStateSlotQ3=0x0,...,Q7=0x0,...'; exactly 1 \\bPS\\b hit in src/ and 1 in served/src (decl only); 0 quoted refs. Honest spare-slot name per project precedent Q1->spareStateSlotQ1, Q3->spareStateSlotQ3 (data/rename-map.json, applied in src/); no role invented.",
+   "proposedName": "spareStateSlotPS",
+   "token": "PS",
+   "verdict": "propose"
+  },
+  {
+   "token": "PT",
+   "proposedName": "spareStateSlotPT",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "Single whole-src hit: src/engine/webgl-renderer.js:87 'PT=0x0' in the PO..PZ,Q0..Q9 numeric renderer-state chain (siblings PO,PP,PQ,Q0,Q4,Q5,Q6 all count=1 dead). Zero uses. Follows applied precedent Q1->spareStateSlotQ1 and Q3->spareStateSlotQ3 on the same line; honest spare-slot name documenting the chain context, no invented role. Zero collisions in src/ and rename-map targets."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:87 PU=0x0 in numeric state chain PO..Q7: sole occurrence (count=1), zero reads/writes, no string refs, no local shadow. Chain context: PO,PP,PQ,PS,PT,PV,PW,PX,PY,PZ,Q0,Q4,Q5,Q6,Q7 all count=1 dead; Q1/Q3 in this same chain already renamed spareStateSlotQ1/spareStateSlotQ3 (data/rename-map.json, applied in src). Honest spare-slot name per precedent; no role invented.",
+   "proposedName": "spareStateSlotPU",
+   "token": "PU",
+   "verdict": "propose"
+  },
+  {
+   "token": "PV",
+   "proposedName": "spareStateSlotPV",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "Dead single-use numeric slot PV=0x0 in PO..PZ run src/engine/webgl-renderer.js:87 (PO,PP,PQ,PS,PT,PU,PW,PX,PY,PZ all count=1) between scratchCanvasElement and Q0, same var statement as adopted spareStateSlotQ1/spareStateSlotQ3; whole-src total=1, zero uses (served/src/engine/webgl-renderer.js:87 same). Honest spare name per Q1 precedent; no role invented."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:87 declares PW=0x0 in the renderer numeric scratch chain 'PO..PQ,loopIndexHv,Hw,scratchCanvasElement,PS..PV,PW=0x0,PX..PZ,Q0,spareStateSlotQ1,Q2,spareStateSlotQ3,Q4..' (same in served:87). Acorn scan finds exactly 1 identifier site in src/ and served/src/ (declaration, zero reads/writes) and zero 'PW' string refs. Dead single-use numeric slot; honest spare-slot name per adopted Q1/Q3 precedent in the same chain. spareStateSlotPW collides with no rename-map value and no bare identifier in src/ or served/src/.",
+   "proposedName": "spareStateSlotPW",
+   "token": "PW",
+   "verdict": "propose"
+  },
+  {
+   "token": "PX",
+   "proposedName": "spareStateSlotPX",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "webgl-renderer.js:87 numeric run PV=0x0,PW=0x0,PX=0x0,PY=0x0,PZ=0x0,Q0=0x0 adjacent to renamed spareStateSlotQ1/spareStateSlotQ3 in same statement; exactly 1 occurrence in src/ and served/src (decl only, zero uses); dead single-use numeric slot; honest spare name per in-block precedent, no role invented; name clear of rename-map values and src identifiers."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:87: PY=0x0, dead single-use numeric slot in chain ...PS=0x0,PT=0x0,PU=0x0,PV=0x0,PW=0x0,PX=0x0,PY=0x0,PZ=0x0,Q0=0x0,spareStateSlotQ1=0x0,Q2=0x0,spareStateSlotQ3=0x0,Q4..Q7=0x0...; sole identifier occurrence, zero reads/writes. Dead neighbors PS/PZ/Q0/Q2-global (1 global hit each; Q2's other hits are separate draco/shaders locals). Direct precedent Q1->spareStateSlotQ1 and Q3->spareStateSlotQ3 (same line, same evidence shape). Honest spare name, no invented role.",
+   "proposedName": "spareStateSlotPY",
+   "token": "PY",
+   "verdict": "propose"
+  },
+  {
+   "token": "PZ",
+   "proposedName": "spareStateSlotPZ",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/engine/webgl-renderer.js:87 PZ=0x0 numeric slot inside PO..Q7 zero-init chain (PO,PP,PQ,PS..PY,Q0,Q2(live=12),Q4 siblings verified; chain also holds in-map spareStateSlotQ1/Q3 renames Q1->spareStateSlotQ1, Q3->spareStateSlotQ3); whole-src and served/src count=1 (declaration only), zero string refs. Honest spare-slot name per Q1 precedent, no role invented. Collisions: absent from rename-map values, 0 bare hits in src/."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "Decl src/engine/webgl-renderer.js:87 Q0=0x0 numeric slot in chain PZ,Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7 between scratch state and headBobPhase(Q8)/animDeltaSec(Q9); sole occurrence, zero uses. Follows adopted precedent Q1->spareStateSlotQ1, Q3->spareStateSlotQ3 (rename-map). Honest spare-slot name, no invented role. No collision in src/ or rename-map.",
+   "proposedName": "spareStateSlotQ0",
+   "token": "Q0",
+   "verdict": "propose"
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:87: Q2=0x0 dead numeric slot in Q0..Q7 chain, flanked by already-renamed spareStateSlotQ1 and spareStateSlotQ3 (...,Q0=0x0,spareStateSlotQ1=0x0,Q2=0x0,spareStateSlotQ3=0x0,Q4=0x0,...). Global binding: 1 occurrence (declaration only), zero uses. Other 4 occurrences are a separate function-scoped const Q2=A2.byteLength in assets-draco.js:9 decode() (ZSTD size local) \u2014 same shadowing situation the Q1/Q3 rename-map entries explicitly accepted (their shaders.js locals noted, global rename adopted). Honest spare-slot name; spareStateSlotQ2 valid camelCase, absent from rename-map names and src/ identifiers, distinct from spareStateSlotPO.",
+   "proposedName": "spareStateSlotQ2",
+   "token": "Q2",
+   "verdict": "propose"
+  },
+  {
+   "token": "Q4",
+   "proposedName": "spareStateSlotQ4",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/engine/webgl-renderer.js:87: 'Q4=0x0' in Q0..Q7 numeric chain '...Q0=0x0,spareStateSlotQ1=0x0,Q2=0x0,spareStateSlotQ3=0x0,Q4=0x0,Q5=0x0,Q6=0x0,Q7=0x0,headBobPhase=0x0,...'. Token-aware whole-src scan: exactly 1 identifier occurrence; served/src parity 1. Zero uses. Honest spare-slot name per Q1/Q3 precedent in data/rename-map.json. No collision: 'spareStateSlotQ4' absent from rename-map values and 0 bare-identifier hits in src/."
+  },
+  {
+   "token": "Q5",
+   "proposedName": "spareStateSlotQ5",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/engine/webgl-renderer.js:87 Q5=0x0 dead numeric in Q0..Q7 run (...,spareStateSlotQ1,Q2,spareStateSlotQ3,Q4,Q5,Q6,Q7,headBobPhase,...) between Q4 and Q6, directly adjacent to spareStateSlotQ1/Q3 precedent renames; 1 identifier hit in src and served/src; honest spare-slot name; clear of rename-map values and bare src identifiers."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:87: Q6=0x0 dead numeric slot in Q0..Q7 sub-chain ('...,Q4=0x0,Q5=0x0,Q6=0x0,Q7=0x0,...') of the same PO..Q7 0x0 state chain as PS; exactly 1 \\bQ6\\b hit in src/ and 1 in served/src (decl only); 0 quoted refs. Honest spare-slot name per Q1/Q3 precedent; no role invented.",
+   "proposedName": "spareStateSlotQ6",
+   "token": "Q6",
+   "verdict": "propose"
+  },
+  {
+   "token": "Q7",
+   "proposedName": "spareStateSlotQ7",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "Single whole-src hit: src/engine/webgl-renderer.js:87 'Q7=0x0' between Q6 and headBobPhase in the Q0..Q9 numeric renderer-state chain (siblings Q0,Q4,Q5,Q6 all count=1 dead). Zero uses. Follows applied precedent Q1->spareStateSlotQ1 and Q3->spareStateSlotQ3 on the same line; honest spare-slot name documenting the chain context, no invented role. Zero collisions in src/ and rename-map targets."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/core/constants.js:13 Qd=0x4 between desyncStreakCount (live, 6 hits) and Qe (dead, 1 hit) in tick/desync/aim-timing var chain: sole occurrence (count=1), zero reads/writes, no string refs. Dead single-use numeric slot; nonzero default 4 but never read so threshold/role unknowable. Honest spare-slot name; no role invented.",
+   "proposedName": "spareStateSlotQd",
+   "token": "Qd",
+   "verdict": "propose"
+  },
+  {
+   "token": "Qe",
+   "proposedName": "spareTimingSlotQe",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "Dead single-use numeric slot Qe=0x0 in tick/timing chain src/core/constants.js:13 (var desyncStreakCount=0x0,Qd=0x4,Qe=0x0,lastTickIntervalUpdateMs=0x0,deathTimestampMs,...; sibling Qd count=1); whole-src total=1, zero uses (served/src/core/constants.js:11 same). Honest spare name documenting the timing-counter chain per Q1 precedent; no role invented."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3809 bare declarator 'RA' (no initializer) in 'var touchmoveKey=...,clientSettings,RA,settingsDebounceTimer=0x0' (served:3877). Exactly 1 identifier site in src/ and served/src/, zero refs. Dead uninitialized slot; settings-adjacent neighbors do not establish its role.",
+   "proposedName": "RA",
+   "token": "RA",
+   "verdict": "keep"
+  },
+  {
+   "token": "RN",
+   "proposedName": "clearRespawnAdBanners",
+   "confidence": "high",
+   "verdict": "rename",
+   "evidence": "game-loop.js:3851 function RN(){if(!isCrazyGames)return;try{crazyGamesBanner clearBanner 'banner-respawn-1' + 'banner-respawn-2'}}; exact structural clone of sibling clearHomeAdBanners (game-loop.js:~3849, rename-map anchor, same guard/try shape, home ids) and refreshRespawnBanners (rename-map anchor, next unit) inlines the identical two clearBanner calls; never called (exactly 1 occurrence src+served) but role is certain from body + established sibling pattern; name clear of rename-map values and src identifiers."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:3867 (u2296): RW=webglRenderer['capabilities']['maxTextures'] in var RW=...,RX=webglRenderer[\"getMaxAnisotropy\"](),rotationKey=...; sole identifier occurrence, never read; sibling RX also decl-only dead (1 hit). Literal name from RHS property (renderer capabilities maxTextures); project renames never-read/write-only captures descriptively (precedent Ri->textShadowCss never-read; Si write-only). Medium: dead capture, consumer unknown.",
+   "proposedName": "rendererMaxTextures",
+   "token": "RW",
+   "verdict": "propose"
+  },
+  {
+   "token": "RX",
+   "proposedName": "RX",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:3867 RX=webglRenderer[getMaxAnisotropy]() write-only capture beside equally dead RW=maxTextures (count=1); whole-src and served/src count=1, zero string refs. Value never read; not a numeric slot (call result), so spare-slot precedent does not apply. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Write-only accumulator, never read: src/sim/game-loop.js:3939 var SJ=0x98967f; src/combat/fire.js:11 gameLoop does SJ+=frameDeltaMs*1.5/0x3e8 every frame; src/sim/game-loop.js:3941 SJ=0x0 sits in dead code after return in showElimBanner. No read site in src/. Growth-from-~10M pattern suggests abandoned timer/counter; role unknowable. Keep.",
+   "proposedName": "SJ",
+   "token": "SJ",
+   "verdict": "keep"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:95: SX=new usvzFuAsEB[(\"gURkzCzeY\")]() (Vector3) heading SX/SY/SZ trio. Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses. Dead object slot; not numeric so spare-slot precedent does not apply; role unknowable.",
+   "proposedName": "SX",
+   "token": "SX",
+   "verdict": "keep"
+  },
+  {
+   "token": "SY",
+   "proposedName": "SY",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:95: 'SY=new Vector3()' between SX and SZ in 'var SX=...,SY=...,SZ=...,T0,defaultFov=0x5a'. SX likewise dead (1 hit); SZ is live (src/network/handlers.js:45 death-handler 'SZ[y]+=1.5') but SY itself has exactly 1 identifier occurrence in src and served/src (declaration only), zero uses. A sibling's liveness does not transfer a role to a zero-use vector. Dead slot, role unknowable."
+  },
+  {
+   "token": "SZ",
+   "proposedName": "SZ",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:95 SZ=new Vector3() beside SX,SY (both fully unused); sole use src/network/handlers.js:45 SZ['y']+=1.5 in 'gB4Cncy3f4' local-death handler (deathCount++, openDeathScreen tween); never read anywhere (2 identifier hits total src+served); write-only Vector3, role unknowable; non-numeric so no spare name."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3905: 'class Se{#pf;#pfi=0x2a;static #psf;static #psfwi=0x2a;}' empty stub (private fields only, no methods); exactly 1 \\bSe\\b hit in src/ and 1 in served/src (served/src/sim/game-loop.js:3975, same decl); 0 quoted refs, zero instantiations/uses -> keep.",
+   "proposedName": "Se",
+   "token": "Se",
+   "verdict": "keep"
+  },
+  {
+   "token": "Sl",
+   "proposedName": "Sl",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: bare declarator in src/sim/game-loop.js:3911 audio var-statement 'var activeDirectionalAudioCount,directionalAudioScanCount,injectedScriptElement,Sl,Sm,touchstartKey=...,forceAudioSync=...' (sibling Sm likewise count=1). Zero uses; role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3911 bare declarator Sm in audio var statement (activeDirectionalAudioCount,directionalAudioScanCount,injectedScriptElement,Sl,Sm,touchstartKey,...): sole occurrence (count=1), never assigned/read. Sibling Sl also dead (1); activeDirectionalAudioCount live (3). No initializer, zero uses: role unknowable, keep.",
+   "proposedName": "Sm",
+   "token": "Sm",
+   "verdict": "keep"
+  },
+  {
+   "token": "T0",
+   "proposedName": "T0",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:95: bare declarator T0 in var SX,SY,SZ Vector3s + T0 + defaultFov statement; whole-src total=1, zero uses (served/src/engine/webgl-renderer.js:95 same). Bare slot, role unknowable; spare-slot precedent covers numeric slots only."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:3983 'var TC=![],TD=0x0,mousemoveKey=...' (served:4053): dead false-flag heading a pointer/mouse event-key var statement. Exactly 1 identifier site in src/ and served/src/, zero refs. Boolean flag with no observable role.",
+   "proposedName": "TC",
+   "token": "TC",
+   "verdict": "keep"
+  },
+  {
+   "token": "TD",
+   "proposedName": "spareStateSlotTD",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "game-loop.js:3983 var TC=![],TD=0x0,mousemoveKey=decodeByteString(...),pointermoveKey=... pointer/mouse event-key var statement; exactly 1 occurrence in src/ and served/src (decl only, zero uses); dead single-use numeric slot; honest spare name per Q1 precedent, no role invented; name clear of rename-map values and src identifiers."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:4005 (u2405): TX={'start':markerMeshTemplate[\"position\"]['clone'](),'end':markerMeshTemplate[\"position\"][\"clone\"]()}; 4007 (u2406): TX[\"end\"]['y']-=debugMarkerLength; never read elsewhere (2 src hits = decl + write). Debug-marker context: markerMeshTemplate live (15 hits), debugMarkerLength live (4 hits), showDebugMarker gate at 4004. Value is a start/end segment for the debug marker; dead-but-clear descriptive rename per project policy (Ri/Si precedent). Medium: never consumed, exact purpose unconfirmed.",
+   "proposedName": "debugMarkerSegment",
+   "token": "TX",
+   "verdict": "propose"
+  },
+  {
+   "token": "Tb",
+   "proposedName": "Tb",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:103 Tb=new Object3D() beside darkMenuBackdropApplied=true; whole-src and served/src count=1 (declaration only), zero string refs. Dead generic node, menu-camera neighbors establish no role. Confirmed keep."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "Decl src/engine/webgl-renderer.js:109 var Te=0x1; single write src/engine/shaders.js:163 inside resizeGameRenderer: Te=0x1/Math.max(camera.aspect,0.000001); zero reads. Value meaning (reciprocal of clamped aspect ratio) is explicit in the expression, but intended consumer is gone so use-role is uncertain. No collision in src/ or rename-map.",
+   "proposedName": "inverseAspectScale",
+   "token": "Te",
+   "verdict": "propose"
+  },
+  {
+   "confidence": "low",
+   "evidence": "Single global binding (files concatenate into one scope, no import/export) with three unrelated roles across 7 identifier occurrences (same count in src/ and served/src/): (1) src/engine/webgl-renderer.js:109 Tg=window[\"innerWidth\"] viewport width feeding bloomOverlayCamera ortho bounds; (2) webgl-renderer.js:113 reassigned Tg=8.46 pillar-width const for death-cam side-bar Mesh positioning (Tg/5.3, Tg/4.5); (3) src/combat/scope-crosshair.js:19 Tg-=0x5 challenge-card x-offset tweak. Multi-role reuse cannot take one precise name; keep.",
+   "proposedName": "Tg",
+   "token": "Tg",
+   "verdict": "keep"
+  },
+  {
+   "token": "UH",
+   "proposedName": "UH",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4093 (u2462): bare 'var UH,UI,maxGrassInstances=0x0'. UH: exactly 1 identifier occurrence in src and served/src/game-loop.js:4163, zero uses. Neighbor UI is live (7 src hits incl. src/engine/shaders.js:143) and maxGrassInstances is grass-adjacent, but neither establishes UH's role. Dead slot, role unknowable."
+  },
+  {
+   "token": "UI",
+   "proposedName": "UI",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4093 bare 'var UH,UI,maxGrassInstances=0x0' is the only identifier position (1 hit src, 1 served at game-loop.js:4163); remaining raw matches are string contents; never assigned/read; role unknowable."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/engine/webgl-renderer.js:153: UT=[] beside UU=[]; src/sim/game-loop.js:4099: 'th==0?(UV='#FFF',UW=UT):(UV=\"#FFF022\",UW=UU)' then inner loop over digits 0-9 builds outlined glyph canvases (fillStyle=UV, applyImageOutline) into UW[loopIndex] -- but the loop body opens with 'continue;', so the fill is unreachable and UT stays []; zero UT[/UU[ reads anywhere; src+served each have exactly 2 \\bUT\\b hits (decl+alias). Dead, but intended role (white digit-glyph sprite cache; UU is the yellow #FFF022 mirror) is well evidenced -> propose whiteDigitSpriteCache.",
+   "proposedName": "whiteDigitSpriteCache",
+   "token": "UT",
+   "verdict": "propose"
+  },
+  {
+   "token": "UU",
+   "proposedName": "UU",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Two whole-src hits: decl src/engine/webgl-renderer.js:153 'UT=[],UU=[]' and sole use src/sim/game-loop.js:4099 where UW=UU is paired with '#FFF022' in the digit-canvas loop whose body begins with 'continue;', making the fill unreachable; UU is never read anywhere (sibling UT identically 2 hits, never read). Always-empty dead array; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9 UZ=[] in effect-pool var list: sole occurrence (count=1), zero reads/writes. Live neighbors effectMeshPool (13 hits)/effectInstancePools (7) vs dead V-series siblings (V0,V4,Va all 1). Dead leftover pool slot; which pool it would hold is unknowable (array slot, not numeric: spare-slot precedent does not apply), keep.",
+   "proposedName": "UZ",
+   "token": "UZ",
+   "verdict": "keep"
+  },
+  {
+   "token": "V0",
+   "proposedName": "V0",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9: V0=[] in dead pool-slot run UZ,V0,V4..Vm,Vp..Vy (each count=1) interleaved with live neighbors physicsActiveMeshIds/effectMeshPool/entityList/effectInstancePools/effectUpdateCallbacks; whole-src total=1, zero uses (served/src/combat/effects.js:9 same). Which pool it would hold is unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9 declares V4=[] in the effect-pool var chain '...,V0=[],physicsActiveMeshIds=[],effectMeshPool=[],entityList=[],V4=[],V5=[],...' (served:9). Exactly 1 identifier site in src/ and served/src/, zero reads/writes; live neighbors effectMeshPool/effectInstancePools are used but no V-series slot is. Dead leftover pool slot; array (not numeric) so no spare-slot naming, and which pool it would hold is unknowable.",
+   "proposedName": "V4",
+   "token": "V4",
+   "verdict": "keep"
+  },
+  {
+   "token": "V5",
+   "proposedName": "V5",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "effects.js:9 V-pool chain V0=[],physicsActiveMeshIds=[],effectMeshPool=[],entityList=[],V4=[],V5=[],V6=[],...; exactly 1 occurrence in src/ and served/src (decl only); dead empty-array slot among live pools; non-numeric so spare-slot precedent does not apply; role unknowable, keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9: V6=[] in pool-array var group UZ,V0,effectMeshPool,V4..V9,Va..Vm,effectInstancePools,effectUpdateCallbacks,Vp..Vy,effectNameList; sole identifier occurrence, zero reads/writes. ~30 V-slot siblings all decl-only dead (V0/V4/V5/V7-V9/Va-Vm/Vp-Vy/UZ each 1 hit) while live neighbors effectMeshPool (13)/effectInstancePools (7)/effectUpdateCallbacks (3) are used. Array slot, role unknowable; non-numeric so no spare-slot name per rules. Keep.",
+   "proposedName": "V6",
+   "token": "V6",
+   "verdict": "keep"
+  },
+  {
+   "token": "V7",
+   "proposedName": "V7",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9 V7=[] in V-pool var chain (UZ,V0,V4..Vm,Vp..Vy); whole-src and served/src count=1, zero string refs; live neighbors effectMeshPool/effectInstancePools/effectUpdateCallbacks contrast with dead V run (V0,V4-V9,Va,Vm,Vp,Vw all count=1). Dead leftover pool slot, array (not numeric) so spare-slot precedent does not apply. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/combat/effects.js:9 V8=[] in pool-array var group; sole occurrence in src/, zero reads/writes. One of ~25 dead [] siblings (V0,V4-V9,Va-Vm,Vp-Vy,UZ all single-occurrence) vs live neighbors effectMeshPool/effectInstancePools/effectUpdateCallbacks. Not a numeric slot; role unknowable. Keep.",
+   "proposedName": "V8",
+   "token": "V8",
+   "verdict": "keep"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9: V9=[] in V-pool var chain (...,V8=[],V9=[],Va=[],...). Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero reads/writes, unlike live neighbors effectMeshPool/effectInstancePools/effectUpdateCallbacks. Dead array slot; not numeric so spare-slot precedent does not apply; role unknowable.",
+   "proposedName": "V9",
+   "token": "V9",
+   "verdict": "keep"
+  },
+  {
+   "token": "VN",
+   "proposedName": "VN",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4115 (u2483): lone 'var VN=0x50,movementXKey=decodeByteString(...)'. Exactly 1 identifier occurrence in src and served/src (4185), zero uses. Standalone unit with no spare-chain context (unlike the PP/Q4 numeric run), and the 0x50 init looks meaningful, so a spare-slot name is not justified. Dead slot, role unknowable."
+  },
+  {
+   "token": "Va",
+   "proposedName": "Va",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9 Va=[] dead array in pool-array var group (...,V8,V9,Va,Vb,Vc,...) beside live effectMeshPool/effectInstancePools/effectUpdateCallbacks; 1 identifier hit in src and served/src; array (non-numeric) so spare-slot rule does not apply; role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9: Vb=[] in dead V-series pool group ('...,V9=[],Va=[],Vb=[],Vc...', also Vm/Vp-Vy) between live effectMeshPool/entityList and effectInstancePools; exactly 1 \\bVb\\b hit in src/ and 1 in served/src (decl only); 0 quoted refs. Dead leftover pool slot, role unknowable; non-numeric so spare-slot precedent N/A -> keep.",
+   "proposedName": "Vb",
+   "token": "Vb",
+   "verdict": "keep"
+  },
+  {
+   "token": "Vc",
+   "proposedName": "Vc",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/combat/effects.js:9 'Vc=[]' in the pool-array var group (V0,V4-V9,Va-Vm mostly count=1 dead) beside live renamed neighbors effectMeshPool/effectInstancePools/effectUpdateCallbacks/effectNameList. Zero uses; dead leftover pool slot, role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9 Vd=[] in pool-array var group (...Vb,Vc,Vd,Ve,...): sole occurrence (count=1), zero reads/writes. Same dead-pool context as UZ (live effectMeshPool/effectInstancePools neighbors, dead V siblings). Role unknowable, keep.",
+   "proposedName": "Vd",
+   "token": "Vd",
+   "verdict": "keep"
+  },
+  {
+   "token": "Ve",
+   "proposedName": "Ve",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9: Ve=[] in same dead pool-slot run as V0 (V4,Va,Vm,Vp,Vt,Vy all count=1); whole-src total=1, zero uses (served/src/combat/effects.js:9 same). Array slot, role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9 declares Vf=[] in the same V-pool chain ('...Vd=[],Ve=[],Vf=[],Vg...', served:9). Exactly 1 identifier site in src/ and served/src/, zero refs of any kind. Dead leftover pool slot with unknowable role.",
+   "proposedName": "Vf",
+   "token": "Vf",
+   "verdict": "keep"
+  },
+  {
+   "token": "Vg",
+   "proposedName": "Vg",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "effects.js:9 V-pool chain ...,Ve=[],Vf=[],Vg=[],Vh=[],Vi=,... between live effectInstancePools/effectUpdateCallbacks neighbors; exactly 1 occurrence in src/ and served/src (decl only); dead empty-array slot; non-numeric so spare-slot precedent does not apply; role unknowable, keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9: Vh=[] in same pool-array var group as V6; sole identifier occurrence, zero reads/writes/calls/string-refs. Sibling V-slots (V0,V4-V9,Va-Vm,Vp-Vy,UZ) all decl-only dead while effectMeshPool (13)/effectInstancePools (7)/effectUpdateCallbacks (3) live. Array slot, role unknowable; non-numeric so no spare-slot name per rules. Keep.",
+   "proposedName": "Vh",
+   "token": "Vh",
+   "verdict": "keep"
+  },
+  {
+   "token": "Vi",
+   "proposedName": "Vi",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9 Vi=[] in same V-pool chain as V7; whole-src and served/src count=1, zero string refs, zero reads/writes. Dead leftover pool slot. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/combat/effects.js:9 Vj=[]; sole occurrence, zero uses; same dead [] pool-chain as V8 (live neighbors effectMeshPool x13/effectInstancePools x7/effectUpdateCallbacks x3). No distinguishing context. Keep.",
+   "proposedName": "Vj",
+   "token": "Vj",
+   "verdict": "keep"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9: Vk=[] in V-pool var chain (...,Vj=[],Vk=[],Vl=[],...). Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses. Dead leftover pool slot; not numeric; role unknowable.",
+   "proposedName": "Vk",
+   "token": "Vk",
+   "verdict": "keep"
+  },
+  {
+   "token": "Vl",
+   "proposedName": "Vl",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9: 'Vl=[]' inside dead-pool run '...,UZ=[],V0=[],...,Va=[]..Vm=[],...' (V0,Va likewise 1 hit each) interleaved with live effectMeshPool/entityList/effectInstancePools/effectUpdateCallbacks. Exactly 1 identifier occurrence in src and served/src (effects.js:9), zero reads/writes. Dead leftover pool slot, role unknowable; array slot, not covered by numeric spare-slot precedent."
+  },
+  {
+   "token": "Vm",
+   "proposedName": "Vm",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9 Vm=[] dead array in same pool group (...,Vl,Vm,effectInstancePools,...); 1 identifier hit in src and served/src; all sibling V-series empties likewise single-occurrence; non-numeric; role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9: Vp=[] in dead pool group ('...,effectUpdateCallbacks=[],Vp=[],Vq=[],Vr...') beside live effectInstancePools(used)/effectUpdateCallbacks; exactly 1 \\bVp\\b hit in src/ and 1 in served/src (decl only); 0 quoted refs. Same dead-leftover situation as Vb -> keep.",
+   "proposedName": "Vp",
+   "token": "Vp",
+   "verdict": "keep"
+  },
+  {
+   "token": "Vq",
+   "proposedName": "Vq",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/combat/effects.js:9 'Vq=[]' in the same pool-array var group as Vc, beside live renamed neighbors effectMeshPool/effectInstancePools/effectUpdateCallbacks/effectNameList. Zero uses; dead leftover pool slot, role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9 Vr=[] in pool-array var group (...Vp,Vq,Vr,Vs,...): sole occurrence (count=1), zero reads/writes/calls/string-refs. Same dead-pool context as UZ/Vd. Role unknowable, keep.",
+   "proposedName": "Vr",
+   "token": "Vr",
+   "verdict": "keep"
+  },
+  {
+   "token": "Vs",
+   "proposedName": "Vs",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9: Vs=[] in same dead pool-slot run (between Vr and Vt, just before effectNameList); whole-src total=1, zero uses (served/src/combat/effects.js:9 same). Array slot, role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9 declares Vt=[] in the second V-pool run ('...Vs=[],Vt=[],Vu...', served:9). Exactly 1 identifier site in src/ and served/src/, zero refs. Dead leftover pool slot with unknowable role.",
+   "proposedName": "Vt",
+   "token": "Vt",
+   "verdict": "keep"
+  },
+  {
+   "token": "Vu",
+   "proposedName": "Vu",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "effects.js:9 V-pool chain ...,Vt=[],Vu=[],Vv=[],Vw=,...; exactly 1 occurrence in src/ and served/src (decl only); dead empty-array slot; non-numeric so spare-slot precedent does not apply; role unknowable, keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9: Vv=[] in same pool-array var group as V6/Vh; sole identifier occurrence, zero reads/writes. Dead V-slot family (V0,V4-V9,Va-Vm,Vp-Vy,UZ each 1 hit) vs live effectMeshPool (13)/effectInstancePools (7)/effectUpdateCallbacks (3). Array slot, role unknowable; non-numeric so no spare-slot name per rules. Keep.",
+   "proposedName": "Vv",
+   "token": "Vv",
+   "verdict": "keep"
+  },
+  {
+   "token": "Vw",
+   "proposedName": "Vw",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/effects.js:9 Vw=[] in same V-pool chain; whole-src and served/src count=1, zero string refs, zero reads/writes. Dead leftover pool slot. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/combat/effects.js:9 Vx=[]; sole occurrence, zero uses; tail of same dead V-pool chain (...,Vv,Vw,Vx,Vy) before effectNameList. No distinguishing context. Keep.",
+   "proposedName": "Vx",
+   "token": "Vx",
+   "verdict": "keep"
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/combat/effects.js:9: Vy=[] near tail of V-pool var chain (...,Vx=[],Vy=[],effectNameList=...). Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses. Dead array slot; not numeric; role unknowable.",
+   "proposedName": "Vy",
+   "token": "Vy",
+   "verdict": "keep"
+  },
+  {
+   "token": "W1",
+   "proposedName": "W1",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4129 (u2495): standalone 'var W1=0x0' between setCrosshairSpread expr and 'function playSoundEffect' (ex-W2 per rename-map; W0/W2 have 0 src hits). Exactly 1 identifier occurrence in src and served/src (4199), zero uses. Lone slot with no chain context to document, so spare-slot precedent does not apply. Dead slot, role unknowable."
+  },
+  {
+   "token": "W3",
+   "proposedName": "W3",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4133 var W3=true; sole write src/network/handlers.js:69 W3=false inside 'D522Kq7l5n' end-of-match callback (partyController opacity tweens, gameplayStop); never read (2 hits total src+served); write-only flag, no read site proves role."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/core/constants.js:25: W8=getNowMs() in snapshot-timing chain ('...,W8=getNowMs(),entitySnapshotAgeMs=0x0,initialSnapshotTickRate=...'); exactly 1 \\bW8\\b hit in src/ and 1 in served/src (served/src/core/constants.js:23); 0 quoted refs, never read. Timestamp-initialized (not a plain 0x0 slot), so spare-slot precedent does not apply; role unknowable -> keep.",
+   "proposedName": "W8",
+   "token": "W8",
+   "verdict": "keep"
+  },
+  {
+   "token": "WD",
+   "proposedName": "WD",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/sim/input.js:11 'var WD=![],keyBindingTable=[],liveKeyState=...' boolean-true slot. Zero reads; role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/core/constants.js:27 Wj=entityInterpIntervalMs in interp-timing chain: sole word-occurrence (count=1), never read. Source entityInterpIntervalMs is live (3 hits). Dead numeric-alias copy (snapshot never consumed); not a literal spare slot, and intended use unknowable, keep.",
+   "proposedName": "Wj",
+   "token": "Wj",
+   "verdict": "keep"
+  },
+  {
+   "token": "X8",
+   "proposedName": "X8",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4199: X8=new uiToolkit[(\"vFgdYWoMXeQ\")]() Vector2 among aim vars (playerPitchAngle=0x0,X8=..,lastDeathLookInputMs); whole-src total=1, zero reads/writes (served/src/sim/game-loop.js:4271 same). Dead object slot; chain proximity is not enough to claim an aim role, and spare-slot precedent covers numeric slots only."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:4235 standalone 'var XD;' (u2579, served:4309) between attachAwpScope and the activeMixerList/pendingEntityQueue block. Exactly 1 identifier site in src/ and served/src/, zero refs. Dead bare slot with no role evidence.",
+   "proposedName": "XD",
+   "token": "XD",
+   "verdict": "keep"
+  },
+  {
+   "token": "XG",
+   "proposedName": "spareStateSlotXG",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "game-loop.js:4237 var activeMixerList=[],XG=0x0,XH=0x0,pendingEntityQueue=[]; (sibling XH likewise single-use, not in this slice); exactly 1 occurrence in src/ and served/src (decl only, zero uses); dead single-use numeric slot; honest spare name per Q1 precedent, no role invented; name clear of rename-map values and src identifiers."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:4237 (u2581): XH=0x0, dead single-use numeric slot in chain var activeMixerList=[],XG=0x0,XH=0x0,pendingEntityQueue=[]; sole identifier occurrence, zero reads/writes. Sibling XG also decl-only dead (1 hit); neighbors live (activeMixerList 19, pendingEntityQueue 6 with push-loop at 4239). Precedent Q1->spareStateSlotQ1 / Q3->spareStateSlotQ3 (dead numeric slots, same spareStateSlot+TOKEN pattern). Honest spare name, no invented role.",
+   "proposedName": "spareStateSlotXH",
+   "token": "XH",
+   "verdict": "propose"
+  },
+  {
+   "token": "XY",
+   "proposedName": "XY",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:179 function XY(a3o){var aAB=...;return;return a3o[traverse](...)} executed body is immediate bare return; material-normalization code (metalness=0,roughness=1,map encoding/anisotropy) after it is unreachable; 6 live call sites (finalizePlayerRig:187, weapon ar/awp loaders:191,193, loadMap in assets-draco.js:19) all invoke a no-op; served/src mirrors (7 total = 1 decl + 6 calls). Renaming to the unreachable intent would misrepresent executed behavior. Confirmed keep as disabled stub."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/characters/rigs.js:5 var Xp=![], sole occurrence; module-level flag beside Xq (also single-occurrence) and cloneSkinnedRig. Zero reads/writes. No enabling/disabling context. Keep.",
+   "proposedName": "Xp",
+   "token": "Xp",
+   "verdict": "keep"
+  },
+  {
+   "token": "Xq",
+   "proposedName": "Xq",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/characters/rigs.js:5: Xq=new usvzFuAsEB[(\"QTOKQmNlEY\")]() (Object3D per THREE error-string mapping) between Xp and cloneSkinnedRig. Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses. Dead object slot; role unknowable."
+  },
+  {
+   "token": "Xv",
+   "proposedName": "Xv",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Decl src/characters/rigs.js:7 'var Xv,characterModelCache=new Array(0x5),...'. Single write src/engine/webgl-renderer.js:187 finalizePlayerRig: 'Xv=a3o,characterModelCache[a3p]=a3o,...' mirroring the cached model. Total 2 src hits, served/src parity 2, zero reads. Dead alias, role unknowable."
+  },
+  {
+   "token": "Y1",
+   "proposedName": "spareWeaponOffsetVector",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/engine/webgl-renderer.js:181 Y1=new Vector3() beside weaponOffsetVector/adsWeaponOffset/weaponInspectOffset; src/combat/fire.js:11 Y1['CNFryyAhIm'](0x0) zeroes it every frame (CNFryyAhIm=setScalar per Vector3.prototype def in src/engine/shaders.js:9) then Y1.getComponent(a3U) is added into the hip->ADS weapon-position lerp, so it always contributes 0; 3 identifier hits total (decl + 2 on fire.js:11), served/src parity; structural role certain but intended purpose unknown, hence honest spare name; clear of rename-map values and bare src identifiers."
+  },
+  {
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:4329: 'function Z6(){var aB4=stringDecoderAlias;loadMap(\"neon\",0x0);}' (served/src/sim/game-loop.js:4403 identical modulo string-table); 'neon' is a real map in mapPool (src/world/modes.js:15). Exactly 1 \\bZ6\\b hit in src/ and 1 in served/src (decl only, never called); 0 quoted refs. Dead but role fully determined by body -> rename loadNeonMap.",
+   "proposedName": "loadNeonMap",
+   "token": "Z6",
+   "verdict": "rename"
+  },
+  {
+   "token": "ZD",
+   "proposedName": "ZD",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/sim/game-loop.js:4365 'var ZD=document[createElement](canvas),skyboxTexture=null'. Declaration only, never read; dead canvas var, role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:4395 bare declarator ZS in var panoramaTextureMap,sandPanoramaTexture,mountainsPanoramaTexture,ZS: sole occurrence (count=1), never assigned/read. Panorama siblings live (3/4/7 hits). No initializer, zero uses: role unknowable, keep.",
+   "proposedName": "ZS",
+   "token": "ZS",
+   "verdict": "keep"
+  },
+  {
+   "token": "ZU",
+   "proposedName": "ZU",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4397: var ZU=loadTextureWithRetry(\"textures/mountains.webp\",cb) where the callback assigns mountainsPanoramaTexture and calls buildPanoramaMesh; ZU itself never read (whole-src total=1; served/src/sim/game-loop.js:4471 same). Sibling sand.webp load discards the return entirely, confirming the return is meaningless; write-only dead handle."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:219 'var ZV=new QTOKQmNlEY()' (Object3D, served:219) beside muzzleMountA/B; sole use is src/combat/fire.js:11 (served:11) 'ZV[position][multiplyScalar](a00)' in the ADS-zoom FOV block where a00=0.2 (renderer.js:221 'var a00=0.2'). OpiuFvBcQd==multiplyScalar proven at shaders.js:9 ('_proto.OpiuFvBcQd=function(scalar){this.x*=scalar;...}'). ZV is never added to any scene, never positioned, never read: exactly 2 identifier sites total, zero 'ZV' string refs, and multiplyScalar on its default (0,0,0) position is a mathematical no-op. Dead/decoy node; intended role unknowable.",
+   "proposedName": "ZV",
+   "token": "ZV",
+   "verdict": "keep"
+  },
+  {
+   "token": "Zb",
+   "proposedName": "tileImage2x2ToScratchCanvas",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "game-loop.js:4337 function Zb(a3o): takes holder a3o['image'], creates double-width/height canvas in global scratchCanvasElement, drawImage 4 quadrants (2x2 tile), writes back a3o['image']=scratchCanvasElement; never called (exactly 1 occurrence src+served) so no caller context, but body role is unambiguous; medium since no sibling/call pattern anchors the exact name; name clear of rename-map values and src identifiers."
+  },
+  {
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:4343 (u2662): function Ze(a3o) creates canvas, sets width=height=Math.max(floorToPowerOfTwo(w),floorToPowerOfTwo(h)), draws source scaled via drawImage, returns canvas: unambiguously clones a canvas into a square max-POT canvas. Sole occurrence in src/ and served/src/ (never called), zero 'Ze' string refs. Sibling cloneCanvasResized(a3o,a3p) at 4340 does the non-square POT variant; floorToPowerOfTwo defined at 4346. Role fully determined by body; dead-but-clear descriptive rename per project policy (global/Ri/Si precedents).",
+   "proposedName": "cloneCanvasToSquarePot",
+   "token": "Ze",
+   "verdict": "rename"
+  },
+  {
+   "token": "Zh",
+   "proposedName": "replaceImageWithResizedClone",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/sim/game-loop.js:4349 function Zh(a3o){a3p=cloneCanvasResized(a3o[image],true),a3q=a3o[image][src];a3o[image]=a3p,a3p[src]=a3q} fully legible: swaps obj.image for a resized canvas clone preserving src; cloneCanvasResized (game-loop.js:4339) copies to new canvas, flooring dims to power-of-two when flag truthy. Never called (whole-src and served/src count=1, zero string refs) so intended use unknown, but observed behavior is exact; name describes behavior without inventing object type. Collisions: absent from rename-map values, 0 bare hits in src/."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "Decl src/sim/game-loop.js:4357 function Zw clones arguments[0] then tintSpriteImage.apply(null,args); never called (sole occurrence). tintSpriteImage (src/characters/animation.js:21) tints a sprite image (grayscale+hsl fill), so Zw is a non-mutating tint wrapper; but with zero call sites the intended subject is uncertain. No collision in src/ or rename-map.",
+   "proposedName": "tintClonedSprite",
+   "token": "Zw",
+   "verdict": "propose"
+  },
+  {
+   "token": "Zx",
+   "proposedName": "Zx",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/characters/animation.js:23: function Zx(a3o,a3p,a3q) builds a striped black/white linear-gradient overlay (addColorStop loop over a3q bands) composited onto a sprite canvas at alpha a3p. Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (the declaration), zero calls. Dead code; renaming uncalled code has no value and its intended sprite role is unprovable."
+  },
+  {
+   "token": "a00",
+   "proposedName": "a00",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Decl src/engine/webgl-renderer.js:221 'a00=0.2' beside weaponViewOffsets ADS table. Sole use src/combat/fire.js:11 gameLoop ADS-zoom FOV branch: ZV['position']['OpiuFvBcQd'](a00) (multiplyScalar). But ZV has only 2 src hits (decl as empty Scene at webgl-renderer.js:219 + this line): never positioned, never added, so the multiply applies to the zero vector \u2014 a silent no-op. Effectively dead constant; intended role unknowable, served/src parity 2 and 2."
+  },
+  {
+   "token": "a01",
+   "proposedName": "a01",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Token shared by TWO bindings: dead global a01=new Vector3() at src/engine/webgl-renderer.js:221 (1 hit) plus shadowing function-local 'var a01=-rayDir.dot(_segDir)' in Ray.distanceSqToSegment at src/engine/shaders.js:9 (13 hits, ray-segment coefficient alongside b0/b1/c/det); 14 hits total in src and served/src; a global rename is unsafe (would conflate distinct roles); per-binding rename deferred per a3D/a3J/a3v precedent."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:221: a02=new Vector3 in weapon-offset chain 'var a00=0.2,a01=new Vector3(),a02=new Vector3(),a03=1.2,a04='',weaponViewOffsets=...'; exactly 1 \\ba02\\b hit in src/ and 1 in served/src (decl only); 0 quoted refs. Sibling global a01 is likewise dead (the 13 extra a01 hits in src/engine/shaders.js:9 are a shadowed vendor-local 'var a01' in ray/segment-distance code); only a00 is live (scalar use src/combat/fire.js:11). Dead Vector3 slot, non-numeric, role unknowable -> keep.",
+   "proposedName": "a02",
+   "token": "a02",
+   "verdict": "keep"
+  },
+  {
+   "token": "a03",
+   "proposedName": "a03",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/engine/webgl-renderer.js:221 'a03=1.2' in weapon-offset var chain 'a00=0.2,a01/a02 Vector3s,a03=1.2,a04='',weaponViewOffsets={...}'. Zero uses; undecided siblings and a specific-looking value 1.2 with no spare precedent in this mixed-type chain, so no honest spare name; role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/engine/webgl-renderer.js:221 var a04='' in weapon-offset chain (a00=0.2,a01,a02,a03=1.2,a04='',weaponViewOffsets...): sole occurrence (count=1), never read. Siblings mixed (a01 live 14 hits; a02,a03 dead 1). Dead empty-string slot (not numeric: spare-slot precedent does not apply); role unknowable, keep.",
+   "proposedName": "a04",
+   "token": "a04",
+   "verdict": "keep"
+  },
+  {
+   "token": "a0K",
+   "proposedName": "a0K",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4437: var a0K=![],showHitboxMeshes=![]; a0K whole-src total=1, zero uses (served/src/sim/game-loop.js:4511 same) while neighbor showHitboxMeshes is live. Dead boolean slot, specific role unknowable."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:4441 'var hitboxMeshList=[],a0N={};', :4443 'a0N[a]=0', :4445 'var mapFinalizeTween=a0N,...' (served:4515-4519): exactly 3 identifier sites, no other use of the a0N name. The OBJECT is live only through its mapFinalizeTween alias (tweenProperty(mapFinalizeTween,'b'...) and ('a'...) at shaders.js:175). a0N is a dead pre-alias name with no independent role.",
+   "proposedName": "a0N",
+   "token": "a0N",
+   "verdict": "keep"
+  },
+  {
+   "token": "a0V",
+   "proposedName": "a0V",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "game-loop.js:4447 var selfPlayerId=-0x1,gameWebSocket,a0V=null,lastEntitySnapshotMs=getNowMs(),...; exactly 1 occurrence in src/ and served/src (decl only); dead null slot, zero reads/writes; non-numeric so spare-slot precedent does not apply; role unknowable, keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:4447 (u2792): a0W=new Array(0xa) in var selfPlayerId=-0x1,gameWebSocket,a0V=null,lastEntitySnapshotMs=getNowMs(),a0W=new Array(0xa),a0X=0x0; sole identifier occurrence, zero uses. Siblings a0V/a0X also single-use dead (1 hit each); neighbors live (selfPlayerId 15). Fixed-10 array, contents and role unknowable; non-numeric so no spare-slot name per rules. Keep.",
+   "proposedName": "a0W",
+   "token": "a0W",
+   "verdict": "keep"
+  },
+  {
+   "token": "a0X",
+   "proposedName": "a0X",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:4447 a0X=0x0 bare counter in mixed netcode block (selfPlayerId,gameWebSocket,a0V=null,lastEntitySnapshotMs,a0W=new Array(10)); whole-src and served/src count=1, zero string refs. No spare-slot precedent in this block (unlike PZ/Q-chain); possible leftover a0W index but zero reads make any role unprovable. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/sim/game-loop.js:4425 var a0m=[], sole occurrence; bare array beside entityUpdateReceived/syncedSeededRng. Zero uses. Role unknowable. Keep.",
+   "proposedName": "a0m",
+   "token": "a0m",
+   "verdict": "keep"
+  },
+  {
+   "token": "a0y",
+   "proposedName": "a0y",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/webgl-renderer.js:225: a0y=[] among per-player map arrays (...,playerSkinsMap=[],a0y=[],playerScoreMap=[],...). Token-aware scan: 1 identifier occurrence in src/ and 1 in served/src/ (declaration only), zero uses, while sibling player*Map arrays are read. Dead array slot; the player attribute it would have held is unknowable; not numeric so spare-slot precedent does not apply."
+  },
+  {
+   "token": "a1P",
+   "proposedName": "a1P",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Decl src/engine/webgl-renderer.js:231 'a1P=[]'. All 5 other hits sit in unreachable code in src/network/handlers.js:25 gunshot-impact handler after 'forceMatrixUpdate=![];return;': a debug reconciliation loop over entries {XGOhKbWOF,pos,old} vs packet ns/x/y/z with console.log('Right'/'WRONG') and splice. Zero pushes anywhere; served/src parity 6. Dead debug queue in dead code."
+  },
+  {
+   "token": "a25",
+   "proposedName": "a25",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/combat/fire.js:9 a25=new Vector3() among fire/timing globals (priorFrameTime, animDeltaClock, inputTickCounter, ...); 1 identifier hit in src and served/src; dead Vector3 slot (non-numeric); role unknowable."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:4503: a2W=0x0 dead numeric slot in frame-time smoothing chain 'var frameTimeHistoryReady=!![],a2W=0x0,frameTimeHistory=new Array(0x3c),frameTimeCursor=0x0,fireTickPhase=0x0,...'; exactly 1 \\ba2W\\b hit in src/ and 1 in served/src (served/src/sim/game-loop.js:4577); 0 quoted refs. Honest spare-slot name documenting the chain context per Q1/Q3 precedent; no role invented.",
+   "proposedName": "spareFrameTimeSlotA2W",
+   "token": "a2W",
+   "verdict": "propose"
+  },
+  {
+   "token": "a2c",
+   "proposedName": "a2c",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: bare declarator in src/sim/game-loop.js:4487 'var splitOriginalMeshList=...,splitMeshPool=...,a2c,splitChildIndex'. Zero uses; role unknowable; keep."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:4495 a2m=0x0 in frame-stall/perf-instrumentation var chain (frameCounter,a2m,a2n=0x78,prevFrameStamp,parseAccumMs,...): sole occurrence (count=1), zero reads/writes, no string refs. Chain context: siblings live (frameCounter 7, activeCamera 50, frameBeginStamp 6, parseAccumMs 5; neighbor a2n also dead 1). Dead single-use numeric slot; honest spare name documents perf-chain context, no role invented.",
+   "proposedName": "sparePerfSlotA2m",
+   "token": "a2m",
+   "verdict": "propose"
+  },
+  {
+   "token": "a2n",
+   "proposedName": "sparePerfSlotA2n",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "Dead single-use numeric slot a2n=0x78 in frame/perf-instrumentation chain src/sim/game-loop.js:4495 (var frameCounter,a2m=0x0,a2n=0x78,prevFrameStamp,frameBeginStamp,..,frameStallReportCount,frameStallMinMs=0x64,..; sibling a2m count=1); whole-src total=1, zero uses (served/src/sim/game-loop.js:4569 same). Honest spare name documenting the perf chain per Q1 precedent; no role invented."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Live and self-describing: declared src/sim/game-loop.js:3073 'var faceBufferLength=3*6+5' (=23, served:3119); all 11 identifier sites use it as the per-face float stride ('index=face*faceBufferLength' in raycast.js:5, fire.js:5 x4, renderer.js:63 x4, game-loop.js:3099). Name exactly matches observed role; no rename needed.",
+   "proposedName": "faceBufferLength",
+   "token": "faceBufferLength",
+   "verdict": "keep"
+  },
+  {
+   "token": "q0",
+   "proposedName": "q0",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "bootstrap.js:13 var isHeadless=![],q0=![], (boolean false); exactly 1 identifier occurrence (decl only, zero uses); the 3 other src q0 hits are GLSL 'vec3 q0' inside \\n-escaped JS string literals in shaders.js:9 perturbNormal2Arb shader source, not identifiers; dead bool flag; role unknowable, keep."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:173 (u0170): qI=depthGrayscaleShader in shader-alias chain (waterShaderAlias, waterfallShaderAlias, auroraShaderAlias, skyboxWaterShaderAlias, defaultMapGeometryShaderAlias, gltfLightmapShaderAlias); sole identifier occurrence, never read; sibling qO=nullShader likewise decl-only dead. Referent live: depthGrayscaleShader defined shaders.js:43 (x2 hits). *Alias convention exact (live gltfLightmapShaderAlias used assets-draco.js:19 x2); dead-alias rename precedent global->globalScope (zero use sites, adopted medium). Medium: dead, purpose unconfirmed.",
+   "proposedName": "depthGrayscaleShaderAlias",
+   "token": "qI",
+   "verdict": "propose"
+  },
+  {
+   "token": "qO",
+   "proposedName": "qO",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:179 var qO=nullShader dead alias; whole-src and served/src count=1 (declaration only), zero string refs; sibling alias qQ=swayingFoliageShader equally dead (count=1), so no live-alias precedent. Dead alias. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/sim/game-loop.js:181 var qQ=swayingFoliageShader; sole occurrence, zero uses: dead alias. Target itself is live (src/engine/shaders.js:51 decl, src/sim/game-loop.js:179 use). Nothing to rename to. Keep.",
+   "proposedName": "qQ",
+   "token": "qQ",
+   "verdict": "keep"
+  },
+  {
+   "token": "r0",
+   "proposedName": "r0",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:191: var r0=transparentCutoutShader (qZ already renamed per rename-map) \u2014 sole top-level occurrence; transparentCutoutShader itself was reset to {} at game-loop.js:189 and has no consuming reads (only def sites shaders.js:57, decl :189, alias :191). Dead alias of dead value. Other r0 hits are a separate function-local dxtToRgb565 channel var in shaders.js:5 plus GLSL #define text inside shader strings. Keep."
+  },
+  {
+   "token": "r9",
+   "proposedName": "r9",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Decl src/sim/game-loop.js:199 'var animatedGrassPresetAlias=animatedGrassPreset,r9={}' in shader-preset run (tireTracksMultiplyShader/animatedGrassPreset/bushShader/rd neighbors; sibling rd live with 10 hits incl. shaders.js:75). Alias 'var ra=r9' at game-loop.js:201 is decl-only (1 hit). Fully defined at src/engine/shaders.js:71 (animated=false, doubleSided=false, vertex+fragment AO-map shader) but zero identifier reads in src (6 hits = decl+alias+4 writes) and served/src parity 6. Defined-but-never-consumed dead preset."
+  },
+  {
+   "token": "rK",
+   "proposedName": "rK",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:269 var rK=grungeOverlayShaderDef dead alias beside paintDiffuseUniform; 1 identifier hit in src and served/src (game-loop.js:291); zero uses; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:297: 'var rU=kuwaharaShader,...' dead alias of live kuwaharaShader; exactly 1 \\brU\\b hit in src/ and 1 in served/src (served/src/sim/game-loop.js:319, same decl); 0 quoted refs, zero uses -> keep.",
+   "proposedName": "rU",
+   "token": "rU",
+   "verdict": "keep"
+  },
+  {
+   "token": "ra",
+   "proposedName": "ra",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Single whole-src hit: src/sim/game-loop.js:201 'var ra=r9,bushShader={}' alias of r9 (r9 itself unrenamed). Zero uses of ra; dead alias, role unknowable; keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "7 identifier hits, all decl/write, zero reads: decl src/sim/game-loop.js:203 var bushShaderAlias=bushShader,rd={}; dead alias :205 var re=rd (re identifier count=1; other 7 re word-hits are strings 're','re'+'load','re-decode'); 5 config writes src/engine/shaders.js u0201 rd['animated']/doubleSided/transparent/vertex/fragment (noise-scrolled map shader with addR fresnel term). Family consumption goes through aliases: live sibling bushShaderAlias is read 2x in src/engine/assets-draco.js:19 (fragmentShader/vertexShader), while rd's alias re is never read. 3 extra rd word-hits are strings ('b@st@rd','ret@rd','rd' ordinal). Write-only shader-def, intended consumer unknown: naming would invent a role, keep.",
+   "proposedName": "rd",
+   "token": "rd",
+   "verdict": "keep"
+  },
+  {
+   "token": "re",
+   "proposedName": "re",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:205: var re=rd in shader-alias chain (...,bushShaderAlias=bushShader,rd={}; re=rd,trimSheet2Preset={}; ...); re whole-src total=1, zero uses (served/src/sim/game-loop.js:227 same). Dead alias of live rd (rd total=7 incl. shaders.js:75 animated/doubleSided/transparent/vertex/fragment config); rd itself unrenamed, so alias has no stable role to name."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:207 'var rk=multiTextureBlendShaderDef,...' (served:229) is the sole identifier site in src/ and served/src/; zero uses, zero 'rk' string refs. Pure dead alias of the shader-def object.",
+   "proposedName": "rk",
+   "token": "rk",
+   "verdict": "keep"
+  },
+  {
+   "token": "rm",
+   "proposedName": "rm",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "game-loop.js:209 var rm=alphaCutoutShaderDef,circularBlurDiffuseUniform={}; exactly 1 occurrence in src/ and served/src (decl only); dead alias, never read; role unknowable beyond its initializer, keep."
+  },
+  {
+   "confidence": "medium",
+   "evidence": "Global binding src/sim/game-loop.js:315 (u0270): var s0=radialGlowShader \u2014 decl-only, never read; referent live (radialGlowShader shaders.js:101 x3). Other ~28 hits are separate bindings: shaders.js:9 function-scope locals (three.js segment-distance var s0,s1... and Catmull-Rom var s0=(1+wP)...) plus GLSL string contents (shaders.js:9 s0 vec4 decls; shaders.js:97 paint-shader string). Binding-aware rename proven by s1->diffuseTextureUniform on this same line (global renamed, shaders.js s1 locals untouched). *Alias convention + dead-alias precedent global->globalScope. Medium: multi-binding token, global binding only.",
+   "proposedName": "radialGlowShaderAlias",
+   "token": "s0",
+   "verdict": "propose"
+  },
+  {
+   "token": "sG",
+   "proposedName": "sG",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:417 var sG=normalDebugShaderDef dead alias; whole-src and served/src count=1, zero string refs; sibling sI=fresnelRefractionShaderDef equally dead (count=1); live Alias-style values in map (pickupBoxShaderAlias etc.) belong to other tokens. Dead alias. Confirmed keep."
+  },
+  {
+   "confidence": "low",
+   "evidence": "Decl src/sim/game-loop.js:419 var sI=fresnelRefractionShaderDef; sole occurrence, zero uses: dead alias in same shader-alias chain pattern as qQ. Target live (src/engine/shaders.js:125, src/sim/game-loop.js:417). Keep.",
+   "proposedName": "sI",
+   "token": "sI",
+   "verdict": "keep"
+  },
+  {
+   "token": "sr",
+   "proposedName": "sr",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/engine/shaders.js:109: var sr={uniforms:blurPassUniformsSq,...} square box-blur ShaderMaterial-style def. Token-aware scan: 1 identifier occurrence in src/ (declaration only), 0 in served/src/ (unit absent from that older build). Never consumed; the live blur path is boxBlurShader (shaders.js:111, consumed game-loop.js:399/401). Dead declaration; keep."
+  },
+  {
+   "token": "sw",
+   "proposedName": "sw",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "src/sim/game-loop.js:401 (u0320): 'var sw=boxBlurShader,diffuseShaderUniform={}'. sw: exactly 1 identifier occurrence in src and served/src (423), zero references. boxBlurShader itself live (5 src hits: decl game-loop.js:399, shaders.js:115 x3, this alias). Dead alias of a live shader object."
+  },
+  {
+   "token": "tO",
+   "proposedName": "spareStateSlotTO",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "src/sim/game-loop.js:479 tO=0x0 dead numeric head of settings-block var chain (tO=0x0,settingsValueMap,settingsDefinitions,settingsRootDiv,settingsPagesContainer,settingsScrollContainer,...); 1 identifier hit in src and served/src (game-loop.js:505); never read/assigned elsewhere; honest spare-slot name, no role invented; clear of rename-map values and bare src identifiers."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:727-729: 'var ve={}; ve[x]=-0.4,ve[y]=2.8,ve[z]=-7.9' position literal (1 of 6 ve..vj points declared 727-749 after Refinery mapNavPoints); only other use is src/world/map-table.js:11 industry entry 'aJkQkTWQo':[ve,vf,vg,vh,vi,vj]; loadMap copies it to collisionWorld[\"aJkQkTWQo\"] (src/engine/assets-draco.js:19) which is never read (sole collisionWorld occurrence repo-wide; shop-item 'aJkQkTWQo' bundle lists in scope-crosshair/weapons/game-loop are a different object sharing the key string). 5 \\bve\\b occurrences on 3 lines in src/, same in served; 0 quoted refs. Dead chain, specific purpose unknown -> keep.",
+   "proposedName": "ve",
+   "token": "ve",
+   "verdict": "keep"
+  },
+  {
+   "token": "vf",
+   "proposedName": "refineryPointVf",
+   "confidence": "medium",
+   "verdict": "propose",
+   "evidence": "Decl src/sim/game-loop.js:731 'var vf={}' with coords :733 (x=6.4,y=7.4,z=23.8); index-1 member of Refinery('industry')-only 6-point list 'aJkQkTWQo':[ve,vf,vg,vh,vi,vj] in src/world/map-table.js:11, copied to collisionWorld by src/engine/assets-draco.js:19 but never consumed as points (all other aJkQkTWQo reads are shop-item skin lists in scope-crosshair.js/shop-locker.js/weapons.js). Siblings ve,vg,vh,vi,vj share the identical 5-hit shape and are undecided. Name follows the vb->mapNavPointVb suffix-embedding precedent with refinery scope to distinguish from the nav 'points' list; no role invented. Zero collisions in src/ and rename-map targets."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:735-737 var vg={}; vg x/y/z=24.5/9.2/0x15; 5th hit is membership in Refinery industry entry 'aJkQkTWQo':[ve,vf,vg,vh,vi,vj] (src/world/map-table.js:11; siblings ve,vf,vh,vi,vj all count=5, same shape). Key aJkQkTWQo is overloaded: shop-item skin-entry lists (read in src/combat/scope-crosshair.js:19 via name/weapon) vs this xyz-point list, which is only copied to collisionWorld (src/engine/assets-draco.js:19) and never read there (collisionWorld readers use RNQDluasaN/mesh/AyXbLxaib/fkXbORMTcl/name only). Map points effectively write-only; exact purpose (legacy spawns/probes?) unproven, keep.",
+   "proposedName": "vg",
+   "token": "vg",
+   "verdict": "keep"
+  },
+  {
+   "token": "vh",
+   "proposedName": "vh",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "Live but role-unknowable: var vh={} + vh xyz(0x21,9.3,-14.7) src/sim/game-loop.js:739-741, consumed only as 4th of 6 points in Refinery-only 'aJkQkTWQo':[ve,vf,vg,vh,vi,vj] src/world/map-table.js:11 (total=5; served/src same). List is copied to collisionWorld['aJkQkTWQo'] src/engine/assets-draco.js but never read (all other 'aJkQkTWQo' hits are the unrelated shop-bundle skin-list key: neonAr/Smg/Awp/Shotgun/Bundle shop items + scope-crosshair shop consumers). Five same-shaped unrenamed siblings ve,vf,vg,vi,vj; solo rename would be inconsistent."
+  },
+  {
+   "confidence": "low",
+   "evidence": "src/sim/game-loop.js:743 'var vi={}' + :745 coordinates (5.6,7.8,-17.2) (served:771-773); 5th member of Refinery ('industry') map entry 'aJkQkTWQo':[ve,vf,vg,vh,vi,vj] at map-table.js:11 (served:13). assets-draco.js:19 copies the map list to collisionWorld['aJkQkTWQo'], but every other 'aJkQkTWQo' reader in src/ is the shop-UI skin-entry path (scope-crosshair.js:19 iterating entries with .name/.weapon via buildWeaponThumbnail; writers at game-loop.js:3427-3443, shop-locker.js:47, weapons.js:19) - the map point list itself is never read under that key. Dead point of unknown purpose (not spawns, which carry rx/ry at game-loop.js:689; not 'points', which use mapNavPoint* names); renaming vi alone would also orphan its 5 unrenamed siblings ve,vf,vg,vh,vj.",
+   "proposedName": "vi",
+   "token": "vi",
+   "verdict": "keep"
+  },
+  {
+   "token": "vj",
+   "proposedName": "vj",
+   "confidence": "low",
+   "verdict": "keep",
+   "evidence": "game-loop.js:747 var vj={}; :749 vj xyz(-12.1,6.5,-10.5); 6th member of Refinery-only list map-table.js:11 'aJkQkTWQo':[ve,vf,vg,vh,vi,vj] (5 total occurrences src+served); list is copied to collisionWorld in assets-draco.js but never read back (sole collisionWorld['aJkQkTWQo'] hit is that write; all 12 other key hits are the unrelated shop-skin-option {name,weapon} domain reusing one minified key string); siblings ve..vi all still unrenamed; point semantics (spawn/nav/emitter) unprovable with zero readers, keep."
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "meta": {
+  "slice": "02a",
+  "wave": 48
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds an a3k['image'] gradient sprite with +x offset added to the healthbar group, and SERVED repeats the same image/position/opacity setup; it is the left-side gradient panel mirrored by a3p on the right.",
+   "name": "gradientLeft",
+   "selector": "a3m@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a3m=0x12c feeds HL width/position tweens and healthUpdateTime=a3m*2, and SERVED shows the identical 0x12c init with the same tween/time multiplications; it is the health-bar animation duration.",
+   "name": "healthAnimDuration",
+   "selector": "a3m@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL takes getContext('2d') of the red-gradient image, sets fillStyle/fillRect, and is reused for redGradientRight; SERVED shows the same getContext/fill calls, so it is the 2d context used to tint gradients.",
+   "name": "gradientCtx",
+   "selector": "a3n@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL computes maxwidth*health/maxHealth and passes it as the HL width-tween target; SERVED repeats the same maxwidth-ratio computation and tween calls, so it is the target health-bar width.",
+   "name": "targetBarWidth",
+   "selector": "a3n@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL is the for-loop counter indexing gradient stops a3l, and SERVED repeats the same a3l-indexing loop; the token is reused as a plain loop counter across setup loops on both sides. [merger: loopIndex collides with a rename-map value; variant loopPosition]",
+   "name": "loopPosition",
+   "selector": "a3o@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL loops Kq['chats'] indexing chat entries for fade/timeout updates, and SERVED repeats the same chats loop with identical indexing; it is the chat-list index.",
+   "name": "chatIndex",
+   "selector": "a3o@u2130#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds the mirrored gradient image with -x offset added to fbgKsskemj alongside redGradientRight, and SERVED repeats the same mirrored image/position/opacity setup; right-side counterpart of a3m.",
+   "name": "gradientRight",
+   "selector": "a3p@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL saves this['max']['parent'] before rebuilding the max-ammo label and re-adds via a3p['add']; SERVED shows the same parent-save/remove/re-add sequence, so it is the ammo label's parent container.",
+   "name": "maxAmmoParent",
+   "selector": "a3p@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets 0xf0 used as the health-bar rect width and in half-width label offsets; SERVED repeats the same 0xf0 init and width/offset uses, so it is the health-bar width.",
+   "name": "healthbarWidth",
+   "selector": "a3q@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL rebuilds the '/ maxAmmo' text object stored to this['max']; SERVED shows the same text rebuild and this['max'] assignment, so it is the max-ammo label.",
+   "name": "maxAmmoLabel",
+   "selector": "a3q@u2130#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets 0xf paired with a3q as the health-bar rect height; SERVED repeats the same 0xf init and rect-height uses, so it is the health-bar height.",
+   "name": "healthbarHeight",
+   "selector": "a3r@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL computes timeLeft-(Date.now()-Lc) then decomposes into d/h/m/s for the 'Resets In' text; SERVED repeats the same timeLeft math and countdown decomposition, so it is the remaining-time milliseconds.",
+   "name": "timeLeftMs",
+   "selector": "a3r@u2130#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds the '[K] Shoot [L] ADS [SHIFT] Slide' hint text stored on Kq and added to the HUD group; SERVED repeats the same hint-text construction, so it is the controls hint label.",
+   "name": "controlsHint",
+   "selector": "a3t@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL computes Math.floor(a3r/Lu) formatted with 'd ' into the countdown string; SERVED repeats the same floor/divide and 'd' formatting, so it is the days component.",
+   "name": "days",
+   "selector": "a3t@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL creates a new container object holding healthbarContainer and added under a3s; SERVED repeats the same container creation and add() nesting, so it is the health-bar wrapper object.",
+   "name": "healthbarWrapper",
+   "selector": "a3u@u2130#0"
+  }
+ ]
+}

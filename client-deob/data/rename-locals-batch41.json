@@ -1,0 +1,1635 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 41,
+  "date": "2026-09-28",
+  "merged": 0,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 180,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @95102 defines Object3D translateOnAxis(axis,distance) beside rotate/translateXYZ; uses @908626/@908686 show deprecated translate() delegating to this.translateOnAxis. Idiomatic three.js API name.",
+   "selector": "translateOnAxis@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @95270 defines translateX(distance) delegating to translateOnAxis(_xAxis); use @471616 calls aKmLbYuMC.translateX(xOffset) in stereo camera setup. Idiomatic axis-helper name.",
+   "selector": "translateX@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @95364 defines translateY(distance) delegating to translateOnAxis(_yAxis); no outside uses. Idiomatic axis-helper name matching translateX/Z siblings.",
+   "selector": "translateY@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @95458 defines translateZ(distance) delegating to translateOnAxis; use @471646 calls aKmLbYuMC.translateZ(zOffset) beside translateX. Idiomatic axis-helper name.",
+   "selector": "translateZ@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @279976 defines GLSL chunk string with USE_TRANSMISSIONMAP guard; uses @304719 #include and @317004/@317029 ShaderChunk registry. Idiomatic three.js shader-chunk name.",
+   "selector": "transmissionmap_fragment@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @280103 defines pars GLSL chunk string after transmissionmap_fragment; uses @303380 #include and @317054/@317084 ShaderChunk registry. Idiomatic shader-chunk name.",
+   "selector": "transmissionmap_pars_fragment@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @395008 declares var transparent list in WebGLRenderList; uses @396047-@396852 push/sort/return transparent vs opaque buckets. Idiomatic render-list bucket name.",
+   "selector": "transparent@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @504079 declares var transparentObjects=currentRenderList.opaque sibling in render loop; refCount=2 local reads. Idiomatic descriptive name.",
+   "selector": "transparentObjects@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @19761 defines Matrix3 _proto.transpose swapping m elements in place; sibling use @20012 chains .invert().transpose(). Idiomatic matrix-method name.",
+   "selector": "transpose@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @80467 defines Matrix4 _proto.transpose swapping 16-element te array; distinct scope from Matrix3 transpose @19761. Idiomatic matrix-method name.",
+   "selector": "transpose@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @20061 defines Matrix3 transposeIntoArray(r) writing transposed elements; no outside uses. Idiomatic descriptive method name.",
+   "selector": "transposeIntoArray@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @100927 defines traverseAncestors beside traverse/traverseVisible on Object3D; no outside uses. Idiomatic scene-graph traversal name.",
+   "selector": "traverseAncestors@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @801412 defines Composite unbind() looping bindings[i].unbind(); sibling bind @801396. Idiomatic bind/unbind pair name.",
+   "selector": "unbind@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @809959 defines PropertyBinding unbind() clearing node and resetting getters; distinct scope from Composite unbind @801412. Idiomatic name.",
+   "selector": "unbind@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @430504 defines WebGLState unbindTexture beside bindTexture; uses @432336 export and @520156/@521100/@521192 state.unbindTexture() calls. Idiomatic GL-state name.",
+   "selector": "unbindTexture@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @813117 defines uncache method on animation target-group cache; no outside uses. Idiomatic cache-management name.",
+   "selector": "uncache@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835732 defines AnimationMixer uncacheAction beside uncacheRoot; no outside uses. Idiomatic mixer API name.",
+   "selector": "uncacheAction@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834509 defines AnimationMixer uncacheClip; no outside uses. Idiomatic mixer API name matching uncacheAction/uncacheRoot siblings.",
+   "selector": "uncacheClip@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835163 defines AnimationMixer uncacheRoot(root) deactivating actions/bindings; no outside uses. Idiomatic mixer API name.",
+   "selector": "uncacheRoot@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @361806 declares var units=allocTexUnits in setValueT1Array with uniform1iv + safeSetTexture2D loop; texture-unit array. Idiomatic name.",
+   "selector": "units@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @362008 declares var units=allocTexUnits in setValueT6Array (cube variant) with safeSetTextureCube loop; sibling of T1 variant. Idiomatic name.",
+   "selector": "units@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @429507 is setPolygonOffset(polygonOffset,factor,units) param passed to gl.polygonOffset(factor,units); refCount=3. Idiomatic GL polygon-offset param name.",
+   "selector": "units@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @50261 defines Vector3 _proto.unproject beside project/applyQuaternion; uses @838815/@839047/@861281 .unproject(camera) in raycaster/helpers. Idiomatic three.js API name.",
+   "selector": "unproject@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @369845 declares unrollLoopPattern regex beside deprecatedUnrollLoopPattern/includePattern in WebGLProgram; refCount=1. Idiomatic shader-preprocessing name.",
+   "selector": "unrollLoopPattern@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @101663 is updateWorldMatrix(updateParents,updateChildren) param gating children recursion @101958; Camera override @184516. Idiomatic descriptive param name.",
+   "selector": "updateChildren@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @184516 is Camera updateWorldMatrix(updateParents,updateChildren) override forwarding to Object3D; use @101663 base decl. Idiomatic override param name.",
+   "selector": "updateChildren@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @154223 defines BufferGeometry updateFromObject beside setFromPoints; use @353659 buffergeometry.updateFromObject(object) in WebGLObjects. Idiomatic geometry name.",
+   "selector": "updateFromObject@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @470258 defines updateInputSources registered as inputsourceschange listener in WebXR session setup; refCount=1. Idiomatic XR handler name.",
+   "selector": "updateInputSources@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @353414 declares var updateMap WeakMap in WebGLObjects update(); use @354081 dispose() resets it. Idiomatic frame-dedup cache name.",
+   "selector": "updateMap@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @726791 defines LightShadow updateMatrices; overrides @728482/@730572/@734746 for spot/point/directional shadows. Idiomatic shadow API name.",
+   "selector": "updateMatrices@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @424523 defines function enable/disable GL capability toggle; uses @425763 disable(3042) blending, @427897 disable(2884) cull-face. Idiomatic three.js state-helper name.",
+   "selector": "disable@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @91918 Layers.prototype disableAll sets mask=4294967295; refCount=0. Idiomatic Layers API name paired with enableAll.",
+   "selector": "disableAll@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @332959 disables unused vertex attrib arrays; uses @336609 call after attribute setup and @498959 bindingStates.disableUnusedAttributes(). Idiomatic descriptive name.",
+   "selector": "disableUnusedAttributes@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @464784 WebXR controller disconnect(inputSource) hides targetRay/grip/hand; use @468409 controller.disconnect on session end. Idiomatic lifecycle name.",
+   "selector": "disconnect@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @790268 Audio.prototype disconnect tears down source/filter chain; distinct scope from WebXR #0. Idiomatic WebAudio-style name.",
+   "selector": "disconnect@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @7379 EventDispatcher dispatchEvent; uses @26028/@37074 this.dispatchEvent({type:'dispose'}). Idiomatic DOM-like event name.",
+   "selector": "dispatchEvent@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @464554 WebXR controller dispatchEvent forwarding to targetRay/grip/hand; uses @466030 pinchend and @468259 session event dispatch. Idiomatic event name.",
+   "selector": "dispatchEvent@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @220405 shader chunk var holding displacementMap uniforms GLSL; uses @283200 #include <displacementmap_pars_vertex> and @314044 ShaderChunk map key. Canonical three.js snake_case chunk name.",
+   "selector": "displacementmap_pars_vertex@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @220583 shader chunk var; uses @283722/@285191 #include <displacementmap_vertex> and @314100 ShaderChunk map key. Canonical three.js snake_case chunk name.",
+   "selector": "displacementmap_vertex@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @26013 Texture dispose dispatches {type:'dispose'}; sibling dispose decls at @37059/@135661/@168862 share the token. Idiomatic three.js lifecycle name.",
+   "selector": "dispose@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @37059 WebGLRenderTarget dispose dispatches dispose event; use @36615 this.dispose() in setSize. Idiomatic lifecycle name.",
+   "selector": "dispose@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @135661 Material dispose dispatches dispose event; use @193175 mesh.material.dispose(). Idiomatic lifecycle name.",
+   "selector": "dispose@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @168862 BufferGeometry dispose dispatches dispose event; sibling dispose decls share token across classes. Idiomatic lifecycle name.",
+   "selector": "dispose@u0020#3",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @336645 binding-states dispose resets VAO states; exported @338050 dispose:dispose. Idiomatic cleanup name.",
+   "selector": "dispose@u0020#4",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @345234 cubemap-cache dispose resets WeakMap; paired with onTextureDispose @345095. Idiomatic cleanup name.",
+   "selector": "dispose@u0020#5",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @354071 (geometries update block) with use at @354407 returning {update:update,dispose:dispose}; token is the standard three.js resource-cleanup lifecycle name.",
+   "selector": "dispose@u0020#6",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @394203 inside WebGLProperties; use at @394282 exports {get,remove,update,dispose} where dispose resets the properties WeakMap; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#7",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @397329 inside WebGLRenderLists; uses at @397375/@397383 show dispose(){lists=new WeakMap();} exported as dispose; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#8",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @408013 inside WebGLRenderStates; uses at @408066/@408074 show dispose(){renderStates=new WeakMap();} exported as dispose; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#9",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @540738 Skeleton dispose method; use at @540793 shows it disposes boneTexture; standard three.js object-cleanup name.",
+   "selector": "dispose@u0020#10",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @543442 InstancedMesh dispose method; use at @543425 shows dispose:function dispose(){this.dispatchEvent({type:'dispose'});}; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#11",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @577064 Geometry dispose method; use at @577047 shows dispose:function dispose(){this.dispatchEvent({type:'dispose'});}; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#12",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @848649 SpotLightHelper dispose; uses at @848649/@848709 show _proto.dispose disposes cone geometry/material; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#13",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @851860 PointLightHelper dispose; use at @851843 shows _proto.dispose disposes geometry/material; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#14",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @853003 HemisphereLightHelper dispose; use at @852986 shows _proto.dispose disposes children geometry/material; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#15",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @857173 DirectionalLightHelper dispose; use at @857156 shows _proto.dispose disposes lightPlane/targetLine geometry/material; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#16",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @870958 PMREM-style _proto.dispose; use at @870987 shows it disposes _blurMaterial/_cubemapShader/_equirectShader/_lodPlanes; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#17",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @918773 Object.assign(QwysDsAqBdy.prototype,{dispose:function ...}); standard prototype cleanup-method name, already readable.",
+   "selector": "dispose@u0020#18",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @546862 var distSq in line-segment raycast block (vStart/vEnd/interSegment/interRay, refCount=1); token is the standard distance-squared abbreviation, already readable.",
+   "selector": "distSq@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @71993 var distToPoint in Ray plane-intersection code (distanceToPlane/intersectPlane context, refCount=2); token is fully spelled-out and readable.",
+   "selector": "distToPoint@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @659979 defines AnimationUtils.getKeyframeOrder; used @680374 as AnimationUtils.getKeyframeOrder(times). Idiomatic getter name, already readable.",
+   "selector": "getKeyframeOrder@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @599363 defines getLeftmost helper; used @597207 as queue.push(getLeftmost(list)). Idiomatic name, already readable.",
+   "selector": "getLeftmost@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @697846 defines Curve getLength; used @718404/@718599 via this.getLength()/curve.getLength(). Idiomatic getter name, already readable.",
+   "selector": "getLength@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @718731 defines CurvePath getLength returning last curve length; sibling Curve getLength @697846. Idiomatic getter name, already readable.",
+   "selector": "getLength@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @697943 defines getLengths; used @698559 via this.getLengths() in updateArcLengths/getUtoTmapping. Idiomatic name, already readable.",
+   "selector": "getLengths@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @791767 defines Audio _proto.getLoop; no outside uses shown. Idiomatic getter name, already readable.",
+   "selector": "getLoop@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @785738 defines _proto.getMasterVolume; no outside uses shown. Idiomatic getter name, already readable.",
+   "selector": "getMasterVolume@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @764783 defines getMaterial helper in parseObject; used 8x e.g. @766953/@767282 material=getMaterial(data.material). Idiomatic name, already readable.",
+   "selector": "getMaterial@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @416438 near getDistanceMaterialVariant/getDepthMaterial; used @417129 as getMaterialVariant(useMorphing,useSkinning,useInstancing). Idiomatic name, already readable.",
+   "selector": "getMaterialVariant@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @542310 defines InstancedMesh getMatrixAt; no outside uses shown. Idiomatic getter name, already readable.",
+   "selector": "getMatrixAt@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @339180 defines WebGLCapabilities getMaxAnisotropy; used @341000/@441895 via capabilities.getMaxAnisotropy(). Idiomatic name, already readable.",
+   "selector": "getMaxAnisotropy@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @922076 defines deprecated renderer getMaxAnisotropy delegating to capabilities; related DECL @339180. Idiomatic name, already readable.",
+   "selector": "getMaxAnisotropy@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @386323 defines getMaxBones; used @387384 as getMaxBones(object) for skinned meshes. Idiomatic name, already readable.",
+   "selector": "getMaxBones@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793667 defines PositionalAudio _proto.getMaxDistance; no outside uses shown. Idiomatic getter name, already readable.",
+   "selector": "getMaxDistance@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @339459 defines getMaxPrecision; used @340136 and @387459 via capabilities.getMaxPrecision. Idiomatic name, already readable.",
+   "selector": "getMaxPrecision@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @82891 defines Matrix4 _proto.getMaxScaleOnAxis; used @67299 via matrix.getMaxScaleOnAxis(). Idiomatic name, already readable.",
+   "selector": "getMaxScaleOnAxis@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @112307 defines Triangle _proto.getMidpoint; used @903528/@903557 via this.getMidpoint(target). Idiomatic name, already readable.",
+   "selector": "getMidpoint@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @820042 defines _proto.getMixer; no outside uses shown. Idiomatic getter name, already readable.",
+   "selector": "getMixer@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @395132 defines getNextRenderItem in WebGLRenderList; used @395965/@396192 in push/unshift. Idiomatic name, already readable.",
+   "selector": "getNextRenderItem@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @110168 defines Triangle.getNormal static; used @177089/@591514 via Triangle.getNormal/_triangle.getNormal. Idiomatic name, already readable.",
+   "selector": "getNormal@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @112545 defines Triangle _proto.getNormal delegating to Triangle.getNormal; static DECL @110168. Idiomatic name, already readable.",
+   "selector": "getNormal@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @572729 defines getNormalIndex; 4 refs within DECL window pushing face/vertex normal indices. Idiomatic name, already readable.",
+   "selector": "getNormalIndex@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @19931 defines Matrix3 _proto.getNormalMatrix; used @109286/@151915/@343467 via getNormalMatrix(matrix). Idiomatic name, already readable.",
+   "selector": "getNormalMatrix@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @98948 defines getObjectById delegating to getObjectByProperty; no outside uses shown. Idiomatic name, already readable.",
+   "selector": "getObjectById@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @99034 defines getObjectByName; used @908315/@908348 via this.getObjectByName(name). Idiomatic name, already readable.",
+   "selector": "getObjectByName@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @99132 defines getObjectByProperty; used @770261 via object.getObjectByProperty('uuid',...). Idiomatic name, already readable.",
+   "selector": "getObjectByProperty@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @534424 defines LOD getObjectForDistance; no outside uses shown. Idiomatic name, already readable.",
+   "selector": "getObjectForDistance@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @787746 defines Audio _proto.getOutput returning gain; used @790148/@790192/@795320 via this.getOutput()/audio.getOutput(). Idiomatic name, already readable.",
+   "selector": "getOutput@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793024 defines PositionalAudio _proto.getOutput returning panner; Audio DECL @787746. Idiomatic name, already readable.",
+   "selector": "getOutput@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @60342 defines Box3 _proto.getParameter; other hits are WebGL gl.getParameter calls. Idiomatic name, already readable.",
+   "selector": "getParameter@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @825862 binds rootUuid=root.uuid in _bindAction; used as bindingsByRoot key at @825057. Already idiomatic.",
+   "selector": "rootUuid@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @827432 is _addInactiveAction(action,clipUuid,rootUuid) param; stored into actionByRoot[rootUuid] at @827903. Already idiomatic.",
+   "selector": "rootUuid@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @828669 binds rootUuid=(action._localRoot||this._root).uuid in _removeInactiveAction; deleted from actionByRoot at @828735. Already idiomatic.",
+   "selector": "rootUuid@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @829848 is _addInactiveBinding(binding,rootUuid,trackName) param; keys bindingsByRoot lookup. Already idiomatic.",
+   "selector": "rootUuid@u0020#4",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @830283 binds rootUuid=propBinding.rootNode.uuid in _removeInactiveBinding; keys bindingsByRoot/bindingByName at @830417. Already idiomatic.",
+   "selector": "rootUuid@u0020#5",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @832456 binds rootUuid=root.uuid in clipAction; passed to _addInactiveAction at @833278. Already idiomatic.",
+   "selector": "rootUuid@u0020#6",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @833399 binds rootUuid=root.uuid in existingAction; used for actionByRoot[rootUuid] lookup at @833645. Already idiomatic.",
+   "selector": "rootUuid@u0020#7",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835185 binds rootUuid=root.uuid in uncacheRoot; used for actionByRoot and bindingsByRoot lookups at @835347/@835524. Already idiomatic.",
+   "selector": "rootUuid@u0020#8",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @20580 is Matrix3 _proto.rotate function-name; public three.js API name, refCount=0. Already idiomatic.",
+   "selector": "rotate@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @16450 is Vector2 _proto.rotateAround function-name; public API name, refCount=0. Already idiomatic.",
+   "selector": "rotateAround@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @900263 is Matrix4 rotateAxis deprecation-stub function-name; matches public API surface. Already idiomatic.",
+   "selector": "rotateAxis@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @901016 is Matrix4 rotateByAxis deprecation-stub function-name; matches public API surface. Already idiomatic.",
+   "selector": "rotateByAxis@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @94617 is Object3D rotateOnAxis(axis,angle) function-name; public API name. Already idiomatic.",
+   "selector": "rotateOnAxis@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @94747 is Object3D rotateOnWorldAxis(axis,angle) function-name; public API name. Already idiomatic.",
+   "selector": "rotateOnWorldAxis@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @42293 is Quaternion _proto.rotateTowards function-name; public API name, refCount=0. Already idiomatic.",
+   "selector": "rotateTowards@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @94875 is Object3D rotateX(angle) delegating to rotateOnAxis(_xAxis,angle). Already idiomatic.",
+   "selector": "rotateX@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @152269 is BufferGeometry rotateX(angle) via _m1$2.makeRotationX. Already idiomatic.",
+   "selector": "rotateX@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @558802 is Geometry rotateX(angle) via _m1$3.makeRotationX. Already idiomatic.",
+   "selector": "rotateX@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @900726 is Matrix4 rotateX removed-stub function-name; matches public API surface. Already idiomatic.",
+   "selector": "rotateX@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @94948 is Object3D rotateY(angle) delegating to rotateOnAxis(_yAxis,angle). Already idiomatic.",
+   "selector": "rotateY@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @152364 is BufferGeometry rotateY(angle) via _m1$2.makeRotationY. Already idiomatic.",
+   "selector": "rotateY@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @558897 is Geometry rotateY(angle) via _m1$3.makeRotationY; also called at @852548. Already idiomatic.",
+   "selector": "rotateY@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @900821 is Matrix4 rotateY removed-stub function-name; matches public API surface. Already idiomatic.",
+   "selector": "rotateY@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @95021 is Object3D rotateZ(angle) delegating to rotateOnAxis(_zAxis,angle). Already idiomatic.",
+   "selector": "rotateZ@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @152459 is BufferGeometry rotateZ(angle) via _m1$2.makeRotationZ. Already idiomatic.",
+   "selector": "rotateZ@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @558992 is Geometry rotateZ(angle) via _m1$3.makeRotationZ. Already idiomatic.",
+   "selector": "rotateZ@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @900916 is Matrix4 rotateZ removed-stub function-name; matches public API surface. Already idiomatic.",
+   "selector": "rotateZ@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @20265 is setUvTransform(tx,ty,sx,sy,rotation,cx,cy) param; fed by this.rotation at @23897. Already idiomatic.",
+   "selector": "rotation@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @92699 declares Object3D rotation Euler var; synced via rotation.order at @105505. Already idiomatic.",
+   "selector": "rotation@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @531720 is Sprite raycast rotation var; mirrors material.rotation at @529539/@479895. Already idiomatic.",
+   "selector": "rotation@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @108587 defines Plane.intersectsLine(line); use sites @902042/@902074 show the .isIntersectionLine() deprecation shim delegating to this.intersectsLine. Idiomatic three.js API name.",
+   "selector": "intersectsLine@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @195612 defines Frustum.intersectsObject(object); use sites @418674/@505235/@506812 show frustum-culling guards (_frustum.intersectsObject(object)). Idiomatic API name.",
+   "selector": "intersectsObject@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @61049 defines Box3.intersectsPlane(plane) via min/max projection; sibling overloads at @66411/@71966 on Sphere/Ray. Idiomatic API name.",
+   "selector": "intersectsPlane@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @66411 defines Sphere.intersectsPlane(plane) via |distanceToPoint|<=radius; sibling Box3/Ray overloads at @61049/@71966. Idiomatic API name.",
+   "selector": "intersectsPlane@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @71966 defines Ray.intersectsPlane(plane) via origin distance sign vs denominator; sibling Box3/Sphere overloads at @61049/@66411. Idiomatic API name.",
+   "selector": "intersectsPlane@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @600614 defines earcut helper intersectsPolygon; use site @599753 shows isValidDiagonal calling !intersectsPolygon(a,b). Readable algorithmic name.",
+   "selector": "intersectsPolygon@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @60877 defines Box3.intersectsSphere via clampPoint + radius check; overloads at @66161/@71408/@108871/@196092. Idiomatic API name.",
+   "selector": "intersectsSphere@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @66161 defines Sphere.intersectsSphere via radius-sum vs center distance; sibling overloads at @60877/@71408/@108871. Idiomatic API name.",
+   "selector": "intersectsSphere@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @71408 defines Ray.intersectsSphere via distanceSqToPoint<=r^2; sibling overloads at @60877/@66161/@108871. Idiomatic API name.",
+   "selector": "intersectsSphere@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @108871 defines Plane.intersectsSphere delegating to sphere.intersectsPlane(this); sibling overloads at @60877/@66161/@71408. Idiomatic API name.",
+   "selector": "intersectsSphere@u0020#3",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @196092 defines Frustum.intersectsSphere; use site @171195 shows raycaster.ray.intersectsSphere(_sphere) culling guard. Idiomatic API name.",
+   "selector": "intersectsSphere@u0020#4",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @195888 defines Frustum.intersectsSprite via unit-sphere transform; use site @506109 shows _frustum.intersectsSprite(object) sprite-culling guard. Idiomatic API name.",
+   "selector": "intersectsSprite@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @666625 defines base Interpolant intervalChanged_() no-op; override at @667246 on CubicInterpolant recomputes weights. Readable three.js Interpolant convention name.",
+   "selector": "intervalChanged_@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @667246 defines CubicInterpolant intervalChanged_(i1,t0,t1) recomputing prev/next weights; base no-op at @666625, call site @666115. Readable convention name.",
+   "selector": "intervalChanged_@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @110996 computes invDenom=1/denom in Triangle.getBarycoord for barycentric u/v weights; 2 refs, all inside DECL window. Idiomatic abbreviation for inverse denominator.",
+   "selector": "invDenom@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @70038 computes invDet in Ray.distanceSqToSegment for closest-point s0/s1 scaling; 2 refs, all inside DECL window. Idiomatic abbreviation for inverse determinant.",
+   "selector": "invDet@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @85109 computes invSX=1/sx in Matrix4.decompose to normalize rotation columns; 3 refs, all inside DECL window. Idiomatic abbreviation for inverse scale-X.",
+   "selector": "invSX@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @85124 computes invSY=1/sy in Matrix4.decompose alongside invSX; 3 refs, all inside DECL window. Idiomatic abbreviation for inverse scale-Y.",
+   "selector": "invSY@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @594956 defines earcut isEar(ear) reflex/contains test; called from earcutLinked loop alongside isEarHashed. Readable polygon-triangulation term.",
+   "selector": "isEar@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @595193 defines earcut isEarHashed spatial-hash variant; use site @594456 shows invSize?isEarHashed(...):isEar(ear) dispatch. Readable algorithmic name.",
+   "selector": "isEarHashed@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @58596 defines Box3.isEmpty via max<min comparison; guards at @61646/@63086/@63270 call this.isEmpty(). Idiomatic API name.",
+   "selector": "isEmpty@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @65784 defines Sphere.isEmpty via radius<0; use site @67062 shows getBoundingBox guarding on this.isEmpty(). Idiomatic API name.",
+   "selector": "isEmpty@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @842683 defines Box2.isEmpty via max<min; deprecation shims at @895414/@895439 confirm .empty() was renamed to .isEmpty(). Idiomatic API name.",
+   "selector": "isEmpty@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @111521 defines static Triangle.isFrontFacing(a,b,c,direction) via cross/dot sign; proto wrapper at @113225 delegates to it. Idiomatic API name.",
+   "selector": "isFrontFacing@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @113225 defines proto isFrontFacing delegating to Triangle.isFrontFacing(this.a,this.b,this.c,...); static def at @111521. Idiomatic API name.",
+   "selector": "isFrontFacing@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @897910 defines deprecated Matrix3.multiplyVector3 shim delegating to vector.applyMatrix3; siblings at @899746/@902157. Public (if legacy) API name, keep stable.",
+   "selector": "multiplyVector3@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @899746 defines deprecated Matrix4.multiplyVector3 shim delegating to vector apply call; siblings at @897910/@902157. Public legacy API name, keep stable.",
+   "selector": "multiplyVector3@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @902157 defines deprecated Quaternion.multiplyVector3 shim delegating to vector.applyQuaternion; siblings at @897910/@899746. Public legacy API name, keep stable.",
+   "selector": "multiplyVector3@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @801573 PropertyBinding param rootNode; use sites @806568/@806604 show findNode(this.rootNode,...) fallback and @830304 reads rootNode.uuid. Already-readable role name.",
+   "selector": "rootNode@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @824887 rootUuid in AnimationMixer binding setup; use sites @825657/@825862/@826092 show (action._localRoot||this._root).uuid keying. Already-readable role name.",
+   "selector": "rootUuid@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @749039 names InstancedBufferGeometry.prototype.copy (copies source+instanceCount); all 530 occurrences are standard three.js .copy methods.",
+   "selector": "copy@u0020#48",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @749924 names InstancedBufferAttribute.prototype.copy (copies source+meshPerAttribute); idiomatic three.js API name.",
+   "selector": "copy@u0020#49",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @781035 names HemisphereLightProbe.prototype.copy; standard three.js .copy method name.",
+   "selector": "copy@u0020#50",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @781562 names AmbientLightProbe.prototype.copy delegating to LightProbe.prototype.copy; idiomatic API name.",
+   "selector": "copy@u0020#51",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @836584 names InstancedInterleavedBuffer.prototype.copy; standard three.js .copy method name.",
+   "selector": "copy@u0020#52",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @840294 names Spherical.prototype.copy copying radius/phi/theta from other; idiomatic API name.",
+   "selector": "copy@u0020#53",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @841287 names Cylindrical.prototype.copy copying radius/theta/y; idiomatic API name.",
+   "selector": "copy@u0020#54",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @842473 names Box2.prototype.copy copying min/max from box; idiomatic API name.",
+   "selector": "copy@u0020#55",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @845519 names Line3.prototype.copy; standard three.js .copy method name.",
+   "selector": "copy@u0020#56",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @863076 names BoxHelper.prototype.copy copying source object; idiomatic API name.",
+   "selector": "copy@u0020#57",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @867399 names ArrowHelper.prototype.copy copying line+cone from source; idiomatic API name.",
+   "selector": "copy@u0020#58",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @138405 names BufferAttribute.prototype.copyArray (this.array.set); readable, used at @153632/@155920.",
+   "selector": "copyArray@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @356353 is module-level copyArray(a,b) helper with 13 uniform-cache call sites (@357366 etc.); readable as-is.",
+   "selector": "copyArray@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @138206 names BufferAttribute.prototype.copyAt(index1,attribute,index2); readable three.js API name.",
+   "selector": "copyAt@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @524542 names InterleavedBuffer.prototype.copyAt with stride-based copy; readable API name.",
+   "selector": "copyAt@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @138483 names BufferAttribute.prototype.copyColorsArray; readable, called at @153377/@155498/@156920.",
+   "selector": "copyColorsArray@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @121050 names Color.prototype.copyGammaToLinear; self-descriptive three.js API name.",
+   "selector": "copyGammaToLinear@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @914355 names deprecated BufferAttribute.prototype.copyIndicesArray shim; readable as-is.",
+   "selector": "copyIndicesArray@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @121286 names Color.prototype.copyLinearToGamma; self-descriptive three.js API name.",
+   "selector": "copyLinearToGamma@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @121977 names Color.prototype.copyLinearToSRGB; self-descriptive three.js API name.",
+   "selector": "copyLinearToSRGB@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75228 names Matrix4.prototype.copyPosition; readable, called at @326336/@898924/@898954.",
+   "selector": "copyPosition@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @121819 names Color.prototype.copySRGBToLinear; self-descriptive three.js API name.",
+   "selector": "copySRGBToLinear@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @666325 names Interpolant.prototype.copySampleValue_; readable, called at @669387 and alias sites.",
+   "selector": "copySampleValue_@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @138836 names BufferAttribute.prototype.copyVector2sArray; readable, called at @155701/@157085/@157254.",
+   "selector": "copyVector2sArray@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @139184 names BufferAttribute.prototype.copyVector3sArray; readable, called at @153303/@155059 etc.",
+   "selector": "copyVector3sArray@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @139555 names BufferAttribute.prototype.copyVector4sArray; readable, called at @157848/@158049.",
+   "selector": "copyVector4sArray@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @587275 is generateUVs helper correctSeam fixing UV wrap (max>0.9&&min<0.1); readable as-is.",
+   "selector": "correctSeam@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @588466 is UV-fix helper correctUV with 3 call sites in same loop; readable as-is.",
+   "selector": "correctUV@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @587778 is generateUVs helper correctUVs called once; readable as-is.",
+   "selector": "correctUVs@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @91845 names Layers.prototype.disable(channel); idiomatic three.js Layers API name.",
+   "selector": "disable@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  }
+ ]
+}

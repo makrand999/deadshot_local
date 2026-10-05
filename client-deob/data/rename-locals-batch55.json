@@ -1,0 +1,4425 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 55,
+  "date": "2026-09-29",
+  "merged": 177,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 18,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR POSTs /claimReward, handles ok response; SERVED: XHR POSTs /claimReward, handles ok response (snippet-only twin).",
+   "name": "claimRewardXhr",
+   "selector": "ah3@u2151#30",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 30,
+    "refCount": 6,
+    "snippet": "urn Date[\"now\"]()[\"toString\"](0x24)+Math[\"random\"]()['toString'](0x24)['substr'](0x2);}function a78(ah3){var ats=arY;function ah4(ahr,ahs){return ahr>>>ahs|ahr<"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 30,
+    "refCount": 6,
+    "snippet": "e[atr(0x1c2)]()[atr(0xe45)](0x24)+Math[atr(0x4bd)]()['toString'](0x24)['substr'](0x2);}function a78(ah3){var ats=arY;function ah4(ahr,ahs){return ahr>>>ahs|ahr<"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Success param compared against computed hash token; SERVED: Success param compared against computed hash token (snippet-only twin).",
+   "name": "receivedAdToken",
+   "selector": "ah3@u2151#31",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 31,
+    "refCount": 1,
+    "snippet": "RewardAdFailed('App\\x20interface\\x20not\\x20available'));}window[\"onRewardAdSuccess\"]=async function(ah3,ah4,ah5){var atu=arY;console[\"log\"]('Ad\\x20completed\\x20"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 31,
+    "refCount": 1,
+    "snippet": "1066)),onRewardAdFailed('App\\x20interface\\x20not\\x20available'));}window[arY(0xb26)]=async function(ah3,ah4,ah5){var atu=arY;console[atu(0xc04)]('Ad\\x20complete"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Failed param logged and shown in alert; SERVED: Failed param logged and shown in alert (snippet-only twin).",
+   "name": "adFailureReason",
+   "selector": "ah3@u2151#32",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 32,
+    "refCount": 2,
+    "snippet": "E(),a79=null):console['error'](\"Token verification failed!\");}},window['onRewardAdFailed']=function(ah3){var atv=arY;console['error']('Ad\\x20failed:',ah3),a79=n"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 32,
+    "refCount": 2,
+    "snippet": "g\\x20reward...'),KE(),a79=null):console['error'](atu(0xb4f));}},window['onRewardAdFailed']=function(ah3){var atv=arY;console['error']('Ad\\x20failed:',ah3),a79=n"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused callback param, refCount zero",
+   "selector": "ah3@u2151#33",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Callbacks object passed to CrazyGames requestAd; SERVED: Callbacks object passed to CrazyGames requestAd (snippet-only twin).",
+   "name": "rewardedAdCallbacks",
+   "selector": "ah3@u2151#34",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 34,
+    "refCount": 1,
+    "snippet": "x;ah5[\"hCVrxoItOl\"]();});});}Lg['onclick']=function(){var atz=arY;if(!L1){KE();return;}if(Gp){const ah3={'adFinished':function(){console['log']('End\\x20rewarded"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 34,
+    "refCount": 1,
+    "snippet": "atx;ah5[aty(0xc42)]();});});}Lg['onclick']=function(){var atz=arY;if(!L1){KE();return;}if(Gp){const ah3={'adFinished':function(){console['log']('End\\x20rewarded"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused callback param, refCount zero",
+   "selector": "ah3@u2151#35",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Link element with hover states, registered animations; SERVED: Link element with hover states, registered animations (snippet-only twin).",
+   "name": "footerLinkElement",
+   "selector": "ah3@u2151#36",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 36,
+    "refCount": 16,
+    "snippet": "a7l[\"position\"]['x']-a7l['width']/0x2,a7m[\"position\"]['y']=a7l['position']['y'],a7f['add'](a7l);let ah3=a3m['element'](a7l),ah4=a7h[a7j[a3M]];var a7n=a3m['eleme"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 36,
+    "refCount": 16,
+    "snippet": "a7l[arY(0x215)]['x']-a7l['width']/0x2,a7m[arY(0x215)]['y']=a7l['position']['y'],a7f['add'](a7l);let ah3=a3m['element'](a7l),ah4=a7h[a7j[a3M]];var a7n=a3m['eleme"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Empty slot row hidden when member fills; SERVED: Empty slot row hidden when member fills (snippet-only twin).",
+   "name": "emptyPartySlot",
+   "selector": "ah4@u2151#1",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "KHkwk']=![];}a5j[\"ReDNKHkwk\"]=Kq['AhUnLeUeD']?![]:!![];for(var ah3=0x0;ah3<a5w['length'];ah3++){var ah4=a5w[ah3],ah5=a5x[ah3];ah3<ah2[\"length\"]?(ah4[\"r23ZS3L2g\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "NKHkwk']=![];}a5j[asX(0xb1d)]=Kq['AhUnLeUeD']?![]:!![];for(var ah3=0x0;ah3<a5w['length'];ah3++){var ah4=a5w[ah3],ah5=a5x[ah3];ah3<ah2[asX(0x3a2)]?(ah4[\"r23ZS3L2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Selected Daily Weekly Event list rendered; SERVED: Selected Daily Weekly Event list rendered (snippet-only twin).",
+   "name": "tabChallengeList",
+   "selector": "ah4@u2151#5",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 5,
+    "snippet": "==L8)return;if(a8o!=undefined)for(var ah3=0x0;ah3<a8o[\"length\"];ah3++){HG(a8o[ah3],\"progress\");}var ah4;if(ah2==\"Weekly\")ah4=a8r;else{if(ah2=='Daily')ah4=a8p;el"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 5,
+    "snippet": "L8)return;if(a8o!=undefined)for(var ah3=0x0;ah3<a8o[at0(0x3a2)];ah3++){HG(a8o[ah3],at0(0x995));}var ah4;if(ah2==at0(0xa74))ah4=a8r;else{if(ah2=='Daily')ah4=a8p;"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR POSTs /claim bonus, refreshes onload; SERVED: XHR POSTs /claim bonus, refreshes onload (snippet-only twin).",
+   "name": "claimBonusXhr",
+   "selector": "ah4@u2151#6",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "KHkwk']=![],a6m[\"r23ZS3L2g\"]['ReDNKHkwk']=![],a6m['onclick']=function(){var at1=arY,ah3='/claim'+L8,ah4=new XMLHttpRequest();ah4[\"open\"]('POST',LD+ah3),ah4['set"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "KHkwk']=![],a6m[\"r23ZS3L2g\"]['ReDNKHkwk']=![],a6m['onclick']=function(){var at1=arY,ah3='/claim'+L8,ah4=new XMLHttpRequest();ah4[at1(0xdc2)]('POST',LD+ah3),ah4["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bonus added to stored progress, defaults zero; SERVED: Bonus added to stored progress, defaults zero (snippet-only twin).",
+   "name": "liveProgressBonus",
+   "selector": "ah4@u2151#7",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 4,
+    "snippet": "));var a6A=a6r['DgJwEtWhIm'][a6r[\"DgJwEtWhIm\"]['length']-0x1];}var a6B=a6r;a6r=a6q;function a6C(ah3,ah4){var at2=arY;Kq['nwxurZsxI'][\"afCJVYrCGK\"]=!![];if(ah3=="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 4,
+    "snippet": ".3));var a6A=a6r['DgJwEtWhIm'][a6r[arY(0x152)]['length']-0x1];}var a6B=a6r;a6r=a6q;function a6C(ah3,ah4){var at2=arY;Kq['nwxurZsxI'][at2(0xd69)]=!![];if(ah3==nu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Live stat value paired with chosen quest; SERVED: Live stat value paired with chosen quest (snippet-only twin).",
+   "name": "selectedQuestBonus",
+   "selector": "ah4@u2151#8",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "ed\"]=0x28,a6K['reward']=0xfa,a6C(a6K);var a6L=null;Kq['CQoHUSTuiy']=function(){var at8=arY,ah3=null,ah4=0x0;if(a8p==null||Kq['AhUnLeUeD'])ah3=null;else{for(var "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "f5)]=0x28,a6K['reward']=0xfa,a6C(a6K);var a6L=null;Kq['CQoHUSTuiy']=function(){var at8=arY,ah3=null,ah4=0x0;if(a8p==null||Kq['AhUnLeUeD'])ah3=null;else{for(var "
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused params, refCount zero",
+   "selector": "ah4@u2151#9",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Script element loads Xsolla widget, appended; SERVED: Script element loads Xsolla widget, appended (snippet-only twin).",
+   "name": "xsollaScriptTag",
+   "selector": "ah4@u2151#11",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 5,
+    "snippet": "return;ah3==undefined&&(ah3=function(){});if(a6P){a6Q?ah3():a6R['push'](ah3);return;}a6P=!![];const ah4=document['createElement']('script');ah4[\"type\"]='text/ja"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 5,
+    "snippet": "return;ah3==undefined&&(ah3=function(){});if(a6P){a6Q?ah3():a6R['push'](ah3);return;}a6P=!![];const ah4=document['createElement']('script');ah4[atb(0xafb)]='tex"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Endpoint path for token XHR POST; SERVED: Endpoint path for token XHR POST (snippet-only twin).",
+   "name": "xsollaTokenPath",
+   "selector": "ah4@u2151#12",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "etElementsByTagName'](\"head\")[0x0];ah5['appendChild'](ah4);}function a6T(ah3){var atd=arY;a6S();var ah4=\"/xsollatoken\",ah5=new XMLHttpRequest();ah5['open']('POS"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "ementsByTagName'](atb(0x266))[0x0];ah5['appendChild'](ah4);}function a6T(ah3){var atd=arY;a6S();var ah4=atd(0x113),ah5=new XMLHttpRequest();ah5['open']('POST',L"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Endpoint path for token XHR POST; SERVED: Endpoint path for token XHR POST (snippet-only twin).",
+   "name": "xsollaTokenPath",
+   "selector": "ah4@u2151#13",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "['ReDNKHkwk']=!![],setTimeout(function(){var atg=o;!a6V&&(a6U[\"ReDNKHkwk\"]=![]);},0x1388),a6S();var ah4='/xsollatoken',ah5=new XMLHttpRequest();ah5[\"open\"]('POS"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 13,
+    "refCount": 1,
+    "snippet": "U['ReDNKHkwk']=!![],setTimeout(function(){var atg=o;!a6V&&(a6U[atg(0xb1d)]=![]);},0x1388),a6S();var ah4='/xsollatoken',ah5=new XMLHttpRequest();ah5[ath(0xdc2)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Token rewardNum body sent as JSON; SERVED: Token rewardNum body sent as JSON (snippet-only twin).",
+   "name": "claimRewardPayload",
+   "selector": "ah4@u2151#14",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 14,
+    "refCount": 3,
+    "snippet": "log\"](ah3[\"responseText\"]),ah3[\"responseText\"]=='ok'&&Kq[\"showReward\"](0xa),Kq['MqLFrYpSz']();};var ah4={};ah4['idto'+\"ken\"]=Kq['token'],ah4['rewardNum']=Kq['re"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 14,
+    "refCount": 3,
+    "snippet": "ole[atq(0xc04)](ah3[atq(0xabf)]),ah3[atq(0xabf)]=='ok'&&Kq[atq(0x423)](0xa),Kq['MqLFrYpSz']();};var ah4={};ah4['idto'+atp(0xedb)]=Kq['token'],ah4['rewardNum']=K"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bitwise rotate used in hash compression; SERVED: Bitwise rotate used in hash compression (snippet-only twin).",
+   "name": "rotateRight",
+   "selector": "ah4@u2151#15",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 15,
+    "refCount": 10,
+    "snippet": "g\"](0x24)+Math[\"random\"]()['toString'](0x24)['substr'](0x2);}function a78(ah3){var ats=arY;function ah4(ahr,ahs){return ahr>>>ahs|ahr<<0x20-ahs;}var ah5=Math['p"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 15,
+    "refCount": 10,
+    "snippet": "](0x24)+Math[atr(0x4bd)]()['toString'](0x24)['substr'](0x2);}function a78(ah3){var ats=arY;function ah4(ahr,ahs){return ahr>>>ahs|ahr<<0x20-ahs;}var ah5=Math['p"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Only logged, role unprovable",
+   "selector": "ah4@u2151#16",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Config getKnown rewardedApi chain target; SERVED: Config getKnown rewardedApi chain target (snippet-only twin).",
+   "name": "gptConfigProvider",
+   "selector": "ah4@u2151#17",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 1,
+    "snippet": "a();return;}console['log']('Called\\x20Request\\x20Reward\\x20Ad'),window[\"__VM\"]['push'](function(ah3,ah4){var atx=atw;ah4[\"Config\"][\"getKnown\"]('gptRewarded')[\"r"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 1,
+    "snippet": ";return;}console['log']('Called\\x20Request\\x20Reward\\x20Ad'),window[atw(0xeb)]['push'](function(ah3,ah4){var atx=atw;ah4[atx(0x535)][atx(0x931)]('gptRewarded')["
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused arrow error param, refCount zero",
+   "selector": "ah4@u2151#18",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Link filename appended to location href; SERVED: Link filename appended to location href (snippet-only twin).",
+   "name": "footerLinkHref",
+   "selector": "ah4@u2151#19",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah4",
+   "binding": {
+    "unit": "u2151",
+    "index": 19,
+    "refCount": 1,
+    "snippet": "['width']/0x2,a7m[\"position\"]['y']=a7l['position']['y'],a7f['add'](a7l);let ah3=a3m['element'](a7l),ah4=a7h[a7j[a3M]];var a7n=a3m['element'](a7m);a7n[\"addHoverE"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 19,
+    "refCount": 1,
+    "snippet": "['width']/0x2,a7m[arY(0x215)]['y']=a7l['position']['y'],a7f['add'](a7l);let ah3=a3m['element'](a7l),ah4=a7h[a7j[a3M]];var a7n=a3m['element'](a7m);a7n[arY(0x5f6)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Row number text stored as num; SERVED: Row number text stored as num (snippet-only twin).",
+   "name": "rosterRowNumLabel",
+   "selector": "ah5@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "0,ah3,0x172,44.5,agV==0x0?KP:'#E22',L7);ah4['color']=\"#EEE\",ah4['opacity']=0.04,ah2['add'](ah4);var ah5=Mj(a3k,agZ+0x1+agV*0x6+'.',-0xfa/0x2-0xa,ah3,0x17,'right"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "3,0x172,44.5,agV==0x0?KP:'#E22',L7);ah4['color']=asS(0x5d3),ah4['opacity']=0.04,ah2['add'](ah4);var ah5=Mj(a3k,agZ+0x1+agV*0x6+'.',-0xfa/0x2-0xa,ah3,0x17,'right"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Filled slot shows name and ready state; SERVED: Filled slot shows name and ready state (snippet-only twin).",
+   "name": "filledPartySlot",
+   "selector": "ah5@u2151#1",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 8,
+    "snippet": "a5j[\"ReDNKHkwk\"]=Kq['AhUnLeUeD']?![]:!![];for(var ah3=0x0;ah3<a5w['length'];ah3++){var ah4=a5w[ah3],ah5=a5x[ah3];ah3<ah2[\"length\"]?(ah4[\"r23ZS3L2g\"]['ReDNKHkwk'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 8,
+    "snippet": "}a5j[asX(0xb1d)]=Kq['AhUnLeUeD']?![]:!![];for(var ah3=0x0;ah3<a5w['length'];ah3++){var ah4=a5w[ah3],ah5=a5x[ah3];ah3<ah2[asX(0x3a2)]?(ah4[\"r23ZS3L2g\"]['ReDNKHkw"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Token body sent to claim endpoint; SERVED: Token body sent to claim endpoint (snippet-only twin).",
+   "name": "claimBonusPayload",
+   "selector": "ah5@u2151#2",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "h3),ah4['setRequestHeader']('Content-Type',\"application/json\"),ah4['onload']=function(){a8s();};var ah5={};ah5[\"idto\"+\"ken\"]=Kq['token'],ah4[\"send\"](JSON['strin"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "ST',LD+ah3),ah4['setRequestHeader']('Content-Type',at1(0xe75)),ah4['onload']=function(){a8s();};var ah5={};ah5[at1(0xb38)+at1(0xedb)]=Kq['token'],ah4[at1(0x263)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bar right edge constant in layout math; SERVED: Bar right edge constant in layout math (snippet-only twin).",
+   "name": "progressBarMaxX",
+   "selector": "ah5@u2151#3",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "h4>=ah3[\"needed\"]){a6B['ReDNKHkwk']=![];return;}a6B[\"ReDNKHkwk\"]=!![];ah4==undefined&&(ah4=0x0);var ah5=0x136,ah6=0x0,ah7=0x0,ah8=ah5-ah7,ah9=Math[\"min\"](ah3[\"p"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "4>=ah3[at2(0xdf5)]){a6B['ReDNKHkwk']=![];return;}a6B[at2(0xb1d)]=!![];ah4==undefined&&(ah4=0x0);var ah5=0x136,ah6=0x0,ah7=0x0,ah8=ah5-ah7,ah9=Math[at2(0x40a)](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop counter over challenge arrays; SERVED: Loop counter over challenge arrays (snippet-only twin).",
+   "name": "challengeIndex",
+   "selector": "ah5@u2151#4",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 24,
+    "snippet": "STuiy']=function(){var at8=arY,ah3=null,ah4=0x0;if(a8p==null||Kq['AhUnLeUeD'])ah3=null;else{for(var ah5=0x0;ah5<a8r[\"length\"];ah5++){var ah6=0x0;J3['yEE39Vc650'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 24,
+    "snippet": "STuiy']=function(){var at8=arY,ah3=null,ah4=0x0;if(a8p==null||Kq['AhUnLeUeD'])ah3=null;else{for(var ah5=0x0;ah5<a8r[at8(0x3a2)];ah5++){var ah6=0x0;J3['yEE39Vc65"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bonus status gates claim button display; SERVED: Bonus status gates claim button display (snippet-only twin).",
+   "name": "activeBonusStatus",
+   "selector": "ah5@u2151#6",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 6,
+    "refCount": 5,
+    "snippet": "(a6r),a6r['parent']=null,a6g[\"add\"](a6r),a6m['ReDNKHkwk']=![],a6m[\"r23ZS3L2g\"]['ReDNKHkwk']=![];var ah5=L9;if(L8=='Weekly')ah5=La;else L8=='Event'&&(ah5=Lb);ah5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 6,
+    "refCount": 5,
+    "snippet": "),a6r['parent']=null,a6g[at9(0x8da)](a6r),a6m['ReDNKHkwk']=![],a6m[at9(0xc7e)]['ReDNKHkwk']=![];var ah5=L9;if(L8=='Weekly')ah5=La;else L8=='Event'&&(ah5=Lb);ah5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Head element receives script append; SERVED: Head element receives script append (snippet-only twin).",
+   "name": "documentHead",
+   "selector": "ah5@u2151#7",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "h7){var atc=atb;a6Q=!![];for(var ah8=0x0;ah8<a6R[\"length\"];ah8++){a6R[ah8]();}a6R=null;},![]);const ah5=document['getElementsByTagName'](\"head\")[0x0];ah5['appen"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "){var atc=atb;a6Q=!![];for(var ah8=0x0;ah8<a6R[atc(0x3a2)];ah8++){a6R[ah8]();}a6R=null;},![]);const ah5=document['getElementsByTagName'](atb(0x266))[0x0];ah5['a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR fetches Xsolla token then store; SERVED: XHR fetches Xsolla token then store (snippet-only twin).",
+   "name": "xsollaTokenXhr",
+   "selector": "ah5@u2151#8",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 5,
+    "snippet": "'](\"head\")[0x0];ah5['appendChild'](ah4);}function a6T(ah3){var atd=arY;a6S();var ah4=\"/xsollatoken\",ah5=new XMLHttpRequest();ah5['open']('POST',LD+ah4),ah5['set"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 5,
+    "snippet": "'](atb(0x266))[0x0];ah5['appendChild'](ah4);}function a6T(ah3){var atd=arY;a6S();var ah4=atd(0x113),ah5=new XMLHttpRequest();ah5['open']('POST',LD+ah4),ah5['set"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR fetches Xsolla token then widget; SERVED: XHR fetches Xsolla token then widget (snippet-only twin).",
+   "name": "xsollaTokenXhr",
+   "selector": "ah5@u2151#9",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 9,
+    "refCount": 5,
+    "snippet": "setTimeout(function(){var atg=o;!a6V&&(a6U[\"ReDNKHkwk\"]=![]);},0x1388),a6S();var ah4='/xsollatoken',ah5=new XMLHttpRequest();ah5[\"open\"]('POST',LD+ah4),ah5['set"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 9,
+    "refCount": 5,
+    "snippet": ",setTimeout(function(){var atg=o;!a6V&&(a6U[atg(0xb1d)]=![]);},0x1388),a6S();var ah4='/xsollatoken',ah5=new XMLHttpRequest();ah5[ath(0xdc2)]('POST',LD+ah4),ah5["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Math.pow alias for hash constants; SERVED: Math.pow alias for hash constants (snippet-only twin).",
+   "name": "mathPow",
+   "selector": "ah5@u2151#10",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "str'](0x2);}function a78(ah3){var ats=arY;function ah4(ahr,ahs){return ahr>>>ahs|ahr<<0x20-ahs;}var ah5=Math['pow'],ah6=ah5(0x2,0x20),ah7=\"length\",ah8,ah9,aha='"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "str'](0x2);}function a78(ah3){var ats=arY;function ah4(ahr,ahs){return ahr>>>ahs|ahr<<0x20-ahs;}var ah5=Math['pow'],ah6=ah5(0x2,0x20),ah7=ats(0x3a2),ah8,ah9,aha"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Only logged, role unprovable",
+   "selector": "ah5@u2151#11",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: third ad-success callback param only logged; SERVED: third ad-success callback param only logged (snippet-only twin).",
+   "name": "adSuccessDetail",
+   "selector": "ah5@u2151#12",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "sh'](function(ah3,ah4){var atx=atw;ah4[\"Config\"][\"getKnown\"]('gptRewarded')[\"rewardedApi\"](function(ah5){var aty=atx;ah5[\"hCVrxoItOl\"]();});});}Lg['onclick']=fu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "ush'](function(ah3,ah4){var atx=atw;ah4[atx(0x535)][atx(0x931)]('gptRewarded')[atx(0xa3a)](function(ah5){var aty=atx;ah5[aty(0xc42)]();});});}Lg['onclick']=func"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused mousedown event param never read",
+   "selector": "ah5@u2151#13",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused mouseup event param never read",
+   "selector": "ah5@u2151#14",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: holds window.open handle then focuses it; SERVED: holds window.open handle then focuses it (snippet-only twin).",
+   "name": "popupWindow",
+   "selector": "ah5@u2151#15",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "ize']=0.55,a7C[\"opacity\"]=0.9,a7B['add'](a7C),a7A['add'](a7B),a7y['onclick']=function(){var atD=arY,ah5=window['open'](a7t['link'],'_blank');ah5!=undefined&&ah5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "ze']=0.55,a7C[arY(0x40e)]=0.9,a7B['add'](a7C),a7A['add'](a7B),a7y['onclick']=function(){var atD=arY,ah5=window['open'](a7t['link'],'_blank');ah5!=undefined&&ah5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter over hoverElements array; SERVED: loop counter over hoverElements array (snippet-only twin).",
+   "name": "hoverElemIndex",
+   "selector": "ah5@u2151#16",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 16,
+    "refCount": 3,
+    "snippet": "F=arY;a7J['removeTransitions'](),a7J['transitionNow'](a7J['casual'],a7J['hoverProperties']);for(var ah5=0x0;ah5<a7J['hoverElements'][\"length\"];ah5++){var ah6=a7"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 16,
+    "refCount": 3,
+    "snippet": "F=arY;a7J['removeTransitions'](),a7J['transitionNow'](a7J['casual'],a7J['hoverProperties']);for(var ah5=0x0;ah5<a7J['hoverElements'][atF(0x3a2)];ah5++){var ah6="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rank number split for drawRank display; SERVED: rank number split for drawRank display (snippet-only twin).",
+   "name": "rankValue",
+   "selector": "ah5@u2151#17",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 7,
+    "snippet": "n\"]['x']=(-0x1b8/0x2-0x5)*1.3+(Gj?-0x23:0x0),a7P[\"position\"]['y']=0x15e,Mu[\"add\"](a7P);function a7Q(ah5){var atJ=arY;let ah6=Math['floor'](ah5/0x3),ah7=Math['fl"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 7,
+    "snippet": "x']=(-0x1b8/0x2-0x5)*1.3+(Gj?-0x23:0x0),a7P[arY(0x215)]['y']=0x15e,Mu[arY(0x8da)](a7P);function a7Q(ah5){var atJ=arY;let ah6=Math['floor'](ah5/0x3),ah7=Math['fl"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: stashes animation duration across onclick toggle; SERVED: stashes animation duration across onclick toggle (snippet-only twin).",
+   "name": "savedDuration",
+   "selector": "ah5@u2151#18",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah5",
+   "binding": {
+    "unit": "u2151",
+    "index": 18,
+    "refCount": 1,
+    "snippet": "1,a84,0x0,tc['ixjwTFmpU']),a83=!![]),ab8(),KV('re',a83);};if(KW('re')!=null&&KW('re')==\"false\"){let ah5=a84;a84=0x0,a82[\"onclick\"](),a84=ah5;}a82[\"r23ZS3L2g\"]['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 18,
+    "refCount": 1,
+    "snippet": "84,0x0,tc['ixjwTFmpU']),a83=!![]),ab8(),KV('re',a83);};if(KW('re')!=null&&KW('re')==arY(0x43e)){let ah5=a84;a84=0x0,a82[arY(0xbd0)](),a84=ah5;}a82[arY(0xc7e)]['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: roster name label stored as line name; SERVED: roster name label stored as line name (snippet-only twin).",
+   "name": "nameText",
+   "selector": "ah6@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "3k,agZ+0x1+agV*0x6+'.',-0xfa/0x2-0xa,ah3,0x17,'right');ah5[\"opacity\"]=0.4;!ah0&&ah2[\"add\"](ah5);var ah6=Mj(a3k,agY[agZ],-0xfa/0x2-0xa+0xf,ah3-0x7,0x15,\"left\");a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "+0x1+agV*0x6+'.',-0xfa/0x2-0xa,ah3,0x17,'right');ah5[asS(0x40e)]=0.4;!ah0&&ah2[asS(0x8da)](ah5);var ah6=Mj(a3k,agY[agZ],-0xfa/0x2-0xa+0xf,ah3-0x7,0x15,asS(0xed8"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mode-in-list flag gates team split; SERVED: mode-in-list flag gates team split (snippet-only twin).",
+   "name": "isTeamMode",
+   "selector": "ah6@u2151#1",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 2,
+    "snippet": ")][\"stick\"](),a5K[\"text\"]=FS[Kq['partyInfo']['region']]+\" - \"+Kq['partyInfo'][\"time\"]+'\\x20min';var ah6=a5Y[\"indexOf\"](Kq[\"partyInfo\"][\"mode\"])!=-0x1;if(ah6){a5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 2,
+    "snippet": ",a5K[asX(0x5a6)]=FS[Kq['partyInfo']['region']]+asX(0xf5d)+Kq['partyInfo'][asX(0x35c)]+'\\x20min';var ah6=a5Y[asX(0xfad)](Kq[asX(0xc52)][asX(0x2b1)])!=-0x1;if(ah6"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: zero x-offset added to bar position; SERVED: zero x-offset added to bar position (snippet-only twin).",
+   "name": "barBaseX",
+   "selector": "ah6@u2151#2",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "eeded\"]){a6B['ReDNKHkwk']=![];return;}a6B[\"ReDNKHkwk\"]=!![];ah4==undefined&&(ah4=0x0);var ah5=0x136,ah6=0x0,ah7=0x0,ah8=ah5-ah7,ah9=Math[\"min\"](ah3[\"progress\"]+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "(0xdf5)]){a6B['ReDNKHkwk']=![];return;}a6B[at2(0xb1d)]=!![];ah4==undefined&&(ah4=0x0);var ah5=0x136,ah6=0x0,ah7=0x0,ah8=ah5-ah7,ah9=Math[at2(0x40a)](ah3[at2(0x9"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: global-keys progress added to challenge progress; SERVED: global-keys progress added to challenge progress (snippet-only twin).",
+   "name": "bonusProgress",
+   "selector": "ah6@u2151#3",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 8,
+    "snippet": "ll,ah4=0x0;if(a8p==null||Kq['AhUnLeUeD'])ah3=null;else{for(var ah5=0x0;ah5<a8r[\"length\"];ah5++){var ah6=0x0;J3['yEE39Vc650']['globalKeys']['indexOf'](a8r[ah5]['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 8,
+    "snippet": ",ah4=0x0;if(a8p==null||Kq['AhUnLeUeD'])ah3=null;else{for(var ah5=0x0;ah5<a8r[at8(0x3a2)];ah5++){var ah6=0x0;J3['yEE39Vc650']['globalKeys']['indexOf'](a8r[ah5]['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: y-offset applied to challenge panel positions; SERVED: y-offset applied to challenge panel positions (snippet-only twin).",
+   "name": "layoutOffsetY",
+   "selector": "ah6@u2151#5",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 13,
+    "snippet": "![],a6m[\"r23ZS3L2g\"]['ReDNKHkwk']=!![],L8=='Daily'?a6p['setText']('200'):a6p['setText'](\"500\"));var ah6=-0x5;L8=='Event'&&(ah6-=0xa);Gj&&(ah6+=0x0);var ah7='Dai"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 13,
+    "snippet": "a6m[\"r23ZS3L2g\"]['ReDNKHkwk']=!![],L8=='Daily'?a6p['setText']('200'):a6p['setText'](at9(0x8b)));var ah6=-0x5;L8=='Event'&&(ah6-=0xa);Gj&&(ah6+=0x0);var ah7='Dai"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused script-load handler param never read",
+   "selector": "ah6@u2151#6",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: idtoken payload posted for xsolla token; SERVED: idtoken payload posted for xsolla token (snippet-only twin).",
+   "name": "tokenRequestBody",
+   "selector": "ah6@u2151#7",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "roj'+'ect/'+ah8+'/it'+'ems/virtual_it'+'ems',ahb),ahd=await ahc['json']();console['log'](ahd);};var ah6={};ah6[\"idto\"+\"ken\"]=Kq['token'],ah5['send'](JSON[\"strin"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "roj'+'ect/'+ah8+'/it'+'ems/virtual_it'+'ems',ahb),ahd=await ahc['json']();console['log'](ahd);};var ah6={};ah6[atd(0xb38)+atd(0xedb)]=Kq['token'],ah5['send'](JS"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: idtoken payload posted in payment flow; SERVED: idtoken payload posted in payment flow (snippet-only twin).",
+   "name": "tokenRequestBody",
+   "selector": "ah6@u2151#8",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "ut(function(){a8s();},0xbb8);}),XPayStationWidget['init'](ahk),XPayStationWidget['open']();});};var ah6={};ah6['idto'+\"ken\"]=Kq[\"token\"],ah5[\"send\"](JSON['strin"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "ut(function(){a8s();},0xbb8);}),XPayStationWidget['init'](ahk),XPayStationWidget['open']();});};var ah6={};ah6['idto'+ath(0xedb)]=Kq[ath(0x10b4)],ah5[ath(0x263)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2^32 scale constant in hash function; SERVED: 2^32 scale constant in hash function (snippet-only twin).",
+   "name": "twoPow32",
+   "selector": "ah6@u2151#9",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "tion a78(ah3){var ats=arY;function ah4(ahr,ahs){return ahr>>>ahs|ahr<<0x20-ahs;}var ah5=Math['pow'],ah6=ah5(0x2,0x20),ah7=\"length\",ah8,ah9,aha='',ahb=[],ahc=ah3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "tion a78(ah3){var ats=arY;function ah4(ahr,ahs){return ahr>>>ahs|ahr<<0x20-ahs;}var ah5=Math['pow'],ah6=ah5(0x2,0x20),ah7=ats(0x3a2),ah8,ah9,aha='',ahb=[],ahc=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ad package salt hashed with nonce; SERVED: ad package salt hashed with nonce (snippet-only twin).",
+   "name": "adTokenSalt",
+   "selector": "ah6@u2151#10",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 1,
+    "snippet": "n(ah3,ah4,ah5){var atu=arY;console[\"log\"]('Ad\\x20completed\\x20successfully!',ah4,ah5);if(a79){const ah6='DS_AD_com.tree.de'+\"adshot_2024\",ah7=await a78(a79+':'+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 1,
+    "snippet": ",ah4,ah5){var atu=arY;console[atu(0xc04)]('Ad\\x20completed\\x20successfully!',ah4,ah5);if(a79){const ah6='DS_AD_com.tree.de'+atu(0x6f2),ah7=await a78(a79+':'+ah6"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current hoverElements entry being transitioned; SERVED: current hoverElements entry being transitioned (snippet-only twin).",
+   "name": "hoverElement",
+   "selector": "ah6@u2151#11",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 4,
+    "snippet": "a7J['casual'],a7J['hoverProperties']);for(var ah5=0x0;ah5<a7J['hoverElements'][\"length\"];ah5++){var ah6=a7J['hoverElements'][ah5];ah6['removeTransitions'](),ah6"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 4,
+    "snippet": "J['casual'],a7J['hoverProperties']);for(var ah5=0x0;ah5<a7J['hoverElements'][atF(0x3a2)];ah5++){var ah6=a7J['hoverElements'][ah5];ah6['removeTransitions'](),ah6"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: floor division row index for drawRank; SERVED: floor division row index for drawRank (snippet-only twin).",
+   "name": "rankRow",
+   "selector": "ah6@u2151#12",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "0x5)*1.3+(Gj?-0x23:0x0),a7P[\"position\"]['y']=0x15e,Mu[\"add\"](a7P);function a7Q(ah5){var atJ=arY;let ah6=Math['floor'](ah5/0x3),ah7=Math['floor'](ah5%0x3);MZ['dr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "1.3+(Gj?-0x23:0x0),a7P[arY(0x215)]['y']=0x15e,Mu[arY(0x8da)](a7P);function a7Q(ah5){var atJ=arY;let ah6=Math['floor'](ah5/0x3),ah7=Math['floor'](ah5%0x3);MZ['dr"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sign-in response carrying access or id token; SERVED: sign-in response carrying access or id token (snippet-only twin).",
+   "name": "googleCredential",
+   "selector": "ah6@u2151#13",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 13,
+    "refCount": 6,
+    "snippet": "3k[(\"image\")](Lz,-0x82,-1.5,0x13,0x13)),a8h['text'][\"r23ZS3L2g\"]['position']['x']=0x14;function a8i(ah6){try{let link='/signin2';let xhr=new XMLHttpRequest();xh"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 13,
+    "refCount": 6,
+    "snippet": "[(arY(0xbf7))](Lz,-0x82,-1.5,0x13,0x13)),a8h['text'][arY(0xc7e)]['position']['x']=0x14;function a8i(ah6){try{let link='/signin2';let xhr=new XMLHttpRequest();xh"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: token wrapped into id_token signin call; SERVED: token wrapped into id_token signin call (snippet-only twin).",
+   "name": "googleIdToken",
+   "selector": "ah6@u2151#15",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 15,
+    "refCount": 1,
+    "snippet": "on(ah6){if(ah6){var ah7={};ah7['id_token']=ah6,a8i(ah7);}},window['onGoogleSignInFailure']=function(ah6){console['log'](ah6);},a8h[\"onclick\"]=function(){var atL"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 15,
+    "refCount": 1,
+    "snippet": "on(ah6){if(ah6){var ah7={};ah7['id_token']=ah6,a8i(ah7);}},window['onGoogleSignInFailure']=function(ah6){console['log'](ah6);},a8h[arY(0xbd0)]=function(){var at"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: signin popup width for centering math; SERVED: signin popup width for centering math (snippet-only twin).",
+   "name": "popupWidth",
+   "selector": "ah6@u2151#16",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "n(){var atL=arY;if(![]&&(window['google']==undefined||window[\"google\"][\"accounts\"]==undefined)){var ah6=0x258,ah7=0x2bc,ah8=screen[\"height\"]/0x2-ah7/0x2,ah9=scr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "){var atL=arY;if(![]&&(window['google']==undefined||window[atL(0x6e1)][atL(0x7dc)]==undefined)){var ah6=0x258,ah7=0x2bc,ah8=screen[atL(0x300)]/0x2-ah7/0x2,ah9=s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: coin value displayed and stored; SERVED: coin value displayed and stored (snippet-only twin).",
+   "name": "coinCount",
+   "selector": "ah6@u2151#17",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "estAccessToken();}catch(e){alert('Error loading oauth client');alert(e.toString());}}};function a8j(ah6,ah7){var atM=arY;a8g[\"setText\"](ah7),a8g[\"measureWidth\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "estAccessToken();}catch(e){alert('Error loading oauth client');alert(e.toString());}}};function a8j(ah6,ah7){var atM=arY;a8g[atM(0xcdf)](ah7),a8g[atM(0x3e0)](),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: optional username gates login payload branch; SERVED: optional username gates login payload branch (snippet-only twin).",
+   "name": "usernameOverride",
+   "selector": "ah6@u2151#18",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "=new a3k[(\"text\")]('',-0xbe,0x56,'#EEE','Verdana',0x11,'',0.6,'right'),a8o,a8p,a8q,a8r;function a8s(ah6,ah7){var atN=arY;if(Kq['token']=='')return;var ah8=new X"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 18,
+    "refCount": 2,
+    "snippet": " a3k[(arY(0x5a6))]('',-0xbe,0x56,'#EEE','Verdana',0x11,'',0.6,'right'),a8o,a8p,a8q,a8r;function a8s(ah6,ah7){var atN=arY;if(Kq['token']=='')return;var ah8=new X"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: animated play-button frame updated per tick; SERVED: animated play-button frame updated per tick (snippet-only twin).",
+   "name": "animTarget",
+   "selector": "ah6@u2151#19",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 19,
+    "refCount": 8,
+    "snippet": ",a3z[\"addColorStop\"](Math['min'](a3M/0x64+0.06,0x1),a8u),a8t['push'](a3z);}N9[\"animation\"]=function(ah6,ah7){var atP=arY;ah6['frame']+=ah7/0x12c,ah6[\"gradient\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 19,
+    "refCount": 8,
+    "snippet": ",a8v),a3z[arY(0xb0e)](Math['min'](a3M/0x64+0.06,0x1),a8u),a8t['push'](a3z);}N9[arY(0x4a9)]=function(ah6,ah7){var atP=arY;ah6['frame']+=ah7/0x12c,ah6[atP(0x91c)]"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused play-button click param never read",
+   "selector": "ah6@u2151#20",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: banner bar width synced to camera; SERVED: banner bar width synced to camera (snippet-only twin).",
+   "name": "resizeTarget",
+   "selector": "ah6@u2151#21",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 21,
+    "refCount": 2,
+    "snippet": "a8z),a8z['position']=Kq['nwxurZsxI']['position'];var a8A=0x0,a8B=0xf;a3m['yhikrzIhlK'](a8x,function(ah6){var atR=arY;ah6['width']=Kq[\"WpuCzbdCUqV\"]['position']["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 21,
+    "refCount": 2,
+    "snippet": "a8z),a8z['position']=Kq['nwxurZsxI']['position'];var a8A=0x0,a8B=0xf;a3m['yhikrzIhlK'](a8x,function(ah6){var atR=arY;ah6['width']=Kq[atR(0xfdc)]['position']['x'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tab name uppercased for scene lookup; SERVED: tab name uppercased for scene lookup (snippet-only twin).",
+   "name": "sceneName",
+   "selector": "ah6@u2151#22",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 22,
+    "refCount": 3,
+    "snippet": "HOP',\"LOCKER\",'ACCOUNT',\"LEADERBOARD\"]);var a8F=0x5;Gj&&!Gl&&(a8F=0x5);var a8G;N6=[Mu];function a8H(ah6){var atS=arY;return ah6=ah6['toUpperCase'](),N6[a8E[\"ind"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 22,
+    "refCount": 3,
+    "snippet": "SHOP',arY(0x504),'ACCOUNT',arY(0x5cb)]);var a8F=0x5;Gj&&!Gl&&(a8F=0x5);var a8G;N6=[Mu];function a8H(ah6){var atS=arY;return ah6=ah6['toUpperCase'](),N6[a8E[atS("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: boolean toggles settings overlay branch; SERVED: boolean toggles settings overlay branch (snippet-only twin).",
+   "name": "showSettings",
+   "selector": "ah6@u2151#23",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 23,
+    "refCount": 1,
+    "snippet": "NGS\");a8K['dom']=MU;var a8L=a3m[\"scene\"]();!L1&&(a8L['name']='h');a8L[\"ReDNKHkwk\"]=![];function a8M(ah6){var atT=arY;ah6?(agb(),KI['overlay']=!![]):a9h();a9e['R"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 23,
+    "refCount": 1,
+    "snippet": "8));a8K['dom']=MU;var a8L=a3m[arY(0x39e)]();!L1&&(a8L['name']='h');a8L[arY(0xb1d)]=![];function a8M(ah6){var atT=arY;ah6?(agb(),KI['overlay']=!![]):a9h();a9e['R"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter over prerender canvas list; SERVED: loop counter over prerender canvas list (snippet-only twin).",
+   "name": "canvasIndex",
+   "selector": "ah6@u2151#24",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 24,
+    "refCount": 6,
+    "snippet": ");Kq['bzMrWUeFAa'][\"ReDNKHkwk\"]=!![],Kq['bzMrWUeFAa']['overlay']=!![],a4H['ReDNKHkwk']=!![];for(var ah6=0x0;ah6<a3F['length'];ah6++){var ah7=a3F[ah6]['prerender"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 24,
+    "refCount": 6,
+    "snippet": "]);Kq['bzMrWUeFAa'][atU(0xb1d)]=!![],Kq['bzMrWUeFAa']['overlay']=!![],a4H['ReDNKHkwk']=!![];for(var ah6=0x0;ah6<a3F['length'];ah6++){var ah7=a3F[ah6]['prerender"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: widget visibility toggled by setter; SERVED: widget visibility toggled by setter (snippet-only twin).",
+   "name": "targetWidget",
+   "selector": "ah6@u2151#26",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 26,
+    "refCount": 4,
+    "snippet": "nvas\"][\"style\"];ah7['display']='none',ah7['visibility']='hidden',ah7['opacity']=0x0;}}}function a8O(ah6,ah7){var atV=arY;if(ah6==undefined)return;ah6['ReDNKHkwk"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 26,
+    "refCount": 4,
+    "snippet": "3)][atU(0xa92)];ah7['display']='none',ah7['visibility']='hidden',ah7['opacity']=0x0;}}}function a8O(ah6,ah7){var atV=arY;if(ah6==undefined)return;ah6['ReDNKHkwk"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: category group whose buttons get selected; SERVED: category group whose buttons get selected (snippet-only twin).",
+   "name": "buttonGroup",
+   "selector": "ah6@u2151#27",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah6",
+   "binding": {
+    "unit": "u2151",
+    "index": 27,
+    "refCount": 2,
+    "snippet": "0x0,a8K['dom']['elem']['parentNode']!=null&&a8K[\"dom\"]['elem']['remove']();}var a8S=[];function a8T(ah6,ah7){var atY=arY;for(var ah8=0x0;ah8<ah6['buttons'][\"len"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 27,
+    "refCount": 2,
+    "snippet": "8K['dom']['elem']['parentNode']!=null&&a8K[atX(0x9e6)]['elem']['remove']();}var a8S=[];function a8T(ah6,ah7){var atY=arY;for(var ah8=0x0;ah8<ah6['buttons'][atY("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: x/y pair assigned as Unranked badge scale; SERVED: x/y pair assigned as Unranked badge scale (snippet-only twin).",
+   "name": "unrankedScale",
+   "selector": "a3A@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['l']=0.65,a3x['lineMove']=0.05;var a3y=[a3l,a3o,a3r,a3u,a3x],a3z={};a3z['x']=0x0,a3z['y']=0.07;var a3A={};a3A['x']=1.2,a3A['y']=1.7;var a3B={};a3B['name']=\"Unr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['l']=0.65,a3x['lineMove']=0.05;var a3y=[a3l,a3o,a3r,a3u,a3x],a3z={};a3z['x']=0x0,a3z['y']=0.07;var a3A={};a3A['x']=1.2,a3A['y']=1.7;var a3B={};a3B['name']=aoD("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Unranked config object with path plus hsl; SERVED: Unranked config object with path plus hsl (snippet-only twin).",
+   "name": "unrankedBadge",
+   "selector": "a3B@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "3y=[a3l,a3o,a3r,a3u,a3x],a3z={};a3z['x']=0x0,a3z['y']=0.07;var a3A={};a3A['x']=1.2,a3A['y']=1.7;var a3B={};a3B['name']=\"Unranked\",a3B['path']=[],a3B['move']=a3z"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "3y=[a3l,a3o,a3r,a3u,a3x],a3z={};a3z['x']=0x0,a3z['y']=0.07;var a3A={};a3A['x']=1.2,a3A['y']=1.7;var a3B={};a3B['name']=aoD(0xec0),a3B['path']=[],a3B['move']=a3z"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aliases Unranked badge, fallback for negative ranks; SERVED: aliases Unranked badge, fallback for negative ranks (snippet-only twin).",
+   "name": "fallbackRank",
+   "selector": "a3C@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "B[\"scale\"]=a3A,a3B[\"rotation\"]=-0.05,a3B['h']=0x0,a3B['s']=0x0,a3B['l']=0.3,a3B['lineMove']=0x0;var a3C=a3B,a3D=0.5;a3C['path'][\"push\"](Math[\"cos\"](0x0/0x64*Mat"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "aoD(0xd6)]=a3A,a3B[aoD(0x90d)]=-0.05,a3B['h']=0x0,a3B['s']=0x0,a3B['l']=0.3,a3B['lineMove']=0x0;var a3C=a3B,a3D=0.5;a3C['path'][aoD(0xf1e)](Math[aoD(0xb69)](0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: reused loop counter over arc steps, ranks; SERVED: reused loop counter over arc steps, ranks (snippet-only twin).",
+   "name": "loopStep",
+   "selector": "a3E@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 40,
+    "snippet": "PI']/0x4)*a3D),a3C[\"path\"]['push'](Math[\"sin\"](0x0/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);for(var a3E=0x0;a3E<=0x64;a3E++){a3C[\"path\"]['push'](Math[\"cos\"](a3E"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 40,
+    "snippet": "*a3D),a3C[aoD(0x5a2)]['push'](Math[aoD(0xbd6)](0x0/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);for(var a3E=0x0;a3E<=0x64;a3E++){a3C[aoD(0x5a2)]['push'](Math[aoD(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: builds cached linear gradient from rank colors; SERVED: builds cached linear gradient from rank colors (snippet-only twin).",
+   "name": "buildRankGradient",
+   "selector": "a3F@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "']/0x4)*a3D),a3C['path'][\"push\"](Math['sin'](a3E/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);}function a3F(a3W,a3X){var aoE=aoD;let a3Y=a3X[\"createLinearGradient\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "x4)*a3D),a3C['path'][aoD(0xf1e)](Math['sin'](a3E/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);}function a3F(a3W,a3X){var aoE=aoD;let a3Y=a3X[aoE(0xa66)](-0.7,0x1,0."
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: back-easing with 1.70158 overshoot constant; SERVED: back-easing with 1.70158 overshoot constant (snippet-only twin).",
+   "name": "easeOutBack",
+   "selector": "a3G@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "orStop\"](0.65,a3P(a3W,1.3)),a3Y['addColorStop'](0x1,a3P(a3W,0.7)),a3W['gradient']=a3Y,a3Y;}function a3G(a3W){const a3X=1.70158,a3Y=a3X+0x1;var a3Z=a3W-0x1;retur"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "(0xb0e)](0.65,a3P(a3W,1.3)),a3Y['addColorStop'](0x1,a3P(a3W,0.7)),a3W['gradient']=a3Y,a3Y;}function a3G(a3W){const a3X=1.70158,a3Y=a3X+0x1;var a3Z=a3W-0x1;retur"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over rank entries, path coordinates; SERVED: loop index over rank entries, path coordinates (snippet-only twin).",
+   "name": "pathIdx",
+   "selector": "a3I@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "0x3){a3y[0x0]['path']['push'](Math[\"cos\"](a3E)),a3y[0x0]['path']['push'](Math['sin'](a3E));}for(var a3I=0x2;a3I<0x5;a3I++){for(var a3E=a3y[a3I][\"path\"][\"length\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "a3y[0x0]['path']['push'](Math[aoD(0xb69)](a3E)),a3y[0x0]['path']['push'](Math['sin'](a3E));}for(var a3I=0x2;a3I<0x5;a3I++){for(var a3E=a3y[a3I][aoD(0x5a2)][aoD("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2d context of scratch canvas for stamping; SERVED: 2d context of scratch canvas for stamping (snippet-only twin).",
+   "name": "scratchCtx",
+   "selector": "a3K@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3K",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'x'],a3y[a3E]['path'][a3I+0x1]+=a3y[a3E]['move']['y'];}}var a3J=document['createElement']('canvas'),a3K=a3J['getContext']('2d'),a3L=document[\"createElement\"]('c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'x'],a3y[a3E]['path'][a3I+0x1]+=a3y[a3E]['move']['y'];}}var a3J=document['createElement']('canvas'),a3K=a3J['getContext']('2d'),a3L=document[aoD(0x8b0)]('canvas"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: second scratch canvas hosting the glow pass; SERVED: second scratch canvas hosting the glow pass (snippet-only twin).",
+   "name": "glowCanvas",
+   "selector": "a3L@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3L",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "1]+=a3y[a3E]['move']['y'];}}var a3J=document['createElement']('canvas'),a3K=a3J['getContext']('2d'),a3L=document[\"createElement\"]('canvas'),a3M=a3J['getContext'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "1]+=a3y[a3E]['move']['y'];}}var a3J=document['createElement']('canvas'),a3K=a3J['getContext']('2d'),a3L=document[aoD(0x8b0)]('canvas'),a3M=a3J['getContext']('2d"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount 0 both lineages",
+   "selector": "a3M@u0367#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: copies canvas with optional source-in tint; SERVED: copies canvas with optional source-in tint (snippet-only twin).",
+   "name": "blitCanvas",
+   "selector": "a3N@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3N",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ",a3M=a3J['getContext']('2d');a3J['width']=a3J['height']=0x1,a3L['width']=a3L['height']=0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[\"width\"],a3X['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ",a3M=a3J['getContext']('2d');a3J['width']=a3J['height']=0x1,a3L['width']=a3L['height']=0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[aoF(0xad0)],a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: radial-stamp glow with color plus alpha; SERVED: radial-stamp glow with color plus alpha (snippet-only twin).",
+   "name": "drawGlow",
+   "selector": "a3O@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3O",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "n\"]='source-in',a3Z[\"fillStyle\"]=a3Y,a3Z[\"fillRect\"](0x0,0x0,a3X['width'],a3X[\"height\"]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ")]='source-in',a3Z[aoF(0xfee)]=a3Y,a3Z[aoF(0xbba)](0x0,0x0,a3X['width'],a3X[aoF(0x300)]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: formats rank hsl values as css string; SERVED: formats rank hsl values as css string (snippet-only twin).",
+   "name": "rankHsl",
+   "selector": "a3P@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3P",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "0,0x0,0x0),a3N(a3W,a40),a3J[\"width\"]=a3J['height']=0x1,a3L['width']=a3L['height']=0x1,a40;}function a3P(a3W,a3X){return a3X==undefined&&(a3X=0x1),'hsl(\\x20'+a3W"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "x0,0x0),a3N(a3W,a40),a3J[aoG(0xad0)]=a3J['height']=0x1,a3L['width']=a3L['height']=0x1,a40;}function a3P(a3W,a3X){return a3X==undefined&&(a3X=0x1),'hsl(\\x20'+a3W"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: draws count-driven strokes with easing offsets; SERVED: draws count-driven strokes with easing offsets (snippet-only twin).",
+   "name": "drawRankPips",
+   "selector": "a3Q@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Q",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "+a3W['h']+','+Math['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[\"rotate\"](a3Y);"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "+a3W['h']+','+Math['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[aoH(0x45e)](a3Y"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: renders full rank badge canvas for callers; SERVED: renders full rank badge canvas for callers (snippet-only twin).",
+   "name": "renderRankBadge",
+   "selector": "a3R@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3R",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "45-a44-a46),a3W[\"lineTo\"](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[\"rotate\"](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[\"path\"],a43"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "44-a46),a3W[aoH(0x344)](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[aoH(0x45e)](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[aoI(0x5a2)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: previous Date.now for frame delta computation; SERVED: previous Date.now for frame delta computation (snippet-only twin).",
+   "name": "lastTickStamp",
+   "selector": "a3S@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3S",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ranslate'](0.5,0.5),a44['drawImage'](a3Y,-0.5,-0.5,0x1,0x1),a44['fillStyle']='red';}return a3Y;}var a3S=Date[\"now\"](),a3T=-0.2,a3U=a3T;function a3V(){var aoJ=ao"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ranslate'](0.5,0.5),a44['drawImage'](a3Y,-0.5,-0.5,0x1,0x1),a44['fillStyle']='red';}return a3Y;}var a3S=Date[aoD(0x1c2)](),a3T=-0.2,a3U=a3T;function a3V(){var a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: initial and wrap value of anim phase; SERVED: initial and wrap value of anim phase (snippet-only twin).",
+   "name": "phaseStart",
+   "selector": "a3T@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3T",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "),a44['drawImage'](a3Y,-0.5,-0.5,0x1,0x1),a44['fillStyle']='red';}return a3Y;}var a3S=Date[\"now\"](),a3T=-0.2,a3U=a3T;function a3V(){var aoJ=aoD,a3W=Date['now']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "['drawImage'](a3Y,-0.5,-0.5,0x1,0x1),a44['fillStyle']='red';}return a3Y;}var a3S=Date[aoD(0x1c2)](),a3T=-0.2,a3U=a3T;function a3V(){var aoJ=aoD,a3W=Date['now']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: phase accumulator fed into badge renderer; SERVED: phase accumulator fed into badge renderer (snippet-only twin).",
+   "name": "rankAnimPhase",
+   "selector": "a3U@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3U",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "awImage'](a3Y,-0.5,-0.5,0x1,0x1),a44['fillStyle']='red';}return a3Y;}var a3S=Date[\"now\"](),a3T=-0.2,a3U=a3T;function a3V(){var aoJ=aoD,a3W=Date['now']()-a3S;a3S"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "ge'](a3Y,-0.5,-0.5,0x1,0x1),a44['fillStyle']='red';}return a3Y;}var a3S=Date[aoD(0x1c2)](),a3T=-0.2,a3U=a3T;function a3V(){var aoJ=aoD,a3W=Date['now']()-a3S;a3S"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead uncalled tick, refCount 0 both",
+   "selector": "a3V@u0367#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rank config feeding gradient color stops; SERVED: rank config feeding gradient color stops (snippet-only twin).",
+   "name": "rankCfg",
+   "selector": "a3W@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "x4)*a3D),a3C['path'][\"push\"](Math['sin'](a3E/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);}function a3F(a3W,a3X){var aoE=aoD;let a3Y=a3X[\"createLinearGradient\"](-0."
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "a3D),a3C['path'][aoD(0xf1e)](Math['sin'](a3E/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);}function a3F(a3W,a3X){var aoE=aoD;let a3Y=a3X[aoE(0xa66)](-0.7,0x1,0.7,-0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: easing progress input shifted by one; SERVED: easing progress input shifted by one (snippet-only twin).",
+   "name": "easeT",
+   "selector": "a3W@u0367#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "op\"](0.65,a3P(a3W,1.3)),a3Y['addColorStop'](0x1,a3P(a3W,0.7)),a3W['gradient']=a3Y,a3Y;}function a3G(a3W){const a3X=1.70158,a3Y=a3X+0x1;var a3Z=a3W-0x1;return 0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "0e)](0.65,a3P(a3W,1.3)),a3Y['addColorStop'](0x1,a3P(a3W,0.7)),a3W['gradient']=a3Y,a3Y;}function a3G(a3W){const a3X=1.70158,a3Y=a3X+0x1;var a3Z=a3W-0x1;return 0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blit source canvas read for dimensions; SERVED: blit source canvas read for dimensions (snippet-only twin).",
+   "name": "inputCanvas",
+   "selector": "a3W@u0367#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "=a3J['getContext']('2d');a3J['width']=a3J['height']=0x1,a3L['width']=a3L['height']=0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[\"width\"],a3X['heig"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "=a3J['getContext']('2d');a3J['width']=a3J['height']=0x1,a3L['width']=a3L['height']=0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[aoF(0xad0)],a3X['h"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: glow source canvas saved before rebind; SERVED: glow source canvas saved before rebind (snippet-only twin).",
+   "name": "inputCanvas",
+   "selector": "a3W@u0367#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 4,
+    "refCount": 11,
+    "snippet": "'source-in',a3Z[\"fillStyle\"]=a3Y,a3Z[\"fillRect\"](0x0,0x0,a3X['width'],a3X[\"height\"]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 4,
+    "refCount": 11,
+    "snippet": "source-in',a3Z[aoF(0xfee)]=a3Y,a3Z[aoF(0xbba)](0x0,0x0,a3X['width'],a3X[aoF(0x300)]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rank object read for hsl components; SERVED: rank object read for hsl components (snippet-only twin).",
+   "name": "rankCfg",
+   "selector": "a3W@u0367#6",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "0,0x0),a3N(a3W,a40),a3J[\"width\"]=a3J['height']=0x1,a3L['width']=a3L['height']=0x1,a40;}function a3P(a3W,a3X){return a3X==undefined&&(a3X=0x1),'hsl(\\x20'+a3W['h'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "x0),a3N(a3W,a40),a3J[aoG(0xad0)]=a3J['height']=0x1,a3L['width']=a3L['height']=0x1,a40;}function a3P(a3W,a3X){return a3X==undefined&&(a3X=0x1),'hsl(\\x20'+a3W['h'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2d context receiving rotate stroke calls; SERVED: 2d context receiving rotate stroke calls (snippet-only twin).",
+   "name": "gfxCtx",
+   "selector": "a3W@u0367#7",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 7,
+    "refCount": 8,
+    "snippet": "['h']+','+Math['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[\"rotate\"](a3Y);for("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 7,
+    "refCount": 8,
+    "snippet": "['h']+','+Math['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[aoH(0x45e)](a3Y);fo"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: badge renderer rank object with path; SERVED: badge renderer rank object with path (snippet-only twin).",
+   "name": "rankCfg",
+   "selector": "a3W@u0367#8",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 8,
+    "refCount": 12,
+    "snippet": "44-a46),a3W[\"lineTo\"](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[\"rotate\"](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[\"path\"],a43=a3W"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 8,
+    "refCount": 12,
+    "snippet": "46),a3W[aoH(0x344)](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[aoH(0x45e)](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[aoI(0x5a2)],a43"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: millisecond delta advancing animation phase; SERVED: millisecond delta advancing animation phase (snippet-only twin).",
+   "name": "frameGapMs",
+   "selector": "a3W@u0367#9",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "4['fillStyle']='red';}return a3Y;}var a3S=Date[\"now\"](),a3T=-0.2,a3U=a3T;function a3V(){var aoJ=aoD,a3W=Date['now']()-a3S;a3S=Date['now'](),a3U+=a3W/0x5dc;a3U>0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "llStyle']='red';}return a3Y;}var a3S=Date[aoD(0x1c2)](),a3T=-0.2,a3U=a3T;function a3V(){var aoJ=aoD,a3W=Date['now']()-a3S;a3S=Date['now'](),a3U+=a3W/0x5dc;a3U>0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rank index guarded then named lookup; SERVED: rank index guarded then named lookup (snippet-only twin).",
+   "name": "rankIdx",
+   "selector": "a3W@u0367#12",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0367",
+    "index": 12,
+    "refCount": 8,
+    "snippet": "(a3W));a3W>=0x5&&(a3W=0x4);if(a3W<0x0)return a3P(a3C);return a3P(a3y[a3W]);},'getRankName':function(a3W){var aoK=aoD;a3W%0x1!=0x0&&(window[\"onerror\"]('Rank\\x20i"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 12,
+    "refCount": 8,
+    "snippet": "(a3W));a3W>=0x5&&(a3W=0x4);if(a3W<0x0)return a3P(a3C);return a3P(a3y[a3W]);},'getRankName':function(a3W){var aoK=aoD;a3W%0x1!=0x0&&(window[aoK(0x15f)]('Rank\\x20"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: context creating the rank linear gradient; SERVED: context creating the rank linear gradient (snippet-only twin).",
+   "name": "gfxCtx",
+   "selector": "a3X@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3D),a3C['path'][\"push\"](Math['sin'](a3E/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);}function a3F(a3W,a3X){var aoE=aoD;let a3Y=a3X[\"createLinearGradient\"](-0.7,0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",a3C['path'][aoD(0xf1e)](Math['sin'](a3E/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);}function a3F(a3W,a3X){var aoE=aoD;let a3Y=a3X[aoE(0xa66)](-0.7,0x1,0.7,-0x1);"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blit destination resized then drawn into; SERVED: blit destination resized then drawn into (snippet-only twin).",
+   "name": "destCanvas",
+   "selector": "a3X@u0367#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 9,
+    "snippet": "['getContext']('2d');a3J['width']=a3J['height']=0x1,a3L['width']=a3L['height']=0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[\"width\"],a3X['height']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 9,
+    "snippet": "['getContext']('2d');a3J['width']=a3J['height']=0x1,a3L['width']=a3L['height']=0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[aoF(0xad0)],a3X['heigh"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: glow stamp radius bound from height; SERVED: glow stamp radius bound from height (snippet-only twin).",
+   "name": "glowExtent",
+   "selector": "a3X@u0367#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "rce-in',a3Z[\"fillStyle\"]=a3Y,a3Z[\"fillRect\"](0x0,0x0,a3X['width'],a3X[\"height\"]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "ce-in',a3Z[aoF(0xfee)]=a3Y,a3Z[aoF(0xbba)](0x0,0x0,a3X['width'],a3X[aoF(0x300)]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: lightness multiplier defaulting to one; SERVED: lightness multiplier defaulting to one (snippet-only twin).",
+   "name": "lightMult",
+   "selector": "a3X@u0367#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u0367",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "0),a3N(a3W,a40),a3J[\"width\"]=a3J['height']=0x1,a3L['width']=a3L['height']=0x1,a40;}function a3P(a3W,a3X){return a3X==undefined&&(a3X=0x1),'hsl(\\x20'+a3W['h']+',"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "a3N(a3W,a40),a3J[aoG(0xad0)]=a3J['height']=0x1,a3L['width']=a3L['height']=0x1,a40;}function a3P(a3W,a3X){return a3X==undefined&&(a3X=0x1),'hsl(\\x20'+a3W['h']+',"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: stroke loop count with branch tweaks; SERVED: stroke loop count with branch tweaks (snippet-only twin).",
+   "name": "pipCount",
+   "selector": "a3X@u0367#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u0367",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "]+','+Math['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[\"rotate\"](a3Y);for(var "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "]+','+Math['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[aoH(0x45e)](a3Y);for(va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Passed as stroke-loop count; scales lineWidth; identical both sides; SERVED: Passed as stroke-loop count; scales lineWidth; identical both sides (snippet-only twin).",
+   "name": "strokeCount",
+   "selector": "a3X@u0367#6",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u0367",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "46),a3W[\"lineTo\"](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[\"rotate\"](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[\"path\"],a43=a3W['ro"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 6,
+    "refCount": 4,
+    "snippet": "a3W[aoH(0x344)](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[aoH(0x45e)](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[aoI(0x5a2)],a43=a3W"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Holds createLinearGradient result; four addColorStops; stored on config; SERVED: Holds createLinearGradient result; four addColorStops; stored on config (snippet-only twin).",
+   "name": "rankGradient",
+   "selector": "a3Y@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Y",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "h\"](Math['sin'](a3E/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);}function a3F(a3W,a3X){var aoE=aoD;let a3Y=a3X[\"createLinearGradient\"](-0.7,0x1,0.7,-0x1);return a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "e)](Math['sin'](a3E/0x64*Math['PI']*0x2-Math['PI']/0x4)*a3D);}function a3F(a3W,a3X){var aoE=aoD;let a3Y=a3X[aoE(0xa66)](-0.7,0x1,0.7,-0x1);return a3Y['addColorS"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Optional tint; fillStyle plus fillRect when defined; both sides; SERVED: Optional tint; fillStyle plus fillRect when defined; both sides (snippet-only twin).",
+   "name": "fillColor",
+   "selector": "a3Y@u0367#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Y",
+   "binding": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "tContext']('2d');a3J['width']=a3J['height']=0x1,a3L['width']=a3L['height']=0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[\"width\"],a3X['height']=a3W"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "tContext']('2d');a3J['width']=a3J['height']=0x1,a3L['width']=a3L['height']=0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[aoF(0xad0)],a3X['height']="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Assigned once to glow fillStyle; single use both sides; SERVED: Assigned once to glow fillStyle; single use both sides (snippet-only twin).",
+   "name": "glowColor",
+   "selector": "a3Y@u0367#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Y",
+   "binding": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "in',a3Z[\"fillStyle\"]=a3Y,a3Z[\"fillRect\"](0x0,0x0,a3X['width'],a3X[\"height\"]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a41=a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "n',a3Z[aoF(0xfee)]=a3Y,a3Z[aoF(0xbba)](0x0,0x0,a3X['width'],a3X[aoF(0x300)]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a41=a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Ctx rotate then rotate-back argument; two uses both sides; SERVED: Ctx rotate then rotate-back argument; two uses both sides (snippet-only twin).",
+   "name": "rotateAngle",
+   "selector": "a3Y@u0367#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Y",
+   "binding": {
+    "unit": "u0367",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "'+Math['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[\"rotate\"](a3Y);for(var a42="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "'+Math['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[aoH(0x45e)](a3Y);for(var a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Output canvas; sized, drawn, glow-passed; seventeen uses both sides; SERVED: Output canvas; sized, drawn, glow-passed; seventeen uses both sides (snippet-only twin).",
+   "name": "rankCanvas",
+   "selector": "a3Y@u0367#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Y",
+   "binding": {
+    "unit": "u0367",
+    "index": 5,
+    "refCount": 17,
+    "snippet": "a3W[\"lineTo\"](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[\"rotate\"](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[\"path\"],a43=a3W['rotati"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 5,
+    "refCount": 17,
+    "snippet": "aoH(0x344)](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[aoH(0x45e)](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[aoI(0x5a2)],a43=a3W['ro"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Destination 2d context; clear, draw, tint compositing; both sides; SERVED: Destination 2d context; clear, draw, tint compositing; both sides (snippet-only twin).",
+   "name": "destCtx",
+   "selector": "a3Z@u0367#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Z",
+   "binding": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "0x1;function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[\"width\"],a3X['height']=a3W['height'];var a3Z=a3X['getContext']('2d');a3Z['clearRect'](0x0,0x0,a3X['wi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 5,
+    "snippet": ";function a3N(a3W,a3X,a3Y){var aoF=aoD;a3X['width']=a3W[aoF(0xad0)],a3X['height']=a3W['height'];var a3Z=a3X['getContext']('2d');a3Z['clearRect'](0x0,0x0,a3X['wi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: GlobalAlpha value defaulting one; single use both sides; SERVED: GlobalAlpha value defaulting one; single use both sides (snippet-only twin).",
+   "name": "glowAlpha",
+   "selector": "a3Z@u0367#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Z",
+   "binding": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "a3Z[\"fillStyle\"]=a3Y,a3Z[\"fillRect\"](0x0,0x0,a3X['width'],a3X[\"height\"]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a41=a3W[\"g"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "3Z[aoF(0xfee)]=a3Y,a3Z[aoF(0xbba)](0x0,0x0,a3X['width'],a3X[aoF(0x300)]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a41=a3W[ao"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Boolean selecting straight versus eased strokes; both sides; SERVED: Boolean selecting straight versus eased strokes; both sides (snippet-only twin).",
+   "name": "drawStraight",
+   "selector": "a3Z@u0367#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Z",
+   "binding": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "th['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[\"rotate\"](a3Y);for(var a42=0x0;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "th['round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[aoH(0x45e)](a3Y);for(var a42=0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Defaults one; fed to stroke easing parameter; both sides; SERVED: Defaults one; fed to stroke easing parameter; both sides (snippet-only twin).",
+   "name": "animProgress",
+   "selector": "a3Z@u0367#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Z",
+   "binding": {
+    "unit": "u0367",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "\"lineTo\"](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[\"rotate\"](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[\"path\"],a43=a3W['rotation']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "0x344)](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[aoH(0x45e)](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[aoI(0x5a2)],a43=a3W['rotati"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Silver badge config; listed in rank array; both sides; SERVED: Silver badge config; listed in rank array; both sides (snippet-only twin).",
+   "name": "silverRank",
+   "selector": "a3l@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "{var aoD=ai1,a3i=0x100,a3j={};a3j['x']=0.53,a3j['y']=0.53;var a3k={};a3k['x']=0x0,a3k['y']=0.05;var a3l={};a3l['name']='Silver',a3l['scale']=a3j,a3l[\"move\"]=a3k"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "{var aoD=ai1,a3i=0x100,a3j={};a3j['x']=0.53,a3j['y']=0.53;var a3k={};a3k['x']=0x0,a3k['y']=0.05;var a3l={};a3l['name']='Silver',a3l['scale']=a3j,a3l[aoD(0xf91)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Gold move offset assigned to Gold config; both sides; SERVED: Gold move offset assigned to Gold config; both sides (snippet-only twin).",
+   "name": "goldMove",
+   "selector": "a3m@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "l[\"move\"]=a3k,a3l['rotation']=-0.25,a3l['h']=0x0,a3l['s']=0x0,a3l['l']=0.7,a3l[\"lineMove\"]=0.05;var a3m={};a3m['x']=0x0,a3m['y']=0.25;var a3n={};a3n['x']=1.35,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "D(0xf91)]=a3k,a3l['rotation']=-0.25,a3l['h']=0x0,a3l['s']=0x0,a3l['l']=0.7,a3l[aoD(0x8e8)]=0.05;var a3m={};a3m['x']=0x0,a3m['y']=0.25;var a3n={};a3n['x']=1.35,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Gold scale assigned to Gold config; both sides; SERVED: Gold scale assigned to Gold config; both sides (snippet-only twin).",
+   "name": "goldScale",
+   "selector": "a3n@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "l['h']=0x0,a3l['s']=0x0,a3l['l']=0.7,a3l[\"lineMove\"]=0.05;var a3m={};a3m['x']=0x0,a3m['y']=0.25;var a3n={};a3n['x']=1.35,a3n['y']=1.5;var a3o={};a3o['name']='Go"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "l['h']=0x0,a3l['s']=0x0,a3l['l']=0.7,a3l[aoD(0x8e8)]=0.05;var a3m={};a3m['x']=0x0,a3m['y']=0.25;var a3n={};a3n['x']=1.35,a3n['y']=1.5;var a3o={};a3o['name']='Go"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Gold badge config; listed in rank array; both sides; SERVED: Gold badge config; listed in rank array; both sides (snippet-only twin).",
+   "name": "goldRank",
+   "selector": "a3o@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "3l[\"lineMove\"]=0.05;var a3m={};a3m['x']=0x0,a3m['y']=0.25;var a3n={};a3n['x']=1.35,a3n['y']=1.5;var a3o={};a3o['name']='Gold',a3o['path']=[-0.21,0.28,0.21,0.28,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "3l[aoD(0x8e8)]=0.05;var a3m={};a3m['x']=0x0,a3m['y']=0.25;var a3n={};a3n['x']=1.35,a3n['y']=1.5;var a3o={};a3o['name']='Gold',a3o['path']=[-0.21,0.28,0.21,0.28,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Platinum move offset assigned to Platinum config; both sides; SERVED: Platinum move offset assigned to Platinum config; both sides (snippet-only twin).",
+   "name": "platinumMove",
+   "selector": "a3p@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ",a3o['move']=a3m,a3o[\"scale\"]=a3n,a3o['h']=50.6,a3o['s']=0x1,a3o['l']=0.62,a3o[\"lineMove\"]=0.29;var a3p={};a3p['x']=0x0,a3p['y']=0x0;var a3q={};a3q['x']=1.3,a3q"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "3o['move']=a3m,a3o[aoD(0xd6)]=a3n,a3o['h']=50.6,a3o['s']=0x1,a3o['l']=0.62,a3o[aoD(0x8e8)]=0.29;var a3p={};a3p['x']=0x0,a3p['y']=0x0;var a3q={};a3q['x']=1.3,a3q"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Platinum scale assigned to Platinum config; both sides; SERVED: Platinum scale assigned to Platinum config; both sides (snippet-only twin).",
+   "name": "platinumScale",
+   "selector": "a3q@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['h']=50.6,a3o['s']=0x1,a3o['l']=0.62,a3o[\"lineMove\"]=0.29;var a3p={};a3p['x']=0x0,a3p['y']=0x0;var a3q={};a3q['x']=1.3,a3q['y']=1.5;var a3r={};a3r['name']=\"Pla"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['h']=50.6,a3o['s']=0x1,a3o['l']=0.62,a3o[aoD(0x8e8)]=0.29;var a3p={};a3p['x']=0x0,a3p['y']=0x0;var a3q={};a3q['x']=1.3,a3q['y']=1.5;var a3r={};a3r['name']=aoD("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Platinum badge config; listed in rank array; both sides; SERVED: Platinum badge config; listed in rank array; both sides (snippet-only twin).",
+   "name": "platinumRank",
+   "selector": "a3r@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 10,
+    "snippet": ",a3o[\"lineMove\"]=0.29;var a3p={};a3p['x']=0x0,a3p['y']=0x0;var a3q={};a3q['x']=1.3,a3q['y']=1.5;var a3r={};a3r['name']=\"Platinum\",a3r[\"path\"]=[0x0,-0.36,0.12,-0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 10,
+    "snippet": ",a3o[aoD(0x8e8)]=0.29;var a3p={};a3p['x']=0x0,a3p['y']=0x0;var a3q={};a3q['x']=1.3,a3q['y']=1.5;var a3r={};a3r['name']=aoD(0xd28),a3r[aoD(0x5a2)]=[0x0,-0.36,0.1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Diamond scale assigned to Diamond config; both sides; SERVED: Diamond scale assigned to Diamond config; both sides (snippet-only twin).",
+   "name": "diamondScale",
+   "selector": "a3t@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['h']=0xb7,a3r['s']=0x1,a3r['l']=0.7,a3r['lineMove']=0.05;var a3s={};a3s['x']=0x0,a3s['y']=0.03;var a3t={};a3t['x']=1.3,a3t['y']=1.5;var a3u={};a3u[\"name\"]='Dia"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['h']=0xb7,a3r['s']=0x1,a3r['l']=0.7,a3r['lineMove']=0.05;var a3s={};a3s['x']=0x0,a3s['y']=0.03;var a3t={};a3t['x']=1.3,a3t['y']=1.5;var a3u={};a3u[aoD(0x9ec)]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Diamond badge config; listed in rank array; both sides; SERVED: Diamond badge config; listed in rank array; both sides (snippet-only twin).",
+   "name": "diamondRank",
+   "selector": "a3u@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "a3r['lineMove']=0.05;var a3s={};a3s['x']=0x0,a3s['y']=0.03;var a3t={};a3t['x']=1.3,a3t['y']=1.5;var a3u={};a3u[\"name\"]='Diamond',a3u['path']=[0x0,-0.3,0.3,-0.3,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "a3r['lineMove']=0.05;var a3s={};a3s['x']=0x0,a3s['y']=0.03;var a3t={};a3t['x']=1.3,a3t['y']=1.5;var a3u={};a3u[aoD(0x9ec)]='Diamond',a3u['path']=[0x0,-0.3,0.3,-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Champ scale assigned to Champ config; both sides; SERVED: Champ scale assigned to Champ config; both sides (snippet-only twin).",
+   "name": "champScale",
+   "selector": "a3w@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'h']=0xd7,a3u['s']=0x1,a3u['l']=0.6,a3u['lineMove']=-0.15;var a3v={};a3v['x']=0x0,a3v['y']=0.07;var a3w={};a3w['x']=1.2,a3w['y']=1.7;var a3x={};a3x['name']=\"Cha"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'h']=0xd7,a3u['s']=0x1,a3u['l']=0.6,a3u['lineMove']=-0.15;var a3v={};a3v['x']=0x0,a3v['y']=0.07;var a3w={};a3w['x']=1.2,a3w['y']=1.7;var a3x={};a3x['name']=aoD("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Champ badge config; listed in rank array; both sides; SERVED: Champ badge config; listed in rank array; both sides (snippet-only twin).",
+   "name": "champRank",
+   "selector": "a3x@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "3u['lineMove']=-0.15;var a3v={};a3v['x']=0x0,a3v['y']=0.07;var a3w={};a3w['x']=1.2,a3w['y']=1.7;var a3x={};a3x['name']=\"Champ\",a3x[\"path\"]=[0x0,-0.3,0.09,-0.07,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "3u['lineMove']=-0.15;var a3v={};a3v['x']=0x0,a3v['y']=0.07;var a3w={};a3w['x']=1.2,a3w['y']=1.7;var a3x={};a3x['name']=aoD(0x47a),a3x[aoD(0x5a2)]=[0x0,-0.3,0.09"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Saved source canvas; drawn, copied back, returned; both sides; SERVED: Saved source canvas; drawn, copied back, returned; both sides (snippet-only twin).",
+   "name": "srcCanvas",
+   "selector": "a40@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a40",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "a3Y,a3Z[\"fillRect\"](0x0,0x0,a3X['width'],a3X[\"height\"]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a41=a3W[\"getContext\"]('2d')"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "Y,a3Z[aoF(0xbba)](0x0,0x0,a3X['width'],a3X[aoF(0x300)]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a41=a3W[aoG(0x616)]('2d');a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Copied to stroke coordinate base; single use; both sides; SERVED: Copied to stroke coordinate base; single use; both sides (snippet-only twin).",
+   "name": "strokeHalfLen",
+   "selector": "a40@u0367#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a40",
+   "binding": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[\"rotate\"](a3Y);for(var a42=0x0;a42<"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "round'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[aoH(0x45e)](a3Y);for(var a42=0x0;a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Defaults one; sizes canvas and blur radius; both sides; SERVED: Defaults one; sizes canvas and blur radius; both sides (snippet-only twin).",
+   "name": "canvasScale",
+   "selector": "a40@u0367#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a40",
+   "binding": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "eTo\"](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[\"rotate\"](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[\"path\"],a43=a3W['rotation']||-0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "4)](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[aoH(0x45e)](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[aoI(0x5a2)],a43=a3W['rotation']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Scratch layer 2d context; six compositing uses; both sides; SERVED: Scratch layer 2d context; six compositing uses; both sides (snippet-only twin).",
+   "name": "scratchCtx2",
+   "selector": "a41@u0367#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": " [variant scratchCtx2: nested-scope capture vs a3K scratchCtx, dry-run resolution-equivalence]",
+   "token": "a41",
+   "binding": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "width'],a3X[\"height\"]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a41=a3W[\"getContext\"]('2d');a3N(a3W,a3J);var a42=[-0x1,-0x1,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "dth'],a3X[aoF(0x300)]));}function a3O(a3W,a3X,a3Y,a3Z){var aoG=aoD,a40=a3W,a3W=a3L;a3N(a40,a3W);var a41=a3W[aoG(0x616)]('2d');a3N(a3W,a3J);var a42=[-0x1,-0x1,0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Feeds per-stroke easing math; caller passes animation progress; SERVED: Feeds per-stroke easing math; caller passes animation progress (snippet-only twin).",
+   "name": "easeProgress",
+   "selector": "a41@u0367#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a41",
+   "binding": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "d'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[\"rotate\"](a3Y);for(var a42=0x0;a42<a3X;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "d'](a3W['s']*0x64)+'%,'+Math['round'](a3W['l']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[aoH(0x45e)](a3Y);for(var a42=0x0;a42<a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Ternary selecting stronger versus lighter glow call; both sides; SERVED: Ternary selecting stronger versus lighter glow call; both sides (snippet-only twin).",
+   "name": "strongGlow",
+   "selector": "a41@u0367#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a41",
+   "binding": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "](a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[\"rotate\"](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[\"path\"],a43=a3W['rotation']||-0.25;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "a45-a44+a46,-a45-a44-a46);}a3W['stroke']();}a3W[aoH(0x45e)](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[aoI(0x5a2)],a43=a3W['rotation']||-0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over stagger thresholds; five uses both sides; SERVED: Loop index over stagger thresholds; five uses both sides (snippet-only twin).",
+   "name": "threshIdx",
+   "selector": "a41@u0367#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a41",
+   "binding": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 5,
+    "snippet": ";a3X++){for(var a3Y=0x0;a3Y<0x3;a3Y++){var a3Z=0x1,a40=[0.1,0.3,0.5];a40['splice'](a3Y+0x1);for(var a41=0x0;a41<a40[\"length\"];a41++){a40[a41]-=0.1,a3U>a40[a41]&"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 5,
+    "snippet": ";a3X++){for(var a3Y=0x0;a3Y<0x3;a3Y++){var a3Z=0x1,a40=[0.1,0.3,0.5];a40['splice'](a3Y+0x1);for(var a41=0x0;a41<a40[aoJ(0x3a2)];a41++){a40[a41]-=0.1,a3U>a40[a41"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding; offset array assigned never read.",
+   "selector": "a42@u0367#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Stroke loop counter with per-index easing offset; both sides; SERVED: Stroke loop counter with per-index easing offset; both sides (snippet-only twin).",
+   "name": "strokeIdx",
+   "selector": "a42@u0367#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a42",
+   "binding": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "']*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[\"rotate\"](a3Y);for(var a42=0x0;a42<a3X;a42++){var a43=a42;if(a3X==0x1){}if(a3X==0x2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "*a3X*0x64)+'%\\x20)';}function a3Q(a3W,a3X,a3Y,a3Z,a40,a41){var aoH=aoD;a3W[aoH(0x45e)](a3Y);for(var a42=0x0;a42<a3X;a42++){var a43=a42;if(a3X==0x1){}if(a3X==0x2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Badge path array traced with moveTo/lineTo; both sides; SERVED: Badge path array traced with moveTo/lineTo; both sides (snippet-only twin).",
+   "name": "rankPath",
+   "selector": "a42@u0367#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a42",
+   "binding": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 19,
+    "snippet": "5-a44-a46);}a3W['stroke']();}a3W[\"rotate\"](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[\"path\"],a43=a3W['rotation']||-0.25;if(a3Y==undefined"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 2,
+    "refCount": 19,
+    "snippet": "a44-a46);}a3W['stroke']();}a3W[aoH(0x45e)](-a3Y);}function a3R(a3W,a3X,a3Y,a3Z,a40,a41){var aoI=aoD,a42=a3W[aoI(0x5a2)],a43=a3W['rotation']||-0.25;if(a3Y==undef"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Random angle driving cos/sin translate jitter; both sides; SERVED: Random angle driving cos/sin translate jitter; both sides (snippet-only twin).",
+   "name": "jitterAngle",
+   "selector": "a42@u0367#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a42",
+   "binding": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "Y+0x1);for(var a41=0x0;a41<a40[\"length\"];a41++){a40[a41]-=0.1,a3U>a40[a41]&&(a3Z=a3U-a40[a41]);}var a42=Math['random']()*Math['PI']*0x2;a3Z=0x1-a3Z*0x7;(a3Z<0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0367",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "0x1);for(var a41=0x0;a41<a40[aoJ(0x3a2)];a41++){a40[a41]-=0.1,a3U>a40[a41]&&(a3Z=a3U-a40[a41]);}var a42=Math['random']()*Math['PI']*0x2;a3Z=0x1-a3Z*0x7;(a3Z<0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Stored mobilelayout string parsed into custom buttons; SERVED: Stored mobilelayout string parsed into custom buttons (snippet-only twin).",
+   "name": "mobileLayoutData",
+   "selector": "agK@u2151#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agK",
+   "binding": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 5,
+    "snippet": "3ZS3L2g\"]['position']['oldSet'](agV,agW);},a3F['push'](agN),agN;}function a3H(){var asf=arY;try{var agK=KW(\"mobilelayout\");if(!agK)return;agK=JSON['parse'](agK)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 5,
+    "snippet": "3ZS3L2g\"]['position']['oldSet'](agV,agW);},a3F['push'](agN),agN;}function a3H(){var asf=arY;try{var agK=KW(asf(0x584));if(!agK)return;agK=JSON['parse'](agK);var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Label forwarded into button constructor call; SERVED: Label forwarded into button constructor call (snippet-only twin).",
+   "name": "buttonLabel",
+   "selector": "agK@u2151#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agK",
+   "binding": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 1,
+    "snippet": "nction(){var asg=arY;KV('mobilelayout',JSON[\"stringify\"](Kq[\"customMobileButtons\"]));};function a3I(agK,agL,agM,agN){var ash=arY;let agO=new a3k[(\"object\")](),a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 1,
+    "snippet": "Buttons']=function(){var asg=arY;KV('mobilelayout',JSON[asg(0xc6)](Kq[asg(0x10d9)]));};function a3I(agK,agL,agM,agN){var ash=arY;let agO=new a3k[(ash(0x478))]()"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Label text passed to centered text maker; SERVED: Label text passed to centered text maker (snippet-only twin).",
+   "name": "buttonLabel",
+   "selector": "agK@u2151#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agK",
+   "binding": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "=0x1,agO['opacity']=0x1,agO[\"button\"]['add'](agO['button'][\"strokeRectangle2\"]);},agO;}function a3J(agK,agL,agM,agN){var ask=arY;agL=agL||0x168,agM=agM||0x3c,ag"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "city']=0x1,agO['opacity']=0x1,agO[asj(0x917)]['add'](agO['button'][asj(0x836)]);},agO;}function a3J(agK,agL,agM,agN){var ask=arY;agL=agL||0x168,agM=agM||0x3c,ag"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Image element loading weapon webp icons; SERVED: Image element loading weapon webp icons (snippet-only twin).",
+   "name": "weaponIconImg",
+   "selector": "agK@u2151#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agK",
+   "binding": {
+    "unit": "u2151",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "agO;}Nl={};var a3K={},a3L=['ar','smg','awp',\"shotgun\"];for(var a3M=0x0;a3M<a3L['length'];a3M++){let agK=document['createElement']('img'),agL=document['createEle"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "gO;}Nl={};var a3K={},a3L=['ar','smg','awp',arY(0x2ba)];for(var a3M=0x0;a3M<a3L['length'];a3M++){let agK=document['createElement']('img'),agL=document['createEle"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Copy target receiving source x/y positions; SERVED: Copy target receiving source x/y positions (snippet-only twin).",
+   "name": "destPos",
+   "selector": "agV@u2151#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 2,
+    "snippet": "function agS(){a4V['pANxEEFMRM'](),a4V['nub']['pANxEEFMRM']();}agS(),Kq[\"gQGKqXXItwE\"]=function(agU,agV,agW){var asI=arY;if(!a4I['ReDNKHkwk'])return;HG(a4V,'opa"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 2,
+    "snippet": "];}function agS(){a4V['pANxEEFMRM'](),a4V['nub']['pANxEEFMRM']();}agS(),Kq[arY(0xb04)]=function(agU,agV,agW){var asI=arY;if(!a4I['ReDNKHkwk'])return;HG(a4V,'opa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Timestamp driving overlay rotation animation; SERVED: Timestamp driving overlay rotation animation (snippet-only twin).",
+   "name": "elapsedMs",
+   "selector": "agV@u2151#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "](a3k[\"getImage\"]('mobile/phone.png'),0x0,0x0,0x1f4,0x1f4);a57['add'](a59),Kq['JXdHtdIgu']=function(agV){var asN=arY;if(!a56['ReDNKHkwk'])return;a58[\"rotation\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "](a3k[arY(0xb18)]('mobile/phone.png'),0x0,0x0,0x1f4,0x1f4);a57['add'](a59),Kq['JXdHtdIgu']=function(agV){var asN=arY;if(!a56['ReDNKHkwk'])return;a58[asN(0x90d)]"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused callback parameter, refCount zero",
+   "selector": "agV@u2151#13",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Delta time scaling particle motion each tick; SERVED: Delta time scaling particle motion each tick (snippet-only twin).",
+   "name": "deltaTime",
+   "selector": "agV@u2151#14",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "7,a5d['yoghpvfQE']['x']*=1.5,a5d[\"yoghpvfQE\"]['y']*=2.5,a5a[\"push\"](a5d);}Kq['qzRfUWgFbX']=function(agV){var asP=arY;if(a5a['length']==0x0)return;if(!a5a[0x0][\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "5d['yoghpvfQE']['x']*=1.5,a5d[arY(0x48b)]['y']*=2.5,a5a[arY(0xf1e)](a5d);}Kq['qzRfUWgFbX']=function(agV){var asP=arY;if(a5a['length']==0x0)return;if(!a5a[0x0][a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: New x offset shifting panel positions; SERVED: New x offset shifting panel positions (snippet-only twin).",
+   "name": "newOffsetX",
+   "selector": "agV@u2151#15",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 15,
+    "refCount": 1,
+    "snippet": "['position'];var a5g=new a3k['object']();a5g['position']=Kq[\"WpuCzbdCUqV\"]['position'];function a5h(agV){var asQ=arY,agW=a5i;a5i=agV,a5j['position']['x']-=agW,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 15,
+    "refCount": 1,
+    "snippet": "a)]['position'];var a5g=new a3k['object']();a5g['position']=Kq[arY(0xfdc)]['position'];function a5h(agV){var asQ=arY,agW=a5i;a5i=agV,a5j['position']['x']-=agW,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Clicked class button supplying classIndex flag; SERVED: Clicked class button supplying classIndex flag (snippet-only twin).",
+   "name": "clickedButton",
+   "selector": "agV@u2151#16",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "assIndex']=a3M,a5o['requestPointerLock']=!![],Kq[\"gIiaUTFZqG\"]['push'](a5o),a5o[\"onclick\"]=function(agV){var asR=arY;L3[agV['classIndex']]['button']['onclick']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "lassIndex']=a3M,a5o['requestPointerLock']=!![],Kq[arY(0x3b0)]['push'](a5o),a5o[arY(0xbd0)]=function(agV){var asR=arY;L3[agV['classIndex']]['button']['onclick']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Team index selecting Alpha/Bravo colors; SERVED: Team index selecting Alpha/Bravo colors (snippet-only twin).",
+   "name": "teamIndex",
+   "selector": "agV@u2151#17",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 4,
+    "snippet": "5u;a5v[\"spacing\"]=0x10e;var a5w=[],a5x=[],a5y,a5z=new a3k[(\"object\")]();Mu['add'](a5z);function a5A(agV){var asS=arY,agW=new a3k['object']();agW['header']=new a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 4,
+    "snippet": "a5v[arY(0xbea)]=0x10e;var a5w=[],a5x=[],a5y,a5z=new a3k[(arY(0x478))]();Mu['add'](a5z);function a5A(agV){var asS=arY,agW=new a3k['object']();agW['header']=new a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Payload carrying swap flag to server; SERVED: Payload carrying swap flag to server (snippet-only twin).",
+   "name": "swapRequest",
+   "selector": "agV@u2151#18",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "d'](a5M[\"r23ZS3L2g\"]),Mu[\"fAdWFGQLqES\"](a5M),a5L[\"push\"](a5M),a5M['onclick']=function(){var asU=arY,agV={};agV['swap']=!![],Kq[\"WSHKjcKdJ\"](agV);};var a5N=new a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "'](a5M[\"r23ZS3L2g\"]),Mu[arY(0xb05)](a5M),a5L[arY(0xf1e)](a5M),a5M['onclick']=function(){var asU=arY,agV={};agV['swap']=!![],Kq[asU(0x257)](agV);};var a5N=new a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Ticked container mirroring anchor x position; SERVED: Ticked container mirroring anchor x position (snippet-only twin).",
+   "name": "tickedElement",
+   "selector": "agV@u2151#19",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 19,
+    "refCount": 1,
+    "snippet": "[]);};var a5O=new a3k[(\"object\")]();a5O['position']['x']=-0xfc+0x780,a3m['yhikrzIhlK'](a5O,function(agV){agV['position']['x']=Kq['WpuCzbdCUqV']['position']['x']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 19,
+    "refCount": 1,
+    "snippet": ");};var a5O=new a3k[(arY(0x478))]();a5O['position']['x']=-0xfc+0x780,a3m['yhikrzIhlK'](a5O,function(agV){agV['position']['x']=Kq['WpuCzbdCUqV']['position']['x']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Map name from list for icon; SERVED: Map name from list for icon (snippet-only twin).",
+   "name": "mapName",
+   "selector": "agV@u2151#20",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agV",
+   "binding": {
+    "unit": "u2151",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "\"length\"];a3M++){var a5S=new a3D('',0xa0,0x55,0x16);a5S['roundRectObj'][\"shown\"][\"opacity\"]=0.8;let agV=FO[a3M];a5S[\"text\"][\"r23ZS3L2g\"][\"add\"](new a3k['image']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "3a2)];a3M++){var a5S=new a3D('',0xa0,0x55,0x16);a5S['roundRectObj'][arY(0x66d)][arY(0x40e)]=0.8;let agV=FO[a3M];a5S[arY(0x5a6)][\"r23ZS3L2g\"][arY(0x8da)](new a3k"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Down-state size style for button; SERVED: Down-state size style for button (snippet-only twin).",
+   "name": "buttonDownStyle",
+   "selector": "agW@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "['ixjwTFmpU'];Gj&&(agO[\"text\"][\"easeType\"]=tc[\"ixjwTFmpU\"]);agO['addHoverElement'](agO['text']);var agW={};return agW['size']=Kq[\"buttonDownSize\"],agO['JaFgtqWx"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "xjwTFmpU'];Gj&&(agO[as6(0x5a6)][as6(0xb4c)]=tc[as6(0x386)]);agO['addHoverElement'](agO['text']);var agW={};return agW['size']=Kq[as6(0x7d6)],agO['JaFgtqWxnF']=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Touch event supplying changedTouches coordinates; SERVED: Touch event supplying changedTouches coordinates (snippet-only twin).",
+   "name": "touchEvent",
+   "selector": "agW@u2151#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "L2g\"]),agN[\"r23ZS3L2g\"]['opacity']=0x1,agN[\"shouldDisregard\"]=!![],agN['onmousedown2']=function(agV,agW){var asc=asb;if(KG){var agX={};agX['button']=agN,agX['st"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "][asb(0xc7e)]),agN[asb(0xc7e)]['opacity']=0x1,agN[asb(0x6ef)]=!![],agN['onmousedown2']=function(agV,agW){var asc=asb;if(KG){var agX={};agX['button']=agN,agX['st"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused handler parameter, refCount zero",
+   "selector": "agW@u2151#2",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Squared hit radius threshold for collision; SERVED: Squared hit radius threshold for collision (snippet-only twin).",
+   "name": "hitRadiusSq",
+   "selector": "agW@u2151#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "eCollision\"]=function(agV){var asd=asb;if(agV[\"foundButton\"]&&agV[\"foundButton\"]!=agN)return![];var agW=agT;KG&&(agW=Math['pow'](agL/0x2,0x2));if((agV['x']-agN["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "gS;agN[asb(0x25f)]=function(agV){var asd=asb;if(agV[asd(0xc72)]&&agV[asd(0xc72)]!=agN)return![];var agW=agT;KG&&(agW=Math['pow'](agL/0x2,0x2));if((agV['x']-agN["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: New y coordinate stored to oldPos; SERVED: New y coordinate stored to oldPos (snippet-only twin).",
+   "name": "newY",
+   "selector": "agW@u2151#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "on\"][\"oldSet\"]=agN[\"r23ZS3L2g\"]['position']['set'],agN[\"r23ZS3L2g\"]['position'][\"set\"]=function(agV,agW){var ase=asb;agN[\"oldPos\"]['x']=agV,agN['oldPos']['y']=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "asb(0xc02)]=agN[asb(0xc7e)]['position']['set'],agN[asb(0xc7e)]['position'][asb(0xc71)]=function(agV,agW){var ase=asb;agN[ase(0xc68)]['x']=agV,agN['oldPos']['y']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Down-state size style for button; SERVED: Down-state size style for button (snippet-only twin).",
+   "name": "buttonDownStyle",
+   "selector": "agW@u2151#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "[\"opacity\"]=0x0,agT[\"r23ZS3L2g\"]['size']=agT['hidden']['size'];!Gj&&agO[\"addHoverElement\"](agT);var agW={};return agW[\"size\"]=Kq['buttonDownSize'],agO['JaFgtqWx"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "S3L2g\"][ask(0x40e)]=0x0,agT[ask(0xc7e)]['size']=agT['hidden']['size'];!Gj&&agO[ask(0x5f6)](agT);var agW={};return agW[ask(0xe8c)]=Kq['buttonDownSize'],agO['JaFg"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Flag fading joystick out when set; SERVED: Flag fading joystick out when set (snippet-only twin).",
+   "name": "hideFlag",
+   "selector": "agW@u2151#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "tion agS(){a4V['pANxEEFMRM'](),a4V['nub']['pANxEEFMRM']();}agS(),Kq[\"gQGKqXXItwE\"]=function(agU,agV,agW){var asI=arY;if(!a4I['ReDNKHkwk'])return;HG(a4V,'opacity"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "unction agS(){a4V['pANxEEFMRM'](),a4V['nub']['pANxEEFMRM']();}agS(),Kq[arY(0xb04)]=function(agU,agV,agW){var asI=arY;if(!a4I['ReDNKHkwk'])return;HG(a4V,'opacity"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over drifting particles; SERVED: Loop index over drifting particles (snippet-only twin).",
+   "name": "particleIndex",
+   "selector": "agW@u2151#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "ar asP=arY;if(a5a['length']==0x0)return;if(!a5a[0x0][\"parent\"]['ReDNKHkwk'])return;agV/=0xa;for(var agW=0x0;agW<a5a[\"length\"];agW++){var agX=a5a[agW];agX[\"posit"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 3,
+    "snippet": " asP=arY;if(a5a['length']==0x0)return;if(!a5a[0x0][asP(0x8cb)]['ReDNKHkwk'])return;agV/=0xa;for(var agW=0x0;agW<a5a[asP(0x3a2)];agW++){var agX=a5a[agW];agX[asP("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Previous x offset subtracted before shift; SERVED: Previous x offset subtracted before shift (snippet-only twin).",
+   "name": "prevOffsetX",
+   "selector": "agW@u2151#9",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 9,
+    "refCount": 2,
+    "snippet": "a5g=new a3k['object']();a5g['position']=Kq[\"WpuCzbdCUqV\"]['position'];function a5h(agV){var asQ=arY,agW=a5i;a5i=agV,a5j['position']['x']-=agW,a5j['position']['x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 9,
+    "refCount": 2,
+    "snippet": "ar a5g=new a3k['object']();a5g['position']=Kq[arY(0xfdc)]['position'];function a5h(agV){var asQ=arY,agW=a5i;a5i=agV,a5j['position']['x']-=agW,a5j['position']['x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Loop counter over fade scenes, ad slots; SERVED: Loop counter over fade scenes, ad slots (snippet-only twin).",
+   "name": "entryIndex",
+   "selector": "agW@u2151#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 7,
+    "snippet": "[],Mn[\"tGTnWzZUhv\"]=!![],HL(Mq[\"r23ZS3L2g\"],'opacity',Mq[\"r23ZS3L2g\"][\"opacity\"],0x0,0x258);for(var agW=0x0;agW<N6['length'];agW++){var agX=N6[agW];agX[\"r23ZS3L"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 7,
+    "snippet": "!![],Mn[asR(0xb64)]=!![],HL(Mq[\"r23ZS3L2g\"],'opacity',Mq[asR(0xc7e)][asR(0x40e)],0x0,0x258);for(var agW=0x0;agW<N6['length'];agW++){var agX=N6[agW];agX[asR(0xc7"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Team panel container with header lines; SERVED: Team panel container with header lines (snippet-only twin).",
+   "name": "teamPanel",
+   "selector": "agW@u2151#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 8,
+    "snippet": "=0x10e;var a5w=[],a5x=[],a5y,a5z=new a3k[(\"object\")]();Mu['add'](a5z);function a5A(agV){var asS=arY,agW=new a3k['object']();agW['header']=new a3k[(\"object\")](),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 12,
+    "refCount": 8,
+    "snippet": "x10e;var a5w=[],a5x=[],a5y,a5z=new a3k[(arY(0x478))]();Mu['add'](a5z);function a5A(agV){var asS=arY,agW=new a3k['object']();agW['header']=new a3k[(asS(0x478))]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Payload carrying map choice to server; SERVED: Payload carrying map choice to server (snippet-only twin).",
+   "name": "mapRequest",
+   "selector": "agW@u2151#13",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 13,
+    "refCount": 2,
+    "snippet": "city\"]=0x1,a5S['text'][\"hidden\"]=a5T,a5S['xhOdNSwMWQd'](!![]),a5S['onclick']=function(){var asV=arY,agW={};agW[\"map\"]=agV,Kq[\"WSHKjcKdJ\"](agW);},a5O['add'](a5S["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 13,
+    "refCount": 2,
+    "snippet": "0e)]=0x1,a5S['text'][arY(0x59d)]=a5T,a5S['xhOdNSwMWQd'](!![]),a5S['onclick']=function(){var asV=arY,agW={};agW[asV(0xff7)]=agV,Kq[asV(0x257)](agW);},a5O['add']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Mode name from list for button; SERVED: Mode name from list for button (snippet-only twin).",
+   "name": "modeName",
+   "selector": "agW@u2151#14",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agW",
+   "binding": {
+    "unit": "u2151",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "'center');a5R[\"opacity\"]=0.8,a5O[\"add\"](a5R);var a5U=[];for(var a3M=0x0;a3M<FP['length'];a3M++){let agW=FP[a3M],agX=new a3I(agW,0xa0,0x2f,0x18),agY=agX[\"button\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "r');a5R[arY(0x40e)]=0.8,a5O[arY(0x8da)](a5R);var a5U=[];for(var a3M=0x0;a3M<FP['length'];a3M++){let agW=FP[a3M],agX=new a3I(agW,0xa0,0x2f,0x18),agY=agX[arY(0x91"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: New label text forwarded to setText; SERVED: New label text forwarded to setText (snippet-only twin).",
+   "name": "newText",
+   "selector": "agX@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "['hidden']['size'],agO['roundRectObj']=agQ;!Gj&&agO['addHoverElement'](agQ);agO['setText']=function(agX){var as7=as6;agO[\"text\"][\"r23ZS3L2g\"]['setText'](agX);};"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "['hidden']['size'],agO['roundRectObj']=agQ;!Gj&&agO['addHoverElement'](agQ);agO['setText']=function(agX){var as7=as6;agO[as7(0x5a6)][\"r23ZS3L2g\"]['setText'](agX"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Press object supplying down-state style; SERVED: Press object supplying down-state style (snippet-only twin).",
+   "name": "pressState",
+   "selector": "agX@u2151#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "j&&(agO['JaFgtqWxnF'][\"size\"]=a3w),agO['LdYCqNCVkiq']=agO[\"oNdPPkNKFp\"],agO['onmousedown']=function(agX){var as8=as6;agO['oNdPPkNKFp']=Kq['buttonMouseDownTime']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "&(agO['JaFgtqWxnF'][as6(0xe8c)]=a3w),agO['LdYCqNCVkiq']=agO[as6(0xa8a)],agO['onmousedown']=function(agX){var as8=as6;agO['oNdPPkNKFp']=Kq['buttonMouseDownTime']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Click object supplying casual style; SERVED: Click object supplying casual style (snippet-only twin).",
+   "name": "clickState",
+   "selector": "agX@u2151#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "PPkNKFp']=Kq['buttonMouseDownTime'],agO[\"HDpQschGFg\"](agX['JaFgtqWxnF']);},agO['onclick2']=function(agX){var as9=as6;agO['HDpQschGFg'](agX['casual']),agO['oNdPP"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "NdPPkNKFp']=Kq['buttonMouseDownTime'],agO[as8(0xac6)](agX['JaFgtqWxnF']);},agO['onclick2']=function(agX){var as9=as6;agO['HDpQschGFg'](agX['casual']),agO['oNdPP"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Release object supplying casual style; SERVED: Release object supplying casual style (snippet-only twin).",
+   "name": "releaseState",
+   "selector": "agX@u2151#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "6;agO['HDpQschGFg'](agX['casual']),agO['oNdPPkNKFp']=agO[\"LdYCqNCVkiq\"];},agO[\"onmouseup\"]=function(agX){agO['HDpQschGFg'](agX['casual']),agO['oNdPPkNKFp']=agO["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "9=as6;agO['HDpQschGFg'](agX['casual']),agO['oNdPPkNKFp']=agO[as9(0x775)];},agO[as6(0x1f7)]=function(agX){agO['HDpQschGFg'](agX['casual']),agO['oNdPPkNKFp']=agO["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Touch tracking record pushed to list; SERVED: Touch tracking record pushed to list (snippet-only twin).",
+   "name": "touchRecord",
+   "selector": "agX@u2151#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 5,
+    "snippet": "city']=0x1,agN[\"shouldDisregard\"]=!![],agN['onmousedown2']=function(agV,agW){var asc=asb;if(KG){var agX={};agX['button']=agN,agX['startX']=agW['chan'+'gedTouche"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 4,
+    "refCount": 5,
+    "snippet": ")]['opacity']=0x1,agN[asb(0x6ef)]=!![],agN['onmousedown2']=function(agV,agW){var asc=asb;if(KG){var agX={};agX['button']=agN,agX['startX']=agW['chan'+'gedTouche"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over active touch list; SERVED: Loop index over active touch list (snippet-only twin).",
+   "name": "touchListIndex",
+   "selector": "agX@u2151#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 5,
+    "snippet": "![]);agN['onmousedown3']&&agN[\"onmousedown3\"]();},agN['onmouseup']=function(agV,agW){if(KG){for(var agX=0x0;agX<KH['length'];agX++){KH[agX]['button']==agN&&(KH["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 5,
+    "snippet": "Gt=!![]);agN['onmousedown3']&&agN[asc(0x756)]();},agN['onmouseup']=function(agV,agW){if(KG){for(var agX=0x0;agX<KH['length'];agX++){KH[agX]['button']==agN&&(KH["
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead hover flag set once never read",
+   "selector": "agX@u2151#6",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: onmousedown event param read for button state; SERVED: onmousedown event param read for button state (snippet-only twin).",
+   "name": "downEvent",
+   "selector": "agX@u2151#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "j&&(agO[\"JaFgtqWxnF\"]['size']=a3w),agO[\"LdYCqNCVkiq\"]=agO[\"oNdPPkNKFp\"],agO['onmousedown']=function(agX){var asl=ask;agO['oNdPPkNKFp']=Kq['buttonMouseDownTime']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "]=agW,Gj&&(agO[ask(0x8b4)]['size']=a3w),agO[ask(0x775)]=agO[ask(0xa8a)],agO['onmousedown']=function(agX){var asl=ask;agO['oNdPPkNKFp']=Kq['buttonMouseDownTime']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: onclick2 event param read for casual state; SERVED: onclick2 event param read for casual state (snippet-only twin).",
+   "name": "clickEvent",
+   "selector": "agX@u2151#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "PPkNKFp']=Kq['buttonMouseDownTime'],agO[\"HDpQschGFg\"](agX[\"JaFgtqWxnF\"]);},agO['onclick2']=function(agX){agO['HDpQschGFg'](agX['casual']),agO['oNdPPkNKFp']=agO["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "'oNdPPkNKFp']=Kq['buttonMouseDownTime'],agO[asl(0xac6)](agX[asl(0x8b4)]);},agO['onclick2']=function(agX){agO['HDpQschGFg'](agX['casual']),agO['oNdPPkNKFp']=agO["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: onmouseup event param read for casual state; SERVED: onmouseup event param read for casual state (snippet-only twin).",
+   "name": "upEvent",
+   "selector": "agX@u2151#9",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "){agO['HDpQschGFg'](agX['casual']),agO['oNdPPkNKFp']=agO['LdYCqNCVkiq'];},agO['onmouseup']=function(agX){var asm=ask;agO[\"HDpQschGFg\"](agX['casual']),agO[\"oNdPP"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "){agO['HDpQschGFg'](agX['casual']),agO['oNdPPkNKFp']=agO['LdYCqNCVkiq'];},agO['onmouseup']=function(agX){var asm=ask;agO[asm(0xac6)](agX['casual']),agO[asm(0xa8"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Object.keys of customMobileButtons matched to buttons; SERVED: Object.keys of customMobileButtons matched to buttons (snippet-only twin).",
+   "name": "customButtonNames",
+   "selector": "agX@u2151#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "U-agW,Nd['xhOdNSwMWQd'](!![]),a4U['position']['x']=Kq['qIySEZgti'][\"MBbucSOqeMu\"]-0x1f4*agU-agW;let agX=Object['keys'](Kq[\"customMobileButtons\"]);for(var agV=0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "*agU-agW,Nd['xhOdNSwMWQd'](!![]),a4U['position']['x']=Kq['qIySEZgti'][asG(0xe8e)]-0x1f4*agU-agW;let agX=Object['keys'](Kq[asG(0x10d9)]);for(var agV=0x0;agV<agX["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 0x7d radius clamp for joystick nub displacement; SERVED: 0x7d radius clamp for joystick nub displacement (snippet-only twin).",
+   "name": "nubMaxRadius",
+   "selector": "agX@u2151#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agX",
+   "binding": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "]['y']/=a4V['size'];agU==agV&&(a4V['nub']['position']['x']=0x0,a4V['nub'][\"position\"]['y']=0x0);var agX=0x7d;a4V[\"nub\"]['position']['RalTGIIEA']()>agX*agX&&a4V["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "]['y']/=a4V['size'];agU==agV&&(a4V['nub']['position']['x']=0x0,a4V['nub'][asI(0x215)]['y']=0x0);var agX=0x7d;a4V[asI(0xe9c)]['position']['RalTGIIEA']()>agX*agX&"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Settings button on pause menu opens panel; SERVED: Settings button on pause menu opens panel (snippet-only twin).",
+   "name": "pauseSettingsButton",
+   "selector": "agc@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agc",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "[\"getActiveSettingsCategory\"]()==\"crosshair\",ag9(!![]);}ag9(!![]),a8U(KI,Gj&&!Gl?-0x113:-0x104);var agc=new a3D(\"Settings\",afU,afW,afT);agc[\"r23ZS3L2g\"]['positi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "=undefined&&window[awR(0xebd)]()==awR(0xc4e),ag9(!![]);}ag9(!![]),a8U(KI,Gj&&!Gl?-0x113:-0x104);var agc=new a3D(arY(0x7fb),afU,afW,afT);agc[\"r23ZS3L2g\"]['positi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tweens rank glow and redraws rank badge; SERVED: tweens rank glow and redraws rank badge (snippet-only twin).",
+   "name": "animateRankBadge",
+   "selector": "agu@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agu",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "](ahh/0xa)),ags['setText']('/\\x2010')):ags['setText']('/\\x20100');}agt(0xe),Np[\"add\"](a5b);function agu(){var ax1=arY;HL(age,'a',-0.5,0x1,0x9c4,0x190,tc[\"linear"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "/0xa)),ags['setText']('/\\x2010')):ags['setText']('/\\x20100');}agt(0xe),Np[arY(0x8da)](a5b);function agu(){var ax1=arY;HL(age,'a',-0.5,0x1,0x9c4,0x190,tc[ax1(0xc"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: builds rank name plus subrank numeral suffix; SERVED: builds rank name plus subrank numeral suffix (snippet-only twin).",
+   "name": "formatRankLabel",
+   "selector": "agv@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agv",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "d,agi['size']=0x1+ahh*0.02,MZ['drawRank'](age['rank'],age['subrank'],agh,0x2,age['a']);});}function agv(ahh){var ax3=arY,ahi='';for(var ahj=0x0;ahj<Math[\"floor\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "d,agi['size']=0x1+ahh*0.02,MZ['drawRank'](age['rank'],age['subrank'],agh,0x2,age['a']);});}function agv(ahh){var ax3=arY,ahi='';for(var ahj=0x0;ahj<Math[ax3(0x5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sets rank label text color and state; SERVED: sets rank label text color and state (snippet-only twin).",
+   "name": "updateRankLabel",
+   "selector": "agw@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agw",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ahh%0x3)+0x1;ahj++){ahi+='I';}return MZ[\"getRankName\"](Math[\"floor\"](ahh/0x3))+'\\x20'+ahi;}function agw(ahh){var ax4=arY;agl['setText'](agv(ahh)),agl['fillStyle"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ahh%0x3)+0x1;ahj++){ahi+='I';}return MZ[ax3(0xcff)](Math[ax3(0x5ce)](ahh/0x3))+'\\x20'+ahi;}function agw(ahh){var ax4=arY;agl['setText'](agv(ahh)),agl['fillStyle"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: validates ranks then runs promotion demotion sequence; SERVED: validates ranks then runs promotion demotion sequence (snippet-only twin).",
+   "name": "showRankTransition",
+   "selector": "agx@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agx",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "loor\"](ahh/0x3)),age['rank']=Math[\"floor\"](ahh/0x3),age['subrank']=Math['floor'](ahh%0x3);}function agx(ahh,ahi){var ax5=arY;isNaN(ahh)&&window[\"onerror\"]('oldR"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "e)](ahh/0x3)),age['rank']=Math[ax4(0x5ce)](ahh/0x3),age['subrank']=Math['floor'](ahh%0x3);}function agx(ahh,ahi){var ax5=arY;isNaN(ahh)&&window[ax5(0x15f)]('old"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scene hosting leaderboard container and overlays; SERVED: scene hosting leaderboard container and overlays (snippet-only twin).",
+   "name": "leaderboardScene",
+   "selector": "agy@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agy",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "ity\",0x0,0.5,0x3e8,0x0,tc[\"easeOutQuart\"]));});}!L1&&setTimeout(function(){var ahh=0x9;},0x7d0);var agy=a3m[\"scene\"](),agz={};function agA(){var ax9=arY;agz['my"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "7(0x40e),0x0,0.5,0x3e8,0x0,tc[ax7(0x224)]));});}!L1&&setTimeout(function(){var ahh=0x9;},0x7d0);var agy=a3m[arY(0x39e)](),agz={};function agA(){var ax9=arY;agz["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bag of leaderboard background borders gradients bars; SERVED: bag of leaderboard background borders gradients bars (snippet-only twin).",
+   "name": "leaderboardParts",
+   "selector": "agz@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "agz",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 102,
+    "snippet": "0x0,tc[\"easeOutQuart\"]));});}!L1&&setTimeout(function(){var ahh=0x9;},0x7d0);var agy=a3m[\"scene\"](),agz={};function agA(){var ax9=arY;agz['myBorder'][\"opacity\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 102,
+    "snippet": ",0x0,tc[ax7(0x224)]));});}!L1&&setTimeout(function(){var ahh=0x9;},0x7d0);var agy=a3m[arY(0x39e)](),agz={};function agA(){var ax9=arY;agz['myBorder'][ax9(0x40e)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: false flag gating centered roster text layout; SERVED: false flag gating centered roster text layout (snippet-only twin).",
+   "name": "centeredRoster",
+   "selector": "ah0@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah0",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ave25',\"SweptThrone\",'Jay','Feared','Blue','SillyAW'];for(var agZ=0x0;agZ<agY['length'];agZ++){}var ah0=![],ah1=[];agW['lines']=ah1;for(var agZ=0x0;agZ<0x6;agZ+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ieSave25',asS(0xed5),'Jay','Feared','Blue','SillyAW'];for(var agZ=0x0;agZ<agY['length'];agZ++){}var ah0=![],ah1=[];agW['lines']=ah1;for(var agZ=0x0;agZ<0x6;agZ+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-option time limit widget wrapper in loop; SERVED: per-option time limit widget wrapper in loop (snippet-only twin).",
+   "name": "timeLimitWidget",
+   "selector": "ah0@u2151#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah0",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "R['opacity']=0.8,a5O[\"add\"](a5R);var a5W=[];for(var a3M=0x0;a3M<FQ['length'];a3M++){let agZ=FQ[a3M],ah0=new a3I(agZ+'\\x20min',0x64,0x2f,0x16),ah1=ah0['button'];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "acity']=0.8,a5O[arY(0x8da)](a5R);var a5W=[];for(var a3M=0x0;a3M<FQ['length'];a3M++){let agZ=FQ[a3M],ah0=new a3I(agZ+'\\x20min',0x64,0x2f,0x16),ah1=ah0['button'];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: roster line records array pushed per row; SERVED: roster line records array pushed per row (snippet-only twin).",
+   "name": "rosterLines",
+   "selector": "ah1@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah1",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "SweptThrone\",'Jay','Feared','Blue','SillyAW'];for(var agZ=0x0;agZ<agY['length'];agZ++){}var ah0=![],ah1=[];agW['lines']=ah1;for(var agZ=0x0;agZ<0x6;agZ++){var a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "',asS(0xed5),'Jay','Feared','Blue','SillyAW'];for(var agZ=0x0;agZ<agY['length'];agZ++){}var ah0=![],ah1=[];agW['lines']=ah1;for(var agZ=0x0;agZ<0x6;agZ++){var a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner button selecting time limit option; SERVED: inner button selecting time limit option (snippet-only twin).",
+   "name": "timeLimitButton",
+   "selector": "ah1@u2151#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah1",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "];for(var a3M=0x0;a3M<FQ['length'];a3M++){let agZ=FQ[a3M],ah0=new a3I(agZ+'\\x20min',0x64,0x2f,0x16),ah1=ah0['button'];ah1[\"r23ZS3L2g\"][\"position\"]['set'](-0x154"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "];for(var a3M=0x0;a3M<FQ['length'];a3M++){let agZ=FQ[a3M],ah0=new a3I(agZ+'\\x20min',0x64,0x2f,0x16),ah1=ah0['button'];ah1[arY(0xc7e)][arY(0x215)]['set'](-0x154+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time payload object sent to server setter; SERVED: time payload object sent to server setter (snippet-only twin).",
+   "name": "timePayload",
+   "selector": "ah2@u2151#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah2",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "city']=0x1,ah1['text']['hidden']=a5X,ah1[\"xhOdNSwMWQd\"](!![]),ah1['onclick']=function(){var asW=arY,ah2={};ah2[\"time\"]=agZ,Kq[\"WSHKjcKdJ\"](ah2);},a5O['add'](ah0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "opacity']=0x1,ah1['text']['hidden']=a5X,ah1[arY(0xddf)](!![]),ah1['onclick']=function(){var asW=arY,ah2={};ah2[asW(0x35c)]=agZ,Kq[asW(0x257)](ah2);},a5O['add']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: party member list rendered into roster slots; SERVED: party member list rendered into roster slots (snippet-only twin).",
+   "name": "partyMembers",
+   "selector": "ah2@u2151#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah2",
+   "binding": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "P['push'](ah1),a5W['push'](ah0);}var a5Y=['FFA',\"Confirm\"];Kq['updateParty']=function(){var asX=arY,ah2=Kq['aMWaisFtZ'];for(var ah3=0x0;ah3<a5B['lines']['length"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "['push'](ah1),a5W['push'](ah0);}var a5Y=['FFA',arY(0x514)];Kq['updateParty']=function(){var asX=arY,ah2=Kq['aMWaisFtZ'];for(var ah3=0x0;ah3<a5B['lines']['length"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: captured Daily Weekly Event tab key; SERVED: captured Daily Weekly Event tab key (snippet-only twin).",
+   "name": "challengeTab",
+   "selector": "ah2@u2151#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah2",
+   "binding": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 5,
+    "snippet": "LqES'](a6l),a6l[\"r23ZS3L2g\"]['parent']=null,a6g['add'](a6l[\"r23ZS3L2g\"]),Mm[\"fAdWFGQLqES\"](a6l);let ah2=a6i[a3M];if(a3M==0x1)a6j=a6l;else a3M==0x2&&(a6k=a6l);a6"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 5,
+    "refCount": 5,
+    "snippet": "FGQLqES'](a6l),a6l[\"r23ZS3L2g\"]['parent']=null,a6g['add'](a6l[\"r23ZS3L2g\"]),Mm[arY(0xb05)](a6l);let ah2=a6i[a3M];if(a3M==0x1)a6j=a6l;else a3M==0x2&&(a6k=a6l);a6"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: shared loop index across updateParty loops; SERVED: shared loop index across updateParty loops (snippet-only twin).",
+   "name": "partyLoopIdx",
+   "selector": "ah3@u2151#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 85,
+    "snippet": "h0);}var a5Y=['FFA',\"Confirm\"];Kq['updateParty']=function(){var asX=arY,ah2=Kq['aMWaisFtZ'];for(var ah3=0x0;ah3<a5B['lines']['length'];ah3++){a5B[\"lines\"][ah3]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 1,
+    "refCount": 85,
+    "snippet": "0);}var a5Y=['FFA',arY(0x514)];Kq['updateParty']=function(){var asX=arY,ah2=Kq['aMWaisFtZ'];for(var ah3=0x0;ah3<a5B['lines']['length'];ah3++){a5B[asX(0xa6d)][ah"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: index halting prior tab progress tweens; SERVED: index halting prior tab progress tweens (snippet-only twin).",
+   "name": "priorTabIdx",
+   "selector": "ah3@u2151#17",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 3,
+    "snippet": "M==0x2&&(a6k=a6l);a6l[\"onclick\"]=function(){var at0=arY;if(ah2==L8)return;if(a8o!=undefined)for(var ah3=0x0;ah3<a8o[\"length\"];ah3++){HG(a8o[ah3],\"progress\");}va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 17,
+    "refCount": 3,
+    "snippet": "==0x2&&(a6k=a6l);a6l[arY(0xbd0)]=function(){var at0=arY;if(ah2==L8)return;if(a8o!=undefined)for(var ah3=0x0;ah3<a8o[at0(0x3a2)];ah3++){HG(a8o[ah3],at0(0x995));}"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: claim endpoint path for bonus request; SERVED: claim endpoint path for bonus request (snippet-only twin).",
+   "name": "claimPath",
+   "selector": "ah3@u2151#18",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 18,
+    "refCount": 1,
+    "snippet": "(!![]),a6m['ReDNKHkwk']=![],a6m[\"r23ZS3L2g\"]['ReDNKHkwk']=![],a6m['onclick']=function(){var at1=arY,ah3='/claim'+L8,ah4=new XMLHttpRequest();ah4[\"open\"]('POST',"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 18,
+    "refCount": 1,
+    "snippet": "(!![]),a6m['ReDNKHkwk']=![],a6m[\"r23ZS3L2g\"]['ReDNKHkwk']=![],a6m['onclick']=function(){var at1=arY,ah3='/claim'+L8,ah4=new XMLHttpRequest();ah4[at1(0xdc2)]('PO"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: challenge record with text progress needed fields; SERVED: challenge record with text progress needed fields (snippet-only twin).",
+   "name": "challenge",
+   "selector": "ah3@u2151#19",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 19,
+    "refCount": 9,
+    "snippet": ",0.3));var a6A=a6r['DgJwEtWhIm'][a6r[\"DgJwEtWhIm\"]['length']-0x1];}var a6B=a6r;a6r=a6q;function a6C(ah3,ah4){var at2=arY;Kq['nwxurZsxI'][\"afCJVYrCGK\"]=!![];if(a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 19,
+    "refCount": 9,
+    "snippet": "E',0.3));var a6A=a6r['DgJwEtWhIm'][a6r[arY(0x152)]['length']-0x1];}var a6B=a6r;a6r=a6q;function a6C(ah3,ah4){var at2=arY;Kq['nwxurZsxI'][at2(0xd69)]=!![];if(ah3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: completion banner text override for challenge toast; SERVED: completion banner text override for challenge toast (snippet-only twin).",
+   "name": "completionText",
+   "selector": "ah3@u2151#20",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "32);a6G['opacity']=0.7,a6D['add'](a6G),a6D['opacity']=0x0;var a6H=a6D[\"position\"]['x'];function a6I(ah3){var at3=arY;ah3!=undefined&&(a6F['text']=ah3),HG(a6D[\"p"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "32);a6G['opacity']=0.7,a6D['add'](a6G),a6D['opacity']=0x0;var a6H=a6D[arY(0x215)]['x'];function a6I(ah3){var at3=arY;ah3!=undefined&&(a6F['text']=ah3),HG(a6D[at"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: selected active challenge plus bonus progress; SERVED: selected active challenge plus bonus progress (snippet-only twin).",
+   "name": "activeChallenge",
+   "selector": "ah3@u2151#21",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 21,
+    "refCount": 4,
+    "snippet": "a6K[\"needed\"]=0x28,a6K['reward']=0xfa,a6C(a6K);var a6L=null;Kq['CQoHUSTuiy']=function(){var at8=arY,ah3=null,ah4=0x0;if(a8p==null||Kq['AhUnLeUeD'])ah3=null;else"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 21,
+    "refCount": 4,
+    "snippet": "K[arY(0xdf5)]=0x28,a6K['reward']=0xfa,a6C(a6K);var a6L=null;Kq['CQoHUSTuiy']=function(){var at8=arY,ah3=null,ah4=0x0;if(a8p==null||Kq['AhUnLeUeD'])ah3=null;else"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: challenge list rendered as tab cards; SERVED: challenge list rendered as tab cards (snippet-only twin).",
+   "name": "tabChallengeList",
+   "selector": "ah3@u2151#22",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 22,
+    "refCount": 4,
+    "snippet": "ah5]['localCompleted']=!![],a6I(a8p[ah5]['text']));}}a6C(ah3,ah4);},L8='Daily';var a6r;function a6M(ah3,ah4){var at9=arY;a6r!=undefined&&(Mk(a6r),a5f[\"remove\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 22,
+    "refCount": 4,
+    "snippet": "ah5]['localCompleted']=!![],a6I(a8p[ah5]['text']));}}a6C(ah3,ah4);},L8='Daily';var a6r;function a6M(ah3,ah4){var at9=arY;a6r!=undefined&&(Mk(a6r),a5f[at9(0x944)"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "already renamed to imageSrc in prior wave",
+   "selector": "ah3@u2151#24",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead param copied only into write-only ah9",
+   "selector": "ah3@u2151#26",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sku string passed as purchase itemId; SERVED: sku string passed as purchase itemId (snippet-only twin).",
+   "name": "productSku",
+   "selector": "ah3@u2151#27",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 27,
+    "refCount": 1,
+    "snippet": "3D('Test\\x20Payment',0xfa,0x3c);a6W['onclick']=function(){var atf=arY;a6X(\"gems850\");};function a6X(ah3){var ath=arY;a6U['ReDNKHkwk']=!![],setTimeout(function()"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 27,
+    "refCount": 1,
+    "snippet": "D('Test\\x20Payment',0xfa,0x3c);a6W['onclick']=function(){var atf=arY;a6X(atf(0x6a8));};function a6X(ah3){var ath=arY;a6U['ReDNKHkwk']=!![],setTimeout(function()"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: container repositioned by layout callback; SERVED: container repositioned by layout callback (snippet-only twin).",
+   "name": "layoutTarget",
+   "selector": "ah3@u2151#28",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 28,
+    "refCount": 1,
+    "snippet": "(Le[\"opacity\"]=0x0);Lh=new a3k[(\"object\")]();a74&&(a6O['add'](Lh),Gj&&a3m['yhikrzIhlK'](Lh,function(ah3){var atn=arY;ah3['position']['x']=-a6O[\"position\"]['x']+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 28,
+    "refCount": 1,
+    "snippet": "[arY(0x40e)]=0x0);Lh=new a3k[(arY(0x478))]();a74&&(a6O['add'](Lh),Gj&&a3m['yhikrzIhlK'](Lh,function(ah3){var atn=arY;ah3['position']['x']=-a6O[atn(0x215)]['x']+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: XHR posting claimReward token request; SERVED: XHR posting claimReward token request (snippet-only twin).",
+   "name": "rewardRequest",
+   "selector": "ah3@u2151#29",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ah3",
+   "binding": {
+    "unit": "u2151",
+    "index": 29,
+    "refCount": 6,
+    "snippet": "MWQd\"](!![]),KE=function(){var atp=arY;console[\"log\"]('Requesting\\x20Reward\\x20From\\x20Server');var ah3=new XMLHttpRequest();ah3[\"open\"](\"POST\",LD+'/claimReward"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 29,
+    "refCount": 6,
+    "snippet": "](!![]),KE=function(){var atp=arY;console[atp(0xc04)]('Requesting\\x20Reward\\x20From\\x20Server');var ah3=new XMLHttpRequest();ah3[atp(0xdc2)](atp(0xc01),LD+'/cla"
+   }
+  }
+ ]
+}

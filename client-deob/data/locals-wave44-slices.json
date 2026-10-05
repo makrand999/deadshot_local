@@ -1,0 +1,436 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/slice-locals.mjs",
+  "wave": 44,
+  "date": "2026-09-28",
+  "rules": "proposable = redeclOf===-1, !globalTarget, token not in rename-map, token not protected, !hasShorthand, depth>=3, not already in rename-locals.json, latest batch verdict not keep-high/medium, non-vendor, vm9/served fingerprint agree; auto-keep = single-char or WORD_SET; candidates ranked by module-weighted unit score, greedy smallest-slice whole-unit packing",
+  "counts": {
+   "total": 29560,
+   "redecl": 804,
+   "globalTarget": 2405,
+   "inMap": 837,
+   "shallow": 2,
+   "pilot": 3188,
+   "vendor": 1644,
+   "autoKeep": 5447,
+   "candidates": 31,
+   "divergedHeld": 7485,
+   "servedAgree": 31,
+   "servedDiverged": 7485,
+   "servedMissing": 0,
+   "shorthand": 47,
+   "protectedTok": 1,
+   "decidedKeep": 7669
+  },
+  "unitsWithCandidates": 1,
+  "placed": 31,
+  "deferredUnits": 0,
+  "deferredTop": []
+ },
+ "slices": [
+  {
+   "id": "slice-00",
+   "count": 30,
+   "bindings": [
+    {
+     "selector": "setFromEuler@u0020#0",
+     "token": "setFromEuler",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 39514,
+     "snippet": "oTPALsS.z;this._w=jWFyoTPALsS.w;this._onChangeCallback();return this;};_proto.setFromEuler=function setFromEuler(euler,update){if(!(euler&&euler.isEuler)){throw",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromMatrix3Column@u0020#0",
+     "token": "setFromMatrix3Column",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 55561,
+     "snippet": "rixColumn(m,index){return this.fromArray(m.elements,index*4);};_proto.setFromMatrix3Column=function setFromMatrix3Column(m,index){return this.fromArray(m.elemen",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromMatrix4@u0020#0",
+     "token": "setFromMatrix4",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 17976,
+     "snippet": "trix3Column(this,1);zAxis.setFromMatrix3Column(this,2);return this;};_proto.setFromMatrix4=function setFromMatrix4(m){var me=m.elements;this.set(me[0],me[4],me[",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromMatrixColumn@u0020#0",
+     "token": "setFromMatrixColumn",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 55451,
+     "snippet": "olumn(m,2).length();this.x=sx;this.y=sy;this.z=sz;return this;};_proto.setFromMatrixColumn=function setFromMatrixColumn(m,index){return this.fromArray(m.element",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromMatrixScale@u0020#0",
+     "token": "setFromMatrixScale",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 55211,
+     "snippet": "=m.elements;this.x=e[12];this.y=e[13];this.z=e[14];return this;};_proto.setFromMatrixScale=function setFromMatrixScale(m){var sx=this.setFromMatrixColumn(m,0).l",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromNormalAndCoplanarPoint@u0020#0",
+     "token": "setFromNormalAndCoplanarPoint",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 106769,
+     "snippet": "{this.normal.set(x,y,z);this.constant=w;return this;};_proto.setFromNormalAndCoplanarPoint=function setFromNormalAndCoplanarPoint(normal,point){this.normal.copy",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromObject@u0020#0",
+     "token": "setFromObject",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 58194,
+     "snippet": "nter).sub(halfSize);this.max.copy(center).add(halfSize);return this;};_proto.setFromObject=function setFromObject(object){this.makeEmpty();return this.expandByO",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromObject@u0020#1",
+     "token": "setFromObject",
+     "kind": "function-name",
+     "depth": 8,
+     "refCount": 0,
+     "declInner": 153032,
+     "snippet": "set).dcItcWVWb();this.translate(_offset.x,_offset.y,_offset.z);return this;},setFromObject:function setFromObject(object){var RNQDluasaN=object.RNQDluasaN;if(ob",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromObject@u0020#2",
+     "token": "setFromObject",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 862986,
+     "snippet": ".z;position.afCJVYrCGK=true;this.RNQDluasaN.computeBoundingSphere();};_proto.setFromObject=function setFromObject(object){this.object=object;this.update();retur",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromPoints@u0020#0",
+     "token": "setFromPoints",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 57834,
+     "snippet": "is.min.set(minX,minY,minZ);this.max.set(maxX,maxY,maxZ);return this;};_proto.setFromPoints=function setFromPoints(points){this.makeEmpty();for(var i=0,il=points",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromPoints@u0020#1",
+     "token": "setFromPoints",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 65238,
+     "snippet": "ter,radius){this.center.copy(center);this.radius=radius;return this;};_proto.setFromPoints=function setFromPoints(points,optionalCenter){var center=this.center;",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromPoints@u0020#2",
+     "token": "setFromPoints",
+     "kind": "function-name",
+     "depth": 8,
+     "refCount": 0,
+     "declInner": 153976,
+     "snippet": "luasaN&&RNQDluasaN.isGeometry){this.fromGeometry(RNQDluasaN);}}return this;},setFromPoints:function setFromPoints(points){var position=[];for(var i=0,l=points.l",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromPoints@u0020#3",
+     "token": "setFromPoints",
+     "kind": "function-name",
+     "depth": 8,
+     "refCount": 0,
+     "declInner": 569808,
+     "snippet": "is.AUbXpMajF.length-unique.length;this.AUbXpMajF=unique;return FBFOTIucqfz;},setFromPoints:function setFromPoints(points){this.AUbXpMajF=[];for(var i=0,l=points",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromPoints@u0020#4",
+     "token": "setFromPoints",
+     "kind": "function-name",
+     "depth": 8,
+     "refCount": 0,
+     "declInner": 721030,
+     "snippet": "prototype=Object.assign(Object.create(CurvePath.prototype),{constructor:Path,setFromPoints:function setFromPoints(points){this.moveTo(points[0].x,points[0].y);f",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromPoints@u0020#5",
+     "token": "setFromPoints",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 842049,
+     "snippet": "tion set(min,max){this.min.copy(min);this.max.copy(max);return this;};_proto.setFromPoints=function setFromPoints(points){this.makeEmpty();for(var i=0,il=points",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromPointsAndIndices@u0020#0",
+     "token": "setFromPointsAndIndices",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 111816,
+     "snippet": "{this.a.copy(a);this.b.copy(b);this.c.copy(c);return this;};_proto.setFromPointsAndIndices=function setFromPointsAndIndices(points,i0,i1,i2){this.a.copy(points[",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromProjectionMatrix@u0020#0",
+     "token": "setFromProjectionMatrix",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 194875,
+     "snippet": "<6;i++){planes[i].copy(QTyIRIwcUl.planes[i]);}return this;};_proto.setFromProjectionMatrix=function setFromProjectionMatrix(m){var planes=this.planes;var me=m.e",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromQuaternion@u0020#0",
+     "token": "setFromQuaternion",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 89626,
+     "snippet": "er=order;if(update!==false)this._onChangeCallback();return this;};_proto.setFromQuaternion=function setFromQuaternion(q,order,update){_matrix.makeRotationFromQu",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromRotationMatrix@u0020#0",
+     "token": "setFromRotationMatrix",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 41031,
+     "snippet": "_w=Math.cos(halfAngle);this._onChangeCallback();return this;};_proto.setFromRotationMatrix=function setFromRotationMatrix(m){var te=m.elements,m11=te[0],m12=te[",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromRotationMatrix@u0020#1",
+     "token": "setFromRotationMatrix",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 88096,
+     "snippet": "is._order=euler._order;this._onChangeCallback();return this;};_proto.setFromRotationMatrix=function setFromRotationMatrix(m,order,update){var clamp=MathUtils.cl",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromSpherical@u0020#0",
+     "token": "setFromSpherical",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 54469,
+     "snippet": "n Math.abs(this.x-v.x)+Math.abs(this.y-v.y)+Math.abs(this.z-v.z);};_proto.setFromSpherical=function setFromSpherical(s){return this.setFromSphericalCoords(s.rad",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromSphericalCoords@u0020#0",
+     "token": "setFromSphericalCoords",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 54589,
+     "snippet": "return this.setFromSphericalCoords(s.radius,s.phi,s.theta);};_proto.setFromSphericalCoords=function setFromSphericalCoords(radius,phi,theta){var sinPhiRadius=Ma",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromUnitVectors@u0020#0",
+     "token": "setFromUnitVectors",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 41774,
+     "snippet": "32)/_s3;this._z=0.25*_s3;}this._onChangeCallback();return this;};_proto.setFromUnitVectors=function setFromUnitVectors(vFrom,vTo){var EPS=0.000001;var r=vFrom.d",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromVector3@u0020#0",
+     "token": "setFromVector3",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 89787,
+     "snippet": "ternion(q);return this.setFromRotationMatrix(_matrix,order,update);};_proto.setFromVector3=function setFromVector3(v,order){return this.set(v.x,v.y,v.z,order||t",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromVector3@u0020#1",
+     "token": "setFromVector3",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 840539,
+     "snippet": ";this.phi=Math.max(EPS,Math.min(Math.PI-EPS,this.phi));return this;};_proto.setFromVector3=function setFromVector3(v){return this.setFromCartesianCoords(v.x,v.y",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFromVector3@u0020#2",
+     "token": "setFromVector3",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 841407,
+     "snippet": "ius=other.radius;this.theta=other.theta;this.y=other.y;return this;};_proto.setFromVector3=function setFromVector3(v){return this.setFromCartesianCoords(v.x,v.y",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFunc@u0020#0",
+     "token": "setFunc",
+     "kind": "function-name",
+     "depth": 12,
+     "refCount": 0,
+     "declInner": 420759,
+     "snippet": "thMask!==depthMask&&!locked){gl.depthMask(depthMask);currentDepthMask=depthMask;}},setFunc:function setFunc(depthFunc){if(currentDepthFunc!==depthFunc){gl.depth",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setFunc@u0020#1",
+     "token": "setFunc",
+     "kind": "function-name",
+     "depth": 12,
+     "refCount": 0,
+     "declInner": 421693,
+     "snippet": "tencilMask&&!locked){gl.stencilMask(stencilMask);currentStencilMask=stencilMask;}},setFunc:function setFunc(stencilFunc,stencilRef,stencilMask){if(currentStenci",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setHSL@u0020#0",
+     "token": "setHSL",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 118715,
+     "snippet": "proto.setRGB=function setRGB(r,g,b){this.r=r;this.g=g;this.b=b;return this;};_proto.setHSL=function setHSL(h,s,l){h=MathUtils.euclideanModulo(h,1);s=MathUtils.c",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    },
+    {
+     "selector": "setHex@u0020#0",
+     "token": "setHex",
+     "kind": "function-name",
+     "depth": 10,
+     "refCount": 0,
+     "declInner": 118498,
+     "snippet": "n CNFryyAhIm(scalar){this.r=scalar;this.g=scalar;this.b=scalar;return this;};_proto.setHex=function setHex(hex){hex=Math.floor(hex);this.r=(hex>>16&255)/255;thi",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    }
+   ]
+  },
+  {
+   "id": "slice-01",
+   "count": 1,
+   "bindings": [
+    {
+     "selector": "toChange@u0020#0",
+     "token": "toChange",
+     "kind": "var",
+     "depth": 7,
+     "refCount": 2,
+     "declInner": 775949,
+     "snippet": ";}}if(!newShapes[0])return toShapesNoHoles(subPaths);if(newShapes.length>1){var ambiguous=false;var toChange=[];for(var sIdx=0,sLen=newShapes.length;sIdx<sLen;s",
+     "module": "engine/shaders.js",
+     "srcFile": "src/engine/shaders.js",
+     "servedAgree": true
+    }
+   ]
+  },
+  {
+   "id": "slice-02",
+   "count": 0,
+   "bindings": []
+  },
+  {
+   "id": "slice-03",
+   "count": 0,
+   "bindings": []
+  },
+  {
+   "id": "slice-04",
+   "count": 0,
+   "bindings": []
+  },
+  {
+   "id": "slice-05",
+   "count": 0,
+   "bindings": []
+  }
+ ]
+}

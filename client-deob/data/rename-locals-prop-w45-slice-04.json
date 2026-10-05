@@ -1,0 +1,222 @@
+{
+ "meta": {
+  "wave": 45,
+  "slice": "04",
+  "mergedFrom": [
+   "04a",
+   "04b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 SERVED DECL shows var a4T=a4Q right after new a3G('aim.png',...) with name='pause'/'aim' button setup; both sides' USES reposition a4T next to pause/shoot mobile buttons.",
+   "name": "aimButton",
+   "selector": "a4T@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4U=new a3k['object']() followed by Mj(a3k,'Double Tap',...)/'to Scope In!' text children; both USES set a4U['position']['x'] alongside mobile shoot buttons.",
+   "name": "scopeHintBubble",
+   "selector": "a4U@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs build var a4V=new a3k['object']() with circle children and Kq['joystick']=a4V; both USES drive a4V['nub'] position/opacity from touch input via agR/agS.",
+   "name": "joystickBase",
+   "selector": "a4V@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4W=new a3k['QtjDeukbWl'](0,0,0xf423f,...) with opacity 0.95 added to overlay scenes KJ/KK; later USES re-add it to onboarding/phone-rotate scenes.",
+   "name": "overlayBackdrop",
+   "selector": "a4W@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4X=Mj(Kq[...],'Welcome to Deadshot!',0,-0x5a,0x50,'center',...) with opacity 0.8 added to dialog group agT; a KK-scene re-DECL reuses it for the Google Play title.",
+   "name": "welcomeTitleText",
+   "selector": "a4X@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4Y=Mj(Kq[...],'Would you like to make an account?',0,0xa,0x2d,...) with opacity 0.6 added to agT; KK-scene re-DECL reuses it for the Play Store subtitle.",
+   "name": "welcomeSubtitleText",
+   "selector": "a4Y@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4Z=0x23 with a50/a51/a52 dimension group feeding new a3D('Continue in browser',a51,a50,a4Z); later USES pass a4Z as the 4th arg to a3J button constructors.",
+   "name": "dialogButtonFontSize",
+   "selector": "a4Z@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4f=0x1e-0x1e (=0) beside menu layout consts a4d/a4e; all USES on both sides add a4f to y-position expressions of class/weapon panel labels.",
+   "name": "classListYOffset",
+   "selector": "a4f@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4g=new a3k['object']() containing respawnLeft with a tick syncing a4g['position']['x'] to Kq['nwxurZsxI'], added to Mn.",
+   "name": "respawnLeftPanel",
+   "selector": "a4g@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4h=new a3D('Scoreboard',0x172,...) with show/hideLeaderboard onmousedown2/onmouseup2 handlers inside if(Gj), added under respawnLeft.",
+   "name": "scoreboardButton",
+   "selector": "a4h@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4i=new a3k['object']() wrapping Nn with a tick syncing a4i['position']['x'] to Kq['WpuCzbdCUqV'], added to Mn as the class-panel root.",
+   "name": "classPanelRoot",
+   "selector": "a4i@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL creates new M7('weaponText','Current Class','center') and SERVED re-DECL at @41385 reuses a4j for new M7('weaponText','SELECT CLASS','center'); both configure it as a panel heading label.",
+   "name": "currentClassLabel",
+   "selector": "a4j@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4k=0x15e beside a4l=0x258 feeding the class-preview backdrop rect and new a3k image(Mg,...,a4k,0x2bc) width argument.",
+   "name": "classPreviewWidth",
+   "selector": "a4k@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4l=0x258 beside a4k=0x15e, used only in a4e+a4l/2 x-centering expressions for the class-preview backdrop and image.",
+   "name": "classPreviewHeight",
+   "selector": "a4l@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4m=new a3k[image](Mg,...,a4k,0x2bc,0.3) with rotation=PI added to Nn beside the Current Class label and preview backdrop.",
+   "name": "classPreviewImage",
+   "selector": "a4m@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 USES position/add/show it (r23ZS3L2g position.set, fAdWFGQLqES, xhOdNSwMWQd) and SERVED DECL shows var a4n=new a3D(label,menuButtonWidth,menuButtonHeight*1.2,fontSize*1.2) with identical position/add/show USES — a class menu button.",
+   "name": "classSelectButton",
+   "selector": "a4n@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4o=Hs[Hx[0x0]] (weaponStatsTable[weaponOrder]) with .ui.name/.ui.stats/.ui.offset USES, and SERVED shows the same lookup plus re-lookup per class (Hs[Hx[a3M]]) feeding card title, stat keys and gun offset — the per-class stats entry.",
+   "name": "classStatsEntry",
+   "selector": "a4o@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4p=Object.keys(stats) iterated via a4p.length/a4p[a4q] to build 'key: value' rows, and SERVED DECL/USES repeat the identical Object.keys + indexed stat-row loop — the stat key list.",
+   "name": "statKeyList",
+   "selector": "a4p@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL for(var a4q=0;a4q<a4p.length;a4q++) with if(a4q>1)break indexing a4p[a4q] and row y-offset math, and SERVED shows the same capped loop over the same key list — the stat-row loop index.",
+   "name": "statKeyIndex",
+   "selector": "a4q@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4r=new M7('weaponText',key+': '+value,'center') with textScale/position/size/opacity styling, and SERVED DECL/USES repeat the same 'key: value' weaponText construction and styling — one stat line label.",
+   "name": "statLineText",
+   "selector": "a4r@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 USES show new a3k.image(Nl[class],...) with opacity set and attached via otYTUIhzc onto the gun sprite, and SERVED DECL var a4s=new a3k.image(Nl[Hx[a3M]],...) with Ni.otYTUIhzc(a4s) repeats it at all three sites — a gun image overlay layer.",
+   "name": "gunOverlayImage",
+   "selector": "a4s@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4t=-(Hx.length-1)/2 used as (a4t+a3M)*spacing for card x-centering, and SERVED DECL/USES show the identical centering formula and card-row x use — the card-row centering offset.",
+   "name": "cardRowCenterOffset",
+   "selector": "a4t@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL var a4u=-0x4b added to mainText and stat-row y positions (a4v+...+a4u), and SERVED DECL/USES repeat the same -0x4b constant in the same y-position sums — the negative y adjust term.",
+   "name": "textYOffsetAdjust",
+   "selector": "a4u@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL var a4v=0x32 added to mainText y and stat-row y (a4v+0x19+i*0x14...), and SERVED DECL/USES repeat the same 0x32 constant in the same y-position sums — the base y offset term.",
+   "name": "textYOffsetBase",
+   "selector": "a4v@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4w=Kt('default',classId,0,0,0xd2,0xd2) sized, pushed to selectClassGuns2 and added under the gun node, and SERVED DECL/USES repeat the same Kt sprite creation, sizing and gun-node attach — the class gun sprite.",
+   "name": "classGunSprite",
+   "selector": "a4w@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 window shows var a4x={x:0,y:3,size:0.93} assigned to gun.hidden, and SERVED DECL shows the identical literal and gun.hidden assignment with all uses inside the window — the gun hidden hover state.",
+   "name": "gunHiddenState",
+   "selector": "a4x@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 window shows var a4y={x:0,y:3,size:1.02} assigned to gun.shown, and SERVED DECL shows the identical literal and gun.shown assignment with all uses inside the window — the gun shown hover state.",
+   "name": "gunShownState",
+   "selector": "a4y@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 window shows var a4z={x:-3,y:3,opacity:0.4} assigned to gunShadow.hidden, and SERVED DECL shows the identical literal and gunShadow.hidden assignment with all uses inside the window — the gun-shadow hidden state.",
+   "name": "gunShadowHiddenState",
+   "selector": "a4z@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4Z,a50=0x5a,a51,... with new a3D(label,a51,a50,a4Z) and new a3J(label,a51,a50,a4Z), and SERVED repeats both constructions; a3D's (width,height,fontSize) order is fixed by a4n=new a3D(label,menuButtonWidth,menuButtonHeight,...) — the dialog button height.",
+   "name": "dialogButtonHeight",
+   "selector": "a50@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a51=0x1f4 passed as the width arg in new a3D(label,a51,a50,a4Z) and new a3J(label,a51,a50,a4Z), and SERVED repeats both; matches a3D(label,width,height,fontSize) order from a4n — the dialog button width.",
+   "name": "dialogButtonWidth",
+   "selector": "a51@u2151#0"
+  }
+ ]
+}

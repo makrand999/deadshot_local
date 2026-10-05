@@ -1,0 +1,160 @@
+# DOSSIER slice-28 (wave 6, 28 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/28] _worker@u0034#0 | kind=param depth=7 refCount=1 | engine/assets-draco.js
+DECL @2178 (verified):
+tribute];if(type.BYTES_PER_ELEMENT!==undefined){taskConfig.attributeTypes[attribute]=type.name;}}var taskKey=JSON.stringify(taskConfig);if(usvzFuAsEB.tlRWqyJjE.taskCache.has(buffer)){var cachedTask=usvzFuAsEB.tlRWqyJjE.taskCache.get(buffer);if(cachedTask.key===taskKey){return cachedTask.promise;}else if(buffer.byteLength===0){throw new Error('usvzFuAsEB.tlRWqyJjE: Unable to re-decode a buffer with different '+'settings. Buffer has already been transferred.');}}var worker;var taskID=this.workerNextTaskID++;var taskCost=buffer.byteLength;var geometryPending=this._getWorker(taskID,taskCost).then([...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/28] array@u0034#0 | kind=var depth=5 refCount=1 | engine/assets-draco.js
+DECL @2929 (verified):
+askConfig,buffer},[buffer]);});}).then(message=>this._createGeometry(message.RNQDluasaN));geometryPending.catch(()=>true).then(()=>{if(worker&&taskID){this._releaseTask(worker,taskID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function(geometryData){var RNQDluasaN=new usvzFuAsEB.kwrjVVjSgIH();if(geometryData.index){RNQDluasaN.setIndex(new usvzFuAsEB.BufferAttribute(geometryData.index.array,1));}for(var i=0;i<geometryData.attributes.length;i++){var attribute=geometryData.attributes[i];var name=attribute.name;var [...line truncated...]
+USES: refCount=1, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/28] body@u0034#0 | kind=var depth=7 refCount=1 | engine/assets-draco.js
+DECL @4037 (verified):
+der:function(){if(this.decoderPending)return this.decoderPending;var useJS=typeof WebAssembly!=='object'||this.decoderConfig.type==='js';var librariesPending=[];if(useJS){librariesPending.push(this._loadLibrary('draco_decoder.js','text'));}else{librariesPending.push(this._loadLibrary('draco_wasm_wrapper.js','text'));librariesPending.push(this._loadLibrary('draco_decoder.wasm','arraybuffer'));}this.decoderPending=Promise.all(librariesPending).then(libraries=>{var jsContent=libraries[0];if(!useJS){this.decoderConfig.wasmBinary=libraries[1];}var fn=usvzFuAsEB.tlRWqyJjE.DRACOWorker.toString();var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/28] callback@u0034#0 | kind=param depth=5 refCount=1 | engine/assets-draco.js
+DECL @1201 (verified):
+rn('usvzFuAsEB.tlRWqyJjE: The .setSkipDequantization() method has been removed.');},load:function(url,onLoad,onProgress,onError){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.path);loader.setResponseType('arraybuffer');loader.setRequestHeader(this.requestHeader);loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{var taskConfig={attributeIDs:this.defaultAttributeIDs,attributeTypes:this.defaultAttributeTypes,useUniqueIDs:false};this.decodeGeometry(buffer,taskConfig).then(onLoad).catch(onError);},onProgress,onError);},decodeDracoFile:function(buffer,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/28] geometryData@u0034#0 | kind=param depth=5 refCount=4 | engine/assets-draco.js
+DECL @2648 (verified):
+orker;var taskID=this.workerNextTaskID++;var taskCost=buffer.byteLength;var geometryPending=this._getWorker(taskID,taskCost).then(_worker=>{worker=_worker;return new Promise((resolve,reject)=>{worker._callbacks[taskID]={resolve,reject};worker.postMessage({type:'decode',id:taskID,taskConfig,buffer},[buffer]);});}).then(message=>this._createGeometry(message.RNQDluasaN));geometryPending.catch(()=>true).then(()=>{if(worker&&taskID){this._releaseTask(worker,taskID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function([...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/28] geometryPending@u0034#0 | kind=var depth=5 refCount=3 | engine/assets-draco.js
+DECL @2124 (verified):
+.attributeTypes){var type=taskConfig.attributeTypes[attribute];if(type.BYTES_PER_ELEMENT!==undefined){taskConfig.attributeTypes[attribute]=type.name;}}var taskKey=JSON.stringify(taskConfig);if(usvzFuAsEB.tlRWqyJjE.taskCache.has(buffer)){var cachedTask=usvzFuAsEB.tlRWqyJjE.taskCache.get(buffer);if(cachedTask.key===taskKey){return cachedTask.promise;}else if(buffer.byteLength===0){throw new Error('usvzFuAsEB.tlRWqyJjE: Unable to re-decode a buffer with different '+'settings. Buffer has already been transferred.');}}var worker;var taskID=this.workerNextTaskID++;var taskCost=buffer.byteLength;var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/28] itemSize@u0034#0 | kind=var depth=5 refCount=1 | engine/assets-draco.js
+DECL @2955 (verified):
+);});}).then(message=>this._createGeometry(message.RNQDluasaN));geometryPending.catch(()=>true).then(()=>{if(worker&&taskID){this._releaseTask(worker,taskID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function(geometryData){var RNQDluasaN=new usvzFuAsEB.kwrjVVjSgIH();if(geometryData.index){RNQDluasaN.setIndex(new usvzFuAsEB.BufferAttribute(geometryData.index.array,1));}for(var i=0;i<geometryData.attributes.length;i++){var attribute=geometryData.attributes[i];var name=attribute.name;var array=attribute.array;var [...line truncated...]
+USES: refCount=1, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/28] libraries@u0034#0 | kind=param depth=7 refCount=2 | engine/assets-draco.js
+DECL @3888 (verified):
+);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(this.decoderPending)return this.decoderPending;var useJS=typeof WebAssembly!=='object'||this.decoderConfig.type==='js';var librariesPending=[];if(useJS){librariesPending.push(this._loadLibrary('draco_decoder.js','text'));}else{librariesPending.push(this._loadLibrary('draco_wasm_wrapper.js','text'));librariesPending.push(this._loadLibrary('draco_decoder.wasm','arraybuffer'));}this.decoderPending=Promise.all(librariesPending).then([...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/28] librariesPending@u0034#0 | kind=var depth=5 refCount=4 | engine/assets-draco.js
+DECL @3578 (verified):
+Size;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(this.decoderPending)return this.decoderPending;var useJS=typeof WebAssembly!=='object'||this.decoderConfig.type==='js';var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/28] loader@u0034#0 | kind=var depth=5 refCount=5 | engine/assets-draco.js
+DECL @734 (verified):
+th:function(path){this.decoderPath=path;return this;},setDecoderConfig:function(config){this.decoderConfig=config;return this;},setWorkerLimit:function(workerLimit){this.workerLimit=workerLimit;return this;},setVerbosity:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setVerbosity() method has been removed.');},setDrawMode:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setDrawMode() method has been removed.');},setSkipDequantization:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setSkipDequantization() method has been removed.');},load:function(url,onLoad,onProgress,onError){var [...line truncated...]
+USES: refCount=5, 11 token-occurrences in unit, showing 5 nearest outside DECL window:
+@3125: eometryData.attributes[i];var name=attribute.name;var array=attribute.array;var itemSize=attribute.itemSize;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},
+@3172: me;var array=attribute.array;var itemSize=attribute.itemSize;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return t
+@3205: itemSize=attribute.itemSize;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(
+@3242: N.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(this.decoderPending)return this.decod
+@3328: ;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(this.decoderPending)return this.decoderPending;var useJS=typeof WebAssembly!=='object'||this.decoderConfig.type==='js';var 
+==============================================================================
+[11/28] loader@u0034#1 | kind=var depth=5 refCount=4 | engine/assets-draco.js
+DECL @3125 (verified):
+EB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function(geometryData){var RNQDluasaN=new usvzFuAsEB.kwrjVVjSgIH();if(geometryData.index){RNQDluasaN.setIndex(new usvzFuAsEB.BufferAttribute(geometryData.index.array,1));}for(var i=0;i<geometryData.attributes.length;i++){var attribute=geometryData.attributes[i];var name=attribute.name;var array=attribute.array;var itemSize=attribute.itemSize;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var [...line truncated...]
+USES: refCount=4, 11 token-occurrences in unit, showing 6 nearest outside DECL window:
+@937: ad:function(url,onLoad,onProgress,onError){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.path);loader.setResponseType('arraybuffer');loader.setRequestHeader(this.requestHeader);loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{var taskConfig={attributeIDs:this.defaultAttributeIDs,attributeTypes:this.defaultAttributeTypes,useUniqueIDs:false};this.decodeGeometry(buffer,taskConfig).then(onLoad).catch(onError);},onProgress,onError);},decodeDracoFile:fu
+@889: Dequantization() method has been removed.');},load:function(url,onLoad,onProgress,onError){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.path);loader.setResponseType('arraybuffer');loader.setRequestHeader(this.requestHeader);loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{var taskConfig={attributeIDs:this.defaultAttributeIDs,attributeTypes:this.defaultAttributeTypes,useUniqueIDs:false};this.decodeGeometry(buffer,taskConfig).then(onLoad).catch(onE
+@845: ole.warn('usvzFuAsEB.tlRWqyJjE: The .setSkipDequantization() method has been removed.');},load:function(url,onLoad,onProgress,onError){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.path);loader.setResponseType('arraybuffer');loader.setRequestHeader(this.requestHeader);loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{var taskConfig={attributeIDs:this.defaultAttributeIDs,attributeTypes:this.defaultAttributeTypes,useUniqueIDs:false};this.decodeGeomet
+@807: ,setSkipDequantization:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setSkipDequantization() method has been removed.');},load:function(url,onLoad,onProgress,onError){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.path);loader.setResponseType('arraybuffer');loader.setRequestHeader(this.requestHeader);loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{var taskConfig={attributeIDs:this.defaultAttributeIDs,attributeTypes:this.defaultAttributeTypes
+@781: thod has been removed.');},setSkipDequantization:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setSkipDequantization() method has been removed.');},load:function(url,onLoad,onProgress,onError){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.path);loader.setResponseType('arraybuffer');loader.setRequestHeader(this.requestHeader);loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{var taskConfig={attributeIDs:this.defaultAttributeIDs,attributeTypes:
+@734: rn('usvzFuAsEB.tlRWqyJjE: The .setDrawMode() method has been removed.');},setSkipDequantization:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setSkipDequantization() method has been removed.');},load:function(url,onLoad,onProgress,onError){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.path);loader.setResponseType('arraybuffer');loader.setRequestHeader(this.requestHeader);loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{var taskConfig={attrib
+==============================================================================
+[12/28] responseType@u0034#0 | kind=param depth=5 refCount=1 | engine/assets-draco.js
+DECL @3107 (verified):
+skID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function(geometryData){var RNQDluasaN=new usvzFuAsEB.kwrjVVjSgIH();if(geometryData.index){RNQDluasaN.setIndex(new usvzFuAsEB.BufferAttribute(geometryData.index.array,1));}for(var i=0;i<geometryData.attributes.length;i++){var attribute=geometryData.attributes[i];var name=attribute.name;var array=attribute.array;var itemSize=attribute.itemSize;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/28] taskKey@u0034#0 | kind=var depth=5 refCount=2 | engine/assets-draco.js
+DECL @1679 (verified):
+his.decodeGeometry(buffer,taskConfig).then(onLoad).catch(onError);},onProgress,onError);},decodeDracoFile:function(buffer,callback,attributeIDs,attributeTypes){var taskConfig={attributeIDs:attributeIDs||this.defaultAttributeIDs,attributeTypes:attributeTypes||this.defaultAttributeTypes,useUniqueIDs:!!attributeIDs};this.decodeGeometry(buffer,taskConfig).then(callback);},decodeGeometry:function(buffer,taskConfig){for(var attribute in taskConfig.attributeTypes){var type=taskConfig.attributeTypes[attribute];if(type.BYTES_PER_ELEMENT!==undefined){taskConfig.attributeTypes[attribute]=type.name;}}var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@2564: de',id:taskID,taskConfig,buffer},[buffer]);});}).then(message=>this._createGeometry(message.RNQDluasaN));geometryPending.catch(()=>true).then(()=>{if(worker&&taskID){this._releaseTask(worker,taskID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function(geometryData){var RNQDluasaN=new usvzFuAsEB.kwrjVVjSgIH();if(geometryData.index){RNQDluasaN.setIndex(new usvzFuAsEB.BufferAttribute(geometryData.index.array,1));}for(
+==============================================================================
+[14/28] useJS@u0034#0 | kind=var depth=5 refCount=2 | engine/assets-draco.js
+DECL @3506 (verified):
+ame=attribute.name;var array=attribute.array;var itemSize=attribute.itemSize;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(this.decoderPending)return this.decoderPending;var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/28] workerLimit@u0034#0 | kind=param depth=5 refCount=1 | engine/assets-draco.js
+DECL @286 (verified):
+usvzFuAsEB.tlRWqyJjE.prototype=Object.assign(Object.create(usvzFuAsEB.Loader.prototype),{constructor:usvzFuAsEB.tlRWqyJjE,setDecoderPath:function(path){this.decoderPath=path;return this;},setDecoderConfig:function(config){this.decoderConfig=config;return this;},setWorkerLimit:function(workerLimit){this.workerLimit=workerLimit;return this;},setVerbosity:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setVerbosity() method has been removed.');},setDrawMode:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setDrawMode() method has been removed.');},setSkipDequantization:function(){console.w[...line truncated...]
+USES: refCount=1, 4 token-occurrences in unit, showing 1 nearest outside DECL window:
+@4353: ng(fn.indexOf('{')+1,fn.lastIndexOf('}'))].join('\n');this.workerSourceURL=URL.createObjectURL(new Blob([body]));});return this.decoderPending;},_getWorker:function(taskID,taskCost){return this._initDecoder().then(()=>{if(this.workerPool.length<this.workerLimit){var worker=new Worker(this.workerSourceURL);worker._callbacks={};worker._taskCosts={};worker._taskLoad=0;worker.postMessage({type:'init',decoderConfig:this.decoderConfig});worker.onmessage=function(e){var message=e.data;switch(message.ty
+==============================================================================
+[16/28] a3x@u2837#0 | kind=param depth=5 refCount=3 | sim/input.js
+DECL @13 (verified):
+function a1V(a3x){var aDY=ai1;WV[RY]['x']=X7+GW(SW['jJPRFWglOT'],SW['FjQTHXKbTSO'],PL),WY["updateWorldMatrix"](![],!![]),Td['updateMatrixWorld'](),Or['copy'](a3x["xZ99d3OY82"][RP]),Or["sub"](a3x["FShYTnMIW"][RP]),Or['OpiuFvBcQd'](0.15),Or["add"](a3x["r23ZS3L2g"][RP]),Or['y']+=2.5,Os['copy'](Or),a08["setFromCamera"](0x0,0x0,Td),Ot["copy"](a08["origin"]),Ou['copy'](Ot),Ou["YbYyrgWGnfQ"](a08['klYMxzxpTL'],0x3e8);var a3y=ET(Or,Os,Ot,Ou)['z'];return a3y;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/28] a3o@u2643#0 | kind=var depth=5 refCount=6 | engine/assets-draco.js
+DECL @278 (verified):
+function YH(){var aB3=ai1;if(YF)return YE;YF=!![];if(typeof usvzFuAsEB['KTX2Loader']=='undefined'||Fu==undefined)return null;try{YE=new usvzFuAsEB['KTX2Loader'](),YE['setWorkerLimit'](0x1),YE['setTranscoderPath']('r124/examples/js/libs/basis-ktx2/'),YE['detectSupport'](Fu);var a3o=YE['workerConfig']||{};YG=a3o['astcSupported']===!![]||a3o["bptcSupported"]===!![]||a3o['etc2Supported']===!![]||a3o["dxtSupported"]===!![]||a3o["pvrtcSupported"]===!![]||a3o["etc1Supported"]===!![];}catch(a3p){YE=null,YG=![],console['warn']("KTX2 texture loader unavailable",a3p);}return YE;}
+USES: refCount=6, 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/28] a3i@u0358#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @12 (verified):
+function td(a3i,a3j,a3k,a3l){return a3i+(a3j-a3i)*a3l(a3k);}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/28] a3j@u0358#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @16 (verified):
+function td(a3i,a3j,a3k,a3l){return a3i+(a3j-a3i)*a3l(a3k);}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/28] a3k@u0358#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @20 (verified):
+function td(a3i,a3j,a3k,a3l){return a3i+(a3j-a3i)*a3l(a3k);}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/28] a3l@u0358#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @24 (verified):
+function td(a3i,a3j,a3k,a3l){return a3i+(a3j-a3i)*a3l(a3k);}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/28] a3p@u2131#0 | kind=param depth=5 refCount=0 | characters/animation.js
+DECL @42 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[23/28] a3q@u2131#0 | kind=param depth=5 refCount=2 | characters/animation.js
+DECL @46 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[24/28] a3r@u2131#0 | kind=param depth=5 refCount=0 | characters/animation.js
+DECL @50 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[25/28] a3s@u2131#0 | kind=param depth=5 refCount=0 | characters/animation.js
+DECL @54 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[26/28] a3o@u2620#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @40 (verified):
+Yo['load'](Yj('shotgunplayer'),function(a3o,a3p){Yo['dracoLoader']['dispose'](),Yo['dracoLoader']=null,Yg(a3o,0x3),Yk++;},undefined,function(a3o){var aAO=ai1;console["error"](a3o);});
+USES: refCount=1, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[27/28] a3p@u2620#0 | kind=param depth=5 refCount=0 | sim/game-loop.js
+DECL @44 (verified):
+Yo['load'](Yj('shotgunplayer'),function(a3o,a3p){Yo['dracoLoader']['dispose'](),Yo['dracoLoader']=null,Yg(a3o,0x3),Yk++;},undefined,function(a3o){var aAO=ai1;console["error"](a3o);});
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[28/28] a3i@u0349#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function t5(a3i){return 0x3*a3i;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-28: propose EVERY binding above.

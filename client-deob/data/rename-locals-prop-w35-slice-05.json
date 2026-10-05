@@ -1,0 +1,223 @@
+{
+ "slice": "05",
+ "stats": {
+  "total": 30,
+  "rename": 1,
+  "keep": 29,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @226326 declares shader-chunk var envmap_vertex; USES show #include <envmap_vertex> refs — idiomatic three.js chunk name",
+   "name": "envmap_vertex",
+   "selector": "envmap_vertex@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @30504 declares numeric threshold var epsilon2 alongside epsilon=0.01; refCount=4 local uses — already readable",
+   "name": "epsilon2",
+   "selector": "epsilon2@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @15804 _proto.equals=function equals(v) Vector2 comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @21049 _proto.equals=function equals(matrix) Matrix3 comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @34252 _proto.equals=function equals(v) Vector4 comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @44884 _proto.equals=function equals Quaternion comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @55658 _proto.equals=function equals(v) Vector3 comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @63993 _proto.equals=function equals(box) Box3 comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @67438 _proto.equals=function equals(sphere) Sphere comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @74047 _proto.equals=function equals(ray) Ray comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @86417 _proto.equals=function equals(matrix) Matrix4 comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @90015 _proto.equals=function equals(euler) Euler comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @109614 _proto.equals=function equals(plane) Plane comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @114465 _proto.equals=function equals(triangle) Triangle comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#11"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @124390 _proto.equals=function equals(c) Color comparison; idiomatic method name, refCount=0",
+   "name": "equals",
+   "selector": "equals@u0020#12"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @600021 function equals(a,b) point comparison in earcut isValidDiagonal; USES @593888/@594081/@596302 equals(p,p.next)/equals(a,b) node checks — plain-English idiomatic name",
+   "name": "equals",
+   "selector": "equals@u0020#13"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @738193 _proto.equals=function equals(sh) spherical-harmonics coefficient comparison; USES @738250 self-name + .equals call sites — standard three.js API name",
+   "name": "equals",
+   "selector": "equals@u0020#14"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @845015 Box2 _proto.equals=function equals(box) min/max comparison; USES @845042/@845068 box.min.equals/min/max pattern — standard API name",
+   "name": "equals",
+   "selector": "equals@u0020#15"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @847187 Line3 _proto.equals=function equals(line) start/end comparison; USES @847218/@847247 line.start.equals/end pattern — standard API name",
+   "name": "equals",
+   "selector": "equals@u0020#16"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @424753 var equationToGL blend-equation→GL enum map; USES @427256/@427284 gl.blendEquationSeparate(equationToGL[blendEquation],...) — already fully descriptive",
+   "name": "equationToGL",
+   "selector": "equationToGL@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @285358 var equirect_frag GLSL fragment-shader string (tEquirect sampler); USES @317540/@317554 ShaderChunk.equirect_frag registration — conventional shader-chunk name",
+   "name": "equirect_frag",
+   "selector": "equirect_frag@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @285740 var equirect_vert GLSL vertex-shader string; USES @317568/@317582 ShaderChunk.equirect_vert registration + @323957 ShaderLib lookup — conventional shader-chunk name",
+   "name": "equirect_vert",
+   "selector": "equirect_vert@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @870414 fromEquirectangular(equirectangular){return this._fromTexture(equirectangular);} single pass-through USES — plain-English descriptive param",
+   "name": "equirectangular",
+   "selector": "equirectangular@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @420547 DepthBuffer setTest(equzRsyKrD){if(equzRsyKrD){enable(2929);}else{disable(2929);}} — boolean toggling GL DEPTH_TEST (2929); sole USES is the guard",
+   "name": "depthTest",
+   "selector": "equzRsyKrD@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @8390 MathUtils.euclideanModulo function; USES @118741 MathUtils.euclideanModulo(h,1) in Color.setHSL — standard math-helper name",
+   "name": "euclideanModulo",
+   "selector": "euclideanModulo@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @39527 Quaternion setFromEuler(euler,update) reading euler._x/_y/_z/_order; USES @39709+ isEuler guard — canonical three.js param name",
+   "name": "euler",
+   "selector": "euler@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @48893 Vector3 applyEuler(euler) forwarding to _quaternion.setFromEuler(euler); USES @48905/@48912/@49100 isEuler guard — canonical param name",
+   "name": "euler",
+   "selector": "euler@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @76234 Matrix4 makeRotationFromEuler(euler) reading euler.x/y/z/order across 6 order branches; USES @76246+ (refCount 11) — canonical param name",
+   "name": "euler",
+   "selector": "euler@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @87936 Euler copy(euler) copying euler._x/_y/_z/_order; USES @87951/@87968/@87985/@88006 — canonical param name",
+   "name": "euler",
+   "selector": "euler@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @90022 Euler equals(euler) comparing euler._x/_y/_z/_order; USES @90036/@90056/@90076/@90096 — canonical param name",
+   "name": "euler",
+   "selector": "euler@u0020#4"
+  }
+ ]
+}

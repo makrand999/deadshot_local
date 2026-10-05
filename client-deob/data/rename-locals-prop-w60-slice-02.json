@@ -1,0 +1,464 @@
+{
+ "meta": {
+  "wave": 60,
+  "slice": "02",
+  "mergedFrom": [
+   "02a",
+   "02b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Map file tested for drc then joined into gltf path; SERVED: identical (snippet-only twin).",
+   "name": "mapFileName",
+   "selector": "a3A@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Red color options object fed to bot marker Mesh; SERVED: identical (snippet-only twin).",
+   "name": "botMarkerMatOpts",
+   "selector": "a3B@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: BoxGeometry mesh positioned at botMap waypoint coordinates; SERVED: identical (snippet-only twin).",
+   "name": "botMapMarkerMesh",
+   "selector": "a3C@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Smalllightmap texture with NearestFilter feeding ao uniforms; SERVED: identical (snippet-only twin).",
+   "name": "smallLightmapTex",
+   "selector": "a3E@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Active lightmaps entry driving sun skybox and lightData; SERVED: identical (snippet-only twin).",
+   "name": "lightmapConfig",
+   "selector": "a3F@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Render tag array passed into lightmap loaders and Zj; SERVED: identical (snippet-only twin).",
+   "name": "lightmapTagList",
+   "selector": "a3G@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Wp entry whose obj audio source is stopped spliced; SERVED: identical (snippet-only twin).",
+   "name": "ambientSoundSlot",
+   "selector": "a3H@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: T9 scene with start end positions scaled by fineTuneSize; SERVED: identical (snippet-only twin).",
+   "name": "cinematicScene",
+   "selector": "a3I@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loader fetching skybox glb then disposing its dracoLoader; SERVED: identical (snippet-only twin).",
+   "name": "skyboxGltfLoader",
+   "selector": "a3K@u2654#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding assigned null never read anywhere",
+   "selector": "a3L@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fence water foliage list triggering DoubleSide transparent materials; SERVED: identical (snippet-only twin).",
+   "name": "transparentTexNames",
+   "selector": "a3M@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: WalkwayPaint TrimSheet list forcing DoubleSide material side; SERVED: identical (snippet-only twin).",
+   "name": "doubleSidedTexNames",
+   "selector": "a3N@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Leaf bamboo list selecting animated material shader path; SERVED: identical (snippet-only twin).",
+   "name": "animatedFoliageNames",
+   "selector": "a3O@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bush Flag Puddle table keyed for animated transparent clamped; SERVED: identical (snippet-only twin).",
+   "name": "materialOptsByName",
+   "selector": "a3P@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Keys of material table marking excluded face materials; SERVED: identical (snippet-only twin).",
+   "name": "customMaterialKeys",
+   "selector": "a3Q@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Fence Atlas list disabling per-texture anisotropy adjustment Zv; SERVED: identical (snippet-only twin).",
+   "name": "anisotropySkipNames",
+   "selector": "a3R@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Concretefloor2 map literal aliased into working rename map; SERVED: identical (snippet-only twin).",
+   "name": "textureRenameSeed",
+   "selector": "a3S@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Alias remapping texture names before transparency classification checks; SERVED: identical (snippet-only twin).",
+   "name": "textureRenameMap",
+   "selector": "a3T@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Pavement Concrete Brick level-two map aliased onward; SERVED: identical (snippet-only twin).",
+   "name": "anisoLevelSeed",
+   "selector": "a3U@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Alias supplying per-texture Zv anisotropy levels by name; SERVED: identical (snippet-only twin).",
+   "name": "anisoLevelByName",
+   "selector": "a3V@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Brick Tile Neon list selecting max anisotropy filter path; SERVED: identical (snippet-only twin).",
+   "name": "highAnisoTexNames",
+   "selector": "a3W@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Keys of level map matched against texture src; SERVED: identical (snippet-only twin).",
+   "name": "anisoTexKeys",
+   "selector": "a3X@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Keys of rename map guarding texture name remap; SERVED: identical (snippet-only twin).",
+   "name": "renamedTextureKeys",
+   "selector": "a3Y@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: PreloadTextures entry expanded into textures path for prefetch; SERVED: identical (snippet-only twin).",
+   "name": "preloadTextureName",
+   "selector": "a3Z@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: QP mesh converted to BufferGeometry for hitbox rebuild; SERVED: identical (snippet-only twin).",
+   "name": "cachedMapMesh",
+   "selector": "a3r@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Shared var loop counter across dispose botMap emitter loops; SERVED: identical (snippet-only twin).",
+   "name": "loopIdx",
+   "selector": "a3t@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Child material with uniforms map disposed during teardown; SERVED: identical (snippet-only twin).",
+   "name": "staleMaterial",
+   "selector": "a3u@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Index over uniforms t texture array for disposal; SERVED: identical (snippet-only twin).",
+   "name": "uniTexIdx",
+   "selector": "a3w@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Index over uniform key list for texture cleanup; SERVED: identical (snippet-only twin).",
+   "name": "uniformKeyIdx",
+   "selector": "a3x@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: EM map entry with folder lightmaps skybox driving loader; SERVED: identical (snippet-only twin).",
+   "name": "mapConfig",
+   "selector": "a3y@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Maps folder prefix joined to lightmap texture gltf; SERVED: identical (snippet-only twin).",
+   "name": "mapBasePath",
+   "selector": "a3z@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Shared or fresh loader calling load on gltf; SERVED: identical (snippet-only twin).",
+   "name": "gltfLoader",
+   "selector": "a40@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Base plus file URL loaded retried telemetered; SERVED: identical (snippet-only twin).",
+   "name": "gltfUrl",
+   "selector": "a41@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: url payload emitted with map-gltf-load-start event; SERVED: identical (snippet-only twin).",
+   "name": "gltfStartPayload",
+   "selector": "a45@u2654#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused empty catch parameter",
+   "selector": "a46@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index iterating Yx children array; SERVED: identical (snippet-only twin).",
+   "name": "childIndex",
+   "selector": "a47@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: child node reset geometry disposed each iteration; SERVED: identical (snippet-only twin).",
+   "name": "sceneChild",
+   "selector": "a48@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: child material normalized to array then iterated; SERVED: identical (snippet-only twin).",
+   "name": "childMaterials",
+   "selector": "a49@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: createPanner node configured positioned per directional audio; SERVED: identical (snippet-only twin).",
+   "name": "audioPanner",
+   "selector": "a4A@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: skybox child material normalized into array; SERVED: identical (snippet-only twin).",
+   "name": "childMatList",
+   "selector": "a4A@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over train animation groups; SERVED: identical (snippet-only twin).",
+   "name": "trainGroupIndex",
+   "selector": "a4A@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: value object embedded as skyboxMult uniform; SERVED: identical (snippet-only twin).",
+   "name": "skyboxMultUniform",
+   "selector": "a4A@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index reused over texture filter lists; SERVED: identical (snippet-only twin).",
+   "name": "texFilterIndex",
+   "selector": "a4A@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag for computable positive progress total; SERVED: identical (snippet-only twin).",
+   "name": "hasKnownLength",
+   "selector": "a4A@u2654#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: attempt final object passed to failure logger; SERVED: identical (snippet-only twin).",
+   "name": "gltfErrorContext",
+   "selector": "a4A@u2654#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: load-complete timestamp computing decode duration; SERVED: identical (snippet-only twin).",
+   "name": "gltfLoadedAt",
+   "selector": "a4A@u2654#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Vector3 built from audio position array; SERVED: identical (snippet-only twin).",
+   "name": "audioPosition",
+   "selector": "a4B@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag recording non-array skybox material; SERVED: identical (snippet-only twin).",
+   "name": "wasSingleMaterial",
+   "selector": "a4B@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: AnimationAction configured pushed per train clip; SERVED: identical (snippet-only twin).",
+   "name": "clipAction",
+   "selector": "a4B@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: uniforms dict assembled into lightmap shader material; SERVED: identical (snippet-only twin).",
+   "name": "shaderUniforms",
+   "selector": "a4B@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: default-3 name-lookup value into applyPaintedTextureStyle; SERVED: identical (snippet-only twin).",
+   "name": "texParamValue",
+   "selector": "a4B@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: floored progress bucket compared then stored; SERVED: identical (snippet-only twin).",
+   "name": "gltfProgressBucket",
+   "selector": "a4B@u2654#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: download duration reported in loaded event; SERVED: identical (snippet-only twin).",
+   "name": "gltfDownloadMs",
+   "selector": "a4B@u2654#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aurora flag triggering skybox child removal; SERVED: identical (snippet-only twin).",
+   "name": "removeChildFlag",
+   "selector": "a4C@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: collects transparent meshes for reparenting; SERVED: identical (snippet-only twin).",
+   "name": "transparentNodes",
+   "selector": "a4C@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vector loaded from skyboxMult config array; SERVED: identical (snippet-only twin).",
+   "name": "skyboxMultVec",
+   "selector": "a4C@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loaded total payload for progress event; SERVED: identical (snippet-only twin).",
+   "name": "gltfProgressEvent",
+   "selector": "a4C@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: decode duration reported in loaded event; SERVED: identical (snippet-only twin).",
+   "name": "gltfDecodeMs",
+   "selector": "a4C@u2654#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over skybox material list; SERVED: identical (snippet-only twin).",
+   "name": "skyboxMatIndex",
+   "selector": "a4D@u2654#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "assigned from material but never read",
+   "selector": "a4D@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traversed node filtered for transparent reparenting; SERVED: identical (snippet-only twin).",
+   "name": "traverseChild",
+   "selector": "a4D@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index reparenting transparent node list; SERVED: identical (snippet-only twin).",
+   "name": "transparentIndex",
+   "selector": "a4D@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: zero value object installed as time uniform; SERVED: identical (snippet-only twin).",
+   "name": "shaderTimeUniform",
+   "selector": "a4D@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag set after geometries combined; SERVED: identical (snippet-only twin).",
+   "name": "geometriesCombined",
+   "selector": "a4D@u2654#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: AnimationMixer created per train group; SERVED: identical (snippet-only twin).",
+   "name": "trainMixer",
+   "selector": "a4E@u2654#2"
+  }
+ ]
+}

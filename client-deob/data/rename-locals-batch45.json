@@ -1,0 +1,4260 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 45,
+  "date": "2026-09-28",
+  "merged": 175,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 5,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds new a3D('Sell - 240',...) whose onclick opens the sell overlay, and uses setText('Sell / '+price); SERVED DECL+USES show the identical sell-button structure with decoded keys.",
+   "name": "sellButton",
+   "selector": "ac7@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ac7",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "]['opacity']=0x1,aac[\"style\"]['visibility']='visible',aac[\"style\"][\"display\"]='initial',acL();};var ac7=new a3D('Sell\\x20-\\x20240',0xf0,0x3c,0x1b);ac7[\"r23ZS3L2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "ity']=0x1,aac[avh(0xa92)]['visibility']='visible',aac[avh(0xa92)][avh(0xecf)]='initial',acL();};var ac7=new a3D('Sell\\x20-\\x20240',0xf0,0x3c,0x1b);ac7[arY(0xc7e"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "On both sides ac8 is {size:1,opacity:1} assigned into the sell button's text slot; all uses sit inside the DECL window but the text-style role matches on VM9 and SERVED.",
+   "name": "sellTextOptions",
+   "selector": "ac8@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ac8",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "\"position\"][\"set\"](0x0,0x50),ac7[\"QtjDeukbWl\"]['opacity']=0.8,ac7[\"QtjDeukbWl\"][\"color\"]='#E22';var ac8={};ac8['size']=0x1,ac8['opacity']=0x1,ac7['text'][\"hidde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "0x215)][arY(0xc71)](0x0,0x50),ac7[arY(0x1a1)]['opacity']=0.8,ac7[arY(0x1a1)][arY(0x193)]='#E22';var ac8={};ac8['size']=0x1,ac8['opacity']=0x1,ac7['text'][arY(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides construct ac9 via the sprite factory then drawImage(ac9.image) into per-rarity canvases tinted by rarity color and stored as rarityImg — the shared rarity base image.",
+   "name": "rarityBaseSprite",
+   "selector": "ac9@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ac9",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "][\"display\"]=\"initial\",LW('sellitem')[\"style\"][\"display\"]='initial',window['uiDisabled']=!![];};var ac9=new a3k[(\"circle\")](0x0,0x0,0x4b,\"#FFF\");ac9=a3k['pANxEE"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "0xecf)]=avi(0x762),LW('sellitem')[avi(0xa92)][avi(0xecf)]='initial',window['uiDisabled']=!![];};var ac9=new a3k[(arY(0x3e7))](0x0,0x0,0x4b,arY(0x7af));ac9=a3k['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "On both sides acA is called after every trade-up list mutation (push/splice/clear/filter select) and its body toggles the trade-up vs equipped panels — the list refresh routine.",
+   "name": "refreshTradeUpList",
+   "selector": "acA@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acA",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "kwk\"]=![],ahd[\"ReDNKHkwk\"]=![]);}});},a9H[\"fAdWFGQLqES\"](acy),acy['onscroll'](0x0);var acz;function acA(aha){var avz=arY;aai(),adY['ReDNKHkwk']=![],adX['ReDNKHk"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "y(0xb1d)]=![],ahd[avy(0xb1d)]=![]);}});},a9H[arY(0xb05)](acy),acy['onscroll'](0x0);var acz;function acA(aha){var avz=arY;aai(),adY['ReDNKHkwk']=![],adX['ReDNKHk"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides set acB true on mousedown/touchstart, false on mouseup/touchend/close paths, and guard the rotate handlers with if(!acB)return — the inspect-drag flag.",
+   "name": "isInspectDragging",
+   "selector": "acB@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acB",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "e7,aac[\"style\"]['display']=\"none\",aac['style'][\"visibility\"]=\"hidden\",aac['id']='inspectcanvas';var acB=![],acC=1.2,acD=acC,acE={};acE['scale']=0x0;var acF=acE;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "arY(0xa92)]['display']=arY(0x24a),aac['style'][arY(0xa5a)]=arY(0x59d),aac['id']='inspectcanvas';var acB=![],acC=1.2,acD=acC,acE={};acE['scale']=0x0;var acF=acE;"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides ease acC toward acD each frame (acC+=(acD-acC)*0.1) and apply it to the inspected model's scale — the current inspect zoom.",
+   "name": "inspectZoom",
+   "selector": "acC@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acC",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "style\"]['display']=\"none\",aac['style'][\"visibility\"]=\"hidden\",aac['id']='inspectcanvas';var acB=![],acC=1.2,acD=acC,acE={};acE['scale']=0x0;var acF=acE;aac[\"add"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "2)]['display']=arY(0x24a),aac['style'][arY(0xa5a)]=arY(0x59d),aac['id']='inspectcanvas';var acB=![],acC=1.2,acD=acC,acE={};acE['scale']=0x0;var acF=acE;aac[arY("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "On both sides the wheel handler clamps acD to 1.4..2.2 and acC lerps toward it — the target inspect zoom.",
+   "name": "inspectZoomTarget",
+   "selector": "acD@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acD",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "'display']=\"none\",aac['style'][\"visibility\"]=\"hidden\",aac['id']='inspectcanvas';var acB=![],acC=1.2,acD=acC,acE={};acE['scale']=0x0;var acF=acE;aac[\"addEventLis"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "play']=arY(0x24a),aac['style'][arY(0xa5a)]=arY(0x59d),aac['id']='inspectcanvas';var acB=![],acC=1.2,acD=acC,acE={};acE['scale']=0x0;var acF=acE;aac[arY(0xa9a)]("
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "Both sides show acE created only as {scale:0} and immediately aliased by acF with zero independent uses, so it has no distinct role of its own to name.",
+   "selector": "acE@u2151#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "On both sides acF is tweened on 'scale' (-0.8 to 0) at inspect open and read as acC+acF.scale when sizing the model — the animated zoom intro-offset state.",
+   "name": "zoomIntroState",
+   "selector": "acF@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acF",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "bility\"]=\"hidden\",aac['id']='inspectcanvas';var acB=![],acC=1.2,acD=acC,acE={};acE['scale']=0x0;var acF=acE;aac[\"addEventListener\"](\"mousedown\",function(aha){va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "xa5a)]=arY(0x59d),aac['id']='inspectcanvas';var acB=![],acC=1.2,acD=acC,acE={};acE['scale']=0x0;var acF=acE;aac[arY(0xa9a)](arY(0x5c2),function(aha){var avD=arY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides store changedTouches[0].identifier into acG on touchstart and match touch.identifier==acG in touchmove — the active inspect touch id.",
+   "name": "activeTouchId",
+   "selector": "acG@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acG",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "['PI']/0x2-0.2),acN['rotation']['z']=Jh(acN['rotation']['z'],-Math['PI']/0x4,Math['PI']/0x4);});var acG=0x0,acH=new usvzFuAsEB['vFgdYWoMXeQ']();aac[\"addEventLis"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "['PI']/0x2-0.2),acN['rotation']['z']=Jh(acN['rotation']['z'],-Math['PI']/0x4,Math['PI']/0x4);});var acG=0x0,acH=new usvzFuAsEB['vFgdYWoMXeQ']();aac[arY(0xa9a)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "On both sides acH is a Vector2 seeded with the touchstart clientX/Y, then differenced against and updated from the moving touch — the last touch position.",
+   "name": "lastTouchPos",
+   "selector": "acH@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acH",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "x2-0.2),acN['rotation']['z']=Jh(acN['rotation']['z'],-Math['PI']/0x4,Math['PI']/0x4);});var acG=0x0,acH=new usvzFuAsEB['vFgdYWoMXeQ']();aac[\"addEventListener\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "x2-0.2),acN['rotation']['z']=Jh(acN['rotation']['z'],-Math['PI']/0x4,Math['PI']/0x4);});var acG=0x0,acH=new usvzFuAsEB['vFgdYWoMXeQ']();aac[arY(0xa9a)]('touchst"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides build acI as WebGLRenderer over the inspect canvas (WebGL1Renderer fallback in catch) and call setSize/render/domElement/checkShaderErrors on it — the inspect renderer.",
+   "name": "inspectRenderer",
+   "selector": "acI@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acI",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "[\"abs\"](ahb)<0x64?ahc-=ahb/0x64:ahc-=ahb/0x190,ahc>2.2&&(ahc=2.2),ahc<1.4&&(ahc=1.4),acD=ahc;});var acI;try{var acJ={};acJ[\"canvas\"]=aac,acJ[\"antialias\"]=!![],a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "0x4fc)](ahb)<0x64?ahc-=ahb/0x64:ahc-=ahb/0x190,ahc>2.2&&(ahc=2.2),ahc<1.4&&(ahc=1.4),acD=ahc;});var acI;try{var acJ={};acJ[arY(0x483)]=aac,acJ[arY(0xdac)]=!![],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "On both sides acJ is {canvas,antialias,alpha} passed to new WebGLRenderer; uses are confined to the DECL window but the renderer-options role is identical on VM9 and SERVED.",
+   "name": "rendererOptions",
+   "selector": "acJ@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acJ",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "<0x64?ahc-=ahb/0x64:ahc-=ahb/0x190,ahc>2.2&&(ahc=2.2),ahc<1.4&&(ahc=1.4),acD=ahc;});var acI;try{var acJ={};acJ[\"canvas\"]=aac,acJ[\"antialias\"]=!![],acJ[\"alpha\"]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "<0x64?ahc-=ahb/0x64:ahc-=ahb/0x190,ahc>2.2&&(ahc=2.2),ahc<1.4&&(ahc=1.4),acD=ahc;});var acI;try{var acJ={};acJ[arY(0x483)]=aac,acJ[arY(0xdac)]=!![],acJ[arY(0xca"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "On both sides acK is the same {canvas,antialias,alpha} shape passed to new WebGL1Renderer inside the catch fallback; DECL-window-only but role matches on both sides.",
+   "name": "fallbackRendererOptions",
+   "selector": "acK@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acK",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "erer'](acJ);}catch(aha){window[\"onerror\"]('WebGLRenderer\\x20Error\\x203'),window['onerror'](aha);var acK={};acK['canvas']=aac,acK[\"antialias\"]=!![],acK['alpha']="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "rer'](acJ);}catch(aha){window[arY(0x15f)]('WebGLRenderer\\x20Error\\x203'),window['onerror'](aha);var acK={};acK['canvas']=aac,acK[arY(0xdac)]=!![],acK['alpha']=!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides define acL to setSize the renderer to window*devicePixelRatio plus domElement CSS size, called after canvas prepend, at init, and on resize — the inspect-renderer resizer.",
+   "name": "resizeInspectRenderer",
+   "selector": "acL@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acL",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "sEB[(\"WebGL1Renderer\")](acK);}acI['debug']['checkShaderErrors']=GB,acI['setSize'](0x1,0x1);function acL(){var avK=arY;acI[\"setSize\"](window['innerWidth']*window"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "svzFuAsEB[(arY(0x32f))](acK);}acI['debug']['checkShaderErrors']=GB,acI['setSize'](0x1,0x1);function acL(){var avK=arY;acI[avK(0x10e1)](window['innerWidth']*wind"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: constructed as new usvzFuAsEB['QwysDsAqBdy'](), camera adO and AmbientLight adP added via acM[\"add\"], rendered via acI[\"render\"](acM,adO); SERVED shows the identical construction, adds, and render call — the 3D preview scene.",
+   "name": "previewScene",
+   "selector": "acM@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acM",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "th\"]=window['innerWidth']+'px',acI['domElement'][\"style\"]['height']=window[\"innerHeight\"]+'px';}var acM=new usvzFuAsEB['QwysDsAqBdy'](),acN=new usvzFuAsEB['QTOK"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "d0)]=window['innerWidth']+'px',acI['domElement'][avK(0xa92)]['height']=window[avK(0x40b)]+'px';}var acM=new usvzFuAsEB['QwysDsAqBdy'](),acN=new usvzFuAsEB['QTOK"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new usvzFuAsEB['QTOKQmNlEY']() added to the scene, rotation order YZX with drag-driven rotation.y/z updates, exposed as Kq['eIYIjDRmKE']; SERVED agrees on construction, scene add, and rotation handling — the rotatable weapon mount.",
+   "name": "weaponPivot",
+   "selector": "acN@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acN",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 54,
+    "snippet": "domElement'][\"style\"]['height']=window[\"innerHeight\"]+'px';}var acM=new usvzFuAsEB['QwysDsAqBdy'](),acN=new usvzFuAsEB['QTOKQmNlEY']();acN[\"rotation\"]['order']="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 54,
+    "snippet": "domElement'][avK(0xa92)]['height']=window[avK(0x40b)]+'px';}var acM=new usvzFuAsEB['QwysDsAqBdy'](),acN=new usvzFuAsEB['QTOKQmNlEY']();acN[arY(0x90d)]['order']="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a3m overlay scene named 'i' hosting the Okay/Equip buttons and the All/AR/SMG/Sniper/Shotgun filter list, visibility toggled around locker open/close; SERVED shows the same scene setup and toggle sites — the locker overlay scene.",
+   "name": "lockerScene",
+   "selector": "acO@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acO",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "=\"YZX\",acN['rotation']['y']=0.95,acN[\"rotation\"]['z']=-0.2,acM[\"add\"](acN),Kq['eIYIjDRmKE']=acN;var acO=a3m['scene']();!L1&&(acO['name']='i');acO['overlay']=!!["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "),acN['rotation']['y']=0.95,acN[arY(0x90d)]['z']=-0.2,acM[arY(0x8da)](acN),Kq['eIYIjDRmKE']=acN;var acO=a3m['scene']();!L1&&(acO['name']='i');acO['overlay']=!!["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: dark full-size a3k rect (0x780x0x43a, #0B0B0B) added to locker container N8 with a responsive-width updater; SERVED shows the same rect construction, add, and width updater — the locker backdrop panel.",
+   "name": "lockerBackdrop",
+   "selector": "acP@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acP",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['overlay']=!![],acO['ReDNKHkwk']=![],N8=new a3k[(\"object\")](),N8['opacity']=0x0,acO['add'](N8);var acP=new a3k['QtjDeukbWl'](0x0,0x0,0x780,0x43a,'#0B0B0B',0x0)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "overlay']=!![],acO['ReDNKHkwk']=![],N8=new a3k[(arY(0x478))](),N8['opacity']=0x0,acO['add'](N8);var acP=new a3k['QtjDeukbWl'](0x0,0x0,0x780,0x43a,'#0B0B0B',0x0)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a3m overlay scene named 'j' hosting 'Pick your username' texts plus Okay/Cancel buttons, toggled in the login XHR callbacks; SERVED agrees on scene setup, children, and login-callback toggles — the username prompt scene.",
+   "name": "usernamePromptScene",
+   "selector": "acQ@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acQ",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "idth']=Kq[\"WpuCzbdCUqV\"]['position']['x']-Kq['nwxurZsxI']['position']['x'],ahb['width']*=1.1;});var acQ=a3m['scene']();!L1&&(acQ['name']='j');acQ[\"overlay\"]=!!["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "['width']=Kq[avL(0xfdc)]['position']['x']-Kq['nwxurZsxI']['position']['x'],ahb['width']*=1.1;});var acQ=a3m['scene']();!L1&&(acQ['name']='j');acQ[arY(0x829)]=!!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a3k object container added to acQ receiving every username-prompt text and button sprite (referred-by, pick-username, error, terms lines); SERVED shows the same container add and child adds — the prompt content holder.",
+   "name": "usernamePromptContent",
+   "selector": "acR@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acR",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "null&&(LW('uname')['style']['visibility']='hidden',LW('uname')['style'][\"display\"]='none',Nr());var acR=new a3k['object']();acQ['add'](acR);var acS=new a3k['Qtj"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "ull&&(LW('uname')['style']['visibility']='hidden',LW('uname')['style'][arY(0xecf)]='none',Nr());var acR=new a3k['object']();acQ['add'](acR);var acS=new a3k['Qtj"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: #000 dialog rect (0x208x0x17c, opacity 0.6) added to acR whose width/height/opacity feed acU/acV/acW; SERVED shows the same rect, add, and dimension reads — the username prompt panel.",
+   "name": "usernamePromptPanel",
+   "selector": "acS@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acS",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "idden',LW('uname')['style'][\"display\"]='none',Nr());var acR=new a3k['object']();acQ['add'](acR);var acS=new a3k['QtjDeukbWl'](0x0,0x0,0x208,0x17c,\"#000\",0x0);ac"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "dden',LW('uname')['style'][arY(0xecf)]='none',Nr());var acR=new a3k['object']();acQ['add'](acR);var acS=new a3k['QtjDeukbWl'](0x0,0x0,0x208,0x17c,arY(0x26c),0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: larger #000 rect (0x258x0x44c, opacity 0.7) inserted behind the panel with a responsive-width updater; SERVED shows the same construction, behind-insert, and updater — the prompt backdrop layer.",
+   "name": "usernamePromptBackdrop",
+   "selector": "acT@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acT",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ar acS=new a3k['QtjDeukbWl'](0x0,0x0,0x208,0x17c,\"#000\",0x0);acS['opacity']=0.6,acR['add'](acS);var acT=new a3k[(\"QtjDeukbWl\")](0x0,0x0,0x258,0x44c,'#000',0x0);"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "cS=new a3k['QtjDeukbWl'](0x0,0x0,0x208,0x17c,arY(0x26c),0x0);acS['opacity']=0.6,acR['add'](acS);var acT=new a3k[(arY(0x1a1))](0x0,0x0,0x258,0x44c,'#000',0x0);ac"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: assigned each dialog panel width (acS/ad7/adf/adu width) and used in side-image x-positioning (acU/2+acX/2); SERVED shows the same assignments and layout math — the shared dialog width.",
+   "name": "dialogWidth",
+   "selector": "acU@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acU",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "idth']=Kq['WpuCzbdCUqV']['position']['x']-Kq['nwxurZsxI'][\"position\"]['x'],ahb[\"width\"]*=1.1;});var acU=acS['width'],acV=acS[\"height\"],acW=acS[\"opacity\"],acX=0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "h']=Kq['WpuCzbdCUqV']['position']['x']-Kq['nwxurZsxI'][avM(0x215)]['x'],ahb[avM(0xad0)]*=1.1;});var acU=acS['width'],acV=acS[arY(0x300)],acW=acS[arY(0x40e)],acX"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: assigned each dialog panel height and passed as the side-image height argument; SERVED shows the same height reads and image-sizing use — the shared dialog height.",
+   "name": "dialogHeight",
+   "selector": "acV@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acV",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "dCUqV']['position']['x']-Kq['nwxurZsxI'][\"position\"]['x'],ahb[\"width\"]*=1.1;});var acU=acS['width'],acV=acS[\"height\"],acW=acS[\"opacity\"],acX=0x50,acY=new a3k['i"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "qV']['position']['x']-Kq['nwxurZsxI'][avM(0x215)]['x'],ahb[avM(0xad0)]*=1.1;});var acU=acS['width'],acV=acS[arY(0x300)],acW=acS[arY(0x40e)],acX=0x50,acY=new a3k"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: assigned each dialog panel opacity and copied onto the side images (acY['opacity']=acW); SERVED shows the same opacity reads and assignments — the shared dialog opacity.",
+   "name": "dialogOpacity",
+   "selector": "acW@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acW",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "]['x']-Kq['nwxurZsxI'][\"position\"]['x'],ahb[\"width\"]*=1.1;});var acU=acS['width'],acV=acS[\"height\"],acW=acS[\"opacity\"],acX=0x50,acY=new a3k['image'](Mg,acU/0x2+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "]-Kq['nwxurZsxI'][avM(0x215)]['x'],ahb[avM(0xad0)]*=1.1;});var acU=acS['width'],acV=acS[arY(0x300)],acW=acS[arY(0x40e)],acX=0x50,acY=new a3k['image'](Mg,acU/0x2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: constant 0x50 reused per dialog as the side-image width and x-offset term; SERVED shows the same constant and identical layout math — the side-image width.",
+   "name": "sideImageWidth",
+   "selector": "acX@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acX",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "I'][\"position\"]['x'],ahb[\"width\"]*=1.1;});var acU=acS['width'],acV=acS[\"height\"],acW=acS[\"opacity\"],acX=0x50,acY=new a3k['image'](Mg,acU/0x2+acX/0x2,0x0,acX,acV"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "M(0x215)]['x'],ahb[avM(0xad0)]*=1.1;});var acU=acS['width'],acV=acS[arY(0x300)],acW=acS[arY(0x40e)],acX=0x50,acY=new a3k['image'](Mg,acU/0x2+acX/0x2,0x0,acX,acV"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mirrored a3k image pair (second rotated PI) flanking each dialog panel and added to its scene; SERVED shows the same mirrored construction and scene adds — the dialog side decoration image.",
+   "name": "sideDecoImage",
+   "selector": "acY@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acY",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 24,
+    "snippet": "tion\"]['x'],ahb[\"width\"]*=1.1;});var acU=acS['width'],acV=acS[\"height\"],acW=acS[\"opacity\"],acX=0x50,acY=new a3k['image'](Mg,acU/0x2+acX/0x2,0x0,acX,acV);acY['op"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 24,
+    "snippet": "['x'],ahb[avM(0xad0)]*=1.1;});var acU=acS['width'],acV=acS[arY(0x300)],acW=acS[arY(0x40e)],acX=0x50,acY=new a3k['image'](Mg,acU/0x2+acX/0x2,0x0,acX,acV);acY['op"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: constant -0x14 added to every dialog child y-position (-0xcd+acZ, 0x4b+acZ, ...); SERVED shows the same constant and offset uses across dialogs — the shared dialog y-offset.",
+   "name": "dialogYOffset",
+   "selector": "acZ@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "acZ",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 23,
+    "snippet": "(Mg,-acU/0x2-acX/0x2,0x0,acX,acV),acY['rotation']=Math['PI'],acY['opacity']=acW,acQ[\"add\"](acY);var acZ=-0x14,ad0=GH(\"ref\");try{ad0=atob(ad0);}catch(ahb){ad0=''"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 23,
+    "snippet": "acU/0x2-acX/0x2,0x0,acX,acV),acY['rotation']=Math['PI'],acY['opacity']=acW,acQ[arY(0x8da)](acY);var acZ=-0x14,ad0=GH(arY(0x1cd));try{ad0=atob(ad0);}catch(ahb){a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rasterized circle whose image is drawn and per-rarity tinted into 'rarityOval' canvases (sibling ac9 feeds 'rarityImg'); SERVED shows the same circle construction and rarityOval tinting — the rarity oval template.",
+   "name": "rarityOvalTemplate",
+   "selector": "aca@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aca",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "[];};var ac9=new a3k[(\"circle\")](0x0,0x0,0x4b,\"#FFF\");ac9=a3k['pANxEEFMRM'](ac9,0x80,0x80,0x23);var aca=new a3k['circle'](0x0,0x0,0x4b*0.9,\"#FFF\");aca=a3k['pANx"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "ar ac9=new a3k[(arY(0x3e7))](0x0,0x0,0x4b,arY(0x7af));ac9=a3k['pANxEEFMRM'](ac9,0x80,0x80,0x23);var aca=new a3k['circle'](0x0,0x0,0x4b*0.9,arY(0x7af));aca=a3k['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat2d scale out-param with a3y[0..5] written and returned; served window shows the same region shifted (scale tail + translate) with identical write-all-lanes-and-return out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#112",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 112,
+    "refCount": 6,
+    "snippet": "3D,a3y[0x3]=a3E,a3y[0x4]=a3B*a3H+a3D*a3I+a3F,a3y[0x5]=a3C*a3H+a3E*a3I+a3G,a3y;},a3u[\"str\"]=function(a3y){return'mat2d(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+',\\x20'+a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 112,
+    "refCount": 6,
+    "snippet": "[0x3]=a3E,a3y[0x4]=a3B*a3H+a3D*a3I+a3F,a3y[0x5]=a3C*a3H+a3E*a3I+a3G,a3y;},a3u[ai4(0x1094)]=function(a3y){return'mat2d(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+',\\x20'+a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat2d translate out-param (a3y[0..5] written incl translation terms, returned); served window shows the same translate tail shifted, same out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#113",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 113,
+    "refCount": 6,
+    "snippet": "+',\\x20'+a3y[0x2]+',\\x20'+a3y[0x3]+',\\x20'+a3y[0x4]+',\\x20'+a3y[0x5]+'\\x20)';},a3u[\"frob\"]=function(a3y){var aio=ai4;return Math[\"sqrt\"](Math['pow'](a3y[0x0],0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 113,
+    "refCount": 6,
+    "snippet": "x20'+a3y[0x2]+',\\x20'+a3y[0x3]+',\\x20'+a3y[0x4]+',\\x20'+a3y[0x5]+'\\x20)';},a3u[ai4(0xcb1)]=function(a3y){var aio=ai4;return Math[aio(0xba3)](Math['pow'](a3y[0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 create start with var a3y=new 9-array; served window shows the full identity fill a3y[0..8] and return — fresh identity matrix built and returned on both sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#114",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 114,
+    "refCount": 10,
+    "snippet": "x5],0x2)+0x1);},typeof a3k!='undefined'&&(a3k[\"mat2d\"]=a3u);var a3v={};a3v[\"create\"]=function(){var a3y=new a3m(0x9);return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 114,
+    "refCount": 10,
+    "snippet": "x2)+0x1);},typeof a3k!='undefined'&&(a3k[ai4(0xc37)]=a3u);var a3v={};a3v[ai4(0xf2a)]=function(){var a3y=new a3m(0x9);return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL is mat3 fromMat4 out-param copying a3z lanes into a3y[0..8] and returning it; served window shows the same fromMat4 tail shifted, same copy-into-out role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#117",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 117,
+    "refCount": 10,
+    "snippet": ",a3z[0x5]=a3y[0x5],a3z[0x6]=a3y[0x6],a3z[0x7]=a3y[0x7],a3z[0x8]=a3y[0x8],a3z;},a3v[\"copy\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 117,
+    "refCount": 10,
+    "snippet": "[0x5]=a3y[0x5],a3z[0x6]=a3y[0x6],a3z[0x7]=a3y[0x7],a3z[0x8]=a3y[0x8],a3z;},a3v[ai4(0x609)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 multiply tail + translate start; served window shows the same multiply tail + translate start — out-param written a3y[0..8] and returned on both sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#124",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 124,
+    "refCount": 10,
+    "snippet": "a3S*a3I,a3y[0x8]=a3Q*a3D+a3R*a3G+a3S*a3J,a3y;},a3v['mul']=a3v['multiply'],a3v[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 124,
+    "refCount": 10,
+    "snippet": "+a3S*a3I,a3y[0x8]=a3Q*a3D+a3R*a3G+a3S*a3J,a3y;},a3v['mul']=a3v['multiply'],a3v[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 rotate tail + scale function writing a3y[0..8] from a3z rows times a3A factors; served window shows the same scale body, same out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#127",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 127,
+    "refCount": 10,
+    "snippet": "=a3C*a3z[0x5],a3y[0x6]=a3z[0x6],a3y[0x7]=a3z[0x7],a3y[0x8]=a3z[0x8],a3y;},a3v[\"fromMat2d\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 127,
+    "refCount": 10,
+    "snippet": "]=a3C*a3z[0x5],a3y[0x6]=a3z[0x6],a3y[0x7]=a3z[0x7],a3y[0x8]=a3z[0x8],a3y;},a3v[ai4(0x5b1)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 fromQuat out-param writing a3y[0..8] rotation terms from quat a3z; served window shows the same fromQuat body shifted, same out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#129",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 129,
+    "refCount": 10,
+    "snippet": "a3L-a3N,a3y[0x2]=a3K-a3O,a3y[0x5]=a3L+a3N,a3y[0x8]=0x1-a3H-a3J,a3y;},a3v[\"normalFromMat4\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 129,
+    "refCount": 10,
+    "snippet": "[0x7]=a3L-a3N,a3y[0x2]=a3K-a3O,a3y[0x5]=a3L+a3N,a3y[0x8]=0x1-a3H-a3J,a3y;},a3v[ai4(0x449)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat3 str=function(a3y) returning 'mat3('+a3y[0..8] formatted string; read-only format input, never written, on both VM9 and served sides.",
+   "name": "matrix",
+   "selector": "a3y@u0008#131",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 131,
+    "refCount": 9,
+    "snippet": "+',\\x20'+a3y[0x5]+',\\x20'+a3y[0x6]+',\\x20'+a3y[0x7]+',\\x20'+a3y[0x8]+'\\x20)';},a3v[\"frob\"]=function(a3y){var aip=ai4;return Math['sqrt'](Math['pow'](a3y[0x0],0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 131,
+    "refCount": 9,
+    "snippet": "x20'+a3y[0x5]+',\\x20'+a3y[0x6]+',\\x20'+a3y[0x7]+',\\x20'+a3y[0x8]+'\\x20)';},a3v[ai4(0xcb1)]=function(a3y){var aip=ai4;return Math['sqrt'](Math['pow'](a3y[0x0],0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 create start with var a3y=new 16-array; served window shows the full identity fill a3y[0..15] and return — fresh identity matrix built and returned on both sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#132",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 132,
+    "refCount": 17,
+    "snippet": "a3y[0x8],0x2));},typeof a3k!=\"undefined\"&&(a3k['mat3']=a3v);var a3w={};a3w['create']=function(){var a3y=new a3m(0x10);return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 132,
+    "refCount": 17,
+    "snippet": "(a3y[0x8],0x2));},typeof a3k!=ai4(0xf84)&&(a3k['mat3']=a3v);var a3w={};a3w['create']=function(){var a3y=new a3m(0x10);return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat4 clone reading a3y[0..15] into a new 16-array (16 read-only uses); read-only source matrix on both VM9 and served sides.",
+   "name": "sourceMat",
+   "selector": "a3y@u0008#133",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 133,
+    "refCount": 16,
+    "snippet": "a]=0x1,a3y[0xb]=0x0,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x0,a3y[0xf]=0x1,a3y;},a3w[\"clone\"]=function(a3y){var a3z=new a3m(0x10);return a3z[0x0]=a3y[0x0],a3z[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 133,
+    "refCount": 16,
+    "snippet": "0x1,a3y[0xb]=0x0,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x0,a3y[0xf]=0x1,a3y;},a3w[ai4(0xae2)]=function(a3y){var a3z=new a3m(0x10);return a3z[0x0]=a3y[0x0],a3z[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat4 copy assigning a3y[0..15]=a3z[0..15] and returning a3y; written out-param on both VM9 and served sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#135",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 135,
+    "refCount": 17,
+    "snippet": "[0xc]=a3z[0xc],a3y[0xd]=a3z[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf],a3y;},a3w[\"identity\"]=function(a3y){return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 135,
+    "refCount": 17,
+    "snippet": "[0xc]=a3z[0xc],a3y[0xd]=a3z[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf],a3y;},a3w[ai4(0xa4a)]=function(a3y){return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat4 invert tail + adjoint start with a3y written 16 lanes and returned (refCount 17); adjoint out-param on both VM9 and served sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#138",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 138,
+    "refCount": 17,
+    "snippet": "a3R-a3M*a3T-a3O*a3Q)*a42,a3y[0xf]=(a3I*a3T-a3J*a3R+a3K*a3Q)*a42,a3y):null;},a3w[\"adjoint\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 138,
+    "refCount": 17,
+    "snippet": "3R-a3M*a3T-a3O*a3Q)*a42,a3y[0xf]=(a3I*a3T-a3J*a3R+a3K*a3Q)*a42,a3y):null;},a3w[ai4(0x1b5)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat4 multiply tail + translate start with the alias-aware write pattern; out-param receiving the translated matrix on both VM9 and served sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#141",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 141,
+    "refCount": 22,
+    "snippet": "a3y[0xf]=a3R*a3E+a3S*a3I+a3T*a3M+a3U*a3Q,a3y;},a3w['mul']=a3w['multiply'],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 141,
+    "refCount": 22,
+    "snippet": ",a3y[0xf]=a3R*a3E+a3S*a3I+a3T*a3M+a3U*a3Q,a3y;},a3w['mul']=a3w['multiply'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show the axis-angle rotate tail (a3y[0..11] computed, alias-guarded copy of [12..15], returned, refCount 18); rotate out-param on both VM9 and served sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#144",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 144,
+    "refCount": 18,
+    "snippet": "0xc]=a3z[0xc],a3y[0xd]=a3z[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf]),a3y);},a3w[\"rotateX\"]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[\"sin\"](a3A),a3C=Math['cos'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 144,
+    "refCount": 18,
+    "snippet": "xc]=a3z[0xc],a3y[0xd]=a3z[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf]),a3y);},a3w[ai4(0x4a0)]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[air(0xbd6)](a3A),a3C=Math["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL is mat4 rotateX out-param (alias-guarded copies + 8 sin/cos-mixed writes, returned); served window shows the same rotateX tail, same out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#145",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 145,
+    "refCount": 18,
+    "snippet": "x9]=a3I*a3C-a3E*a3B,a3y[0xa]=a3J*a3C-a3F*a3B,a3y[0xb]=a3K*a3C-a3G*a3B,a3y;},a3w[\"rotateY\"]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[\"sin\"](a3A),a3C=Math[\"cos\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 145,
+    "refCount": 18,
+    "snippet": "9]=a3I*a3C-a3E*a3B,a3y[0xa]=a3J*a3C-a3F*a3B,a3y[0xb]=a3K*a3C-a3G*a3B,a3y;},a3w[ai4(0xfbc)]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[ais(0xbd6)](a3A),a3C=Math["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL window ends at the rotateZ header (token at 36761 = rotateZ out param) and SERVED DECL shows the rotateZ body writing a3y[0x0-0x3,0x8-0xb] and returning a3y on both sides.",
+   "name": "rotateZOut",
+   "selector": "a3y@u0008#146",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 146,
+    "refCount": 18,
+    "snippet": "x9]=a3E*a3B+a3I*a3C,a3y[0xa]=a3F*a3B+a3J*a3C,a3y[0xb]=a3G*a3B+a3K*a3C,a3y;},a3w['rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[\"cos\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 146,
+    "refCount": 18,
+    "snippet": "x9]=a3E*a3B+a3I*a3C,a3y[0xa]=a3F*a3B+a3J*a3C,a3y[0xb]=a3G*a3B+a3K*a3C,a3y;},a3w['rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[ait(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 38770 is the first param of the 7-arg frustum builder QTyIRIwcUl and SERVED DECL shows the same body writing all 16 of a3y[0x0-0xf] as the output matrix on both sides.",
+   "name": "frustumOut",
+   "selector": "a3y@u0008#150",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 150,
+    "refCount": 17,
+    "snippet": "1,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=a3E*a3D*0x2*a3H,a3y[0xf]=0x0,a3y;},a3w[\"perspective\"]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[\"tan\"](a3z/0x2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 150,
+    "refCount": 17,
+    "snippet": "-0x1,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=a3E*a3D*0x2*a3H,a3y[0xf]=0x0,a3y;},a3w[ai4(0x5fc)]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[aiu(0x49d)](a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 39120 is the perspective out param (1/tan(fovy/2) projection body) and SERVED DECL shows the identical body writing a3y[0x0-0xf] and returning a3y on both sides.",
+   "name": "perspectiveOut",
+   "selector": "a3y@u0008#151",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 151,
+    "refCount": 17,
+    "snippet": "b]=-0x1,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[\"ortho\"]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 151,
+    "refCount": 17,
+    "snippet": "-0x1,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[ai4(0x508)]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 40550 is the str param whose body formats 'mat4('+a3y[0x0..0xf]+')' and SERVED DECL shows the same stringify body reading all 16 elements on both sides.",
+   "name": "matForStr",
+   "selector": "a3y@u0008#153",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 153,
+    "refCount": 16,
+    "snippet": "3F*a3M+a3G*a3N+a3H*a3O),a3y[0xe]=-(a3I*a3M+a3J*a3N+a3K*a3O),a3y[0xf]=0x1,a3y);},a3w[\"str\"]=function(a3y){return'mat4(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+',\\x20'+a3y"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 153,
+    "refCount": 16,
+    "snippet": "+a3G*a3N+a3H*a3O),a3y[0xe]=-(a3I*a3M+a3J*a3N+a3K*a3O),a3y[0xf]=0x1,a3y);},a3w[ai4(0x1094)]=function(a3y){return'mat4(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+',\\x20'+a3y"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 40868 is the frob param inside sqrt(sum of pow(a3y[i],2)) (Frobenius norm) and SERVED DECL shows the same norm body reading a3y[0x0-0xf] on both sides.",
+   "name": "frobMat",
+   "selector": "a3y@u0008#154",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 154,
+    "refCount": 17,
+    "snippet": "+',\\x20'+a3y[0xc]+',\\x20'+a3y[0xd]+',\\x20'+a3y[0xe]+',\\x20'+a3y[0xf]+'\\x20)';},a3w['frob']=function(a3y){var aiw=ai4;return Math['sqrt'](Math[\"pow\"](a3y[0x0],0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 154,
+    "refCount": 17,
+    "snippet": "+',\\x20'+a3y[0xc]+',\\x20'+a3y[0xd]+',\\x20'+a3y[0xe]+',\\x20'+a3y[0xf]+'\\x20)';},a3w['frob']=function(a3y){var aiw=ai4;return Math['sqrt'](Math[aiw(0x326)](a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 41433 is the quat create local (var a3y=new a3m(0x4), identity-initialized, returned) and SERVED DECL shows the same create body on both sides.",
+   "name": "newQuat",
+   "selector": "a3y@u0008#155",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 155,
+    "refCount": 5,
+    "snippet": "a3y[0xf],0x2));},typeof a3k!=\"undefined\"&&(a3k['mat4']=a3w);var a3x={};a3x[\"create\"]=function(){var a3y=new a3m(0x4);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 155,
+    "refCount": 5,
+    "snippet": "3y[0xf],0x2));},typeof a3k!=ai4(0xf84)&&(a3k['mat4']=a3w);var a3x={};a3x[ai4(0xf2a)]=function(){var a3y=new a3m(0x4);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 42532 is the quat identity out param (sets 0,0,0,1, returns a3y) and SERVED DECL shows the identical identity body on both sides.",
+   "name": "identityOut",
+   "selector": "a3y@u0008#158",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 158,
+    "refCount": 5,
+    "snippet": "omValues']=a3s['fromValues'],a3x[\"copy\"]=a3s['copy'],a3x[\"set\"]=a3s['set'],a3x[\"identity\"]=function(a3y){return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 158,
+    "refCount": 5,
+    "snippet": "]=a3s['fromValues'],a3x[ai4(0x609)]=a3s['copy'],a3x[ai4(0xc71)]=a3s['set'],a3x[ai4(0xa4a)]=function(a3y){return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 42631 is the setAxisAngle out param (writes sin(halfAngle)*axis + cos(halfAngle)) and SERVED DECL shows the same body writing a3y[0x0-0x3] on both sides.",
+   "name": "axisAngleOut",
+   "selector": "a3y@u0008#159",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 159,
+    "refCount": 5,
+    "snippet": "(a3y){return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3x['setAxisAngle']=function(a3y,a3z,a3A){var aiz=ai4;a3A*=0.5;var a3B=Math[\"sin\"](a3A);r"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 159,
+    "refCount": 5,
+    "snippet": "(a3y){return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3x['setAxisAngle']=function(a3y,a3z,a3A){var aiz=ai4;a3A*=0.5;var a3B=Math[aiz(0xbd6)](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 42842 is the quat multiply out param (Hamilton product into a3y[0x0-0x3]) and SERVED DECL shows the same multiply body on both sides.",
+   "name": "multiplyOut",
+   "selector": "a3y@u0008#160",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 160,
+    "refCount": 5,
+    "snippet": "3y[0x2]=a3B*a3z[0x2],a3y[0x3]=Math[\"cos\"](a3A),a3y;},a3x[\"add\"]=a3s['add'],a3x[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 160,
+    "refCount": 5,
+    "snippet": "B*a3z[0x2],a3y[0x3]=Math[aiz(0xb69)](a3A),a3y;},a3x[ai4(0x8da)]=a3s['add'],a3x[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 43217 is the quat rotateX out param (half-angle sin/cos rotation of input quat) and SERVED DECL shows the same rotateX body writing a3y[0x0-0x3] on both sides.",
+   "name": "rotateXOut",
+   "selector": "a3y@u0008#161",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 161,
+    "refCount": 5,
+    "snippet": "-a3C*a3G-a3D*a3H,a3y;},a3x[\"mul\"]=a3x['multiply'],a3x['scale']=a3s['scale'],a3x['rotateX']=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 161,
+    "refCount": 5,
+    "snippet": "a3G-a3D*a3H,a3y;},a3x[ai4(0xcfe)]=a3x['multiply'],a3x['scale']=a3s['scale'],a3x['rotateX']=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 44027 is the calculateW out param (copies xyz, derives w=-sqrt(|1-x^2-y^2-z^2|)) and SERVED DECL shows the same body on both sides.",
+   "name": "calculateWOut",
+   "selector": "a3y@u0008#164",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 164,
+    "refCount": 5,
+    "snippet": "=a3C*a3G-a3B*a3F,a3y[0x2]=a3D*a3G+a3E*a3F,a3y[0x3]=a3E*a3G-a3D*a3F,a3y;},a3x[\"calculateW\"]=function(a3y,a3z){var aiD=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 164,
+    "refCount": 5,
+    "snippet": "1]=a3C*a3G-a3B*a3F,a3y[0x2]=a3D*a3G+a3E*a3F,a3y[0x3]=a3E*a3G-a3D*a3F,a3y;},a3x[ai4(0xf6c)]=function(a3y,a3z){var aiD=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 44272 is the slerp out param (acos/dot spherical interpolation into a3y[0x0-0x3]) and SERVED DECL shows the same slerp body on both sides.",
+   "name": "slerpOut",
+   "selector": "a3y@u0008#165",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 165,
+    "refCount": 5,
+    "snippet": "a3A*a3A-a3B*a3B-a3C*a3C)),a3y;},a3x['dot']=a3s[\"dot\"],a3x[\"lerp\"]=a3s['lerp'],a3x[\"slerp\"]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 165,
+    "refCount": 5,
+    "snippet": "3B-a3C*a3C)),a3y;},a3x['dot']=a3s[ai4(0xbe8)],a3x[ai4(0x108e)]=a3s['lerp'],a3x[ai4(0xbd7)]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 45318 is the fromMat3 out param (trace-branch mat3-to-quat conversion into a3y) and SERVED DECL shows the same conversion body on both sides.",
+   "name": "fromMat3Out",
+   "selector": "a3y@u0008#168",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 168,
+    "refCount": 9,
+    "snippet": "gth\"],a3x[\"sqrLen\"]=a3x['squaredLength'],a3x['normalize']=a3s[\"normalize\"],a3x['fromMat3']=function(a3y,a3z){var aiF=ai4,a3A=a3z[0x0]+a3z[0x4]+a3z[0x8],a3B;if(a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 168,
+    "refCount": 9,
+    "snippet": "30)],a3x[ai4(0x884)]=a3x['squaredLength'],a3x['normalize']=a3s[ai4(0xfc6)],a3x['fromMat3']=function(a3y,a3z){var aiF=ai4,a3A=a3z[0x0]+a3z[0x4]+a3z[0x8],a3B;if(a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token is the vec2 copy source param (read twice as a3z[0x0],a3z[0x1]) and SERVED DECL shows the same copy body reading the source vector on both sides.",
+   "name": "copySrc",
+   "selector": "a3z@u0008#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "ction(a3y,a3z){var a3A=new a3m(0x2);return a3A[0x0]=a3y,a3A[0x1]=a3z,a3A;},a3q[\"copy\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y;},a3q['s"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "n(a3y,a3z){var a3A=new a3m(0x2);return a3A[0x0]=a3y,a3A[0x1]=a3z,a3A;},a3q[ai4(0x609)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y;},a3q['s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token is the vec2 set x-scalar param (single read a3y[0x0]=a3z) and SERVED DECL shows the same set body assigning it on both sides.",
+   "name": "setX",
+   "selector": "a3z@u0008#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "[\"copy\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y;},a3q['set']=function(a3y,a3z,a3A){return a3y[0x0]=a3z,a3y[0x1]=a3A,a3y;},a3q['add']=f"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "(0x609)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y;},a3q['set']=function(a3y,a3z,a3A){return a3y[0x0]=a3z,a3y[0x1]=a3A,a3y;},a3q['add']=f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 groups it with sibling rgba-white stops a8u/a8v fed to createLinearGradient addColorStop calls; SERVED shows the same shape (a8w=arY(0x746) passed as the center-stop color at a3M/0x64).",
+   "name": "gradientCenterColor",
+   "selector": "a8w@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8w",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "reateLinearGradient'](-0x190,0x0,0x190,0x320),a8u=\"rgba(256,256,256,0)\",a8v='rgba(256,256,256,0.3)',a8w=\"rgba(256,256,256,0.7)\";a3z['addColorStop'](Math['max']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "NwauOZ']['createLinearGradient'](-0x190,0x0,0x190,0x320),a8u=arY(0x2d2),a8v='rgba(256,256,256,0.3)',a8w=arY(0x746);a3z['addColorStop'](Math['max'](a3M/0x64-0.06"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 constructs new a3k['QtjDeukbWl'] (UIPanel) 3840x200 '#000', tweaks height/position, and adds it to positioned container a7m; SERVED repeats the identical construction, position tweak, and add on both sides.",
+   "name": "backdropPanel",
+   "selector": "a8x@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8x",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "-0x438/0x2;Gj&&!Gl&&(a7m[\"position\"]['y']+=0x28);a7m['position']['x']=-0x780/0x2,N5[\"add\"](a7m);var a8x=new a3k['QtjDeukbWl'](0x0,0x64,0x780*0x2,0xc8,'#000',L7*"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "8/0x2;Gj&&!Gl&&(a7m[arY(0x215)]['y']+=0x28);a7m['position']['x']=-0x780/0x2,N5[arY(0x8da)](a7m);var a8x=new a3k['QtjDeukbWl'](0x0,0x64,0x780*0x2,0xc8,'#000',L7*"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "VM9 is just var a8y=a8x with refCount=0 (dead alias, never read); SERVED is identical (servedRefCount=0), so no observable role exists on either side.",
+   "selector": "a8y@u2151#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 news a UIContainer, anchors its position to the player rig, and adds 'Latest Update:' texts plus a Patch Notes button; SERVED repeats the same container setup and the same add() calls for the update/patch-notes rows.",
+   "name": "patchNotesGroup",
+   "selector": "a8z@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8z",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "',L7*1.5);Gj&&!Gl&&(a8x[\"height\"]+=0x64,a8x['position']['y']-=0x32);var a8y=a8x;a7m['add'](a8x);var a8z=new a3k['object']();N5[\"add\"](a8z),a8z['position']=Kq['n"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "L7*1.5);Gj&&!Gl&&(a8x[arY(0x300)]+=0x64,a8x['position']['y']-=0x32);var a8y=a8x;a7m['add'](a8x);var a8z=new a3k['object']();N5[arY(0x8da)](a8z),a8z['position']="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 body is a thin wrapper over window['updateSettingValue'](key,value) called for xhair RGB, slider, and toggle keys; SERVED has the identical wrapper body and call sites (obfuscated keys), mirroring sibling getter a90.",
+   "name": "setCrosshairSetting",
+   "selector": "a91@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a91",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "ndefined){var ah8=window['getSettingValue'](ah6);if(ah8!=undefined)return ah8;}return ah7;}function a91(ah6,ah7){var au6=arY;window[\"updateSettingValue\"]!=undef"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "ndefined){var ah8=window['getSettingValue'](ah6);if(ah8!=undefined)return ah8;}return ah7;}function a91(ah6,ah7){var au6=arY;window[au6(0xb35)]!=undefined&&wind"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 queries .crosshair-settings-scroll/.crosshair-settings-list and toggles can-scroll-up/down classes, called from layout plus wheel/scroll/touch handlers; SERVED shows the same queries, toggles, and handler call sites.",
+   "name": "updateScrollIndicators",
+   "selector": "a92@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a92",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ah7);}window['updateCrosshairPreview']=function(){var au7=arY;a8Z['preview'][\"update\"]();};function a92(){var au8=arY;if(a8Z==undefined)return;var ah6=a8Z['elem"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "7);}window['updateCrosshairPreview']=function(){var au7=arY;a8Z['preview'][au7(0x402)]();};function a92(){var au8=arY;if(a8Z==undefined)return;var ah6=a8Z['elem"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 builds a WebGLRenderer from the given canvas element and is consumed as 'preview':a93(querySelector('.crosshair-preview-canvas')); SERVED has the same renderer construction and the same preview-canvas call site.",
+   "name": "createPreviewRenderer",
+   "selector": "a93@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a93",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "[\"scrollTop\"]>0x1),ah7['classList']['toggle']('can-scroll-down',ah8['scrollTop']<ah9-0x1);}function a93(ah6){var au9=arY,ah7={};ah7[\"canvas\"]=ah6,ah7['alpha']=!"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "8[au8(0x404)]>0x1),ah7['classList']['toggle']('can-scroll-down',ah8['scrollTop']<ah9-0x1);}function a93(ah6){var au9=arY,ah7={};ah7[au9(0x483)]=ah6,ah7['alpha']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 body is just window['updateCrosshairPreview'](), invoked after every slider, color, and toggle change; SERVED shows the identical one-line body and the same post-change call sites.",
+   "name": "refreshCrosshairPreview",
+   "selector": "a94@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a94",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "o),ahb['WAULgehsdg'](ahr),ahb[\"setOutline\"](ahp,ahq),ah8['render'](ah9,aha);}};return ahi;}function a94(){window['updateCrosshairPreview']();}function a95(ah6,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "(aho),ahb['WAULgehsdg'](ahr),ahb[aub(0xfb)](ahp,ahq),ah8['render'](ah9,aha);}};return ahi;}function a94(){window['updateCrosshairPreview']();}function a95(ah6,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 clamps Number(ah6) to 0-255 and returns a 2-digit hex slice, consumed 3x by a97; SERVED shows the identical clamp+toString(16)+slice body and the same triple use in a97.",
+   "name": "byteToHex",
+   "selector": "a96@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a96",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ";},ahf['onchange']=function(){var auf=auc;ahh(ahf[\"value\"]);},ah6['appendChild'](ahd),ahd;}function a96(ah6){var aug=arY;return ah6=Jh(Math['round'](Number(ah6)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ahf['onchange']=function(){var auf=auc;ahh(ahf[auf(0x9c5)]);},ah6['appendChild'](ahd),ahd;}function a96(ah6){var aug=arY;return ah6=Jh(Math['round'](Number(ah6)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 returns '#'+byteToHex(xhairred)+byteToHex(xhairgreen)+byteToHex(xhairblue) and seeds the color input plus invalid-input fallback; SERVED has the same hex assembly and the same two call sites.",
+   "name": "getCrosshairHex",
+   "selector": "a97@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a97",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "rn ah6=Jh(Math['round'](Number(ah6)),0x0,0xff),('0'+ah6[\"toString\"](0x10))['slice'](-0x2);}function a97(){return'#'+a96(a90('xhairred',0xee))+a96(a90('xhairgree"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "rn ah6=Jh(Math['round'](Number(ah6)),0x0,0xff),('0'+ah6[aug(0xe45)](0x10))['slice'](-0x2);}function a97(){return'#'+a96(a90('xhairred',0xee))+a96(a90('xhairgree"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 builds a crosshair-color row (color input + hex text span with validation) and is placed as a99(ah7,'Color:'); SERVED shows the same row template and the same 'Color:' placement alongside sibling builders a95/a98.",
+   "name": "addColorSetting",
+   "selector": "a99@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a99",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "class=\\x27crosshair-settings-group\\x27>'+ah7+'</div>');return ah6['appendChild'](ah8),ah8;}function a99(ah6,ah7){var auh=arY,ah8=tJ(\"<div class='crosshair-setti"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "class=\\x27crosshair-settings-group\\x27>'+ah7+'</div>');return ah6['appendChild'](ah8),ah8;}function a99(ah6,ah7){var auh=arY,ah8=tJ(auh(0xa14)+ah7+'</p><div><in"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 is an array of locker card elements (push/indexOf/splice/length loops, isEquipped flags, reset to []); SERVED repeats the same push/splice/iterate/reset pattern over the same card elements.",
+   "name": "skinCardList",
+   "selector": "a9A@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9A",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "#222'],a9y=[\"Common\",'Uncommon',\"Rare\",\"Epic\",'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "=[arY(0xfc8),'Uncommon',arY(0x851),arY(0xd15),'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 fills a9B[i] from 'promo/rarity/rarityImg'+i and reads a9B[pX.rarity] as the card badge image; SERVED shows the same per-rarity fill and the same rarity-indexed read in acl().",
+   "name": "rarityImages",
+   "selector": "a9B@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9B",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "a9y=[\"Common\",'Uncommon',\"Rare\",\"Epic\",'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a3M++){v"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "xfc8),'Uncommon',arY(0x851),arY(0xd15),'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a3M++){v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 stores per-rarity canvases logged as 'rarityOval'+i and assigns a9C[rarity] to card/inspect image slots; SERVED repeats the same rarityOval fill and the same rarity-indexed image assignments.",
+   "name": "rarityOvals",
+   "selector": "a9C@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9C",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "ommon\",'Uncommon',\"Rare\",\"Epic\",'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a3M++){var a9E="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "Uncommon',arY(0x851),arY(0xd15),'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a3M++){var a9E="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 declares it beside the rarity arrays and assigns it a fresh canvas each loop iteration before a9B[i]=a9D; SERVED shows the same declaration and the same per-iteration a9B[a9E]=a9D handoff.",
+   "name": "rarityImageCanvas",
+   "selector": "a9D@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9D",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "'Uncommon',\"Rare\",\"Epic\",'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a3M++){var a9E=a3M;a9B"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "n',arY(0x851),arY(0xd15),'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a3M++){var a9E=a3M;a9B"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'var a9E=a3M' loop index over rarity color array a9x (a9x[a9E] fillStyle, a9C[a9E], 'rarityOval'+a9E), later holds pX skin 'rarity'; served shows the identical loop/indexing with matching refCount.",
+   "name": "rarityIdx",
+   "selector": "a9E@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9E",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a3M++){var a9E=a3M;a9B[a9E]=a3k[\"getTempImage\"]('promo/rarity/rarityImg"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var a3M=0x0;a3M<a9x['length'];a3M++){var a9E=a3M;a9B[a9E]=a3k[arY(0xfe5)]('promo/rarity/rarityImg'+a9"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'var a9F=a9D/getContext('2d')' reused on both rarity canvases for drawImage/fillRect tinting; served shows the same getContext('2d') decl and tint calls (obfuscated drawImage key).",
+   "name": "rarityCtx",
+   "selector": "a9F@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9F",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "9E=a3M;a9D=document['createElement']('canvas'),a9D['width']=a9D['height']=ac9[\"image\"]['width'];var a9F=a9D['getContext']('2d');a9F[\"drawImage\"](ac9[\"image\"],0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "a3M;a9D=document['createElement']('canvas'),a9D['width']=a9D['height']=ac9[arY(0xbf7)]['width'];var a9F=a9D['getContext']('2d');a9F[arY(0xccc)](ac9[arY(0xbf7)],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: document.createElement('canvas') sized from the oval template, tinted, stored as a9C[a9E] ('rarityOval'+a9E); served shows the identical canvas decl and a9C[a9E] store.",
+   "name": "rarityOvalCanvas",
+   "selector": "a9G@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9G",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "0x0,0x0,ac9['image']['width'],ac9['image'][\"height\"]),a9B[a9E]=a9D,GZ(a9B[a9E],'rarityImg'+a9E);var a9G=document['createElement']('canvas');a9G['width']=a9G[\"he"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "0,0x0,ac9['image']['width'],ac9['image'][arY(0x300)]),a9B[a9E]=a9D,GZ(a9B[a9E],'rarityImg'+a9E);var a9G=document['createElement']('canvas');a9G['width']=a9G[arY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a8H('LOCKER') root container holding the locker content object, skin cards, and scroll overlays; served shows the identical 'LOCKER' decl and add/removeElement uses.",
+   "name": "lockerRoot",
+   "selector": "a9H@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9H",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "image\"]['height']),a9C[a9E]=a9G,console[\"log\"]('rarityOval'+a9E),GZ(a9C[a9E],\"rarityOval\"+a9E);}var a9H=a8H('LOCKER'),a9I=new a3k['object']();a9H['add'](a9I),Ms"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "f7)]['height']),a9C[a9E]=a9G,console[arY(0xc04)]('rarityOval'+a9E),GZ(a9C[a9E],arY(0x35a)+a9E);}var a9H=a8H('LOCKER'),a9I=new a3k['object']();a9H['add'](a9I),Ms"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fresh object added to the locker root receiving non-equipped skin cards, with an onscroll handler animating its y position; served shows the same add-to-locker and scroll-position uses.",
+   "name": "skinListContent",
+   "selector": "a9I@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9I",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": ",a9C[a9E]=a9G,console[\"log\"]('rarityOval'+a9E),GZ(a9C[a9E],\"rarityOval\"+a9E);}var a9H=a8H('LOCKER'),a9I=new a3k['object']();a9H['add'](a9I),Ms=a8H(\"SHOP\");var a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "C[a9E]=a9G,console[arY(0xc04)]('rarityOval'+a9E),GZ(a9C[a9E],arY(0x35a)+a9E);}var a9H=a8H('LOCKER'),a9I=new a3k['object']();a9H['add'](a9I),Ms=a8H(arY(0x1093));"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first SHOP scene holding the prize-wheel content group (incl. 'PRIZE WHEEL' title); Back-button host and onclick navigation target; served shows the same scene decl and content add.",
+   "name": "prizeWheelScene",
+   "selector": "a9J@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9J",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "\"rarityOval\"+a9E);}var a9H=a8H('LOCKER'),a9I=new a3k['object']();a9H['add'](a9I),Ms=a8H(\"SHOP\");var a9J=new a3k['scene']();Ms['add'](a9J);var a9K=new a3k['scene"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "(0x35a)+a9E);}var a9H=a8H('LOCKER'),a9I=new a3k['object']();a9H['add'](a9I),Ms=a8H(arY(0x1093));var a9J=new a3k['scene']();Ms['add'](a9J);var a9K=new a3k['scene"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: second SHOP scene and the default (a9O=a9K, a9P=a9K), holding View Bundle / NEW!!! / neon-bg elements; served shows the same decl and default-scene assignment.",
+   "name": "shopMainScene",
+   "selector": "a9K@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9K",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "9I=new a3k['object']();a9H['add'](a9I),Ms=a8H(\"SHOP\");var a9J=new a3k['scene']();Ms['add'](a9J);var a9K=new a3k['scene']();Ms[\"add\"](a9K);var a9L=new a3k['scene"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "w a3k['object']();a9H['add'](a9I),Ms=a8H(arY(0x1093));var a9J=new a3k['scene']();Ms['add'](a9J);var a9K=new a3k['scene']();Ms[arY(0x8da)](a9K);var a9L=new a3k['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: third SHOP scene holding the 'Please log in to use the Shop' prompt, shown when logged out; served shows the same decl and login-prompt add.",
+   "name": "shopLoginScene",
+   "selector": "a9L@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9L",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "a8H(\"SHOP\");var a9J=new a3k['scene']();Ms['add'](a9J);var a9K=new a3k['scene']();Ms[\"add\"](a9K);var a9L=new a3k['scene']();Ms['add'](a9L);var a9M=new a3k['scene"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "1093));var a9J=new a3k['scene']();Ms['add'](a9J);var a9K=new a3k['scene']();Ms[arY(0x8da)](a9K);var a9L=new a3k['scene']();Ms['add'](a9L);var a9M=new a3k['scene"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fourth SHOP scene, 'View Bundle' navigation target with onSceneSwitch applying the skin and neon skin buttons added; served shows the same decl, switch handler, and adds.",
+   "name": "bundleDetailScene",
+   "selector": "a9M@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9M",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 38,
+    "snippet": "'add'](a9J);var a9K=new a3k['scene']();Ms[\"add\"](a9K);var a9L=new a3k['scene']();Ms['add'](a9L);var a9M=new a3k['scene']();Ms['add'](a9M);var a9N=new a3k['scene"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 38,
+    "snippet": "](a9J);var a9K=new a3k['scene']();Ms[arY(0x8da)](a9K);var a9L=new a3k['scene']();Ms['add'](a9L);var a9M=new a3k['scene']();Ms['add'](a9M);var a9N=new a3k['scene"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fifth SHOP scene holding 'Purchase Gems' header, gem options, and 'Buy Gems' navigation target; served shows the same decl and gem-option adds.",
+   "name": "gemPurchaseScene",
+   "selector": "a9N@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9N",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "\"add\"](a9K);var a9L=new a3k['scene']();Ms['add'](a9L);var a9M=new a3k['scene']();Ms['add'](a9M);var a9N=new a3k['scene']();Ms['add'](a9N);var a9O=a9K,a9P=a9K;fu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "x8da)](a9K);var a9L=new a3k['scene']();Ms['add'](a9L);var a9M=new a3k['scene']();Ms['add'](a9M);var a9N=new a3k['scene']();Ms['add'](a9N);var a9O=a9K,a9P=a9K;fu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: const 0x14 used as the shared y anchor for prize-wheel title, content group, and overlay positions; served shows the identical value and y-position uses.",
+   "name": "prizeWheelBaseY",
+   "selector": "a9R@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9R",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "ts\"][ah7]);}var ah9=ah6!=a9P;a9P=ah6,ah9&&ah6['onSceneSwitch']&&ah6[\"onSceneSwitch\"](),a9O=a9K;}var a9R=0x14,a9S=new a3k[(\"object\")]();a9J[\"add\"](a9S);var a9T=M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "w(0xc61)][ah7]);}var ah9=ah6!=a9P;a9P=ah6,ah9&&ah6['onSceneSwitch']&&ah6[auw(0xc6f)](),a9O=a9K;}var a9R=0x14,a9S=new a3k[(arY(0x478))]();a9J[arY(0x8da)](a9S);va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: object added to the prize-wheel scene holding title, images, legend swatches, and stencil masks, opacity-toggled by the login gate; served shows the same decl and content adds.",
+   "name": "prizeWheelContent",
+   "selector": "a9S@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9S",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 21,
+    "snippet": ");}var ah9=ah6!=a9P;a9P=ah6,ah9&&ah6['onSceneSwitch']&&ah6[\"onSceneSwitch\"](),a9O=a9K;}var a9R=0x14,a9S=new a3k[(\"object\")]();a9J[\"add\"](a9S);var a9T=Mj(Kq['pkg"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 21,
+    "snippet": "[ah7]);}var ah9=ah6!=a9P;a9P=ah6,ah9&&ah6['onSceneSwitch']&&ah6[auw(0xc6f)](),a9O=a9K;}var a9R=0x14,a9S=new a3k[(arY(0x478))]();a9J[arY(0x8da)](a9S);var a9T=Mj("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: createTextElement 'PRIZE WHEEL' title with Encode Sans font added to the wheel content; served shows the same construction (string obfuscated) and add.",
+   "name": "prizeWheelTitle",
+   "selector": "a9T@u2151#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9T",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "witch']&&ah6[\"onSceneSwitch\"](),a9O=a9K;}var a9R=0x14,a9S=new a3k[(\"object\")]();a9J[\"add\"](a9S);var a9T=Mj(Kq['pkghYgdlX'],\"PRIZE WHEEL\",0x0,-0xd2+a9R,0x41,'cen"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "tch']&&ah6[auw(0xc6f)](),a9O=a9K;}var a9R=0x14,a9S=new a3k[(arY(0x478))]();a9J[arY(0x8da)](a9S);var a9T=Mj(Kq['pkghYgdlX'],arY(0x740),0x0,-0xd2+a9R,0x41,'center"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "VM9 and served agree it is a null-texture image with only size/opacity set, but neither side reveals what it displays or its purpose in the wheel layout.",
+   "selector": "a9U@u2151#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "VM9 and served agree it is an empty-string centered text element with only opacity set, but neither side reveals its intended label content or role.",
+   "selector": "a9V@u2151#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new a3J('Okay') in change-username dialog whose onclick POSTs /changeName; SERVED: same 'Okay' button and changeName POST at shifted offsets.",
+   "name": "changeNameOkayButton",
+   "selector": "adj@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adj",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "h['opacity']=0.4;return;}adh['fillStyle']=\"red\",adh[\"opacity\"]=0x1,adh[\"setText\"](ahc);}adi('');var adj=new a3J('Okay',0xd2,0x3c,0x1c);adj[\"r23ZS3L2g\"][\"positio"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "ity']=0.4;return;}adh['fillStyle']=avU(0xa64),adh[avU(0x40e)]=0x1,adh[avU(0xcdf)](ahc);}adi('');var adj=new a3J('Okay',0xd2,0x3c,0x1c);adj[\"r23ZS3L2g\"][arY(0x21"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new a3J('Cancel') beside adj closing the change-username dialog; SERVED: same 'Cancel' button with identical hide/clear onclick.",
+   "name": "changeNameCancelButton",
+   "selector": "adk@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adk",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "ringify'](ahd));},adj['xhOdNSwMWQd'](!![]),add['fAdWFGQLqES'](adj),ade['add'](adj[\"r23ZS3L2g\"]);var adk=new a3J(\"Cancel\",0xd2,0x3c,0x1c);adk['QtjDeukbWl'][\"opac"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "tringify'](ahd));},adj['xhOdNSwMWQd'](!![]),add['fAdWFGQLqES'](adj),ade['add'](adj[arY(0xc7e)]);var adk=new a3J(arY(0xae7),0xd2,0x3c,0x1c);adk['QtjDeukbWl'][arY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: text object reassigned across the three signup disclaimer lines ending at 'Terms of Service'; SERVED: same triple reassignment of the disclaimer lines.",
+   "name": "signupNoticeText",
+   "selector": "adl@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adl",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "e')[\"value\"]='';},adk['xhOdNSwMWQd'](!![]),add['fAdWFGQLqES'](adk),ade['add'](adk[\"r23ZS3L2g\"]);var adl=Mj(a3k,'By\\x20signing\\x20up\\x20for\\x20a\\x20de'+\"adshot.i"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": ")[avX(0x9c5)]='';},adk['xhOdNSwMWQd'](!![]),add['fAdWFGQLqES'](adk),ade['add'](adk[arY(0xc7e)]);var adl=Mj(a3k,'By\\x20signing\\x20up\\x20for\\x20a\\x20de'+arY(0x9f4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: element over makeContainer whose onclick opens terms.html in a new tab; SERVED: same container element opening terms.html.",
+   "name": "termsLinkArea",
+   "selector": "adm@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adm",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "91,0x14,'center','',0x1),adl['opacity']=0x1,adl['fillStyle']=M9(0x32,0x8c,0xdc),acR[\"add\"](adl);var adm=a3m[\"element\"](a3m['makeContainer'](0x5a,0x91,0xc8,0x28)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "14,'center','',0x1),adl['opacity']=0x1,adl['fillStyle']=M9(0x32,0x8c,0xdc),acR[arY(0x8da)](adl);var adm=a3m[arY(0x6d6)](a3m['makeContainer'](0x5a,0x91,0xc8,0x28"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: 'Okay' button declared for signup (a8s) and reassigned for party join (joinParty); SERVED: same declaration plus same party-join reassignment.",
+   "name": "sharedOkayButton",
+   "selector": "adn@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adn",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "=window['open']('terms.html',\"_blank\");ahc!=undefined&&ahc[\"focus\"]();},acQ['fAdWFGQLqES'](adm);var adn=new a3J(\"Okay\",0xd2,0x3c,0x1c);adn[\"r23ZS3L2g\"]['positio"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "ow['open']('terms.html',avY(0xa80));ahc!=undefined&&ahc[avY(0xd56)]();},acQ['fAdWFGQLqES'](adm);var adn=new a3J(arY(0x465),0xd2,0x3c,0x1c);adn[\"r23ZS3L2g\"]['pos"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: 'Cancel' button declared for signup and reassigned for the party dialog; SERVED: same declaration plus same party-dialog reassignment.",
+   "name": "sharedCancelButton",
+   "selector": "ado@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ado",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "ame')['value']);},adn[\"xhOdNSwMWQd\"](!![]),acQ[\"fAdWFGQLqES\"](adn),acR[\"add\"](adn[\"r23ZS3L2g\"]);var ado=new a3J('Cancel',0xd2,0x3c,0x1c);ado[\"QtjDeukbWl\"][\"opac"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "name')['value']);},adn[arY(0xddf)](!![]),acQ[arY(0xb05)](adn),acR[arY(0x8da)](adn[\"r23ZS3L2g\"]);var ado=new a3J('Cancel',0xd2,0x3c,0x1c);ado[arY(0x1a1)][arY(0x4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: builder taking {okayText,cancelText,height,textArray} returning {overlay,okayButton,cancelButton}, called for quit/kick/delete dialogs; SERVED: same builder and same call sites.",
+   "name": "buildConfirmDialog",
+   "selector": "adp@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adp",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "value']='';},ado['xhOdNSwMWQd'](!![]),acQ['fAdWFGQLqES'](ado),acR['add'](ado[\"r23ZS3L2g\"]);function adp(ahc){var aw0=arY,ahd=0x1a4;ahc[\"height\"]!=undefined&&(ah"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "'value']='';},ado['xhOdNSwMWQd'](!![]),acQ['fAdWFGQLqES'](ado),acR['add'](ado[arY(0xc7e)]);function adp(ahc){var aw0=arY,ahd=0x1a4;ahc[aw0(0x300)]!=undefined&&("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: config {Yes/Cancel,'Would you like to','quit to desktop?'} passed to adp; SERVED: identical quit-to-desktop config passed to adp.",
+   "name": "quitDialogConfig",
+   "selector": "adq@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adq",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "'](ahs),ahg[\"add\"](ahs[\"r23ZS3L2g\"]),ahe['cancelButton']=ahs;}return ahe['okayButton']=ahr,ahe;}var adq={};adq['okayText']='Yes',adq[\"cancelText\"]=\"Cancel\",adq["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "s),ahg[aw0(0x8da)](ahs[\"r23ZS3L2g\"]),ahe['cancelButton']=ahs;}return ahe['okayButton']=ahr,ahe;}var adq={};adq['okayText']='Yes',adq[arY(0xd1b)]=arY(0xae7),adq["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a3m scene overlay holding the 'Party ID:' join UI, shown by Join/showKicked; SERVED: same scene overlay with the same party-join children.",
+   "name": "partyJoinScene",
+   "selector": "adr@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adr",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "(){var aw3=arY,ahc={};ahc['type']='close',window['po'+'stMe'+\"ssage\"](JSON['stringify'](ahc));};var adr=a3m[\"scene\"]();!L1&&(adr['name']='k');adr[\"overlay\"]=!!["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "var aw3=arY,ahc={};ahc['type']='close',window['po'+'stMe'+aw3(0x86c)](JSON['stringify'](ahc));};var adr=a3m[arY(0x39e)]();!L1&&(adr['name']='k');adr[arY(0x829)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: object container added to adr receiving all party dialog children; SERVED: same container added to adr with the same children.",
+   "name": "partyJoinContent",
+   "selector": "adt@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adt",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "(ahc));};var adr=a3m[\"scene\"]();!L1&&(adr['name']='k');adr[\"overlay\"]=!![],adr[\"ReDNKHkwk\"]=![];var adt=new a3k[(\"object\")]();adr['add'](adt);var adu=new a3k['Q"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "c));};var adr=a3m[arY(0x39e)]();!L1&&(adr['name']='k');adr[arY(0x829)]=!![],adr[arY(0xb1d)]=![];var adt=new a3k[(arY(0x478))]();adr['add'](adt);var adu=new a3k["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: dark panel (0.6 opacity) behind the party dialog whose size feeds the side images; SERVED: same panel with same size/opacity reads.",
+   "name": "partyDialogBackground",
+   "selector": "adu@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adu",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "e']='k');adr[\"overlay\"]=!![],adr[\"ReDNKHkwk\"]=![];var adt=new a3k[(\"object\")]();adr['add'](adt);var adu=new a3k['QtjDeukbWl'](0x0,-0x14,0x212,0x12c,'#000',0x0);"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "]='k');adr[arY(0x829)]=!![],adr[arY(0xb1d)]=![];var adt=new a3k[(arY(0x478))]();adr['add'](adt);var adu=new a3k['QtjDeukbWl'](0x0,-0x14,0x212,0x12c,'#000',0x0);"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: fullscreen dark layer (0.7) with a resize handler matching camera width; SERVED: same layer with the same resize handler.",
+   "name": "partyDimLayer",
+   "selector": "adv@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adv",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": " adu=new a3k['QtjDeukbWl'](0x0,-0x14,0x212,0x12c,'#000',0x0);adu[\"opacity\"]=0.6,adt[\"add\"](adu);var adv=new a3k[(\"QtjDeukbWl\")](0x0,0x0,0x258,0x44c,'#000',0x0);"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ew a3k['QtjDeukbWl'](0x0,-0x14,0x212,0x12c,'#000',0x0);adu[arY(0x40e)]=0.6,adt[arY(0x8da)](adu);var adv=new a3k[(arY(0x1a1))](0x0,0x0,0x258,0x44c,'#000',0x0);ad"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'Party ID:' label whose y is stored and restored by adz; SERVED: same label with the same stored/restored y.",
+   "name": "partyIdCaption",
+   "selector": "adw@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adw",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "0x2,adu[\"position\"]['y'],acX,acV),acY['rotation']=Math['PI'],acY[\"opacity\"]=acW,adr['add'](acY);var adw=Mj(a3k,'Party\\x20ID:',0x0,-0x5a+acZ,0x2d,\"center\",'',0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "x2,adu[arY(0x215)]['y'],acX,acV),acY['rotation']=Math['PI'],acY[arY(0x40e)]=acW,adr['add'](acY);var adw=Mj(a3k,'Party\\x20ID:',0x0,-0x5a+acZ,0x2d,arY(0x5e7),'',0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: constant 0x3c shared as the button dimension by both party Okay and Cancel buttons; SERVED: same constant shared by the same two buttons.",
+   "name": "partyButtonHeight",
+   "selector": "adx@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adx",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ID:',0x0,-0x5a+acZ,0x2d,\"center\",'',0x1);adt[\"add\"](adw),adw['IiFzPLpZAQ']=adw['position']['y'];var adx=0x3c,adn=new a3J('Okay',0xd2,adx,0x1c);adn[\"r23ZS3L2g\"]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0,-0x5a+acZ,0x2d,arY(0x5e7),'',0x1);adt[arY(0x8da)](adw),adw['IiFzPLpZAQ']=adw['position']['y'];var adx=0x3c,adn=new a3J('Okay',0xd2,adx,0x1c);adn[\"r23ZS3L2g\"]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: status text rewritten by adz ('Play with your friends!','Joining...'); SERVED: same text with the same adz-driven updates.",
+   "name": "partyStatusText",
+   "selector": "ady@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ady",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "']=ado['onclick'],ado[\"xhOdNSwMWQd\"](!![]),adr['fAdWFGQLqES'](ado),adt['add'](ado[\"r23ZS3L2g\"]);var ady=Mj(a3k,'',0x0,-0x32+acZ,0x14,'center',\"bold\",0x1);ady['o"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "xPf']=ado['onclick'],ado[arY(0xddf)](!![]),adr['fAdWFGQLqES'](ado),adt['add'](ado[\"r23ZS3L2g\"]);var ady=Mj(a3k,'',0x0,-0x32+acZ,0x14,'center',arY(0x4b0),0x1);ad"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: function setting ady text/style per message and resetting adw position; SERVED: same function with the same ady/adw updates.",
+   "name": "updatePartyStatus",
+   "selector": "adz@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "adz",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "ld\",0x1);ady['opacity']=0x1,ady[\"fillStyle\"]='#F44',ady[\"fillStyle\"]='red',adt['add'](ady);function adz(ahc){var aw7=arY;adw['position']['y']=adw[\"IiFzPLpZAQ\"];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "x4b0),0x1);ady['opacity']=0x1,ady[arY(0xfee)]='#F44',ady[arY(0xfee)]='red',adt['add'](ady);function adz(ahc){var aw7=arY;adw['position']['y']=adw[aw7(0x544)];if"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: object group in the Trade Up pane holding the two 'Trade 6 skins' instruction lines; SERVED: same group with the same instruction lines.",
+   "name": "tradeUpHintGroup",
+   "selector": "ae0@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ae0",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "kbWl'](0x244+0x96,-0x98+0x96*a3M,0x81,0x81);adZ[\"opacity\"]=0.1,adY['add'](adZ);}a9H[\"add\"](adY);var ae0=new a3k['object']();ae0['opacity']=0.6,adY[\"add\"](ae0),a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "(0x244+0x96,-0x98+0x96*a3M,0x81,0x81);adZ[arY(0x40e)]=0.1,adY['add'](adZ);}a9H[arY(0x8da)](adY);var ae0=new a3k['object']();ae0['opacity']=0.6,adY[arY(0x8da)](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: object wrapper around the Trade Up button whose opacity toggles on 6-skin selection; SERVED: same wrapper with the same opacity toggle.",
+   "name": "tradeUpButtonGroup",
+   "selector": "ae1@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ae1",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "](Mj(a3k,'for\\x201\\x20skin\\x20of\\x20a\\x20higher\\x20rarity',0x244+0x96/0x2,0x108,0x11,\"center\"));var ae1=new a3k['object']();adY['add'](ae1);var ae2=new a3J('Tra"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "Mj(a3k,'for\\x201\\x20skin\\x20of\\x20a\\x20higher\\x20rarity',0x244+0x96/0x2,0x108,0x11,arY(0x5e7)));var ae1=new a3k['object']();adY['add'](ae1);var ae2=new a3J('Tra"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'Trade Up' button POSTing skins+token to /tradeUp; SERVED: same button with the same /tradeUp POST.",
+   "name": "tradeUpButton",
+   "selector": "ae2@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ae2",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "her\\x20rarity',0x244+0x96/0x2,0x108,0x11,\"center\"));var ae1=new a3k['object']();adY['add'](ae1);var ae2=new a3J('Trade\\x20Up',0x118,0x3c,0x1b);ae2[\"r23ZS3L2g\"]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "r\\x20rarity',0x244+0x96/0x2,0x108,0x11,arY(0x5e7)));var ae1=new a3k['object']();adY['add'](ae1);var ae2=new a3J('Trade\\x20Up',0x118,0x3c,0x1b);ae2[\"r23ZS3L2g\"]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'Cancel' button clearing the trade-up selection (yxWZJtFahs=null, acA()); SERVED: same Cancel button with the same clear-selection onclick.",
+   "name": "tradeUpCancelButton",
+   "selector": "ae3@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ae3",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "g['skins']=Kq[\"yxWZJtFahs\"],ahg['idto'+\"ken\"]=Kq[\"token\"],ahf['send'](JSON[\"stringify\"](ahg));};var ae3=new a3D(\"Cancel\",0x118,0x3c,0x1b);ae3[\"r23ZS3L2g\"]['posi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "ins']=Kq[awi(0xd1f)],ahg['idto'+awi(0xedb)]=Kq[awi(0x10b4)],ahf['send'](JSON[awi(0xc6)](ahg));};var ae3=new a3D(arY(0xae7),0x118,0x3c,0x1b);ae3[arY(0xc7e)]['pos"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hidden scene (a8H REFER) parenting all referral UI; SERVED: same hidden scene with the same referral children.",
+   "name": "referralScene",
+   "selector": "ae4@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ae4",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "&(abz[a3M]=q8(q7(),abz[a3M]));}abC(),acA(),Kq[\"skins\"]=[],acA(),adU[0x0]['button'][\"onclick\"]();var ae4=a8H(\"REFER\");ae4=a3m[\"scene\"](),ae4[\"ReDNKHkwk\"]=![];var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "z[a3M]=q8(q7(),abz[a3M]));}abC(),acA(),Kq[arY(0x674)]=[],acA(),adU[0x0]['button'][arY(0xbd0)]();var ae4=a8H(arY(0x203));ae4=a3m[arY(0x39e)](),ae4[arY(0xb1d)]=!["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'Please log in to use the Referral Program' text toggled by aem/aen; SERVED: same login prompt with the same toggles.",
+   "name": "referralLoginPrompt",
+   "selector": "ae5@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ae5",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "(),adU[0x0]['button'][\"onclick\"]();var ae4=a8H(\"REFER\");ae4=a3m[\"scene\"](),ae4[\"ReDNKHkwk\"]=![];var ae5=Mj(Kq['pkghYgdlX'],\"Please log in to use the Referral Pr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "[0x0]['button'][arY(0xbd0)]();var ae4=a8H(arY(0x203));ae4=a3m[arY(0x39e)](),ae4[arY(0xb1d)]=![];var ae5=Mj(Kq['pkghYgdlX'],arY(0x1d7),0x0,0x0,0x2d,arY(0x5e7));a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: object container in ae4 parenting all referral content (texts, buttons, progress bar); SERVED: same container with the same children.",
+   "name": "referralContent",
+   "selector": "ae6@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ae6",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "e log in to use the Referral Program\",0x0,0x0,0x2d,\"center\");ae5['opacity']=0.7,ae4['add'](ae5);var ae6=new a3k['object']();ae4[\"add\"](ae6),ae6[\"add\"](Mj(Kq['pk"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "r ae5=Mj(Kq['pkghYgdlX'],arY(0x1d7),0x0,0x0,0x2d,arY(0x5e7));ae5['opacity']=0.7,ae4['add'](ae5);var ae6=new a3k['object']();ae4[arY(0x8da)](ae6),ae6[arY(0x8da)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first referral subtitle line ('Level up for every friend...'); SERVED: same first subtitle line (pairs with existing referralSubtitleLine2).",
+   "name": "referralSubtitleLine1",
+   "selector": "ae7@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ae7",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",ae6[\"add\"](Mj(Kq['pkghYgdlX'],\"Refer your friends and earn rewards!\",0x0,-0xfa,0x2d,'center'));var ae7=Mj(Kq['pkghYgdlX'],'Level\\x20up\\x20for\\x20every\\x20frien"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "();ae4[arY(0x8da)](ae6),ae6[arY(0x8da)](Mj(Kq['pkghYgdlX'],arY(0xb22),0x0,-0xfa,0x2d,'center'));var ae7=Mj(Kq['pkghYgdlX'],'Level\\x20up\\x20for\\x20every\\x20frien"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: leaderboard arrow button at -0x64 running aet-- paging; SERVED: same button with the same previous-page onclick.",
+   "name": "leaderboardPrevButton",
+   "selector": "aeA@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aeA",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "[\"responseText\"]),aet=0x0,aeF(aer,aes,aet);},ahg['send']();};var aev=[],aew=[],aex=[],aey=[],aez=[],aeA,aeB,aeC,aeD;function aeE(){var aws=arY,ahg=['Daily','Wee"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "(ahg[awr(0xabf)]),aet=0x0,aeF(aer,aes,aet);},ahg['send']();};var aev=[],aew=[],aex=[],aey=[],aez=[],aeA,aeB,aeC,aeD;function aeE(){var aws=arY,ahg=['Daily','Wee"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: leaderboard arrow button at +0x64 running aet++ paging; SERVED: same button with the same next-page onclick.",
+   "name": "leaderboardNextButton",
+   "selector": "aeB@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aeB",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "sponseText\"]),aet=0x0,aeF(aer,aes,aet);},ahg['send']();};var aev=[],aew=[],aex=[],aey=[],aez=[],aeA,aeB,aeC,aeD;function aeE(){var aws=arY,ahg=['Daily','Weekly'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "[awr(0xabf)]),aet=0x0,aeF(aer,aes,aet);},ahg['send']();};var aev=[],aew=[],aex=[],aey=[],aez=[],aeA,aeB,aeC,aeD;function aeE(){var aws=arY,ahg=['Daily','Weekly'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: object wrapper around the prev button whose opacity tracks page state; SERVED: same wrapper with the same opacity tracking.",
+   "name": "leaderboardPrevWrap",
+   "selector": "aeC@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aeC",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "seText\"]),aet=0x0,aeF(aer,aes,aet);},ahg['send']();};var aev=[],aew=[],aex=[],aey=[],aez=[],aeA,aeB,aeC,aeD;function aeE(){var aws=arY,ahg=['Daily','Weekly','Al"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "(0xabf)]),aet=0x0,aeF(aer,aes,aet);},ahg['send']();};var aev=[],aew=[],aex=[],aey=[],aez=[],aeA,aeB,aeC,aeD;function aeE(){var aws=arY,ahg=['Daily','Weekly','Al"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: object wrapper around the next button whose opacity tracks page state; SERVED: same wrapper with the same opacity tracking.",
+   "name": "leaderboardNextWrap",
+   "selector": "aeD@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aeD",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "xt\"]),aet=0x0,aeF(aer,aes,aet);},ahg['send']();};var aev=[],aew=[],aex=[],aey=[],aez=[],aeA,aeB,aeC,aeD;function aeE(){var aws=arY,ahg=['Daily','Weekly','All'];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "bf)]),aet=0x0,aeF(aer,aes,aet);},ahg['send']();};var aev=[],aew=[],aex=[],aey=[],aez=[],aeA,aeB,aeC,aeD;function aeE(){var aws=arY,ahg=['Daily','Weekly','All'];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: function rendering one leaderboard page (period/stat lookup, row fill, pager toggles); SERVED: same renderer called from the same filter/pager sites.",
+   "name": "renderLeaderboardPage",
+   "selector": "aeF@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aeF",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": ",0x1ef),aeA[\"xhOdNSwMWQd\"](!![]),aeA[\"onclick\"]=function(){aet--,aeF(aer,aes,aet);};}aeE();function aeF(ahg,ahh,ahi){var awv=arY;if(aep==undefined)return;ahg=ah"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "64,0x1ef),aeA[aws(0xddf)](!![]),aeA[aws(0xbd0)]=function(){aet--,aeF(aer,aes,aet);};}aeE();function aeF(ahg,ahh,ahi){var awv=arY;if(aep==undefined)return;ahg=ah"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: x cursor seeded from 0x94+a8D and advanced per nav tab for label/underline layout; SERVED: same cursor with the same per-tab advance.",
+   "name": "navTabCursorX",
+   "selector": "aeG@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aeG",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "?(aeD['opacity']=0x1,aeB[\"ReDNKHkwk\"]=!![]):(aeD['opacity']=0.15,aeB[\"ReDNKHkwk\"]=![],LU(aeB));}var aeG=0x94+a8D;aeG+=0xf+0x14a+0x50;Gj&&(aeG-=0x64);if(Gl){}var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "']?(aeD['opacity']=0x1,aeB[awv(0xb1d)]=!![]):(aeD['opacity']=0.15,aeB[awv(0xb1d)]=![],LU(aeB));}var aeG=0x94+a8D;aeG+=0xf+0x14a+0x50;Gj&&(aeG-=0x64);if(Gl){}var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 SERVED DECL shows var a4T=a4Q right after new a3G('aim.png',...) with name='pause'/'aim' button setup; both sides' USES reposition a4T next to pause/shoot mobile buttons.",
+   "name": "aimButton",
+   "selector": "a4T@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4T",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "]=function(){},a4Q[\"onclick\"]=function(){if(KG)return;Kq['MSqlYikuucK']();},a4Q['name']=\"pause\";var a4T=a4Q,a4Q=new a3G('aim.png',0xa0*a4N);a4I[\"fAdWFGQLqES\"](a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "nction(){},a4Q[arY(0xbd0)]=function(){if(KG)return;Kq['MSqlYikuucK']();},a4Q['name']=arY(0x7ad);var a4T=a4Q,a4Q=new a3G('aim.png',0xa0*a4N);a4I[arY(0xb05)](a4Q)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4U=new a3k['object']() followed by Mj(a3k,'Double Tap',...)/'to Scope In!' text children; both USES set a4U['position']['x'] alongside mobile shoot buttons.",
+   "name": "scopeHintBubble",
+   "selector": "a4U@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4U",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "up2']=a4Q[\"onclick\"],a4Q['shouldDisregard']=![],a4Q[\"forceAim\"]=!![],a4Q['name']='shoot',Nc=a4Q;var a4U=new a3k['object']();a4U['position']['x']=0x1f4,a4U['posi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "p2']=a4Q[arY(0xbd0)],a4Q['shouldDisregard']=![],a4Q[arY(0x3c4)]=!![],a4Q['name']='shoot',Nc=a4Q;var a4U=new a3k['object']();a4U['position']['x']=0x1f4,a4U['posi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs build var a4V=new a3k['object']() with circle children and Kq['joystick']=a4V; both USES drive a4V['nub'] position/opacity from touch input via agR/agS.",
+   "name": "joystickBase",
+   "selector": "a4V@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4V",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 47,
+    "snippet": "3L2g\"]['position']['y']=agZ['y'],a3F[agY]['xhOdNSwMWQd'](!![]));}}},a3m[\"yhikrzIhlK\"](null,a4L);var a4V=new a3k['object']();a4V['opacity']=0.3;Gl&&(a4V[\"size\"]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 47,
+    "snippet": "ZS3L2g\"]['position']['y']=agZ['y'],a3F[agY]['xhOdNSwMWQd'](!![]));}}},a3m[arY(0x1cf)](null,a4L);var a4V=new a3k['object']();a4V['opacity']=0.3;Gl&&(a4V[arY(0xe8"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4W=new a3k['QtjDeukbWl'](0,0,0xf423f,...) with opacity 0.95 added to overlay scenes KJ/KK; later USES re-add it to onboarding/phone-rotate scenes.",
+   "name": "overlayBackdrop",
+   "selector": "a4W@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4W",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "]['x'],a4V['nub']['position']['y']+=a4V['position']['y'];},KJ=a3m['scene'](),KJ['overlay']=!![];var a4W=new a3k[(\"QtjDeukbWl\")](0x0,0x0,0xf423f,0x43a);a4W['opac"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "]['x'],a4V['nub']['position']['y']+=a4V['position']['y'];},KJ=a3m['scene'](),KJ['overlay']=!![];var a4W=new a3k[(arY(0x1a1))](0x0,0x0,0xf423f,0x43a);a4W['opacit"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4X=Mj(Kq[...],'Welcome to Deadshot!',0,-0x5a,0x50,'center',...) with opacity 0.8 added to dialog group agT; a KK-scene re-DECL reuses it for the Google Play title.",
+   "name": "welcomeTitleText",
+   "selector": "a4X@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4X",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "[\"r23ZS3L2g\"]['add'](a4W);let agT=new a3k['object']();KJ[\"add\"](agT),agT['position']['y']=-0x78;var a4X=Mj(Kq[\"pkghYgdlX\"],'Welcome\\x20to\\x20Deadshot!',0x0,-0x5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "(0xc7e)]['add'](a4W);let agT=new a3k['object']();KJ[arY(0x8da)](agT),agT['position']['y']=-0x78;var a4X=Mj(Kq[arY(0x232)],'Welcome\\x20to\\x20Deadshot!',0x0,-0x5a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4Y=Mj(Kq[...],'Would you like to make an account?',0,0xa,0x2d,...) with opacity 0.6 added to agT; KK-scene re-DECL reuses it for the Play Store subtitle.",
+   "name": "welcomeSubtitleText",
+   "selector": "a4Y@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Y",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'Welcome\\x20to\\x20Deadshot!',0x0,-0x5a,0x50,'center','',0x3);a4X[\"opacity\"]=0.8,agT[\"add\"](a4X);var a4Y=Mj(Kq['pkghYgdlX'],'Would\\x20you\\x20like\\x20to\\x20make\\x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "me\\x20to\\x20Deadshot!',0x0,-0x5a,0x50,'center','',0x3);a4X[arY(0x40e)]=0.8,agT[arY(0x8da)](a4X);var a4Y=Mj(Kq['pkghYgdlX'],'Would\\x20you\\x20like\\x20to\\x20make\\x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4Z=0x23 with a50/a51/a52 dimension group feeding new a3D('Continue in browser',a51,a50,a4Z); later USES pass a4Z as the 4th arg to a3J button constructors.",
+   "name": "dialogButtonFontSize",
+   "selector": "a4Z@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Z",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "0to\\x20make\\x20an\\x20account?',0x0,0xa,0x2d,'center','',0x3);a4Y[\"opacity\"]=0.6,agT[\"add\"](a4Y);var a4Z=0x23,a50=0x5a,a51=0x1f4,a52=-0x50,a53=new a3D(\"Continue "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "0make\\x20an\\x20account?',0x0,0xa,0x2d,'center','',0x3);a4Y[arY(0x40e)]=0.6,agT[arY(0x8da)](a4Y);var a4Z=0x23,a50=0x5a,a51=0x1f4,a52=-0x50,a53=new a3D(arY(0xd7a)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4f=0x1e-0x1e (=0) beside menu layout consts a4d/a4e; all USES on both sides add a4f to y-position expressions of class/weapon panel labels.",
+   "name": "classListYOffset",
+   "selector": "a4f@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4f",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": ";var a49=![],a4a=0x1a4,a4b=0x46,a4c=0x22;a49&&(a4a=0x104,a4b=0x3c,a4c=0x19);var a4d=0x154,a4e=0x12c,a4f=0x1e-0x1e,a4g=new a3k['object']();respawnLeft=new a3k[(\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": ";var a49=![],a4a=0x1a4,a4b=0x46,a4c=0x22;a49&&(a4a=0x104,a4b=0x3c,a4c=0x19);var a4d=0x154,a4e=0x12c,a4f=0x1e-0x1e,a4g=new a3k['object']();respawnLeft=new a3k[(a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4g=new a3k['object']() containing respawnLeft with a tick syncing a4g['position']['x'] to Kq['nwxurZsxI'], added to Mn.",
+   "name": "respawnLeftPanel",
+   "selector": "a4g@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4g",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "4a=0x1a4,a4b=0x46,a4c=0x22;a49&&(a4a=0x104,a4b=0x3c,a4c=0x19);var a4d=0x154,a4e=0x12c,a4f=0x1e-0x1e,a4g=new a3k['object']();respawnLeft=new a3k[(\"object\")](),a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "4a=0x1a4,a4b=0x46,a4c=0x22;a49&&(a4a=0x104,a4b=0x3c,a4c=0x19);var a4d=0x154,a4e=0x12c,a4f=0x1e-0x1e,a4g=new a3k['object']();respawnLeft=new a3k[(arY(0x478))](),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs show var a4h=new a3D('Scoreboard',0x172,...) with show/hideLeaderboard onmousedown2/onmouseup2 handlers inside if(Gj), added under respawnLeft.",
+   "name": "scoreboardButton",
+   "selector": "a4h@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4h",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "ft,function(agO){a4g['position']['x']=Kq['nwxurZsxI']['position']['x'];}),Mn['add'](a4g);if(Gj){var a4h=new a3D('Scoreboard',0x172,a4b*1.2,a4c*1.2);Mn[\"fAdWFGQL"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "ft,function(agO){a4g['position']['x']=Kq['nwxurZsxI']['position']['x'];}),Mn['add'](a4g);if(Gj){var a4h=new a3D('Scoreboard',0x172,a4b*1.2,a4c*1.2);Mn[arY(0xb05"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4i=new a3k['object']() wrapping Nn with a tick syncing a4i['position']['x'] to Kq['WpuCzbdCUqV'], added to Mn as the class-panel root.",
+   "name": "classPanelRoot",
+   "selector": "a4i@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4i",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "]());},a4h[\"onmouseup2\"]=function(){Kq['hideLeaderboard']();},a4h['onclick']=a4h['onmouseup2'];}var a4i=new a3k['object']();Nn=new a3k['object'](),a4i[\"add\"](Nn"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "2)]());},a4h[arY(0xaa9)]=function(){Kq['hideLeaderboard']();},a4h['onclick']=a4h['onmouseup2'];}var a4i=new a3k['object']();Nn=new a3k['object'](),a4i[arY(0x8da"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL creates new M7('weaponText','Current Class','center') and SERVED re-DECL at @41385 reuses a4j for new M7('weaponText','SELECT CLASS','center'); both configure it as a panel heading label.",
+   "name": "currentClassLabel",
+   "selector": "a4j@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4j",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "gO){var ast=arY;a4i['position']['x']=Kq[\"WpuCzbdCUqV\"]['position']['x']-0x226;}),Mn['add'](a4i);var a4j=new M7('weaponText','Current\\x20Class','center');a4j[\"po"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "n(agO){var ast=arY;a4i['position']['x']=Kq[ast(0xfdc)]['position']['x']-0x226;}),Mn['add'](a4i);var a4j=new M7('weaponText','Current\\x20Class','center');a4j[arY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4k=0x15e beside a4l=0x258 feeding the class-preview backdrop rect and new a3k image(Mg,...,a4k,0x2bc) width argument.",
+   "name": "classPreviewWidth",
+   "selector": "a4k@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4k",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "n\"]['y']-=0x136-a4f,a4j['size']=0x1,a4j['opacity']=0.35,a4j['position']['x']=a4e,Nn[\"add\"](a4j);var a4k=0x15e,a4l=0x258;Nn['add'](new a3k['QtjDeukbWl'](a4e+a4l/"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "y']-=0x136-a4f,a4j['size']=0x1,a4j['opacity']=0.35,a4j['position']['x']=a4e,Nn[arY(0x8da)](a4j);var a4k=0x15e,a4l=0x258;Nn['add'](new a3k['QtjDeukbWl'](a4e+a4l/"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4l=0x258 beside a4k=0x15e, used only in a4e+a4l/2 x-centering expressions for the class-preview backdrop and image.",
+   "name": "classPreviewHeight",
+   "selector": "a4l@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4l",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0x136-a4f,a4j['size']=0x1,a4j['opacity']=0.35,a4j['position']['x']=a4e,Nn[\"add\"](a4j);var a4k=0x15e,a4l=0x258;Nn['add'](new a3k['QtjDeukbWl'](a4e+a4l/0x2,-0x14,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "-a4f,a4j['size']=0x1,a4j['opacity']=0.35,a4j['position']['x']=a4e,Nn[arY(0x8da)](a4j);var a4k=0x15e,a4l=0x258;Nn['add'](new a3k['QtjDeukbWl'](a4e+a4l/0x2,-0x14,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both DECLs show var a4m=new a3k[image](Mg,...,a4k,0x2bc,0.3) with rotation=PI added to Nn beside the Current Class label and preview backdrop.",
+   "name": "classPreviewImage",
+   "selector": "a4m@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4m",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": " a4k=0x15e,a4l=0x258;Nn['add'](new a3k['QtjDeukbWl'](a4e+a4l/0x2,-0x14,0x208,0x2bc,'#000',0.3));var a4m=new a3k[(\"image\")](Mg,a4e+a4l/0x2-a4k/0x2-0x208/0x2,-0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": " a4k=0x15e,a4l=0x258;Nn['add'](new a3k['QtjDeukbWl'](a4e+a4l/0x2,-0x14,0x208,0x2bc,'#000',0.3));var a4m=new a3k[(arY(0xbf7))](Mg,a4e+a4l/0x2-a4k/0x2-0x208/0x2,-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 USES position/add/show it (r23ZS3L2g position.set, fAdWFGQLqES, xhOdNSwMWQd) and SERVED DECL shows var a4n=new a3D(label,menuButtonWidth,menuButtonHeight*1.2,fontSize*1.2) with identical position/add/show USES — a class menu button.",
+   "name": "classSelectButton",
+   "selector": "a4n@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4n",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "Mg,a4e+a4l/0x2-a4k/0x2-0x208/0x2,-0x14,a4k,0x2bc,0.3);a4m['rotation']=Math['PI'],Nn[\"add\"](a4m);var a4n=new a3D(\"Change Class\",a4a,a4b*1.2,a4c*1.2);a4n[\"onclick"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "e+a4l/0x2-a4k/0x2-0x208/0x2,-0x14,a4k,0x2bc,0.3);a4m['rotation']=Math['PI'],Nn[arY(0x8da)](a4m);var a4n=new a3D(arY(0x123),a4a,a4b*1.2,a4c*1.2);a4n[arY(0xbd0)]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4o=Hs[Hx[0x0]] (weaponStatsTable[weaponOrder]) with .ui.name/.ui.stats/.ui.offset USES, and SERVED shows the same lookup plus re-lookup per class (Hs[Hx[a3M]]) feeding card title, stat keys and gun offset — the per-class stats entry.",
+   "name": "classStatsEntry",
+   "selector": "a4o@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4o",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "+a4d+0x7-0x190+a4f),Mn['fAdWFGQLqES'](a4n),Nn[\"add\"](a4n[\"r23ZS3L2g\"]),a4n['xhOdNSwMWQd'](!![]);var a4o=Hs[Hx[0x0]],a4p=Object['keys'](a4o['ui']['DMZbIHLgyk']);"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "0x7-0x190+a4f),Mn['fAdWFGQLqES'](a4n),Nn[arY(0x8da)](a4n[\"r23ZS3L2g\"]),a4n['xhOdNSwMWQd'](!![]);var a4o=Hs[Hx[0x0]],a4p=Object['keys'](a4o['ui']['DMZbIHLgyk']);"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4p=Object.keys(stats) iterated via a4p.length/a4p[a4q] to build 'key: value' rows, and SERVED DECL/USES repeat the identical Object.keys + indexed stat-row loop — the stat key list.",
+   "name": "statKeyList",
+   "selector": "a4p@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4p",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "4f),Mn['fAdWFGQLqES'](a4n),Nn[\"add\"](a4n[\"r23ZS3L2g\"]),a4n['xhOdNSwMWQd'](!![]);var a4o=Hs[Hx[0x0]],a4p=Object['keys'](a4o['ui']['DMZbIHLgyk']);Nj=[];for(var a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "n['fAdWFGQLqES'](a4n),Nn[arY(0x8da)](a4n[\"r23ZS3L2g\"]),a4n['xhOdNSwMWQd'](!![]);var a4o=Hs[Hx[0x0]],a4p=Object['keys'](a4o['ui']['DMZbIHLgyk']);Nj=[];for(var a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL for(var a4q=0;a4q<a4p.length;a4q++) with if(a4q>1)break indexing a4p[a4q] and row y-offset math, and SERVED shows the same capped loop over the same key list — the stat-row loop index.",
+   "name": "statKeyIndex",
+   "selector": "a4q@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4q",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 21,
+    "snippet": "['xhOdNSwMWQd'](!![]);var a4o=Hs[Hx[0x0]],a4p=Object['keys'](a4o['ui']['DMZbIHLgyk']);Nj=[];for(var a4q=0x0;a4q<a4p[\"length\"];a4q++){if(a4q>0x1)break;var a4r=ne"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 21,
+    "snippet": "['xhOdNSwMWQd'](!![]);var a4o=Hs[Hx[0x0]],a4p=Object['keys'](a4o['ui']['DMZbIHLgyk']);Nj=[];for(var a4q=0x0;a4q<a4p[arY(0x3a2)];a4q++){if(a4q>0x1)break;var a4r="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4r=new M7('weaponText',key+': '+value,'center') with textScale/position/size/opacity styling, and SERVED DECL/USES repeat the same 'key: value' weaponText construction and styling — one stat line label.",
+   "name": "statLineText",
+   "selector": "a4r@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4r",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 22,
+    "snippet": "keys'](a4o['ui']['DMZbIHLgyk']);Nj=[];for(var a4q=0x0;a4q<a4p[\"length\"];a4q++){if(a4q>0x1)break;var a4r=new M7('weaponText',a4p[a4q]+':\\x20'+a4o['ui']['DMZbIHLg"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 22,
+    "snippet": "ys'](a4o['ui']['DMZbIHLgyk']);Nj=[];for(var a4q=0x0;a4q<a4p[arY(0x3a2)];a4q++){if(a4q>0x1)break;var a4r=new M7('weaponText',a4p[a4q]+':\\x20'+a4o['ui']['DMZbIHLg"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 USES show new a3k.image(Nl[class],...) with opacity set and attached via otYTUIhzc onto the gun sprite, and SERVED DECL var a4s=new a3k.image(Nl[Hx[a3M]],...) with Ni.otYTUIhzc(a4s) repeats it at all three sites — a gun image overlay layer.",
+   "name": "gunOverlayImage",
+   "selector": "a4s@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4s",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "Nk['opacity']=0.75,Nn['add'](Nk);var a3M=0x3;Ni=Kt('default',Hx[a3M],a4e,-0x8c+a4f,0x113,0x113);var a4s=new a3k['image'](Nl[Hx[a3M]],0x0,0x0,Ni[\"width\"]*1.4,Ni["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "Nk['opacity']=0.75,Nn['add'](Nk);var a3M=0x3;Ni=Kt('default',Hx[a3M],a4e,-0x8c+a4f,0x113,0x113);var a4s=new a3k['image'](Nl[Hx[a3M]],0x0,0x0,Ni[arY(0xad0)]*1.4,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4t=-(Hx.length-1)/2 used as (a4t+a3M)*spacing for card x-centering, and SERVED DECL/USES show the identical centering formula and card-row x use — the card-row centering offset.",
+   "name": "cardRowCenterOffset",
+   "selector": "a4t@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4t",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "0x0,0x0,Ni[\"width\"]*1.4,Ni['height']*1.4);a4s[\"opacity\"]=0.5,Ni['otYTUIhzc'](a4s),Nn[\"add\"](Ni);var a4t=-(Hx[\"length\"]-0x1)/0x2;for(var a3M=0x0;a3M<Hx[\"length\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "i[arY(0xad0)]*1.4,Ni['height']*1.4);a4s[arY(0x40e)]=0.5,Ni['otYTUIhzc'](a4s),Nn[arY(0x8da)](Ni);var a4t=-(Hx[arY(0x3a2)]-0x1)/0x2;for(var a3M=0x0;a3M<Hx[arY(0x3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL var a4u=-0x4b added to mainText and stat-row y positions (a4v+...+a4u), and SERVED DECL/USES repeat the same -0x4b constant in the same y-position sums — the negative y adjust term.",
+   "name": "textYOffsetAdjust",
+   "selector": "a4u@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4u",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "7*0.3,agQ['QtjDeukbWl'][\"opacity\"]=0x0,agQ[\"r23ZS3L2g\"][\"position\"]['set'](a4e,-0x127+0x8c*a3M);var a4u=-0x4b;agQ['mainText']=new M7(\"weaponText\",agO['ui']['nam"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "7*0.3,agQ['QtjDeukbWl'][arY(0x40e)]=0x0,agQ[arY(0xc7e)][arY(0x215)]['set'](a4e,-0x127+0x8c*a3M);var a4u=-0x4b;agQ['mainText']=new M7(arY(0xf14),agO['ui']['name'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL var a4v=0x32 added to mainText y and stat-row y (a4v+0x19+i*0x14...), and SERVED DECL/USES repeat the same 0x32 constant in the same y-position sums — the base y offset term.",
+   "name": "textYOffsetBase",
+   "selector": "a4v@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4v",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "gQ['mainText']=new M7(\"weaponText\",agO['ui']['name'],'center'),agQ['mainText'][\"textScale\"]=1.3;var a4v=0x32;agQ['mainText']['position']['x']=0x50,agQ['mainText"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "b;agQ['mainText']=new M7(arY(0xf14),agO['ui']['name'],'center'),agQ['mainText'][arY(0x4a7)]=1.3;var a4v=0x32;agQ['mainText']['position']['x']=0x50,agQ['mainText"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4w=Kt('default',classId,0,0,0xd2,0xd2) sized, pushed to selectClassGuns2 and added under the gun node, and SERVED DECL/USES repeat the same Kt sprite creation, sizing and gun-node attach — the class gun sprite.",
+   "name": "classGunSprite",
+   "selector": "a4w@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4w",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "]['x']-=0x73;agO['ui']['offset']!=undefined&&(agQ['gun']['position']['y']-=agO['ui'][\"offset\"]);var a4w=Kt('default',Hx[a3M],0x0,0x0,0xd2,0xd2),a4s=new a3k['ima"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "'x']-=0x73;agO['ui']['offset']!=undefined&&(agQ['gun']['position']['y']-=agO['ui'][arY(0x377)]);var a4w=Kt('default',Hx[a3M],0x0,0x0,0xd2,0xd2),a4s=new a3k['ima"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 window shows var a4x={x:0,y:3,size:0.93} assigned to gun.hidden, and SERVED DECL shows the identical literal and gun.hidden assignment with all uses inside the window — the gun hidden hover state.",
+   "name": "gunHiddenState",
+   "selector": "a4x@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4x",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "23ZS3L2g\"]['opacity']=1.5,agQ['gunShadow']=a3m[\"element\"](agQ['QjexxutdvZC'][\"wAijZbUAD\"][0x0]);var a4x={};a4x['x']=0x0,a4x['y']=0x3,a4x[\"size\"]=0.93,agQ[\"gun\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "23ZS3L2g\"]['opacity']=1.5,agQ['gunShadow']=a3m[arY(0x6d6)](agQ['QjexxutdvZC'][arY(0xada)][0x0]);var a4x={};a4x['x']=0x0,a4x['y']=0x3,a4x[arY(0xe8c)]=0.93,agQ[ar"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 window shows var a4y={x:0,y:3,size:1.02} assigned to gun.shown, and SERVED DECL shows the identical literal and gun.shown assignment with all uses inside the window — the gun shown hover state.",
+   "name": "gunShownState",
+   "selector": "a4y@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4y",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "AijZbUAD\"][0x0]);var a4x={};a4x['x']=0x0,a4x['y']=0x3,a4x[\"size\"]=0.93,agQ[\"gun\"]['hidden']=a4x;var a4y={};a4y['x']=0x0,a4y['y']=0x3,a4y[\"size\"]=1.02,agQ['gun']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "][0x0]);var a4x={};a4x['x']=0x0,a4x['y']=0x3,a4x[arY(0xe8c)]=0.93,agQ[arY(0x9ac)]['hidden']=a4x;var a4y={};a4y['x']=0x0,a4y['y']=0x3,a4y[arY(0xe8c)]=1.02,agQ['g"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 window shows var a4z={x:-3,y:3,opacity:0.4} assigned to gunShadow.hidden, and SERVED DECL shows the identical literal and gunShadow.hidden assignment with all uses inside the window — the gun-shadow hidden state.",
+   "name": "gunShadowHiddenState",
+   "selector": "a4z@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4z",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ent'](agQ[\"gun\"]),agQ[\"gun\"][\"easeType\"]=tc[\"ixjwTFmpU\"],agQ['oNdPPkNKFp']=Kq['buttonTime']*1.3;var a4z={};a4z['x']=-0x3,a4z['y']=0x3,a4z['opacity']=0.4,agQ['gu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "[arY(0x9ac)]),agQ[arY(0x9ac)][arY(0xb4c)]=tc[arY(0x386)],agQ['oNdPPkNKFp']=Kq['buttonTime']*1.3;var a4z={};a4z['x']=-0x3,a4z['y']=0x3,a4z['opacity']=0.4,agQ['gu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a4Z,a50=0x5a,a51,... with new a3D(label,a51,a50,a4Z) and new a3J(label,a51,a50,a4Z), and SERVED repeats both constructions; a3D's (width,height,fontSize) order is fixed by a4n=new a3D(label,menuButtonWidth,menuButtonHeight,...) — the dialog button height.",
+   "name": "dialogButtonHeight",
+   "selector": "a50@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a50",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ke\\x20an\\x20account?',0x0,0xa,0x2d,'center','',0x3);a4Y[\"opacity\"]=0.6,agT[\"add\"](a4Y);var a4Z=0x23,a50=0x5a,a51=0x1f4,a52=-0x50,a53=new a3D(\"Continue As Guest\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "an\\x20account?',0x0,0xa,0x2d,'center','',0x3);a4Y[arY(0x40e)]=0.6,agT[arY(0x8da)](a4Y);var a4Z=0x23,a50=0x5a,a51=0x1f4,a52=-0x50,a53=new a3D(arY(0xd7a),a51,a50,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a51=0x1f4 passed as the width arg in new a3D(label,a51,a50,a4Z) and new a3J(label,a51,a50,a4Z), and SERVED repeats both; matches a3D(label,width,height,fontSize) order from a4n — the dialog button width.",
+   "name": "dialogButtonWidth",
+   "selector": "a51@u2151#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a51",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "x20account?',0x0,0xa,0x2d,'center','',0x3);a4Y[\"opacity\"]=0.6,agT[\"add\"](a4Y);var a4Z=0x23,a50=0x5a,a51=0x1f4,a52=-0x50,a53=new a3D(\"Continue As Guest\",a51,a50,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ount?',0x0,0xa,0x2d,'center','',0x3);a4Y[arY(0x40e)]=0.6,agT[arY(0x8da)](a4Y);var a4Z=0x23,a50=0x5a,a51=0x1f4,a52=-0x50,a53=new a3D(arY(0xd7a),a51,a50,a4Z);a53["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL creates a 0x100x0x100 canvas filled with a vertical gradient and USES pass it as the image source for overlay gradients; SERVED DECL/USES show the identical canvas creation and gradient-image use.",
+   "name": "gradientSrcCanvas",
+   "selector": "a3x@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "ar as5=arY;return agK['charAt'](0x0)[\"toUpperCase\"]()+agK['slice'](0x1);}var a3u=Gj,a3v=0x6,a3w=0.9,a3x=document['createElement']('canvas');a3x['width']=a3x['he"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "){var as5=arY;return agK['charAt'](0x0)[as5(0xe30)]()+agK['slice'](0x1);}var a3u=Gj,a3v=0x6,a3w=0.9,a3x=document['createElement']('canvas');a3x['width']=a3x['he"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL binds it to a3x.getContext('2d') then sets fillStyle/fillRect; SERVED DECL shows the same getContext('2d') plus fillStyle/fillRect sequence.",
+   "name": "gradientSrcCtx",
+   "selector": "a3y@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a3u=Gj,a3v=0x6,a3w=0.9,a3x=document['createElement']('canvas');a3x['width']=a3x['height']=0x100;var a3y=a3x['getContext']('2d'),a3z=a3y[\"createLinearGradient\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a3u=Gj,a3v=0x6,a3w=0.9,a3x=document['createElement']('canvas');a3x['width']=a3x['height']=0x100;var a3y=a3x['getContext']('2d'),a3z=a3y[arY(0xa66)](0x0,0x0,0x0,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL assigns a createLinearGradient result with addColorStop calls and later var-reuses hold other linear gradients; SERVED DECL/USES show the same gradient creation and addColorStop reuse pattern.",
+   "name": "scratchGradient",
+   "selector": "a3z@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 17,
+    "snippet": "ocument['createElement']('canvas');a3x['width']=a3x['height']=0x100;var a3y=a3x['getContext']('2d'),a3z=a3y[\"createLinearGradient\"](0x0,0x0,0x0,0x100);a3z['addC"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 17,
+    "snippet": "ocument['createElement']('canvas');a3x['width']=a3x['height']=0x100;var a3y=a3x['getContext']('2d'),a3z=a3y[arY(0xa66)](0x0,0x0,0x0,0x100);a3z['addColorStop'](0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds a container added to the respawn scene holding 'Eliminated By' text, health bar and images; SERVED DECL/USES show the same container with the same children added to the same scene.",
+   "name": "deathOverlay",
+   "selector": "a40@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a40",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "zbdCUqV']['position']['x']-Kq['nwxurZsxI'][\"position\"]['x'],agO['width']*=1.1;}),Mo['add'](a3Z);var a40=new a3k[(\"object\")]();if(Gj||!![]){}Mn['add'](a40),Mn['C"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "zbdCUqV']['position']['x']-Kq['nwxurZsxI'][asq(0x215)]['x'],agO['width']*=1.1;}),Mo['add'](a3Z);var a40=new a3k[(arY(0x478))]();if(Gj||!![]){}Mn['add'](a40),Mn["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets -0x32 and USES add it into several child y-position expressions; SERVED DECL/USES show the same constant folded into the same y-position arithmetic.",
+   "name": "baseYOffset",
+   "selector": "a41@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a41",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ew a3k[(\"object\")]();if(Gj||!![]){}Mn['add'](a40),Mn['CSdRnZQxt']=a40,a40['position']['y']=0x14;var a41=-0x32;MR=new M7('NzOWSqorpw','Eliminated\\x20By:','center"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": " a3k[(arY(0x478))]();if(Gj||!![]){}Mn['add'](a40),Mn['CSdRnZQxt']=a40,a40['position']['y']=0x14;var a41=-0x32;MR=new M7('NzOWSqorpw','Eliminated\\x20By:','center"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL creates the object holding the health bar background, red fill and '100 | 100' label, animated by MQ; SERVED DECL/USES show the same group with the same children and MQ update function.",
+   "name": "healthBarGroup",
+   "selector": "a43@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a43",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": ",'center'),MS[\"position\"]['y']=-0x15e+a41+a42+0xa,a40[\"add\"](MS['gameobj']),Mn['pNkooxTEbV']=MS;var a43=new a3k['object']();a43['position']['y']=-0x131+a41+a42+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "ter'),MS[arY(0x215)]['y']=-0x15e+a41+a42+0xa,a40[arY(0x8da)](MS['gameobj']),Mn['pNkooxTEbV']=MS;var a43=new a3k['object']();a43['position']['y']=-0x131+a41+a42+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets 0xb4 used as bar widths and in MQ's fill-width ratio a44*agO/agP; SERVED DECL/USES show the same constant in the same width and ratio expressions.",
+   "name": "healthBarWidth",
+   "selector": "a44@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a44",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "eobj']),Mn['pNkooxTEbV']=MS;var a43=new a3k['object']();a43['position']['y']=-0x131+a41+a42+0xa;var a44=0xb4,a45=0x14,a46=0xa;a43['add'](new a3k[(\"QtjDeukbWl\")]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "eobj']),Mn['pNkooxTEbV']=MS;var a43=new a3k['object']();a43['position']['y']=-0x131+a41+a42+0xa;var a44=0xb4,a45=0x14,a46=0xa;a43['add'](new a3k[(arY(0x1a1))](0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets 0x14 used as the height of both health bar rectangles; SERVED DECL shows the same constant passed as the height of the same two rectangles.",
+   "name": "healthBarHeight",
+   "selector": "a45@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a45",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "n['pNkooxTEbV']=MS;var a43=new a3k['object']();a43['position']['y']=-0x131+a41+a42+0xa;var a44=0xb4,a45=0x14,a46=0xa;a43['add'](new a3k[(\"QtjDeukbWl\")](0x0,0x0,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "n['pNkooxTEbV']=MS;var a43=new a3k['object']();a43['position']['y']=-0x131+a41+a42+0xa;var a44=0xb4,a45=0x14,a46=0xa;a43['add'](new a3k[(arY(0x1a1))](0x0,0x0,a4"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "VM9 DECL assigns 0xa with refCount=0 and no USES anywhere; SERVED DECL likewise shows refCount=0 with no uses, so no role is observable on either side.",
+   "selector": "a46@u2151#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL creates the red '#F44' rectangle inside the health bar group, resized by MQ; SERVED DECL shows the same red rectangle added to the same group with the same MQ resizing.",
+   "name": "healthBarFill",
+   "selector": "a47@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a47",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a;var a44=0xb4,a45=0x14,a46=0xa;a43['add'](new a3k[(\"QtjDeukbWl\")](0x0,0x0,a44,a45,'#EEE',0.2));var a47=new a3k['QtjDeukbWl'](-a44/0x4,0x0,a44/0x2,a45,'#F44',0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "0xa;var a44=0xb4,a45=0x14,a46=0xa;a43['add'](new a3k[(arY(0x1a1))](0x0,0x0,a44,a45,'#EEE',0.2));var a47=new a3k['QtjDeukbWl'](-a44/0x4,0x0,a44/0x2,a45,'#F44',0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds the 'healthleft' text '100 | 100' updated by MQ with current|max; SERVED DECL/USES show the same label construction and the same MQ text update.",
+   "name": "healthBarLabel",
+   "selector": "a48@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a48",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "bWl'](-a44/0x4,0x0,a44/0x2,a45,'#F44',0x1);a43['add'](a47),a40['add'](a43),Mn['HGykdWXYRd']=a43;var a48=new M7(\"healthleft\",\"100 | 100\",'left');a48[\"position\"]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "bWl'](-a44/0x4,0x0,a44/0x2,a45,'#F44',0x1);a43['add'](a47),a40['add'](a43),Mn['HGykdWXYRd']=a43;var a48=new M7(arY(0x13c),arY(0x47e),'left');a48[arY(0x215)]['y'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds {x:-6,y:6,opacity:0.2} assigned to gunShadow.shown; SERVED DECL shows the identical literal assigned to the same gunShadow shown slot.",
+   "name": "gunShadowShown",
+   "selector": "a4A@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "e']*1.3;var a4z={};a4z['x']=-0x3,a4z['y']=0x3,a4z['opacity']=0.4,agQ['gunShadow'][\"hidden\"]=a4z;var a4A={};a4A['x']=-0x6,a4A['y']=0x6,a4A['opacity']=0.2,agQ['gu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "]*1.3;var a4z={};a4z['x']=-0x3,a4z['y']=0x3,a4z['opacity']=0.4,agQ['gunShadow'][arY(0x59d)]=a4z;var a4A={};a4A['x']=-0x6,a4A['y']=0x6,a4A['opacity']=0.2,agQ['gu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL builds {size:1,opacity:1} assigned to the class-button text hidden slot; SERVED DECL shows the same literal assigned to the same text hidden slot.",
+   "name": "textHiddenState",
+   "selector": "a4B@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "Q['mainText'][\"position\"]['x'],a4r[\"size\"]=0.6,a4r['opacity']=0.4,agQ[\"r23ZS3L2g\"]['add'](a4r);}var a4B={};a4B['size']=0x1,a4B[\"opacity\"]=0x1,agQ[\"text\"]['hidde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ainText'][arY(0x215)]['x'],a4r[arY(0xe8c)]=0.6,a4r['opacity']=0.4,agQ[\"r23ZS3L2g\"]['add'](a4r);}var a4B={};a4B['size']=0x1,a4B[arY(0x40e)]=0x1,agQ[arY(0x5a6)]['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL constructs an a3D button labeled 'Settings' positioned in the respawn scene; SERVED DECL/USES show the same 'Settings' button with the same positioning and overlay registration.",
+   "name": "settingsButton",
+   "selector": "a4C@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4C",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "qaFuSJOX']]]),L4(Kq[\"MqaFuSJOX\"]),Kq[\"classButton\"]=Kq['gIiaUTFZqG'][agQ[\"classIndex\"]],KU();};}var a4C=new a3D('Settings',a4a,a4b*1.2,a4c*1.2);a4C[\"onclick\"]=f"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "[Kq['MqaFuSJOX']]]),L4(Kq[asv(0xd07)]),Kq[asv(0xe33)]=Kq['gIiaUTFZqG'][agQ[asv(0x50e)]],KU();};}var a4C=new a3D('Settings',a4a,a4b*1.2,a4c*1.2);a4C[arY(0xbd0)]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL creates the '[ Press Space to Respawn ]' text stored as spaceRespawnText; SERVED DECL shows the same text element stored under the same controller key.",
+   "name": "respawnHintText",
+   "selector": "a4D@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4D",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "PkNKFp\"]=Mp['LdYCqNCVkiq'],Mp['ReDNKHkwk']=![],LU(Mp);},Mp[\"onmousedown2\"]=function(){Gs=!![];};var a4D=Mj(a3k,'[\\x20Press\\x20Space\\x20to\\x20Respawn\\x20]',0x0,0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "[asx(0xa8a)]=Mp['LdYCqNCVkiq'],Mp['ReDNKHkwk']=![],LU(Mp);},Mp[arY(0x364)]=function(){Gs=!![];};var a4D=Mj(a3k,'[\\x20Press\\x20Space\\x20to\\x20Respawn\\x20]',0x0,0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL seeds it with the respawn button y but later reuses hold particle and shop-card y values; SERVED DECL/USES show the identical seeding and cross-feature y reuse.",
+   "name": "scratchY",
+   "selector": "a4E@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4E",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "nText\"]=a4D;!Gj&&Mn[\"add\"](a4D);a3k['loadTexture'](Mn[\"r23ZS3L2g\"]),Mn['ReDNKHkwk']=![];if(a49){var a4E=Mp[\"r23ZS3L2g\"]['position']['y'],a4F=0x172;a4C[\"r23ZS3L2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "c)]=a4D;!Gj&&Mn[arY(0x8da)](a4D);a3k['loadTexture'](Mn[arY(0xc7e)]),Mn['ReDNKHkwk']=![];if(a49){var a4E=Mp[\"r23ZS3L2g\"]['position']['y'],a4F=0x172;a4C[\"r23ZS3L2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL seeds it with 0x172 for button x placement but later reuses hold particle and shop-card x values; SERVED DECL/USES show the identical seeding and cross-feature x reuse.",
+   "name": "scratchX",
+   "selector": "a4F@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4F",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "loadTexture'](Mn[\"r23ZS3L2g\"]),Mn['ReDNKHkwk']=![];if(a49){var a4E=Mp[\"r23ZS3L2g\"]['position']['y'],a4F=0x172;a4C[\"r23ZS3L2g\"]['position'][\"set\"](a4F,a4E),a4C['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'loadTexture'](Mn[arY(0xc7e)]),Mn['ReDNKHkwk']=![];if(a49){var a4E=Mp[\"r23ZS3L2g\"]['position']['y'],a4F=0x172;a4C[\"r23ZS3L2g\"]['position'][arY(0xc71)](a4F,a4E),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL creates a container later parented under the positioned wrapper and filled with login-form elements (avatar image, texts, login handler); SERVED DECL/USES show the same container receiving the same login children.",
+   "name": "loginPanel",
+   "selector": "a4G@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4G",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "['position']['set'](-a4F,a4E),a4n[\"xhOdNSwMWQd\"](!![]);}N5=a3m['scene']();!L1&&(N5[\"name\"]='d');var a4G=new a3k['object']();Mu=a3m['scene']();!L1&&(Mu['name']='"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "'position']['set'](-a4F,a4E),a4n[arY(0xddf)](!![]);}N5=a3m['scene']();!L1&&(N5[arY(0x9ec)]='d');var a4G=new a3k['object']();Mu=a3m['scene']();!L1&&(Mu['name']='"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL creates an overlay scene holding the Save/Reset Layout buttons, toggled with the prerender canvases; SERVED DECL/USES show the same overlay scene with the same buttons and toggling.",
+   "name": "layoutEditorScene",
+   "selector": "a4H@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4H",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "e']();!L1&&(N5[\"name\"]='d');var a4G=new a3k['object']();Mu=a3m['scene']();!L1&&(Mu['name']='e');var a4H=a3m[\"scene\"](),a4I=a3m[\"scene\"]();a4H['add'](new a3k['Qt"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 12,
+    "snippet": ");!L1&&(N5[arY(0x9ec)]='d');var a4G=new a3k['object']();Mu=a3m['scene']();!L1&&(Mu['name']='e');var a4H=a3m[arY(0x39e)](),a4I=a3m[arY(0x39e)]();a4H['add'](new a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL creates the scene that receives every mobile control button (reload/slide/jump/pause/aim/shoot); SERVED DECL/USES show the same scene collecting the same button set.",
+   "name": "mobileControlsScene",
+   "selector": "a4I@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4I",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "e\"]='d');var a4G=new a3k['object']();Mu=a3m['scene']();!L1&&(Mu['name']='e');var a4H=a3m[\"scene\"](),a4I=a3m[\"scene\"]();a4H['add'](new a3k['QtjDeukbWl'](0x0,0x0,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "='d');var a4G=new a3k['object']();Mu=a3m['scene']();!L1&&(Mu['name']='e');var a4H=a3m[arY(0x39e)](),a4I=a3m[arY(0x39e)]();a4H['add'](new a3k['QtjDeukbWl'](0x0,0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL constructs the 'Save Layout' button added to the layout overlay scene; SERVED DECL shows the same 'Save Layout' button added to the same scene.",
+   "name": "saveLayoutButton",
+   "selector": "a4J@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4J",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "KHkwk\"]=![],a4H['overlay']=!![],a4H['overlayOverride']=!![],a4H[\"completeOverlayOverride\"]=!![];var a4J=new a3D('Save\\x20Layout',0x154,0x46,0x20);a4J[\"r23ZS3L2g"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": ",0.8)),a4H[arY(0xb1d)]=![],a4H['overlay']=!![],a4H['overlayOverride']=!![],a4H[arY(0xb59)]=!![];var a4J=new a3D('Save\\x20Layout',0x154,0x46,0x20);a4J[\"r23ZS3L2g"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL constructs the 'Reset Layout' button whose onclick clears customMobileButtons and calls a4L; SERVED DECL shows the same button with the same clear-and-restore onclick.",
+   "name": "resetLayoutButton",
+   "selector": "a4K@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4K",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "dd\"](a4J[\"r23ZS3L2g\"]),a4H['fAdWFGQLqES'](a4J),a4J['onclick']=function(){a8M(Kq['sRhDBwlFm']);};var a4K=new a3D('Reset\\x20Layout',0x154,0x46,0x20);a4K[\"r23ZS3L2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "da)](a4J[\"r23ZS3L2g\"]),a4H['fAdWFGQLqES'](a4J),a4J['onclick']=function(){a8M(Kq['sRhDBwlFm']);};var a4K=new a3D('Reset\\x20Layout',0x154,0x46,0x20);a4K[arY(0xc7e"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 USES define it as the function restoring each button position from oldPos; SERVED USES show the same function body with the same oldPos restoration loop.",
+   "name": "restoreLayoutPositions",
+   "selector": "a4L@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4L",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "['set'](0x0,0x2f),a4K['xhOdNSwMWQd'](!![]),a4H[\"add\"](a4K[\"r23ZS3L2g\"]),a4H[\"fAdWFGQLqES\"](a4K);var a4L;a4K[\"onclick\"]=function(){var asy=arY;Kq[\"customMobileBu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "set'](0x0,0x2f),a4K['xhOdNSwMWQd'](!![]),a4H[arY(0x8da)](a4K[\"r23ZS3L2g\"]),a4H[arY(0xb05)](a4K);var a4L;a4K[arY(0xbd0)]=function(){var asy=arY;Kq[asy(0x10d9)]={"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL seeds the device-dependent base (1 / 1.5 / 1.2) from which a4N and a4O derive; SERVED DECL shows the same conditional seeding feeding the same two derived scales.",
+   "name": "mobileScaleBase",
+   "selector": "a4M@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4M",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "bileButtons\"]={},Kq['updateCustomMobileButtons'](),a4L();},a4I[\"ReDNKHkwk\"]=![];if(!L1){}if(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "q[asy(0x10d9)]={},Kq['updateCustomMobileButtons'](),a4L();},a4I[arY(0xb1d)]=![];if(!L1){}if(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL computes a4M/1.5 and USES scale ~26 mobile button sizes/positions with it; SERVED DECL/USES show the same derivation and the same pervasive button scaling.",
+   "name": "mobileButtonScale",
+   "selector": "a4N@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4N",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 26,
+    "snippet": "uttons'](),a4L();},a4I[\"ReDNKHkwk\"]=![];if(!L1){}if(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M=1.2);var a4O=a4M/1.5,a4P=a4N,a4Q=new a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 26,
+    "snippet": "Buttons'](),a4L();},a4I[arY(0xb1d)]=![];if(!L1){}if(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M=1.2);var a4O=a4M/1.5,a4P=a4N,a4Q=new a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL derives the second scale used for the pause button size/position and pause-cluster restore offsets; SERVED DECL/USES show the same derivation feeding the same pause-cluster expressions.",
+   "name": "pauseButtonScale",
+   "selector": "a4O@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4O",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "kwk\"]=![];if(!L1){}if(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M=1.2);var a4O=a4M/1.5,a4P=a4N,a4Q=new a3G(\"reload.png\",0x10e*a4N);a4I["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "b1d)]=![];if(!L1){}if(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M=1.2);var a4O=a4M/1.5,a4P=a4N,a4Q=new a3G(arY(0x6db),0x10e*a4N);a4I[ar"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL aliases a4N and its single USE feeds the layout-restore function scale; SERVED DECL/USES show the same alias consumed by the same restore function.",
+   "name": "savedLayoutScale",
+   "selector": "a4P@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4P",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "(!L1){}if(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M=1.2);var a4O=a4M/1.5,a4P=a4N,a4Q=new a3G(\"reload.png\",0x10e*a4N);a4I[\"fAdWFGQLqES"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "(!L1){}if(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M=1.2);var a4O=a4M/1.5,a4P=a4N,a4Q=new a3G(arY(0x6db),0x10e*a4N);a4I[arY(0xb05)](a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL and re-DECLs build each successive mobile button (reload/slide/jump/pause/aim/shoot) with handlers; SERVED DECL/USES show the same repeated button construction with the same handlers.",
+   "name": "mobileButton",
+   "selector": "a4Q@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Q",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 86,
+    "snippet": "f(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M=1.2);var a4O=a4M/1.5,a4P=a4N,a4Q=new a3G(\"reload.png\",0x10e*a4N);a4I[\"fAdWFGQLqES\"](a4Q),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 86,
+    "snippet": "f(Gj){var a4M=0x1;Gj&&(a4M=1.5,Gl&&(a4M=0x1));var a4N=a4M/1.5;Gl&&(a4M=1.2);var a4O=a4M/1.5,a4P=a4N,a4Q=new a3G(arY(0x6db),0x10e*a4N);a4I[arY(0xb05)](a4Q),a4Q[\""
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL saves the just-built 'slide' button reference for later layout restore; SERVED DECL/USES show the same saved slide-button reference repositioned by the same restore code.",
+   "name": "slideButton",
+   "selector": "a4R@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4R",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "k']=a4Q['onmouseup2'],a4Q[\"validateCollision\"]=a4Q['validateCollision2'],a4Q['name']=\"sli\"+'de';var a4R=a4Q,a4Q=new a3G('jump.png',0xb4*a4N);a4I['fAdWFGQLqES']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "click']=a4Q['onmouseup2'],a4Q[arY(0x25f)]=a4Q['validateCollision2'],a4Q['name']=arY(0x204)+'de';var a4R=a4Q,a4Q=new a3G('jump.png',0xb4*a4N);a4I['fAdWFGQLqES']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL saves the just-built 'jump' button reference for later layout restore; SERVED DECL/USES show the same saved jump-button reference repositioned by the same restore code.",
+   "name": "jumpButton",
+   "selector": "a4S@u2151#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4S",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "click\"]=a4Q['onmouseup2'],a4Q['validateCollision']=a4Q['validateCollision2'],a4Q[\"name\"]=\"jump\";var a4S=a4Q,a4Q=new a3G('pause.png',0x78*a4O);a4I[\"fAdWFGQLqES\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a4Q['onmouseup2'],a4Q['validateCollision']=a4Q['validateCollision2'],a4Q[arY(0x9ec)]=arY(0x753);var a4S=a4Q,a4Q=new a3G('pause.png',0x78*a4O);a4I[arY(0xb05)](a4"
+   }
+  }
+ ]
+}

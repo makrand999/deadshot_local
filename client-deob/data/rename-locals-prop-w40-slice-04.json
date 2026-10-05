@@ -1,0 +1,192 @@
+{
+ "meta": {
+  "wave": 40,
+  "slice": "04",
+  "mergedFrom": [
+   "04a",
+   "04b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @184343 declares updateMatrixWorld(force); uses @101309/@101486 show canonical three.js force-update flag. Idiomatic public API param.",
+   "selector": "force@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @537340 declares SkinnedMesh updateMatrixWorld(force); use @537390 forwards it to Mesh.prototype. Idiomatic override param.",
+   "selector": "force@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @785974 declares Audio.updateMatrixWorld(force); use @786029 forwards to _Object3D.prototype. Idiomatic override param.",
+   "selector": "force@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @794118 declares PositionalAudio updateMatrixWorld(force); use @794170 forwards to _Audio.prototype. Idiomatic override param.",
+   "selector": "force@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @850362 declares SkeletonHelper.updateMatrixWorld(force); use @851037 forwards to _LineSegments.prototype. Idiomatic override param.",
+   "selector": "force@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @863956 declares Box3Helper.updateMatrixWorld(force); use @864136 forwards to _LineSegments.prototype. Idiomatic override param.",
+   "selector": "force@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @865165 declares PlaneHelper.updateMatrixWorld(force); use @865425 forwards to _Line.prototype. Idiomatic override param.",
+   "selector": "force@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @638426 in TubeBufferGeometry; uses @639217/@639241 read frames.normals[i]/frames.binormals[i] for Frenet frames. Already readable.",
+   "selector": "frames@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @659450 declares AnimationUtils.arraySlice(array,from,to); uses @659542/@659600 pass from to subarray/slice. Idiomatic slice-bound param.",
+   "selector": "from@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @672506 declares trim() local from=0; uses @672530/@672569 advance and slice with from/to key indices. Idiomatic index var.",
+   "selector": "from@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @15876 declares Vector2 _proto.fromArray; refCount=0 named function expression matching public API. Idiomatic method name.",
+   "selector": "fromArray@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @21200 declares Matrix3 _proto.fromArray; refCount=0 named function expression matching public API. Idiomatic method name.",
+   "selector": "fromArray@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @34352 declares Vector4 _proto.fromArray; refCount=0 named function expression matching public API. Idiomatic method name.",
+   "selector": "fromArray@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @45042 declares Quaternion _proto.fromArray; refCount=0 named function expression matching public API. Idiomatic method name.",
+   "selector": "fromArray@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @55744 declares Vector3 _proto.fromArray; refCount=0 named function expression matching public API. Idiomatic method name.",
+   "selector": "fromArray@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @86569 defines Matrix4._proto.fromArray(array,offset); use sites (@90132, @55744, @74886) show the same idiomatic loader name across Euler/Vector/Matrix classes.",
+   "selector": "fromArray@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @90151 defines Euler._proto.fromArray(array) setting _x/_y/_z/_order; sibling Matrix4/Vector/Color fromArray sites (@86569, @55744, @124476) confirm standard API name.",
+   "selector": "fromArray@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @124476 defines Color._proto.fromArray(array,offset) setting r/g/b; use sites (@90151, @86569, @55744) show the same readable name across classes.",
+   "selector": "fromArray@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @738471 defines SphericalHarmonics3._proto.fromArray; use sites (@739645, @744641+) show idiomatic .fromArray deserialization across loader code.",
+   "selector": "fromArray@u0020#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @904905 defines Vector2 compat shim fromAttribute forwarding to fromBufferAttribute; sibling shims (@906672, @907291) use the same legacy-but-readable name.",
+   "selector": "fromAttribute@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @906672 defines Vector3 compat shim fromAttribute forwarding to fromBufferAttribute; sibling shims (@904905, @907291) confirm the same readable legacy name.",
+   "selector": "fromAttribute@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @907291 defines Vector4 compat shim fromAttribute forwarding to fromBufferAttribute; sibling shims (@904905, @906672) confirm the same readable legacy name.",
+   "selector": "fromAttribute@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @16188 defines Vector2._proto.fromBufferAttribute(attribute,index,offset); use sites (@34756, @45479, @56102) show the same idiomatic name on Vector4/Quaternion/Vector3.",
+   "selector": "fromBufferAttribute@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @34756 defines Vector4._proto.fromBufferAttribute reading getX/getY/getZ/getW; sibling sites (@16188, @45479, @56102) confirm the standard readable API name.",
+   "selector": "fromBufferAttribute@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @45479 defines Quaternion._proto.fromBufferAttribute setting _x/_y/_z/_w; sibling Vector2/Vector3/Vector4 sites (@16188, @56102, @34756) share the same idiomatic name.",
+   "selector": "fromBufferAttribute@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @56102 defines Vector3._proto.fromBufferAttribute reading getX/getY/getZ; sibling sites (@16188, @34756, @45479) confirm the standard readable API name.",
+   "selector": "fromBufferAttribute@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @124834 defines Color._proto.fromBufferAttribute; use sites (@140027, @160843, @162447) show idiomatic .fromBufferAttribute reads across BufferGeometry code.",
+   "selector": "fromBufferAttribute@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @559417 defines Geometry._proto.fromBufferGeometry; use sites (@577490, @579319, @583412+) show idiomatic legacy-converter calls across geometry subclasses.",
+   "selector": "fromBufferGeometry@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @870503 defines PMREMGenerator._proto.fromCubemap next to fromScene/fromEquirectangular; already-readable public API name with no cryptic token to fix.",
+   "selector": "fromCubemap@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @156393 defines BufferGeometry._proto.fromDirectGeometry next to fromGeometry; already-readable converter name with no cryptic token to fix.",
+   "selector": "fromDirectGeometry@u0020#0"
+  }
+ ]
+}

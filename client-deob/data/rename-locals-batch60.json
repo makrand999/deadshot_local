@@ -1,0 +1,4759 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 60,
+  "date": "2026-09-29",
+  "merged": 195,
+  "heldLow": 1,
+  "heldInvalid": 0,
+  "kept": 6,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Binary reader: getUint16/getter calls plus byteOffset both sides; SERVED: identical (snippet-only twin).",
+   "name": "dataView",
+   "selector": "a3i@u1961#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3i",
+   "binding": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[\"getUint16\"](a3j)=="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Offset cursor defaulted incremented passed to readers both sides; SERVED: identical (snippet-only twin).",
+   "name": "readOffset",
+   "selector": "a3j@u1961#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3j",
+   "binding": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[\"getUint16\"](a3j)==0x0)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0x0)r"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Template object filled with fields assigned offsets returned; SERVED: identical (snippet-only twin).",
+   "name": "decodedMessage",
+   "selector": "a3k@u1961#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "on Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[\"getUint16\"](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "ion Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Alias used only for schema keys sizes guard; SERVED: identical (snippet-only twin).",
+   "name": "messageTemplate",
+   "selector": "a3l@u1961#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "0;if(a3i[\"getUint16\"](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "x0;if(a3i[aqt(0x153)](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Holds globalKeys bounding field decode loop; SERVED: identical (snippet-only twin).",
+   "name": "fieldKeys",
+   "selector": "a3m@u1961#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 2,
+    "snippet": " a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[\"leng"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 2,
+    "snippet": " a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[aqt(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop counter indexing keys and byte sizes; SERVED: identical (snippet-only twin).",
+   "name": "fieldIndex",
+   "selector": "a3n@u1961#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[\"length\"];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['b"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1961",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: material name stem trimmed of numeric suffix for texture path; SERVED: identical (snippet-only twin).",
+   "name": "textureBaseName",
+   "selector": "a50@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a50",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "bleSide']);if(a4C['material'][\"map\"]==undefined||a4C['material']['map'][\"image\"]['width']==0x1){let a50=a4C['material'][\"name\"],a51=new RegExp(\"\\\\.[0-9][0-9][0-"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "]);if(a4C['material'][aBj(0xff7)]==undefined||a4C['material']['map'][aBj(0xbf7)]['width']==0x1){let a50=a4C['material'][aBj(0x9ec)],a51=new RegExp(aBj(0x2eb))[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: index-buffer entry fed to color getY during grouping; SERVED: identical (snippet-only twin).",
+   "name": "vertexIndex",
+   "selector": "a50@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a50",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "'position'],a4Z=a4F['RNQDluasaN']['index'];for(var a4O=0x0;a4O<a4Z['array']['length'];a4O+=0x3){var a50=a4Z[\"array\"][a4O],a51=a4F['RNQDluasaN']['attributes']['c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "'position'],a4Z=a4F['RNQDluasaN']['index'];for(var a4O=0x0;a4O<a4Z['array']['length'];a4O+=0x3){var a50=a4Z[aBt(0x18f)][a4O],a51=a4F['RNQDluasaN']['attributes']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: regex exec result locating numeric suffix in material name; SERVED: identical (snippet-only twin).",
+   "name": "suffixMatch",
+   "selector": "a51@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a51",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "][\"map\"]==undefined||a4C['material']['map'][\"image\"]['width']==0x1){let a50=a4C['material'][\"name\"],a51=new RegExp(\"\\\\.[0-9][0-9][0-9]\")[\"exec\"](a4C['material']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "]==undefined||a4C['material']['map'][aBj(0xbf7)]['width']==0x1){let a50=a4C['material'][aBj(0x9ec)],a51=new RegExp(aBj(0x2eb))[aBj(0x2ab)](a4C['material'][aBj(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: color channel value driving geometry group splits; SERVED: identical (snippet-only twin).",
+   "name": "vertexColorY",
+   "selector": "a51@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a51",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "NQDluasaN']['index'];for(var a4O=0x0;a4O<a4Z['array']['length'];a4O+=0x3){var a50=a4Z[\"array\"][a4O],a51=a4F['RNQDluasaN']['attributes']['color']['getY'](a50);a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "luasaN']['index'];for(var a4O=0x0;a4O<a4Z['array']['length'];a4O+=0x3){var a50=a4Z[aBt(0x18f)][a4O],a51=a4F['RNQDluasaN']['attributes']['color']['getY'](a50);a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture URL built then loaded via Fg with flipY; SERVED: identical (snippet-only twin).",
+   "name": "texturePath",
+   "selector": "a52@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a52",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "](a4C['material'][\"name\"]);a51!=null&&(a50=a4C['material']['name'][\"substr\"](0x0,a51[\"index\"]));let a52=a3z+\"textures/\"+a50+'.png';a3y['compressedTextures']&&(a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "terial'][aBj(0x9ec)]);a51!=null&&(a50=a4C['material']['name'][aBj(0xc96)](0x0,a51[aBj(0x4c0)]));let a52=a3z+aBj(0x435)+a50+'.png';a3y['compressedTextures']&&(a5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: seven-wide name chunks indexed by color channels; SERVED: identical (snippet-only twin).",
+   "name": "materialNameGrid",
+   "selector": "a52@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a52",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "rldAutoUpdate']=![],a4F['updateMatrixWorld'](!![]),QP['mesh']=a4F,Yx[\"addBefore\"](a4F);if(!a4E){var a52=[];for(var a4O=0x0;a4O<Math['ceil'](a4G['length']/0x7);a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "orldAutoUpdate']=![],a4F['updateMatrixWorld'](!![]),QP['mesh']=a4F,Yx[aBt(0xe02)](a4F);if(!a4E){var a52=[];for(var a4O=0x0;a4O<Math['ceil'](a4G['length']/0x7);a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: subway light preset array converted to vector positions; SERVED: identical (snippet-only twin).",
+   "name": "subwayLights",
+   "selector": "a53@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a53",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "59119,a4W['z']=0.008004951435420349;var a4X={};a4X['preset']=\"SubwayLights\",a4X[\"position\"]=a4W;let a53=[a4P,a4R,a4T,a4V,a4X];for(var a4Y=0x0;a4Y<a53['length'];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "444059119,a4W['z']=0.008004951435420349;var a4X={};a4X['preset']=aBj(0xdc3),a4X[aBj(0x215)]=a4W;let a53=[a4P,a4R,a4T,a4V,a4X];for(var a4Y=0x0;a4Y<a53['length'];"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "single var spans chunk-array and built-material roles",
+   "selector": "a53@u2654#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current geometry face receiving material index assignment; SERVED: identical (snippet-only twin).",
+   "name": "face",
+   "selector": "a55@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a55",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "4++){a53['push'](a4G[a54]);}a52['push'](a53);}for(var a4O=0x0;a4O<a4H['faces']['length'];a4O++){var a55=a4H[\"faces\"][a4O],a4N=Math['floor'](a55['vertexColors']["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "4++){a53['push'](a4G[a54]);}a52['push'](a53);}for(var a4O=0x0;a4O<a4H['faces']['length'];a4O++){var a55=a4H[aBt(0xd8a)][a4O],a4N=Math['floor'](a55['vertexColors"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: red-channel grid column indexing material name grid; SERVED: identical (snippet-only twin).",
+   "name": "colorIndexR",
+   "selector": "a56@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a56",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ength'];a4O++){var a55=a4H[\"faces\"][a4O],a4N=Math['floor'](a55['vertexColors'][0x0]['g']*0x100/0xa),a56=Math['floor'](a55['vertexColors'][0x0]['r']*0x100/0xa);a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "th'];a4O++){var a55=a4H[aBt(0xd8a)][a4O],a4N=Math['floor'](a55['vertexColors'][0x0]['g']*0x100/0xa),a56=Math['floor'](a55['vertexColors'][0x0]['r']*0x100/0xa);a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture name with optional addTexture prefix applied; SERVED: identical (snippet-only twin).",
+   "name": "fullTextureName",
+   "selector": "a59@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a59",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "=!![],a53['afCJVYrCGK']=!![]);a3N[\"indexOf\"](a5x)!=-0x1&&(a53[\"side\"]=usvzFuAsEB['DoubleSide']);var a59=a58;a3y['addTexture']!=undefined&&(a59=a3y['addTexture']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ",a53['afCJVYrCGK']=!![]);a3N[aBt(0xfad)](a5x)!=-0x1&&(a53[aBt(0x271)]=usvzFuAsEB['DoubleSide']);var a59=a58;a3y['addTexture']!=undefined&&(a59=a3y['addTexture']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture URL cached in Z2 then loaded; SERVED: identical (snippet-only twin).",
+   "name": "textureUrl",
+   "selector": "a5A@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5A",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "f(Z2[a5a]!=undefined)var a5b=Z2[a5a];else{var a5b=Fg(a5a,function(a5y){var aBv=aBt,a5z=!![];for(var a5A=0x0;a5A<a3R['length'];a5A++){a5y[\"src\"]['indexOf'](a3R[a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "f(Z2[a5a]!=undefined)var a5b=Z2[a5a];else{var a5b=Fg(a5a,function(a5y){var aBv=aBt,a5z=!![];for(var a5A=0x0;a5A<a3R['length'];a5A++){a5y[aBv(0x18d)]['indexOf']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: pre-merge geometry disposed after mergeVertices replacement; SERVED: identical (snippet-only twin).",
+   "name": "oldGeometry",
+   "selector": "a5A@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5A",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "z[\"RNQDluasaN\"]),delete a5z['RNQDluasaN']['__directGeometry'],setTimeout(function(){var aBw=aBt;let a5A=a5z['RNQDluasaN'];a5z[\"RNQDluasaN\"]=usvzFuAsEB['BufferGe"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "a5z[aBt(0xbac)]),delete a5z['RNQDluasaN']['__directGeometry'],setTimeout(function(){var aBw=aBt;let a5A=a5z['RNQDluasaN'];a5z[aBw(0xbac)]=usvzFuAsEB['BufferGeom"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: debug box geometry translated to bounds center; SERVED: identical (snippet-only twin).",
+   "name": "boundsBoxGeometry",
+   "selector": "a5A@u2654#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5A",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "uasaN\"]['boundingBox'][\"min\"][\"sub\"](Fl),a5p['RNQDluasaN']['boundingBox'][\"getSize\"](Fl);if(Gi){let a5A=new usvzFuAsEB[(\"BoxBufferGeometry\")](Fl['x'],Fl['y'],Fl"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "undingBox'][aBt(0x40a)][aBt(0xf08)](Fl),a5p['RNQDluasaN']['boundingBox'][aBt(0x21e)](Fl);if(Gi){let a5A=new usvzFuAsEB[(aBt(0xcd5))](Fl['x'],Fl['y'],Fl['z']);a5"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead onBeforeRender parameter never referenced anywhere",
+   "selector": "a5D@u2654#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: material deduplication map keyed by material name; SERVED: identical (snippet-only twin).",
+   "name": "materialCache",
+   "selector": "a5D@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5D",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "m'](Math['KkKRLGFtA'](a3y[\"size\"]*a3y[\"fineTuneSize\"])),a5C['add'](a4y[\"scene\"]),Yx[\"add\"](a5C);let a5D={};a5C['XOVWraMIAg'](function(a5E){var aBA=aBt;if(a5E['m"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "h['KkKRLGFtA'](a3y[aBt(0xe8c)]*a3y[aBt(0x8f)])),a5C['add'](a4y[aBt(0x39e)]),Yx[aBt(0x8da)](a5C);let a5D={};a5C['XOVWraMIAg'](function(a5E){var aBA=aBt;if(a5E['m"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead onBeforeRender parameter never referenced anywhere",
+   "selector": "a5E@u2654#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traverse visitor having material inspected and replaced; SERVED: identical (snippet-only twin).",
+   "name": "traversedNode",
+   "selector": "a5E@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5E",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 23,
+    "snippet": "a3y[\"fineTuneSize\"])),a5C['add'](a4y[\"scene\"]),Yx[\"add\"](a5C);let a5D={};a5C['XOVWraMIAg'](function(a5E){var aBA=aBt;if(a5E['material']!=undefined){if(a5D[a5E['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 23,
+    "snippet": "[aBt(0x8f)])),a5C['add'](a4y[aBt(0x39e)]),Yx[aBt(0x8da)](a5C);let a5D={};a5C['XOVWraMIAg'](function(a5E){var aBA=aBt;if(a5E['material']!=undefined){if(a5D[a5E['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: replaced geometry disposed after fromGeometry conversion; SERVED: identical (snippet-only twin).",
+   "name": "oldGeometry",
+   "selector": "a5E@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5E",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "5E['material'][\"name\"]]=a5E['material'];}});}if(a3q){if(!a4F[\"RNQDluasaN\"]['isBufferGeometry']){let a5E=a4F['RNQDluasaN'];a4F[\"RNQDluasaN\"]=new usvzFuAsEB['kwrj"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "['material'][aBA(0x9ec)]]=a5E['material'];}});}if(a3q){if(!a4F[aBt(0xbac)]['isBufferGeometry']){let a5E=a4F['RNQDluasaN'];a4F[aBt(0xbac)]=new usvzFuAsEB['kwrjVV"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: map uniform descriptor holding material map texture; SERVED: identical (snippet-only twin).",
+   "name": "mapUniform",
+   "selector": "a5F@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5F",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "al'][\"map\"][\"minFilter\"]=usvzFuAsEB['NearestFilter'],a5E['material']['map'][\"afCJVYrCGK\"]=!![]);var a5F={};a5F['type']='t',a5F['value']=a5E[\"material\"]['map'];v"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'][aBA(0xff7)][aBA(0x20f)]=usvzFuAsEB['NearestFilter'],a5E['material']['map'][aBA(0xd69)]=!![]);var a5F={};a5F['type']='t',a5F['value']=a5E[aBA(0x52e)]['map'];v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: loop counter disposing hitbox geometries in a0M; SERVED: identical (snippet-only twin).",
+   "name": "hitboxIndex",
+   "selector": "a5F@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5F",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "1,a5s['material']['transparent']=!![],Yx['add'](a5s);}combineHitboxes(QP[\"RNQDluasaN\"],a0M);for(let a5F=0x0;a5F<a0M['length'];a5F++){a0M[a5F]['RNQDluasaN'][\"dis"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "0.1,a5s['material']['transparent']=!![],Yx['add'](a5s);}combineHitboxes(QP[aBt(0xbac)],a0M);for(let a5F=0x0;a5F<a0M['length'];a5F++){a0M[a5F]['RNQDluasaN'][aBt("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: lightmap uniform descriptor holding shared texture; SERVED: identical (snippet-only twin).",
+   "name": "lightmapUniform",
+   "selector": "a5G@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5G",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ial']['map'][\"afCJVYrCGK\"]=!![]);var a5F={};a5F['type']='t',a5F['value']=a5E[\"material\"]['map'];var a5G={};a5G['type']='t',a5G['value']=a3D;var a5H={};a5H[\"map\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "erial']['map'][aBA(0xd69)]=!![]);var a5F={};a5F['type']='t',a5F['value']=a5E[aBA(0x52e)]['map'];var a5G={};a5G['type']='t',a5G['value']=a3D;var a5H={};a5H[aBA(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: recursive function nulling map tree before rebuild; SERVED: identical (snippet-only twin).",
+   "name": "deepClearMap",
+   "selector": "a5G@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5G",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "DluasaN\"]=null;}a0M=[],QP[\"AyXbLxaib\"]=makeGeoAABBs(QP['RNQDluasaN']);if(QP[\"fkXbORMTcl\"]){function a5G(a5H){var aBB=aBt;if(Array['isArray'](a5H)){for(let a5I=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "][aBt(0xbac)]=null;}a0M=[],QP[aBt(0xa0)]=makeGeoAABBs(QP['RNQDluasaN']);if(QP[aBt(0xefa)]){function a5G(a5H){var aBB=aBt;if(Array['isArray'](a5H)){for(let a5I=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: map-lightmap pair merged into basic uniforms; SERVED: identical (snippet-only twin).",
+   "name": "extraUniforms",
+   "selector": "a5H@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5H",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a5F['type']='t',a5F['value']=a5E[\"material\"]['map'];var a5G={};a5G['type']='t',a5G['value']=a3D;var a5H={};a5H[\"map\"]=a5F,a5H['lightmap']=a5G;var a5I=usvzFuAsEB"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a5F['type']='t',a5F['value']=a5E[aBA(0x52e)]['map'];var a5G={};a5G['type']='t',a5G['value']=a3D;var a5H={};a5H[aBA(0xff7)]=a5F,a5H['lightmap']=a5G;var a5I=usvzF"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: recursion subject tested nulled and length-cleared; SERVED: identical (snippet-only twin).",
+   "name": "mapNode",
+   "selector": "a5H@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5H",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "saN\"]=null;}a0M=[],QP[\"AyXbLxaib\"]=makeGeoAABBs(QP['RNQDluasaN']);if(QP[\"fkXbORMTcl\"]){function a5G(a5H){var aBB=aBt;if(Array['isArray'](a5H)){for(let a5I=0x0;a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "t(0xbac)]=null;}a0M=[],QP[aBt(0xa0)]=makeGeoAABBs(QP['RNQDluasaN']);if(QP[aBt(0xefa)]){function a5G(a5H){var aBB=aBt;if(Array['isArray'](a5H)){for(let a5I=0x0;a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traverse visitor having material nulled during teardown; SERVED: identical (snippet-only twin).",
+   "name": "clearedNode",
+   "selector": "a5H@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5H",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "kXbORMTcl']['map']);}QP['fkXbORMTcl']=EO(QP[\"RNQDluasaN\"]),a0S(),YQ=!![],a4F[\"XOVWraMIAg\"](function(a5H){a5H['material']=null;}),a4F['RNQDluasaN'][\"dispose\"](),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "P['fkXbORMTcl']['map']);}QP['fkXbORMTcl']=EO(QP[aBt(0xbac)]),a0S(),YQ=!![],a4F[aBt(0x4a2)](function(a5H){a5H['material']=null;}),a4F['RNQDluasaN'][aBt(0x1052)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: merged basic uniforms fed to shader material; SERVED: identical (snippet-only twin).",
+   "name": "mergedUniforms",
+   "selector": "a5I@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5I",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "map'];var a5G={};a5G['type']='t',a5G['value']=a3D;var a5H={};a5H[\"map\"]=a5F,a5H['lightmap']=a5G;var a5I=usvzFuAsEB['UniformsUtils']['merge']([usvzFuAsEB['Shader"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ";var a5G={};a5G['type']='t',a5G['value']=a3D;var a5H={};a5H[aBA(0xff7)]=a5F,a5H['lightmap']=a5G;var a5I=usvzFuAsEB['UniformsUtils']['merge']([usvzFuAsEB['Shader"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter over map node children; SERVED: identical (snippet-only twin).",
+   "name": "childIndex",
+   "selector": "a5I@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5I",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "'RNQDluasaN']);if(QP[\"fkXbORMTcl\"]){function a5G(a5H){var aBB=aBt;if(Array['isArray'](a5H)){for(let a5I=0x0;a5I<a5H[\"length\"];a5I++){a5G(a5H[a5I]),a5H[a5I]=null"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "P['RNQDluasaN']);if(QP[aBt(0xefa)]){function a5G(a5H){var aBB=aBt;if(Array['isArray'](a5H)){for(let a5I=0x0;a5I<a5H[aBB(0x3a2)];a5I++){a5G(a5H[a5I]),a5H[a5I]=nu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: defines object carrying USE_LIGHTMAP flag; SERVED: identical (snippet-only twin).",
+   "name": "shaderDefines",
+   "selector": "a5J@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5J",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "5G;var a5I=usvzFuAsEB['UniformsUtils']['merge']([usvzFuAsEB['ShaderLib']['basic']['uniforms'],a5H]),a5J={};a5J['USE_LIGHTMAP']='',a5E[\"material\"]=new usvzFuAsEB"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "5G;var a5I=usvzFuAsEB['UniformsUtils']['merge']([usvzFuAsEB['ShaderLib']['basic']['uniforms'],a5H]),a5J={};a5J['USE_LIGHTMAP']='',a5E[aBA(0x52e)]=new usvzFuAsEB"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a4g-built material clone, map uniform copied, side set; SERVED: identical (snippet-only twin).",
+   "name": "clonedMaterial",
+   "selector": "a5K@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5K",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "EB['FrontSide'],'name':a5E['material'][\"name\"],'defines':a5J});if(a3P[a5E[\"material\"]['name']]){var a5K=a4g(a3P[a5E[\"material\"]['name']]['animated'],a3P[a5E['ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "FrontSide'],'name':a5E['material'][aBA(0x9ec)],'defines':a5J});if(a3P[a5E[aBA(0x52e)]['name']]){var a5K=a4g(a3P[a5E[aBA(0x52e)]['name']]['animated'],a3P[a5E['ma"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: base plus textures path, webp override, loader input; SERVED: identical (snippet-only twin).",
+   "name": "textureUrl",
+   "selector": "a5a@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5a",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "usvzFuAsEB['DoubleSide']);var a59=a58;a3y['addTexture']!=undefined&&(a59=a3y['addTexture']+a58);var a5a=a3z+\"textures/\"+a59+'.png';a3y[\"compressedTextures\"]&&(a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "usvzFuAsEB['DoubleSide']);var a59=a58;a3y['addTexture']!=undefined&&(a59=a3y['addTexture']+a58);var a5a=a3z+aBt(0x435)+a59+'.png';a3y[aBt(0x5c4)]&&(a5a=a3z+(Rk?"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cached or loaded texture; wrap, anisotropy, uniforms push; SERVED: identical (snippet-only twin).",
+   "name": "mapTexture",
+   "selector": "a5b@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5b",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "extures/\")+a59+\".webp\");if(a58[\"indexOf\"]('vertexmix')==0x0)continue;YP++;if(Z2[a5a]!=undefined)var a5b=Z2[a5a];else{var a5b=Fg(a5a,function(a5y){var aBv=aBt,a5"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "x462))+a59+aBt(0x533));if(a58[aBt(0xfad)]('vertexmix')==0x0)continue;YP++;if(Z2[a5a]!=undefined)var a5b=Z2[a5a];else{var a5b=Fg(a5a,function(a5y){var aBv=aBt,a5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: name-keyed dict memoizing built face materials; SERVED: identical (snippet-only twin).",
+   "name": "materialCache",
+   "selector": "a5c@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5c",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ";}a53[\"uniforms\"]['t']&&(a53['uniforms']['t'][\"afCJVYrCGK\"]=!![]),a4F[\"material\"][\"push\"](a53);}var a5c={};for(var a4O=0x0;a4O<a4H['faces']['length'];a4O++){var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a53[aBt(0x29b)]['t']&&(a53['uniforms']['t'][aBt(0xd69)]=!![]),a4F[aBt(0x52e)][aBt(0xf1e)](a53);}var a5c={};for(var a4O=0x0;a4O<a4H['faces']['length'];a4O++){var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vertex-color table lookup keying defs, cache, textures; SERVED: identical (snippet-only twin).",
+   "name": "faceMaterialName",
+   "selector": "a5d@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5d",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "a55[\"vertexColors\"][0x0]['g']*0x100/0xa),a56=Math['floor'](a55['vertexColors'][0x0]['r']*0x100/0xa),a5d=a52[a4N][a56];if(a5c[a5d]!=undefined){a55['materialIndex"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 12,
+    "snippet": "e)](a55[aBt(0x887)][0x0]['g']*0x100/0xa),a56=Math['floor'](a55['vertexColors'][0x0]['r']*0x100/0xa),a5d=a52[a4N][a56];if(a5c[a5d]!=undefined){a55['materialIndex"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag marking material inserted into material array; SERVED: identical (snippet-only twin).",
+   "name": "materialPlaced",
+   "selector": "a5f@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5f",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ToEdgeWrapping']);a5e[\"uniforms\"][\"map\"]['value']=a5b,a5e['uniforms'][\"map\"][\"afCJVYrCGK\"]=!![];var a5f=![];a5d==\"TrimSheet2\"&&(a4F['material']['push'](a5e),a5f"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "apping']);a5e[aBt(0x29b)][aBt(0xff7)]['value']=a5b,a5e['uniforms'][aBt(0xff7)][aBt(0xd69)]=!![];var a5f=![];a5d==aBt(0xf9b)&&(a4F['material']['push'](a5e),a5f=!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: OY map 2D grid iterated, cells replaced by meshes; SERVED: identical (snippet-only twin).",
+   "name": "cullGrid",
+   "selector": "a5g@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5g",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "4D){Yx['remove'](a4F);let a5y=!![];if(a5y){OY=EQ(a4H,a3y[\"cullSize\"],a4F['material'][\"length\"]);var a5g=OY[\"map\"],a5h=[];for(var a5i=0x0;a5i<a5g[\"length\"];a5i++"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "){Yx['remove'](a4F);let a5y=!![];if(a5y){OY=EQ(a4H,a3y[aBt(0x442)],a4F['material'][aBt(0x3a2)]);var a5g=OY[aBt(0xff7)],a5h=[];for(var a5i=0x0;a5i<a5g[aBt(0x3a2)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flat mesh list collected, re-added in material order; SERVED: identical (snippet-only twin).",
+   "name": "splitMeshes",
+   "selector": "a5h@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5h",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "'](a4F);let a5y=!![];if(a5y){OY=EQ(a4H,a3y[\"cullSize\"],a4F['material'][\"length\"]);var a5g=OY[\"map\"],a5h=[];for(var a5i=0x0;a5i<a5g[\"length\"];a5i++){for(var a5j="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": ";let a5y=!![];if(a5y){OY=EQ(a4H,a3y[aBt(0x442)],a4F['material'][aBt(0x3a2)]);var a5g=OY[aBt(0xff7)],a5h=[];for(var a5i=0x0;a5i<a5g[aBt(0x3a2)];a5i++){for(var a5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: outer loop index over cull grid rows; SERVED: identical (snippet-only twin).",
+   "name": "gridRow",
+   "selector": "a5i@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5i",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "=!![];if(a5y){OY=EQ(a4H,a3y[\"cullSize\"],a4F['material'][\"length\"]);var a5g=OY[\"map\"],a5h=[];for(var a5i=0x0;a5i<a5g[\"length\"];a5i++){for(var a5j=0x0;a5j<a5g[a5i"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "f(a5y){OY=EQ(a4H,a3y[aBt(0x442)],a4F['material'][aBt(0x3a2)]);var a5g=OY[aBt(0xff7)],a5h=[];for(var a5i=0x0;a5i<a5g[aBt(0x3a2)];a5i++){for(var a5j=0x0;a5j<a5g[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner loop index over cull grid columns; SERVED: identical (snippet-only twin).",
+   "name": "gridCol",
+   "selector": "a5j@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5j",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "4F['material'][\"length\"]);var a5g=OY[\"map\"],a5h=[];for(var a5i=0x0;a5i<a5g[\"length\"];a5i++){for(var a5j=0x0;a5j<a5g[a5i]['length'];a5j++){if(a5g[a5i][a5j]==unde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "ial'][aBt(0x3a2)]);var a5g=OY[aBt(0xff7)],a5h=[];for(var a5i=0x0;a5i<a5g[aBt(0x3a2)];a5i++){for(var a5j=0x0;a5j<a5g[a5i]['length'];a5j++){if(a5g[a5i][a5j]==unde"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-cell mesh list stored back into grid; SERVED: identical (snippet-only twin).",
+   "name": "cellMeshes",
+   "selector": "a5k@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5k",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "gth\"];a5i++){for(var a5j=0x0;a5j<a5g[a5i]['length'];a5j++){if(a5g[a5i][a5j]==undefined)continue;var a5k=[];for(var a54=0x0;a54<a5g[a5i][a5j]['length'];a54++){va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "3a2)];a5i++){for(var a5j=0x0;a5j<a5g[a5i]['length'];a5j++){if(a5g[a5i][a5j]==undefined)continue;var a5k=[];for(var a54=0x0;a54<a5g[a5i][a5j]['length'];a54++){va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: grid cell chunk converted into split mesh geometry; SERVED: identical (snippet-only twin).",
+   "name": "cellGeometry",
+   "selector": "a5l@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5l",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a5g[a5i][a5j]==undefined)continue;var a5k=[];for(var a54=0x0;a54<a5g[a5i][a5j]['length'];a54++){var a5l=a5g[a5i][a5j][a54];if(a5l[\"faces\"][\"length\"]==0x0)contin"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a5g[a5i][a5j]==undefined)continue;var a5k=[];for(var a54=0x0;a54<a5g[a5i][a5j]['length'];a54++){var a5l=a5g[a5i][a5j][a54];if(a5l[aBt(0xd8a)][aBt(0x3a2)]==0x0)c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mesh copy sorted by boxSize for bbox combining; SERVED: identical (snippet-only twin).",
+   "name": "sortedMeshes",
+   "selector": "a5m@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5m",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "b\"]=!![],a5z['bbGtpmsnoL']=![],a5h[a5h['length']]=a5z,a5k[a5k[\"length\"]]=a5z;}a5g[a5i][a5j]=a5k;var a5m=[];for(var a4O=0x0;a4O<a5k[\"length\"];a4O++){a5m[a5m['len"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "]=!![],a5z['bbGtpmsnoL']=![],a5h[a5h['length']]=a5z,a5k[a5k[aBt(0x3a2)]]=a5z;}a5g[a5i][a5j]=a5k;var a5m=[];for(var a4O=0x0;a4O<a5k[aBt(0x3a2)];a4O++){a5m[a5m['l"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bubble-sort swap temp for mesh ordering; SERVED: identical (snippet-only twin).",
+   "name": "swapMesh",
+   "selector": "a5n@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5n",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "or(var a54=0x0;a54<a5m[\"length\"]-a4O-0x1;a54++){if(a5m[a54]['boxSize']>a5m[a54+0x1]['boxSize']){var a5n=a5m[a54];a5m[a54]=a5m[a54+0x1],a5m[a54+0x1]=a5n;}}}a3y['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "(var a54=0x0;a54<a5m[aBt(0x3a2)]-a4O-0x1;a54++){if(a5m[a54]['boxSize']>a5m[a54+0x1]['boxSize']){var a5n=a5m[a54];a5m[a54]=a5m[a54+0x1],a5m[a54+0x1]=a5n;}}}a3y['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bbox combine group size from config or one; SERVED: identical (snippet-only twin).",
+   "name": "combineCount",
+   "selector": "a5o@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5o",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "gBoxes']==undefined&&(a3y[\"combineBoundingBoxes\"]=0x2);for(var a4O=0x0;a4O<a5m[\"length\"];a4O++){var a5o=a3y[\"combineBoundingBoxes\"];Gi&&(a5o=0x1);var a5p=a5m[a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ineBoundingBoxes']==undefined&&(a3y[aBt(0x6a2)]=0x2);for(var a4O=0x0;a4O<a5m[aBt(0x3a2)];a4O++){var a5o=a3y[aBt(0x6a2)];Gi&&(a5o=0x1);var a5p=a5m[a4O],a5q=[];fo"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: group lead mesh, merged bounds; else fresh cell mesh; SERVED: identical (snippet-only twin).",
+   "name": "chunkMesh",
+   "selector": "a5p@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5p",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 30,
+    "snippet": "0x2);for(var a4O=0x0;a4O<a5m[\"length\"];a4O++){var a5o=a3y[\"combineBoundingBoxes\"];Gi&&(a5o=0x1);var a5p=a5m[a4O],a5q=[];for(var a54=0x0;a54<a5o;a54++){a5m[a4O+a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 30,
+    "snippet": "t(0x6a2)]=0x2);for(var a4O=0x0;a4O<a5m[aBt(0x3a2)];a4O++){var a5o=a3y[aBt(0x6a2)];Gi&&(a5o=0x1);var a5p=a5m[a4O],a5q=[];for(var a54=0x0;a54<a5o;a54++){a5m[a4O+a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mesh group whose bounds merge into lead mesh; SERVED: identical (snippet-only twin).",
+   "name": "combineGroup",
+   "selector": "a5q@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5q",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "a4O=0x0;a4O<a5m[\"length\"];a4O++){var a5o=a3y[\"combineBoundingBoxes\"];Gi&&(a5o=0x1);var a5p=a5m[a4O],a5q=[];for(var a54=0x0;a54<a5o;a54++){a5m[a4O+a54]&&(a5q[a5q"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 9,
+    "snippet": ");for(var a4O=0x0;a4O<a5m[aBt(0x3a2)];a4O++){var a5o=a3y[aBt(0x6a2)];Gi&&(a5o=0x1);var a5p=a5m[a4O],a5q=[];for(var a54=0x0;a54<a5o;a54++){a5m[a4O+a54]&&(a5q[a5q"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: WireframeGeometry built from map geometry for debug; SERVED: identical (snippet-only twin).",
+   "name": "wireframeGeometry",
+   "selector": "a5r@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5r",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "svzFuAsEB['kwrjVVjSgIH']()['fromGeometry'](a4F[\"RNQDluasaN\"]),a5E['dispose'](),a5E=null;}if(QC){var a5r=new usvzFuAsEB['WireframeGeometry'](a4F[\"RNQDluasaN\"]),a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": " usvzFuAsEB['kwrjVVjSgIH']()['fromGeometry'](a4F[aBt(0xbac)]),a5E['dispose'](),a5E=null;}if(QC){var a5r=new usvzFuAsEB['WireframeGeometry'](a4F[aBt(0xbac)]),a5s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: LineSegments overlay added to scene, faint transparent; SERVED: identical (snippet-only twin).",
+   "name": "wireframeLines",
+   "selector": "a5s@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5s",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "]),a5E['dispose'](),a5E=null;}if(QC){var a5r=new usvzFuAsEB['WireframeGeometry'](a4F[\"RNQDluasaN\"]),a5s=new usvzFuAsEB['CcjHTJKsGIh'](a5r);a5s[\"material\"]['equz"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "c)]),a5E['dispose'](),a5E=null;}if(QC){var a5r=new usvzFuAsEB['WireframeGeometry'](a4F[aBt(0xbac)]),a5s=new usvzFuAsEB['CcjHTJKsGIh'](a5r);a5s[aBt(0x52e)]['equz"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: collected scene geometries merged by combineGeometries; SERVED: identical (snippet-only twin).",
+   "name": "geometriesToCombine",
+   "selector": "a5t@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5t",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tedATest'];a4J==undefined&&(a4J=[]);a4F['material']=[],a4H=a4F['RNQDluasaN'];if(a4G==undefined){let a5t=[];a4y[\"scene\"]['XOVWraMIAg'](function(a5u){var aBu=aBt;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tedATest'];a4J==undefined&&(a4J=[]);a4F['material']=[],a4H=a4F['RNQDluasaN'];if(a4G==undefined){let a5t=[];a4y[aBt(0x39e)]['XOVWraMIAg'](function(a5u){var aBu=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traverse callback node contributing its geometry; SERVED: identical (snippet-only twin).",
+   "name": "traverseNode",
+   "selector": "a5u@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5u",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "terial']=[],a4H=a4F['RNQDluasaN'];if(a4G==undefined){let a5t=[];a4y[\"scene\"]['XOVWraMIAg'](function(a5u){var aBu=aBt;if(a5u[\"RNQDluasaN\"]==undefined)return;a5t["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ial']=[],a4H=a4F['RNQDluasaN'];if(a4G==undefined){let a5t=[];a4y[aBt(0x39e)]['XOVWraMIAg'](function(a5u){var aBu=aBt;if(a5u[aBu(0xbac)]==undefined)return;a5t['p"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index disposing old hitbox meshes; SERVED: identical (snippet-only twin).",
+   "name": "hitboxIndex",
+   "selector": "a5u@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5u",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "F['RNQDluasaN']));a4F['RNQDluasaN'][\"dispose\"](),a4F[\"RNQDluasaN\"]=a4H,QP[\"RNQDluasaN\"]=a4H;for(let a5u=0x0;a5u<a0M['length'];a5u++){a0M[a5u]['RNQDluasaN']['dis"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "a4F['RNQDluasaN']));a4F['RNQDluasaN'][aBt(0x1052)](),a4F[aBt(0xbac)]=a4H,QP[aBt(0xbac)]=a4H;for(let a5u=0x0;a5u<a0M['length'];a5u++){a0M[a5u]['RNQDluasaN']['dis"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: shared translucent material for hitbox debug meshes; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMaterial",
+   "selector": "a5v@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5v",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "usvzFuAsEB['Matrix4'](),a4Q={};a4Q[\"color\"]=0xffffff,a4Q['transparent']=!![],a4Q['opacity']=0.3;let a5v=new usvzFuAsEB[(\"KibzRdopc\")](a4Q);for(var a4O=0x0;a4O<a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "zFuAsEB['Matrix4'](),a4Q={};a4Q[aBt(0x193)]=0xffffff,a4Q['transparent']=!![],a4Q['opacity']=0.3;let a5v=new usvzFuAsEB[(aBt(0x104b))](a4Q);for(var a4O=0x0;a4O<a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: replaced geometry disposed and nulled after toBuffer; SERVED: identical (snippet-only twin).",
+   "name": "oldGeometry",
+   "selector": "a5w@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5w",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "4X=a51,a4W++;}a4F['RNQDluasaN']['addGroup'](a4V*0x3,a4W*0x3,Math['floor'](a4X*0x101/0xa));}else{let a5w=a4F['RNQDluasaN'];a4F[\"RNQDluasaN\"]=toBuffer(a4F['RNQDlu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "4X=a51,a4W++;}a4F['RNQDluasaN']['addGroup'](a4V*0x3,a4W*0x3,Math['floor'](a4X*0x101/0xa));}else{let a5w=a4F['RNQDluasaN'];a4F[aBt(0xbac)]=toBuffer(a4F['RNQDluas"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: spaceless name matched against material flag lists; SERVED: identical (snippet-only twin).",
+   "name": "normalizedTexName",
+   "selector": "a5x@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5x",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "4]==undefined||a4G[a54]=='')continue;var a58=a4G[a54];a3Y['indexOf'](a58)!=-0x1&&(a58=a3T[a58]);let a5x=a58[\"replace\"](/ /g,'')[\"replaceAll\"]('_','');(a3M['inde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "4]==undefined||a4G[a54]=='')continue;var a58=a4G[a54];a3Y['indexOf'](a58)!=-0x1&&(a58=a3T[a58]);let a5x=a58[aBt(0x5f0)](/ /g,'')[aBt(0xde)]('_','');(a3M['indexO"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: constant-true gate selecting EQ occlusion-split path; SERVED: identical (snippet-only twin).",
+   "name": "useOcclusionSplit",
+   "selector": "a5y@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5y",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "bleOcclusionCulling\"]=![];L1&&(Fu['enableOcclusionCulling']=![]);if(Px&&!a4D){Yx['remove'](a4F);let a5y=!![];if(a5y){OY=EQ(a4H,a3y[\"cullSize\"],a4F['material'][\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "bGL2'],Fu[aBt(0xea7)]=![];L1&&(Fu['enableOcclusionCulling']=![]);if(Px&&!a4D){Yx['remove'](a4F);let a5y=!![];if(a5y){OY=EQ(a4H,a3y[aBt(0x442)],a4F['material'][a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: flag true when texture src matches no exclusion pattern; SERVED: identical (snippet-only twin).",
+   "name": "srcUnmatched",
+   "selector": "a5z@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5z",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0)continue;YP++;if(Z2[a5a]!=undefined)var a5b=Z2[a5a];else{var a5b=Fg(a5a,function(a5y){var aBv=aBt,a5z=!![];for(var a5A=0x0;a5A<a3R['length'];a5A++){a5y[\"src\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0)continue;YP++;if(Z2[a5a]!=undefined)var a5b=Z2[a5a];else{var a5b=Fg(a5a,function(a5y){var aBv=aBt,a5z=!![];for(var a5A=0x0;a5A<a3R['length'];a5A++){a5y[aBv(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-cell per-material mesh pushed to both lists; SERVED: identical (snippet-only twin).",
+   "name": "splitMesh",
+   "selector": "a5z@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a5z",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 15,
+    "snippet": "g[a5i][a5j]['length'];a54++){var a5l=a5g[a5i][a5j][a54];if(a5l[\"faces\"][\"length\"]==0x0)continue;let a5z=new usvzFuAsEB['Mesh']();a5z[\"RNQDluasaN\"]=a5l,a5z[\"RNQD"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 15,
+    "snippet": "][a5j]['length'];a54++){var a5l=a5g[a5i][a5j][a54];if(a5l[aBt(0xd8a)][aBt(0x3a2)]==0x0)continue;let a5z=new usvzFuAsEB['Mesh']();a5z[aBt(0xbac)]=a5l,a5z[aBt(0xb"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Map file tested for drc then joined into gltf path; SERVED: identical (snippet-only twin).",
+   "name": "mapFileName",
+   "selector": "a3A@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "z=JSON['parse'](a3y['occlusion']));QP['ObJcBulJld']=a3y['ObJcBulJld'];var a3z=\"maps/\"+a3y['folder'],a3A=a3y['file'];if(a3y['botMap']!=undefined)for(var a3t=0x0;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "SON['parse'](a3y['occlusion']));QP['ObJcBulJld']=a3y['ObJcBulJld'];var a3z=aB5(0xfe8)+a3y['folder'],a3A=a3y['file'];if(a3y['botMap']!=undefined)for(var a3t=0x0;"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Red color options object fed to bot marker Mesh; SERVED: identical (snippet-only twin).",
+   "name": "botMarkerMatOpts",
+   "selector": "a3B@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",a3A=a3y['file'];if(a3y['botMap']!=undefined)for(var a3t=0x0;a3t<a3y[\"botMap\"]['length'];a3t++){var a3B={};a3B[\"color\"]=0xff0000;var a3C=new usvzFuAsEB[(\"Mesh\")"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "A=a3y['file'];if(a3y['botMap']!=undefined)for(var a3t=0x0;a3t<a3y[aB5(0x10bf)]['length'];a3t++){var a3B={};a3B[aB5(0x193)]=0xff0000;var a3C=new usvzFuAsEB[(aB5("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: BoxGeometry mesh positioned at botMap waypoint coordinates; SERVED: identical (snippet-only twin).",
+   "name": "botMapMarkerMesh",
+   "selector": "a3C@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "!=undefined)for(var a3t=0x0;a3t<a3y[\"botMap\"]['length'];a3t++){var a3B={};a3B[\"color\"]=0xff0000;var a3C=new usvzFuAsEB[(\"Mesh\")](new usvzFuAsEB['BoxGeometry'](0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "fined)for(var a3t=0x0;a3t<a3y[aB5(0x10bf)]['length'];a3t++){var a3B={};a3B[aB5(0x193)]=0xff0000;var a3C=new usvzFuAsEB[(aB5(0x11b))](new usvzFuAsEB['BoxGeometry"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Smalllightmap texture with NearestFilter feeding ao uniforms; SERVED: identical (snippet-only twin).",
+   "name": "smallLightmapTex",
+   "selector": "a3E@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "0,UY['light']['mesh']['count']=0x0;if(!Yv&&(a3y['type']=='LgAyOuDBV'||a3y[\"type\"]==\"gltf\")){var a3D,a3E;YP++;a3p>=a3y[\"lightmaps\"]['length']&&(a3p=0x0);var a3F="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "ght']['mesh']['count']=0x0;if(!Yv&&(a3y['type']=='LgAyOuDBV'||a3y[aB5(0xafb)]==aB5(0xe6f))){var a3D,a3E;YP++;a3p>=a3y[aB5(0x6d4)]['length']&&(a3p=0x0);var a3F=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Active lightmaps entry driving sun skybox and lightData; SERVED: identical (snippet-only twin).",
+   "name": "lightmapConfig",
+   "selector": "a3F@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "='LgAyOuDBV'||a3y[\"type\"]==\"gltf\")){var a3D,a3E;YP++;a3p>=a3y[\"lightmaps\"]['length']&&(a3p=0x0);var a3F=a3y['lightmaps'][a3p];OW=null,OX=null;a3F['sunDirection'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "uDBV'||a3y[aB5(0xafb)]==aB5(0xe6f))){var a3D,a3E;YP++;a3p>=a3y[aB5(0x6d4)]['length']&&(a3p=0x0);var a3F=a3y['lightmaps'][a3p];OW=null,OX=null;a3F['sunDirection'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Render tag array passed into lightmap loaders and Zj; SERVED: identical (snippet-only twin).",
+   "name": "lightmapTagList",
+   "selector": "a3G@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "y['size']),Z5['push'](a4o);}}a3E=Yt;if(a3y[\"PsiAamvUtbg\"]&&!a3y['testAO']&&!a3y['testShadows']){var a3G=[\"render\"];if(!a3y[\"skipLightmapUncompress\"]){}if(a3y['s"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "(a3y['size']),Z5['push'](a4o);}}a3E=Yt;if(a3y[aB5(0x9b3)]&&!a3y['testAO']&&!a3y['testShadows']){var a3G=[aB5(0x18c)];if(!a3y[aB5(0xae3)]){}if(a3y['sunset']){}if"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Wp entry whose obj audio source is stopped spliced; SERVED: identical (snippet-only twin).",
+   "name": "ambientSoundSlot",
+   "selector": "a3H@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "](Wo[a3t]['vary'])['OpiuFvBcQd'](0x1/0x2));}}else Wo=[];for(var a3t=0x0;a3t<Wp[\"length\"];a3t++){var a3H=Wp[a3t];if(a3H[\"obj\"]==undefined)continue;a3H[\"obj\"]['so"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "Wo[a3t]['vary'])['OpiuFvBcQd'](0x1/0x2));}}else Wo=[];for(var a3t=0x0;a3t<Wp[aB5(0x3a2)];a3t++){var a3H=Wp[a3t];if(a3H[aB5(0x9a0)]==undefined)continue;a3H[aB5(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: T9 scene with start end positions scaled by fineTuneSize; SERVED: identical (snippet-only twin).",
+   "name": "cinematicScene",
+   "selector": "a3I@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "SON[\"parse\"](JSON['stringify'](a3y['cinematicScenes']));for(var a3t=0x0;a3t<T9['length'];a3t++){var a3I=T9[a3t];a3I['start']['position']=new usvzFuAsEB['gURkzCz"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "[aB5(0x8c1)](JSON['stringify'](a3y['cinematicScenes']));for(var a3t=0x0;a3t<T9['length'];a3t++){var a3I=T9[a3t];a3I['start']['position']=new usvzFuAsEB['gURkzCz"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loader fetching skybox glb then disposing its dracoLoader; SERVED: identical (snippet-only twin).",
+   "name": "skyboxGltfLoader",
+   "selector": "a3K@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3K",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'.glb')!=-0x1||a3y['skybox']['indexOf']('.gltf')!=-0x1||a3y['skybox']['indexOf']('.drc')!=-0x1){var a3K=XE(!![]);a3K[\"load\"](a3z+\"skybox/\"+a3y['skybox'],functio"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'.glb')!=-0x1||a3y['skybox']['indexOf']('.gltf')!=-0x1||a3y['skybox']['indexOf']('.drc')!=-0x1){var a3K=XE(!![]);a3K[aB5(0x199)](a3z+aB5(0xd6b)+a3y['skybox'],fu"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding assigned null never read anywhere",
+   "selector": "a3L@u2654#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fence water foliage list triggering DoubleSide transparent materials; SERVED: identical (snippet-only twin).",
+   "name": "transparentTexNames",
+   "selector": "a3M@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3M",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "\"]=!![],a4x!=undefined&&a4x['needsNormal']&&(a4K[\"needsNormal\"]=!![]),Zi[Zi['length']]=a4K,a4K;}var a3M=['fence','WalkwayMetal',\"icicles\",'water','blueFlowerPal"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "037)]=!![],a4x!=undefined&&a4x['needsNormal']&&(a4K[aBm(0xcf2)]=!![]),Zi[Zi['length']]=a4K,a4K;}var a3M=['fence','WalkwayMetal',aB5(0xaef),'water','blueFlowerPa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: WalkwayPaint TrimSheet list forcing DoubleSide material side; SERVED: identical (snippet-only twin).",
+   "name": "doubleSidedTexNames",
+   "selector": "a3N@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3N",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",'leaf2textures',\"BlueFlowerPallete\",'glass1','Leaves',\"Bush3\",'Bush',\"PlantsPlanter\",'TrimSheet2'],a3N=[\"WalkwayPaint\",\"TrimSheet1\",'tree2aleaf',\"treebleaf\",'b"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "d4','weed5','leaf2textures',aB5(0x890),'glass1','Leaves',aB5(0x3c8),'Bush',aB5(0xaf2),'TrimSheet2'],a3N=[aB5(0x4c4),aB5(0xe76),'tree2aleaf',aB5(0x35b),'bamboobr"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Leaf bamboo list selecting animated material shader path; SERVED: identical (snippet-only twin).",
+   "name": "animatedFoliageNames",
+   "selector": "a3O@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3O",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ntsPlanter\",'TrimSheet2'],a3N=[\"WalkwayPaint\",\"TrimSheet1\",'tree2aleaf',\"treebleaf\",'bamboobranch'],a3O=[\"tree2aleaf\",\"treebleaf\",'bamboobranch'],a3P={};a3P[\"Bu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",'Bush',aB5(0xaf2),'TrimSheet2'],a3N=[aB5(0x4c4),aB5(0xe76),'tree2aleaf',aB5(0x35b),'bamboobranch'],a3O=[aB5(0x11d),aB5(0x35b),'bamboobranch'],a3P={};a3P[aB5(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Bush Flag Puddle table keyed for animated transparent clamped; SERVED: identical (snippet-only twin).",
+   "name": "materialOptsByName",
+   "selector": "a3P@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3P",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 21,
+    "snippet": "\"TrimSheet1\",'tree2aleaf',\"treebleaf\",'bamboobranch'],a3O=[\"tree2aleaf\",\"treebleaf\",'bamboobranch'],a3P={};a3P[\"Bush2\"]=qW,a3P['Bush3']=qY,a3P[\"TrimSheet2\"]=rg,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 21,
+    "snippet": "x4c4),aB5(0xe76),'tree2aleaf',aB5(0x35b),'bamboobranch'],a3O=[aB5(0x11d),aB5(0x35b),'bamboobranch'],a3P={};a3P[aB5(0x662)]=qW,a3P['Bush3']=qY,a3P[aB5(0xf9b)]=rg"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Keys of material table marking excluded face materials; SERVED: identical (snippet-only twin).",
+   "name": "customMaterialKeys",
+   "selector": "a3Q@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Q",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "'TireTracks_multiply_nobake']=r6,a3P['TreeLeaves_clip_nobake']=qS,a3P[\"Water_Scroll_nobake\"]=qU;var a3Q=Object[\"keys\"](a3P),a3R=['fence',\"TextureAtlas\",'Walkway"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "c']=r4,a3P['TireTracks_multiply_nobake']=r6,a3P['TreeLeaves_clip_nobake']=qS,a3P[aB5(0x598)]=qU;var a3Q=Object[aB5(0x6a4)](a3P),a3R=['fence',aB5(0x48c),'Walkway"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Fence Atlas list disabling per-texture anisotropy adjustment Zv; SERVED: identical (snippet-only twin).",
+   "name": "anisotropySkipNames",
+   "selector": "a3R@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3R",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ake']=r6,a3P['TreeLeaves_clip_nobake']=qS,a3P[\"Water_Scroll_nobake\"]=qU;var a3Q=Object[\"keys\"](a3P),a3R=['fence',\"TextureAtlas\",'WalkwayMetal','Barrel',\"Atlas\","
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ply_nobake']=r6,a3P['TreeLeaves_clip_nobake']=qS,a3P[aB5(0x598)]=qU;var a3Q=Object[aB5(0x6a4)](a3P),a3R=['fence',aB5(0x48c),'WalkwayMetal','Barrel',aB5(0x7f0),'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Concretefloor2 map literal aliased into working rename map; SERVED: identical (snippet-only twin).",
+   "name": "textureRenameSeed",
+   "selector": "a3S@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3S",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "['fence',\"TextureAtlas\",'WalkwayMetal','Barrel',\"Atlas\",'icicles','water','rock_grey',\"DirtGround\"],a3S={};a3S['Concretefloor2']='ConcreteFloor';var a3T=a3S,a3U"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "3R=['fence',aB5(0x48c),'WalkwayMetal','Barrel',aB5(0x7f0),'icicles','water','rock_grey',aB5(0xc32)],a3S={};a3S['Concretefloor2']='ConcreteFloor';var a3T=a3S,a3U"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Alias remapping texture names before transparency classification checks; SERVED: identical (snippet-only twin).",
+   "name": "textureRenameMap",
+   "selector": "a3T@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3T",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "Atlas\",'icicles','water','rock_grey',\"DirtGround\"],a3S={};a3S['Concretefloor2']='ConcreteFloor';var a3T=a3S,a3U={};a3U['Pavement']=0x2,a3U['Concrete']=0x2,a3U['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "5(0x7f0),'icicles','water','rock_grey',aB5(0xc32)],a3S={};a3S['Concretefloor2']='ConcreteFloor';var a3T=a3S,a3U={};a3U['Pavement']=0x2,a3U['Concrete']=0x2,a3U['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Pavement Concrete Brick level-two map aliased onward; SERVED: identical (snippet-only twin).",
+   "name": "anisoLevelSeed",
+   "selector": "a3U@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3U",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "icicles','water','rock_grey',\"DirtGround\"],a3S={};a3S['Concretefloor2']='ConcreteFloor';var a3T=a3S,a3U={};a3U['Pavement']=0x2,a3U['Concrete']=0x2,a3U['Brick']="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": ",'icicles','water','rock_grey',aB5(0xc32)],a3S={};a3S['Concretefloor2']='ConcreteFloor';var a3T=a3S,a3U={};a3U['Pavement']=0x2,a3U['Concrete']=0x2,a3U['Brick']="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Alias supplying per-texture Zv anisotropy levels by name; SERVED: identical (snippet-only twin).",
+   "name": "anisoLevelByName",
+   "selector": "a3V@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3V",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "2']='ConcreteFloor';var a3T=a3S,a3U={};a3U['Pavement']=0x2,a3U['Concrete']=0x2,a3U['Brick']=0x2;var a3V=a3U,a3W=['Brick','RedBrickDirty',\"CleanRedBrick\",'SheetM"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "2']='ConcreteFloor';var a3T=a3S,a3U={};a3U['Pavement']=0x2,a3U['Concrete']=0x2,a3U['Brick']=0x2;var a3V=a3U,a3W=['Brick','RedBrickDirty',aB5(0xb7c),'SheetMetal'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Brick Tile Neon list selecting max anisotropy filter path; SERVED: identical (snippet-only twin).",
+   "name": "highAnisoTexNames",
+   "selector": "a3W@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "creteFloor';var a3T=a3S,a3U={};a3U['Pavement']=0x2,a3U['Concrete']=0x2,a3U['Brick']=0x2;var a3V=a3U,a3W=['Brick','RedBrickDirty',\"CleanRedBrick\",'SheetMetal','T"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "creteFloor';var a3T=a3S,a3U={};a3U['Pavement']=0x2,a3U['Concrete']=0x2,a3U['Brick']=0x2;var a3V=a3U,a3W=['Brick','RedBrickDirty',aB5(0xb7c),'SheetMetal','Tile',"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Keys of level map matched against texture src; SERVED: identical (snippet-only twin).",
+   "name": "anisoTexKeys",
+   "selector": "a3X@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": ",\"MossTrans_nobake_clip\",'LabWall','Riverbed_nobake','LabFloor','BambooLeaves_clip_nobake','Grass'],a3X=Object[\"keys\"](a3V),a3Y=Object['keys'](a3T);if(a3y['prel"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "),aB5(0x1054),aB5(0x3c6),'LabWall','Riverbed_nobake','LabFloor','BambooLeaves_clip_nobake','Grass'],a3X=Object[aB5(0x6a4)](a3V),a3Y=Object['keys'](a3T);if(a3y['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Keys of rename map guarding texture name remap; SERVED: identical (snippet-only twin).",
+   "name": "renamedTextureKeys",
+   "selector": "a3Y@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Y",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",'LabWall','Riverbed_nobake','LabFloor','BambooLeaves_clip_nobake','Grass'],a3X=Object[\"keys\"](a3V),a3Y=Object['keys'](a3T);if(a3y['preloadTextures']!=undefined"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "bWall','Riverbed_nobake','LabFloor','BambooLeaves_clip_nobake','Grass'],a3X=Object[aB5(0x6a4)](a3V),a3Y=Object['keys'](a3T);if(a3y['preloadTextures']!=undefined"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: PreloadTextures entry expanded into textures path for prefetch; SERVED: identical (snippet-only twin).",
+   "name": "preloadTextureName",
+   "selector": "a3Z@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Z",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "f(a3y['preloadTextures']!=undefined)for(var a3t=0x0;a3t<a3y['preloadTextures']['length'];a3t++){var a3Z=a3y['preloadTextures'][a3t];if(a3Z==\"NONE/ERROR\"||a3Z==u"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "f(a3y['preloadTextures']!=undefined)for(var a3t=0x0;a3t<a3y['preloadTextures']['length'];a3t++){var a3Z=a3y['preloadTextures'][a3t];if(a3Z==aB5(0x8c4)||a3Z==und"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: QP mesh converted to BufferGeometry for hitbox rebuild; SERVED: identical (snippet-only twin).",
+   "name": "cachedMapMesh",
+   "selector": "a3r@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "if(YK==a3o&&YL==a3p&&YQ){a0S();return;}if(YK==a3o&&YL==a3p&&!YQ&&QP['mesh']!=undefined){if(!YN){var a3r=QP['mesh'];!a3r['RNQDluasaN'][\"isBufferGeometry\"]&&(a3r["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "if(YK==a3o&&YL==a3p&&YQ){a0S();return;}if(YK==a3o&&YL==a3p&&!YQ&&QP['mesh']!=undefined){if(!YN){var a3r=QP['mesh'];!a3r['RNQDluasaN'][aB5(0xac2)]&&(a3r[aB5(0xba"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Shared var loop counter across dispose botMap emitter loops; SERVED: identical (snippet-only twin).",
+   "name": "loopIdx",
+   "selector": "a3t@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 23,
+    "snippet": "efined){let a49=a48['material'];!Array['isArray'](a48['material'])&&(a49=[a48[\"material\"]]);for(var a3t=0x0;a3t<a49[\"length\"];a3t++){var a3u=a49[a3t];if(a3u['un"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 23,
+    "snippet": "efined){let a49=a48['material'];!Array['isArray'](a48['material'])&&(a49=[a48[aB5(0x52e)]]);for(var a3t=0x0;a3t<a49[aB5(0x3a2)];a3t++){var a3u=a49[a3t];if(a3u['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Child material with uniforms map disposed during teardown; SERVED: identical (snippet-only twin).",
+   "name": "staleMaterial",
+   "selector": "a3u@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 23,
+    "snippet": "y['isArray'](a48['material'])&&(a49=[a48[\"material\"]]);for(var a3t=0x0;a3t<a49[\"length\"];a3t++){var a3u=a49[a3t];if(a3u['uniforms']==undefined)a3u['map']!=undef"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 23,
+    "snippet": "'isArray'](a48['material'])&&(a49=[a48[aB5(0x52e)]]);for(var a3t=0x0;a3t<a49[aB5(0x3a2)];a3t++){var a3u=a49[a3t];if(a3u['uniforms']==undefined)a3u['map']!=undef"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Index over uniforms t texture array for disposal; SERVED: identical (snippet-only twin).",
+   "name": "uniTexIdx",
+   "selector": "a3w@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "efined&&a3u[\"uniforms\"]['t']['value']['length']!=0x0){var a3v=a3u['uniforms']['t']['value'];for(var a3w=0x0;a3w<a3v[\"length\"];a3w++){Fi(a3v[a3w]);}a3u['uniforms"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "efined&&a3u[aB5(0x29b)]['t']['value']['length']!=0x0){var a3v=a3u['uniforms']['t']['value'];for(var a3w=0x0;a3w<a3v[aB5(0x3a2)];a3w++){Fi(a3v[a3w]);}a3u['unifor"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Index over uniform key list for texture cleanup; SERVED: identical (snippet-only twin).",
+   "name": "uniformKeyIdx",
+   "selector": "a3x@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "++){Fi(a3v[a3w]);}a3u['uniforms']['t']['value']=[];}let a4a=Object['keys'](a3u['uniforms']);for(var a3x=0x0;a3x<a4a['length'];a3x++){let a4c=a4a[a3x];a3u[\"unifo"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "++){Fi(a3v[a3w]);}a3u['uniforms']['t']['value']=[];}let a4a=Object['keys'](a3u['uniforms']);for(var a3x=0x0;a3x<a4a['length'];a3x++){let a4c=a4a[a3x];a3u[aB5(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: EM map entry with folder lightmaps skybox driving loader; SERVED: identical (snippet-only twin).",
+   "name": "mapConfig",
+   "selector": "a3y@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 110,
+    "snippet": "],Yx['add'](YV),Tm[\"zuYSmsDYXXy\"](Yx),Tm[\"zuYSmsDYXXy\"](Yw),Tm[\"zuYSmsDYXXy\"](WY),Tm['add'](Yy);var a3y=EM[a3o];EM[a3o]===undefined&&(a3y=EM['industry']);a3y['f"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 110,
+    "snippet": "ixers']=[],Yx['add'](YV),Tm[aB5(0x2bd)](Yx),Tm[aB5(0x2bd)](Yw),Tm[aB5(0x2bd)](WY),Tm['add'](Yy);var a3y=EM[a3o];EM[a3o]===undefined&&(a3y=EM['industry']);a3y['f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Maps folder prefix joined to lightmap texture gltf; SERVED: identical (snippet-only twin).",
+   "name": "mapBasePath",
+   "selector": "a3z@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 28,
+    "snippet": "occlusion\"]!=undefined&&(Yz=JSON['parse'](a3y['occlusion']));QP['ObJcBulJld']=a3y['ObJcBulJld'];var a3z=\"maps/\"+a3y['folder'],a3A=a3y['file'];if(a3y['botMap']!="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 28,
+    "snippet": "aB5(0x2e8)]!=undefined&&(Yz=JSON['parse'](a3y['occlusion']));QP['ObJcBulJld']=a3y['ObJcBulJld'];var a3z=aB5(0xfe8)+a3y['folder'],a3A=a3y['file'];if(a3y['botMap'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Shared or fresh loader calling load on gltf; SERVED: identical (snippet-only twin).",
+   "name": "gltfLoader",
+   "selector": "a40@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a40",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ")!=-0x1&&(a4B=a3V[a3X[a4A]]);}Zv(a4y,a4B);}!a4y['inited']&&(a4y[\"inited\"]=!![]);});Z2[a4w]=a4x;}var a40;a3A[\"indexOf\"](\".drc\")==-0x1?(XA==undefined&&(XA=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "!=-0x1&&(a4B=a3V[a3X[a4A]]);}Zv(a4y,a4B);}!a4y['inited']&&(a4y[aBn(0xbd)]=!![]);});Z2[a4w]=a4x;}var a40;a3A[aB5(0xfad)](aB5(0xf56))==-0x1?(XA==undefined&&(XA=ne"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Base plus file URL loaded retried telemetered; SERVED: identical (snippet-only twin).",
+   "name": "gltfUrl",
+   "selector": "a41@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a41",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "(\".drc\")==-0x1?(XA==undefined&&(XA=new usvzFuAsEB['bxZSAjQYG']()),a40=XA):(a40=XE(!![]),YS=a40);var a41=a3z+a3A,a42=0x0,a43=0x3,a44=0x28a;if(a12!=null){a12['map"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "(0xf56))==-0x1?(XA==undefined&&(XA=new usvzFuAsEB['bxZSAjQYG']()),a40=XA):(a40=XE(!![]),YS=a40);var a41=a3z+a3A,a42=0x0,a43=0x3,a44=0x28a;if(a12!=null){a12['map"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: url payload emitted with map-gltf-load-start event; SERVED: identical (snippet-only twin).",
+   "name": "gltfStartPayload",
+   "selector": "a45@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a45",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a1b(a41),a12['map']['gltfStartAt']=a18(),a12['map']['gltfLastByteAt']=a12[\"map\"][\"gltfStartAt\"];var a45={};a45['url']=a12['map']['gltfUrl'],a1e(\"map-gltf-load-s"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "b(a41),a12['map']['gltfStartAt']=a18(),a12['map']['gltfLastByteAt']=a12[aB5(0xff7)][aB5(0x1fb)];var a45={};a45['url']=a12['map']['gltfUrl'],a1e(aB5(0xa1f),a45),"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "unused empty catch parameter",
+   "selector": "a46@u2654#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index iterating Yx children array; SERVED: identical (snippet-only twin).",
+   "name": "childIndex",
+   "selector": "a47@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a47",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "=undefined&&(a3q=!![]);YO=0x0,YP=0x0,YK=a3o,YL=a3p,YN=a3q,OY=null,OZ=[],a2g(Yx),OI=new GR();for(let a47=0x0;a47<Yx[\"children\"][\"length\"];a47++){let a48=Yx[\"chil"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "=undefined&&(a3q=!![]);YO=0x0,YP=0x0,YK=a3o,YL=a3p,YN=a3q,OY=null,OZ=[],a2g(Yx),OI=new GR();for(let a47=0x0;a47<Yx[aB5(0xc76)][aB5(0x3a2)];a47++){let a48=Yx[aB5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: child node reset geometry disposed each iteration; SERVED: identical (snippet-only twin).",
+   "name": "sceneChild",
+   "selector": "a48@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a48",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "3p,YN=a3q,OY=null,OZ=[],a2g(Yx),OI=new GR();for(let a47=0x0;a47<Yx[\"children\"][\"length\"];a47++){let a48=Yx[\"children\"][a47];a48['bbGtpmsnoL']=![],a48['matrixWor"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ",YN=a3q,OY=null,OZ=[],a2g(Yx),OI=new GR();for(let a47=0x0;a47<Yx[aB5(0xc76)][aB5(0x3a2)];a47++){let a48=Yx[aB5(0xc76)][a47];a48['bbGtpmsnoL']=![],a48['matrixWor"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: child material normalized to array then iterated; SERVED: identical (snippet-only twin).",
+   "name": "childMaterials",
+   "selector": "a49@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a49",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "![];a48[\"RNQDluasaN\"]!=undefined&&a48['RNQDluasaN']['dispose']();if(a48['material']!=undefined){let a49=a48['material'];!Array['isArray'](a48['material'])&&(a49"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "]=![];a48[aB5(0xbac)]!=undefined&&a48['RNQDluasaN']['dispose']();if(a48['material']!=undefined){let a49=a48['material'];!Array['isArray'](a48['material'])&&(a49"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: createPanner node configured positioned per directional audio; SERVED: identical (snippet-only twin).",
+   "name": "audioPanner",
+   "selector": "a4A@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "ain']();a4z[\"gain\"][\"setValueAtTime\"](parseFloat(a4y['localVolume']*tD*QG),0x0),a4y[\"gain\"]=a4z;var a4A=tB[\"createPanner\"]();a4t['rolloff']!=undefined?a4A[\"roll"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "n']();a4z[aBe(0x969)][aBe(0x804)](parseFloat(a4y['localVolume']*tD*QG),0x0),a4y[aBe(0x969)]=a4z;var a4A=tB[aBe(0xd10)]();a4t['rolloff']!=undefined?a4A[aBe(0x112"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: skybox child material normalized into array; SERVED: identical (snippet-only twin).",
+   "name": "childMatList",
+   "selector": "a4A@u2654#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "a4w);var a4x=a3y[\"skyboxMaterials\"],a4y={};for(var a4z=0x0;a4z<a4w['children']['length'];a4z++){var a4A=a4w[\"children\"][a4z][\"material\"],a4B=![];!Array['isArray"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "}),a4f(a4w);var a4x=a3y[aBg(0xc92)],a4y={};for(var a4z=0x0;a4z<a4w['children']['length'];a4z++){var a4A=a4w[aBg(0xc76)][a4z][aBg(0x52e)],a4B=![];!Array['isArray"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over train animation groups; SERVED: identical (snippet-only twin).",
+   "name": "trainGroupIndex",
+   "selector": "a4A@u2654#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "D]);}a4C=null;}let a4y=[[\"TrainArriving\",'TrainLeaving'],['TrainLeft','TrainRight']],a4z=[];for(var a4A=0x0;a4A<a4y[\"length\"];a4A++){a4z[\"push\"]([]),a4z[a4A][\"o"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "4C[a4D]);}a4C=null;}let a4y=[[aBi(0xf58),'TrainLeaving'],['TrainLeft','TrainRight']],a4z=[];for(var a4A=0x0;a4A<a4y[aBi(0x3a2)];a4A++){a4z[aBi(0xf1e)]([]),a4z[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: value object embedded as skyboxMult uniform; SERVED: identical (snippet-only twin).",
+   "name": "skyboxMultUniform",
+   "selector": "a4A@u2654#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 2,
+    "snippet": " a4g(a4w,a4x,a4y){var aBm=aB5,a4z={};a4z[\"type\"]='t',a4z['value']=Yt,a4z['values']=[Yt,a3D,a3E];var a4A={};a4A['value']=a3F['skyboxMult'];var a4B={'ao':a4z,'wor"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "(a4w,a4x,a4y){var aBm=aB5,a4z={};a4z[aBm(0xafb)]='t',a4z['value']=Yt,a4z['values']=[Yt,a3D,a3E];var a4A={};a4A['value']=a3F['skyboxMult'];var a4B={'ao':a4z,'wor"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index reused over texture filter lists; SERVED: identical (snippet-only twin).",
+   "name": "texFilterIndex",
+   "selector": "a4A@u2654#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 7,
+    "snippet": "ures/':'compressedTextures/')+a3Z+\".webp\");let a4x=Fg(a4w,function(a4y){var aBn=aB5,a4z=![];for(var a4A=0x0;a4A<a3R['length'];a4A++){a4y[\"src\"]['indexOf'](a3R[a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 7,
+    "snippet": "s/':'compressedTextures/')+a3Z+aB5(0x533));let a4x=Fg(a4w,function(a4y){var aBn=aB5,a4z=![];for(var a4A=0x0;a4A<a3R['length'];a4A++){a4y[aBn(0x18d)]['indexOf']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag for computable positive progress total; SERVED: identical (snippet-only twin).",
+   "name": "hasKnownLength",
+   "selector": "a4A@u2654#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2654",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "1f40);}function a4i(a4y){var aBq=aB5;if(a12==null||a4y==undefined)return;var a4z=a4y[\"loaded\"]||0x0,a4A=a4y['lengthComputable']&&a4y['total']>0x0;a12[\"map\"]['gl"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "40);}function a4i(a4y){var aBq=aB5;if(a12==null||a4y==undefined)return;var a4z=a4y[aBq(0xcec)]||0x0,a4A=a4y['lengthComputable']&&a4y['total']>0x0;a12[aBq(0xff7)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: attempt final object passed to failure logger; SERVED: identical (snippet-only twin).",
+   "name": "gltfErrorContext",
+   "selector": "a4A@u2654#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2654",
+    "index": 7,
+    "refCount": 3,
+    "snippet": "ror':a19(a4y)}));YT=setTimeout(function(){YT=null,a4k();},a44*Math['pow'](0x2,a42-0x1));return;}var a4A={};a4A[\"attempt\"]=a42+0x1,a4A['final']=!![],a1n('map-glt"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 7,
+    "refCount": 3,
+    "snippet": "ror':a19(a4y)}));YT=setTimeout(function(){YT=null,a4k();},a44*Math['pow'](0x2,a42-0x1));return;}var a4A={};a4A[aBr(0xd80)]=a42+0x1,a4A['final']=!![],a1n('map-gl"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: load-complete timestamp computing decode duration; SERVED: identical (snippet-only twin).",
+   "name": "gltfLoadedAt",
+   "selector": "a4A@u2654#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4A",
+   "binding": {
+    "unit": "u2654",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "];a12['gltfStallTimer']!=null&&(clearTimeout(a12['gltfStallTimer']),a12[\"gltfStallTimer\"]=null);var a4A=a18(),a4B=a4z['gltfLastByteAt']!=null&&a4z['gltfStartAt'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "']=!![];a12['gltfStallTimer']!=null&&(clearTimeout(a12['gltfStallTimer']),a12[aBt(0xb40)]=null);var a4A=a18(),a4B=a4z['gltfLastByteAt']!=null&&a4z['gltfStartAt'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Vector3 built from audio position array; SERVED: identical (snippet-only twin).",
+   "name": "audioPosition",
+   "selector": "a4B@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "&&(a4A[\"refDistance\"]=a4t['refDistance']);a4A['connect'](tB['destination']),a4z['connect'](a4A);var a4B=new usvzFuAsEB['gURkzCzeY']()['fromArray'](a4t[\"position"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ned&&(a4A[aBe(0x727)]=a4t['refDistance']);a4A['connect'](tB['destination']),a4z['connect'](a4A);var a4B=new usvzFuAsEB['gURkzCzeY']()['fromArray'](a4t[aBe(0x215"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag recording non-array skybox material; SERVED: identical (snippet-only twin).",
+   "name": "wasSingleMaterial",
+   "selector": "a4B@u2654#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "4y={};for(var a4z=0x0;a4z<a4w['children']['length'];a4z++){var a4A=a4w[\"children\"][a4z][\"material\"],a4B=![];!Array['isArray'](a4A)&&(a4A=[a4A],a4B=!![]);var a4C"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "4y={};for(var a4z=0x0;a4z<a4w['children']['length'];a4z++){var a4A=a4w[aBg(0xc76)][a4z][aBg(0x52e)],a4B=![];!Array['isArray'](a4A)&&(a4A=[a4A],a4B=!![]);var a4C"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: AnimationAction configured pushed per train clip; SERVED: identical (snippet-only twin).",
+   "name": "clipAction",
+   "selector": "a4B@u2654#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "4I]['indexOf'](a4w[\"animations\"][a4F]['name'])!=-0x1&&(a4G=a4I);}let a4H=a4z[a4G][\"kDCTWhoSiT\"];var a4B=a4H['clipAction'](a4w['animations'][a4F]);a4z[a4G]['push"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "4y[a4I]['indexOf'](a4w[aBi(0xb51)][a4F]['name'])!=-0x1&&(a4G=a4I);}let a4H=a4z[a4G][aBi(0xee1)];var a4B=a4H['clipAction'](a4w['animations'][a4F]);a4z[a4G]['push"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: uniforms dict assembled into lightmap shader material; SERVED: identical (snippet-only twin).",
+   "name": "shaderUniforms",
+   "selector": "a4B@u2654#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 9,
+    "snippet": "type\"]='t',a4z['value']=Yt,a4z['values']=[Yt,a3D,a3E];var a4A={};a4A['value']=a3F['skyboxMult'];var a4B={'ao':a4z,'worldProjection':{'value':new usvzFuAsEB['Mat"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 9,
+    "snippet": "xafb)]='t',a4z['value']=Yt,a4z['values']=[Yt,a3D,a3E];var a4A={};a4A['value']=a3F['skyboxMult'];var a4B={'ao':a4z,'worldProjection':{'value':new usvzFuAsEB['Mat"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: default-3 name-lookup value into applyPaintedTextureStyle; SERVED: identical (snippet-only twin).",
+   "name": "texParamValue",
+   "selector": "a4B@u2654#4",
+   "slice": "slice-02",
+   "disposition": "held-low",
+   "reason": "low confidence: held for review"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: floored progress bucket compared then stored; SERVED: identical (snippet-only twin).",
+   "name": "gltfProgressBucket",
+   "selector": "a4B@u2654#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "]=a4z;a4A&&(a12[\"map\"]['gltfTotalBytes']=a4y['total']);a12[\"map\"]['gltfLastByteAt']=a18(),a4h();var a4B=a4A?Math['floor'](a4z/a4y['total']*0x4):Math['floor'](a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "&(a12[aBq(0xff7)]['gltfTotalBytes']=a4y['total']);a12[aBq(0xff7)]['gltfLastByteAt']=a18(),a4h();var a4B=a4A?Math['floor'](a4z/a4y['total']*0x4):Math['floor'](a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: download duration reported in loaded event; SERVED: identical (snippet-only twin).",
+   "name": "gltfDownloadMs",
+   "selector": "a4B@u2654#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u2654",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "fStallTimer']!=null&&(clearTimeout(a12['gltfStallTimer']),a12[\"gltfStallTimer\"]=null);var a4A=a18(),a4B=a4z['gltfLastByteAt']!=null&&a4z['gltfStartAt']!=null?Ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "2['gltfStallTimer']!=null&&(clearTimeout(a12['gltfStallTimer']),a12[aBt(0xb40)]=null);var a4A=a18(),a4B=a4z['gltfLastByteAt']!=null&&a4z['gltfStartAt']!=null?Ma"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aurora flag triggering skybox child removal; SERVED: identical (snippet-only twin).",
+   "name": "removeChildFlag",
+   "selector": "a4C@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4C",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "){var a4A=a4w[\"children\"][a4z][\"material\"],a4B=![];!Array['isArray'](a4A)&&(a4A=[a4A],a4B=!![]);var a4C=![];for(var a4D=0x0;a4D<a4A['length'];a4D++){var a4E=a4A"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "){var a4A=a4w[aBg(0xc76)][a4z][aBg(0x52e)],a4B=![];!Array['isArray'](a4A)&&(a4A=[a4A],a4B=!![]);var a4C=![];for(var a4D=0x0;a4D<a4A['length'];a4D++){var a4E=a4A"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: collects transparent meshes for reparenting; SERVED: identical (snippet-only twin).",
+   "name": "transparentNodes",
+   "selector": "a4C@u2654#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4C",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "l\"]),a4x[a4C['material']['name']]=a4C[\"material\"];});if(a3y['skybox'][\"indexOf\"]('.glb')==-0x1){let a4C=[];a4w['scene']['XOVWraMIAg'](function(a4D){var aBk=aBi;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 6,
+    "snippet": ")]),a4x[a4C['material']['name']]=a4C[aBj(0x52e)];});if(a3y['skybox'][aBi(0xfad)]('.glb')==-0x1){let a4C=[];a4w['scene']['XOVWraMIAg'](function(a4D){var aBk=aBi;"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vector loaded from skyboxMult config array; SERVED: identical (snippet-only twin).",
+   "name": "skyboxMultVec",
+   "selector": "a4C@u2654#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4C",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "ao'][\"values\"]['indexOf'](a3D)!=-0x1&&(a4B['ao']['value']=a3D);if(a3F['skyboxMult']!=undefined){var a4C=new usvzFuAsEB['gURkzCzeY']()['CNFryyAhIm'](0x1);a4B['sk"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "'][aBm(0x9fc)]['indexOf'](a3D)!=-0x1&&(a4B['ao']['value']=a3D);if(a3F['skyboxMult']!=undefined){var a4C=new usvzFuAsEB['gURkzCzeY']()['CNFryyAhIm'](0x1);a4B['sk"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loaded total payload for progress event; SERVED: identical (snippet-only twin).",
+   "name": "gltfProgressEvent",
+   "selector": "a4C@u2654#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4C",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "r'](a4z/0x10000);if(a4B!=a12[\"map\"][\"gltfProgressBucket\"]){a12['map']['gltfProgressBucket']=a4B;var a4C={};a4C['loaded']=a4z,a4C['total']=a4A?a4y[\"total\"]:0x0,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "'floor'](a4z/0x10000);if(a4B!=a12[aBq(0xff7)][aBq(0xcd3)]){a12['map']['gltfProgressBucket']=a4B;var a4C={};a4C['loaded']=a4z,a4C['total']=a4A?a4y[aBq(0x454)]:0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: decode duration reported in loaded event; SERVED: identical (snippet-only twin).",
+   "name": "gltfDecodeMs",
+   "selector": "a4C@u2654#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4C",
+   "binding": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "teAt']!=null&&a4z['gltfStartAt']!=null?Math['round'](a4z['gltfLastByteAt']-a4z['gltfStartAt']):null,a4C=a4z['gltfLastByteAt']!=null?Math['round'](a4A-a4z[\"gltfL"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "teAt']!=null&&a4z['gltfStartAt']!=null?Math['round'](a4z['gltfLastByteAt']-a4z['gltfStartAt']):null,a4C=a4z['gltfLastByteAt']!=null?Math['round'](a4A-a4z[aBt(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over skybox material list; SERVED: identical (snippet-only twin).",
+   "name": "skyboxMatIndex",
+   "selector": "a4D@u2654#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4D",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "hildren\"][a4z][\"material\"],a4B=![];!Array['isArray'](a4A)&&(a4A=[a4A],a4B=!![]);var a4C=![];for(var a4D=0x0;a4D<a4A['length'];a4D++){var a4E=a4A[a4D];if(a4E['na"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "g(0xc76)][a4z][aBg(0x52e)],a4B=![];!Array['isArray'](a4A)&&(a4A=[a4A],a4B=!![]);var a4C=![];for(var a4D=0x0;a4D<a4A['length'];a4D++){var a4E=a4A[a4D];if(a4E['na"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "assigned from material but never read",
+   "selector": "a4D@u2654#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traversed node filtered for transparent reparenting; SERVED: identical (snippet-only twin).",
+   "name": "traverseChild",
+   "selector": "a4D@u2654#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4D",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "rial\"];});if(a3y['skybox'][\"indexOf\"]('.glb')==-0x1){let a4C=[];a4w['scene']['XOVWraMIAg'](function(a4D){var aBk=aBi;a4D['material']!=undefined&&a4D['material']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "52e)];});if(a3y['skybox'][aBi(0xfad)]('.glb')==-0x1){let a4C=[];a4w['scene']['XOVWraMIAg'](function(a4D){var aBk=aBi;a4D['material']!=undefined&&a4D['material']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index reparenting transparent node list; SERVED: identical (snippet-only twin).",
+   "name": "transparentIndex",
+   "selector": "a4D@u2654#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4D",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "aterial']!=undefined&&a4D['material']['transparent']&&!a4D[\"rotating\"]&&a4C['push'](a4D);});for(let a4D=0x0;a4D<a4C['length'];a4D++){a4C[a4D]['parent']['remove'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "aterial']!=undefined&&a4D['material']['transparent']&&!a4D[aBk(0xd26)]&&a4C['push'](a4D);});for(let a4D=0x0;a4D<a4C['length'];a4D++){a4C[a4D]['parent']['remove'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: zero value object installed as time uniform; SERVED: identical (snippet-only twin).",
+   "name": "shaderTimeUniform",
+   "selector": "a4D@u2654#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4D",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "]()['CNFryyAhIm'](0x1);a4B['skyboxMult']={'value':a4C[\"fromArray\"](a3F['skyboxMult'])};}if(a4w){var a4D={};a4D[\"value\"]=0x0,a4B['time']=a4D;}a4y['indexOf']('ver"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "]()['CNFryyAhIm'](0x1);a4B['skyboxMult']={'value':a4C[aBm(0x10c5)](a3F['skyboxMult'])};}if(a4w){var a4D={};a4D[aBm(0x9c5)]=0x0,a4B['time']=a4D;}a4y['indexOf']('"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag set after geometries combined; SERVED: identical (snippet-only twin).",
+   "name": "geometriesCombined",
+   "selector": "a4D@u2654#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4D",
+   "binding": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "der']!=undefined&&(a40['dracoLoader']['dispose'](),a40[\"dracoLoader\"]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][\"childr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "Loader']!=undefined&&(a40['dracoLoader']['dispose'](),a40[aBt(0x910)]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][aBt(0xc"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: AnimationMixer created per train group; SERVED: identical (snippet-only twin).",
+   "name": "trainMixer",
+   "selector": "a4E@u2654#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4E",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "ght']],a4z=[];for(var a4A=0x0;a4A<a4y[\"length\"];a4A++){a4z[\"push\"]([]),a4z[a4A][\"onAction\"]=0x0;let a4E=new usvzFuAsEB[(\"AnimationMixer\")](a4w[\"scene\"]);Yx[\"mix"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "a4z=[];for(var a4A=0x0;a4A<a4y[aBi(0x3a2)];a4A++){a4z[aBi(0xf1e)]([]),a4z[a4A][aBi(0x1084)]=0x0;let a4E=new usvzFuAsEB[(aBi(0x75b))](a4w[aBi(0x39e)]);Yx[aBi(0x5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: HC array element with delay time amount obj cb; SERVED: identical (snippet-only twin).",
+   "name": "shake",
+   "selector": "a3n@u2218#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u2218",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "function QR(a3l){var axD=ai1;for(var a3m=0x0;a3m<HC['length'];a3m++){var a3n=HC['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n[\"IUTkaCQg"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2218",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "function QR(a3l){var axD=ai1;for(var a3m=0x0;a3m<HC['length'];a3m++){var a3n=HC['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n[axD(0xe31"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: (elapsed-delay)/time inverted scaled by amount; SERVED: identical (snippet-only twin).",
+   "name": "shakeStrength",
+   "selector": "a3o@u2218#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2218",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "'cb']!==undefined&&(a3n['cb'](a3n[\"obj\"]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[\"time\"];a3o=0x1-a3o"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2218",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "!==undefined&&(a3n['cb'](a3n[axD(0x9a0)]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[axD(0x35c)];a3o=0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: random 0-255 index into Jy Jx offset tables; SERVED: identical (snippet-only twin).",
+   "name": "jitterIdx",
+   "selector": "a3p@u2218#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2218",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "-;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[\"time\"];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math[\"floor\"](Math['random']()*0x100);a3n[\"obj\"]['positi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2218",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ntinue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[axD(0x35c)];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math[axD(0x5ce)](Math['random']()*0x100);a3n[axD(0x9a0)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: entity by packet id; tracer plus gunshot sound; SERVED: identical (snippet-only twin).",
+   "name": "shooter",
+   "selector": "a3p@u2738#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "']==SW['id'])return;Fx=!![],TL[RP]['set'](a3o[\"JoHdvmpcMvL\"],a3o['uBHZYKAHa'],a3o[\"yxEKoSFAg\"]);var a3p=a0a(a3o['tdkZouYda']);if(a3p==undefined)return;var a3q=F"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "uYda']==SW['id'])return;Fx=!![],TL[RP]['set'](a3o[aC9(0xdaf)],a3o['uBHZYKAHa'],a3o[aC9(0xc14)]);var a3p=a0a(a3o['tdkZouYda']);if(a3p==undefined)return;var a3q=F"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: tempVector3 alias for tracer; rounded pos debug compare; SERVED: identical (snippet-only twin).",
+   "name": "posVector",
+   "selector": "a3q@u2738#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "MvL\"],a3o['uBHZYKAHa'],a3o[\"yxEKoSFAg\"]);var a3p=a0a(a3o['tdkZouYda']);if(a3p==undefined)return;var a3q=Fl;Fl['set'](a3o['JoHdvmpcMvL'],a3o[\"uBHZYKAHa\"],a3o['yx"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "xdaf)],a3o['uBHZYKAHa'],a3o[aC9(0xc14)]);var a3p=a0a(a3o['tdkZouYda']);if(a3p==undefined)return;var a3q=Fl;Fl['set'](a3o['JoHdvmpcMvL'],a3o[aC9(0x939)],a3o['yxE"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 0.8 scales random velocity jitter on impact effects; SERVED: identical (snippet-only twin).",
+   "name": "jitterScale",
+   "selector": "a3r@u2738#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "Yda']!=a0T){a3p[\"r23ZS3L2g\"]['kDCTWhoSiT']['update'](0x0),a1O(a3p,a3q),a3p[\"gunshot\"][\"play\"]();var a3r=0.8,a3s=Oq;a3s['x']=a3o['AHPhtLFTi']/0x80,a3s['y']=a3o['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "!=a0T){a3p[\"r23ZS3L2g\"]['kDCTWhoSiT']['update'](0x0),a1O(a3p,a3q),a3p[aC9(0x69f)][aC9(0x897)]();var a3r=0.8,a3s=Oq;a3s['x']=a3o['AHPhtLFTi']/0x80,a3s['y']=a3o['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rock-chip effect at impact point; velocity copy jitter; SERVED: identical (snippet-only twin).",
+   "name": "impactEffect",
+   "selector": "a3t@u2738#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "/0x80;if(a3s['x']==0x0&&a3s['y']==0x0&&a3s['z']==0x0){Fx=![];return;}for(a3v=0x0;a3v<0x2;a3v++){var a3t=lrRnpundBY(\"n0007K83X2\");a3t['setPosition'](Fl),a3t[\"yog"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "/0x80;if(a3s['x']==0x0&&a3s['y']==0x0&&a3s['z']==0x0){Fx=![];return;}for(a3v=0x0;a3v<0x2;a3v++){var a3t=lrRnpundBY(aC9(0xa87));a3t['setPosition'](Fl),a3t[aC9(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hole decal oriented to direction; random roll offset scale; SERVED: identical (snippet-only twin).",
+   "name": "bulletHole",
+   "selector": "a3u@u2738#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "'yoghpvfQE']['x']*=0.7,a3t['yoghpvfQE']['z']*=0.7),a3t[\"b152tm12ro9\"]['add'](a3t[\"yoghpvfQE\"]);}var a3u=lrRnpundBY('hole');a3u['matrixUpdate']=!![],a3u['positio"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "['yoghpvfQE']['x']*=0.7,a3t['yoghpvfQE']['z']*=0.7),a3t[\"b152tm12ro9\"]['add'](a3t[aC9(0x48b)]);}var a3u=lrRnpundBY('hole');a3u['matrixUpdate']=!![],a3u['positio"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rounded old pos checked against packet old coords; SERVED: identical (snippet-only twin).",
+   "name": "oldPosVector",
+   "selector": "a3w@u2738#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "3v<a1P['length'];a3v++){if(a1P[a3v][\"XGOhKbWOF\"]==a3o['ns']){var a3q=a1P[a3v]['pos']['KkKRLGFtA'](),a3w=a1P[a3v][\"old\"]['KkKRLGFtA']();a3o['x']==a3q['x']&&a3o['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2738",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a3v<a1P['length'];a3v++){if(a1P[a3v][aC9(0xd32)]==a3o['ns']){var a3q=a1P[a3v]['pos']['KkKRLGFtA'](),a3w=a1P[a3v][aC9(0x37d)]['KkKRLGFtA']();a3o['x']==a3q['x']&&"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ortho reciprocal 1/(near-far) scales depth rows; SERVED: identical (snippet-only twin).",
+   "name": "invDepthRange",
+   "selector": "a3H@u0008#28",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0008",
+    "index": 28,
+    "refCount": 2,
+    "snippet": "x0,a3y;},a3w[\"ortho\"]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1/(a3D-a3E);return a3y[0x0]=-0x2*a3F,a3y[0x1]=0x0,a3y["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 28,
+    "refCount": 2,
+    "snippet": "a3y;},a3w[ai4(0x508)]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1/(a3D-a3E);return a3y[0x0]=-0x2*a3F,a3y[0x1]=0x0,a3y["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d rotate cos(angle) weights four blends; SERVED: identical (snippet-only twin).",
+   "name": "cosAngle",
+   "selector": "a3I@u0008#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 4,
+    "snippet": ",a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=Math['sin'](a3A),a3I=Math[\"cos\"](a3A);return a3y[0x0]=a3B*a3I+a3D*a3H,a3y[0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 4,
+    "snippet": ",a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=Math['sin'](a3A),a3I=Math[ain(0xb69)](a3A);return a3y[0x0]=a3B*a3I+a3D*a3H,a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: translate caches source mat element 4; SERVED: identical (snippet-only twin).",
+   "name": "srcElem04",
+   "selector": "a3I@u0008#18",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u0008",
+    "index": 18,
+    "refCount": 3,
+    "snippet": "],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0xc]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 18,
+    "refCount": 3,
+    "snippet": "'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0xc]=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotate one-minus-cosine builds nine entries; SERVED: identical (snippet-only twin).",
+   "name": "oneMinusCos",
+   "selector": "a3I@u0008#19",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 10,
+    "snippet": "ar aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 10,
+    "snippet": "iq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateX caches source mat element 9; SERVED: identical (snippet-only twin).",
+   "name": "matElem09",
+   "selector": "a3I@u0008#20",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u0008",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "h[\"sin\"](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a3z!==a3y&&(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "(0xbd6)](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a3z!==a3y&&(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateY caches source mat element 9; SERVED: identical (snippet-only twin).",
+   "name": "matElem09",
+   "selector": "a3I@u0008#21",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u0008",
+    "index": 21,
+    "refCount": 2,
+    "snippet": "h[\"sin\"](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a3z!==a3y&&(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 21,
+    "refCount": 2,
+    "snippet": "6)](a3A),a3C=Math[ais(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a3z!==a3y&&(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateZ caches source mat element 5; SERVED: identical (snippet-only twin).",
+   "name": "matElem05",
+   "selector": "a3I@u0008#22",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "h['sin'](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z[0x6],a3K=a3z[0x7];return a3z!==a3y&&(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "n'](a3A),a3C=Math[ait(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z[0x6],a3K=a3z[0x7];return a3z!==a3y&&(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: translate caches source mat element 6; SERVED: identical (snippet-only twin).",
+   "name": "srcElem06",
+   "selector": "a3K@u0008#13",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3K",
+   "binding": {
+    "unit": "u0008",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "ranslate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0xc]=a3z[0x0]*"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "i4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0xc]=a3z[0x0]*"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotate caches source mat element 1; SERVED: identical (snippet-only twin).",
+   "name": "srcElem01",
+   "selector": "a3K@u0008#14",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3K",
+   "binding": {
+    "unit": "u0008",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "i4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateY caches source mat element 11; SERVED: identical (snippet-only twin).",
+   "name": "matElem11",
+   "selector": "a3K@u0008#16",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3K",
+   "binding": {
+    "unit": "u0008",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "s\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a3z!==a3y&&(a3y[0x4]=a3z[0x4],a3y[0x5]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "9)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a3z!==a3y&&(a3y[0x4]=a3z[0x4],a3y[0x5]=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateZ caches source mat element 7; SERVED: identical (snippet-only twin).",
+   "name": "matElem07",
+   "selector": "a3K@u0008#17",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3K",
+   "binding": {
+    "unit": "u0008",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "s\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z[0x6],a3K=a3z[0x7];return a3z!==a3y&&(a3y[0x8]=a3z[0x8],a3y[0x9]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "9)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z[0x6],a3K=a3z[0x7];return a3z!==a3y&&(a3y[0x8]=a3z[0x8],a3y[0x9]=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: translate caches source mat element 7; SERVED: identical (snippet-only twin).",
+   "name": "srcElem07",
+   "selector": "a3L@u0008#13",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3L",
+   "binding": {
+    "unit": "u0008",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "late\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0xc]=a3z[0x0]*a3B+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0xc]=a3z[0x0]*a3B+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotate caches source mat element 2; SERVED: identical (snippet-only twin).",
+   "name": "srcElem02",
+   "selector": "a3L@u0008#14",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3L",
+   "binding": {
+    "unit": "u0008",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: translate caches source mat element 8; SERVED: identical (snippet-only twin).",
+   "name": "srcElem08",
+   "selector": "a3M@u0008#9",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3M",
+   "binding": {
+    "unit": "u0008",
+    "index": 9,
+    "refCount": 3,
+    "snippet": "\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0xc]=a3z[0x0]*a3B+a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 9,
+    "refCount": 3,
+    "snippet": ")]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0xc]=a3z[0x0]*a3B+a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotate caches source mat element 3; SERVED: identical (snippet-only twin).",
+   "name": "srcElem03",
+   "selector": "a3M@u0008#10",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3M",
+   "binding": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 4,
+    "snippet": "3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 4,
+    "snippet": "x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotate caches source mat element 4; SERVED: identical (snippet-only twin).",
+   "name": "srcElem04",
+   "selector": "a3N@u0008#8",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3N",
+   "binding": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 4,
+    "snippet": "x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 4,
+    "snippet": "a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotate caches source mat element 5; SERVED: identical (snippet-only twin).",
+   "name": "srcElem05",
+   "selector": "a3O@u0008#8",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3O",
+   "binding": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 4,
+    "snippet": "a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 4,
+    "snippet": "a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 set writes output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#6",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 6,
+    "refCount": 3,
+    "snippet": ",a3q[\"copy\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y;},a3q['set']=function(a3y,a3z,a3A){return a3y[0x0]=a3z,a3y[0x1]=a3A,a3y;},a3q['add"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "[ai4(0x609)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y;},a3q['set']=function(a3y,a3z,a3A){return a3y[0x0]=a3z,a3y[0x1]=a3A,a3y;},a3q['add"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 divide writes output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#10",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "3z[0x0]*a3A[0x0],a3y[0x1]=a3z[0x1]*a3A[0x1],a3y;},a3q[\"mul\"]=a3q['multiply'],a3q[\"divide\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "*a3A[0x0],a3y[0x1]=a3z[0x1]*a3A[0x1],a3y;},a3q[ai4(0xcfe)]=a3q['multiply'],a3q[ai4(0x937)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 min writes output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#11",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]/a3A[0x1],a3y;},a3q['div']=a3q[\"divide\"],a3q['min']=function(a3y,a3z,a3A){return a3y[0x0]=Math['min'](a3z[0x0],a3A[0x0]),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]/a3A[0x1],a3y;},a3q['div']=a3q[ai4(0x937)],a3q['min']=function(a3y,a3z,a3A){return a3y[0x0]=Math['min'](a3z[0x0],a3A[0x0]),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squaredDistance first input vector operand; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3y@u0008#16",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "turn Math['sqrt'](a3A*a3A+a3B*a3B);},a3q[\"dist\"]=a3q[\"pLBXqJSbPlZ\"],a3q['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1];ret"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "rn Math['sqrt'](a3A*a3A+a3B*a3B);},a3q[ai4(0x1033)]=a3q[ai4(0x439)],a3q['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1];ret"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: length sole input vector operand; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#17",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "0x1]-a3y[0x1];return a3A*a3A+a3B*a3B;},a3q[\"sqrDist\"]=a3q['squaredDistance'],a3q[\"length\"]=function(a3y){var ai5=ai4,a3z=a3y[0x0],a3A=a3y[0x1];return Math[\"sqrt"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "]-a3y[0x1];return a3A*a3A+a3B*a3B;},a3q[ai4(0xdea)]=a3q['squaredDistance'],a3q[ai4(0x3a2)]=function(a3y){var ai5=ai4,a3z=a3y[0x0],a3A=a3y[0x1];return Math[ai5(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squaredLength sole input vector operand; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#18",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "[0x1];return Math[\"sqrt\"](a3z*a3z+a3A*a3A);},a3q['len']=a3q[\"length\"],a3q[\"squaredLength\"]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1];return a3z*a3z+a3A*a3A;},"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "0x1];return Math[ai5(0xba3)](a3z*a3z+a3A*a3A);},a3q['len']=a3q[ai4(0x3a2)],a3q[ai4(0x430)]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1];return a3z*a3z+a3A*a3A;},"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: negate writes negated output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#19",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 3,
+    "snippet": ",a3A=a3y[0x1];return a3z*a3z+a3A*a3A;},a3q['sqrLen']=a3q[\"squaredLength\"],a3q[\"dcItcWVWb\"]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y;},"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 3,
+    "snippet": "y[0x0],a3A=a3y[0x1];return a3z*a3z+a3A*a3A;},a3q['sqrLen']=a3q[ai4(0x430)],a3q[ai4(0x956)]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y;},"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: normalize writes normalized output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#20",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 20,
+    "refCount": 3,
+    "snippet": "Wb\"]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y;},a3q['normalize']=function(a3y,a3z){var ai6=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3A*a3A+a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 20,
+    "refCount": 3,
+    "snippet": "56)]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y;},a3q['normalize']=function(a3y,a3z){var ai6=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3A*a3A+a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: dot first input vector operand; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3y@u0008#21",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 21,
+    "refCount": 2,
+    "snippet": "&&(a3C=0x1/Math[\"sqrt\"](a3C),a3y[0x0]=a3z[0x0]*a3C,a3y[0x1]=a3z[0x1]*a3C),a3y;},a3q[\"dot\"]=function(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1];},a3q[\"c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 21,
+    "refCount": 2,
+    "snippet": "1/Math[ai6(0xba3)](a3C),a3y[0x0]=a3z[0x0]*a3C,a3y[0x1]=a3z[0x1]*a3C),a3y;},a3q[ai4(0xbe8)]=function(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1];},a3q[ai"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cross writes output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#22",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 4,
+    "snippet": "y;},a3q[\"dot\"]=function(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1];},a3q[\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0]*a3A[0x1]-a3z[0x1]*a3A[0x0];ret"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 4,
+    "snippet": "ai4(0xbe8)]=function(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1];},a3q[ai4(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0]*a3A[0x1]-a3z[0x1]*a3A[0x0];ret"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: lerp writes interpolated output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#23",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 3,
+    "snippet": "x0]*a3A[0x1]-a3z[0x1]*a3A[0x0];return a3y[0x0]=a3y[0x1]=0x0,a3y[0x2]=a3B,a3y;},a3q[\"lerp\"]=function(a3y,a3z,a3A,a3B){var a3C=a3z[0x0],a3D=a3z[0x1];return a3y[0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 3,
+    "snippet": "3A[0x1]-a3z[0x1]*a3A[0x0];return a3y[0x0]=a3y[0x1]=0x0,a3y[0x2]=a3B,a3y;},a3q[ai4(0x108e)]=function(a3y,a3z,a3A,a3B){var a3C=a3z[0x0],a3D=a3z[0x1];return a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: transformMat2 writes output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#25",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 25,
+    "refCount": 3,
+    "snippet": "urn a3y[0x0]=Math[\"cos\"](a3A)*a3z,a3y[0x1]=Math['sin'](a3A)*a3z,a3y;},a3q['transformMat2']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 25,
+    "refCount": 3,
+    "snippet": "3y[0x0]=Math[ai7(0xb69)](a3A)*a3z,a3y[0x1]=Math['sin'](a3A)*a3z,a3y;},a3q['transformMat2']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: transformMat2d writes output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#26",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "]=a3A[0x0]*a3B+a3A[0x2]*a3C,a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C,a3y;},a3q[\"transformMat2d\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "3y[0x0]=a3A[0x0]*a3B+a3A[0x2]*a3C,a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C,a3y;},a3q[ai4(0xb66)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: transformMat3 writes output vector; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#27",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 27,
+    "refCount": 3,
+    "snippet": "A[0x2]*a3C+a3A[0x4],a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C+a3A[0x5],a3y;},a3q[\"transformMat3\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 27,
+    "refCount": 3,
+    "snippet": "3B+a3A[0x2]*a3C+a3A[0x4],a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C+a3A[0x5],a3y;},a3q[ai4(0x811)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: str formats input vector operand; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#30",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 30,
+    "refCount": 2,
+    "snippet": "0x1],a3E(a3z,a3z,a3F),a3A[a3G]=a3z[0x0],a3A[a3G+0x1]=a3z[0x1];return a3A;};}()),a3q[\"str\"]=function(a3y){return'vec2(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+'\\x20)';},t"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 30,
+    "refCount": 2,
+    "snippet": "3E(a3z,a3z,a3F),a3A[a3G]=a3z[0x0],a3A[a3G+0x1]=a3z[0x1];return a3A;};}()),a3q[ai4(0x1094)]=function(a3y){return'vec2(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+'\\x20)';},t"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 create fresh zero vector; SERVED: identical (snippet-only twin).",
+   "name": "newVec",
+   "selector": "a3y@u0008#31",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 31,
+    "refCount": 4,
+    "snippet": "y[0x1]+'\\x20)';},typeof a3k!=\"undefined\"&&(a3k['vec2']=a3q);var a3r={};a3r['create']=function(){var a3y=new a3m(0x3);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 31,
+    "refCount": 4,
+    "snippet": "3y[0x1]+'\\x20)';},typeof a3k!=ai4(0xf84)&&(a3k['vec2']=a3q);var a3r={};a3r['create']=function(){var a3y=new a3m(0x3);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 clone input read thrice; same served body; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#32",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 32,
+    "refCount": 3,
+    "snippet": "on(){var a3y=new a3m(0x3);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y;},a3r[\"clone\"]=function(a3y){var a3z=new a3m(0x3);return a3z[0x0]=a3y[0x0],a3z[0x1]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 32,
+    "refCount": 3,
+    "snippet": "){var a3y=new a3m(0x3);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y;},a3r[ai4(0xae2)]=function(a3y){var a3z=new a3m(0x3);return a3z[0x0]=a3y[0x0],a3z[0x1]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 subtract out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#37",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 37,
+    "refCount": 4,
+    "snippet": "[0x0]+a3A[0x0],a3y[0x1]=a3z[0x1]+a3A[0x1],a3y[0x2]=a3z[0x2]+a3A[0x2],a3y;},a3r[\"subtract\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]-a3A[0x0],a3y[0x1]=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 37,
+    "refCount": 4,
+    "snippet": "[0x0]+a3A[0x0],a3y[0x1]=a3z[0x1]+a3A[0x1],a3y[0x2]=a3z[0x2]+a3A[0x2],a3y;},a3r[ai4(0xc83)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]-a3A[0x0],a3y[0x1]=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 multiply out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#38",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 38,
+    "refCount": 4,
+    "snippet": "[0x1]-a3A[0x1],a3y[0x2]=a3z[0x2]-a3A[0x2],a3y;},a3r[\"sub\"]=a3r[\"subtract\"],a3r['multiply']=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A[0x0],a3y[0x1]=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 38,
+    "refCount": 4,
+    "snippet": "-a3A[0x1],a3y[0x2]=a3z[0x2]-a3A[0x2],a3y;},a3r[ai4(0xf08)]=a3r[ai4(0xc83)],a3r['multiply']=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A[0x0],a3y[0x1]=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 divide out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#39",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "3z[0x1]*a3A[0x1],a3y[0x2]=a3z[0x2]*a3A[0x2],a3y;},a3r[\"mul\"]=a3r['multiply'],a3r[\"divide\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "*a3A[0x1],a3y[0x2]=a3z[0x2]*a3A[0x2],a3y;},a3r[ai4(0xcfe)]=a3r['multiply'],a3r[ai4(0x937)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 min out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#40",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 4,
+    "snippet": "x1]=a3z[0x1]/a3A[0x1],a3y[0x2]=a3z[0x2]/a3A[0x2],a3y;},a3r['div']=a3r['divide'],a3r[\"min\"]=function(a3y,a3z,a3A){var ai9=ai4;return a3y[0x0]=Math['min'](a3z[0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 4,
+    "snippet": "3z[0x1]/a3A[0x1],a3y[0x2]=a3z[0x2]/a3A[0x2],a3y;},a3r['div']=a3r['divide'],a3r[ai4(0x40a)]=function(a3y,a3z,a3A){var ai9=ai4;return a3y[0x0]=Math['min'](a3z[0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 max out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#41",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 4,
+    "snippet": "1]=Math[\"min\"](a3z[0x1],a3A[0x1]),a3y[0x2]=Math['min'](a3z[0x2],a3A[0x2]),a3y;},a3r['max']=function(a3y,a3z,a3A){return a3y[0x0]=Math['max'](a3z[0x0],a3A[0x0]),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 4,
+    "snippet": "th[ai9(0x40a)](a3z[0x1],a3A[0x1]),a3y[0x2]=Math['min'](a3z[0x2],a3A[0x2]),a3y;},a3r['max']=function(a3y,a3z,a3A){return a3y[0x0]=Math['max'](a3z[0x0],a3A[0x0]),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 scale out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#42",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 42,
+    "refCount": 4,
+    "snippet": "=Math['max'](a3z[0x1],a3A[0x1]),a3y[0x2]=Math['max'](a3z[0x2],a3A[0x2]),a3y;},a3r[\"scale\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A,a3y[0x1]=a3z[0x1]*"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 42,
+    "refCount": 4,
+    "snippet": "ath['max'](a3z[0x1],a3A[0x1]),a3y[0x2]=Math['max'](a3z[0x2],a3A[0x2]),a3y;},a3r[ai4(0xd6)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A,a3y[0x1]=a3z[0x1]*"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 squaredDistance first point input; same served; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#45",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 45,
+    "refCount": 3,
+    "snippet": "h[\"sqrt\"](a3A*a3A+a3B*a3B+a3C*a3C);},a3r['dist']=a3r['pLBXqJSbPlZ'],a3r['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 45,
+    "refCount": 3,
+    "snippet": "a(0xba3)](a3A*a3A+a3B*a3B+a3C*a3C);},a3r['dist']=a3r['pLBXqJSbPlZ'],a3r['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 length input components read; same served; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#46",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 46,
+    "refCount": 3,
+    "snippet": "[0x2];return a3A*a3A+a3B*a3B+a3C*a3C;},a3r['sqrDist']=a3r[\"squaredDistance\"],a3r['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return Math["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 46,
+    "refCount": 3,
+    "snippet": "x2]-a3y[0x2];return a3A*a3A+a3B*a3B+a3C*a3C;},a3r['sqrDist']=a3r[ai4(0xa8b)],a3r['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return Math["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 squaredLength input components read; same served; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#47",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 47,
+    "refCount": 3,
+    "snippet": "turn Math['sqrt'](a3z*a3z+a3A*a3A+a3B*a3B);},a3r[\"len\"]=a3r['length'],a3r[\"squaredLength\"]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return a3z*a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 47,
+    "refCount": 3,
+    "snippet": "turn Math['sqrt'](a3z*a3z+a3A*a3A+a3B*a3B);},a3r[ai4(0x512)]=a3r['length'],a3r[ai4(0x430)]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return a3z*a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 negate out negated writes; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#48",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 48,
+    "refCount": 4,
+    "snippet": "[0x2];return a3z*a3z+a3A*a3A+a3B*a3B;},a3r['sqrLen']=a3r['squaredLength'],a3r[\"dcItcWVWb\"]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 48,
+    "refCount": 4,
+    "snippet": "y[0x2];return a3z*a3z+a3A*a3A+a3B*a3B;},a3r['sqrLen']=a3r['squaredLength'],a3r[ai4(0x956)]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 cross out product writes; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#51",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 51,
+    "refCount": 4,
+    "snippet": "ction(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1]+a3y[0x2]*a3z[0x2];},a3r[\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 51,
+    "refCount": 4,
+    "snippet": "on(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1]+a3y[0x2]*a3z[0x2];},a3r[ai4(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 random out spherical writes; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#53",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 53,
+    "refCount": 4,
+    "snippet": "]-a3C),a3y[0x1]=a3D+a3B*(a3A[0x1]-a3D),a3y[0x2]=a3E+a3B*(a3A[0x2]-a3E),a3y;},a3r[\"random\"]=function(a3y,a3z){var aib=ai4;a3z=a3z||0x1;var a3A=a3n()*0x2*Math['PI"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 53,
+    "refCount": 4,
+    "snippet": "a3C),a3y[0x1]=a3D+a3B*(a3A[0x1]-a3D),a3y[0x2]=a3E+a3B*(a3A[0x2]-a3E),a3y;},a3r[ai4(0x4bd)]=function(a3y,a3z){var aib=ai4;a3z=a3z||0x1;var a3A=a3n()*0x2*Math['PI"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 transformMat4 out matrix writes; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#54",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 54,
+    "refCount": 4,
+    "snippet": "['cos'](a3A)*a3C,a3y[0x1]=Math[\"sin\"](a3A)*a3C,a3y[0x2]=a3B*a3z,a3y;},a3r['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2];retu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 54,
+    "refCount": 4,
+    "snippet": "'](a3A)*a3C,a3y[0x1]=Math[aib(0xbd6)](a3A)*a3C,a3y[0x2]=a3B*a3z,a3y;},a3r['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2];retu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 forEach scratch create reused; same served; SERVED: identical (snippet-only twin).",
+   "name": "tmpVec",
+   "selector": "a3y@u0008#60",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 60,
+    "refCount": 8,
+    "snippet": ",a3y[0x1]=a3D[0x1]+a3A[0x1],a3y[0x2]=a3D[0x2]+a3A[0x2],a3y;},a3r[\"forEach\"]=(function(){var aif=ai4,a3y=a3r[\"create\"]();return function(a3z,a3A,a3B,a3C,a3D,a3E)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 60,
+    "refCount": 8,
+    "snippet": "a3y[0x1]=a3D[0x1]+a3A[0x1],a3y[0x2]=a3D[0x2]+a3A[0x2],a3y;},a3r[ai4(0x68f)]=(function(){var aif=ai4,a3y=a3r[aif(0xf2a)]();return function(a3z,a3A,a3B,a3C,a3D,a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 str input components formatted; same served; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#61",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 61,
+    "refCount": 3,
+    "snippet": "a3z[a3F]=a3y[0x0],a3z[a3F+0x1]=a3y[0x1],a3z[a3F+0x2]=a3y[0x2];return a3z;};}()),a3r[\"str\"]=function(a3y){return'vec3(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+',\\x20'+a3y"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 61,
+    "refCount": 3,
+    "snippet": "F]=a3y[0x0],a3z[a3F+0x1]=a3y[0x1],a3z[a3F+0x2]=a3y[0x2];return a3z;};}()),a3r[ai4(0x1094)]=function(a3y){return'vec3(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+',\\x20'+a3y"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 create fresh zero vector; same served; SERVED: identical (snippet-only twin).",
+   "name": "newVec4",
+   "selector": "a3y@u0008#62",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 62,
+    "refCount": 5,
+    "snippet": "y[0x2]+'\\x20)';},typeof a3k!='undefined'&&(a3k['vec3']=a3r);var a3s={};a3s[\"create\"]=function(){var a3y=new a3m(0x4);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 62,
+    "refCount": 5,
+    "snippet": "0x2]+'\\x20)';},typeof a3k!='undefined'&&(a3k['vec3']=a3r);var a3s={};a3s[ai4(0xf2a)]=function(){var a3y=new a3m(0x4);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 copy out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#65",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 65,
+    "refCount": 5,
+    "snippet": "=new a3m(0x4);return a3C[0x0]=a3y,a3C[0x1]=a3z,a3C[0x2]=a3A,a3C[0x3]=a3B,a3C;},a3s[\"copy\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 65,
+    "refCount": 5,
+    "snippet": " a3m(0x4);return a3C[0x0]=a3y,a3C[0x1]=a3z,a3C[0x2]=a3A,a3C[0x3]=a3B,a3C;},a3s[ai4(0x609)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 subtract out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#68",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 68,
+    "refCount": 5,
+    "snippet": "[0x1]+a3A[0x1],a3y[0x2]=a3z[0x2]+a3A[0x2],a3y[0x3]=a3z[0x3]+a3A[0x3],a3y;},a3s[\"subtract\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]-a3A[0x0],a3y[0x1]=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 68,
+    "refCount": 5,
+    "snippet": "[0x1]+a3A[0x1],a3y[0x2]=a3z[0x2]+a3A[0x2],a3y[0x3]=a3z[0x3]+a3A[0x3],a3y;},a3s[ai4(0xc83)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]-a3A[0x0],a3y[0x1]=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 multiply out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#69",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 69,
+    "refCount": 5,
+    "snippet": "[0x2]-a3A[0x2],a3y[0x3]=a3z[0x3]-a3A[0x3],a3y;},a3s[\"sub\"]=a3s[\"subtract\"],a3s['multiply']=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A[0x0],a3y[0x1]=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 69,
+    "refCount": 5,
+    "snippet": "-a3A[0x2],a3y[0x3]=a3z[0x3]-a3A[0x3],a3y;},a3s[ai4(0xf08)]=a3s[ai4(0xc83)],a3s['multiply']=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A[0x0],a3y[0x1]=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 divide out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#70",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 70,
+    "refCount": 5,
+    "snippet": "3z[0x2]*a3A[0x2],a3y[0x3]=a3z[0x3]*a3A[0x3],a3y;},a3s[\"mul\"]=a3s['multiply'],a3s[\"divide\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 70,
+    "refCount": 5,
+    "snippet": "*a3A[0x2],a3y[0x3]=a3z[0x3]*a3A[0x3],a3y;},a3s[ai4(0xcfe)]=a3s['multiply'],a3s[ai4(0x937)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 min out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#71",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 71,
+    "refCount": 5,
+    "snippet": "x2]=a3z[0x2]/a3A[0x2],a3y[0x3]=a3z[0x3]/a3A[0x3],a3y;},a3s[\"div\"]=a3s['divide'],a3s['min']=function(a3y,a3z,a3A){var aih=ai4;return a3y[0x0]=Math['min'](a3z[0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 71,
+    "refCount": 5,
+    "snippet": "3z[0x2]/a3A[0x2],a3y[0x3]=a3z[0x3]/a3A[0x3],a3y;},a3s[ai4(0xaca)]=a3s['divide'],a3s['min']=function(a3y,a3z,a3A){var aih=ai4;return a3y[0x0]=Math['min'](a3z[0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 max out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#72",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 72,
+    "refCount": 5,
+    "snippet": "2]=Math[\"min\"](a3z[0x2],a3A[0x2]),a3y[0x3]=Math[\"min\"](a3z[0x3],a3A[0x3]),a3y;},a3s['max']=function(a3y,a3z,a3A){var aii=ai4;return a3y[0x0]=Math[\"max\"](a3z[0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 72,
+    "refCount": 5,
+    "snippet": "h(0x40a)](a3z[0x2],a3A[0x2]),a3y[0x3]=Math[aih(0x40a)](a3z[0x3],a3A[0x3]),a3y;},a3s['max']=function(a3y,a3z,a3A){var aii=ai4;return a3y[0x0]=Math[aii(0x909)](a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 scale out written returned; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#73",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 73,
+    "refCount": 5,
+    "snippet": "=Math[\"max\"](a3z[0x2],a3A[0x2]),a3y[0x3]=Math['max'](a3z[0x3],a3A[0x3]),a3y;},a3s[\"scale\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A,a3y[0x1]=a3z[0x1]*"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 73,
+    "refCount": 5,
+    "snippet": "ii(0x909)](a3z[0x2],a3A[0x2]),a3y[0x3]=Math['max'](a3z[0x3],a3A[0x3]),a3y;},a3s[ai4(0xd6)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A,a3y[0x1]=a3z[0x1]*"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 squaredDistance point A; sibling pointB; SERVED: identical (snippet-only twin).",
+   "name": "sqrDistPointA",
+   "selector": "a3y@u0008#76",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 76,
+    "refCount": 4,
+    "snippet": "](a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3D);},a3s['dist']=a3s[\"pLBXqJSbPlZ\"],a3s['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 76,
+    "refCount": 4,
+    "snippet": "rt'](a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3D);},a3s['dist']=a3s[ai4(0x439)],a3s['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 length input components read; same served; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#77",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 77,
+    "refCount": 4,
+    "snippet": "turn a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3D;},a3s['sqrDist']=a3s[\"squaredDistance\"],a3s['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 77,
+    "refCount": 4,
+    "snippet": "0x3];return a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3D;},a3s['sqrDist']=a3s[ai4(0xa8b)],a3s['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 squaredLength input components read; same served; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#78",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 78,
+    "refCount": 4,
+    "snippet": "h['sqrt'](a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C);},a3s['len']=a3s[\"length\"],a3s['squaredLength']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 78,
+    "refCount": 4,
+    "snippet": "'sqrt'](a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C);},a3s['len']=a3s[ai4(0x3a2)],a3s['squaredLength']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 negate out negated writes; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#79",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 79,
+    "refCount": 5,
+    "snippet": "turn a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C;},a3s['sqrLen']=a3s[\"squaredLength\"],a3s['dcItcWVWb']=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 79,
+    "refCount": 5,
+    "snippet": "3];return a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C;},a3s['sqrLen']=a3s[ai4(0x430)],a3s['dcItcWVWb']=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 normalize out scaled writes; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#80",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 80,
+    "refCount": 5,
+    "snippet": "=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x2]=-a3z[0x2],a3y[0x3]=-a3z[0x3],a3y;},a3s[\"normalize\"]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 80,
+    "refCount": 5,
+    "snippet": "]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x2]=-a3z[0x2],a3y[0x3]=-a3z[0x3],a3y;},a3s[ai4(0xfc6)]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 transformMat4 out matrix writes; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#84",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 84,
+    "refCount": 5,
+    "snippet": "[0x3]=a3n(),a3s[\"normalize\"](a3y,a3y),a3s['scale'](a3y,a3y,a3z),a3y;},a3s['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 84,
+    "refCount": 5,
+    "snippet": "y[0x3]=a3n(),a3s[aik(0xfc6)](a3y,a3y),a3s['scale'](a3y,a3y,a3z),a3y;},a3s['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 transformQuat out quat writes; same served; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#85",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 85,
+    "refCount": 4,
+    "snippet": "3E,a3y[0x3]=a3A[0x3]*a3B+a3A[0x7]*a3C+a3A[0xb]*a3D+a3A[0xf]*a3E,a3y;},a3s[\"transformQuat\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 85,
+    "refCount": 4,
+    "snippet": "xe]*a3E,a3y[0x3]=a3A[0x3]*a3B+a3A[0x7]*a3C+a3A[0xb]*a3D+a3A[0xf]*a3E,a3y;},a3s[ai4(0xdc5)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 create fresh identity matrix; same served; SERVED: identical (snippet-only twin).",
+   "name": "newMat2",
+   "selector": "a3y@u0008#88",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 88,
+    "refCount": 5,
+    "snippet": "y[0x3]+'\\x20)';},typeof a3k!='undefined'&&(a3k[\"vec4\"]=a3s);var a3t={};a3t[\"create\"]=function(){var a3y=new a3m(0x4);return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 88,
+    "refCount": 5,
+    "snippet": "'\\x20)';},typeof a3k!='undefined'&&(a3k[ai4(0x100b)]=a3s);var a3t={};a3t[ai4(0xf2a)]=function(){var a3y=new a3m(0x4);return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0"
+   }
+  }
+ ]
+}

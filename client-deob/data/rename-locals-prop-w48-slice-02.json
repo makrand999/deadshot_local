@@ -1,0 +1,222 @@
+{
+ "meta": {
+  "wave": 48,
+  "slice": "02",
+  "mergedFrom": [
+   "02a",
+   "02b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds an a3k['image'] gradient sprite with +x offset added to the healthbar group, and SERVED repeats the same image/position/opacity setup; it is the left-side gradient panel mirrored by a3p on the right.",
+   "name": "gradientLeft",
+   "selector": "a3m@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a3m=0x12c feeds HL width/position tweens and healthUpdateTime=a3m*2, and SERVED shows the identical 0x12c init with the same tween/time multiplications; it is the health-bar animation duration.",
+   "name": "healthAnimDuration",
+   "selector": "a3m@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL takes getContext('2d') of the red-gradient image, sets fillStyle/fillRect, and is reused for redGradientRight; SERVED shows the same getContext/fill calls, so it is the 2d context used to tint gradients.",
+   "name": "gradientCtx",
+   "selector": "a3n@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL computes maxwidth*health/maxHealth and passes it as the HL width-tween target; SERVED repeats the same maxwidth-ratio computation and tween calls, so it is the target health-bar width.",
+   "name": "targetBarWidth",
+   "selector": "a3n@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL is the for-loop counter indexing gradient stops a3l, and SERVED repeats the same a3l-indexing loop; the token is reused as a plain loop counter across setup loops on both sides. [merger: loopIndex collides with a rename-map value; variant loopPosition]",
+   "name": "loopPosition",
+   "selector": "a3o@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL loops Kq['chats'] indexing chat entries for fade/timeout updates, and SERVED repeats the same chats loop with identical indexing; it is the chat-list index.",
+   "name": "chatIndex",
+   "selector": "a3o@u2130#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds the mirrored gradient image with -x offset added to fbgKsskemj alongside redGradientRight, and SERVED repeats the same mirrored image/position/opacity setup; right-side counterpart of a3m.",
+   "name": "gradientRight",
+   "selector": "a3p@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL saves this['max']['parent'] before rebuilding the max-ammo label and re-adds via a3p['add']; SERVED shows the same parent-save/remove/re-add sequence, so it is the ammo label's parent container.",
+   "name": "maxAmmoParent",
+   "selector": "a3p@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets 0xf0 used as the health-bar rect width and in half-width label offsets; SERVED repeats the same 0xf0 init and width/offset uses, so it is the health-bar width.",
+   "name": "healthbarWidth",
+   "selector": "a3q@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL rebuilds the '/ maxAmmo' text object stored to this['max']; SERVED shows the same text rebuild and this['max'] assignment, so it is the max-ammo label.",
+   "name": "maxAmmoLabel",
+   "selector": "a3q@u2130#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets 0xf paired with a3q as the health-bar rect height; SERVED repeats the same 0xf init and rect-height uses, so it is the health-bar height.",
+   "name": "healthbarHeight",
+   "selector": "a3r@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL computes timeLeft-(Date.now()-Lc) then decomposes into d/h/m/s for the 'Resets In' text; SERVED repeats the same timeLeft math and countdown decomposition, so it is the remaining-time milliseconds.",
+   "name": "timeLeftMs",
+   "selector": "a3r@u2130#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds the '[K] Shoot [L] ADS [SHIFT] Slide' hint text stored on Kq and added to the HUD group; SERVED repeats the same hint-text construction, so it is the controls hint label.",
+   "name": "controlsHint",
+   "selector": "a3t@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL computes Math.floor(a3r/Lu) formatted with 'd ' into the countdown string; SERVED repeats the same floor/divide and 'd' formatting, so it is the days component.",
+   "name": "days",
+   "selector": "a3t@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL creates a new container object holding healthbarContainer and added under a3s; SERVED repeats the same container creation and add() nesting, so it is the health-bar wrapper object.",
+   "name": "healthbarWrapper",
+   "selector": "a3u@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a3u=Math.floor(a3r/Lt) with a3r-=a3u*Lt is formatted as a3u+'h ' into the countdown string, and SERVED repeats the same floor/divide and 'h' formatting (Lt=MS_PER_HOUR); the hours component parallel to sibling days.",
+   "name": "hours",
+   "selector": "a3u@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a3w=0x24 with a3x=a3w/3.8 feeds the health-cross polygon vertices and rect dims, and SERVED repeats the same init with nearest uses in the 12-point polygon points (countdown occurrences belong to the separate a3w#1/seconds binding).",
+   "name": "crossOuterSize",
+   "selector": "a3w@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL a3x=a3w/3.8 is the inner dimension of the health-cross polygon, and SERVED repeats the same init with nearest uses in the polygon vertices (countdown-string occurrences belong to the separate a3x#1/countdownText binding).",
+   "name": "crossInnerSize",
+   "selector": "a3x@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds cross rects then a 12-point polygon colored with M2=healthCrossColor, with size/opacity/position set and added to the HUD group, and SERVED repeats the same construction and add() (countdown snapshot occurrences belong to the separate a3y#1 binding).",
+   "name": "healthCrossIcon",
+   "selector": "a3y@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL snapshots a3y=a3r before d/h/m/s decomposition and gates expiry via a3y<0x3e8, and SERVED repeats the same snapshot and threshold checks; the preserved total before the remainder is consumed.",
+   "name": "totalRemainMs",
+   "selector": "a3y@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL new M7=createStyledText('DRUHohhzr','100','left') is stored to this['healthText'] with position/opacity setup, and SERVED repeats the same construction and healthText assignment (loop-counter occurrences belong to the separate a3z#1 binding).",
+   "name": "healthTextLabel",
+   "selector": "a3z@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL for(let a3z=0x0;a3z<Kq['xGnxhWRENA']['length'];a3z++) clears a flag on each defined element at the start of update(), and SERVED repeats the identical reset loop; the array itself is unresolvable so the name stays a generic element index.",
+   "name": "elemIndex",
+   "selector": "a3z@u2130#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL var a40=0xf then 0x0 is subtracted from scoreboard rect/image widths (a3r/0x8-a40, a3q-a40), and SERVED repeats the same init and width uses; a panel-width adjustment currently zeroed.",
+   "name": "panelWidthTrim",
+   "selector": "a40@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a41=0.7 scales the RGB comps (a42/a43/a3N*=a41) before they are interpolated into rgba() gradient stops for both sides, and SERVED repeats the identical 0.7 scaling.",
+   "name": "colorScaleFactor",
+   "selector": "a41@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a42=0x46 (later 0xee for the right side) is interpolated as the first rgba() component of the team gradient stops, and SERVED repeats the same init/reassign and rgba() interpolation.",
+   "name": "gradientRed",
+   "selector": "a42@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL var a43=0xa3 (later 0x33 for the right side) is interpolated as the second rgba() component of the team gradient stops, and SERVED repeats the same init/reassign and rgba() interpolation.",
+   "name": "gradientGreen",
+   "selector": "a43@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL Mf=createGradientTexture(...) blue-team stops are fed to the left-side image a45, and SERVED repeats the same texture construction and left placement.",
+   "name": "leftScoreGradient",
+   "selector": "a44@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL new image(a44,-a3Z-a3q/2,...) with opacity 0.7 is added to the scoreboard parent, and SERVED repeats the same left-side placement and add().",
+   "name": "leftScoreGradientImage",
+   "selector": "a45@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL Mf=createGradientTexture(...) red-team stops are fed to the right-side image a47, and SERVED repeats the same texture construction and right placement.",
+   "name": "rightScoreGradient",
+   "selector": "a46@u2130#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL new image(a46,+a3Z+a3q/2,...) with opacity 0.7 is added to the scoreboard parent, and SERVED repeats the same right-side placement and add().",
+   "name": "rightScoreGradientImage",
+   "selector": "a47@u2130#0"
+  }
+ ]
+}

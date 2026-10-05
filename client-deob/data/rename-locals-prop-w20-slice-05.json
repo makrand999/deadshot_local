@@ -1,0 +1,223 @@
+{
+ "proposals": [
+  {
+   "selector": "my@u0020#0",
+   "action": "keep",
+   "name": "my",
+   "confidence": "high",
+   "evidence": "DECL @598005 earcut findHoleBridge: var stop=m,mx=m.x,my=m.y + USES in pointInTriangle/sector tests; y-coord temp paired with mx \u2014 idiomatic x/y pair, keep."
+  },
+  {
+   "selector": "n1@u0020#0",
+   "action": "keep",
+   "name": "n1",
+   "confidence": "high",
+   "evidence": "DECL @616999 LatheGeometry closed-seam normal averaging: n1/n2/n Vector3 trio, n1 holds seam-start normal; member of idiomatic n1/n2/n temp trio (siblings out of slice) \u2014 renaming one alone breaks trio, keep."
+  },
+  {
+   "selector": "n11@u0020#0",
+   "action": "keep",
+   "name": "n11",
+   "confidence": "high",
+   "evidence": "DECL @17248 Matrix3.set(n11..n33) param, te[0]=n11; canonical three.js matrix-element API name, keep."
+  },
+  {
+   "selector": "n11@u0020#1",
+   "action": "keep",
+   "name": "n11",
+   "confidence": "high",
+   "evidence": "DECL @19243 Matrix3.invert local n11=te[0] used in det/cofactor math (5 refs); canonical element name, keep."
+  },
+  {
+   "selector": "n11@u0020#2",
+   "action": "keep",
+   "name": "n11",
+   "confidence": "high",
+   "evidence": "DECL @74477 Matrix4.set(n11..n44) param, te[0]=n11; canonical API name, keep."
+  },
+  {
+   "selector": "n11@u0020#3",
+   "action": "keep",
+   "name": "n11",
+   "confidence": "high",
+   "evidence": "DECL @79938 Matrix4.determinant local n11=te[0] (6 refs in det expansion); canonical element name, keep."
+  },
+  {
+   "selector": "n11@u0020#4",
+   "action": "keep",
+   "name": "n11",
+   "confidence": "high",
+   "evidence": "DECL @80940 Matrix4.invert local n11=te[0] (19 refs in cofactor/det math); canonical element name, keep."
+  },
+  {
+   "selector": "n12@u0020#0",
+   "action": "keep",
+   "name": "n12",
+   "confidence": "high",
+   "evidence": "DECL @17252 Matrix3.set param, te[3]=n12; canonical matrix-element API name, keep."
+  },
+  {
+   "selector": "n12@u0020#1",
+   "action": "keep",
+   "name": "n12",
+   "confidence": "high",
+   "evidence": "DECL @19273 Matrix3.invert local n12=te[3] (4 refs); canonical element name, keep."
+  },
+  {
+   "selector": "n12@u0020#2",
+   "action": "keep",
+   "name": "n12",
+   "confidence": "high",
+   "evidence": "DECL @74481 Matrix4.set param, te[4]=n12; canonical API name, keep."
+  },
+  {
+   "selector": "n12@u0020#3",
+   "action": "keep",
+   "name": "n12",
+   "confidence": "high",
+   "evidence": "DECL @79948 Matrix4.determinant local n12=te[4] (6 refs); canonical element name, keep."
+  },
+  {
+   "selector": "nBlocks@u0020#0",
+   "action": "keep",
+   "name": "nBlocks",
+   "confidence": "high",
+   "evidence": "DECL @355883 flatten(array,nBlocks,blockSize) param: n=nBlocks*blockSize, loop bound; already-readable count, keep."
+  },
+  {
+   "selector": "nValues@u0020#0",
+   "action": "keep",
+   "name": "nValues",
+   "confidence": "high",
+   "evidence": "DECL @660233 sortedArray: nValues=values.length sizing result + loop bound; already-readable count, keep."
+  },
+  {
+   "selector": "nVertexUniforms@u0020#0",
+   "action": "keep",
+   "name": "nVertexUniforms",
+   "confidence": "high",
+   "evidence": "DECL @386443 getMaxBones: nVertexUniforms=maxVertexUniforms feeding bone-limit math; readable engine term, keep."
+  },
+  {
+   "selector": "nbVertices@u0020#0",
+   "action": "keep",
+   "name": "nbVertices",
+   "confidence": "high",
+   "evidence": "DECL @547921 Line raycast Geometry branch: nbVertices=AUbXpMajF.length loop bound; readable count, keep."
+  },
+  {
+   "selector": "near@u0020#0",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @85514 makePerspective(left,right,top,bottom,near,far) param (6 refs); canonical frustum term, keep."
+  },
+  {
+   "selector": "near@u0020#1",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @86083 makeOrthographic(...,near,far) param; canonical frustum term, keep."
+  },
+  {
+   "selector": "near@u0020#2",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @184761 PerspectiveCamera(fov,aspect,near,far) param, this.near=near (hub: canonical); keep."
+  },
+  {
+   "selector": "near@u0020#3",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @186791 updateProjectionMatrix: var near=this.near feeding frustum math + makePerspective (3 refs); canonical, keep."
+  },
+  {
+   "selector": "near@u0020#4",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @187873 CubeCamera(near,far,renderTarget) param fanned to 6 sub-cameras (6 refs); canonical, keep."
+  },
+  {
+   "selector": "near@u0020#5",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @471208 WebXR setProjectionFromUnion: var near=projL[14]/(projL[10]-1) feeding left/right/near2 (3 refs); canonical, keep."
+  },
+  {
+   "selector": "near@u0020#6",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @522067 Fog(color,near,far) param; canonical fog API term, keep."
+  },
+  {
+   "selector": "near@u0020#7",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @732090 OrthographicCamera(left,right,top,bottom,near,far) param, this.near=near (3 refs); canonical, keep."
+  },
+  {
+   "selector": "near@u0020#8",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @837767 Raycaster(origin,dir,near,far) param, this.near=near||0; canonical, keep."
+  },
+  {
+   "selector": "near@u0020#9",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @869967 PMREMGenerator.fromScene(scene,sigma,near,far) param passed to _sceneToCubeUV (3 refs); canonical, keep."
+  },
+  {
+   "selector": "near@u0020#10",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @872354 _sceneToCubeUV(scene,near,far,target) param feeding cube-camera (hub-consistent); canonical, keep."
+  },
+  {
+   "selector": "near@u0020#11",
+   "action": "keep",
+   "name": "near",
+   "confidence": "high",
+   "evidence": "DECL @901514 removed makeFrustum shim param forwarded to makePerspective; canonical spelling, keep."
+  },
+  {
+   "selector": "near2@u0020#0",
+   "action": "keep",
+   "name": "near2",
+   "confidence": "high",
+   "evidence": "DECL @471817 XR union frustum: near2=near+zOffset passed to makePerspective (3 refs); readable derived-plane name paired with far2/left2, keep."
+  },
+  {
+   "selector": "nearestPowerOfTwo@u0020#0",
+   "action": "keep",
+   "name": "nearestPowerOfTwo",
+   "confidence": "high",
+   "evidence": "DECL @897306 deprecated MathUtils alias fn-name forwarding to floorPowerOfTwo, refCount 0; already-readable + dead, keep."
+  },
+  {
+   "selector": "needsNewCanvas@u0020#0",
+   "action": "keep",
+   "name": "needsNewCanvas",
+   "confidence": "high",
+   "evidence": "DECL @433220 resizeImage(image,needsPowerOfTwo,needsNewCanvas,maxSize) boolean param selecting fresh canvas; already-readable, keep."
+  }
+ ],
+ "slice": "05",
+ "stats": {
+  "total": 30,
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ }
+}

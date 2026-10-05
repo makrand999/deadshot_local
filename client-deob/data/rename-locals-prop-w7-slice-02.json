@@ -1,0 +1,222 @@
+{
+  "slice": "slice-02",
+  "proposals": [
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @545794 var RNQDluasaN=this.RNQDluasaN in Line.computeLineDistances; USES @544968 .isBufferGeometry/.attributes + .setAttribute('lineDistance')",
+      "name": "lineGeometry",
+      "selector": "RNQDluasaN@u0020#41"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @548482 var RNQDluasaN=this.RNQDluasaN in Line.updateMorphTargets; USES @548512 reads .morphAttributes/.morphTargets",
+      "name": "lineMorphGeometry",
+      "selector": "RNQDluasaN@u0020#42"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @549252 function CcjHTJKsGIh(RNQDluasaN,material) LineSegments ctor (isLineSegments @549288); sole use forwards to Line.call",
+      "name": "segmentsGeometry",
+      "selector": "RNQDluasaN@u0020#43"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @549502 var RNQDluasaN=this.RNQDluasaN in LineSegments.computeLineDistances; USES @550139 .setAttribute('lineDistance')",
+      "name": "lineSegmentsGeometry",
+      "selector": "RNQDluasaN@u0020#44"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @550498 function LineLoop(RNQDluasaN,material); sole use forwards to Line.call(this,RNQDluasaN,material)",
+      "name": "loopGeometry",
+      "selector": "RNQDluasaN@u0020#45"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @551493 function Points(RNQDluasaN,material) with default RNQDluasaN=new kwrjVVjSgIH() (@551517); assigned to this.RNQDluasaN",
+      "name": "pointsGeometry",
+      "selector": "RNQDluasaN@u0020#46"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @552043 var RNQDluasaN=this.RNQDluasaN in Points raycast; USES @552237 .boundingSphere/.computeBoundingSphere, @552651 .isBufferGeometry",
+      "name": "pointsRaycastGeometry",
+      "selector": "RNQDluasaN@u0020#47"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @553400 var RNQDluasaN=this.RNQDluasaN in Points.updateMorphTargets; USES @553430 reads .morphAttributes",
+      "name": "pointsMorphGeometry",
+      "selector": "RNQDluasaN@u0020#48"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @559436 fromBufferGeometry:function fromBufferGeometry(RNQDluasaN); USES @560880 .groups, @561442 .boundingBox/.boundingSphere clones",
+      "name": "sourceGeometry",
+      "selector": "RNQDluasaN@u0020#49"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @566430 merge:function merge(RNQDluasaN,matrix); USES @566864 .AUbXpMajF/.faces/.colors copied into this",
+      "name": "otherGeometry",
+      "selector": "RNQDluasaN@u0020#50"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @590451 function EdgesGeometry(RNQDluasaN,thresholdAngle); USES @590730 .isGeometry check + fromGeometry conversion",
+      "name": "edgesGeometry",
+      "selector": "RNQDluasaN@u0020#51"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "DECL @612144 generateTopUV(RNQDluasaN,AUbXpMajF,indexA,indexB,indexC); refCount=0 but canonical three.js signature fixes role",
+      "name": "topUvGeometry",
+      "selector": "RNQDluasaN@u0020#52"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "DECL @612493 generateSideWallUV(RNQDluasaN,AUbXpMajF,indexA..indexD); refCount=0 but canonical three.js signature fixes role",
+      "name": "sideWallGeometry",
+      "selector": "RNQDluasaN@u0020#53"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @641175 function WireframeGeometry(RNQDluasaN); USES @641846 .AUbXpMajF, @642111 .isBufferGeometry/.attributes/.index",
+      "name": "wireframeGeometry",
+      "selector": "RNQDluasaN@u0020#54"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @751593 BufferGeometryLoader parse builds RNQDluasaN via .setAttribute (@752529), .morphAttributes (@753343), .addGroup (@753465); returned @754070",
+      "name": "parsedGeometry",
+      "selector": "RNQDluasaN@u0020#55"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@756540 parseGeometries: var RNQDluasaN=void 0 per json[i]; USES@757145-758434 assigned new Geometries[data.type](...) per case",
+      "name": "parsedGeometry",
+      "selector": "RNQDluasaN@u0020#56"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@765194 parseObject scope; USES@766904-767400 RNQDluasaN=getGeometry(data.RNQDluasaN) then new Mesh/SkinnedMesh/InstancedMesh(RNQDluasaN,material)",
+      "name": "resolvedGeometry",
+      "selector": "RNQDluasaN@u0020#57"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@848093 SpotLightHelper ctor: new kwrjVVjSgIH() cone verts; USES@848349/848516 setAttribute position, passed to CcjHTJKsGIh(RNQDluasaN,material)",
+      "name": "coneGeometry",
+      "selector": "RNQDluasaN@u0020#58"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@849458 SkeletonHelper ctor: new kwrjVVjSgIH() + bone position/color attrs; USES@849786/850086 setAttribute, passed to _LineSegments.call(this,RNQDluasaN,material)",
+      "name": "skeletonGeometry",
+      "selector": "RNQDluasaN@u0020#59"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@850394 updateMatrixWorld: var RNQDluasaN=this.RNQDluasaN; USES@850410/850434 position=RNQDluasaN.getAttribute('position')",
+      "name": "helperGeometry",
+      "selector": "RNQDluasaN@u0020#60"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@851439 PointLightHelper ctor: new SphereBufferGeometry(sphereSize,4,2); USES@851584 passed to _Mesh.call(this,RNQDluasaN,material)",
+      "name": "sphereGeometry",
+      "selector": "RNQDluasaN@u0020#61"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@852491 HemisphereLightHelper ctor: new OctahedronBufferGeometry(size); USES@852537/852715 rotateY + setAttribute color + new Mesh(RNQDluasaN,_this.material)",
+      "name": "octahedronGeometry",
+      "selector": "RNQDluasaN@u0020#62"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@854302 GridHelper ctor: new kwrjVVjSgIH() over AUbXpMajF/colors grid verts; USES@854331/854407 setAttribute position+color, passed to _LineSegments.call",
+      "name": "gridGeometry",
+      "selector": "RNQDluasaN@u0020#63"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@855786 PolarGridHelper ctor: new kwrjVVjSgIH() over polar AUbXpMajF/colors; USES@855815/855891 setAttribute position+color, passed to _LineSegments.call",
+      "name": "polarGridGeometry",
+      "selector": "RNQDluasaN@u0020#64"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@856591 DirectionalLightHelper ctor: new kwrjVVjSgIH() light-plane verts then reassigned target-line verts; USES@856843-857027 new Line(RNQDluasaN,material) x2",
+      "name": "lightHelperGeometry",
+      "selector": "RNQDluasaN@u0020#65"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@858060 CameraHelper ctor: new kwrjVVjSgIH() frustum verts; USES@859394/859470 setAttribute position+color, passed to _LineSegments.call",
+      "name": "cameraHelperGeometry",
+      "selector": "RNQDluasaN@u0020#66"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@859889 update: var RNQDluasaN=this.RNQDluasaN; USES@860507-860878 passed to setPoint x22, getAttribute('position').afCJVYrCGK=true",
+      "name": "frustumGeometry",
+      "selector": "RNQDluasaN@u0020#67"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@861232 param setPoint(point,pointMap,RNQDluasaN,aKmLbYuMC,x,y,z); USES position=RNQDluasaN.getAttribute('position') then setXYZ per pointMap id",
+      "name": "targetGeometry",
+      "selector": "RNQDluasaN@u0020#68"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@861801 BoxHelper ctor: new kwrjVVjSgIH() + setIndex/position attrs; USES@861882/861981 passed to _LineSegments.call(this,RNQDluasaN,...)",
+      "name": "boxGeometry",
+      "selector": "RNQDluasaN@u0020#69"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL@863521 Box3Helper ctor: new kwrjVVjSgIH() box verts; USES setAttribute position + computeBoundingSphere + _LineSegments.call (mirrors #69)",
+      "name": "box3Geometry",
+      "selector": "RNQDluasaN@u0020#70"
+    }
+  ],
+  "stats": {
+    "rename": 30,
+    "keep": 0,
+    "high": 28,
+    "medium": 2,
+    "low": 0
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @615697 LatheBufferGeometry(points,segments,phiStart,phiLength); USES clamp+phi loop+full-circle check @616930; canonical three.js Lathe param per hub geometry ref.",
+      "name": "phiLength",
+      "selector": "phiLength@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @617624 LatheGeometry(points,segments,phiStart,phiLength); USES parameters record + forward to LatheBufferGeometry; canonical three.js Lathe param.",
+      "name": "phiLength",
+      "selector": "phiLength@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @627589 SphereBufferGeometry(...,phiStart,phiLength,...); USES vertex spherical-coord math @628778/@628911; canonical three.js Sphere param.",
+      "name": "phiLength",
+      "selector": "phiLength@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @629857 SphereGeometry(...,phiStart,phiLength,...); USES parameters record + forward to SphereBufferGeometry; canonical three.js Sphere param.",
+      "name": "phiLength",
+      "selector": "phiLength@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @621918 RingBufferGeometry(...,thetaSegments,phiSegments,...); USES clamp/max + radiusStep + j-loop @622650/@623083; canonical three.js Ring param.",
+      "name": "phiSegments",
+      "selector": "phiSegments@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @623762 RingGeometry(...,thetaSegments,phiSegments,...); USES parameters record + forward to RingBufferGeometry; canonical three.js Ring param.",
+      "name": "phiSegments",
+      "selector": "phiSegments@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @615688 LatheBufferGeometry(points,segments,phiStart,phiLength); USES default 0 + phi=phiStart+i*inv*phiLength sweep; canonical three.js Lathe param.",
+      "name": "phiStart",
+      "selector": "phiStart@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @617615 LatheGeometry(points,segments,phiStart,phiLength); USES parameters record + forward to LatheBufferGeometry; canonical three.js Lathe param.",
+      "name": "phiStart",
+      "selector": "phiStart@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @627580 SphereBufferGeometry(...,phiStart,phiLength,...); USES vertex spherical-coord math @628767/@628900; canonical three.js Sphere param.",
+      "name": "phiStart",
+      "selector": "phiStart@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @629848 SphereGeometry(...,phiStart,phiLength,...); USES parameters record + forward to SphereBufferGeometry; canonical three.js Sphere param.",
+      "name": "phiStart",
+      "selector": "phiStart@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @822123 var pingPong=loop===LoopPingPong in AnimationAction._updateTime; USES _setEndings args + duration-time reversal; well-known engine loop-mode term.",
+      "name": "pingPong",
+      "selector": "pingPong@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @823573 _setEndings(atStart,atEnd,pingPong); USES if(pingPong) ZeroSlopeEnding branch; matches sibling loop-mode flag, already readable.",
+      "name": "pingPong",
+      "selector": "pingPong@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @875068 var pingPongRenderTarget=this._pingPongRenderTarget in PMREM _blur; already-descriptive engine term for alternating blur target.",
+      "name": "pingPongRenderTarget",
+      "selector": "pingPongRenderTarget@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @474741 refreshMaterialUniforms(uniforms,material,pixelRatio,height); USES forward to refreshUniformsPoints @476126; canonical renderer/uniform term.",
+      "name": "pixelRatio",
+      "selector": "pixelRatio@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @479178 refreshUniformsPoints(uniforms,material,pixelRatio,height); USES uniforms.size.value=material.size*pixelRatio; canonical renderer/uniform term.",
+      "name": "pixelRatio",
+      "selector": "pixelRatio@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @494411 setDrawingBufferSize(width,height,pixelRatio); USES refreshUniforms* pass-through; canonical renderer pixel-ratio param, already readable.",
+      "name": "pixelRatio",
+      "selector": "pixelRatio@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @603569 var placeholder=[] in ExtrudeBufferGeometry.addShape; USES v()/addVertex push/index flat xyz staging array; generic but idiomatic temp, no clearer single role.",
+      "name": "placeholder",
+      "selector": "placeholder@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @325041 var planeMesh in WebGLBackground; USES 11x lazy PlaneBufferGeometry(2,2) background quad; self-descriptive engine term.",
+      "name": "planeMesh",
+      "selector": "planeMesh@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @53701 projectOnPlane(planeNormal); USES Vector3.projectOnVector(planeNormal) + GLSL projectOnPlane/sideOfPlane params; canonical math name.",
+      "name": "planeNormal",
+      "selector": "planeNormal@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @788554 Audio._proto.play=function play(delay); USES this.play() autoplay call; standard media API name.",
+      "name": "play",
+      "selector": "play@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @816800 AnimationAction._proto.play=function play(); USES _mixer._activateAction; standard animation API name.",
+      "name": "play",
+      "selector": "play@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @599528 function pointInTriangle(ax,ay,...) earcut predicate; USES 6x isEar/isEarHashed/hole-elimination tests; self-descriptive geometry term.",
+      "name": "pointInTriangle",
+      "selector": "pointInTriangle@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @399733 var pointLength=0 WebGLLights setup; USES state.point[pointLength] indexing + hash compare; canonical light-count term.",
+      "name": "pointLength",
+      "selector": "pointLength@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @405008 var pointLength=0 setupView; USES state.point[pointLength] view-matrix update loop; canonical light-count term.",
+      "name": "pointLength",
+      "selector": "pointLength@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @858211 var pointMap={} CameraHelper ctor; USES addPoint id->index buckets, stored as this.pointMap; self-descriptive map name.",
+      "name": "pointMap",
+      "selector": "pointMap@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @859920 var pointMap=this.pointMap in update(); USES 21x setPoint(id,pointMap,...) frustum updates; mirrors #0, already readable.",
+      "name": "pointMap",
+      "selector": "pointMap@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @861223 setPoint(point,pointMap,...) param; USES pointMap[point] index lookup; same canonical map, already readable.",
+      "name": "pointMap",
+      "selector": "pointMap@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @309024 var points_frag='uniform vec3 diffuse...' GLSL; USES ShaderChunk registration + ShaderLib.points.fragmentShader; canonical chunk key.",
+      "name": "points_frag",
+      "selector": "points_frag@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @309796 var points_vert='uniform float size...' GLSL; USES ShaderChunk registration + ShaderLib.points.vertexShader; canonical chunk key.",
+      "name": "points_vert",
+      "selector": "points_vert@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @874848 var poleAxis=_axisDirections[...] PMREM _applyPMREM; USES blurUniforms['poleAxis'] + GLSL uniform vec3 poleAxis; canonical blur-axis term.",
+      "name": "poleAxis",
+      "selector": "poleAxis@u0020#0"
+    }
+  ],
+  "slice": "00",
+  "stats": {
+    "total": 30,
+    "rename": 0,
+    "keep": 30,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

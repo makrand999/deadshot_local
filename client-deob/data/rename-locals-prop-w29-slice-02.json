@@ -1,0 +1,223 @@
+{
+ "slice": "02",
+ "stats": {
+  "total": 30,
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834776 uncacheClip loop var action=actionsToRemove[i]; USES _deactivateAction/_cacheIndex — readable role name",
+   "name": "action",
+   "selector": "action@u0020#12"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835327 uncacheRoot var action=actionByRoot[rootUuid]; USES undefined-check + _deactivateAction — readable role name",
+   "name": "action",
+   "selector": "action@u0020#13"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835769 uncacheAction var action=existingAction(...); USES null-check + _deactivateAction — readable role name",
+   "name": "action",
+   "selector": "action@u0020#14"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @828628 _removeInactiveAction var actionByRoot=actionsForClip.actionByRoot; USES delete actionByRoot[rootUuid] — readable map name",
+   "name": "actionByRoot",
+   "selector": "actionByRoot@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835277 uncacheRoot var actionByRoot=actionsByClip[clipUuid].actionByRoot; USES action lookup by rootUuid — readable map name",
+   "name": "actionByRoot",
+   "selector": "actionByRoot@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @827446 var actions=this._actions in _isActiveAction scope; USES length/inUse getters — readable cache-array name",
+   "name": "actions",
+   "selector": "actions@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @827987 _addInactiveAction var actions=this._actions; USES cacheIndex push + actionByRoot store — readable cache-array name",
+   "name": "actions",
+   "selector": "actions@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @829165 _removeInactiveBindingsForAction scope var actions; USES swap/pop cache maintenance — readable cache-array name",
+   "name": "actions",
+   "selector": "actions@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @829503 _lendAction var actions=this._actions; USES active/inactive swap bookkeeping — readable cache-array name",
+   "name": "actions",
+   "selector": "actions@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @833719 existingAction scope var actions; USES actionByRoot[rootUuid] lookup — readable cache-array name",
+   "name": "actions",
+   "selector": "actions@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @833899 stopAllAction var actions=this._actions; USES actions[i].stop() loop — readable cache-array name",
+   "name": "actions",
+   "selector": "actions@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834531 update var actions=this._actions; USES actions[i]._update per-frame loop — readable cache-array name",
+   "name": "actions",
+   "selector": "actions@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @827468 _addInactiveAction var actionsByClip=this._actionsByClip; USES actionsForClip lookup/store — readable index-map name",
+   "name": "actionsByClip",
+   "selector": "actionsByClip@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @828234 _removeInactiveAction var actionsByClip=this._actionsByClip; USES clip entry + knownActions cleanup — readable index-map name",
+   "name": "actionsByClip",
+   "selector": "actionsByClip@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834572 uncacheClip var actionsByClip=this._actionsByClip; USES actionsForClip + delete clip entry — readable index-map name",
+   "name": "actionsByClip",
+   "selector": "actionsByClip@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835204 var actionsByClip=this._actionsByClip alias in uncacheClip; USES @834572/@828283 index by clipUuid — readable cache-map name, keep",
+   "name": "actionsByClip",
+   "selector": "actionsByClip@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @825935 var actionsForClip=this._actionsByClip[clipUuid] in _activateAction; USES @826004/@826020 knownActions[0] bind — readable entry name, keep",
+   "name": "actionsForClip",
+   "selector": "actionsForClip@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @827506 var actionsForClip=actionsByClip[clipUuid] in _addInactiveAction; USES @827576/@827682 knownActions push + actionByRoot — readable entry name, keep",
+   "name": "actionsForClip",
+   "selector": "actionsForClip@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @828268 var actionsForClip=actionsByClip[clipUuid] in _removeInactiveAction; USES @828327/@828641 knownActionsForClip swap-pop — readable entry name, keep",
+   "name": "actionsForClip",
+   "selector": "actionsForClip@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @832610 var actionsForClip=this._actionsByClip[clipUuid] in clipAction; USES @832805/@832852 existingAction lookup + prototype knownActions[0] — readable entry name, keep",
+   "name": "actionsForClip",
+   "selector": "actionsForClip@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @833534 var actionsForClip=this._actionsByClip[clipUuid] in existingAction; USES @833582/@833617 actionByRoot[rootUuid]||null return — readable entry name, keep",
+   "name": "actionsForClip",
+   "selector": "actionsForClip@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834606 var actionsForClip=actionsByClip[clipUuid] in uncacheClip; USES @834648/@834696 knownActions removal loop — readable entry name, keep",
+   "name": "actionsForClip",
+   "selector": "actionsForClip@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834680 var actionsToRemove=actionsForClip.knownActions in uncacheClip; refCount=2 deactivation loop — readable list name, keep",
+   "name": "actionsToRemove",
+   "selector": "actionsToRemove@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @412434 var activeCubeFace=_renderer.getActiveCubeFace() in shadow render; USES @414809 setRenderTarget restore — readable GL state name, keep",
+   "name": "activeCubeFace",
+   "selector": "activeCubeFace@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @516454 setRenderTarget(renderTarget,activeCubeFace,...) param; USES @516491/@517850 default 0 + framebufferTexture2D — readable GL param name, keep",
+   "name": "activeCubeFace",
+   "selector": "activeCubeFace@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @517994 readRenderTargetPixels(...,activeCubeFaceIndex) param; refCount=2 cube-face pixel read — readable GL param name, keep",
+   "name": "activeCubeFaceIndex",
+   "selector": "activeCubeFaceIndex@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @362801 SingleUniform(id,activeInfo,addr) param; USES @362937 getSingularSetter(activeInfo.type) — readable WebGL ActiveInfo name, keep",
+   "name": "activeInfo",
+   "selector": "activeInfo@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @362937 PureArrayUniform(id,activeInfo,addr) param; USES @363053/@363004 size + getPureArraySetter(activeInfo.type) — readable WebGL ActiveInfo name, keep",
+   "name": "activeInfo",
+   "selector": "activeInfo@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @363695 parseUniform(activeInfo,addr,container) param; USES @363731/@364084 path=activeInfo.name uniform dispatch — readable WebGL ActiveInfo name, keep",
+   "name": "activeInfo",
+   "selector": "activeInfo@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @412483 var activeMipmapLevel=_renderer.getActiveMipmapLevel() in shadow render; USES @414824 setRenderTarget restore — readable GL state name, keep",
+   "name": "activeMipmapLevel",
+   "selector": "activeMipmapLevel@u0020#0"
+  }
+ ]
+}

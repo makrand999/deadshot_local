@@ -1,0 +1,7 @@
+// GENERATED from ../../raw/bundles/VM9.deob.txt — edit tools/, not this file.
+// module: characters/rigs.js | units: 2 | span: [2567413,2568786) (interleaved; exact ranges are per-unit markers below)
+// emission order within this file follows global order (sorted by start); rebundle with: node tools/bundle.mjs
+// __UNIT__ u2571 [2567413,2568303) kind=var len=950
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),cloneSkinnedRig=function(a3o){var aAb=stringDecoderAlias,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],srcSkeleton=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<srcSkeleton["bones"]['length'];++a3z){var a3A=a3s[srcSkeleton['bones'][a3z]['name']];a3y['push'](a3A);}a3x["bind"](new usvzFuAsEB[("Skeleton")](a3y,srcSkeleton['boneInverses']),a3x['matrixWorld']);}return a3p;};
+// __UNIT__ u2575 [2568743,2568786) kind=var len=72
+var Xv,characterModelCache=new Array(0x5),activeMeshPool=new Array(0x5);

@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "slice": "01b",
+    "wave": 52
+  },
+  "proposals": [
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: dims and disables shop buttons (called on claim buttons); SERVED: disables element, dims parent opacity to 0.3 (snippet-only twin).",
+      "name": "disableShopButton",
+      "selector": "abE@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: restores opacity enabling shop buttons (called on claim buttons); SERVED: enables element, restores parent opacity to 1 (snippet-only twin).",
+      "name": "enableShopButton",
+      "selector": "abF@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: ACCOUNT tab hosting stats and buttons; SERVED: ACCOUNT root; registers buttons, toggles visibility (snippet-only twin).",
+      "name": "accountPage",
+      "selector": "abG@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: scene showing account login prompt; SERVED: scene holding please-log-in prompt label only (snippet-only twin).",
+      "name": "accountLoginScene",
+      "selector": "abH@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: login notice hidden when account loads; SERVED: please-log-in text; hidden when logged in (snippet-only twin).",
+      "name": "accountLoginPrompt",
+      "selector": "abI@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: container holding stats rows and buttons; SERVED: container for stats rows and account buttons (snippet-only twin).",
+      "name": "accountContent",
+      "selector": "abJ@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: button list toggled with visibility; SERVED: button list toggled on login and logout (snippet-only twin).",
+      "name": "accountButtons",
+      "selector": "abK@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: reveals stats and buttons on login; SERVED: hides prompt, shows content, enables buttons (snippet-only twin).",
+      "name": "showAccountContent",
+      "selector": "abL@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: hides stats showing login prompt; SERVED: shows prompt, hides content, disables buttons (snippet-only twin).",
+      "name": "hideAccountContent",
+      "selector": "abM@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: title updated with loaded username; SERVED: Stats-for-username header updated after login (snippet-only twin).",
+      "name": "accountStatsTitle",
+      "selector": "abN@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: label list building stat rows; SERVED: seven stat label strings driving rows loop (snippet-only twin).",
+      "name": "accountStatLabels",
+      "selector": "abO@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: value texts filled from profile; SERVED: value labels filled from server stats array (snippet-only twin).",
+      "name": "accountStatValues",
+      "selector": "abP@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: left-aligned label per stat row; SERVED: left-aligned per-row stat name label (snippet-only twin).",
+      "name": "accountStatLabel",
+      "selector": "abQ@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: right-aligned value pushed to list; SERVED: right-aligned per-row value pushed to list (snippet-only twin).",
+      "name": "accountStatValue",
+      "selector": "abR@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: x-offset positioning account action buttons; SERVED: button column x offset; negated left side (snippet-only twin).",
+      "name": "accountButtonOffsetX",
+      "selector": "abS@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: red button opening delete confirm; SERVED: red Delete Account button opening confirm dialog (snippet-only twin).",
+      "name": "deleteAccountButton",
+      "selector": "abT@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: hidden-text style for delete button; SERVED: hidden text style object for delete button (snippet-only twin).",
+      "name": "deleteAccountHiddenStyle",
+      "selector": "abU@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: config building delete-account confirm dialog; SERVED: Yes/No config with deletion warning text lines (snippet-only twin).",
+      "name": "deleteAccountDialogConfig",
+      "selector": "abV@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: confirm dialog posting deletion request; SERVED: confirm dialog POSTing deleteAccount on confirm (snippet-only twin).",
+      "name": "deleteAccountConfirmDialog",
+      "selector": "abW@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: config building pending-deletion cancel dialog; SERVED: Yes/No config for pending-deletion countdown dialog (snippet-only twin).",
+      "name": "pendingDeletionDialogConfig",
+      "selector": "abX@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "low",
+      "evidence": "VM9: childless container positioned under preview panel; SERVED: object positioned relative to sibling panel ac1 (snippet-only twin).",
+      "name": "companionContainer",
+      "selector": "ac2@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Inspect button rendering selected skin detail; SERVED: clicked after L0 set to show skin preview (snippet-only twin).",
+      "name": "lockerInspectButton",
+      "selector": "ac6@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: rarity oval behind inspect preview; SERVED: rarity-indexed backdrop image behind skin preview (snippet-only twin).",
+      "name": "inspectRarityBackdrop",
+      "selector": "acb@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: weapon image swapped in preview; SERVED: weapon silhouette image beneath skin layer (snippet-only twin).",
+      "name": "inspectWeaponImage",
+      "selector": "acd@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: skin name text tinted by rarity; SERVED: skin name text colored by rarity (snippet-only twin).",
+      "name": "inspectNameText",
+      "selector": "ace@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: wear label updated in preview; SERVED: wear name text updated per selected skin (snippet-only twin).",
+      "name": "inspectWearText",
+      "selector": "acf@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: wear-colored badge behind labels; SERVED: wear-colored bar with muted color tweaks (snippet-only twin).",
+      "name": "inspectWearBadge",
+      "selector": "acg@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: constructs inspect preview scene objects; SERVED: builds preview assembly once at startup (snippet-only twin).",
+      "name": "buildInspectPreview",
+      "selector": "ach@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: capitalizes weapon names fixing shotgun; SERVED: uppercases weapon; shotguns get title case (snippet-only twin).",
+      "name": "formatWeaponName",
+      "selector": "aci@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: refreshes preview from selected skin; SERVED: refreshes preview images and labels per skin (snippet-only twin).",
+      "name": "updateInspectPreview",
+      "selector": "acj@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: rarity-indexed glow opacity steps; SERVED: maps rarity index to overlay opacity (snippet-only twin).",
+      "name": "rarityGlowOpacity",
+      "selector": "ack@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: builds positioned locker skin cards; SERVED: builds skin tile at grid position (snippet-only twin).",
+      "name": "buildSkinCard",
+      "selector": "acl@u2151#0"
+    }
+  ]
+}

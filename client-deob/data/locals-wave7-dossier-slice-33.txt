@@ -1,0 +1,126 @@
+# DOSSIER slice-33 (wave 7, 22 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/22] a3B@u2679#0 | kind=var depth=5 refCount=5 | characters/animation.js
+DECL @722 (verified):
+=ai1,a3o=ZC['RNQDluasaN'],a3p={};a3p['x']=0x2,a3p['y']=0x1;var a3q={};a3q['x']=0x0,a3q['y']=0x1;var a3r={};a3r['x']=0x1,a3r['y']=0x2;var a3s={};a3s['x']=0x1,a3s['y']=0x0;var a3t={};a3t['x']=0x1,a3t['y']=0x1;var a3u={};a3u['x']=0x3,a3u['y']=0x1;var a3v=[a3p,a3q,a3r,a3s,a3t,a3u];for(var a3w=0x0;a3w<0xc;a3w++){for(var a3x=0x0;a3x<a3o["faceVertexUvs"][0x0][a3w]['length'];a3x++){var a3y=a3o['faceVertexUvs'][0x0][a3w][a3x],a3z=a3v[Math['floor'](a3w/0x2)]['x'],a3A=a3v[Math["floor"](a3w/0x2)]['y'];a3A==0x1&&(a3z+=0x4);a3z=a3z%0x4,a3y['x']=a3y['x']*0x1/0x4+a3z/0x4,a3y['y']=a3y['y']*0x1/0x3+a3A/0x3;var [...line truncated...]
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/22] a3l@u2151#0 | kind=param depth=5 refCount=1 | combat/scope-crosshair.js
+DECL @16 (verified):
+function Ns(a3k,a3l){var arY=ai1,a3m=new tn(a3k,a3l);Kq['manager']=a3m,a3m['blur']=!![],Mo=a3m['scene']();!L1&&(Mo['name']='a');Mo["ReDNKHkwk"]=![],Mm=a3m["scene"]();!L1&&(Mm['name']='b');Mm['tGTnWzZUhv']=![],MJ=new a3k[("QtjDeukbWl")](0x0,0x0,0x780,0x438,"#000",0x0),MJ["opacity"]=0.7;var a3n=new a3k['QtjDeukbWl'](0x0,0x0,0x780,0x438,'#000',0x0);a3n['opacity']=0.05,a3n['opacity']=0x0,a3m['yhikrzIhlK'](MJ,function(agK){var arZ=arY;agK["width"]=Kq['WpuCzbdCUqV']['position']['x']-Kq["nwxurZsxI"]['position']['x'],agK["width"]*=1.1;}),a3m['yhikrzIhlK'](a3n,function(agK){var as0=arY;agK["width"]=Kq[[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/22] aga@u2151#0 | kind=function depth=6 refCount=0 | combat/scope-crosshair.js
+DECL @228644 (verified):
+Child'](ahh['elem']),a8L["overlay"]=![],HL(ahh['s'],"opacity",0x1,0x0,0x12c,0x0,0x0,function(){var awQ=awP;ahh['s']["visibility"]="hidden",ahh['s']['display']='none',ahh['elem']['remove']();}),Kq['oCcFxyWdyNa']?(Mn['ReDNKHkwk']=!![],Mn['tGTnWzZUhv']=!![],HL(Mn["r23ZS3L2g"],'opacity',Mn["r23ZS3L2g"]["opacity"],0x1,0x12c,0x0)):(afS['ReDNKHkwk']=!![],afS['tGTnWzZUhv']=!![],HL(afS["r23ZS3L2g"],'opacity',afS["r23ZS3L2g"]["opacity"],0x1,0x12c,0x0)),KI['ReDNKHkwk']=![],KI["tGTnWzZUhv"]=!![],HL(KI["r23ZS3L2g"],'opacity',0x1,0x0,0x12c,0x0);},KI['ReDNKHkwk']=![];function ag9(ahh){a8O(ag8,ahh);}function [...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/22] ahh@u2151#7 | kind=let depth=16 refCount=4 | combat/scope-crosshair.js
+DECL @129360 (verified):
+h']>0x1&&(ahb=0xc8,ahc=(-0x12c+0xc8*ah9)*0.6),aao["add"](Kt(aha["name"],aha['weapon'],ahc,-0x46,ahb,ahb));}aan['textObjects'][0x1]['setText'](ah8['name']),aan["textObjects"][0x3]["setText"](ah8["price"]),aan['onConfirm']=function(){var auF=auE,ahd={};ahd["sku"]=ah7,LX("/claimSku",ahd,function(ahe){var auG=auF;aan["overlay"]["ReDNKHkwk"]=![],a9M['onSceneSwitch'](),LU(aan['cancelButton']),LU(aan['okayButton']);if(ahe=="invalidsku")alert("Invalid item");else{if(ahe=='cantafford')alert('Not\x20enough\x20gems');else{if(ahe=='hasitems')alert('Item(s)\x20already\x20owned');else{if(ahe=='ok'){for(let [...line truncated...]
+USES: refCount=4, 297 token-occurrences in unit, showing 8 nearest outside DECL window:
+@146988: 1&&tu("hoverover"),abA=ahc,ahd=![]);var ahe;if(abB!=ahb){var ahf=abe[0x0];abe['splice'](0x0,0x1),abe['push'](ahf),abB=ahb;}for(var ahg=0x0;ahg<abe["length"];ahg++){abe[ahg]['position']['x']=ahg*abh-abg/0x2*abh;if(abz[ahb+ahg]==undefined)continue;var ahh=abz[ahb+ahg];if(ahd){if(pX[ahh['name']]!=undefined){abe[ahg]['text']['setText'](pX[ahh["name"]]["name"]),abe[ahg]["weaponText"]["setText"](ahh['weapon']["toUpperCase"]());var ahi=ahh['name'];pX[ahi]["useLink"]!=undefined&&(ahi=pX[ahi]['useLink'])
+@147019: ![]);var ahe;if(abB!=ahb){var ahf=abe[0x0];abe['splice'](0x0,0x1),abe['push'](ahf),abB=ahb;}for(var ahg=0x0;ahg<abe["length"];ahg++){abe[ahg]['position']['x']=ahg*abh-abg/0x2*abh;if(abz[ahb+ahg]==undefined)continue;var ahh=abz[ahb+ahg];if(ahd){if(pX[ahh['name']]!=undefined){abe[ahg]['text']['setText'](pX[ahh["name"]]["name"]),abe[ahg]["weaponText"]["setText"](ahh['weapon']["toUpperCase"]());var ahi=ahh['name'];pX[ahi]["useLink"]!=undefined&&(ahi=pX[ahi]['useLink']),abe[ahg]["gun"]['image']=a3k['
+@147075: (0x0,0x1),abe['push'](ahf),abB=ahb;}for(var ahg=0x0;ahg<abe["length"];ahg++){abe[ahg]['position']['x']=ahg*abh-abg/0x2*abh;if(abz[ahb+ahg]==undefined)continue;var ahh=abz[ahb+ahg];if(ahd){if(pX[ahh['name']]!=undefined){abe[ahg]['text']['setText'](pX[ahh["name"]]["name"]),abe[ahg]["weaponText"]["setText"](ahh['weapon']["toUpperCase"]());var ahi=ahh['name'];pX[ahi]["useLink"]!=undefined&&(ahi=pX[ahi]['useLink']),abe[ahg]["gun"]['image']=a3k['getTempImage'](Ks+ahi+ahh["weapon"]+'.webp',function(){}
+@147131: abe["length"];ahg++){abe[ahg]['position']['x']=ahg*abh-abg/0x2*abh;if(abz[ahb+ahg]==undefined)continue;var ahh=abz[ahb+ahg];if(ahd){if(pX[ahh['name']]!=undefined){abe[ahg]['text']['setText'](pX[ahh["name"]]["name"]),abe[ahg]["weaponText"]["setText"](ahh['weapon']["toUpperCase"]());var ahi=ahh['name'];pX[ahi]["useLink"]!=undefined&&(ahi=pX[ahi]['useLink']),abe[ahg]["gun"]['image']=a3k['getTempImage'](Ks+ahi+ahh["weapon"]+'.webp',function(){}),abe[ahg]["gunBackground"]['image']=Nl[ahh["weapon"]],a
+@147171: ]['x']=ahg*abh-abg/0x2*abh;if(abz[ahb+ahg]==undefined)continue;var ahh=abz[ahb+ahg];if(ahd){if(pX[ahh['name']]!=undefined){abe[ahg]['text']['setText'](pX[ahh["name"]]["name"]),abe[ahg]["weaponText"]["setText"](ahh['weapon']["toUpperCase"]());var ahi=ahh['name'];pX[ahi]["useLink"]!=undefined&&(ahi=pX[ahi]['useLink']),abe[ahg]["gun"]['image']=a3k['getTempImage'](Ks+ahi+ahh["weapon"]+'.webp',function(){}),abe[ahg]["gunBackground"]['image']=Nl[ahh["weapon"]],abe[ahg]["gun"]['position']['y']=abe[ahg]
+@147291: d){abe[ahg]['text']['setText'](pX[ahh["name"]]["name"]),abe[ahg]["weaponText"]["setText"](ahh['weapon']["toUpperCase"]());var ahi=ahh['name'];pX[ahi]["useLink"]!=undefined&&(ahi=pX[ahi]['useLink']),abe[ahg]["gun"]['image']=a3k['getTempImage'](Ks+ahi+ahh["weapon"]+'.webp',function(){}),abe[ahg]["gunBackground"]['image']=Nl[ahh["weapon"]],abe[ahg]["gun"]['position']['y']=abe[ahg]['gun']['oldY'],ahh['weapon']=='awp'&&(abe[ahg]['gun']['position']['y']+=0xa),ahh['weapon']=="smg"&&(abe[ahg]['gun']['po
+@147365: xt"]["setText"](ahh['weapon']["toUpperCase"]());var ahi=ahh['name'];pX[ahi]["useLink"]!=undefined&&(ahi=pX[ahi]['useLink']),abe[ahg]["gun"]['image']=a3k['getTempImage'](Ks+ahi+ahh["weapon"]+'.webp',function(){}),abe[ahg]["gunBackground"]['image']=Nl[ahh["weapon"]],abe[ahg]["gun"]['position']['y']=abe[ahg]['gun']['oldY'],ahh['weapon']=='awp'&&(abe[ahg]['gun']['position']['y']+=0xa),ahh['weapon']=="smg"&&(abe[ahg]['gun']['position']['y']-=0x5),abe[ahg]['wearText']['setText'](a9t[ahh['wear']]),abe[
+@111297: ['value']=ahg;function ahh(ahi){var aud=auc;ahi=Number(ahi),ahi=Jh(ahi,Number(ah9),Number(aha)),ahe["value"]=ahf["value"]=ahi,a91(ah8,ahi),a94();}return ahe["oninput"]=function(){var aue=auc;ahh(ahe["value"]);},ahf['onchange']=function(){var auf=auc;ahh(ahf["value"]);},ah6['appendChild'](ahd),ahd;}function a96(ah6){var aug=arY;return ah6=Jh(Math['round'](Number(ah6)),0x0,0xff),('0'+ah6["toString"](0x10))['slice'](-0x2);}function a97(){return'#'+a96(a90('xhairred',0xee))+a96(a90('xhairgreen',0xee
+==============================================================================
+[5/22] a3j@u0351#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @16 (verified):
+function t7(a3i,a3j,a3k){return 0x3*t3(a3j,a3k)*a3i*a3i+0x2*t4(a3j,a3k)*a3i+t5(a3j);}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/22] a3k@u0351#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @20 (verified):
+function t7(a3i,a3j,a3k){return 0x3*t3(a3j,a3k)*a3i*a3i+0x2*t4(a3j,a3k)*a3i+t5(a3j);}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/22] a3i@u0348#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function t4(a3i,a3j){return 0x3*a3j-0x6*a3i;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/22] a3j@u0348#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @16 (verified):
+function t4(a3i,a3j){return 0x3*a3j-0x6*a3i;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/22] a3p@u2131#0 | kind=param depth=5 refCount=0 | characters/animation.js
+DECL @42 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/22] a3q@u2131#0 | kind=param depth=5 refCount=2 | characters/animation.js
+DECL @46 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/22] a3r@u2131#0 | kind=param depth=5 refCount=0 | characters/animation.js
+DECL @50 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/22] a3s@u2131#0 | kind=param depth=5 refCount=0 | characters/animation.js
+DECL @54 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/22] a3l@u2300#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function S4(a3l){a3l?S3['hCVrxoItOl']():S3['piylfJrZJ']();}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/22] a3o@u2740#0 | kind=param depth=5 refCount=1 | network/handlers.js
+DECL @23 (verified):
+'M35Oru2OB05':function(a3o){var aCa=ai1;a12!=null&&(a12['pkghYgdlX']['authChallengeReceived']=!![],a1e("pkghYgdlX-auth-challenge-received",{}));if(ND!=undefined&&ND['length']>0x0){J3['F79la8l54']["string"]=ND,J3["F79la8l54"]['afCJVYrCGK']=!![];var a3p=new ArrayBuffer(J3["F79la8l54"]['preStrSize']+J3["F79la8l54"]["string"]["length"]+0x2),a3q=new DataView(a3p);Je(J3["F79la8l54"],a3q),OF['push'](a3p),setTimeout(function(){OF['push'](a3p),a0d();},0x3e8);}if(Kq['GJklRqbLTCs']){J3["oR7qa621M3"]['string']=a1y,J3['oR7qa621M3']['t']=Kq['aMWaisFtZ']["length"]+0x1,J3["oR7qa621M3"]["afCJVYrCGK"]=!![];var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@803: "]+0x1,J3["oR7qa621M3"]["afCJVYrCGK"]=!![];var a3r=new ArrayBuffer(J3['oR7qa621M3']["preStrSize"]+J3['oR7qa621M3']["string"]['length']+0x2),a3s=new DataView(a3r);Je(J3['oR7qa621M3'],a3s),a0J&&OF['push'](a3r);}J3['o746s7cvb9']['val']=I0(Math['round'](a3o["val"])),J3['o746s7cvb9']['lpm']=PH,J3['o746s7cvb9']['priv']=Kq['AhUnLeUeD']?0x3:0x0,J3['o746s7cvb9']['pmap']=FO['indexOf'](Kq["partyInfo"]['map']),J3["o746s7cvb9"]['ituyDAEpKW']=FP['indexOf'](Kq['partyInfo']['mode']),J3["o746s7cvb9"]['PSPGZlgWAc
+==============================================================================
+[15/22] textureID@u0026#0 | kind=param depth=5 refCount=2 | engine/shaders.js
+DECL @38 (verified):
+usvzFuAsEB.ShaderPass=function(shader,textureID){usvzFuAsEB.Pass.call(this);this.textureID=textureID!==undefined?textureID:'tDiffuse';if(shader instanceof usvzFuAsEB.wPChizNknM){this.uniforms=shader.uniforms;this.material=shader;}else if(shader){this.uniforms=usvzFuAsEB.UniformsUtils.clone(shader.uniforms);this.material=new usvzFuAsEB.wPChizNknM({defines:Object.assign({},shader.defines),uniforms:this.uniforms,vertexShader:shader.vertexShader,fragmentShader:shader.fragmentShader});}this.fsQuad=new usvzFuAsEB.Pass.FullScreenQuad(this.material);};
+USES: refCount=2, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/22] Sl@u2321#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @13 (verified):
+var Si,Sj,Sk,Sl,Sm,Sn=NJ([-0x6a,-0x65,-0x6b,-0x59,-0x5e,-0x69,-0x6a,-0x57,-0x68,-0x6a]),So=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/22] Sm@u2321#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @16 (verified):
+var Si,Sj,Sk,Sl,Sm,Sn=NJ([-0x6a,-0x65,-0x6b,-0x59,-0x5e,-0x69,-0x6a,-0x57,-0x68,-0x6a]),So=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/22] a3j@u0141#0 | kind=param depth=5 refCount=0 | ui/widgets.js
+DECL @16 (verified):
+function qh(a3i,a3j,a3k,a3l,a3m,a3n){var anB=ai1;const a3o=a3i['data'],a3p=0x2*a3n+0x1,a3q=a3l-0x1,a3r=a3m-0x1,a3s=a3n+0x1,a3t=a3s*(a3s+0x1)/0x2,a3u=new qi();let a3v=a3u,a3w;for(let a3F=0x1;a3F<a3p;a3F++){a3v=a3v["next"]=new qi(),a3F===a3s&&(a3w=a3v);}a3v['next']=a3u;let a3x=null,a3y=null;const a3z=qa[a3n],a3A=qb[a3n];let a3B,a3C,a3D=0x0,a3E=0x0;for(let a3G=0x0;a3G<a3m;a3G++){let a3H=a3o[a3E],a3I=a3o[a3E+0x1],a3J=a3o[a3E+0x2],a3K=a3s*a3H,a3L=a3s*a3I,a3M=a3s*a3J,a3N=a3t*a3H,a3O=a3t*a3I,a3P=a3t*a3J;a3v=a3u;for(let a3T=0x0;a3T<a3s;a3T++){a3v['r']=a3H,a3v['g']=a3I,a3v['b']=a3J,a3v=a3v["next"];}let[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/22] a3k@u0141#0 | kind=param depth=5 refCount=0 | ui/widgets.js
+DECL @20 (verified):
+function qh(a3i,a3j,a3k,a3l,a3m,a3n){var anB=ai1;const a3o=a3i['data'],a3p=0x2*a3n+0x1,a3q=a3l-0x1,a3r=a3m-0x1,a3s=a3n+0x1,a3t=a3s*(a3s+0x1)/0x2,a3u=new qi();let a3v=a3u,a3w;for(let a3F=0x1;a3F<a3p;a3F++){a3v=a3v["next"]=new qi(),a3F===a3s&&(a3w=a3v);}a3v['next']=a3u;let a3x=null,a3y=null;const a3z=qa[a3n],a3A=qb[a3n];let a3B,a3C,a3D=0x0,a3E=0x0;for(let a3G=0x0;a3G<a3m;a3G++){let a3H=a3o[a3E],a3I=a3o[a3E+0x1],a3J=a3o[a3E+0x2],a3K=a3s*a3H,a3L=a3s*a3I,a3M=a3s*a3J,a3N=a3t*a3H,a3O=a3t*a3I,a3P=a3t*a3J;a3v=a3u;for(let a3T=0x0;a3T<a3s;a3T++){a3v['r']=a3H,a3v['g']=a3I,a3v['b']=a3J,a3v=a3v["next"];}let[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/22] VN@u2483#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var VN=0x50,VO=NJ([-0x63,-0x65,-0x6c,-0x5b,-0x63,-0x5b,-0x64,-0x6a,-0x4e]);
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/22] a3o@u2776#0 | kind=param depth=5 refCount=0 | network/handlers.js
+DECL @21 (verified):
+'COCjGf0Sf':function(a3o){},
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/22] Wj@u2506#0 | kind=var depth=3 refCount=0 | core/constants.js
+DECL @37 (verified):
+var QP,Wg=G5,Wh=0x3e8/G5,Wi=0x3e8/Wb,Wj=Wi,Wk=getTime(),Wl=0x21*G3,Wm=getTime(),Wn=[],Wo=[],Wp=[];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-33: propose EVERY binding above.

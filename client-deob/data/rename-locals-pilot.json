@@ -1,0 +1,59 @@
+{
+ "batch": "L1P",
+ "proposals": [
+  {
+   "confidence": "high",
+   "evidence": "u0417 combat/raycast.js: factory function threeRaycaster(origin,klYMxzxpTL) stores it as this.klYMxzxpTL (ray direction vector); property positions untouched by design",
+   "proposedName": "direction",
+   "token": "klYMxzxpTL",
+   "unit": "u0417",
+   "verdict": "rename",
+   "index": 0
+  },
+  {
+   "confidence": "high",
+   "evidence": "u0417 combat/raycast.js: set method set:function(origin,klYMxzxpTL){this.origin=origin;this.klYMxzxpTL=klYMxzxpTL;...} \u2014 same role as #0 in a disjoint scope (duplicate-name machinery check)",
+   "proposedName": "direction",
+   "token": "klYMxzxpTL",
+   "unit": "u0417",
+   "verdict": "rename",
+   "index": 1
+  },
+  {
+   "confidence": "high",
+   "evidence": "u0417 combat/raycast.js: setFromCamera:function(x,y,aKmLbYuMC) guards aKmLbYuMC.isPerspectiveCamera / isOrthographicCamera \u2014 the camera argument",
+   "proposedName": "camera",
+   "token": "aKmLbYuMC",
+   "unit": "u0417",
+   "verdict": "rename",
+   "index": 0
+  },
+  {
+   "confidence": "high",
+   "evidence": "u0417 combat/raycast.js kAnjdtJLio (Moller-Trumbore ray-triangle): DdN=direction.dot(normal) sign-flipped to |det|; scales u=DdQxE2/DdN v=DdE1xQ/DdN t=QdN/DdN",
+   "proposedName": "absDet",
+   "token": "DdN",
+   "unit": "u0417",
+   "verdict": "rename",
+   "index": 0
+  },
+  {
+   "confidence": "high",
+   "evidence": "u0417 combat/raycast.js KSqqDBREn mesh loop: BhSKyEIxpfR=this.checkIntersection(object,...); gets .face/.index assigned on non-null \u2014 the per-face hit record",
+   "proposedName": "faceHit",
+   "token": "BhSKyEIxpfR",
+   "unit": "u0417",
+   "verdict": "rename",
+   "index": 0
+  },
+  {
+   "confidence": "high",
+   "evidence": "u0417 KSqqDBREn: for(var f=0,fl=faceIndices.length;f<fl;f++) \u2014 idiomatic loop counter, keep",
+   "proposedName": "f",
+   "token": "f",
+   "unit": "u0417",
+   "verdict": "keep",
+   "index": 0
+  }
+ ]
+}

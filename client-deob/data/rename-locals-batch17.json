@@ -1,0 +1,1843 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 17,
+  "date": "2026-09-28",
+  "merged": 4,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 176,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @738917 SphericalHarmonics3.getBasisAt(normal,shBasis) param; canonical three.js API name, already readable.",
+   "name": "shBasis",
+   "selector": "shBasis@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @387316 var shaderID=shaderIDs[material.type]; idiomatic shader lookup id, already readable.",
+   "name": "shaderID",
+   "selector": "shaderID@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @393001 var shaderID=shaderIDs[material.type] in getUniforms; idiomatic, already readable.",
+   "name": "shaderID",
+   "selector": "shaderID@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @384760 var shaderIDs={MeshDepthMaterial:...}; material-type->shader map, already readable.",
+   "name": "shaderIDs",
+   "selector": "shaderIDs@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @879327 var shaderMaterial=new ShaderMaterial({name:'SphericalGaussianBlur'...}) in _getBlurShader; already readable.",
+   "name": "shaderMaterial",
+   "selector": "shaderMaterial@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @881552 var shaderMaterial=new ShaderMaterial({name:'EquirectangularToCubeUV'...}); already readable.",
+   "name": "shaderMaterial",
+   "selector": "shaderMaterial@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @883032 var shaderMaterial=new ShaderMaterial({name:'CubemapToCubeUV'...}); already readable.",
+   "name": "shaderMaterial",
+   "selector": "shaderMaterial@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @400490 var shadow=light.shadow; USES shadowCache.get/bias/radius; canonical engine term.",
+   "name": "shadow",
+   "selector": "shadow@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @412758 var shadow=light.shadow in WebGLShadowMap.render loop, 27 refs; canonical engine term.",
+   "name": "shadow",
+   "selector": "shadow@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @414862 VSMPass(shadow,camera) param; USES shadow.map/mapPass/radius; canonical engine term.",
+   "name": "shadow",
+   "selector": "shadow@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @398976 var shadowCache=ShadowUniformsCache() in WebGLLights; USES shadowCache.get(light) x3; already readable.",
+   "name": "shadowCache",
+   "selector": "shadowCache@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @418406 renderObject(object,camera,shadowCamera,light,type) param; USES shadowCamera.near/far; canonical engine term.",
+   "name": "shadowCamera",
+   "selector": "shadowCamera@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @726817 var shadowCamera=this.camera in LightShadow.updateMatrices; USES projectionMatrix/matrixWorld; canonical.",
+   "name": "shadowCamera",
+   "selector": "shadowCamera@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @416396 getDepthMaterial(...,shadowCameraNear,shadowCameraFar,...) param; USES result.farDistance; already readable.",
+   "name": "shadowCameraFar",
+   "selector": "shadowCameraFar@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @416379 getDepthMaterial(...,shadowCameraNear,...) param; USES result.nearDistance; already readable.",
+   "name": "shadowCameraNear",
+   "selector": "shadowCameraNear@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @398801 function shadowCastingLightsFirst(lightA,lightB) comparator; USES lights.sort(...); already readable.",
+   "name": "shadowCastingLightsFirst",
+   "selector": "shadowCastingLightsFirst@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @412982 var shadowFrameExtents=shadow.getFrameExtents(); 5 refs scaling shadow map size; already readable.",
+   "name": "shadowFrameExtents",
+   "selector": "shadowFrameExtents@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @407038 pushShadow(shadowLight){shadowsArray.push(shadowLight);}; already readable.",
+   "name": "shadowLight",
+   "selector": "shadowLight@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @400066 var shadowMap=light.shadow&&light.shadow.map?...texture:null; stored into directional/spot/pointShadowMap; canonical.",
+   "name": "shadowMap",
+   "selector": "shadowMap@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @492861 var shadowMap=new WebGLShadowMap(...); this.shadowMap=shadowMap; canonical engine term.",
+   "name": "shadowMap",
+   "selector": "shadowMap@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @371068 generateShadowMapTypeDefine returns SHADOWMAP_TYPE_* string; already readable.",
+   "name": "shadowMapTypeDefine",
+   "selector": "shadowMapTypeDefine@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @372662 var shadowMapTypeDefine=generateShadowMapTypeDefine(parameters); emitted as #define; already readable.",
+   "name": "shadowMapTypeDefine",
+   "selector": "shadowMapTypeDefine@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @411789 var shadowMaterialHorizontal=shadowMaterialVertical.clone(); VSM blur pass material; already readable.",
+   "name": "shadowMaterialHorizontal",
+   "selector": "shadowMaterialHorizontal@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @411561 var shadowMaterialVertical=new ShaderMaterial({SAMPLE_RATE...}); VSM blur pass; already readable.",
+   "name": "shadowMaterialVertical",
+   "selector": "shadowMaterialVertical@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @726845 var shadowMatrix=this.matrix in LightShadow.updateMatrices; bias*proj*view; canonical engine term.",
+   "name": "shadowMatrix",
+   "selector": "shadowMatrix@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @730705 var shadowMatrix=this.matrix in PointLightShadow.updateMatrices; makeTranslation; canonical.",
+   "name": "shadowMatrix",
+   "selector": "shadowMatrix@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @411508 var shadowSide={0:BackSide,1:FrontSide,2:DoubleSide}; canonical three.js side-flip map.",
+   "name": "shadowSide",
+   "selector": "shadowSide@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @400514 var shadowUniforms=shadowCache.get(light); bias/radius/mapSize filled; already readable.",
+   "name": "shadowUniforms",
+   "selector": "shadowUniforms@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @310505 var shadow_frag='uniform vec3 color...'; ShaderChunk.shadow_frag source string; canonical chunk name.",
+   "name": "shadow_frag",
+   "selector": "shadow_frag@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @310940 var shadow_vert='#include <common>...'; ShaderChunk.shadow_vert source string; canonical chunk name.",
+   "name": "shadow_vert",
+   "selector": "shadow_vert@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @103079 serialize(library,element) + library[element.uuid] cache dict; already-readable cache/registry term, no cryptic token.",
+   "name": "library",
+   "selector": "library@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @397456 UniformsCache get(light) + lights[light.id]/light.type switch; canonical three.js Light term.",
+   "name": "light",
+   "selector": "light@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @398246 ShadowUniformsCache get(light) + lights[light.id]/light.type switch; canonical three.js Light term.",
+   "name": "light",
+   "selector": "light@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @399958 var light=lights[_i2] loop over lights + 46 refs (color/intensity/shadow/type dispatch); canonical loop light var.",
+   "name": "light",
+   "selector": "light@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @405161 setupView loop var light=lights[_i3] + 16 refs (matrixWorld/target/width/height per-type); canonical loop light var.",
+   "name": "light",
+   "selector": "light@u0020#3",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @406979 pushLight(light) pushes to lightsArray; canonical Light param name.",
+   "name": "light",
+   "selector": "light@u0020#4",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @412738 shadow render loop var light=lights[i] + light.shadow/light.name/updateMatrices; canonical loop light var.",
+   "name": "light",
+   "selector": "light@u0020#5",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @416373 getDepthMaterial(...,light,...) + light.isPointLight/matrixWorld checks; canonical Light param.",
+   "name": "light",
+   "selector": "light@u0020#6",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @418419 renderObject(...,light,type) + pass-through to getDepthMaterial/recursion; canonical Light param.",
+   "name": "light",
+   "selector": "light@u0020#7",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @726806 LightShadow.updateMatrices(light) + light.matrixWorld/target.matrixWorld; canonical three.js API param.",
+   "name": "light",
+   "selector": "light@u0020#8",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @728521 SpotLightShadow.updateMatrices(light) + light.angle/distance/fov derive; canonical three.js API param.",
+   "name": "light",
+   "selector": "light@u0020#9",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @730611 PointLightShadow.updateMatrices(light,viewportIndex) + light.matrixWorld; canonical three.js API param.",
+   "name": "light",
+   "selector": "light@u0020#10",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @734785 DirectionalLightShadow.updateMatrices(light) passthrough to base; canonical three.js API param.",
+   "name": "light",
+   "selector": "light@u0020#11",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @847911 SpotLightHelper(light,color) + this.light=light/matrixWorld; canonical helper Light param.",
+   "name": "light",
+   "selector": "light@u0020#12",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @851401 PointLightHelper(light,sphereSize,color) + this.light=light; canonical helper Light param.",
+   "name": "light",
+   "selector": "light@u0020#13",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @852304 HemisphereLightHelper(light,size,color) ctor param + _this.light=light/matrixWorld; canonical three.js Light param.",
+   "name": "light",
+   "selector": "light@u0020#14",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @856377 DirectionalLightHelper(light,size,color) ctor param + _this.light=light/matrixWorld; canonical three.js Light param.",
+   "name": "light",
+   "selector": "light@u0020#15",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @398826 shadowCastingLightsFirst(lightA,lightB) comparator + lightA.castShadow; idiomatic sort-comparator pair name.",
+   "name": "lightA",
+   "selector": "lightA@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @398833 shadowCastingLightsFirst(lightA,lightB) comparator + lightB.castShadow; idiomatic sort-comparator pair name.",
+   "name": "lightB",
+   "selector": "lightB@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @726938 LightShadow.updateMatrices alias lightPositionWorld=this._lightPositionWorld + setFromMatrixPosition/copy; well-known engine term.",
+   "name": "lightPositionWorld",
+   "selector": "lightPositionWorld@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @730730 PointLightShadow.updateMatrices alias lightPositionWorld=this._lightPositionWorld + 5 refs (position copy/translate); well-known engine term.",
+   "name": "lightPositionWorld",
+   "selector": "lightPositionWorld@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @228074 var lightmap_fragment GLSL chunk string + ShaderChunk registry/#include <lightmap_fragment>; canonical three.js chunk name.",
+   "name": "lightmap_fragment",
+   "selector": "lightmap_fragment@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @228284 var lightmap_pars_fragment GLSL chunk string + ShaderChunk registry/#include refs; canonical three.js chunk name.",
+   "name": "lightmap_pars_fragment",
+   "selector": "lightmap_pars_fragment@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @122738 Color.getHSL var lightness=(min+max)/2 alongside hue/saturation; canonical HSL component name.",
+   "name": "lightness",
+   "selector": "lightness@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @387140 getParameters(material,lights,...) + 8 refs (numDirLights/lights.directional...); canonical three.js lights-state param.",
+   "name": "lights",
+   "selector": "lights@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @397422 UniformsCache var lights={} dict keyed by light.id + get(light) lookups; canonical three.js cache name.",
+   "name": "lights",
+   "selector": "lights@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @398212 ShadowUniformsCache var lights={} dict keyed by light.id + get(light) lookups; canonical three.js cache name.",
+   "name": "lights",
+   "selector": "lights@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @399629 setup(lights) param + lights.sort/lights.length iteration; canonical lights-array param.",
+   "name": "lights",
+   "selector": "lights@u0020#3",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @404962 setupView(lights,camera) param + lights.length loop with per-type view setup; canonical lights-array param.",
+   "name": "lights",
+   "selector": "lights@u0020#4",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @406813 WebGLRenderState var lights=new WebGLLights(...) + setupLights/setupLightsView calls; canonical three.js state name.",
+   "name": "lights",
+   "selector": "lights@u0020#5",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @324946 WebGLBackground(qIySEZgti,cubemaps,...) param; USES cubemaps.get(background) — canonical WebGLCubeMaps service name, idiomatic.",
+   "name": "cubemaps",
+   "selector": "cubemaps@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @343905 var cubemaps=new WeakMap() in WebGLCubeMaps; USES has/get/set/delete — readable cache name, idiomatic.",
+   "name": "cubemaps",
+   "selector": "cubemaps@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @384391 WebGLPrograms(qIySEZgti,cubemaps,...) param; USES cubemaps.get(envMap||environment) — same canonical service name.",
+   "name": "cubemaps",
+   "selector": "cubemaps@u0020#2",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @490634 renderer-scope var cubemaps; USES new WebGLCubeMaps, passed to Programs/Background, dispose — well-known engine term.",
+   "name": "cubemaps",
+   "selector": "cubemaps@u0020#3",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @429081 setCullFace(cullFace) param; USES compared vs CullFaceNone, enables GL cull — canonical GL/engine term.",
+   "name": "cullFace",
+   "selector": "cullFace@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @596212 function cureLocalIntersections(start,triangles,dim) earcut routine; USES pass===1 call — descriptive domain name.",
+   "name": "cureLocalIntersections",
+   "selector": "cureLocalIntersections@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @673265 var currTime=times[i] in KeyframeTrack.validate; USES numeric/NaN/ordering checks — readable loop temp.",
+   "name": "currTime",
+   "selector": "currTime@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @698178 var current,last=getPoint(0) in getLengths arc-length accumulation; USES point iteration — idiomatic temp.",
+   "name": "current",
+   "selector": "current@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @349015 var currentAttribute=wireframeAttributes.get(...); USES null-check/return — readable cache lookup name.",
+   "name": "currentAttribute",
+   "selector": "currentAttribute@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @325067 var currentBackground=null in WebGLBackground; USES identity/version/toneMapping staleness checks — idiomatic state cache.",
+   "name": "currentBackground",
+   "selector": "currentBackground@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @325094 var currentBackgroundVersion=0; USES compared vs background.version, reassigned — idiomatic version cache.",
+   "name": "currentBackgroundVersion",
+   "selector": "currentBackgroundVersion@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @423000 var currentBlendDst in WebGLState; USES blendFuncSeparate caching + reset — canonical GL state cache name.",
+   "name": "currentBlendDst",
+   "selector": "currentBlendDst@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @423090 var currentBlendDstAlpha; USES blendFuncSeparate caching + reset — canonical GL state cache name.",
+   "name": "currentBlendDstAlpha",
+   "selector": "currentBlendDstAlpha@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @422945 var currentBlendEquation; USES blendEquation/Separate caching + reset — canonical GL state cache name.",
+   "name": "currentBlendEquation",
+   "selector": "currentBlendEquation@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @423025 var currentBlendEquationAlpha; USES blendEquation/Separate caching + reset — canonical GL state cache name.",
+   "name": "currentBlendEquationAlpha",
+   "selector": "currentBlendEquationAlpha@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @422975 var currentBlendSrc; USES blendFuncSeparate caching + reset — canonical GL state cache name.",
+   "name": "currentBlendSrc",
+   "selector": "currentBlendSrc@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @423060 var currentBlendSrcAlpha; USES blendFuncSeparate caching + reset — canonical GL state cache name.",
+   "name": "currentBlendSrcAlpha",
+   "selector": "currentBlendSrcAlpha@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @422920 var currentBlending; USES NoBlending/CustomBlending dispatch + reset — canonical GL state cache name.",
+   "name": "currentBlending",
+   "selector": "currentBlending@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @422888 var currentBlendingEnabled; USES enable/disable(3042) caching + reset — canonical GL state cache name.",
+   "name": "currentBlendingEnabled",
+   "selector": "currentBlendingEnabled@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @423702 var currentBoundTextures={}; USES bindTexture/unbind/reset slot cache — descriptive cache name.",
+   "name": "currentBoundTextures",
+   "selector": "currentBoundTextures@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @419825 var currentColorClear in ColorBuffer; USES clear-color caching — canonical GL state cache name.",
+   "name": "currentColorClear",
+   "selector": "currentColorClear@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @419799 var currentColorMask in ColorBuffer; USES color-mask caching — canonical GL state cache name.",
+   "name": "currentColorMask",
+   "selector": "currentColorMask@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @325125 var currentTonemapping; USES compared vs renderer.toneMapping staleness check — idiomatic state cache.",
+   "name": "currentTonemapping",
+   "selector": "currentTonemapping@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @761986 var currentUrl=url[j] in texture-array deserialization loop; USES deserializeImage(currentUrl) — idiomatic loop temp.",
+   "name": "currentUrl",
+   "selector": "currentUrl@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @127922 var currentValue=this[key] in Material.setValues; USES undefined-check + copy/assign — idiomatic temp.",
+   "name": "currentValue",
+   "selector": "currentValue@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @423763 var currentViewport in WebGLState; USES viewport() equals/copy caching — canonical GL state cache name.",
+   "name": "currentViewport",
+   "selector": "currentViewport@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @796805 var currentWeight=cumulativeWeight in PropertyMixer.accumulate; USES zero-check + mix math — descriptive domain name.",
+   "name": "currentWeight",
+   "selector": "currentWeight@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @189216 var currentXrEnabled=xr flag save in CubeCamera.update; USES restored after cubemap renders — descriptive save/restore name.",
+   "name": "currentXrEnabled",
+   "selector": "currentXrEnabled@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @718107 CurvePath.add(curve) param; USES this.curves.push(curve) — canonical domain term.",
+   "name": "curve",
+   "selector": "curve@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @718554 var curve=this.curves[i] in CurvePath.getPoint; USES getLength/getPoint segment math — canonical domain term.",
+   "name": "curve",
+   "selector": "curve@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @571303 hasFaceVertexUv=this.faceVertexUvs[0][_i12]!==undefined; USES gates face-vertex-UV index push @572005 — descriptive boolean, keep.",
+   "name": "hasFaceVertexUv",
+   "selector": "hasFaceVertexUv@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @146384 hasFaceVertexUv2=faceVertexUvs[1]&&len>0; USES gates uvs2 push @148206 — descriptive boolean, keep.",
+   "name": "hasFaceVertexUv2",
+   "selector": "hasFaceVertexUv2@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @592957 hasHoles=holeIndices&&holeIndices.length in Earcut.triangulate; refCount=2 — descriptive boolean, keep.",
+   "name": "hasHoles",
+   "selector": "hasHoles@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @755642 hasImages=false scanned over parsed images in ObjectLoader.parse; refCount=2 — descriptive boolean, keep.",
+   "name": "hasImages",
+   "selector": "hasImages@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @571262 hasMaterial=true in Geometry.toJSON face loop; refCount=1 — descriptive boolean, keep.",
+   "name": "hasMaterial",
+   "selector": "hasMaterial@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @166774 hasMorphAttributes=false scanned over morphAttributes in toJSON; refCount=2 — descriptive boolean, keep.",
+   "name": "hasMorphAttributes",
+   "selector": "hasMorphAttributes@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @147134 hasSkinIndices=skinIndices.length===vertices.length; USES gates skinIndices push @148863 — descriptive boolean, keep.",
+   "name": "hasSkinIndices",
+   "selector": "hasSkinIndices@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @147191 hasSkinWeights=skinWeights.length===vertices.length; USES gates skinWeights push @148966 — descriptive boolean, keep.",
+   "name": "hasSkinWeights",
+   "selector": "hasSkinWeights@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @555483 hasVideoFrameCallback='requestVideoFrameCallback'in video; refCount=1 — descriptive boolean, keep.",
+   "name": "hasVideoFrameCallback",
+   "selector": "hasVideoFrameCallback@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @403715 hash=state.hash; USES compare+assign light-count hash fields @404633-404878 (refCount=16) — canonical lights-state hash name, keep.",
+   "name": "hash",
+   "selector": "hash@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @572756 hash=normal xyz concat key in getNormalIndex; USES normalsHash lookups (refCount=4) — idiomatic dedupe key, keep.",
+   "name": "hash",
+   "selector": "hash@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @573017 hash=color rgb concat key in getColorIndex; USES colorsHash lookups (refCount=4) — idiomatic dedupe key, keep.",
+   "name": "hash",
+   "selector": "hash@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @573249 hash=uv xy concat key in getUvIndex; USES uvsHash lookups (refCount=4) — idiomatic dedupe key, keep.",
+   "name": "hash",
+   "selector": "hash@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @592062 hash=vecHash0+'_'+vecHash1 edge key in EdgesGeometry; USES edgeData lookup (refCount=2) — idiomatic edge key, keep.",
+   "name": "hash",
+   "selector": "hash@u0020#4",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @591069 hashes=new Array(3) per-triangle vertex keys; USES rounded-xyz fills + degenerate compare @591727-591957 (refCount=11) — descriptive, keep.",
+   "name": "hashes",
+   "selector": "hashes@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @382916 haveDiagnostics=true in shader program link diagnostics; refCount=2 — descriptive boolean, keep.",
+   "name": "haveDiagnostics",
+   "selector": "haveDiagnostics@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @865638 headLength param of ArrowHelper ctor; USES default 0.2*length + setLength fwd — canonical three.js ArrowHelper API name, keep.",
+   "name": "headLength",
+   "selector": "headLength@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @866951 headLength param of ArrowHelper.setLength; USES cone/line scaling @866976-867186 (refCount=5) — canonical API name, keep.",
+   "name": "headLength",
+   "selector": "headLength@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @865649 headWidth param of ArrowHelper ctor; USES default 0.2*headLength + setLength fwd — canonical three.js ArrowHelper API name, keep.",
+   "name": "headWidth",
+   "selector": "headWidth@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @866962 headWidth param of ArrowHelper.setLength; USES cone.scale @867024-867197 (refCount=4) — canonical API name, keep.",
+   "name": "headWidth",
+   "selector": "headWidth@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @178923 heightHalf=height/2 beside widthHalf/depthHalf in BoxBufferGeometry.buildPlane; refCount=1 — idiomatic, keep.",
+   "name": "heightHalf",
+   "selector": "heightHalf@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @637372 heightScale param of TorusKnotGeometry; refCount=1 — descriptive engine param, keep.",
+   "name": "heightScale",
+   "selector": "heightScale@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @177325 heightSegments param of BoxBufferGeometry; USES parameters + buildPlane grid @178120-178516 (refCount=9) — canonical geometry API name, keep.",
+   "name": "heightSegments",
+   "selector": "heightSegments@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @200147 heightSegments param of PlaneBufferGeometry; USES defaults + parameters + gridY — canonical geometry API name, keep.",
+   "name": "heightSegments",
+   "selector": "heightSegments@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @577243 heightSegments param of BoxGeometry; USES parameters + BoxBufferGeometry fwd (refCount=2) — canonical geometry API name, keep.",
+   "name": "heightSegments",
+   "selector": "heightSegments@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @579659 heightSegments param of CylinderBufferGeometry; USES generateTorso loops @581060-581650 (refCount=8) — canonical geometry API name, keep.",
+   "name": "heightSegments",
+   "selector": "heightSegments@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @583079 heightSegments param of CylinderGeometry; USES parameters + CylinderBufferGeometry fwd (refCount=2) — canonical geometry API name, keep.",
+   "name": "heightSegments",
+   "selector": "heightSegments@u0020#4",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @583768 heightSegments param of ConeGeometry; USES parameters + CylinderGeometry fwd (refCount=2) — canonical geometry API name, keep.",
+   "name": "heightSegments",
+   "selector": "heightSegments@u0020#5",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @584369 heightSegments param of ConeBufferGeometry; USES defaults + parameters + fwd (refCount=4) — canonical geometry API name, keep.",
+   "name": "heightSegments",
+   "selector": "heightSegments@u0020#6",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @620932 heightSegments param of PlaneGeometry; USES parameters + PlaneBufferGeometry fwd (refCount=2) — canonical geometry API name, keep.",
+   "name": "heightSegments",
+   "selector": "heightSegments@u0020#7",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @826408 var bindings=action._propertyBindings in _activateAction + looped lend/saveOriginalState; canonical AnimationMixer term.",
+   "name": "bindings",
+   "selector": "bindings@u0020#10",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @828947 var bindings=action._propertyBindings in _removeInactiveBindingsForAction + iterated with referenceCount--; canonical AnimationMixer term.",
+   "name": "bindings",
+   "selector": "bindings@u0020#11",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @829915 bindings=this._bindings in _addInactiveBinding + bindings.length/push; canonical mixer bindings array.",
+   "name": "bindings",
+   "selector": "bindings@u0020#12",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @830231 var bindings=this._bindings in _removeInactiveBinding + index/pop swap-remove; canonical mixer bindings array.",
+   "name": "bindings",
+   "selector": "bindings@u0020#13",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @830762 var bindings=this._bindings in _lendBinding + active/inactive swap; canonical mixer bindings array.",
+   "name": "bindings",
+   "selector": "bindings@u0020#14",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @831115 var bindings=this._bindings in _takeBackBinding + active/inactive swap-back; canonical mixer bindings array.",
+   "name": "bindings",
+   "selector": "bindings@u0020#15",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834153 var bindings=this._bindings in update + bindings[_i].apply(accuIndex); canonical mixer bindings array.",
+   "name": "bindings",
+   "selector": "bindings@u0020#16",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @824953 var bindingsByName=bindingsByRoot[rootUuid] in _bindAction + 4 refs (per-track lookup/fill); canonical mixer map name.",
+   "name": "bindingsByName",
+   "selector": "bindingsByName@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @824906 bindingsByRoot=this._bindingsByRootAndName in _bindAction + [rootUuid] lookup/store; canonical mixer registry alias.",
+   "name": "bindingsByRoot",
+   "selector": "bindingsByRoot@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @829872 bindingsByRoot=this._bindingsByRootAndName in _addInactiveBinding + [rootUuid] lookup/store; canonical mixer registry alias.",
+   "name": "bindingsByRoot",
+   "selector": "bindingsByRoot@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @830345 bindingsByRoot=this._bindingsByRootAndName in _removeInactiveBinding + delete bindingsByRoot[rootUuid]; canonical mixer registry alias.",
+   "name": "bindingsByRoot",
+   "selector": "bindingsByRoot@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @835452 var bindingsByRoot=this._bindingsByRootAndName in uncacheRoot + bindingsByRoot[rootUuid] iterate/restore; canonical mixer registry alias.",
+   "name": "bindingsByRoot",
+   "selector": "bindingsByRoot@u0020#3",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @811743 var bindingsForPath=bindings[_j] in AnimationObjectGroup add + per-index swap/fill PropertyBinding; canonical per-path row name.",
+   "name": "bindingsForPath",
+   "selector": "bindingsForPath@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @812879 var bindingsForPath=bindings[j] in remove + swap firstActive/binding; canonical per-path row name.",
+   "name": "bindingsForPath",
+   "selector": "bindingsForPath@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @813850 var bindingsForPath=bindings[j] in uncache-removal + lastCached/last swap + pop; canonical per-path row name.",
+   "name": "bindingsForPath",
+   "selector": "bindingsForPath@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @814755 bindingsForPath=new Array(nObjects) in AnimationObjectGroup subscribe_ + index/bindings.length store; canonical per-path row name.",
+   "name": "bindingsForPath",
+   "selector": "bindingsForPath@u0020#3",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @604449 var splineTube,binormal,normal,position2 in ExtrudeGeometry + binormal.copy(splineTube.binormals[s]) path-extrude math; canonical Frenet-frame term.",
+   "name": "binormal",
+   "selector": "binormal@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @699745 var binormals=[] in Curve.computeFrenetFrames + cross/rotate loop returning {tangents,normals,binormals}; canonical API name.",
+   "name": "binormals",
+   "selector": "binormals@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @496118 var bits=0 in WebGLRenderer.clear(color,depth,stencil) + bits|=16384/256/1024 then _gl.clear(bits); GL clear-mask accumulator.",
+   "name": "clearMask",
+   "selector": "bits@u0020#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "bits",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "background.setClearAlpha.apply(background,arguments);};this.clear=function(color,depth,stencil){var bits=0;if(color===undefined||color)bits|=16384;if(depth===un"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @868380 var bits=x>>16&32768 in DataUtils.toHalfFloat + 9 refs building/returning the half-float word beside m/e; output-bits accumulator.",
+   "name": "halfBits",
+   "selector": "bits@u0020#1",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "bits",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 9,
+    "snippet": "fer);var DataUtils={toHalfFloat:function toHalfFloat(val){_floatView[0]=val;var x=_int32View[0];var bits=x>>16&32768;var m=x>>12&2047;var e=x>>23&255;if(e<103)r"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "DECL @586282 var bj=b.clone().lerp(c,i/cols) in PolyhedronGeometry subdivide beside aj=a.lerp(c); b-side edge interpolation point at row i.",
+   "name": "edgePointB",
+   "selector": "bj@u0020#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "bj",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "il){var cols=detail+1;var v=[];for(var i=0;i<=cols;i++){v[i]=[];var aj=a.clone().lerp(c,i/cols);var bj=b.clone().lerp(c,i/cols);var rows=cols-i;for(var j=0;j<=r"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @425634 setBlending(...,blendDst,...) param + blendDstAlpha||blendDst default and blendFuncSeparate(factorToGL[blendDst]); canonical WebGLState/Material API name.",
+   "name": "blendDst",
+   "selector": "blendDst@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @425676 setBlending(...,blendDstAlpha,...) param + blendDstAlpha||blendDst default and blendFuncSeparate(...,factorToGL[blendDstAlpha]); canonical API name.",
+   "name": "blendDstAlpha",
+   "selector": "blendDstAlpha@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @425611 setBlending(blending,blendEquation,...) param + blendEquationSeparate(equationToGL[blendEquation]); canonical WebGLState/Material API name.",
+   "name": "blendEquation",
+   "selector": "blendEquation@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @425643 setBlending(...,blendEquationAlpha,...) param + blendEquationAlpha||blendEquation default and blendEquationSeparate; canonical API name.",
+   "name": "blendEquationAlpha",
+   "selector": "blendEquationAlpha@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @678144 AnimationClip(name,duration,tracks,blendMode) param + NormalAnimationBlendMode default and this.blendMode=blendMode; canonical API name.",
+   "name": "blendMode",
+   "selector": "blendMode@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @682296 var blendMode=animation.blendMode in parseAnimation + passed to new AnimationClip(clipName,duration,tracks,blendMode); canonical API name.",
+   "name": "blendMode",
+   "selector": "blendMode@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @815703 AnimationAction(mixer,clip,localRoot,blendMode) param + blendMode=clip.blendMode default and this.blendMode=blendMode; canonical API name.",
+   "name": "blendMode",
+   "selector": "blendMode@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @832411 clipAction(clip,optionalRoot,blendMode) param + clip.blendMode default, existingAction.blendMode match, new AnimationAction(...,blendMode); canonical API name.",
+   "name": "blendMode",
+   "selector": "blendMode@u0020#3",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @425625 setBlending(...,blendSrc,...) param + blendSrcAlpha||blendSrc default and blendFuncSeparate(factorToGL[blendSrc]); canonical WebGLState/Material API name.",
+   "name": "blendSrc",
+   "selector": "blendSrc@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @100721 traverseVisible:function(callback) on Object3D proto; USES scene.traverseVisible @501263 to collect lights — canonical three.js API name.",
+   "name": "traverseVisible",
+   "selector": "traverseVisible@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @61628 Box3.RSNmJyewpGe(triangle) param; USES triangle.a/b/c @61750-61822 — readable engine term.",
+   "name": "triangle",
+   "selector": "triangle@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @112042 Triangle.copy(triangle) param; USES this.a.copy(triangle.a) etc — readable engine term.",
+   "name": "triangle",
+   "selector": "triangle@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @114472 Triangle.equals(triangle) param; USES triangle.a/b/c.equals — readable engine term.",
+   "name": "triangle",
+   "selector": "triangle@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @592908 Earcut.triangulate(data,holeIndices,dim); USES Earcut.triangulate @602523 in ShapeUtils — canonical earcut API name.",
+   "name": "triangulate",
+   "selector": "triangulate@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @602187 ShapeUtils.triangulateShape(contour,holes); USES @605124/@625495 in Extrude/ShapeGeometry — canonical three.js API name.",
+   "name": "triangulateShape",
+   "selector": "triangulateShape@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @672438 KeyframeTrack trim(startTime,endTime) trimming keyframes; USES track.trim(0,duration) @683971 — canonical three.js API name.",
+   "name": "trim",
+   "selector": "trim@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @683911 AnimationClip trim() delegating to tracks; sibling of KeyframeTrack.trim — canonical three.js API name.",
+   "name": "trim",
+   "selector": "trim@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @632703 TorusBufferGeometry(radius,tube,...) param default 0.4; USES radius+tube*cos(v) vertex math @633497-633583 — canonical geometry param.",
+   "name": "tube",
+   "selector": "tube@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @634487 TorusGeometry(radius,tube,...) pass-through param to TorusBufferGeometry — canonical geometry param.",
+   "name": "tube",
+   "selector": "tube@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @635028 TorusKnotBufferGeometry(radius,tube,...) param; USES cx/cy tube cross-section @636115-636139 — canonical geometry param.",
+   "name": "tube",
+   "selector": "tube@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @637332 TorusKnotGeometry(radius,tube,...) pass-through param to TorusKnotBufferGeometry — canonical geometry param.",
+   "name": "tube",
+   "selector": "tube@u0020#3",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @632723 TorusBufferGeometry tubularSegments param default 6; USES loop bounds + index math, refCount=13 — canonical geometry param.",
+   "name": "tubularSegments",
+   "selector": "tubularSegments@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @634507 TorusGeometry tubularSegments pass-through param — canonical geometry param.",
+   "name": "tubularSegments",
+   "selector": "tubularSegments@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @635033 TorusKnotBufferGeometry tubularSegments param default 64; USES loop + u computation, refCount=9 — canonical geometry param.",
+   "name": "tubularSegments",
+   "selector": "tubularSegments@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @637337 TorusKnotGeometry tubularSegments pass-through param — canonical geometry param.",
+   "name": "tubularSegments",
+   "selector": "tubularSegments@u0020#3",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @638017 TubeBufferGeometry(path,tubularSegments,...) param default 64; USES Frenet frames + generateSegment/Indices/UVs, refCount=10 — canonical geometry param.",
+   "name": "tubularSegments",
+   "selector": "tubularSegments@u0020#4",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @640405 TubeGeometry tubularSegments pass-through param — canonical geometry param.",
+   "name": "tubularSegments",
+   "selector": "tubularSegments@u0020#5",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @702171 twoPi=Math.PI*2 in EllipseCurve.getPoint; refCount=7 angle normalization — self-descriptive constant.",
+   "name": "twoPi",
+   "selector": "twoPi@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @72255 tymax in Ray.intersectBox slab test alongside tmin/tmax/tymin/tzmin/tzmax — standard ray-box idiom, matches three.js source.",
+   "name": "tymax",
+   "selector": "tymax@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @72249 tymin in Ray.intersectBox slab test alongside tmin/tmax/tymax/tzmin/tzmax — standard ray-box idiom, matches three.js source.",
+   "name": "tymin",
+   "selector": "tymin@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @678447 getTrackTypeForValueTypeName(typeName) param; USES switch(typeName.toLowerCase()) mapping to KeyframeTrack classes — readable param.",
+   "name": "typeName",
+   "selector": "typeName@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @795742 PropertyMixer(binding,typeName,valueSize) param; USES switch(typeName) selecting mix functions — readable param.",
+   "name": "typeName",
+   "selector": "typeName@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @751735 typedArray=getTypedArray(index.type,index.array) for BufferGeometry index — self-descriptive var.",
+   "name": "typedArray",
+   "selector": "typedArray@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @72267 tzmax in Ray.intersectBox slab test; USES invdirz slab @72868-73088 alongside tmin/tmax — standard ray-box idiom.",
+   "name": "tzmax",
+   "selector": "tzmax@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @72261 tzmin in Ray.intersectBox slab test; USES invdirz slab @72909-73050 alongside tmin/tmax — standard ray-box idiom.",
+   "name": "tzmin",
+   "selector": "tzmin@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @513419 uCamPos=p_uniforms.map.cameraPosition for ShaderMaterial; u-prefix uniform + CamPos is domain-conventional abbreviation, role evident — keep.",
+   "name": "uCamPos",
+   "selector": "uCamPos@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @628544 uOffset pole-seam UV correction (0.5/widthSegments) in SphereBufferGeometry — readable var.",
+   "name": "uOffset",
+   "selector": "uOffset@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @178781 buildPlane(u,v,w,udir,vdir,...) sign param in BoxGeometry, called with 1/-1 literals — canonical three.js internal name.",
+   "name": "udir",
+   "selector": "udir@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @535857 function ulyscvmPM(RNQDluasaN,material); USES bindMode/boneTransform/skeleton, isSkinnedMesh warning @417016, case 'ulyscvmPM' ObjectLoader @766893, exports between SkeletonHelper and SmoothShading @950689 — three.js SkinnedMesh, confirmed in threejs-animation.md.",
+   "name": "SkinnedMesh",
+   "selector": "ulyscvmPM@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ulyscvmPM",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "();var _skinWeight=new Vector4();var _vector$7=new gURkzCzeY();var _matrix$1=new Matrix4();function ulyscvmPM(RNQDluasaN,material){if(RNQDluasaN&&RNQDluasaN.isG"
+   }
+  }
+ ]
+}

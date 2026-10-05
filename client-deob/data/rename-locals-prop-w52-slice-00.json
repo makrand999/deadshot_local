@@ -1,0 +1,467 @@
+{
+  "meta": {
+    "wave": 52,
+    "slice": "00",
+    "mergedFrom": [
+      "00a",
+      "00b"
+    ]
+  },
+  "proposals": [
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: onmousedown param only stopPropagation on keybind button; SERVED: onmousedown param calling stopPropagation only (snippet-only twin).",
+      "name": "mousedownEvent",
+      "selector": "ahc@u2151#19"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: onmousedown param only stopPropagation on clear button; SERVED: clear-button onmousedown param stopping propagation, disjoint scope (snippet-only twin).",
+      "name": "mousedownEvent",
+      "selector": "ahc@u2151#20"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: x offset passed to item preview builder; SERVED: thumbnail x offset spread across variants, passed to builder (snippet-only twin).",
+      "name": "itemOffsetX",
+      "selector": "ahc@u2151#21"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: drawImage destination y in neon redraw callback; SERVED: drawImage y coordinate in drawX/drawY handler series (snippet-only twin).",
+      "name": "drawY",
+      "selector": "ahc@u2151#22"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: inner loop index matching billing products to items; SERVED: inner loop index over priceLabels matching billed products (snippet-only twin).",
+      "name": "priceLabelIndex",
+      "selector": "ahc@u2151#23"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: computed reel stop index driving hover sound; SERVED: forward reel position index triggering hover sound on change (snippet-only twin).",
+      "name": "reelIndex",
+      "selector": "ahc@u2151#24"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: parsed spin response stored into reel slot; SERVED: parsed /spin JSON response stored into spinResults[0x36] (snippet-only twin).",
+      "name": "spinResult",
+      "selector": "ahc@u2151#25"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: XHR posting equipped skins to server; SERVED: XMLHttpRequest posting to equipSkins endpoint, four uses (snippet-only twin).",
+      "name": "equipSkinsXhr",
+      "selector": "ahc@u2151#26"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: loop candidate compared against selected skin; SERVED: Kq.skins loop entry compared against selected skin fields (snippet-only twin).",
+      "name": "skinEntry",
+      "selector": "ahc@u2151#27"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: formatted weapon name appended to skin title; SERVED: formatted weapon display name appended to skin label (snippet-only twin).",
+      "name": "weaponLabel",
+      "selector": "ahc@u2151#29"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: flag toggling squeeze uniform and small texture; SERVED: full-size flag selecting materials, squeeze, texture suffix (snippet-only twin).",
+      "name": "useFullTexture",
+      "selector": "ahc@u2151#30"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: grid row argument positioning skin card; SERVED: card grid row parameter driving vertical placement (snippet-only twin).",
+      "name": "gridRow",
+      "selector": "ahc@u2151#31"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: random index in Fisher-Yates skin shuffle; SERVED: random swap position in Fisher-Yates shuffle loop (snippet-only twin).",
+      "name": "swapIndex",
+      "selector": "ahc@u2151#32"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: loop index toggling card visibility on scroll; SERVED: skinCardList loop index toggling visibility after scroll (snippet-only twin).",
+      "name": "cardIndex",
+      "selector": "ahc@u2151#33"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: running counter laying out filtered skin grid; SERVED: placement counter deriving columns, rows, page count (snippet-only twin).",
+      "name": "gridCounter",
+      "selector": "ahc@u2151#34"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: changed touch matching tracked gesture identifier; SERVED: changedTouches entry matched by activeTouchId identifier (snippet-only twin).",
+      "name": "activeTouch",
+      "selector": "ahc@u2151#35"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: clamped wheel-zoom value stored for inspect zoom; SERVED: adjusted clamped zoom value written to inspectZoomTarget (snippet-only twin).",
+      "name": "newZoomTarget",
+      "selector": "ahc@u2151#36"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: username error text shown or cleared; SERVED: showUsernameError message string displayed in error label (snippet-only twin).",
+      "name": "usernameError",
+      "selector": "ahc@u2151#37"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: dialog backdrop resized to viewport width; SERVED: resize callback element fitted to container width span (snippet-only twin).",
+      "name": "resizeTarget",
+      "selector": "ahc@u2151#38"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: clan error text shown or cleared; SERVED: setClanError message string shown in clan error text (snippet-only twin).",
+      "name": "clanError",
+      "selector": "ahc@u2151#39"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: XHR posting clan change to server; SERVED: XMLHttpRequest posting clan change with response handling (snippet-only twin).",
+      "name": "changeClanXhr",
+      "selector": "ahc@u2151#40"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: username dialog backdrop resized to viewport; SERVED: resize callback element fitted to container width span (snippet-only twin).",
+      "name": "resizeTarget",
+      "selector": "ahc@u2151#41"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: XHR posting username change with error handling; SERVED: XMLHttpRequest posting name change, five response checks (snippet-only twin).",
+      "name": "changeNameXhr",
+      "selector": "ahc@u2151#43"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: window.open handle focused for terms page; SERVED: window.open terms.html handle focused when defined (snippet-only twin).",
+      "name": "termsWindow",
+      "selector": "ahc@u2151#44"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: config supplying texts height and button options; SERVED: buildConfirmDialog options: height, texts, button labels (snippet-only twin).",
+      "name": "dialogConfig",
+      "selector": "ahc@u2151#45"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: close payload posted to parent window; SERVED: type-close object stringified into postMessage quit signal (snippet-only twin).",
+      "name": "closeMessage",
+      "selector": "ahc@u2151#46"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: party dialog backdrop resized to viewport; SERVED: resize callback element fitted to container width span (snippet-only twin).",
+      "name": "resizeTarget",
+      "selector": "ahc@u2151#47"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Enter-key handler submitting party join; SERVED: Enter-key keydown event triggering party dialog Okay (snippet-only twin).",
+      "name": "keydownEvent",
+      "selector": "ahc@u2151#48"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: party status text with Joining styling; SERVED: updatePartyStatus text: default prompt, joining, errors (snippet-only twin).",
+      "name": "statusMessage",
+      "selector": "ahc@u2151#49"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: noise overlay fitted to square viewport size; SERVED: noise overlay resized to span with square clamp (snippet-only twin).",
+      "name": "resizeTarget",
+      "selector": "ahc@u2151#50"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: alias updating inspect camera aspect matrix; SERVED: inspectCamera alias updating aspect and projection matrix (snippet-only twin).",
+      "name": "resizeCamera",
+      "selector": "ahc@u2151#51"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: optional delta accumulated into animation clock; SERVED: optional tick delta advancing spin animation phase (snippet-only twin).",
+      "name": "elapsedMs",
+      "selector": "ahc@u2151#52"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: stickyButton wrapper pushed to filterToggleButtons list; SERVED: weapon filter widget whose inner button takes the click handler (snippet-only twin).",
+      "name": "filterToggle",
+      "selector": "ahc@u2151#53"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: index iterating two team roster arrays; SERVED: loop index over paired team arrays (snippet-only twin).",
+      "name": "teamIndex",
+      "selector": "ahd@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: constant inset shaping challenges panel geometry; SERVED: constant 0x5f horizontal inset reused in layout coordinates (snippet-only twin).",
+      "name": "sideInset",
+      "selector": "ahd@u2151#1"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: xsolla theme object holding desktop header config; SERVED: Xsolla theme/desktop object nested under settings.ui (snippet-only twin).",
+      "name": "payUiSettings",
+      "selector": "ahd@u2151#3"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: SHA-256 running hash state array; SERVED: SHA-256 working hash array across compression rounds (snippet-only twin).",
+      "name": "hashState",
+      "selector": "ahd@u2151#4"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: daily challenges animated for progress display; SERVED: daily challenges list iterated for progress animation (snippet-only twin).",
+      "name": "challengeList",
+      "selector": "ahd@u2151#6"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: x offset for settings category label text; SERVED: settings label x from ahc+0x20, single text use (snippet-only twin).",
+      "name": "labelX",
+      "selector": "ahd@u2151#7"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: cached preview height skipping redundant resizes; SERVED: cached renderer height compared each resize check (snippet-only twin).",
+      "name": "cachedHeight",
+      "selector": "ahd@u2151#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: passive listener options for touchend handler; SERVED: passive-false options object for touchend listener (snippet-only twin).",
+      "name": "touchendOptions",
+      "selector": "ahd@u2151#10"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: sku payload posted to claim endpoint; SERVED: SKU claim POST body sent via claimSku (snippet-only twin).",
+      "name": "claimPayload",
+      "selector": "ahd@u2151#11"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: alias of neon image in custom draw; SERVED: alias of neon weapon image during custom draw (snippet-only twin).",
+      "name": "skinImage",
+      "selector": "ahd@u2151#12"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: init true, cleared when reel index changes; gates label refresh; SERVED: same flag with decoded hoverover key (source-verified sense) (snippet-only twin).",
+      "name": "indexUnchanged",
+      "selector": "ahd@u2151#13"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: loop counter filling spin reel slots; SERVED: loop index filling spin reel prize array (snippet-only twin).",
+      "name": "slotIndex",
+      "selector": "ahd@u2151#14"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: token plus skins payload for equip; SERVED: equip-skins POST body with token and skins (snippet-only twin).",
+      "name": "equipPayload",
+      "selector": "ahd@u2151#15"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: formatted weapon name in inspect title; SERVED: weapon display string appended to skin title (snippet-only twin).",
+      "name": "weaponLabel",
+      "selector": "ahd@u2151#16"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: loop index matching skins and inspect targets; SERVED: index scanning skin arrays for weapon match (snippet-only twin).",
+      "name": "matchScanIdx",
+      "selector": "ahd@u2151#18"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: wear argument driving labels colors payloads; SERVED: wear-grade parameter compared and stored on skins (snippet-only twin).",
+      "name": "wearIndex",
+      "selector": "ahd@u2151#20"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: temporary holding swapped skin during shuffle; SERVED: swap temporary in Fisher-Yates skins shuffle (snippet-only twin).",
+      "name": "swapTemp",
+      "selector": "ahd@u2151#21"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: skin card element visibility-toggled on scroll; SERVED: skin card element culled by scroll position (snippet-only twin).",
+      "name": "cardEntry",
+      "selector": "ahd@u2151#22"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: loop counter seeding default weapon skins; SERVED: loop index pushing default skins per weapon (snippet-only twin).",
+      "name": "weaponIndex",
+      "selector": "ahd@u2151#23"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: loop index finding tracked changed touch; SERVED: loop index matching changedTouches by identifier (snippet-only twin).",
+      "name": "touchIndex",
+      "selector": "ahd@u2151#25"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: token plus clan payload for change; SERVED: change-clan POST body with token and clan (snippet-only twin).",
+      "name": "clanPayload",
+      "selector": "ahd@u2151#26"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: token plus username payload for change; SERVED: change-username POST body with token, username (snippet-only twin).",
+      "name": "usernamePayload",
+      "selector": "ahd@u2151#27"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: dialog height driving panel and layout; SERVED: confirm dialog height defaulting 0x1a4, overrideable (snippet-only twin).",
+      "name": "confirmDialogHeight",
+      "selector": "ahd@u2151#28"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: selected skin rendered in inspect preview; SERVED: inspected skin L0 read for name/weapon/wear (snippet-only twin).",
+      "name": "inspectedSkin",
+      "selector": "ahd@u2151#29"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: inner button receiving filter click handler; SERVED: weapon filter button positioned with onclick handler (snippet-only twin).",
+      "name": "filterButton",
+      "selector": "ahd@u2151#30"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: team member entry filling roster row; SERVED: party member row bound to scoreboard line (snippet-only twin).",
+      "name": "rosterPlayer",
+      "selector": "ahe@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: progress bar width scaled by completion; SERVED: challenge progress bar width scaled by progress (snippet-only twin).",
+      "name": "challengeBarWidth",
+      "selector": "ahe@u2151#1"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: settings object wrapping xsolla ui config; SERVED: Xsolla settings wrapper holding ui object (snippet-only twin).",
+      "name": "paySettings",
+      "selector": "ahe@u2151#2"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: SHA-256 round constants table; SERVED: SHA-256 round constants table in hash (snippet-only twin).",
+      "name": "hashConstants",
+      "selector": "ahe@u2151#3"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: weekly challenges list cloned for display; SERVED: weekly challenges list deep-copied for display (snippet-only twin).",
+      "name": "weeklyList",
+      "selector": "ahe@u2151#4"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: cached client width skipping redundant resizes; SERVED: cached clientWidth compared each resize check (snippet-only twin).",
+      "name": "cachedClientWidth",
+      "selector": "ahe@u2151#6"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: range slider synced with number input; SERVED: range slider input synced with number field (snippet-only twin).",
+      "name": "rangeInput",
+      "selector": "ahe@u2151#7"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+# DOSSIER slice-02 (wave 59, 4 bindings, 4 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/4] a3l@u2217#0 | kind=param depth=5 refCount=2 | sim/physics.js [DIVERGED snippet-only]
+DECL @12 (verified):
+function QQ(a3l){var axC=ai1;QR(a3l);for(var a3m=0x0;a3m<HB["length"];a3m++){var a3n=HB['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n['IUTkaCQgos']<a3n['delay'])continue;if(a3n['IUTkaCQgos']>a3n['delay']+a3n['time']){a3n['obj'][a3n["param"]]=a3n["newp"];a3n['cb']!=undefined&&(a3n['cb'](a3n["obj"]),a3n['cb']=null);HB["array"][a3m]==a3n&&(HE(HB["array"][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n["IUTkaCQgos"]-a3n["delay"])/a3n['time'];a3n['obj'][a3n["param"]]=GW(a3n["old"],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n["KWC92ef2Y9"](a3n["obj"]);}}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @12 (verified), servedRefCount=2:
+function QQ(a3l){var axC=ai1;QR(a3l);for(var a3m=0x0;a3m<HB[axC(0x3a2)];a3m++){var a3n=HB['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n['IUTkaCQgos']<a3n['delay'])continue;if(a3n['IUTkaCQgos']>a3n['delay']+a3n['time']){a3n['obj'][a3n[axC(0xc1a)]]=a3n[axC(0x2bb)];a3n['cb']!=undefined&&(a3n['cb'](a3n[axC(0x9a0)]),a3n['cb']=null);HB[axC(0x18f)][a3m]==a3n&&(HE(HB[axC(0x18f)][a3m]),HB['splice'](a3m,0x1));a3m--;conti
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/4] a3m@u2217#0 | kind=var depth=5 refCount=7 | sim/physics.js [DIVERGED snippet-only]
+DECL @45 (verified):
+function QQ(a3l){var axC=ai1;QR(a3l);for(var a3m=0x0;a3m<HB["length"];a3m++){var a3n=HB['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n['IUTkaCQgos']<a3n['delay'])continue;if(a3n['IUTkaCQgos']>a3n['delay']+a3n['time']){a3n['obj'][a3n["param"]]=a3n["newp"];a3n['cb']!=undefined&&(a3n['cb'](a3n["obj"]),a3n['cb']=null);HB["array"][a3m]==a3n&&(HE(HB["array"][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n["IUTkaCQgos"]-a3n["delay"])/a3n['time'];a3n['obj'][a3n["param"]]=GW(a3n["old"],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n["KWC92ef2Y9"](a3n["obj"]);}}
+USES: refCount=7, 8 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @45 (verified), servedRefCount=7:
+function QQ(a3l){var axC=ai1;QR(a3l);for(var a3m=0x0;a3m<HB[axC(0x3a2)];a3m++){var a3n=HB['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n['IUTkaCQgos']<a3n['delay'])continue;if(a3n['IUTkaCQgos']>a3n['delay']+a3n['time']){a3n['obj'][a3n[axC(0xc1a)]]=a3n[axC(0x2bb)];a3n['cb']!=undefined&&(a3n['cb'](a3n[axC(0x9a0)]),a3n['cb']=null);HB[axC(0x18f)][a3m]==a3n&&(HE(HB[axC(0x18f)][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n[axC(0xe31)]-a3n
+SERVED USES: 8 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/4] a3n@u2217#0 | kind=var depth=5 refCount=25 | sim/physics.js [DIVERGED snippet-only]
+DECL @81 (verified):
+function QQ(a3l){var axC=ai1;QR(a3l);for(var a3m=0x0;a3m<HB["length"];a3m++){var a3n=HB['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n['IUTkaCQgos']<a3n['delay'])continue;if(a3n['IUTkaCQgos']>a3n['delay']+a3n['time']){a3n['obj'][a3n["param"]]=a3n["newp"];a3n['cb']!=undefined&&(a3n['cb'](a3n["obj"]),a3n['cb']=null);HB["array"][a3m]==a3n&&(HE(HB["array"][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n["IUTkaCQgos"]-a3n["delay"])/a3n['time'];a3n['obj'][a3n["param"]]=GW(a3n["old"],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n["KWC92ef2Y9"](a3n["obj"]);}}
+USES: refCount=25, 26 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @83 (verified), servedRefCount=25:
+function QQ(a3l){var axC=ai1;QR(a3l);for(var a3m=0x0;a3m<HB[axC(0x3a2)];a3m++){var a3n=HB['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n['IUTkaCQgos']<a3n['delay'])continue;if(a3n['IUTkaCQgos']>a3n['delay']+a3n['time']){a3n['obj'][a3n[axC(0xc1a)]]=a3n[axC(0x2bb)];a3n['cb']!=undefined&&(a3n['cb'](a3n[axC(0x9a0)]),a3n['cb']=null);HB[axC(0x18f)][a3m]==a3n&&(HE(HB[axC(0x18f)][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n[axC(0xe31)]-a3n[axC(0xe2d)])/a3n['time'];a3n['obj'][a
+SERVED USES: 26 token-occurrences in unit, showing 4 nearest outside DECL window:
+@502: 0x9a0)]),a3n['cb']=null);HB[axC(0x18f)][a3m]==a3n&&(HE(HB[axC(0x18f)][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n[axC(0xe31)]-a3n[axC(0xe2d)])/a3n['time'];a3n['obj'][a3n[axC(0xc1a)]]=GW(a3n[axC(0x37d)],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n[axC(0x553)](a3n[axC(0x9a0)]);}}
+@518: ']=null);HB[axC(0x18f)][a3m]==a3n&&(HE(HB[axC(0x18f)][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n[axC(0xe31)]-a3n[axC(0xe2d)])/a3n['time'];a3n['obj'][a3n[axC(0xc1a)]]=GW(a3n[axC(0x37d)],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n[axC(0x553)](a3n[axC(0x9a0)]);}}
+@530: axC(0x18f)][a3m]==a3n&&(HE(HB[axC(0x18f)][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n[axC(0xe31)]-a3n[axC(0xe2d)])/a3n['time'];a3n['obj'][a3n[axC(0xc1a)]]=GW(a3n[axC(0x37d)],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n[axC(0x553)](a3n[axC(0x9a0)]);}}
+@546: ==a3n&&(HE(HB[axC(0x18f)][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n[axC(0xe31)]-a3n[axC(0xe2d)])/a3n['time'];a3n['obj'][a3n[axC(0xc1a)]]=GW(a3n[axC(0x37d)],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n[axC(0x553)](a3n[axC(0x9a0)]);}}
+==============================================================================
+[4/4] a3o@u2217#0 | kind=var depth=5 refCount=1 | sim/physics.js [DIVERGED snippet-only]
+DECL @401 (verified):
+function QQ(a3l){var axC=ai1;QR(a3l);for(var a3m=0x0;a3m<HB["length"];a3m++){var a3n=HB['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n['IUTkaCQgos']<a3n['delay'])continue;if(a3n['IUTkaCQgos']>a3n['delay']+a3n['time']){a3n['obj'][a3n["param"]]=a3n["newp"];a3n['cb']!=undefined&&(a3n['cb'](a3n["obj"]),a3n['cb']=null);HB["array"][a3m]==a3n&&(HE(HB["array"][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n["IUTkaCQgos"]-a3n["delay"])/a3n['time'];a3n['obj'][a3n["param"]]=GW(a3n["old"],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n["KWC92ef2Y9"](a3n["obj"]);}}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @421 (verified), servedRefCount=1:
+axC=ai1;QR(a3l);for(var a3m=0x0;a3m<HB[axC(0x3a2)];a3m++){var a3n=HB['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n['IUTkaCQgos']<a3n['delay'])continue;if(a3n['IUTkaCQgos']>a3n['delay']+a3n['time']){a3n['obj'][a3n[axC(0xc1a)]]=a3n[axC(0x2bb)];a3n['cb']!=undefined&&(a3n['cb'](a3n[axC(0x9a0)]),a3n['cb']=null);HB[axC(0x18f)][a3m]==a3n&&(HE(HB[axC(0x18f)][a3m]),HB['splice'](a3m,0x1));a3m--;continue;}var a3o=(a3n[axC(0xe31)]-a3n[axC(0xe2d)])/a3n['time'];a3n['obj'][a3n[axC(0xc1a)]]=GW(a3n[axC(0x37d)],a3n['newp'],a3n['ef'](a3o)),a3n["KWC92ef2Y9"]!=undefined&&a3n[axC(0x553)](a3n[axC(0x9a0)]);}}
+SERVED USES: 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-02: propose EVERY binding above.

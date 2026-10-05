@@ -1,0 +1,341 @@
+{
+ "meta": {
+  "wave": 61,
+  "slice": "04",
+  "mergedFrom": [
+   "04a",
+   "04b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 transpose output; alias-checked element writes, rc8; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#92"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 invert output; only cryptic rc5 left; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#93"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 frob read-only input; str/det siblings srcVec; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#100"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 LDU first output; receives factor element; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#101"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d create fresh identity local, six lanes; SERVED: identical (snippet-only twin).",
+   "name": "newMat2d",
+   "selector": "a3y@u0008#102"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d clone read-only source; six element reads; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#103"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d invert output; six lanes written, returned; SERVED: identical (snippet-only twin).",
+   "name": "outMat",
+   "selector": "a3y@u0008#106"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d determinant read-only input, four reads; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#107"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d multiply output; six lanes written, returned; SERVED: identical (snippet-only twin).",
+   "name": "outMat",
+   "selector": "a3y@u0008#108"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d rotate output; six lanes written, returned; SERVED: identical (snippet-only twin).",
+   "name": "outMat",
+   "selector": "a3y@u0008#109"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 divide first operand; seven merged siblings; SERVED: identical (snippet-only twin).",
+   "name": "a",
+   "selector": "a3z@u0008#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 min first operand; mirrors max operand; SERVED: identical (snippet-only twin).",
+   "name": "a",
+   "selector": "a3z@u0008#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 squaredDistance second point; sibling vecA; SERVED: identical (snippet-only twin).",
+   "name": "vecB",
+   "selector": "a3z@u0008#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 length x-component cache; mirrors vec4; SERVED: identical (snippet-only twin).",
+   "name": "lenXElem",
+   "selector": "a3z@u0008#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 squaredLength x-component cache; mirrors vec4; SERVED: identical (snippet-only twin).",
+   "name": "sqrLenXElem",
+   "selector": "a3z@u0008#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 negate read-only source; mirrors vec4; SERVED: identical (snippet-only twin).",
+   "name": "vecToNegate",
+   "selector": "a3z@u0008#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 dot second operand; sibling vecA merged; SERVED: identical (snippet-only twin).",
+   "name": "vecB",
+   "selector": "a3z@u0008#18"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 cross first operand; out-first op family; SERVED: identical (snippet-only twin).",
+   "name": "a",
+   "selector": "a3z@u0008#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 lerp start vector; mirrors vec3 lerp; SERVED: identical (snippet-only twin).",
+   "name": "firstVec",
+   "selector": "a3z@u0008#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 transformMat2 input vector, cached xyz; SERVED: identical (snippet-only twin).",
+   "name": "inVec",
+   "selector": "a3z@u0008#22"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 transformMat2d input vector, cached xyz; SERVED: identical (snippet-only twin).",
+   "name": "inVec",
+   "selector": "a3z@u0008#23"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 transformMat3 input vector, cached xyz; SERVED: identical (snippet-only twin).",
+   "name": "inVec",
+   "selector": "a3z@u0008#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 forEach scratch vector reused per iteration; SERVED: identical (snippet-only twin).",
+   "name": "tmpVec",
+   "selector": "a3z@u0008#26"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 clone fresh local; mirrors cloneMat2d; SERVED: identical (snippet-only twin).",
+   "name": "cloneVec3",
+   "selector": "a3z@u0008#27"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 subtract first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#32"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 multiply first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#33"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 divide first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#34"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 min first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#35"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 max first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#36"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 scale source vector times scalar; SERVED: identical (snippet-only twin).",
+   "name": "vecToScale",
+   "selector": "a3z@u0008#37"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squaredDistance second point, diffed then squared; SERVED: identical (snippet-only twin).",
+   "name": "sqrDistPointB",
+   "selector": "a3z@u0008#40"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: length caches x component for sqrt; SERVED: identical (snippet-only twin).",
+   "name": "lenXElem",
+   "selector": "a3z@u0008#41"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squaredLength caches x component for sum; SERVED: identical (snippet-only twin).",
+   "name": "sqrLenXElem",
+   "selector": "a3z@u0008#42"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: negate source vector, lanes negated; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3z@u0008#43"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 cross first operand, cached xyz; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#46"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: random scale defaulting one, weights output; SERVED: identical (snippet-only twin).",
+   "name": "scaleVal",
+   "selector": "a3z@u0008#48"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: transformMat4 input vector cached then multiplied; SERVED: identical (snippet-only twin).",
+   "name": "inVec",
+   "selector": "a3z@u0008#49"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: forEach flat array iterated and rewritten; SERVED: identical (snippet-only twin).",
+   "name": "vecArray",
+   "selector": "a3z@u0008#55"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 copy source, four lanes copied; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3z@u0008#58"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 subtract first operand, four lanes; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#61"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 multiply first operand, four lanes; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#62"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 divide first operand, four lanes; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#63"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat multiply left operand, cached xyzw; SERVED: identical (snippet-only twin).",
+   "name": "quatA",
+   "selector": "a3z@u0008#132"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateX source, half-angle rotated; SERVED: identical (snippet-only twin).",
+   "name": "srcQuat",
+   "selector": "a3z@u0008#133"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: calculateW source xyz, w recomputed; SERVED: identical (snippet-only twin).",
+   "name": "srcQuat",
+   "selector": "a3z@u0008#136"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slerp start quat, dotted then blended; SERVED: identical (snippet-only twin).",
+   "name": "srcQuat",
+   "selector": "a3z@u0008#137"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fromMat3 source matrix, trace then branches; SERVED: identical (snippet-only twin).",
+   "name": "srcMat3",
+   "selector": "a3z@u0008#140"
+  }
+ ]
+}

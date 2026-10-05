@@ -1,0 +1,1205 @@
+{
+ "batch": "batch7",
+ "proposals": [
+  {
+   "token": "GL",
+   "proposedName": "litegl",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:11 alias GL=window.GL + engine/webgl-renderer.js:5 litegl guard; dead function GL timer at game-loop.js:3053 shares token",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "global",
+   "proposedName": "globalScope",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:9 var global=window; zero code use sites (dead window alias)",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "RZ",
+   "proposedName": "savedUserVolume",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3867 RZ=0x1; combat/scope-crosshair.js:19 volume onchange stores RZ; game-loop.js:3871 ad-finish restores RZ*100",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "Ri",
+   "proposedName": "textShadowCss",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:3765 shadow template with Q/C placeholders filled at 3767/3769; never read afterward",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "Rr",
+   "proposedName": "pingRegion",
+   "confidence": "high",
+   "evidence": "characters/weapon-attach.js:25 POSTs pingplx to <code>_rp.deadshot.io/rp; sim/game-loop.js:3797 Rs pings na/eu/as/in/sa/au",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "S9",
+   "proposedName": "objectiveMarker",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3891 new pk() added to overlayLayer; engine/shaders.js:19 pk builds OBJECTIVE canvas billboard; sim/input.js:35 setPos at hardpoint",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "SD",
+   "proposedName": "cachedScopeOverlay",
+   "confidence": "high",
+   "evidence": "core/constants.js:15 SD=a3y memoized scope overlay (pillarbox bars+reticle); sim/game-loop.js:3933 declared beside reticleLayerA/B",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "TY",
+   "proposedName": "impactMarkerBox",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:135 box mesh w/ TT; combat/fire.js:7 shown at raycast hit point when QD",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "TZ",
+   "proposedName": "serverMarkerBox",
+   "confidence": "medium",
+   "evidence": "engine/webgl-renderer.js:135 box mesh w/ TR; network/handlers.js:89 shown at server-sent JSON position",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "Td",
+   "proposedName": "aimCamera",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:107 PerspectiveCamera(90,16/9); sim/game-loop.js:4197 added to aimCameraRig; combat/fire.js:7 raycast via setFromCamera",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "Tg",
+   "proposedName": "",
+   "confidence": "low",
+   "evidence": "multi-role reuse: viewport width webgl-renderer.js:109, pillarbox const 8.46 webgl-renderer.js:113, challenge-card offset scope-crosshair.js:19",
+   "verdict": "abstain",
+   "slice": 0
+  },
+  {
+   "token": "UN",
+   "proposedName": "freeMarkerPool",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4097 UN=[]; engine/webgl-renderer.js:151 UO acquires by type via splice; engine/shaders.js:155 UP releases via push",
+   "verdict": "propose",
+   "slice": 0
+  },
+  {
+   "token": "Uc",
+   "proposedName": "toStringKey",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4039 decodes 'toString'; :4067 calls addEventListener.toString() for [native code] tamper check",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "Uh",
+   "proposedName": "damageFlashOverlayA",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4041 new pe(noise tex) red overlay; network/handlers.js:71 alternates Uj Uh/Ui on damage event",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "VD",
+   "proposedName": "effectPhysicsClockMs",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4105 VD=getNowMs fixed-step accumulator; sim/player.js:41 VH() advances VD by VE for particle physics",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "Vn",
+   "proposedName": "effectInstancePools",
+   "confidence": "high",
+   "evidence": "combat/effects.js:9 Vn=[] per-effect arrays; engine/webgl-renderer.js:155 Vn[i]=new Array(count) of UG particle instances",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "WP",
+   "proposedName": "engageAdsAim",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4183 sets aim flags; called by right-mouse characters/animation.js:35, 'ads' key sim/input.js:17, gamepad sim/input.js:7",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "X0",
+   "proposedName": "aimSensitivityUnit",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4199 X0=1/800 base factor; combat/fire.js:11 currentAimSensitivity=X0*baseAimSensitivity ADS/scope rescale",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "XE",
+   "proposedName": "createDracoGltfLoader",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:175 builds GLTF+DRACO loader (draco/ path, workerLimit 1); sim/game-loop.js:4273-4285 Yl-Yo=XE(true)",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "XS",
+   "proposedName": "recycledNametagPool",
+   "confidence": "high",
+   "evidence": "characters/mesh-pool.js:15 XS=[]; Sf():11 pushes detached threeNametag, world/weapons.js:25 XX() pops XS[0] or new pb()",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "XY",
+   "proposedName": "",
+   "confidence": "low",
+   "evidence": "engine/webgl-renderer.js:179 body is immediate return; material-normalization code unreachable; executed role is no-op stub",
+   "verdict": "abstain",
+   "slice": 1
+  },
+  {
+   "token": "Xd",
+   "proposedName": "lookInputGate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4203 returns 0/1 on transitionFadeFactor; multiplies all look deltas ui/widgets.js:183 sim/input.js:7,31",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "Xg",
+   "proposedName": "renderResolutionScale",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4213 Xg=1; combat/scope-crosshair.js:23 clamp 0.3..1 triggers resize; engine/shaders.js:163 Xg*devicePixelRatio setSize",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "Xm",
+   "proposedName": "resizeDebounceTimer",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4221 Xm=null; :4223/:4225 clearTimeout/setTimeout debounce on window/visualViewport resize",
+   "verdict": "propose",
+   "slice": 1
+  },
+  {
+   "token": "Y0",
+   "proposedName": "adsWeaponOffset",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:181 binds Vector3; combat/fire.js:11 lerps weaponOffsetVector->Y0 by ADS zoom blend; world/weapons.js:27 re-sets per weapon",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "YA",
+   "proposedName": "disposeObject3D",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:167 recursive dispose of geometry/materials/textures + parent remove; engine/assets-draco.js:19 calls YA(mapContentGroup/Yw) on map unload",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "Yw",
+   "proposedName": "skyboxTransparentGroup",
+   "confidence": "medium",
+   "evidence": "engine/webgl-renderer.js:197 binds Group added to worldScene; engine/assets-draco.js:19 reparents transparent skybox meshes into Yw",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "ZE",
+   "proposedName": "skyboxTexture",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4365 binds null; engine/shaders.js:171 applySkyboxTexture sets ZE=loadTextureFlipped + ZJ uniforms map value",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "ZJ",
+   "proposedName": "skyboxMaterial",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:173 binds ShaderMaterial; engine/webgl-renderer.js:213 skyboxMesh uses ZJ; sim/game-loop.js:4379 skyboxMesh.material=ZJ",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "ZR",
+   "proposedName": "mountainsPanoramaTexture",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4395 declares; sim/game-loop.js:4397 ZR=mountains.webp callback; engine/webgl-renderer.js:217 ZT composites ZR image into panorama",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "a0P",
+   "proposedName": "mapFinalizePending",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4445 binds false; network/handlers.js:77 sets true before Z7 map load; engine/shaders.js a0S gates collision finalize on it",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "a0d",
+   "proposedName": "flushOutboundQueue",
+   "confidence": "high",
+   "evidence": "network/dispatch.js:7 drains outboundQueue into gameWebSocket; called after every outboundQueue push in combat/fire.js:11 + network/handlers.js:29",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "a14",
+   "proposedName": "loadSessionTimeoutMs",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4449 binds 0x3a98; network/matchmaker.js:5 uses as setTimeout delay for finalizeLoadSession timeout vs a15 hard timeout",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "a1n",
+   "proposedName": "recordAssetFailure",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4465 pushes {kind,url,error} to map.failedAssets + asset-failure milestone; called for map-gltf/texture/image in assets-draco.js:19",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "a1o",
+   "proposedName": "connectGameSocket",
+   "confidence": "high",
+   "evidence": "network/dispatch.js:17 builds gameWebSocket wss://host:port/ws with retry; network/matchmaker.js:11/15 calls with ports.default on matchmaker connect",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "a1x",
+   "proposedName": "partyInviteUrl",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4475 binds empty; network/matchmaker.js:11 prtyid sets deadshot.io/?party= URL; network/matchmaker.js:13 shares via a1z copy",
+   "verdict": "propose",
+   "slice": 2
+  },
+  {
+   "token": "a24",
+   "proposedName": "animDeltaClock",
+   "confidence": "high",
+   "evidence": "combat/fire.js:9 binds new Clock(); world/modes.js:31 a24.getDelta() drives anim mixer updates",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "a2K",
+   "proposedName": "knownShaderCacheKeys",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4497 a2N() records webglRenderer program cacheKeys into a2K set; sim/input.js:35 resets a2K=null",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "a2L",
+   "proposedName": "isGameplayActive",
+   "confidence": "high",
+   "evidence": "ui/party-lobby.js:43 returns started&&!overlay; gates shoot sim/input.js:17 and perf telemetry ui/widgets.js:187",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "a2a",
+   "proposedName": "splitOriginalMeshList",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4487 new createCustomList(); engine/webgl-renderer.js:237 indexOf/pushToFront tracks split-swapped originals",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "a2j",
+   "proposedName": "frameCounter",
+   "confidence": "high",
+   "evidence": "sim/input.js:35 a2j++ once per frame before gameLoop(); stamps occlusion queries and %0x3/%0x64 staggering",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "a3g",
+   "proposedName": "pickupTypeDefs",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:181 builds pickup table (HEALTH REGEN/MOON JUMP/OVERSHIELD/INVISIBILITY/kc) consumed by spawner a3f",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "gameIO",
+   "proposedName": "canvasUiToolkit",
+   "confidence": "medium",
+   "evidence": "core/constants.js:5 toolkit ctor (scenes/canvas/gamepad/gradients); sim/game-loop.js:3773 uiToolkit=new gameIO()",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "q7",
+   "proposedName": "rollSpinReward",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:13 rolls rarity + random skin/weapon/wear; combat/scope-crosshair.js:19 q8(q7(),...) picks drop",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "qj",
+   "proposedName": "stackBlurLib",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:151 StackBlur API table (qc-qh impls ui/widgets.js:17-27); core/constants.js:5 qk.processCanvasRGB fallback",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "r3",
+   "proposedName": "tarpsDynamicShader",
+   "confidence": "high",
+   "evidence": "engine/assets-draco.js:19 a3P['TarpsDynamic']=r4 alias of r3; engine/shaders.js:65 vertex/fragment config",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "rd",
+   "proposedName": "animatedNoiseShaderDef",
+   "confidence": "low",
+   "evidence": "engine/shaders.js:75 animated noise-scrolled reddish map-shader config; no identifier consumer found (write-only)",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "sC",
+   "proposedName": "basicStrippedShader",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:413 aliases sB def (engine/shaders.js:119); engine/shaders.js:165 builds 'basic-stripped' ShaderMaterial",
+   "verdict": "propose",
+   "slice": 3
+  },
+  {
+   "token": "sE",
+   "proposedName": "outlineShader",
+   "confidence": "high",
+   "evidence": "game-loop.js:415 var sE=sD; shaders.js:121 sD vertex/fragment fill (opacity+color uniforms); shaders.js:165 outline ShaderMaterial vertex/fragment source",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "sq",
+   "proposedName": "blurPassUniformsSq",
+   "confidence": "medium",
+   "evidence": "game-loop.js:385 var sq={} + :387 tDiffuse/h fill; shaders.js:113 sr={'uniforms':sq} fullscreen-quad pass (sibling sz->blurPassUniforms)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "tI",
+   "proposedName": "querySelectorAll",
+   "confidence": "high",
+   "evidence": "game-loop.js:469 function tI(sel){return document['querySelectorAll'](sel)}; calls pass CSS selectors (widgets.js:59, animation.js:9, game-loop.js:473)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "tj",
+   "proposedName": "isPointerLocked",
+   "confidence": "high",
+   "evidence": "game-loop.js:443+4189 function tj(){return pointerLockElement!=null}; calls gate pointer-lock paths (input.js:17,21, scope-crosshair.js:19)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uA",
+   "proposedName": "botMapPoseUA",
+   "confidence": "medium",
+   "evidence": "game-loop.js:567 var uA={} + :569 x/y/z/rx/ry pose fill; map-table.js:11 member of tf/Factory 'botMap' array (cf. vA->spawnPoseVA)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uB",
+   "proposedName": "botMapPoseUB",
+   "confidence": "medium",
+   "evidence": "game-loop.js:571 var uB={} + :573 x/y/z/rx/ry pose fill; map-table.js:11 member of tf/Factory 'botMap' array (cf. vA->spawnPoseVA)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uC",
+   "proposedName": "botMapPoseUC",
+   "confidence": "medium",
+   "evidence": "game-loop.js:575 var uC={} + :577 x/y/z/rx/ry pose fill; map-table.js:11 member of tf/Factory 'botMap' array (cf. vA->spawnPoseVA)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uD",
+   "proposedName": "botMapPoseUD",
+   "confidence": "medium",
+   "evidence": "game-loop.js:579 var uD={} + :581 x/y/z/rx/ry pose fill; map-table.js:11 member of tf/Factory 'botMap' array (cf. vA->spawnPoseVA)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uE",
+   "proposedName": "botMapPoseUE",
+   "confidence": "medium",
+   "evidence": "game-loop.js:583 var uE={} + :585 x/y/z/rx/ry pose fill; map-table.js:11 member of tf/Factory 'botMap' array (cf. vA->spawnPoseVA)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uF",
+   "proposedName": "botMapPoseUF",
+   "confidence": "medium",
+   "evidence": "game-loop.js:587 var uF={} + :589 x/y/z/rx/ry pose fill; map-table.js:11 member of tf/Factory 'botMap' array (cf. vA->spawnPoseVA)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uG",
+   "proposedName": "botMapPoseUG",
+   "confidence": "medium",
+   "evidence": "game-loop.js:591 var uG={} + :593 x/y/z/rx/ry pose fill; map-table.js:11 member of tf/Factory 'botMap' array (cf. vA->spawnPoseVA)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uH",
+   "proposedName": "botMapPoseUH",
+   "confidence": "medium",
+   "evidence": "game-loop.js:595 var uH={} + :597 x/y/z/rx/ry pose fill; map-table.js:11 member of tf/Factory 'botMap' array (cf. vA->spawnPoseVA)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "uI",
+   "proposedName": "factoryBotPoint12",
+   "confidence": "high",
+   "evidence": "game-loop.js:599 var+{x,y,z,rx,ry}; map-table.js:11 botMap[11] of Factory/tf (consumer assets-draco.js:19 red-box bot markers)",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uJ",
+   "proposedName": "factoryBotPoint13",
+   "confidence": "high",
+   "evidence": "game-loop.js:603 var+{x,y,z,rx,ry}; map-table.js:11 botMap[12] of Factory/tf",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uK",
+   "proposedName": "factoryBotPoint14",
+   "confidence": "high",
+   "evidence": "game-loop.js:607 var+{x,y,z,rx,ry}; map-table.js:11 botMap[13] of Factory/tf",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uL",
+   "proposedName": "factoryBotPoint15",
+   "confidence": "high",
+   "evidence": "game-loop.js:611 var+{x,y,z,rx,ry}; map-table.js:11 botMap[14] of Factory/tf",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uM",
+   "proposedName": "factoryBotPoint16",
+   "confidence": "high",
+   "evidence": "game-loop.js:615 var+{x,y,z,rx,ry}; map-table.js:11 botMap[15] of Factory/tf",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uN",
+   "proposedName": "factoryBotPoint17",
+   "confidence": "high",
+   "evidence": "game-loop.js:619 var+{x,y,z,rx,ry}; map-table.js:11 botMap[16] of Factory/tf",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uo",
+   "proposedName": "factorySpawnPoint1",
+   "confidence": "high",
+   "evidence": "game-loop.js:519 var+{x,y,z,rx,ry}; map-table.js:11 tf spawns[0], sibling spawnPoint8=spawns[7] confirms 1-based",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uq",
+   "proposedName": "factorySpawnPoint3",
+   "confidence": "high",
+   "evidence": "game-loop.js:527 var+{x,y,z,rx,ry}; map-table.js:11 tf spawns[2]; mirrors neonSpawnPoint4 precedent",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "ur",
+   "proposedName": "factorySpawnPoint4",
+   "confidence": "high",
+   "evidence": "game-loop.js:531 var+{x,y,z,rx,ry}; map-table.js:11 tf spawns[3]",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "us",
+   "proposedName": "factorySpawnPoint5",
+   "confidence": "high",
+   "evidence": "game-loop.js:535 var+{x,y,z,rx,ry}; map-table.js:11 tf spawns[4] (sole top-level binding; 7 occs)",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "ut",
+   "proposedName": "factorySpawnPoint6",
+   "confidence": "high",
+   "evidence": "game-loop.js:539 var+{x,y,z,rx,ry}; map-table.js:11 tf spawns[5]",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uu",
+   "proposedName": "factorySpawnPoint7",
+   "confidence": "high",
+   "evidence": "game-loop.js:543 var+{x,y,z,rx,ry}; map-table.js:11 tf spawns[6]",
+   "verdict": "propose",
+   "slice": 5
+  },
+  {
+   "token": "uw",
+   "proposedName": "spawnPoint9",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:551 var+pose x/y/z/rx/ry; src/world/map-table.js tf Factory spawns[8], sibling uv=spawnPoint8 at index7",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "ux",
+   "proposedName": "factoryBotSpawn00",
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:555 var+pose x/y/z/rx/ry; map-table.js tf botMap[0]; pose-shaped like spawns (points lack rx/ry); consumed assets-draco.js botMap debug boxes",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "uy",
+   "proposedName": "factoryBotSpawn01",
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:559 var+pose x/y/z/rx/ry; map-table.js tf botMap[1]; pose-shaped like spawns",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "uz",
+   "proposedName": "factoryBotSpawn02",
+   "confidence": "medium",
+   "evidence": "src/sim/game-loop.js:563 var+pose x/y/z/rx/ry; map-table.js tf botMap[2]; pose-shaped like spawns",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "v4",
+   "proposedName": "spawnPointV4",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:687 var+pose x/y/z/rx/ry; map-table.js industry Refinery spawns[0]; letter-preserving convention (w0->spawnPointW0)",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "v5",
+   "proposedName": "spawnPointV5",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:691 var+pose x/y/z/rx/ry; map-table.js industry Refinery spawns[1]; letter-preserving convention",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "v6",
+   "proposedName": "spawnPointV6",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:695 var+pose x/y/z/rx/ry; map-table.js industry Refinery spawns[2]; letter-preserving convention",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "v7",
+   "proposedName": "spawnPointV7",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:699 var+pose x/y/z/rx/ry; map-table.js industry Refinery spawns[3]; letter-preserving convention",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "v8",
+   "proposedName": "spawnPointV8",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:703 var+pose x/y/z/rx/ry; map-table.js industry Refinery spawns[4]; letter-preserving convention",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "vX",
+   "proposedName": "spawnPointVX",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:897 var+pose x/y/z/rx/ry; map-table.js mlab Forest spawns[0] ahead of spawnPointW0; letter-preserving (xx->spawnPoseXx)",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "vY",
+   "proposedName": "spawnPointVY",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:901 var+pose x/y/z/rx/ry; map-table.js mlab Forest spawns[1]; letter-preserving convention",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "vZ",
+   "proposedName": "spawnPointVZ",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:905 var+pose x/y/z/rx/ry; map-table.js mlab Forest spawns[2]; letter-preserving convention",
+   "verdict": "propose",
+   "slice": 6
+  },
+  {
+   "token": "vv",
+   "proposedName": "spawnPoseVv",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:785 var vv={}+x/y/z/rx/ry pose; winter spawns[0] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "vw",
+   "proposedName": "spawnPoseVw",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:789 var vw={}+x/y/z/rx/ry pose; winter spawns[1] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "vx",
+   "proposedName": "spawnPoseVx",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:793 var vx={}+x/y/z/rx/ry pose; winter spawns[2] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "vy",
+   "proposedName": "spawnPoseVy",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:797 var vy={}+x/y/z/rx/ry pose; winter spawns[3] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "vz",
+   "proposedName": "spawnPoseVz",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:801 var vz={}+x/y/z/rx/ry pose; winter spawns[4] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "w4",
+   "proposedName": "spawnPointW4",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:925 var w4={}+x/y/z/rx/ry pose; mlab/Forest spawns[7] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "w5",
+   "proposedName": "spawnPointW5",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:929 var w5={}+x/y/z/rx/ry pose; mlab/Forest spawns[8] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "w6",
+   "proposedName": "spawnPointW6",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:933 var w6={}+x/y/z/rx/ry pose; mlab/Forest spawns[9] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "w7",
+   "proposedName": "spawnPointW7",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:937 var w7={}+x/y/z/rx/ry pose; mlab/Forest spawns[10] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "w8",
+   "proposedName": "spawnPointW8",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:941 var w8={}+x/y/z/rx/ry pose; mlab/Forest spawns[11] in world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "wS",
+   "proposedName": "spawnPointWS",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1111 var wS={}+x/y/z/rx/ry pose; militia spawns[0] in engine/assets-draco.js:13",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "wT",
+   "proposedName": "spawnPointWT",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1115 var wT={}+x/y/z/rx/ry pose; militia spawns[1] in engine/assets-draco.js:13",
+   "verdict": "propose",
+   "slice": 7
+  },
+  {
+   "token": "wq",
+   "proposedName": "spawnPointWq",
+   "confidence": "high",
+   "evidence": "game-loop.js:1011 var wq{x,y,z,rx,ry} pose; map-table.js:11 Vineyard 'spawns':[wq..ww,spawnPointWx,spawnPointWy]",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wr",
+   "proposedName": "spawnPointWr",
+   "confidence": "high",
+   "evidence": "game-loop.js:1015 var wr{x,y,z,rx,ry} pose; map-table.js:11 Vineyard 'spawns' array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wt",
+   "proposedName": "spawnPointWt",
+   "confidence": "high",
+   "evidence": "game-loop.js:1019 var wt{x,y,z,rx,ry} pose; map-table.js:11 Vineyard 'spawns' array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wu",
+   "proposedName": "spawnPointWu",
+   "confidence": "high",
+   "evidence": "game-loop.js:1023 var wu{x,y,z,rx,ry} pose; map-table.js:11 Vineyard 'spawns' array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wv",
+   "proposedName": "spawnPointWv",
+   "confidence": "high",
+   "evidence": "game-loop.js:1027 var wv{x,y,z,rx,ry} pose; map-table.js:11 Vineyard 'spawns' array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "ww",
+   "proposedName": "spawnPointWw",
+   "confidence": "high",
+   "evidence": "game-loop.js:1031 var ww{x,y,z,rx,ry} pose; map-table.js:11 Vineyard 'spawns' array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wU",
+   "proposedName": "spawnPointWU",
+   "confidence": "high",
+   "evidence": "game-loop.js:1119 var wU{x,y,z,rx,ry} pose; assets-draco.js:13 militiaMapConfig['spawns']=[wS,wT,wU..]; siblings wS/wT->spawnPointWS/WT",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wV",
+   "proposedName": "spawnPointWV",
+   "confidence": "high",
+   "evidence": "game-loop.js:1123 var wV{x,y,z,rx,ry} pose; assets-draco.js:13 militiaMapConfig['spawns'] array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wW",
+   "proposedName": "spawnPointWW",
+   "confidence": "high",
+   "evidence": "game-loop.js:1127 var wW{x,y,z,rx,ry} pose; assets-draco.js:13 militiaMapConfig['spawns'] array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wX",
+   "proposedName": "spawnPointWX",
+   "confidence": "high",
+   "evidence": "game-loop.js:1131 var wX{x,y,z,rx,ry} pose; assets-draco.js:13 militiaMapConfig['spawns'] array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "wY",
+   "proposedName": "spawnPointWY",
+   "confidence": "high",
+   "evidence": "game-loop.js:1135 var wY{x,y,z,rx,ry} pose; assets-draco.js:13 militiaMapConfig['spawns'] array member",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "x6",
+   "proposedName": "spawnPointX6",
+   "confidence": "high",
+   "evidence": "game-loop.js:1165 var x6{x,y,z,rx,ry} pose; assets-draco.js:15 shoothouseMapConfig['spawns']=[x6,x7..]; siblings x7/x8/x9->spawnPointX7/8/9",
+   "verdict": "propose",
+   "slice": 8
+  },
+  {
+   "token": "x7",
+   "proposedName": "spawnPointX7",
+   "confidence": "high",
+   "evidence": "game-loop.js:1169 var+pose x/y/z/rx/ry; sole use shoothouse spawns assets-draco.js:15; sib spawnPointXe",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "x8",
+   "proposedName": "spawnPointX8",
+   "confidence": "high",
+   "evidence": "game-loop.js:1173 var+pose x/y/z/rx/ry; sole use shoothouse spawns assets-draco.js:15; sib spawnPointXe",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "x9",
+   "proposedName": "spawnPointX9",
+   "confidence": "high",
+   "evidence": "game-loop.js:1177 var+pose x/y/z/rx/ry; sole use shoothouse spawns assets-draco.js:15; sib spawnPointXe",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xA",
+   "proposedName": "neonSpawnPoint5",
+   "confidence": "high",
+   "evidence": "game-loop.js:1281 var+pose x/y/z/rx/ry; sole use neon spawns idx4 map-table.js:11; sib neonSpawnPoint4",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xB",
+   "proposedName": "neonSpawnPoint6",
+   "confidence": "high",
+   "evidence": "game-loop.js:1285 var+pose x/y/z/rx/ry; sole use neon spawns idx5 map-table.js:11; sib neonSpawnPoint4",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xC",
+   "proposedName": "neonSpawnPoint7",
+   "confidence": "high",
+   "evidence": "game-loop.js:1289 var+pose x/y/z/rx/ry; sole use neon spawns idx6 map-table.js:11; sib neonSpawnPoint4",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xD",
+   "proposedName": "neonSpawnPoint8",
+   "confidence": "high",
+   "evidence": "game-loop.js:1293 var+pose x/y/z/rx/ry; sole use neon spawns idx7 map-table.js:11; sib neonSpawnPoint4",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xE",
+   "proposedName": "neonSpawnPoint9",
+   "confidence": "high",
+   "evidence": "game-loop.js:1297 var+pose x/y/z/rx/ry; sole use neon spawns idx8 map-table.js:11; sib neonSpawnPoint4",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xF",
+   "proposedName": "neonSpawnPoint10",
+   "confidence": "high",
+   "evidence": "game-loop.js:1301 var+pose x/y/z/rx/ry; sole use neon spawns idx9 map-table.js:11; sib neonSpawnPoint4",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xG",
+   "proposedName": "neonSpawnPoint11",
+   "confidence": "high",
+   "evidence": "game-loop.js:1305 var+pose x/y/z/rx/ry; sole use neon spawns idx10 map-table.js:11; sib neonSpawnPoint4",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xb",
+   "proposedName": "spawnPointXb",
+   "confidence": "high",
+   "evidence": "game-loop.js:1185 var+pose x/y/z/rx/ry; sole use shoothouse spawns assets-draco.js:15; sib spawnPointXe",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xc",
+   "proposedName": "spawnPointXc",
+   "confidence": "high",
+   "evidence": "game-loop.js:1189 var+pose x/y/z/rx/ry; sole use shoothouse spawns assets-draco.js:15; sib spawnPointXe",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "xd",
+   "proposedName": "shoothouseSpawn08",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1193 var xd={x,y,z,rx,ry} spawn pose; 8th entry of shoothouse spawns array engine/assets-draco.js:15",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "xf",
+   "proposedName": "shoothouseSpawn10",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1201 var xf={x,y,z,rx,ry} spawn pose; 10th entry of shoothouse spawns array engine/assets-draco.js:15",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "xw",
+   "proposedName": "neonSpawnPoint1",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:1265 var xw={x,y,z,rx,ry} pose; 1st entry of neon map spawns world/map-table.js:11 (matches neonSpawnPoint4=xz precedent)",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "yt",
+   "proposedName": "neonBuildingLight05",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:1501 preset BuildingLight at position ys; 5th of 6 BuildingLight instances in midnightLightData lights for neon lightmapPresetAy sim/game-loop.js:2015",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "AG",
+   "proposedName": "neonCityAmbienceEmitter",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:2039 directional CityAmbience.mp3 at positions [AE,AF]; member of neon ydlqCbKiBtk audio-emitter array world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "EE",
+   "proposedName": "labWaterfallAudioEmitter",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3009 directional waterfall.mp3 at [-40,-10,-38]; newmlab/Forest ydlqCbKiBtk [EE,EF] world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "EF",
+   "proposedName": "labForestAudioEmitter",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3013 directional forest.mp3 at [33,25,-3.5]; newmlab/Forest ydlqCbKiBtk (forestAmbienceEmitter already taken by wg) world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "ER",
+   "proposedName": "raycastCollisionGrid",
+   "confidence": "high",
+   "evidence": "combat/fire.js:5 voxel-grid ray-march over fkXbORMTcl grid; returns hit list (.array[0].point) consumed by EU/fireShot/gameLoop/handlers",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "EW",
+   "proposedName": "hasCollisionGrid",
+   "confidence": "high",
+   "evidence": "combat/fire.js:5 one-line predicate a55[fkXbORMTcl]!=undefined; guards EU/EV raycasts and gameLoop collision checks",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "Em",
+   "proposedName": "labSunsetSkyPreset",
+   "confidence": "high",
+   "evidence": "combat/scope-crosshair.js:15 sunset sun preset (sunColor/sunDirection); lightmaps[0] of newmlab map world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "En",
+   "proposedName": "labDaylightSkyPreset",
+   "confidence": "high",
+   "evidence": "combat/scope-crosshair.js:17 non-sunset sun preset (sunColor/sunDirection); lightmaps[1] of newmlab map world/map-table.js:11",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "GJ",
+   "proposedName": "frameDeltaSamples",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:3051 push(Date.now()-nowMs) in GM(), buffer reset at length>100; frame-time sample buffer (accumulated sum unused)",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "GT",
+   "proposedName": "horizontalLengthSq",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3069 function returns x*x+z*z; combat/fire.js:5 velocity clamped vs Jl/Jr/Jo caps",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "Gs",
+   "proposedName": "ignoreNextTouch",
+   "confidence": "high",
+   "evidence": "ui/widgets.js:183 touchstart handler first-line one-shot skip if(Gs){Gs=false;return}; set on UI button mousedown combat/scope-crosshair.js:19",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "HR",
+   "proposedName": "makeAnimState",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3179 factory returns {left..stepped,name='animstate'}; HV bitset trio core/bitfield.js:11 with makeBaseInputState; new HR() entity fields network/handlers.js:23",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "HS",
+   "proposedName": "playerStateFlagKeys",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:3181 11-key sim-flag list; HT() builds defaults ui/widgets.js:99; spawn handler copies HS keys to localPlayer network/handlers.js:35",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "He",
+   "proposedName": "arWeaponUiConfig",
+   "confidence": "high",
+   "evidence": "ui/hud.js:7 name='Assault Rifle' size/killfeed; arWeaponConfig['ui']=He characters/weapon-attach.js:13; follows H9->smgWeaponUiConfig",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "Hj",
+   "proposedName": "awpWeaponUiConfig",
+   "confidence": "high",
+   "evidence": "ui/hud.js:9 name='Sniper Rifle' size/killfeed; awpWeaponConfig['ui']=Hj characters/mesh-pool.js:7; follows H9->smgWeaponUiConfig",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "Ho",
+   "proposedName": "shotgunWeaponUiConfig",
+   "confidence": "high",
+   "evidence": "ui/hud.js:11 name='Shotgun' size/killfeed; shotgunWeaponConfig['ui']=Ho characters/weapon-attach.js:19; follows H9->smgWeaponUiConfig",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "Hr",
+   "proposedName": "weaponStatsByKey",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:3165 maps smg/ar/awp/shotgun configs; aliased by weaponStatsTable world/weapons.js:7",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "I9",
+   "proposedName": "float64TypeCode",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3187 I9=0x6; typeNameList[6]='Float64' typeByteSizes[6]=8; field code in messageTemplateIj core/bitfield.js:21; follows I7->float32TypeCode",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "IN",
+   "proposedName": "messageTemplateIn",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:3327 schema var; templatesByName['o4KI8bGucLS'] network/handlers.js:5 = msg45 objective state docs/protocol-phase2.md:200; follows IA->messageTemplateIa",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "IO",
+   "proposedName": "messageTemplateIo",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:3331 schema var + fields core/bitfield.js:31; templatesByName['ZZ8oY11K5w3'] network/handlers.js:5 = msg46 objective marker docs/protocol-phase2.md:201; follows IA->messageTemplateIa",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "Ic",
+   "proposedName": "messageTemplateIc",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:3191 schema {val:u16,x:u8,y:u8,tick}; templatesByName['FRF6r51VY32'] network/handlers.js:5 = msg1 per-frame input docs/client/network.md:58; follows Id->messageTemplateId",
+   "verdict": "propose",
+   "slice": 11
+  },
+  {
+   "token": "Iv",
+   "proposedName": "killConfirmTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3255 var Iv={} + 4 field-type pairs; network/handlers.js:57 G058FYe8B9 handler reads all 4 fields into elim popup SL(name,'+dmg',headshot,streak) + hitmarker/streak sounds",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "Ix",
+   "proposedName": "killfeedEntryTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3263 var Ix={} + 4 field-type pairs; network/handlers.js:63 Y6805DB31Br handler reads all 4 fields into killfeed PPHLvaMfkI(killerName,weaponOrder[idx],victimName)",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "JG",
+   "proposedName": "neonArShopItem",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3425 var JG={sku:'neonar',name:'Neon AR',price:800}; sim/game-loop.js:3471 JS['itemOptions'] member, JS aliased shopCatalog:3473",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "JI",
+   "proposedName": "neonSmgShopItem",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3433 var JI={sku:'neonsmg',name:'Neon SMG',price:800}; sim/game-loop.js:3471 JS['itemOptions'] member (shopCatalog)",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "JK",
+   "proposedName": "neonAwpShopItem",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3441 var JK={sku:'neonawp',name:'Neon AWP',price:800}; sim/game-loop.js:3471 JS['itemOptions'] member (shopCatalog)",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "JM",
+   "proposedName": "neonShotgunShopItem",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3449 var JM={}; world/weapons.js:19 JM={sku:'neonshotgun',name:'Neon Shotgun',price:800}; sim/game-loop.js:3471 JS['itemOptions'] member (shopCatalog)",
+   "verdict": "propose",
+   "slice": 12
+  }
+ ]
+}

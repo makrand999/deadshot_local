@@ -1,0 +1,151 @@
+# DOSSIER slice-30 (wave 6, 28 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/28] array@u0035#0 | kind=var depth=7 refCount=1 | engine/assets-draco.js
+DECL @3366 (verified):
+coGeometry,byteLength,ptr);var index=new Uint32Array(draco.HEAPF32.buffer,ptr,numIndices).slice();draco._free(ptr);return{array:index,itemSize:1};}function decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute){var numComponents=attribute.num_components();var numPoints=dracoGeometry.num_points();var numValues=numPoints*numComponents;var byteLength=numValues*attributeType.BYTES_PER_ELEMENT;var dataType=getDracoDataType(draco,attributeType);var ptr=draco._malloc(byteLength);decoder.GetAttributeDataArrayForAllPoints(dracoGeometry,attribute,dataType,byteLength,ptr);var [...line truncated...]
+USES: refCount=1, 6 token-occurrences in unit, showing 2 nearest outside DECL window:
+@796: ();decoderBuffer.Init(new Int8Array(buffer),buffer.byteLength);try{var RNQDluasaN=decodeGeometry(draco,decoder,decoderBuffer,taskConfig);var buffers=RNQDluasaN.attributes.map(attr=>attr.array.buffer);if(RNQDluasaN.index)buffers.push(RNQDluasaN.index.array.buffer);self.postMessage({type:'decode',id:message.id,RNQDluasaN},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}finally{draco.destroy(decoderBuffer);draco.destroy(decoder);}});br
+@732: er=new draco.Decoder();var decoderBuffer=new draco.DecoderBuffer();decoderBuffer.Init(new Int8Array(buffer),buffer.byteLength);try{var RNQDluasaN=decodeGeometry(draco,decoder,decoderBuffer,taskConfig);var buffers=RNQDluasaN.attributes.map(attr=>attr.array.buffer);if(RNQDluasaN.index)buffers.push(RNQDluasaN.index.array.buffer);self.postMessage({type:'decode',id:message.id,RNQDluasaN},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}fi
+==============================================================================
+[2/28] attr@u0035#0 | kind=param depth=12 refCount=1 | engine/assets-draco.js
+DECL @721 (verified):
+;switch(message.type){case'init':decoderConfig=message.decoderConfig;decoderPending=new Promise(function(resolve){decoderConfig.onModuleLoaded=function(draco){resolve({draco:draco});};DracoDecoderModule(decoderConfig);});break;case'decode':var buffer=message.buffer;var taskConfig=message.taskConfig;decoderPending.then(module=>{var draco=module.draco;var decoder=new draco.Decoder();var decoderBuffer=new draco.DecoderBuffer();decoderBuffer.Init(new Int8Array(buffer),buffer.byteLength);try{var RNQDluasaN=decodeGeometry(draco,decoder,decoderBuffer,taskConfig);var buffers=RNQDluasaN.attributes.map([...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/28] attributeID@u0035#0 | kind=var depth=7 refCount=5 | engine/assets-draco.js
+DECL @1967 (verified):
+.Mesh();decodingStatus=decoder.DecodeBufferToMesh(decoderBuffer,dracoGeometry);}else if(geometryType===draco.POINT_CLOUD){dracoGeometry=new draco.PointCloud();decodingStatus=decoder.DecodeBufferToPointCloud(decoderBuffer,dracoGeometry);}else{throw new Error('usvzFuAsEB.tlRWqyJjE: Unexpected RNQDluasaN type.');}if(!decodingStatus.ok()||dracoGeometry.ptr===0){throw new Error('usvzFuAsEB.tlRWqyJjE: Decoding failed: '+decodingStatus.error_msg());}var RNQDluasaN={index:null,attributes:[]};for(var attributeName in attributeIDs){var attributeType=self[attributeTypes[attributeName]];var attribute;var [...line truncated...]
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/28] dataType@u0035#0 | kind=var depth=7 refCount=1 | engine/assets-draco.js
+DECL @3190 (verified):
+racoGeometry){var numFaces=dracoGeometry.num_faces();var numIndices=numFaces*3;var byteLength=numIndices*4;var ptr=draco._malloc(byteLength);decoder.GetTrianglesUInt32Array(dracoGeometry,byteLength,ptr);var index=new Uint32Array(draco.HEAPF32.buffer,ptr,numIndices).slice();draco._free(ptr);return{array:index,itemSize:1};}function decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute){var numComponents=attribute.num_components();var numPoints=dracoGeometry.num_points();var numValues=numPoints*numComponents;var byteLength=numValues*attributeType.BYTES_PER_ELEMENT;var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/28] decodeAttribute@u0035#0 | kind=function depth=6 refCount=1 | engine/assets-draco.js
+DECL @2922 (verified):
+ecodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute));}if(geometryType===draco.TRIANGULAR_MESH){RNQDluasaN.index=decodeIndex(draco,decoder,dracoGeometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function decodeIndex(draco,decoder,dracoGeometry){var numFaces=dracoGeometry.num_faces();var numIndices=numFaces*3;var byteLength=numIndices*4;var ptr=draco._malloc(byteLength);decoder.GetTrianglesUInt32Array(dracoGeometry,byteLength,ptr);var index=new Uint32Array(draco.HEAPF32.buffer,ptr,numIndices).slice();draco._free(ptr);return{array:index,itemSize:1};}function [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@2321: ributeByUniqueId(dracoGeometry,attributeID);}else{attributeID=decoder.GetAttributeId(dracoGeometry,draco[attributeIDs[attributeName]]);if(attributeID===-1)continue;attribute=decoder.GetAttribute(dracoGeometry,attributeID);}RNQDluasaN.attributes.push(decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute));}if(geometryType===draco.TRIANGULAR_MESH){RNQDluasaN.index=decodeIndex(draco,decoder,dracoGeometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function decodeIn
+==============================================================================
+[6/28] decodeGeometry@u0035#0 | kind=function depth=6 refCount=1 | engine/assets-draco.js
+DECL @1062 (verified):
+dule.draco;var decoder=new draco.Decoder();var decoderBuffer=new draco.DecoderBuffer();decoderBuffer.Init(new Int8Array(buffer),buffer.byteLength);try{var RNQDluasaN=decodeGeometry(draco,decoder,decoderBuffer,taskConfig);var buffers=RNQDluasaN.attributes.map(attr=>attr.array.buffer);if(RNQDluasaN.index)buffers.push(RNQDluasaN.index.array.buffer);self.postMessage({type:'decode',id:message.id,RNQDluasaN},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}finally{draco.destroy(decoderBuffer);draco.destroy(decoder);}});break;}};function [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/28] decodeIndex@u0035#0 | kind=function depth=6 refCount=1 | engine/assets-draco.js
+DECL @2563 (verified):
+var attributeID;if(taskConfig.useUniqueIDs){attributeID=attributeIDs[attributeName];attribute=decoder.GetAttributeByUniqueId(dracoGeometry,attributeID);}else{attributeID=decoder.GetAttributeId(dracoGeometry,draco[attributeIDs[attributeName]]);if(attributeID===-1)continue;attribute=decoder.GetAttribute(dracoGeometry,attributeID);}RNQDluasaN.attributes.push(decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute));}if(geometryType===draco.TRIANGULAR_MESH){RNQDluasaN.index=decodeIndex(draco,decoder,dracoGeometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/28] decoderConfig@u0035#0 | kind=var depth=5 refCount=3 | engine/assets-draco.js
+DECL @48 (verified):
+usvzFuAsEB.tlRWqyJjE.DRACOWorker=function(){var decoderConfig;var decoderPending;onmessage=function(e){var message=e.data;switch(message.type){case'init':decoderConfig=message.decoderConfig;decoderPending=new Promise(function(resolve){decoderConfig.onModuleLoaded=function(draco){resolve({draco:draco});};DracoDecoderModule(decoderConfig);});break;case'decode':var buffer=message.buffer;var taskConfig=message.taskConfig;decoderPending.then(module=>{var draco=module.draco;var decoder=new draco.Decoder();var decoderBuffer=new draco.DecoderBuffer();decoderBuffer.Init(new Int8Array(buffer),buffer.byt[...line truncated...]
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/28] decoderPending@u0035#0 | kind=var depth=5 refCount=2 | engine/assets-draco.js
+DECL @66 (verified):
+usvzFuAsEB.tlRWqyJjE.DRACOWorker=function(){var decoderConfig;var decoderPending;onmessage=function(e){var message=e.data;switch(message.type){case'init':decoderConfig=message.decoderConfig;decoderPending=new Promise(function(resolve){decoderConfig.onModuleLoaded=function(draco){resolve({draco:draco});};DracoDecoderModule(decoderConfig);});break;case'decode':var buffer=message.buffer;var taskConfig=message.taskConfig;decoderPending.then(module=>{var draco=module.draco;var decoder=new draco.Decoder();var decoderBuffer=new draco.DecoderBuffer();decoderBuffer.Init(new Int8Array(buffer),buffer.byt[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/28] decodingStatus@u0035#0 | kind=var depth=7 refCount=4 | engine/assets-draco.js
+DECL @1225 (verified):
+aN=decodeGeometry(draco,decoder,decoderBuffer,taskConfig);var buffers=RNQDluasaN.attributes.map(attr=>attr.array.buffer);if(RNQDluasaN.index)buffers.push(RNQDluasaN.index.array.buffer);self.postMessage({type:'decode',id:message.id,RNQDluasaN},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}finally{draco.destroy(decoderBuffer);draco.destroy(decoder);}});break;}};function decodeGeometry(draco,decoder,decoderBuffer,taskConfig){var attributeIDs=taskConfig.attributeIDs;var attributeTypes=taskConfig.attributeTypes;var dracoGeometry;var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/28] geometryType@u0035#0 | kind=var depth=7 refCount=3 | engine/assets-draco.js
+DECL @1244 (verified):
+raco,decoder,decoderBuffer,taskConfig);var buffers=RNQDluasaN.attributes.map(attr=>attr.array.buffer);if(RNQDluasaN.index)buffers.push(RNQDluasaN.index.array.buffer);self.postMessage({type:'decode',id:message.id,RNQDluasaN},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}finally{draco.destroy(decoderBuffer);draco.destroy(decoder);}});break;}};function decodeGeometry(draco,decoder,decoderBuffer,taskConfig){var attributeIDs=taskConfig.attributeIDs;var attributeTypes=taskConfig.attributeTypes;var dracoGeometry;var decodingStatus;var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 1 nearest outside DECL window:
+@2409: coGeometry,draco[attributeIDs[attributeName]]);if(attributeID===-1)continue;attribute=decoder.GetAttribute(dracoGeometry,attributeID);}RNQDluasaN.attributes.push(decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute));}if(geometryType===draco.TRIANGULAR_MESH){RNQDluasaN.index=decodeIndex(draco,decoder,dracoGeometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function decodeIndex(draco,decoder,dracoGeometry){var numFaces=dracoGeometry.num_faces();var numIndices=n
+==============================================================================
+[12/28] getDracoDataType@u0035#0 | kind=function depth=6 refCount=1 | engine/assets-draco.js
+DECL @3523 (verified):
+ecodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute){var numComponents=attribute.num_components();var numPoints=dracoGeometry.num_points();var numValues=numPoints*numComponents;var byteLength=numValues*attributeType.BYTES_PER_ELEMENT;var dataType=getDracoDataType(draco,attributeType);var ptr=draco._malloc(byteLength);decoder.GetAttributeDataArrayForAllPoints(dracoGeometry,attribute,dataType,byteLength,ptr);var array=new attributeType(draco.HEAPF32.buffer,ptr,numValues).slice();draco._free(ptr);return{name:attributeName,array:array,itemSize:numComponents};}function [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/28] module@u0035#0 | kind=param depth=9 refCount=1 | engine/assets-draco.js
+DECL @441 (verified):
+usvzFuAsEB.tlRWqyJjE.DRACOWorker=function(){var decoderConfig;var decoderPending;onmessage=function(e){var message=e.data;switch(message.type){case'init':decoderConfig=message.decoderConfig;decoderPending=new Promise(function(resolve){decoderConfig.onModuleLoaded=function(draco){resolve({draco:draco});};DracoDecoderModule(decoderConfig);});break;case'decode':var buffer=message.buffer;var taskConfig=message.taskConfig;decoderPending.then(module=>{var draco=module.draco;var decoder=new draco.Decoder();var decoderBuffer=new draco.DecoderBuffer();decoderBuffer.Init(new Int8Array(buffer),buffer.byt[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/28] numComponents@u0035#0 | kind=var depth=7 refCount=2 | engine/assets-draco.js
+DECL @3009 (verified):
+geometryType===draco.TRIANGULAR_MESH){RNQDluasaN.index=decodeIndex(draco,decoder,dracoGeometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function decodeIndex(draco,decoder,dracoGeometry){var numFaces=dracoGeometry.num_faces();var numIndices=numFaces*3;var byteLength=numIndices*4;var ptr=draco._malloc(byteLength);decoder.GetTrianglesUInt32Array(dracoGeometry,byteLength,ptr);var index=new Uint32Array(draco.HEAPF32.buffer,ptr,numIndices).slice();draco._free(ptr);return{array:index,itemSize:1};}function decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute){var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/28] numFaces@u0035#0 | kind=var depth=7 refCount=1 | engine/assets-draco.js
+DECL @2608 (verified):
+ttributeID=attributeIDs[attributeName];attribute=decoder.GetAttributeByUniqueId(dracoGeometry,attributeID);}else{attributeID=decoder.GetAttributeId(dracoGeometry,draco[attributeIDs[attributeName]]);if(attributeID===-1)continue;attribute=decoder.GetAttribute(dracoGeometry,attributeID);}RNQDluasaN.attributes.push(decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute));}if(geometryType===draco.TRIANGULAR_MESH){RNQDluasaN.index=decodeIndex(draco,decoder,dracoGeometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function decodeIndex(draco,decoder,dracoGeometry){var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/28] numIndices@u0035#0 | kind=var depth=7 refCount=2 | engine/assets-draco.js
+DECL @2647 (verified):
+attribute=decoder.GetAttributeByUniqueId(dracoGeometry,attributeID);}else{attributeID=decoder.GetAttributeId(dracoGeometry,draco[attributeIDs[attributeName]]);if(attributeID===-1)continue;attribute=decoder.GetAttribute(dracoGeometry,attributeID);}RNQDluasaN.attributes.push(decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute));}if(geometryType===draco.TRIANGULAR_MESH){RNQDluasaN.index=decodeIndex(draco,decoder,dracoGeometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function decodeIndex(draco,decoder,dracoGeometry){var numFaces=dracoGeometry.num_faces();var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/28] numPoints@u0035#0 | kind=var depth=7 refCount=1 | engine/assets-draco.js
+DECL @3054 (verified):
+saN.index=decodeIndex(draco,decoder,dracoGeometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function decodeIndex(draco,decoder,dracoGeometry){var numFaces=dracoGeometry.num_faces();var numIndices=numFaces*3;var byteLength=numIndices*4;var ptr=draco._malloc(byteLength);decoder.GetTrianglesUInt32Array(dracoGeometry,byteLength,ptr);var index=new Uint32Array(draco.HEAPF32.buffer,ptr,numIndices).slice();draco._free(ptr);return{array:index,itemSize:1};}function decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute){var numComponents=attribute.num_components();var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/28] numValues@u0035#0 | kind=var depth=7 refCount=2 | engine/assets-draco.js
+DECL @3095 (verified):
+Geometry);}draco.destroy(dracoGeometry);return RNQDluasaN;}function decodeIndex(draco,decoder,dracoGeometry){var numFaces=dracoGeometry.num_faces();var numIndices=numFaces*3;var byteLength=numIndices*4;var ptr=draco._malloc(byteLength);decoder.GetTrianglesUInt32Array(dracoGeometry,byteLength,ptr);var index=new Uint32Array(draco.HEAPF32.buffer,ptr,numIndices).slice();draco._free(ptr);return{array:index,itemSize:1};}function decodeAttribute(draco,decoder,dracoGeometry,attributeName,attributeType,attribute){var numComponents=attribute.num_components();var numPoints=dracoGeometry.num_points();var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/28] a3o@u2804#0 | kind=var depth=5 refCount=5 | engine/shaders.js
+DECL @51 (verified):
+function a1f(){var aCV=ai1;if(a12==null)return;var a3o=a12['map'];typeof YO=='number'&&(a3o['loadedTextures']=YO),typeof YP=='number'&&(a3o["neededTextures"]=YP),typeof YQ=='boolean'&&(a3o['finishedMapLoad']=YQ),typeof YK!='undefined'&&(a3o["loadedMap"]=YK),typeof YL!='undefined'&&(a3o['loadedLightmap']=YL),a12["qIySEZgti"]=a1d();}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/28] a3k@u0353#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @20 (verified):
+function t9(a3i,a3j,a3k,a3l){for(var a3m=0x0;a3m<sW;++a3m){var a3n=t7(a3j,a3k,a3l);if(a3n===0x0)return a3j;var a3o=t6(a3j,a3k,a3l)-a3i;a3j-=a3o/a3n;}return a3j;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/28] a3l@u0353#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @24 (verified):
+function t9(a3i,a3j,a3k,a3l){for(var a3m=0x0;a3m<sW;++a3m){var a3n=t7(a3j,a3k,a3l);if(a3n===0x0)return a3j;var a3o=t6(a3j,a3k,a3l)-a3i;a3j-=a3o/a3n;}return a3j;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/28] a3i@u1729#0 | kind=param depth=5 refCount=2 | sim/game-loop.js
+DECL @12 (verified):
+function GQ(a3i){var apX=ai1;this['m']=0x80000000,this['mi']=0x1/(this['m']-0x1),this['a']=0x41c64e6d,this['c']=0x3039,this["state"]=a3i?a3i:Math["floor"](Math['random']()*(this['m']-0x1));}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[23/28] SJ@u2344#0 | kind=var depth=3 refCount=2 | sim/game-loop.js
+DECL @4 (verified):
+var SJ=0x98967f,SK=0x0;
+USES: refCount=2, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[24/28] a0N@u2787#0 | kind=var depth=3 refCount=2 | sim/game-loop.js
+DECL @11 (verified):
+var a0M=[],a0N={};
+USES: refCount=2, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[25/28] a3i@u1826#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @12 (verified):
+function HJ(a3i){var aqg=ai1,a3j;for(var a3k=0x0;a3k<HC['length'];a3k++){a3j=HC['array'][a3k],a3j["obj"]==a3i&&(HC['splice'](a3k,0x1),a3k--);}}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[26/28] a3j@u1826#0 | kind=var depth=5 refCount=2 | ui/widgets.js
+DECL @29 (verified):
+function HJ(a3i){var aqg=ai1,a3j;for(var a3k=0x0;a3k<HC['length'];a3k++){a3j=HC['array'][a3k],a3j["obj"]==a3i&&(HC['splice'](a3k,0x1),a3k--);}}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[27/28] a3o@u2802#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @27 (verified):
+function a1d(){var aCT=ai1,a3o={};a3o['webGPUAvailable']=typeof navigator!='undefined'&&navigator!=null&&navigator['gpu']!=undefined,a3o["webTransportAvailable"]=typeof window!='undefined'&&window['WebTransport']!=undefined;var a3p=a3o;try{typeof Fu!='undefined'&&Fu!=null&&(a3p['isWebGLRenderer']=Fu['isWebGLRenderer']===!![],Fu["capabilities"]!=undefined&&(a3p['isWebGL2']=Fu['capabilities']["isWebGL2"]===!![]));}catch(a3q){a3p['error']=a19(a3q);}return a3p;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[28/28] a3l@u2256#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function Rs(a3l){if(!L1)return;Rt=!![],Rp=[],!a3l&&(Rq=[]),Rr('na','North\x20America'),Rr('eu','Europe'),Rr('as','Asia'),Rr('in','South\x20India'),Rr('sa','South\x20America'),Rr('au','Australia');}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-30: propose EVERY binding above.

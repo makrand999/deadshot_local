@@ -1,0 +1,223 @@
+{
+ "slice": "02",
+ "stats": {
+  "total": 30,
+  "rename": 30,
+  "keep": 0,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1002783 `a4d=a4b['meshes'][a49]` in loadMesh; USES a4d['primitives']/['isSkinnedMesh']/['name'] plus a42/a40 args (5 refs) = glTF mesh definition",
+   "name": "meshDef",
+   "selector": "a4d@u0020#41"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @963195 `a4e=a4d['light']` in createNodeAttachment; USES undefined-guard plus _loadLight(a4e) (2 refs) = punctual-light index",
+   "name": "lightIndex",
+   "selector": "a4e@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @969060 `a4e=dataView.getUint32` chunk-type word in GLB parse loop; USES compared against JSON/BIN chunk magic (2 refs)",
+   "name": "chunkType",
+   "selector": "a4e@u0020#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @971894 `a4e=['PhysicalMaterial material;',...].join('\\n')` shader chunk; single USES as '#include <lights_physical_fragment>' replacement",
+   "name": "lightsPhysicalFragmentChunk",
+   "selector": "a4e@u0020#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000403 inner `function a4e(accessorIdx,attrName)` in a47; body getDependency('accessor').then(setAttribute), called once per attribute key (1 ref)",
+   "name": "assignAttributeAccessor",
+   "selector": "a4e@u0020#30"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1002806 `var a4e=[]` in loadGeometries; USES push per primitive plus Promise.all(a4e) (5 refs) = pending geometry promises",
+   "name": "pending",
+   "selector": "a4e@u0020#35"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @962740 _loadLight().then callback param in createNodeAttachment; single USES passed to _getNodeRef(cache,lightIndex,a4f) = resolved light",
+   "name": "light",
+   "selector": "a4f@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @969126 `a4f=new Uint8Array(...)` JSON chunk slice in GLB parser; single USES decoded via LoaderUtils.decodeText(a4f)",
+   "name": "contentArray",
+   "selector": "a4f@u0020#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @984534 _invokeAll callback param in parse; USES `a4f['_markDefs']&&a4f['_markDefs']()` (2 refs) = extension object",
+   "name": "extension",
+   "selector": "a4f@u0020#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1001359 `a4f=index.count-0x2` in toTrianglesDrawMode; USES as fan/strip loop bound plus length/3 sanity check (3 refs)",
+   "name": "numberOfTriangles",
+   "selector": "a4f@u0020#27"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1002828 `for(a4f=0x0;...)` loop counter over primitives in loadGeometries (3 refs incl. a49[a4f])",
+   "name": "i",
+   "selector": "a4f@u0020#29"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1009350 Promise.all(pending).then callback param in loadNode; USES a4f.length/a4f[0x0]/a4f[i] to build node or group (6 refs)",
+   "name": "nodeObjects",
+   "selector": "a4f@u0020#32"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @981432 `a4g=targets[i]` in morph-target fn a41; USES POSITION/NORMAL reads across scan and load loops (6 refs)",
+   "name": "target",
+   "selector": "a4g@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1001380 `a4g=[]` in toTrianglesDrawMode; USES push per triangle plus length check plus setIndex (11 refs)",
+   "name": "triangleIndices",
+   "selector": "a4g@u0020#21"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1002843 `a4g=primitives.length` loop bound in loadGeometries (4 refs incl. a4f<a4g)",
+   "name": "il",
+   "selector": "a4g@u0020#23"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1005806 loadAnimation 5th array var a4g=[]; USES @1006469 a4g.push(a4l=channel target) + Promise.all(a4g)->a4p[4]=a4u consumed via a4C['path'] track switch",
+   "name": "pendingTargets",
+   "selector": "a4g@u0020#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1009284 param of camera-dependency then-callback; USES return _getNodeRef(cameraCache,a4d['aKmLbYuMC'],a4g) — the resolved camera object",
+   "name": "loadedCamera",
+   "selector": "a4g@u0020#28"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1009367 var a4g in loadNode then-callback assigned Bone/Group/attached object; USES @1009999-1010205 name/matrix/position/quaternion/scale setup + associations.set(a4g,{type:'nodes'})",
+   "name": "node",
+   "selector": "a4g@u0020#29"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @981591 var a4h=[] in a41 (addMorphTargets) after POSITION/NORMAL scan + early return, paired with a4i#7 @981598; collects position-branch pending accessors",
+   "name": "pendingPositionAccessors",
+   "selector": "a4h@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1002851 var a4h=a49[a4f] loop element over loadGeometries primitives array; fed to a43 cache-key fn + DRACO/parse branch",
+   "name": "primitive",
+   "selector": "a4h@u0020#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1005821 for(var a4h=0x0,...) loop index over loadAnimation a4b['channels']; USES a4h<a4i/a4h++/channels[a4h]",
+   "name": "channelIndex",
+   "selector": "a4h@u0020#21"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @981598 var a4i=[] paired with a4h#9 @981591 in a41; collects normal-branch pending accessors",
+   "name": "pendingNormalAccessors",
+   "selector": "a4i@u0020#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @995814 var a4i in KHR_MATERIALS_PBR_SPECULAR_GLOSSINESS branch of loadMaterial; USES @995909 a4c[spec-gloss extension] + getMaterialType/extendParams calls",
+   "name": "sgExtension",
+   "selector": "a4i@u0020#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000407 param of helper a4e(a4i,a4j) in a47; USES getDependency('accessor',a4i), called as a4e(a4c[a4f],a4g)",
+   "name": "accessorIndex",
+   "selector": "a4i@u0020#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1002888 a4i=a43(a4h) primitive-cache key in loadGeometries loop; USES a4j=a4c[a4i] lookup + a4c[a4i]=a4l store",
+   "name": "cacheKey",
+   "selector": "a4i@u0020#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1005829 a4i=a4b['channels']['length'] loop bound in loadAnimation; USES a4h<a4i",
+   "name": "channelCount",
+   "selector": "a4i@u0020#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @981683 var a4j in if(a4c) position branch of a41 target loop: getDependency('accessor',POSITION) or position-attribute fallback, pushed to a4h",
+   "name": "pendingPositionAccessor",
+   "selector": "a4j@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000411 param of helper a4e(a4i,a4j) in a47; USES setAttribute(a4j,a4k), called as a4e(a4c[a4f],a4g mapped name)",
+   "name": "attributeName",
+   "selector": "a4j@u0020#17"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010790 for(var a4j=0x0,a4k=joints.length) loop index in loadScene skin branch; USES getDependency('node',joints[a4j])",
+   "name": "jointIndex",
+   "selector": "a4j@u0020#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @999601 loop var in a46 morph-target bounds loop; USES @999805 for(var a4k=0x0,a4l=a4h.length;a4k<a4l;a4k++){var a4m=a4h[a4k]...}",
+   "name": "targetIndex",
+   "selector": "a4k@u0020#20"
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "meta": {
+  "slice": "00",
+  "wave": 60
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Binary reader: getUint16/getter calls plus byteOffset both sides; SERVED: identical (snippet-only twin).",
+   "name": "dataView",
+   "selector": "a3i@u1961#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Offset cursor defaulted incremented passed to readers both sides; SERVED: identical (snippet-only twin).",
+   "name": "readOffset",
+   "selector": "a3j@u1961#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Template object filled with fields assigned offsets returned; SERVED: identical (snippet-only twin).",
+   "name": "decodedMessage",
+   "selector": "a3k@u1961#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Alias used only for schema keys sizes guard; SERVED: identical (snippet-only twin).",
+   "name": "messageTemplate",
+   "selector": "a3l@u1961#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Holds globalKeys bounding field decode loop; SERVED: identical (snippet-only twin).",
+   "name": "fieldKeys",
+   "selector": "a3m@u1961#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop counter indexing keys and byte sizes; SERVED: identical (snippet-only twin).",
+   "name": "fieldIndex",
+   "selector": "a3n@u1961#0"
+  }
+ ]
+}

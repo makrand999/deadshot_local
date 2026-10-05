@@ -1,0 +1,1205 @@
+{
+ "batch": "batch12",
+ "proposals": [
+  {
+   "token": "FM",
+   "proposedName": "modeDisplayNames",
+   "confidence": "high",
+   "evidence": "modes.js:15 var FM=modeNames alias; handlers.js:75 FM[currentGameMode] sets lobby mode label; scope-crosshair.js:19 FM[mode] sets menu mode text",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "FW",
+   "proposedName": "neutralTeamColor",
+   "confidence": "high",
+   "evidence": "constants.js:7 FW=white Color(0.9,0.9,0.9); handlers.js:75 Dom hardpoint markers reset to FW; game-loop.js:4321 YX team picker returns FW for team 0",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "FX",
+   "proposedName": "localTeamColor",
+   "confidence": "high",
+   "evidence": "constants.js:7 FX=blue Color rgb(60,150,230); game-loop.js:4321 YX returns FX for localTeamId; shaders.js:19 hardpoint topColor compared against FX",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "FZ",
+   "proposedName": "localTeamColorCss",
+   "confidence": "high",
+   "evidence": "constants.js:7 FZ='rgb(70,163,240)' blue css string; shaders.js:19 shader topColor + Color built from FZ; hud.js:17 blue team panel uses FZ vs '#E33' red panel",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "G8",
+   "proposedName": "debugMarkerLength",
+   "confidence": "high",
+   "evidence": "constants.js:7 G8=1.4; game-loop.js:3989 marker-sphere verts below 0 pushed down by G8; :4007 TX end y-=G8; :4011 template y set via G8*0.5 (impact/server debug markers)",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "GQ",
+   "proposedName": "seededRandom",
+   "confidence": "high",
+   "evidence": "game-loop.js:3063 LCG constructor (m/a/c/state); :3065 prototype nextInt/nextFloat; :4425 a0o=new GQ(); fire.js:7 a0o.nextFloat() drives bullet spread",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "GV",
+   "proposedName": "boundingBox",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:53 GV() returns {min,max} Vector3 box; fire.js:5 a3l=new GV() player collision box; webgl-renderer.js:63 face.aabb + :87 OD frustum box",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "GZ",
+   "proposedName": "downloadCanvasImage",
+   "confidence": "high",
+   "evidence": "widgets.js:73 GZ(canvas,name) downloads canvas PNG via anchor href=toDataURL+click; animation.js:15 menu-logo dump; scope-crosshair.js:19 rarityImg/rarityOval dumps",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "Gt",
+   "proposedName": "forceAimTouch",
+   "confidence": "high",
+   "evidence": "game-loop.js:3045 var Gt=false touch flag; scope-crosshair.js:19 touchstart sets Gt when forceAim; widgets.js:183 touch handler treats touch as aim-side when Gt then resets",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "H4",
+   "proposedName": "H4",
+   "confidence": "low",
+   "evidence": "ABSTAIN dead alias: game-loop.js:3103 var H4=H3 same-object alias; only used by own fround loop :3103-3105; never consumed elsewhere (H3 bloom table has no readers)",
+   "verdict": "abstain",
+   "slice": 0
+  },
+  {
+   "token": "H8",
+   "proposedName": "smgKillfeedConfig",
+   "confidence": "high",
+   "evidence": "game-loop.js:3111-3113 H8={size:1.1,offset:8}; hud.js:5 smgWeaponUiConfig.killfeed=H8; hud.js:15 killfeed renderer reads ui.killfeed.size/offset",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "Hd",
+   "proposedName": "arKillfeedConfig",
+   "confidence": "high",
+   "evidence": "game-loop.js:3125-3127 Hd={size:1.05,offset:3}; hud.js:7 arWeaponUiConfig.killfeed=Hd; hud.js:15 killfeed renderer reads ui.killfeed.size/offset",
+   "verdict": "rename",
+   "slice": 0
+  },
+  {
+   "token": "Hi",
+   "proposedName": "awpKillfeedLayout",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3139 var Hi={}; :3141 Hi size=0.9 offset=-6; ui/hud.js:9 awpWeaponUiConfig['killfeed']=Hi; consumed as weaponStatsTable[*]['ui']['killfeed']{size,offset} in hud.js:15",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Hn",
+   "proposedName": "shotgunKillfeedLayout",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3153 var Hn={}; :3155 Hn size=1 offset=3; ui/hud.js:11 shotgunWeaponUiConfig['killfeed']=Hn; sibling of Hi/H8/Hd per-weapon killfeed layouts",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "ID",
+   "proposedName": "changeMapTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3287 var ID={}; :3289 ID{h:u8,lm:u8}; network/handlers.js:5 templatesByName['a22SWM3PvBo']=ID = msg33 ChangeMap per protocol-phase2.md:188",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "IE",
+   "proposedName": "statusEffectTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3291 var IE={}; :3293 IE{ef:u16,t:u8}; network/handlers.js:5 templatesByName['y6ImBq587']=IE = msg34 status-effect text (disabled handler) per protocol-phase2.md:189",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "IJ",
+   "proposedName": "chatTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3311 var IJ={}; :3313 IJ{id:u16,string}; network/handlers.js:5 templatesByName['kM86hVW024']=IJ = msg40 Chat per protocol-phase2.md:195",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "IK",
+   "proposedName": "teamScoresTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3315 var IK={}; :3317 IK{a:u16,b:u16}; network/handlers.js:5 templatesByName['P2F7KG88n96']=IK = msg42 team scores per protocol-phase2.md:197",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "IM",
+   "proposedName": "playerLoadoutTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3323 var IM={}; :3325 IM{id:u8,string}; network/handlers.js:5 templatesByName['F29o2i138']=IM = msg44 player loadout (JSON) per protocol-phase2.md:199 + network.md:33",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "IQ",
+   "proposedName": "partyJoinTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3337 var IQ={}; :3339 IQ{t:u8,string}; network/handlers.js:5 templatesByName['oR7qa621M3']=IQ = msg48 party join info (client->server) per protocol-phase2.md:203",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Ip",
+   "proposedName": "cameraAimTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3233 var Ip={}; :3235 Ip{x:u8,y:u8}; network/handlers.js:5 templatesByName['fm80f18li7']=Ip = msg17 Camera aim/orient per protocol-phase2.md:171 + network.md:48",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Is",
+   "proposedName": "deathTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3243 var Is={}; :3245 Is{id:u8,h:u8}; network/handlers.js:5 templatesByName['gB4Cncy3f4']=Is = msg20 death/elimination (id=killer,h=killerHP) per protocol-phase2.md:174",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "It",
+   "proposedName": "classSelectTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3247 var It={}; :3249 It{v:u8,eXABYtRfN:u8}; network/handlers.js:5 templatesByName['B20L372s8']=It = msg21 class-select/ready-to-spawn (client->server) per protocol-phase2.md:175",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Iu",
+   "proposedName": "playerWeaponTemplate",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3251 var Iu={}; :3253 Iu{id:u8,type:u8}; network/handlers.js:5 templatesByName['k1Qu903595']=Iu = msg22 player weapon type per protocol-phase2.md:176",
+   "verdict": "rename",
+   "slice": 1
+  },
+  {
+   "token": "Iy",
+   "proposedName": "messageTemplateIy",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3267 var Iy={} + :3269 fields rjVasvUkpY/playerCount=uint8; network/handlers.js:5 templatesByName[E76e9L140]=Iy amid messageTemplate siblings",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "J4",
+   "proposedName": "templateKeyAliases",
+   "confidence": "high",
+   "evidence": "network/codec.js:7 var J4={}; sim/game-loop.js:3381 J4 maps YlyjPgZsW->kills/headshots; :3383 aliased as templateKeyAliasMap + key-rename loop :3385",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JF",
+   "proposedName": "neonArSkinEntry",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3421 var JF={} + :3423 {name:neon,weapon:ar}; :3427 neonArShopItem contents array [JF]",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JH",
+   "proposedName": "neonSmgSkinEntry",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3429 var JH={} + :3431 {name:neon,weapon:smg}; :3435 neonSmgShopItem contents array [JH]",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JJ",
+   "proposedName": "neonAwpSkinEntry",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3437 var JJ={} + :3439 {name:neon,weapon:awp}; :3443 neonAwpShopItem contents array [JJ]",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JL",
+   "proposedName": "neonShotgunSkinEntry",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3445 var JL={} + :3447 {name:neon,weapon:shotgun}; world/weapons.js:19 neonShotgunShopItem contents array [JL]",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JN",
+   "proposedName": "neonBundleArSkinEntry",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3451 var JN={} + :3453 {name:neon,weapon:ar}; ui/shop-locker.js:47 neonBundleShopItem contents array [JN,JO,JP,JQ]",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JO",
+   "proposedName": "neonBundleSmgSkinEntry",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3455 var JO={} + :3457 {name:neon,weapon:smg}; ui/shop-locker.js:47 neonBundleShopItem contents array [JN,JO,JP,JQ]",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JP",
+   "proposedName": "neonBundleAwpSkinEntry",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3459 var JP={} + :3461 {name:neon,weapon:awp}; ui/shop-locker.js:47 neonBundleShopItem contents array [JN,JO,JP,JQ]",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JQ",
+   "proposedName": "neonBundleShotgunSkinEntry",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3463 var JQ={} + :3465 {name:neon,weapon:shotgun}; ui/shop-locker.js:47 neonBundleShopItem contents array [JN,JO,JP,JQ]",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "JS",
+   "proposedName": "shopCatalogData",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3469 var JS={} + :3471 gemOptions/itemOptions arrays; :3473 aliased as shopCatalog (JT)",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "Jl",
+   "proposedName": "maxGroundSpeedSq",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3391 Jl=baseMoveSpeed (0.074); combat/fire.js:5 grounded horizontalLengthSq>Jl clamps via Jk=sqrt, plus bloom threshold Jl/8",
+   "verdict": "rename",
+   "slice": 2
+  },
+  {
+   "token": "Jm",
+   "proposedName": "airborneSpeedCapSq",
+   "confidence": "high",
+   "evidence": "game-loop.js:3391 decl fround(baseMoveSpeed-0.005+0.6); Jo=Jm and Jr=Jm*0.99 used as airborne clamp caps vs horizontalLengthSq in fire.js:5; vQ=true=grounded per animation.js:27 jumpAnim",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "KD",
+   "proposedName": "refreshRespawnBanners",
+   "confidence": "high",
+   "evidence": "game-loop.js:3855 def clears+requests crazyGamesBanner banner-respawn-1/2; called scope-crosshair.js:19 respawn flow + handlers.js:45 death screen",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "KS",
+   "proposedName": "readCookie",
+   "confidence": "high",
+   "evidence": "widgets.js:113 def parses document.cookie by name; called 3x with authTokenStorageKey in widgets.js:123; sibling clearCookie/KQ setter",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "KY",
+   "proposedName": "restoreAuthToken",
+   "confidence": "high",
+   "evidence": "widgets.js:123 def restores partyController.token from memory/localStorage/cookie then MqLFrYpSz; called hud.js:17 update loop + scope-crosshair.js:19 x2",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Kb",
+   "proposedName": "moldingRoomStylePreset",
+   "confidence": "high",
+   "evidence": "game-loop.js:3529-3531 def name=molding walls=separator-trim; listed in Kh room-style array game-loop.js:3553 with orange/blue/floor/brickwall presets",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Kg",
+   "proposedName": "noroofRoomStylePreset",
+   "confidence": "high",
+   "evidence": "game-loop.js:3549-3551 def name=noroof walls=tempblue; listed in Kh room-style array game-loop.js:3553",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Ku",
+   "proposedName": "openExternalUrl",
+   "confidence": "high",
+   "evidence": "game-loop.js:3573 def window.open(_blank)/MobileApp.openInChrome; called scope-crosshair.js:19 x3 (play-store, discord, invite URLs)",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Ky",
+   "proposedName": "rankDisplayScore",
+   "confidence": "high",
+   "evidence": "scope-crosshair.js:19 Ky=rank*15 capped 14.999 or placement progress; sent as rank handlers.js:29; agx(ahn,Ky) rank-change anim + a7Q UI",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Kz",
+   "proposedName": "rankedSkillRating",
+   "confidence": "high",
+   "evidence": "scope-crosshair.js:19 Kz=server rank; sent as ranksgr handlers.js:29; matchmaker.js:15 sgr=isRankedMatch?Kz:playerSkillRating",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "L4",
+   "proposedName": "equipWeaponClass",
+   "confidence": "high",
+   "evidence": "weapons.js:27 def equips class rig/slots/offsets/zoom/stats by index; called scope-crosshair.js:19 class-button + webgl-renderer.js:187 init",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "LL",
+   "proposedName": "outlineWorkCanvas",
+   "confidence": "high",
+   "evidence": "game-loop.js:3623 decl canvas sibling of tintWorkCanvas; applyImageOutline working copy + width/height reset animation.js:11",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "LV",
+   "proposedName": "elementCache",
+   "confidence": "high",
+   "evidence": "game-loop.js:3625 decl {}; id-to-element cache backing getCachedElementById widgets.js:147 (3 identifier positions)",
+   "verdict": "rename",
+   "slice": 3
+  },
+  {
+   "token": "Lz",
+   "proposedName": "googleLogoImage",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:3601 var Lz=img src=promo/google.png; src/combat/scope-crosshair.js:19 x2 as icon in Sign-in-with-Google buttons (welcome a54, settings a8h)",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "MQ",
+   "proposedName": "updateDeathScreenHealth",
+   "confidence": "high",
+   "evidence": "src/combat/scope-crosshair.js:19 MQ=function(h,max) sizes killer-health bar + label, init MQ(100,100); src/network/handlers.js:45 MQ(a3o.h,entity.maxHealth) on death",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "Mt",
+   "proposedName": "animateShopSkinFloat",
+   "confidence": "high",
+   "evidence": "src/combat/scope-crosshair.js:19 Mt=function animates aaz neon-skin images sine bob; src/ui/hud.js:17 Mt() called per-frame while shopScene visible; decl src/ui/menu.js:7",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "Mw",
+   "proposedName": "Mw",
+   "confidence": "low",
+   "evidence": "src/ui/menu.js:7 decl; src/combat/scope-crosshair.js:19 Mw=scene(f) hidden, zero consumer uses (siblings Mv/Mz decl-only)",
+   "verdict": "abstain",
+   "slice": 4
+  },
+  {
+   "token": "NF",
+   "proposedName": "mobileUserAgentKeywords",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:3667 NF=[Android,webOS,iPhone,iPad,iPod,Blackberry,Windows Phone]; :3669 compiled to NG regexes; src/ui/widgets.js:177 NF[3] iPad UA match",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "NQ",
+   "proposedName": "matrixUpdateFrameId",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:3689 var NP=0,NQ=1; src/sim/input.js:35 NQ++ per main-loop frame; src/engine/webgl-renderer.js:77 lastMatrixUpdateFrame==NQ dedup guard",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "NT",
+   "proposedName": "tamperTripFlag",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:3691 var NT=true; :3693 written by Math.abs-hook canary; :4067 NT forces tamperDetectedFlag in addEventListener-tamper scan",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "NU",
+   "proposedName": "mathAbsMethodKey",
+   "confidence": "high",
+   "evidence": "src/sim/game-loop.js:3691 NU=decodeByteString([-87,-88,-105])=\"abs\"; :3691/:3693 key into mathAlias to install+restore Math.abs hook",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "Na",
+   "proposedName": "mobileReloadButton",
+   "confidence": "high",
+   "evidence": "src/combat/scope-crosshair.js:19 Na=a3G(reload.png) name=reload sets reload input flag; repositioned in a4L layout; decl src/ui/menu.js:7",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "Nb",
+   "proposedName": "mobileAimButton",
+   "confidence": "high",
+   "evidence": "src/combat/scope-crosshair.js:19 Nb=a3G(aim.png) name=aim forceAim sets ybKMeoEjyk; repositioned in a4L layout; decl src/ui/menu.js:7",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "Nc",
+   "proposedName": "mobileLeftShootButton",
+   "confidence": "high",
+   "evidence": "src/combat/scope-crosshair.js:19 Nc=a3G(shoot.png) name=shoot sets leftShootHeld; repositioned in a4L layout; decl src/ui/menu.js:7",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "Nd",
+   "proposedName": "mobileRightShootButton",
+   "confidence": "high",
+   "evidence": "src/combat/scope-crosshair.js:19 Nd=a3G(shoot.png) name=shoot2 sets rightShootHeld; repositioned in a4L layout; decl src/ui/menu.js:7",
+   "verdict": "propose",
+   "slice": 4
+  },
+  {
+   "token": "Nf",
+   "proposedName": "mobileFireHeld",
+   "confidence": "high",
+   "evidence": "ui/menu.js:7 decl; core/bitfield.js:33 Nf=false on class confirm; sim/input.js:35 Nf=leftShootHeld||rightShootHeld gates fireTriggerHeld",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "Nj",
+   "proposedName": "weaponStatLabels",
+   "confidence": "high",
+   "evidence": "ui/menu.js:7 decl; combat/scope-crosshair.js:19 Nj=[] pushed weapon stat texts; world/weapons.js:21 Nj[i].text refreshed per weapon",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "Nt",
+   "proposedName": "skipSplashTweens",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3651 Nt=true, :3699 isHttps->false; engine/shaders.js:175 Nt?0:0x960 mapFinalizeTween; network/handlers.js:77 Nt?0:0x1f4 matchFound tween",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "Nx",
+   "proposedName": "clientReportVersion",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3657 Nx=0x1; characters/weapon-attach.js:23 error report version; combat/scope-crosshair.js:37 telemetry version; network/matchmaker.js:9 report version",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "O1",
+   "proposedName": "inputPacketBuffer",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:87 ArrayBuffer(FRF6r51VY32 size), O2=DataView(O1); combat/fire.js:11 ws.send(O1) / queue.push(O1)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "O3",
+   "proposedName": "mobileInputPacketBuffer",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:87 ArrayBuffer(input+zg46 mobile sizes), mobileInputPacketView=DataView(O3); combat/fire.js:11 ws.send(O3) / queue.push(O3)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "OC",
+   "proposedName": "cachedWorldProjection",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:87 new Matrix4; sim/input.js:35 first material writes OC=multiplyMatrices(OB,matrixWorld), rest copy OC into worldProjection uniforms",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "OK",
+   "proposedName": "pendingResendCount",
+   "confidence": "medium",
+   "evidence": "engine/webgl-renderer.js:87 OK=0x0; combat/fire.js:11 if(OK>0) resend OE snapshots then OK=0 (never incremented in src; queue stub)",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "OL",
+   "proposedName": "resentInputFields",
+   "confidence": "medium",
+   "evidence": "engine/webgl-renderer.js:87 OL=['val','x','y','rBEdfQOuYkz']; combat/fire.js:11 resend loop copies OL fields from OE[a3z] into template",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "Oy",
+   "proposedName": "cullingFrustum",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:87 new Frustum; sim/input.js:35 setFromProjectionMatrix then intersectsBox drives occlusion visible/inFrustum",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "PA",
+   "proposedName": "prevInspectActive",
+   "confidence": "medium",
+   "evidence": "engine/webgl-renderer.js:87 PA=false; combat/fire.js:11 if(a48)!PA edge-triggers inspect tweens, PA=a48 tracks prior frame",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "PB",
+   "proposedName": "fastInspectRestore",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:87 PB=false; combat/fire.js:7 PB=true in fireShot; combat/fire.js:11 PB shortens inspect-restore tween to 0x96 then clears",
+   "verdict": "rename",
+   "slice": 5
+  },
+  {
+   "token": "PC",
+   "proposedName": "inspectRearmed",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:87 decl PC=true; fire.js:11 inspect tween gated on PC then PC=false, re-armed true when inspect key released",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "PH",
+   "proposedName": "currentMapIndex",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:87 decl PH=-1; handlers.js:77 PH=a3o[h] mapIndex in changeMap handler; echoed as lpm in join hello handlers.js:29 and matchmake req matchmaker.js:15",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "PN",
+   "proposedName": "scratchPlaneHeight",
+   "confidence": "medium",
+   "evidence": "webgl-renderer.js:87 decl PN=0; webgl-renderer.js:161 loop scratch alternating 0.5/3 as PlaneGeometry height arg",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "Pa",
+   "proposedName": "landingRollFlip",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:87 decl Pa=false; fire.js:11 toggled on landing flag dbuHgQbFZh, consumed as (Pa?-1:1) roll sign in landing camera kick",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "Pq",
+   "proposedName": "forceVisibilityRefresh",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:87 decl Pq=false; handlers.js:35 set on spawn; input.js:35 forces all-entity LOS raycast refresh, cleared same frame",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "Pr",
+   "proposedName": "wasSliding",
+   "confidence": "medium",
+   "evidence": "webgl-renderer.js:87 decl Pr=false; fire.js:11 edge-detects stance>7 to tween slide-lean vREUyoekm 0/1",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "Pv",
+   "proposedName": "hasMovedForward",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:87 decl Pv=false; fire.js:11 set on W key; input.js:9 gates Press-W tutorial toast in Sq()",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "Pw",
+   "proposedName": "pendingSortObjectsRestore",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:87 decl Pw=false; assets-draco.js:19 set after map skybox load; input.js:35 restores sortObjects=true once then clears",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "Px",
+   "proposedName": "occlusionCullingEnabled",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:87 decl Px=true; assets-draco.js:19 gates occlusionGrid build; input.js:35 gates per-frame occlusion culling query",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "QG",
+   "proposedName": "ambientVolume",
+   "confidence": "high",
+   "evidence": "game-loop.js:3705 decl QG=1; scope-crosshair.js:23 ambientvolume setter; assets-draco.js:19 scales directional gain; game-loop.js:3707 category-volume getter",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "QO",
+   "proposedName": "emptyCollisionWorld",
+   "confidence": "high",
+   "evidence": "game-loop.js:3731 var QO={} aliased by collisionWorld at game-loop.js:3733; physics.js:5 grid fields init undefined; never reassigned",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "QV",
+   "proposedName": "stickDeadzone",
+   "confidence": "medium",
+   "evidence": "game-loop.js:3741 var QV=0.1,QW=1-QV; game-loop.js:3743 threshold+rescale in applyStickDeadzone",
+   "verdict": "rename",
+   "slice": 6
+  },
+  {
+   "token": "Qg",
+   "proposedName": "deathTimestampMs",
+   "confidence": "high",
+   "evidence": "core/constants.js:13 decl 0x0; network/handlers.js:45 Qg=Date[now]() on death; sim/input.js:35 respawn gate Date[now]()-Qg-0x64<=G9 (x2)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Qj",
+   "proposedName": "aimOffTargetMs",
+   "confidence": "high",
+   "evidence": "core/constants.js:13 decl 0x0; sim/input.js:35 mobile aim: on-target resets Qj=0 else Qj+=frameDeltaMs, disengages ADS when Qj>threshold",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Qv",
+   "proposedName": "occlusionCellX",
+   "confidence": "high",
+   "evidence": "core/constants.js:13 decl 0x0; sim/input.js:35 cached occlusion cell: if(Qv!=x||Qw!=z) rebuild splits then Qv=x; occlusionGrid[map][Qv][Qw]",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Qw",
+   "proposedName": "occlusionCellZ",
+   "confidence": "high",
+   "evidence": "core/constants.js:13 decl 0x0; sim/input.js:35 cached occlusion cell z: if(Qv!=x||Qw!=z) rebuild splits then Qw=z; occlusionGrid[map][Qv][Qw]",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "RF",
+   "proposedName": "enableAdSlots",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3819 decl true; :3823/:3833/:3843 RF&&prepend home/respawn ad banner divs to body",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "RH",
+   "proposedName": "debugHideAdSlots",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3819 decl false; :3825/:3835/:3843 RH&&hide ad slots w/ red bg (engine/shaders.js:9 match is GLSL comment text, not identifier)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "RT",
+   "proposedName": "webglRendererCache",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3863 decl []; engine/webgl-renderer.js:91 x3: RT[antialias?1:0] caches/returns WebGLRenderer per AA mode",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "RV",
+   "proposedName": "applyAntialias",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:91 function RV(a3l) (re)creates renderer w/ antialias=a3l via RT cache; combat/scope-crosshair.js:23 AA setting onchange; sim/game-loop.js:3865 init call",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Re",
+   "proposedName": "showChatInput",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3759 function Re shows chatInput (visible/initial/opacity 1); called network/handlers.js:69, sim/input.js:9 x2",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "Rf",
+   "proposedName": "hideChatInput",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3761 function Rf hides chatInput (visibility hidden/display none); called :3763,:3773, ui/party-lobby.js:17",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "S0",
+   "proposedName": "adMuteActive",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3867 decl false; :3869 muteVolumeForAd sets S0=true around forced volume-0; combat/scope-crosshair.js:23 !S0&&(savedUserVolume=a3l)",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "S5",
+   "proposedName": "hitmarkerOverlay",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:3879 S5=new pc() (:3881 overlay add, :4427 update); pc=engine/shaders.js:19 X hitmarker factory; network/handlers.js:31 S5[jWTjxRTVr](isKill) on hitmarker packet",
+   "verdict": "rename",
+   "slice": 7
+  },
+  {
+   "token": "SU",
+   "proposedName": "damageDirectionScratchVector",
+   "confidence": "medium",
+   "evidence": "webgl-renderer.js:93 decl new Vector3; handlers.js:71 SU.subVectors(camPos,attackerPos)+atan2(z,x) feeds damageDirectionIndicator",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "Sf",
+   "proposedName": "removeEntityByIndex",
+   "confidence": "high",
+   "evidence": "mesh-pool.js:11 swap-removes entityList[i], clears aimTarget, recycles mesh+nametag; called handlers.js:11 player-leave + party-lobby.js:17 reset loop",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "St",
+   "proposedName": "statusBannerContainer",
+   "confidence": "high",
+   "evidence": "game-loop.js:3923 decl ui object; party-lobby.js:19 add(statusEffectPanel); party-lobby.js:21 add(statusBannerText), scene.add(St)",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "Sw",
+   "proposedName": "statusBannerShadowText",
+   "confidence": "high",
+   "evidence": "game-loop.js:3925 decl offset dark (#444) text twin of statusBannerText; party-lobby.js:21 shadow-attach; handlers.js:85 text sync",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "Sy",
+   "proposedName": "reticleRedColor",
+   "confidence": "medium",
+   "evidence": "game-loop.js:3927 decl #F44; constants.js:19 SG dot-sight builder uses Sy for dot+ring+4 ticks (SG itself uncalled)",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "TI",
+   "proposedName": "mousePointerType",
+   "confidence": "high",
+   "evidence": "game-loop.js:3983 decodes to mouse; animation.js:35 three pointer handlers guard a3x[TJ]!=TI",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "TJ",
+   "proposedName": "pointerTypeKey",
+   "confidence": "high",
+   "evidence": "game-loop.js:3983 decodes to pointerType; animation.js:35 three handlers read event[TJ] (sibling keys: mousemove/pointermove/down/up)",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "TO",
+   "proposedName": "whiteMarkerMaterialParams",
+   "confidence": "high",
+   "evidence": "game-loop.js:3991-3993 {color:0xffffff}; webgl-renderer.js:127 TP material; :133 markerMeshTemplate+markerSphereMesh use TP",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "TQ",
+   "proposedName": "redMarkerMaterialParams",
+   "confidence": "high",
+   "evidence": "game-loop.js:3995 {color:0xff0000}; webgl-renderer.js:129 TR; :135 serverMarkerBox + game-loop.js:4019 U2/eventMarkerPool use TR",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "TS",
+   "proposedName": "blueMarkerMaterialParams",
+   "confidence": "high",
+   "evidence": "game-loop.js:3997 {color:0xff}; webgl-renderer.js:131 TT; :135 impactMarkerBox + game-loop.js:4015 U1/overheadMarkerPool use TT",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "TU",
+   "proposedName": "greenMarkerMaterialParams",
+   "confidence": "high",
+   "evidence": "game-loop.js:3999 {color:0xff00}; webgl-renderer.js:133 TV; game-loop.js:4023 U3/trailingMarkerPool uses TV",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "Tf",
+   "proposedName": "crosshairBarGroup",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:109 decl Group; :161 holds 4 crosshair bar meshes; game-loop.js:4125 W0 sets radial spread, called per-frame fire.js:11",
+   "verdict": "rename",
+   "slice": 8
+  },
+  {
+   "token": "U8",
+   "proposedName": "perfMarkTimes",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4033 var U8={}; :4035 U9 stores performance.now() per label; :4037 Ua formats elapsed ms string",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "UJ",
+   "proposedName": "maxGrassInstances",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4093 var UJ=0; world/map-table.js:19 max over maps of grass len/3; combat/effects.js:9 grass particle count",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "UP",
+   "proposedName": "despawnMarker",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:155 function UP splices marker from animatedMaterialList, scale/fade tween, frees to freeMarkerPool; network/handlers.js:83 called for stale markers",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "Uk",
+   "proposedName": "elimBanner",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4053 new pf(undefined) elim widget (renders Eliminated/multikill/headshot); :4055 added to overlayLayer; :3941 SL triggers banner; :4427 per-frame update",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "Ut",
+   "proposedName": "tamperCheckTargets",
+   "confidence": "high",
+   "evidence": "combat/effects.js:7 Ut=[window,document,body]; sim/game-loop.js:4067 iterated for addEventListener toString tamper check",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "VO",
+   "proposedName": "movementXKey",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4115 decodeByteString -> 'movementX'; characters/animation.js:35 a3s[VO] feeds input event x (queue + proxy sites)",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "W7",
+   "proposedName": "movementYKey",
+   "confidence": "high",
+   "evidence": "core/constants.js:25 decodeByteString -> 'movementY'; characters/animation.js:35 a3s[W7] feeds input event y (queue + proxy sites)",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "WL",
+   "proposedName": "spaceRespawnLatch",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4175 var WL=false; sim/input.js:17 set on space-respawn trigger, blocks repeat keydown, cleared on keyup",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "WQ",
+   "proposedName": "disengageAdsAim",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4185 clears localPlayer ADS state; sim/input.js:17 ads keyup; ui/widgets.js:183 touch end; ui/party-lobby.js:29 controller alias; pairs engageAdsAim",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "WS",
+   "proposedName": "handlePointerLockChange",
+   "confidence": "high",
+   "evidence": "sim/input.js:23 checks pointerLockElement, pause/resume + key reset; :25 pointerlockchange listener (std/moz/webkit)",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "WT",
+   "proposedName": "handlePointerLockError",
+   "confidence": "medium",
+   "evidence": "sim/input.js:23 empty function body; :25 registered for pointerlockerror (std/moz/webkit)",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "Wd",
+   "proposedName": "lastEntitySnapshotMs",
+   "confidence": "high",
+   "evidence": "core/constants.js:25 + sim/game-loop.js:4447 init getNowMs; network/handlers.js:23 set on entity state msg; combat/fire.js:11 entitySnapshotAgeMs=nowMs-Wd gates interp",
+   "verdict": "propose",
+   "slice": 9
+  },
+  {
+   "token": "Wz",
+   "proposedName": "keyCodeKeyList",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4153 decl var Wz=getObjectKeys(keyCodeLabelTable); :4155 loop builds keyLabelToCodeMap from Wz",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "X9",
+   "proposedName": "lastDeathLookInputMs",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4199 decl X9=0x0 with aim vars; sim/input.js:31 throttle frameTimestampMs-X9>0x50 for dead-look input",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "XA",
+   "proposedName": "mapGltfLoader",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:171 decl with weaponGltfLoader; engine/assets-draco.js:19 lazy XA=new GLTFLoader for map gltf loads",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "XO",
+   "proposedName": "updateEntityNametag",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4247 def XO(entity,name) updates threeNametag+team visibility; called network/handlers.js:23,47,87",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "Xc",
+   "proposedName": "recalcAdsSensitivity",
+   "confidence": "high",
+   "evidence": "ui/party-lobby.js:31 def Xc recomputes adsAimSensitivity; called sim/game-loop.js:4201 world/weapons.js:27 scope-crosshair.js:23",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "Xi",
+   "proposedName": "syncWeaponViewProjection",
+   "confidence": "high",
+   "evidence": "engine/shaders.js:161 def Xi pushes Gr projectionMatrix/xyMult to weapon shader uniforms; called combat/fire.js:11 shaders.js:163 sim/input.js:9",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "Xk",
+   "proposedName": "resizeAllUi",
+   "confidence": "high",
+   "evidence": "ui/party-lobby.js:33 def Xk resizes uiToolkit+partyController+chat+uiScene; called shaders.js:163 party-lobby.js:17 handlers.js:77",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "Xs",
+   "proposedName": "recoilKickEnvelope",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4229 def Xs easing envelope (easeOutQuad/Elastic); applied to weapon z-offset+crosshair in combat/fire.js:11 x3",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "Y5",
+   "proposedName": "spawnBlendOffset",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:183 decl Y5=new Vector3 with spawnBlendTimer; set from camera-spawn delta network/handlers.js:35, blended combat/fire.js:11",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "YG",
+   "proposedName": "ktx2FormatSupported",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4315 decl YG=![] with ktx2LoaderInstance; set from workerConfig format support engine/assets-draco.js:17, read by YI :4317",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "YN",
+   "proposedName": "mapCollisionBuilt",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:203 decl YN=![]; guards collision build engine/assets-draco.js:19 (if(!YN) build+set, YN=a3q param)",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "YX",
+   "proposedName": "teamIdToColor",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4321 def YX(teamId) returns FX/FW/FY team color; called for hardpoint colors network/handlers.js:79 x3",
+   "verdict": "propose",
+   "slice": 10
+  },
+  {
+   "token": "Yb",
+   "proposedName": "weaponMaterialNames",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4261 var Yb=keys(weaponMaterialMap); engine/webgl-renderer.js:185 iterates Yb building materials; :187 Yb.indexOf(material.name) check",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Yl",
+   "proposedName": "untexturedRigLoader",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4273 var Yl=createDracoGltfLoader; :4275 Yl.load(rigged_untextured)->finalizePlayerRig(slot 1), disposes dracoLoader",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Ym",
+   "proposedName": "tuxedoRigLoader",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4277 var Ym=createDracoGltfLoader; :4279 Ym.load(tuxedo)->finalizePlayerRig(slot 2), disposes dracoLoader",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Yn",
+   "proposedName": "femaleRigLoader",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4281 var Yn=createDracoGltfLoader; :4283 Yn.load(femalerigged)->finalizePlayerRig(slot 0), disposes dracoLoader",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Yo",
+   "proposedName": "shotgunRigLoader",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4285 var Yo=createDracoGltfLoader; :4287 Yo.load(shotgunplayer)->finalizePlayerRig(slot 3), disposes dracoLoader",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Z8",
+   "proposedName": "cameraTrackVectors",
+   "confidence": "medium",
+   "evidence": "sim/game-loop.js:4331 var Z8=[]; engine/webgl-renderer.js:207 inits 20 Vector3 parked y=-100; combat/fire.js:11 only read: Z8[0].copy(camera pos)",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "Z9",
+   "proposedName": "grayscaleCanvasCache",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4333 var Z9={}; characters/animation.js:21 tint fn reads Z9[src], else grayscales via Za and writes Z9[src]",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "ZQ",
+   "proposedName": "sandPanoramaTexture",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4395 decl; :4399 sand.webp loaded into ZQ; engine/webgl-renderer.js:217 ZT() composites ZQ.image over mountainsPanoramaTexture",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "a0C",
+   "proposedName": "currentMapDisplayName",
+   "confidence": "medium",
+   "evidence": "engine/webgl-renderer.js:225 var a0C=''; network/handlers.js:77 changeMap sets a0C=mapTable.displayName w/ name fallback; never read elsewhere",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "a0H",
+   "proposedName": "cipherResyncPending",
+   "confidence": "high",
+   "evidence": "network/handlers.js:7 var a0H=false; :87 auth-accepted sets a0H=true w/ xorKey/subKey; network/dispatch.js:15 one-shot streamCipher re-decode then clears",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "a0h",
+   "proposedName": "leaderboardDirty",
+   "confidence": "high",
+   "evidence": "sim/game-loop.js:4419 var a0h=false; :4421 markLeaderboardDirty sets true; sim/input.js:35 consumes flag then calls a0k() leaderboard rebuild",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "a0l",
+   "proposedName": "entitySnapshot",
+   "confidence": "high",
+   "evidence": "engine/webgl-renderer.js:223 factory returning {time,position,rotation,copy}; network/handlers.js:23 new a0l() for prev/curr snapshots + queue[5]",
+   "verdict": "rename",
+   "slice": 11
+  },
+  {
+   "token": "a0o",
+   "proposedName": "syncedSeededRng",
+   "confidence": "high",
+   "evidence": "game-loop.js:4425 decl new GQ() (LCG seeded PRNG, game-loop.js:3063-3065); handlers.js:27 server syncs a0o.state; fire.js:7 a0o.nextFloat() x2 for bullet spread",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "a0s",
+   "proposedName": "lastResyncRequestMs",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:225 decl =0; handlers.js:23 500ms throttle (nowMs-a0s>0x1f4) + stamp on desync resync send; handlers.js:33 reset to nowMs on respawn",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "a0v",
+   "proposedName": "playerClanMap",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:225 decl []; handlers.js:47 clan prefix split from name packet per player id; weapons.js:29 feeds leaderboard bsJTPftNmM rendered as clan text scope-crosshair.js:19",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "a0z",
+   "proposedName": "playerScoreMap",
+   "confidence": "high",
+   "evidence": "webgl-renderer.js:225 decl []; handlers.js:55 scoreboard packet stored per player id (points/k/d/hsp/ping); weapons.js:29 read to build leaderboard rows",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "a1C",
+   "proposedName": "matchmakerReservationToken",
+   "confidence": "high",
+   "evidence": "game-loop.js:4477 decl null; matchmaker.js:11 set from connect packet r field; dispatch.js:17 appended as &r= to game server WS URL",
+   "verdict": "propose",
+   "slice": 12
+  },
+  {
+   "token": "a1G",
+   "proposedName": "inputQueueBufferA",
+   "confidence": "high",
+   "evidence": "game-loop.js:4479 decl new GR() beside inputQueueBufferB; animation.js:35 mousemove events pushed; input.js:31 swapped/drained with inputQueueBufferB each tick",
+   "verdict": "propose",
+   "slice": 12
+  }
+ ]
+}

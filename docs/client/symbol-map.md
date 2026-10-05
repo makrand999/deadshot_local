@@ -1,5 +1,15 @@
 # Deadshot.io Client Symbol Dictionary
 
+> **M5 note (2026-09-17):** this document is superseded as machine input by
+> `client-deob/data/rename-map.json` (144 entries: 111 rename + 33 keep, seeded
+> from the 133 rows below; M3 curation + M4 behavioral parity L3 green). It
+> remains the human-readable summary. Machine consumers: use the rename map
+> (`node tools/rename.mjs`), the anchor→module cross-reference
+> (`node tools/server-anchors.mjs` → `build/server-anchors.json`, E1 decision:
+> the live server keeps serving `raw/bundles/final.pkg.gz` untouched), and the
+> modular tree itself (`client-deob/src/`). See `client-deob/PLAN.md` §3 Phase E
+> and `client-deob/PROGRESS.md` (M5).
+
 Comprehensive reference mapping obfuscated variables, classes, functions, and arrays in `raw/bundles/VM9.deob.txt` and `raw/bundles/game.deob.js` to human-readable identities.
 
 ---

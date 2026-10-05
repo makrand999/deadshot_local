@@ -1,0 +1,221 @@
+{
+ "meta": {
+  "wave": 48,
+  "slice": "00",
+  "mergedFrom": [
+   "00a",
+   "00b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows the qzRfUWgFbX update loop over particle array a5a; SERVED DECL shows var agX=a5a[agW] with position/rotation integration on both sides.",
+   "name": "particleItem",
+   "selector": "agX@u2151#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows var agX=N6[agW] with opacity faded to 0 via HL; SERVED DECL shows the identical fade-out loop with decoded keys.",
+   "name": "fadeEntry",
+   "selector": "agX@u2151#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows var agX=Mj(a3k,'Team '+(Bravo/Alpha)...) added to header; SERVED DECL shows the same team-title label construction and header add.",
+   "name": "teamHeaderLabel",
+   "selector": "agX@u2151#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL shows the Mode-section FP loop reaching let agW=FP[a3M] (window truncates before initializer); SERVED DECL shows let agX=new a3I(agW,...) widget added to a5O and pushed to a5U.",
+   "name": "modeOptionButton",
+   "selector": "agX@u2151#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 DECL shows validateCollision reaching for(let after the agX flag init (window truncates); SERVED DECL shows for(let agY=0;agY<a3F.length;agY++) scanning buttons for an overlap flag.",
+   "name": "buttonIndex",
+   "selector": "agY@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows for(var agY=0;agY<a3F.length;agY++) matching a3F names against customMobileButtons keys; SERVED DECL shows the identical name-match scan loop.",
+   "name": "mobileButtonScanIndex",
+   "selector": "agY@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows var agY=document['body'] followed by requestFullscreen; SERVED DECL shows the identical document-body fullscreen call.",
+   "name": "bodyEl",
+   "selector": "agY@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows the literal name array with agY[agZ] used as row label text; SERVED DECL shows the same roster array and indexed label use.",
+   "name": "teamRosterNames",
+   "selector": "agY@u2151#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows agY=agX['button'] with position/text config and onclick sending mode; SERVED DECL shows the same inner mode button with mode-payload onclick.",
+   "name": "modeSelectButton",
+   "selector": "agY@u2151#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows let agZ=Kq['customMobileButtons'][key] with agZ.x/agZ.y applied to button positions; SERVED DECL shows the same saved-position lookup and x/y use.",
+   "name": "customButtonPosition",
+   "selector": "agZ@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows for(var agZ...) reused as the 0..5 row loop indexing agY[agZ] name labels; SERVED DECL shows the identical roster-row index loops.",
+   "name": "rosterRowIndex",
+   "selector": "agZ@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows onclick building var agZ={} with agZ['mode']=agW sent to WSHKjcKdJ; SERVED DECL shows the identical mode-payload object construction.",
+   "name": "modeSelectPayload",
+   "selector": "agZ@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows the Time-Limit FQ loop with let agZ=FQ[a3M] used in labels and ah2['time']=agZ; SERVED DECL shows the same time-option value and time payload.",
+   "name": "timeLimitValue",
+   "selector": "agZ@u2151#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 USES show agb() called from the Back-button onclick and the settings toggle a8M (body truncated in DECL window); SERVED DECL shows agb hiding overlay scene a8L and refreshing settings state.",
+   "name": "closeSettings",
+   "selector": "agb@u2151#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "VM9 DECL window truncates before the var agc initializer so no VM9-side role is visible, and SERVED DECL shows only generic new a3D(...) button construction with opaque args and no distinctive role.",
+   "selector": "agc@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL builds agd={size,opacity} and assigns it to the Settings button text hidden slot (agc['text']['hidden']=agd); SERVED DECL shows the identical {size,opacity} init and hidden-slot assignment with only string-key decoding shifted.",
+   "name": "settingsTextHiddenState",
+   "selector": "agd@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "On both sides age holds anim fields a/b plus rank/subrank/old/new endpoints and feeds MZ drawRank/getRankColor/getRankName plus HL tweens of age.a/age.b; served uses differ only in decoded key wrappers.",
+   "name": "rankAnim",
+   "selector": "age@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs define agf(ahh,ahi) deriving oldRank/oldSubrank/newRank/newSubrank via floor(x/3),floor(x%3), and both sides call it once as agf(ahh,ahi) before redraw; served body differs only in decoder-key spelling.",
+   "name": "setRankEndpoints",
+   "selector": "agf@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED DECLs both build agg as a full-screen rect with a dark overlay child, and both sides recolor agg to MZ.getRankColor(...) and fade its child during rank transitions.",
+   "name": "rankBackdrop",
+   "selector": "agg@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides declare agh as MZ.drawRank(rank,subrank,null,3) output and later pass agh back into drawRank as the redraw target; served differs only in decoded method/key tokens.",
+   "name": "rankCanvas",
+   "selector": "agh@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED both wrap agh in an image display object (0x226x0x226) added under No, then animate agi position/opacity/size during the rank reveal on both sides.",
+   "name": "rankImage",
+   "selector": "agi@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides create agj as the 'CURRENT RANK' text label and later retarget it to PROMOTION/DEMOTION with fillStyle/opacity tweens; served text content is identical, only key decoding shifted.",
+   "name": "rankStatusLabel",
+   "selector": "agj@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL news agm as a3D('Close',...) with an onclick hiding the scene; SERVED DECL shows the same construction, onclick-hide, and opacity/position setup with the label behind the string decoder.",
+   "name": "closeButton",
+   "selector": "agm@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides set agn=0x3c and add it to the y positions of the progress bars and labels (0x154/0xf0/0x127/0x12c/0x10e+agn); served offsets are byte-identical apart from decoded keys.",
+   "name": "panelYOffset",
+   "selector": "agn@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED both declare ago as the white foreground bar and resize ago.width to the ahj fraction of the track inside agt on both sides.",
+   "name": "rankProgressFill",
+   "selector": "ago@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides declare agp as the background bar behind ago and size it to the full track width/position inside agt; served geometry matches with only position-key decoding shifted.",
+   "name": "rankProgressTrack",
+   "selector": "agp@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides create agq as the '+14' delta text, then setText the signed (ahi-ahh) delta with green/red fillStyle and fade it in; served logic matches with only setText/fillStyle keys decoded.",
+   "name": "scoreDeltaLabel",
+   "selector": "agq@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL makes agr the '14%' value label and agt setTexts the rounded value on both sides; SERVED DECL/uses match with the initial string and alignment behind the decoder.",
+   "name": "progressValueLabel",
+   "selector": "agr@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides create ags as the '/ 100' total label and toggle it between '/ 10' and '/ 100' inside agt; served strings sit behind the decoder but the toggle logic is identical.",
+   "name": "progressTotalLabel",
+   "selector": "ags@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both DECLs define agt(ahh) syncing bar widths plus value/total labels from a percent, and both sides invoke it identically (agt(0xe), agt(fraction*0x64)); served body matches modulo decoded keys.",
+   "name": "updateProgressBar",
+   "selector": "agt@u2151#0"
+  }
+ ]
+}

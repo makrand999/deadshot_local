@@ -1,0 +1,222 @@
+{
+ "slice": "slice-01",
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "HttpRequest opts bag: for-in copied onto xhr, options.binary sets responseType",
+   "name": "options",
+   "selector": "options@u0011#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh ctor opts: options.stream_type passed to addBuffers, for-in copied onto this",
+   "name": "options",
+   "selector": "options@u0011#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "configure(o,options): defaulted {}, collects extras, stream_type used",
+   "name": "options",
+   "selector": "options@u0011#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.load opts: defaulted {}, options.no_gl selects null gl path",
+   "name": "options",
+   "selector": "options@u0011#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "mergeMeshes opts: options[j] datatype per buffer, null drops buffer",
+   "name": "options",
+   "selector": "options@u0011#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "fromURL(url,on_complete,gl,options): defaulted {}, forwarded to HttpRequest",
+   "name": "options",
+   "selector": "options@u0011#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "encode(format,options): forwarded to encoder.call(null,this,options)",
+   "name": "options",
+   "selector": "options@u0011#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.plane opts: detailX/detail/width/size/xz drive plane geometry",
+   "name": "options",
+   "selector": "options@u0011#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "plane2D opts: options.size scales vertices2D quad (guarded read)",
+   "name": "options",
+   "selector": "options@u0011#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "Mesh.point(options): unused param (refCount 0), idiomatic signature placeholder",
+   "name": "options",
+   "selector": "options@u0011#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.cube opts: options.size halfsize, lines flag, bounding attached",
+   "name": "options",
+   "selector": "options@u0011#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.box opts: sizex/sizey/sizez halves, lines flag, bounding attached",
+   "name": "options",
+   "selector": "options@u0011#11"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.circle opts: size/radius/slices/xz/empty drive disc geometry",
+   "name": "options",
+   "selector": "options@u0011#12"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "cylinder opts: options.caps===false trims cap verts, bounding attached",
+   "name": "options",
+   "selector": "options@u0011#13"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "sphere opts: options.hemi selects hemispheric vs full bounding",
+   "name": "options",
+   "selector": "options@u0011#14"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.hemi selects BBox branch, forwarded to GL.Mesh.load(buffers,options,gl); idiomatic config param",
+   "name": "options",
+   "selector": "options@u0011#15"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.lines/options.size size the grid Float32Array; forwarded to GL.Mesh; idiomatic config param",
+   "name": "options",
+   "selector": "options@u0011#16"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.radius/size/subdivisions drive icosahedron build; forwarded to GL.Mesh.load; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#17"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options forwarded to Texture.setUploadOptions(options,gl) in upload path; idiomatic pass-through",
+   "name": "options",
+   "selector": "options@u0011#18"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.premultiply_alpha/no_flip drive pixelStorei calls in setUploadOptions; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#19"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options forwarded to Texture.setUploadOptions(options,gl) in uploadData; idiomatic pass-through",
+   "name": "options",
+   "selector": "options@u0011#20"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.texture/temp_color/type configure async URL texture load incl DDS branch; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#21"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.texture reused or new GL.Texture built; uploadImage(image,options); idiomatic",
+   "name": "options",
+   "selector": "options@u0011#22"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.texture/minFilter drive video texture build plus mipmap decision; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#23"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options forwarded to new GL.Texture(w,h,options) in fromTexture clone path; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#24"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options merged over getProperties into fromTexture; idiomatic override param",
+   "name": "options",
+   "selector": "options@u0011#25"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.texture/setUploadOptions drive texImage2D memory upload; idiomatic config param",
+   "name": "options",
+   "selector": "options@u0011#26"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options.texture reused, setUploadOptions(options) before DDS memory load; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#27"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options forwarded to new GL.Texture(0,0,options) for DDS in-memory decode; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#28"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "options forwarded to new GL.Texture(w,h,options) for offscreen shader render; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#29"
+  }
+ ],
+ "stats": {
+  "rename": 0,
+  "keep": 30,
+  "high": 27,
+  "medium": 2,
+  "low": 1
+ }
+}

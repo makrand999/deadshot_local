@@ -1,0 +1,232 @@
+{
+ "meta": {
+  "slice": "02a",
+  "wave": 66
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: options ktx2Loader null-checked then passed to loadTextureImage. SERVED: identical (snippet-only twin).",
+   "name": "ktx2Loader",
+   "selector": "a4f@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: images[source] entry uri-checked then passed to loadTextureImage. SERVED: identical (snippet-only twin).",
+   "name": "sourceImage",
+   "selector": "a4f@u0020#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Promise.all results array with [0] wrapped as Uint8Array. SERVED: identical (snippet-only twin).",
+   "name": "bufferResults",
+   "selector": "a4f@u0020#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: maps lowercased attributes to ids for decodeDracoFile. SERVED: identical (snippet-only twin).",
+   "name": "attributeIdMap",
+   "selector": "a4f@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: value-one uniform object registered as glossiness. SERVED: identical (snippet-only twin).",
+   "name": "glossinessUniform",
+   "selector": "a4f@u0020#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture info assigned to glossinessMap and specularMap. SERVED: identical (snippet-only twin).",
+   "name": "specularGlossinessTexture",
+   "selector": "a4f@u0020#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cached this.valueSize driving stride arithmetic and loop. SERVED: identical (snippet-only twin).",
+   "name": "valueSize",
+   "selector": "a4f@u0020#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cached array length bounding both morph-target loops. SERVED: identical (snippet-only twin).",
+   "name": "targetCount",
+   "selector": "a4f@u0020#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: _invokeAll callback entry invoking optional _markDefs. SERVED: identical (snippet-only twin).",
+   "name": "extension",
+   "selector": "a4f@u0020#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: joints loop index marking referenced nodes isBone. SERVED: identical (snippet-only twin).",
+   "name": "jointIndex",
+   "selector": "a4f@u0020#17"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first Promise.all buffer backing typed attribute arrays. SERVED: identical (snippet-only twin).",
+   "name": "bufferData",
+   "selector": "a4f@u0020#18"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: DDS-aware image pick uri-checked into loadTextureImage. SERVED: identical (snippet-only twin).",
+   "name": "sourceImage",
+   "selector": "a4f@u0020#19"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: json texture entry supplying name and sampler. SERVED: identical (snippet-only twin).",
+   "name": "textureDef",
+   "selector": "a4f@u0020#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: association stashed across KHR transform texture replacement. SERVED: identical (snippet-only twin).",
+   "name": "savedAssociation",
+   "selector": "a4f@u0020#21"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: skinned flag driving clone key and skinning. SERVED: identical (snippet-only twin).",
+   "name": "isSkinnedMesh",
+   "selector": "a4f@u0020#22"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: params object accumulating material properties for constructor. SERVED: identical (snippet-only twin).",
+   "name": "materialParams",
+   "selector": "a4f@u0020#23"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: POSITION accessor min array seeding bounding box. SERVED: identical (snippet-only twin).",
+   "name": "accessorMin",
+   "selector": "a4f@u0020#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: for-in attribute key mapped and fetched per geometry. SERVED: identical (snippet-only twin).",
+   "name": "attributeName",
+   "selector": "a4f@u0020#26"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index enumerating primitives for geometry loading. SERVED: identical (snippet-only twin).",
+   "name": "primitiveIndex",
+   "selector": "a4f@u0020#28"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: collected channel samplers resolved via Promise.all. SERVED: identical (snippet-only twin).",
+   "name": "pendingSamplers",
+   "selector": "a4f@u0020#30"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: node mesh camera promises joined by Promise.all. SERVED: identical (snippet-only twin).",
+   "name": "dependencyPromises",
+   "selector": "a4f@u0020#31"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: resolved node object skin-checked traversed and returned. SERVED: identical (snippet-only twin).",
+   "name": "loadedNode",
+   "selector": "a4f@u0020#33"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: finished node added to parent before children recursion. SERVED: identical (snippet-only twin).",
+   "name": "resolvedNode",
+   "selector": "a4f@u0020#34"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this-alias used for naming and child recursion. SERVED: identical (snippet-only twin).",
+   "name": "parser",
+   "selector": "a4f@u0020#35"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: retryable FileLoader attempt invoked with attempt count. SERVED: identical (snippet-only twin).",
+   "name": "attemptLoad",
+   "selector": "a4g@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first four bytes compared against glTF magic. SERVED: identical (snippet-only twin).",
+   "name": "headerMagic",
+   "selector": "a4g@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: punctual light definition driving three.js light construction. SERVED: identical (snippet-only twin).",
+   "name": "lightDef",
+   "selector": "a4g@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: URI handler or fallback loader passed to loadTextureImage. SERVED: identical (snippet-only twin).",
+   "name": "imageLoader",
+   "selector": "a4g@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: view byteOffset defaulting zero for Uint8Array slice. SERVED: identical (snippet-only twin).",
+   "name": "byteOffset",
+   "selector": "a4g@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: BIN chunk start offset bounding body slice. SERVED: identical (snippet-only twin).",
+   "name": "binChunkStart",
+   "selector": "a4g@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-attribute normalized flags applied after Draco decode. SERVED: identical (snippet-only twin).",
+   "name": "normalizedMap",
+   "selector": "a4g@u0020#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: null-valued uniform object registered as specularMap. SERVED: identical (snippet-only twin).",
+   "name": "specularMapUniform",
+   "selector": "a4g@u0020#7"
+  }
+ ]
+}

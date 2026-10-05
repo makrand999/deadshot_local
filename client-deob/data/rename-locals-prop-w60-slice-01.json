@@ -1,0 +1,408 @@
+{
+ "meta": {
+  "wave": 60,
+  "slice": "01",
+  "mergedFrom": [
+   "01a",
+   "01b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: material name stem trimmed of numeric suffix for texture path; SERVED: identical (snippet-only twin).",
+   "name": "textureBaseName",
+   "selector": "a50@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: index-buffer entry fed to color getY during grouping; SERVED: identical (snippet-only twin).",
+   "name": "vertexIndex",
+   "selector": "a50@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: regex exec result locating numeric suffix in material name; SERVED: identical (snippet-only twin).",
+   "name": "suffixMatch",
+   "selector": "a51@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: color channel value driving geometry group splits; SERVED: identical (snippet-only twin).",
+   "name": "vertexColorY",
+   "selector": "a51@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture URL built then loaded via Fg with flipY; SERVED: identical (snippet-only twin).",
+   "name": "texturePath",
+   "selector": "a52@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: seven-wide name chunks indexed by color channels; SERVED: identical (snippet-only twin).",
+   "name": "materialNameGrid",
+   "selector": "a52@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: subway light preset array converted to vector positions; SERVED: identical (snippet-only twin).",
+   "name": "subwayLights",
+   "selector": "a53@u2654#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "single var spans chunk-array and built-material roles",
+   "selector": "a53@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: current geometry face receiving material index assignment; SERVED: identical (snippet-only twin).",
+   "name": "face",
+   "selector": "a55@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: red-channel grid column indexing material name grid; SERVED: identical (snippet-only twin).",
+   "name": "colorIndexR",
+   "selector": "a56@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture name with optional addTexture prefix applied; SERVED: identical (snippet-only twin).",
+   "name": "fullTextureName",
+   "selector": "a59@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: texture URL cached in Z2 then loaded; SERVED: identical (snippet-only twin).",
+   "name": "textureUrl",
+   "selector": "a5A@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: pre-merge geometry disposed after mergeVertices replacement; SERVED: identical (snippet-only twin).",
+   "name": "oldGeometry",
+   "selector": "a5A@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: debug box geometry translated to bounds center; SERVED: identical (snippet-only twin).",
+   "name": "boundsBoxGeometry",
+   "selector": "a5A@u2654#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead onBeforeRender parameter never referenced anywhere",
+   "selector": "a5D@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: material deduplication map keyed by material name; SERVED: identical (snippet-only twin).",
+   "name": "materialCache",
+   "selector": "a5D@u2654#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead onBeforeRender parameter never referenced anywhere",
+   "selector": "a5E@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traverse visitor having material inspected and replaced; SERVED: identical (snippet-only twin).",
+   "name": "traversedNode",
+   "selector": "a5E@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: replaced geometry disposed after fromGeometry conversion; SERVED: identical (snippet-only twin).",
+   "name": "oldGeometry",
+   "selector": "a5E@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: map uniform descriptor holding material map texture; SERVED: identical (snippet-only twin).",
+   "name": "mapUniform",
+   "selector": "a5F@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: loop counter disposing hitbox geometries in a0M; SERVED: identical (snippet-only twin).",
+   "name": "hitboxIndex",
+   "selector": "a5F@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: lightmap uniform descriptor holding shared texture; SERVED: identical (snippet-only twin).",
+   "name": "lightmapUniform",
+   "selector": "a5G@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: recursive function nulling map tree before rebuild; SERVED: identical (snippet-only twin).",
+   "name": "deepClearMap",
+   "selector": "a5G@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: map-lightmap pair merged into basic uniforms; SERVED: identical (snippet-only twin).",
+   "name": "extraUniforms",
+   "selector": "a5H@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: recursion subject tested nulled and length-cleared; SERVED: identical (snippet-only twin).",
+   "name": "mapNode",
+   "selector": "a5H@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traverse visitor having material nulled during teardown; SERVED: identical (snippet-only twin).",
+   "name": "clearedNode",
+   "selector": "a5H@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: merged basic uniforms fed to shader material; SERVED: identical (snippet-only twin).",
+   "name": "mergedUniforms",
+   "selector": "a5I@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter over map node children; SERVED: identical (snippet-only twin).",
+   "name": "childIndex",
+   "selector": "a5I@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: defines object carrying USE_LIGHTMAP flag; SERVED: identical (snippet-only twin).",
+   "name": "shaderDefines",
+   "selector": "a5J@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a4g-built material clone, map uniform copied, side set; SERVED: identical (snippet-only twin).",
+   "name": "clonedMaterial",
+   "selector": "a5K@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: base plus textures path, webp override, loader input; SERVED: identical (snippet-only twin).",
+   "name": "textureUrl",
+   "selector": "a5a@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cached or loaded texture; wrap, anisotropy, uniforms push; SERVED: identical (snippet-only twin).",
+   "name": "mapTexture",
+   "selector": "a5b@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: name-keyed dict memoizing built face materials; SERVED: identical (snippet-only twin).",
+   "name": "materialCache",
+   "selector": "a5c@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vertex-color table lookup keying defs, cache, textures; SERVED: identical (snippet-only twin).",
+   "name": "faceMaterialName",
+   "selector": "a5d@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag marking material inserted into material array; SERVED: identical (snippet-only twin).",
+   "name": "materialPlaced",
+   "selector": "a5f@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: OY map 2D grid iterated, cells replaced by meshes; SERVED: identical (snippet-only twin).",
+   "name": "cullGrid",
+   "selector": "a5g@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flat mesh list collected, re-added in material order; SERVED: identical (snippet-only twin).",
+   "name": "splitMeshes",
+   "selector": "a5h@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: outer loop index over cull grid rows; SERVED: identical (snippet-only twin).",
+   "name": "gridRow",
+   "selector": "a5i@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner loop index over cull grid columns; SERVED: identical (snippet-only twin).",
+   "name": "gridCol",
+   "selector": "a5j@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-cell mesh list stored back into grid; SERVED: identical (snippet-only twin).",
+   "name": "cellMeshes",
+   "selector": "a5k@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: grid cell chunk converted into split mesh geometry; SERVED: identical (snippet-only twin).",
+   "name": "cellGeometry",
+   "selector": "a5l@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mesh copy sorted by boxSize for bbox combining; SERVED: identical (snippet-only twin).",
+   "name": "sortedMeshes",
+   "selector": "a5m@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bubble-sort swap temp for mesh ordering; SERVED: identical (snippet-only twin).",
+   "name": "swapMesh",
+   "selector": "a5n@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bbox combine group size from config or one; SERVED: identical (snippet-only twin).",
+   "name": "combineCount",
+   "selector": "a5o@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: group lead mesh, merged bounds; else fresh cell mesh; SERVED: identical (snippet-only twin).",
+   "name": "chunkMesh",
+   "selector": "a5p@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mesh group whose bounds merge into lead mesh; SERVED: identical (snippet-only twin).",
+   "name": "combineGroup",
+   "selector": "a5q@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: WireframeGeometry built from map geometry for debug; SERVED: identical (snippet-only twin).",
+   "name": "wireframeGeometry",
+   "selector": "a5r@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: LineSegments overlay added to scene, faint transparent; SERVED: identical (snippet-only twin).",
+   "name": "wireframeLines",
+   "selector": "a5s@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: collected scene geometries merged by combineGeometries; SERVED: identical (snippet-only twin).",
+   "name": "geometriesToCombine",
+   "selector": "a5t@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traverse callback node contributing its geometry; SERVED: identical (snippet-only twin).",
+   "name": "traverseNode",
+   "selector": "a5u@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index disposing old hitbox meshes; SERVED: identical (snippet-only twin).",
+   "name": "hitboxIndex",
+   "selector": "a5u@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: shared translucent material for hitbox debug meshes; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMaterial",
+   "selector": "a5v@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: replaced geometry disposed and nulled after toBuffer; SERVED: identical (snippet-only twin).",
+   "name": "oldGeometry",
+   "selector": "a5w@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: spaceless name matched against material flag lists; SERVED: identical (snippet-only twin).",
+   "name": "normalizedTexName",
+   "selector": "a5x@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: constant-true gate selecting EQ occlusion-split path; SERVED: identical (snippet-only twin).",
+   "name": "useOcclusionSplit",
+   "selector": "a5y@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: flag true when texture src matches no exclusion pattern; SERVED: identical (snippet-only twin).",
+   "name": "srcUnmatched",
+   "selector": "a5z@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-cell per-material mesh pushed to both lists; SERVED: identical (snippet-only twin).",
+   "name": "splitMesh",
+   "selector": "a5z@u2654#1"
+  }
+ ]
+}

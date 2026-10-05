@@ -1,0 +1,45 @@
+{
+  "name": "client-deob",
+  "version": "1.0.0",
+  "description": "This folder is the **whole workspace for one task**: converting the obfuscated deadshot client bundle into clean, feature-organized module files — without changing behavior.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "extract": "node tools/extract.mjs",
+    "emit": "node tools/emit.mjs",
+    "reclassify": "node tools/reclassify.mjs",
+    "bundle": "node tools/bundle.mjs",
+    "verify": "node tools/verify.mjs",
+    "seed-rename-map": "node tools/seed-rename-map.mjs",
+    "rename": "node tools/rename.mjs --apply",
+    "inventory": "node tools/inventory.mjs",
+    "coverage": "node tools/coverage.mjs",
+    "lint": "node tools/lint.mjs",
+    "behavioral": "node tools/behavioral.mjs",
+    "anchors": "node tools/server-anchors.mjs",
+    "extract:served": "DS_CORPUS=served node tools/extract.mjs",
+    "emit:served": "DS_CORPUS=served node tools/emit.mjs",
+    "reclassify:served": "DS_CORPUS=served node tools/reclassify.mjs",
+    "bundle:served": "DS_CORPUS=served node tools/bundle.mjs",
+    "verify:served": "DS_CORPUS=served node tools/verify.mjs",
+    "rename:served": "DS_CORPUS=served node tools/rename.mjs --apply",
+    "inventory:served": "DS_CORPUS=served node tools/inventory.mjs",
+    "coverage:served": "DS_CORPUS=served node tools/coverage.mjs",
+    "lint:served": "DS_CORPUS=served node tools/lint.mjs",
+    "behavioral:served": "DS_CORPUS=served node tools/behavioral.mjs",
+    "anchors:served": "DS_CORPUS=served node tools/server-anchors.mjs",
+    "pipeline": "node tools/extract.mjs && node tools/emit.mjs && node tools/bundle.mjs && node tools/verify.mjs",
+    "pipeline-renamed": "node tools/extract.mjs && node tools/reclassify.mjs && node tools/emit.mjs && node tools/rename.mjs --census && node tools/rename.mjs --apply && node tools/bundle.mjs && node tools/verify.mjs --level L2 && node tools/inventory.mjs && node tools/coverage.mjs && node tools/lint.mjs && node tools/behavioral.mjs && node tools/server-anchors.mjs",
+    "pipeline-served": "DS_CORPUS=served node tools/extract.mjs && DS_CORPUS=served node tools/reclassify.mjs && DS_CORPUS=served node tools/emit.mjs && DS_CORPUS=served node tools/rename.mjs --census && DS_CORPUS=served node tools/rename.mjs --apply && DS_CORPUS=served node tools/bundle.mjs && DS_CORPUS=served node tools/verify.mjs --level L2 && DS_CORPUS=served node tools/inventory.mjs && DS_CORPUS=served node tools/coverage.mjs && DS_CORPUS=served node tools/lint.mjs && DS_CORPUS=served node tools/behavioral.mjs && DS_CORPUS=served node tools/server-anchors.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:served": "node --test tests/served-*.test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "acorn": "^8.18.0"
+  }
+}

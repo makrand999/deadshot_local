@@ -1,0 +1,222 @@
+{
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: gl.bindBuffer/bufferSubData target param in updateBuffer/createBuffer.",
+   "name": "bufferType",
+   "selector": "bufferType@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: WeakMap attribute cache; get/remove/update via .get/.set/.delete.",
+   "name": "buffers",
+   "selector": "buffers@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: extrude lid-face builder; called with buildSideFaces after vertex loop.",
+   "name": "buildLidFaces",
+   "selector": "buildLidFaces@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: BoxGeometry face builder; 6 calls with axis/u/v/dims args.",
+   "name": "buildPlane",
+   "selector": "buildPlane@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: extrude side-face builder; called after buildLidFaces.",
+   "name": "buildSideFaces",
+   "selector": "buildSideFaces@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: GLSL chunk var; #include'd in 5+ material shaders + ShaderChunk map.",
+   "name": "bumpmap_pars_fragment",
+   "selector": "bumpmap_pars_fragment@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: cross-product b.x temp; ax/ay/az/bx/by/bz math convention.",
+   "name": "bx",
+   "selector": "bx@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: pointInTriangle vertex-B x param; edge-sign orientation test.",
+   "name": "bx",
+   "selector": "bx@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: cross-product b.y temp; ax/ay/az/bx/by/bz math convention.",
+   "name": "by",
+   "selector": "by@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: pointInTriangle vertex-B y param; edge-sign orientation test.",
+   "name": "by",
+   "selector": "by@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "KEEP idiomatic: action cache-index bookkeeping in _removeInactiveAction clip logic.",
+   "name": "byClipCacheIndex",
+   "selector": "byClipCacheIndex@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: cross-product b.z temp; ax/ay/az/bx/by/bz math convention.",
+   "name": "bz",
+   "selector": "bz@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: cos(x/2) half-angle in Quaternion.setFromEuler order switch.",
+   "name": "c1",
+   "selector": "c1@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: cos((a-c)/2) in setQuaternionFromProperEuler; q.set per order.",
+   "name": "c1_3",
+   "selector": "c1_3@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: cos(b/2) in setQuaternionFromProperEuler; q.set per order.",
+   "name": "c2",
+   "selector": "c2@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: cos(y/2) half-angle in Quaternion.setFromEuler order switch.",
+   "name": "c2",
+   "selector": "c2@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: cos(z/2) half-angle in Quaternion.setFromEuler order switch.",
+   "name": "c3",
+   "selector": "c3@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "KEEP idiomatic: (a-c)/2 half-angle in setQuaternionFromProperEuler family.",
+   "name": "c3_1",
+   "selector": "c3_1@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: vertex-C x from position array in generateTopUV.",
+   "name": "c_x",
+   "selector": "c_x@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: vertex-C x from position array in generateSideWallUV.",
+   "name": "c_x",
+   "selector": "c_x@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: vertex-C y from position array in generateTopUV.",
+   "name": "c_y",
+   "selector": "c_y@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: vertex-C y from position array in generateSideWallUV.",
+   "name": "c_y",
+   "selector": "c_y@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: vertex-C z in generateSideWallUV; (1-a_z) wall-UV branch.",
+   "name": "c_z",
+   "selector": "c_z@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: extractFromCache map param; values[] push in toJSON.",
+   "name": "cache",
+   "selector": "cache@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: extractFromCache map param; second toJSON copy (material).",
+   "name": "cache",
+   "selector": "cache@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: attribute snapshot map in saveCache; stored to currentState.",
+   "name": "cache",
+   "selector": "cache@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: this.cache alias in setValueV1f; uniform upload dedupe.",
+   "name": "cache",
+   "selector": "cache@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: this.cache alias in setValueV2f; uniform upload dedupe.",
+   "name": "cache",
+   "selector": "cache@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: this.cache alias in setValueV3f; uniform upload dedupe.",
+   "name": "cache",
+   "selector": "cache@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic: this.cache alias in setValueV4f; uniform upload dedupe.",
+   "name": "cache",
+   "selector": "cache@u0020#6"
+  }
+ ],
+ "slice": "slice-04",
+ "stats": {
+  "high": 28,
+  "keep": 30,
+  "low": 0,
+  "medium": 2,
+  "rename": 0
+ }
+}

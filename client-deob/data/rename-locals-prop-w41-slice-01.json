@@ -1,0 +1,192 @@
+{
+ "meta": {
+  "wave": 41,
+  "slice": "01",
+  "mergedFrom": [
+   "01a",
+   "01b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @424523 defines function enable/disable GL capability toggle; uses @425763 disable(3042) blending, @427897 disable(2884) cull-face. Idiomatic three.js state-helper name.",
+   "selector": "disable@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @91918 Layers.prototype disableAll sets mask=4294967295; refCount=0. Idiomatic Layers API name paired with enableAll.",
+   "selector": "disableAll@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @332959 disables unused vertex attrib arrays; uses @336609 call after attribute setup and @498959 bindingStates.disableUnusedAttributes(). Idiomatic descriptive name.",
+   "selector": "disableUnusedAttributes@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @464784 WebXR controller disconnect(inputSource) hides targetRay/grip/hand; use @468409 controller.disconnect on session end. Idiomatic lifecycle name.",
+   "selector": "disconnect@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @790268 Audio.prototype disconnect tears down source/filter chain; distinct scope from WebXR #0. Idiomatic WebAudio-style name.",
+   "selector": "disconnect@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @7379 EventDispatcher dispatchEvent; uses @26028/@37074 this.dispatchEvent({type:'dispose'}). Idiomatic DOM-like event name.",
+   "selector": "dispatchEvent@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @464554 WebXR controller dispatchEvent forwarding to targetRay/grip/hand; uses @466030 pinchend and @468259 session event dispatch. Idiomatic event name.",
+   "selector": "dispatchEvent@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @220405 shader chunk var holding displacementMap uniforms GLSL; uses @283200 #include <displacementmap_pars_vertex> and @314044 ShaderChunk map key. Canonical three.js snake_case chunk name.",
+   "selector": "displacementmap_pars_vertex@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @220583 shader chunk var; uses @283722/@285191 #include <displacementmap_vertex> and @314100 ShaderChunk map key. Canonical three.js snake_case chunk name.",
+   "selector": "displacementmap_vertex@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @26013 Texture dispose dispatches {type:'dispose'}; sibling dispose decls at @37059/@135661/@168862 share the token. Idiomatic three.js lifecycle name.",
+   "selector": "dispose@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @37059 WebGLRenderTarget dispose dispatches dispose event; use @36615 this.dispose() in setSize. Idiomatic lifecycle name.",
+   "selector": "dispose@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @135661 Material dispose dispatches dispose event; use @193175 mesh.material.dispose(). Idiomatic lifecycle name.",
+   "selector": "dispose@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @168862 BufferGeometry dispose dispatches dispose event; sibling dispose decls share token across classes. Idiomatic lifecycle name.",
+   "selector": "dispose@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @336645 binding-states dispose resets VAO states; exported @338050 dispose:dispose. Idiomatic cleanup name.",
+   "selector": "dispose@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @345234 cubemap-cache dispose resets WeakMap; paired with onTextureDispose @345095. Idiomatic cleanup name.",
+   "selector": "dispose@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @354071 (geometries update block) with use at @354407 returning {update:update,dispose:dispose}; token is the standard three.js resource-cleanup lifecycle name.",
+   "selector": "dispose@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @394203 inside WebGLProperties; use at @394282 exports {get,remove,update,dispose} where dispose resets the properties WeakMap; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @397329 inside WebGLRenderLists; uses at @397375/@397383 show dispose(){lists=new WeakMap();} exported as dispose; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @408013 inside WebGLRenderStates; uses at @408066/@408074 show dispose(){renderStates=new WeakMap();} exported as dispose; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @540738 Skeleton dispose method; use at @540793 shows it disposes boneTexture; standard three.js object-cleanup name.",
+   "selector": "dispose@u0020#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @543442 InstancedMesh dispose method; use at @543425 shows dispose:function dispose(){this.dispatchEvent({type:'dispose'});}; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#11"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @577064 Geometry dispose method; use at @577047 shows dispose:function dispose(){this.dispatchEvent({type:'dispose'});}; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#12"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @848649 SpotLightHelper dispose; uses at @848649/@848709 show _proto.dispose disposes cone geometry/material; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#13"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @851860 PointLightHelper dispose; use at @851843 shows _proto.dispose disposes geometry/material; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#14"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @853003 HemisphereLightHelper dispose; use at @852986 shows _proto.dispose disposes children geometry/material; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#15"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @857173 DirectionalLightHelper dispose; use at @857156 shows _proto.dispose disposes lightPlane/targetLine geometry/material; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#16"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @870958 PMREM-style _proto.dispose; use at @870987 shows it disposes _blurMaterial/_cubemapShader/_equirectShader/_lodPlanes; idiomatic lifecycle name.",
+   "selector": "dispose@u0020#17"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @918773 Object.assign(QwysDsAqBdy.prototype,{dispose:function ...}); standard prototype cleanup-method name, already readable.",
+   "selector": "dispose@u0020#18"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @546862 var distSq in line-segment raycast block (vStart/vEnd/interSegment/interRay, refCount=1); token is the standard distance-squared abbreviation, already readable.",
+   "selector": "distSq@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @71993 var distToPoint in Ray plane-intersection code (distanceToPlane/intersectPlane context, refCount=2); token is fully spelled-out and readable.",
+   "selector": "distToPoint@u0020#0"
+  }
+ ]
+}

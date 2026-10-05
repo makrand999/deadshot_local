@@ -1,0 +1,244 @@
+{
+ "meta": {
+  "slice": "01a",
+  "wave": 61
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: setting ids disabled on mobile clients; SERVED: identical (snippet-only twin).",
+   "name": "desktopOnlySettingIds",
+   "selector": "Rx@u2263#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner loop index over disabled id list; SERVED: identical (snippet-only twin).",
+   "name": "settingIdIdx",
+   "selector": "th@u2263#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: default 3 overridden per-texture, passed to finalizer; SERVED: identical (snippet-only twin).",
+   "name": "anisoLevel",
+   "selector": "a4B@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: t-type uniform object assigned to shader map; SERVED: identical (snippet-only twin).",
+   "name": "mapUniform",
+   "selector": "a4E@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: never-set flag selecting color-group geometry path; SERVED: identical (snippet-only twin).",
+   "name": "useColorGroups",
+   "selector": "a4E@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: set true for SubwayTrain, consumed as skinning; SERVED: identical (snippet-only twin).",
+   "name": "enableSkinning",
+   "selector": "a4F@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: finished event exposing action actionGroup index; SERVED: identical (snippet-only twin).",
+   "name": "finishedEvent",
+   "selector": "a4F@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over gltf animations array; SERVED: identical (snippet-only twin).",
+   "name": "animIdx",
+   "selector": "a4F@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: empty array backing fallback t uniform; SERVED: identical (snippet-only twin).",
+   "name": "fallbackTexArray",
+   "selector": "a4F@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first scene child rebuilt into map mesh; SERVED: identical (snippet-only twin).",
+   "name": "rootMesh",
+   "selector": "a4F@u2654#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time uniform object for waterfall1 shader; SERVED: identical (snippet-only twin).",
+   "name": "waterfallTimeUniform",
+   "selector": "a4G@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: varying declarations prepended to vertex shader; SERVED: identical (snippet-only twin).",
+   "name": "vertexHeadSrc",
+   "selector": "a4G@u2654#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding assigned never read",
+   "selector": "a4G@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: matched train animation group index; SERVED: identical (snippet-only twin).",
+   "name": "animGroupIdx",
+   "selector": "a4G@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fallback t uniform holding empty array; SERVED: identical (snippet-only twin).",
+   "name": "fallbackTexUniform",
+   "selector": "a4G@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: userData materials chunked into groups; SERVED: identical (snippet-only twin).",
+   "name": "materialNames",
+   "selector": "a4G@u2654#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time uniform object for Water shader; SERVED: identical (snippet-only twin).",
+   "name": "waterTimeUniform",
+   "selector": "a4H@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: uv and sway code injected into vertex main; SERVED: identical (snippet-only twin).",
+   "name": "vertexBodySrc",
+   "selector": "a4H@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: action list cycled for finished group; SERVED: identical (snippet-only twin).",
+   "name": "groupActions",
+   "selector": "a4H@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: group mixer creating animation clipAction; SERVED: identical (snippet-only twin).",
+   "name": "groupMixer",
+   "selector": "a4H@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: default shader sources overridden by variant; SERVED: identical (snippet-only twin).",
+   "name": "shaderSrc",
+   "selector": "a4H@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: combined map geometry with faces iterated; SERVED: identical (snippet-only twin).",
+   "name": "mapGeometry",
+   "selector": "a4H@u2654#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time uniform object for aurora shader; SERVED: identical (snippet-only twin).",
+   "name": "auroraTimeUniform",
+   "selector": "a4I@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: light struct declarations for fragment shader; SERVED: identical (snippet-only twin).",
+   "name": "fragmentHeadSrc",
+   "selector": "a4I@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: selected group action played with audio; SERVED: identical (snippet-only twin).",
+   "name": "nextAction",
+   "selector": "a4I@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index matching animation to group; SERVED: identical (snippet-only twin).",
+   "name": "groupIdx",
+   "selector": "a4I@u2654#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding assigned never read",
+   "selector": "a4I@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: imported transparent names driving transparency flags; SERVED: identical (snippet-only twin).",
+   "name": "transparentNames",
+   "selector": "a4I@u2654#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time uniform object for Bush shader; SERVED: identical (snippet-only twin).",
+   "name": "bushTimeUniform",
+   "selector": "a4J@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: post-lighting code appended to fragment main; SERVED: identical (snippet-only twin).",
+   "name": "fragmentTailSrc",
+   "selector": "a4J@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: synced audio descriptor restarted on change; SERVED: identical (snippet-only twin).",
+   "name": "syncAudio",
+   "selector": "a4J@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index matching Wp entries to animation; SERVED: identical (snippet-only twin).",
+   "name": "syncListIdx",
+   "selector": "a4J@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: defines object for lightmap shader material; SERVED: identical (snippet-only twin).",
+   "name": "shaderDefines",
+   "selector": "a4J@u2654#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: imported alpha-test names driving clip defines; SERVED: identical (snippet-only twin).",
+   "name": "alphaTestNames",
+   "selector": "a4J@u2654#5"
+  }
+ ]
+}

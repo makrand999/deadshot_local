@@ -1,0 +1,150 @@
+# DOSSIER slice-28 (wave 7, 23 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/23] r9@u0196#0 | kind=var depth=3 refCount=5 | sim/game-loop.js
+DECL @10 (verified):
+var r8=r7,r9={};
+USES: refCount=5, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/23] vj@u0537#0 | kind=var depth=3 refCount=4 | sim/game-loop.js
+DECL @4 (verified):
+var vj={};
+USES: refCount=4, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/23] H4@u1769#0 | kind=var depth=3 refCount=3 | sim/game-loop.js
+DECL @4 (verified):
+var H4=H3,H5=H2(H4);
+USES: refCount=3, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/23] a3j@u0350#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @16 (verified):
+function t6(a3i,a3j,a3k){return((t3(a3j,a3k)*a3i+t4(a3j,a3k))*a3i+t5(a3j))*a3i;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/23] a3k@u0350#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @20 (verified):
+function t6(a3i,a3j,a3k){return((t3(a3j,a3k)*a3i+t4(a3j,a3k))*a3i+t5(a3j))*a3i;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/23] gtag@u2868#0 | kind=function depth=5 refCount=3 | characters/mesh-pool.js
+DECL @164 (verified):
+if(L1){var Sk=document.createElement('script');Sk.async=true;Sk.crossOrigin='anonymous';Sk.src='https://www.googletagmanager.com/gtag/js?id=UA-87346685-5';function gtag(){dataLayer.push(arguments);}gtag('js',new Date());Sk.onload=function(){try{if(gtag!==undefined){gtag('config','G-4T2ZJXRRCK',{cookie_flags:'secure;samesite=none'});}}catch(e){if(!L1){console.log(e);}}};document.head.appendChild(Sk);}
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/23] a3i@u0347#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function t3(a3i,a3j){return 0x1-0x3*a3j+0x3*a3i;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/23] a3j@u0347#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @16 (verified):
+function t3(a3i,a3j){return 0x1-0x3*a3j+0x3*a3i;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/23] a3o@u2760#0 | kind=param depth=5 refCount=0 | network/handlers.js
+DECL @22 (verified):
+'D522Kq7l5n':function(a3o){var aCs=ai1;L6(),W4();try{var a3p=(parseInt(localStorage['getItem']('dsMatchesPlayed')||'0',0xa)||0x0)+0x1;localStorage["setItem"]('dsMatchesPlayed',String(a3p));if(window["MobileApp"]&&typeof window['MobileApp']["requestReview"]==='function'){typeof window["onReviewPromptShown"]!=="function"&&(window['onReviewPromptShown']=function(a3A){var aCt=aCs,a3B=0x1e*0x18*0x3c*0x3c*0x3e8;a3A?localStorage['setItem']("dsReviewLastPrompt",String(Date["now"]())):localStorage['setItem']("dsReviewLastPrompt",String(Date["now"]()-a3B+0x18*0x3c*0x3c*0x3e8));});var a3q=parseInt(localS[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/23] a3w@u2760#0 | kind=var depth=5 refCount=2 | network/handlers.js
+DECL @871 (verified):
+typeof window["onReviewPromptShown"]!=="function"&&(window['onReviewPromptShown']=function(a3A){var aCt=aCs,a3B=0x1e*0x18*0x3c*0x3c*0x3e8;a3A?localStorage['setItem']("dsReviewLastPrompt",String(Date["now"]())):localStorage['setItem']("dsReviewLastPrompt",String(Date["now"]()-a3B+0x18*0x3c*0x3c*0x3e8));});var a3q=parseInt(localStorage['getItem']('dsReviewLastPrompt')||'0',0xa)||0x0,a3r=Date['now']()-a3q>=0x1e*0x18*0x3c*0x3c*0x3e8,a3s=Kq['rjVasvUkpY']===a0T,a3t=null;for(var a3u=0x0;a3u<MP["length"];a3u++){if(MP[a3u]&&MP[a3u]['id']===a0T){a3t=MP[a3u];break;}}var a3v=a3t?a3t['YlyjPgZsW']||0x0:0x0,[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/23] a3E@u0365#24 | kind=let depth=8 refCount=0 | ui/widgets.js
+DECL @14466 (verified):
+ier']&&(a3E["push"](tl[a3G]),tl["splice"](a3G,0x1),a3G--,found=!![]);}}a3C['stopPropagation']();if(!found)return;a3k['mice']!=undefined&&a3k['mice']["length"]==0x1&&(a3k["mice"][0x0]['y']=0x174876e7ff,a3k['mice'][0x0]['afCJVYrCGK']=![],setTimeout(function(){a3k['mice'][0x0]['y']=0x174876e7ff,a3k['mice'][0x0]['afCJVYrCGK']=![];},0x0)),a3t(null,tl);}window['addEventListener']('touchend',a3v),window['addEventListener']('touchcancel',a3v);var a3w={};a3w['passive']=![],window['addEventListener']('touchmove',function(a3C){var aox=aor;if(a3k['stayInPlace'])return;var a3D=a3C['chan'+'gedTouches'];let [...line truncated...]
+USES: refCount=0, 86 token-occurrences in unit, showing 8 nearest outside DECL window:
+@13738: a3E(a3D);}a3k['hWWDFvAyq']=a3t;var a3u={};a3u["capture"]=!![],a3u['passive']=!![],document['body']['addEventListener']('mouseup',function(a3C){a3t(a3C);},a3u);function a3v(a3C){var aow=aor;if(tl['length']==0x0)return;let a3D=a3C['chan'+'gedTouches'],a3E=[];for(let a3F=0x0;a3F<a3D['length'];a3F++){for(let a3G=0x0;a3G<tl["length"];a3G++){a3D[a3F]['identifier']==tl[a3G]['identifier']&&(a3E["push"](tl[a3G]),tl["splice"](a3G,0x1),a3G--,found=!![]);}}a3C['stopPropagation']();if(!found)return;a3k['mice
+@13488: ]&&a3H['onmouseup2'](a3H));a3H["dragging"]&&(a3L['dragging']['VCrBCvukZHe'](a3H),a3H["dragging"]=![]),a3H['mousedown']=![],a3H['mouseWasDown']=![];}}}Math["abs"](Date["now"]()-a3m)<0xa?setTimeout(function(){Gj&&a3k['update'](0x1,tl),a3E(a3D);},0x1e):a3E(a3D);}a3k['hWWDFvAyq']=a3t;var a3u={};a3u["capture"]=!![],a3u['passive']=!![],document['body']['addEventListener']('mouseup',function(a3C){a3t(a3C);},a3u);function a3v(a3C){var aow=aor;if(tl['length']==0x0)return;let a3D=a3C['chan'+'gedTouches'],
+@13471: ,a3H["onmouseup2"]&&a3H['onmouseup2'](a3H));a3H["dragging"]&&(a3L['dragging']['VCrBCvukZHe'](a3H),a3H["dragging"]=![]),a3H['mousedown']=![],a3H['mouseWasDown']=![];}}}Math["abs"](Date["now"]()-a3m)<0xa?setTimeout(function(){Gj&&a3k['update'](0x1,tl),a3E(a3D);},0x1e):a3E(a3D);}a3k['hWWDFvAyq']=a3t;var a3u={};a3u["capture"]=!![],a3u['passive']=!![],document['body']['addEventListener']('mouseup',function(a3C){a3t(a3C);},a3u);function a3v(a3C){var aow=aor;if(tl['length']==0x0)return;let a3D=a3C['cha
+@16106: ive"]=![],window["addEventListener"]("touchstart",a3x,a3A),window["addEventListener"]('wheel',function(a3C){var aoy=aor;if(Kq["pointerLocked"])return;for(var a3D=0x0;a3D<a3k['scenes']["length"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"
+@16152: rt",a3x,a3A),window["addEventListener"]('wheel',function(a3C){var aoy=aor;if(Kq["pointerLocked"])return;for(var a3D=0x0;a3D<a3k['scenes']["length"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"];a3F++){var a3G=a3E["hoverElements"][a3F];a3G
+@16196: el',function(a3C){var aoy=aor;if(Kq["pointerLocked"])return;for(var a3D=0x0;a3D<a3k['scenes']["length"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"];a3F++){var a3G=a3E["hoverElements"][a3F];a3G['hovering']&&a3G['ReDNKHkwk']&&(a3G['onscro
+@16240: Locked"])return;for(var a3D=0x0;a3D<a3k['scenes']["length"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"];a3F++){var a3G=a3E["hoverElements"][a3F];a3G['hovering']&&a3G['ReDNKHkwk']&&(a3G['onscroll']&&a3G["onscroll"](a3C["deltaY"]));}}});v
+@16327: D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"];a3F++){var a3G=a3E["hoverElements"][a3F];a3G['hovering']&&a3G['ReDNKHkwk']&&(a3G['onscroll']&&a3G["onscroll"](a3C["deltaY"]));}}});var a3B={};return a3B["passive"]=![],window['addEventListener']("scroll",function(a3C){a
+==============================================================================
+[12/23] a3j@u0365#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @16 (verified):
+function tn(a3i,a3j){var aor=ai1,a3k={'pkghYgdlX':a3i,'scenes':[],'transitioningElements':new GR(),'resizeElements':[],'allowPointerLock':!![],'stayInPlace':![],'makeContainer':function(a3C,a3D,a3E,a3F){var anZ=o,a3G=new this['pkghYgdlX'][("object")]();return a3G['position']['x']=a3C,a3G['position']['y']=a3D,a3G['width']=a3E,a3G['height']=a3F,a3G;},'yhikrzIhlK':function(a3C,a3D){var ao0=o,a3E={};a3E['obj']=a3C,a3E['func']=a3D,this["resizeElements"]['push'](a3E);},'resize':function(){var ao1=o;for(var a3C=0x0;a3C<this["resizeElements"]["length"];a3C++){try{this['resizeElements'][a3C]['func'](th[...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 3 nearest outside DECL window:
+@5988: nes"]['splice'](this['scenes']["indexOf"](a3C),0x1),this["scenes"]['splice'](0x0,0x0,a3C);},'update':function(a3C,a3D){var aop=o;Gk&&tl['length']>0x0&&(a3D=tl);for(let a3U=0x0;a3U<a3D["length"];a3U++){a3D[a3U]['afCJVYrCGK']&&(a3D[a3U]['LrAPqsjYfmN'](a3j),a3D[a3U]["afCJVYrCGK"]=![]);}for(var a3E=0x0;a3E<this['transitioningElements']["length"];a3E++){var a3F=this['transitioningElements']['array'][a3E];a3F['time']+=a3C/0x3e8;a3F['time']>a3F['oNdPPkNKFp']&&(a3F["time"]=a3F['oNdPPkNKFp'],this['transi
+@11266: length'];a3G++){for(let a3I=0x0;a3I<tl["length"];a3I++){if(tl[a3I]['identifier']==a3D[a3G]["identifier"])continue;}let a3H=new tm();a3H['identifier']=a3D[a3G]['identifier'],a3H['x']=a3D[a3G]['clientX'],a3H['y']=a3D[a3G]['clientY'],a3H["LrAPqsjYfmN"](a3j),a3H['startX']=a3H['x'],a3H['startY']=a3H['y'],a3H["oldX"]=a3H['x'],a3H['oldY']=a3H['y'],tl["push"](a3H),a3k['update'](0x0,tl);var a3F=a3n(a3C,!![]);}a3E>0x0&&(a3C['preventDefault']&&a3C['preventDefault'](),a3C["stopPropagation"]&&a3C["stopPropag
+@14727: (let a3K=0x0;a3K<a3D['length'];a3K++){let a3L;for(let a3N=0x0;a3N<tl["length"];a3N++){if(tl[a3N]['identifier']==a3D[a3K]["identifier"]){a3L=tl[a3N];break;}}if(!a3L)continue;a3L['x']=a3D[a3K]['clientX'],a3L['y']=a3D[a3K]['clientY'],a3L['LrAPqsjYfmN'](a3j);let a3M=Math["sqrt"](Math['pow'](a3L['x']-a3L["startX"],0x2)+Math["pow"](a3L['y']-a3L["startY"],0x2));if(a3M>0x14){let a3O=a3L['y']-a3L["oldY"],a3P=![];for(var a3F=0x0;a3F<a3k['scenes']['length'];a3F++){if(!a3k['scenes'][a3F]['ReDNKHkwk'])contin
+==============================================================================
+[13/23] useAABBthreshold@u1763#0 | kind=var depth=5 refCount=1 | sim/game-loop.js
+DECL @1262 (verified):
+ex);face.ac.toArray(AyXbLxaib,index+faceCIndex);AyXbLxaib[index+faceAddedIndex]=0;if(face.collision==undefined){AyXbLxaib[index+faceCollisionIndex]=1;}else{AyXbLxaib[index+faceCollisionIndex]=face.collision;}AyXbLxaib[index+faceSoundIndex]=face.UVCeyZNLZ||0;for(var a=0;a<bc.length;a++){var x=bc[a];for(var b=0;b<Ji.length;b++){var y=Ji[b];if(verts[face[x]][y]<face.aabb.min[y]){face.aabb.min[y]=verts[face[x]][y];}if(verts[face[x]][y]>face.aabb.max[y]){face.aabb.max[y]=verts[face[x]][y];}}}face.aabb.max.toArray(AyXbLxaib,index+faceMaxIndex);face.aabb.min.toArray(AyXbLxaib,index+faceMinIndex);var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/23] a3o@u2717#0 | kind=var depth=5 refCount=1 | sim/game-loop.js
+DECL @37 (verified):
+var a0f={'ZJqJUhuzUb':function(){var a3o={"vQ5Ra371n0":![],'hhUYpsfkFuA':![],"KWC92ef2Y9":new HR()};return XX(a3o,![],![],0x1);}};
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/23] a3r@u2594#0 | kind=param depth=5 refCount=1 | characters/animation.js
+DECL @24 (verified):
+function XW(a3o,a3p,a3q,a3r){var aAv=ai1;for(var a3s=0x0;a3s<XR['length'];a3s++){if(XR[a3s]['visualType']==a3q){var a3t=XR[a3s];return!a3o&&(XF['indexOf'](a3t["kDCTWhoSiT"])==-0x1&&XF['push'](a3t['kDCTWhoSiT'])),XR['splice'](a3s,0x1),a3t;}}var a3u=Xr(Xw[a3q]);Xx[a3q]["push"](a3u);var a3t=a3u['scene'];a3t['XOVWraMIAg'](function(a3z){}),a3t["bbGtpmsnoL"]=![],a3t['matrixWorldAutoUpdate']=![],a3t['backup']=new usvzFuAsEB['QTOKQmNlEY'](),a3t['visualType']=a3q;var a3v=new usvzFuAsEB[("AnimationMixer")](a3u['scene']);a3v["ReDNKHkwk"]=![];var a3w={};for(var a3s=0x0;a3s<a3u["animations"]['length'];a3s+[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@2570: a3D==undefined?(XQ[a3q]={},a3D=XQ[a3q],a3D[a3z['name']]=a3C,a3z['material']=a3C):a3D[a3z['name']]==undefined?(a3D[a3z["name"]]=a3C,a3z['material']=a3C):a3z["material"]=XQ[a3q][a3z["name"]],a3z["cachedMaterial"]=a3z['material'];}}),XN(a3t,Hx[a3q],a3p,a3r),XV(a3u),a3t['XOVWraMIAg'](function(a3z){a3z['StjesvYqIxf']=-0xf423f;}),a3t['oldMatrixUpdate']=a3t["updateMatrixWorld"],a3t['updateMatrixWorld']=function(a3z){var aAx=aAv;if(!a3t['visible']&&!a3p&&!Fx)return;a3t["oldMatrixUpdate"](a3z);},a3t['pJL
+==============================================================================
+[16/23] a3l@u2260#0 | kind=param depth=5 refCount=1 | world/modes.js
+DECL @167 (verified):
+Rv['type']=0x2,Rv['id']='inversemouse',Rv["text"]='Inverse\x20Mouse\x20Y:',Rv['category']='FRF6r51VY32',Rv['default']=![],Rv['PNiTcTcLjni']=[],Rv['onchange']=function(a3l){Pp=a3l;};
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/23] a3q@u1822#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @44 (verified):
+function HF(a3i,a3j,a3k,a3l,a3m,a3n,a3o,a3p,a3q){var aqd=ai1,a3r;return HD['length']>0x0?(a3r=HD['array'][0x0],HD['splice'](0x0,0x1)):a3r=new Hz(),a3r["obj"]=a3i,a3r["param"]=a3j,a3r['old']=a3k,a3r["newp"]=a3l,a3r['time']=a3m,a3r['delay']=a3n||0x0,a3r["IUTkaCQgos"]=0x0,a3r['ef']=a3o,a3r['cb']=a3p,a3r["KWC92ef2Y9"]=a3q,a3r;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/23] geos@u1744#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @27 (verified):
+function combineGeometries(geos,scale){'use strict';scale=scale||1;scale=Math.KkKRLGFtA(scale);var geo=new usvzFuAsEB.Geometry();geos.forEach(function(g){if(!g.isGeometry){if(g.isBufferGeometry){g=new usvzFuAsEB.Geometry().fromBufferGeometry(g);}else if(g.RNQDluasaN.isBufferGeometry){g=new usvzFuAsEB.Geometry().fromBufferGeometry(g.RNQDluasaN);}else{g=g.RNQDluasaN;}}var l=geo.AUbXpMajF.length;g.faces.forEach(function(f){f.a+=l;f.b+=l;f.c+=l;geo.faces.push(f);});g.AUbXpMajF.forEach(function(v){geo.AUbXpMajF.push(v.clone().OpiuFvBcQd(scale));});});return geo;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/23] rk@u0206#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var rk=rj,rl={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/23] RA@u2265#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @70 (verified):
+var Ry=NJ([-0x6a,-0x65,-0x6b,-0x59,-0x5e,-0x63,-0x65,-0x6c,-0x5b]),Rz,RA,RB=0x0;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/23] a3o@u2733#0 | kind=param depth=5 refCount=0 | network/handlers.js
+DECL @16 (verified):
+'pong':function(a3o){},
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/23] a3i@u0346#2 | kind=param depth=5 refCount=0 | engine/shaders.js
+DECL @6652 (verified):
+re2D(\x20top,\x20uv\x20);\x0a}\x0a\x0aif(\x20mask.r\x20>\x200.5\x20)\x20{\x0agl_FragColor.xyz\x20=\x201.0\x20-\x20gl_FragColor.xyz;\x0a}\x20else\x20{\x0agl_FragColor.xyz\x20=\x201.0\x20-\x20gl_FragColor.xyz;\x0agl_FragColor.yz\x20=\x20vec2(\x20gl_FragColor.x\x20);\x0agl_FragColor.xyz\x20/=\x204.0;\x0aif(\x20gl_FragColor.x\x20<\x200.1\x20)\x20{\x0agl_FragColor.xyz\x20=\x20vec3(\x200.13\x20);\x0a}\x0a}\x0a\x0aif(\x20mask.r\x20<\x200.5\x20&&\x20mask.b\x20>\x200.5\x20)\x20{\x0agl_FragColor.xyz\x20=\x20vec3(\x200.1\x20);\x0a}\x0a\x0agl_FragColor.a\x20=\x201.0;\x0a\x0a}\x0a','makeMaterial':function([...line truncated...]
+USES: refCount=0, 127 token-occurrences in unit, showing 8 nearest outside DECL window:
+@4188: ame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'original':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+'comp.webp')},'mask':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+"mask.png")},'time':a3j,'height':a3k},a3m=Object["keys"](a3l);for(var a3n=0x0;a3n<a3m['length'];a3n++){a3l[a3m[a3n]]['type']=='t'&&(a3l[a3m[a3n]]["value"]['wrapS']=usvzFuAsEB['RepeatWrapping'],a3l[a3m[a3n]]["value"]['wrapT']=usvzFuAsEB["RepeatWra
+@4180: a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'original':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+'comp.webp')},'mask':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+"mask.png")},'time':a3j,'height':a3k},a3m=Object["keys"](a3l);for(var a3n=0x0;a3n<a3m['length'];a3n++){a3l[a3m[a3n]]['type']=='t'&&(a3l[a3m[a3n]]["value"]['wrapS']=usvzFuAsEB['RepeatWrapping'],a3l[a3m[a3n]]["value"]['wrapT']=usvzFuAsEB["R
+@4120: ]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'original':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+'comp.webp')},'mask':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+"mask.png")},'time':a3j,'height':a3k},a3m=Object["keys"](a3l);for(var a3n=0x0;a3n<a3m['length'];a3n++){a3l[a3m[a3n]]['type']=='t'&&(a3l[a3m[a3n]]["value"]['wrapS']=usvzFuAsEB['Re
+@4112: ["value"]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'original':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+'comp.webp')},'mask':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+"mask.png")},'time':a3j,'height':a3k},a3m=Object["keys"](a3l);for(var a3n=0x0;a3n<a3m['length'];a3n++){a3l[a3m[a3n]]['type']=='t'&&(a3l[a3m[a3n]]["value"]['wrapS']=usvzFu
+@3817: vec2(\x20cameraP.y,\x20cameraP.x\x20)\x20*\x20-1.0\x20);\x0a//\x20this\x20looks\x20sick\x0a//gl_FragColor.xyz\x20=\x20cameraP;\x0a}\x0a}\x0a','makeMaterial':function(a3i){var anH=ai1;a3i=='ar'&&(a3i="ar2");a3i=='smg'&&(a3i="vector");a3i==undefined&&(a3i="awp");var a3j={};a3j["type"]="float",a3j["value"]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'
+@3800: ,\x20vUv\x20+\x20vec2(\x20cameraP.y,\x20cameraP.x\x20)\x20*\x20-1.0\x20);\x0a//\x20this\x20looks\x20sick\x0a//gl_FragColor.xyz\x20=\x20cameraP;\x0a}\x0a}\x0a','makeMaterial':function(a3i){var anH=ai1;a3i=='ar'&&(a3i="ar2");a3i=='smg'&&(a3i="vector");a3i==undefined&&(a3i="awp");var a3j={};a3j["type"]="float",a3j["value"]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arf
+@3786: re2D(\x20flame,\x20vUv\x20+\x20vec2(\x20cameraP.y,\x20cameraP.x\x20)\x20*\x20-1.0\x20);\x0a//\x20this\x20looks\x20sick\x0a//gl_FragColor.xyz\x20=\x20cameraP;\x0a}\x0a}\x0a','makeMaterial':function(a3i){var anH=ai1;a3i=='ar'&&(a3i="ar2");a3i=='smg'&&(a3i="vector");a3i==undefined&&(a3i="awp");var a3j={};a3j["type"]="float",a3j["value"]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat
+@3773: x20=\x20texture2D(\x20flame,\x20vUv\x20+\x20vec2(\x20cameraP.y,\x20cameraP.x\x20)\x20*\x20-1.0\x20);\x0a//\x20this\x20looks\x20sick\x0a//gl_FragColor.xyz\x20=\x20cameraP;\x0a}\x0a}\x0a','makeMaterial':function(a3i){var anH=ai1;a3i=='ar'&&(a3i="ar2");a3i=='smg'&&(a3i="vector");a3i==undefined&&(a3i="awp");var a3j={};a3j["type"]="float",a3j["value"]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value
+==============================================================================
+[23/23] a3j@u0346#2 | kind=param depth=5 refCount=0 | engine/shaders.js
+DECL @6656 (verified):
+(\x20top,\x20uv\x20);\x0a}\x0a\x0aif(\x20mask.r\x20>\x200.5\x20)\x20{\x0agl_FragColor.xyz\x20=\x201.0\x20-\x20gl_FragColor.xyz;\x0a}\x20else\x20{\x0agl_FragColor.xyz\x20=\x201.0\x20-\x20gl_FragColor.xyz;\x0agl_FragColor.yz\x20=\x20vec2(\x20gl_FragColor.x\x20);\x0agl_FragColor.xyz\x20/=\x204.0;\x0aif(\x20gl_FragColor.x\x20<\x200.1\x20)\x20{\x0agl_FragColor.xyz\x20=\x20vec3(\x200.13\x20);\x0a}\x0a}\x0a\x0aif(\x20mask.r\x20<\x200.5\x20&&\x20mask.b\x20>\x200.5\x20)\x20{\x0agl_FragColor.xyz\x20=\x20vec3(\x200.1\x20);\x0a}\x0a\x0agl_FragColor.a\x20=\x201.0;\x0a\x0a}\x0a','makeMaterial':function(a3i,[...line truncated...]
+USES: refCount=0, 33 token-occurrences in unit, showing 8 nearest outside DECL window:
+@4212: :Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'original':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+'comp.webp')},'mask':{'type':'t','value':Fg('/weapons/'+a3i+'/'+a3i+"mask.png")},'time':a3j,'height':a3k},a3m=Object["keys"](a3l);for(var a3n=0x0;a3n<a3m['length'];a3n++){a3l[a3m[a3n]]['type']=='t'&&(a3l[a3m[a3n]]["value"]['wrapS']=usvzFuAsEB['RepeatWrapping'],a3l[a3m[a3n]]["value"]['wrapT']=usvzFuAsEB["RepeatWrapping"],a3m[a3n]!='matri
+@3859: \x20-1.0\x20);\x0a//\x20this\x20looks\x20sick\x0a//gl_FragColor.xyz\x20=\x20cameraP;\x0a}\x0a}\x0a','makeMaterial':function(a3i){var anH=ai1;a3i=='ar'&&(a3i="ar2");a3i=='smg'&&(a3i="vector");a3i==undefined&&(a3i="awp");var a3j={};a3j["type"]="float",a3j["value"]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'original':{'type':'t','value':Fg('/weapons
+@3839: 0cameraP.x\x20)\x20*\x20-1.0\x20);\x0a//\x20this\x20looks\x20sick\x0a//gl_FragColor.xyz\x20=\x20cameraP;\x0a}\x0a}\x0a','makeMaterial':function(a3i){var anH=ai1;a3i=='ar'&&(a3i="ar2");a3i=='smg'&&(a3i="vector");a3i==undefined&&(a3i="awp");var a3j={};a3j["type"]="float",a3j["value"]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'original':{'type':'t',
+@3832: P.y,\x20cameraP.x\x20)\x20*\x20-1.0\x20);\x0a//\x20this\x20looks\x20sick\x0a//gl_FragColor.xyz\x20=\x20cameraP;\x0a}\x0a}\x0a','makeMaterial':function(a3i){var anH=ai1;a3i=='ar'&&(a3i="ar2");a3i=='smg'&&(a3i="vector");a3i==undefined&&(a3i="awp");var a3j={};a3j["type"]="float",a3j["value"]=0x0;var a3k={};a3k['type']="float",a3k['value']=0x5a0;var a3l={'flame':{'type':'t','value':Fg("/animat"+"edskins/flame.png")},'clip':{'type':'t','value':Fg('/animat'+"edskins/arflameclip.png")},'original':{'typ
+@10309: olor.xyz\x20+=\x20(\x201.0\x20)\x20/\x2015.0\x20*\x20max(\x200.0,\x20(\x20xsin\x20/\x204.0\x20)\x20*\x20(\x20xsin\x20/\x202.0\x20)\x20);\x0a\x0a//\x20sniper\x20fragment\x0a\x0agl_FragColor.a\x20=\x20opacity;\x0a\x0a}\x0a','makeMaterial':function(a3i,a3j){var anJ=ai1;a3i==undefined&&(a3i='awp');a3i=="smg"&&(a3i='vector');var a3k=a3i;a3i=='ar'&&(a3i="ar2");a3k=="awp"&&(a3k='newawp');var a3l=0x0;if(a3i=='ar2')a3l=1.1;else a3i=='vector'?a3l=1.6:a3l=-0.2;var a3m={};a3m['type']='float',a3m["value"]=0x
+@2519: 3n['length'];a3o++){a3m[a3n[a3o]]['type']=='t'&&(a3m[a3n[a3o]]["value"]["wrapS"]=usvzFuAsEB['RepeatWrapping'],a3m[a3n[a3o]]['value']["wrapT"]=usvzFuAsEB["RepeatWrapping"],a3n[a3o]!="matrix"&&(a3m[a3n[a3o]]['value']['flipY']=![]));}return sU(this,a3m,a3j);}},'flame':{'fragmentShader':'\x0a\x0auniform\x20sampler2D\x20flame;\x0auniform\x20sampler2D\x20clip;\x0auniform\x20sampler2D\x20original;\x0auniform\x20sampler2D\x20mask;\x0auniform\x20float\x20time;\x0auniform\x20float\x20opacity;\x0auniform\x
+@11408: 3p["length"];a3q++){a3o[a3p[a3q]]['type']=='t'&&(a3o[a3p[a3q]]['value']["wrapS"]=usvzFuAsEB['RepeatWrapping'],a3o[a3p[a3q]]["value"]["wrapT"]=usvzFuAsEB["RepeatWrapping"],a3p[a3q]!='matrix'&&(a3o[a3p[a3q]]['value']["flipY"]=![]));}return sU(this,a3o,a3j);}},'hydro':{'fragmentShader':'\x0a\x0auniform\x20sampler2D\x20top;\x0auniform\x20sampler2D\x20mask;\x0auniform\x20sampler2D\x20displacement;\x0auniform\x20sampler2D\x20original;\x0auniform\x20float\x20time;\x0auniform\x20float\x20opacity;\x0a\x0
+@1681:  = 0.6;\n}\n}\ngl_FragColor = blend( border, gl_FragColor );\n} else {\nborder.xyz = vec3( 1.0 );\nborder.a = 0.0;\ngl_FragColor = blend( border, gl_FragColor );\n}\n\n// sniper fragment\n\ngl_FragColor.a = opacity;\n}\n",'makeMaterial':function(a3i,a3j){var anG=ai1;a3i=='ar'&&(a3i='ar2');a3i=='smg'&&(a3i='vector');a3i==undefined&&(a3i="awp");var a3k={};a3k["type"]="float",a3k["value"]=0x0;var a3l={};a3l['type']='float',a3l['value']=0x5a0;var a3m={'noise':{'type':'t','value':Fg('/textures/noiser
+==============================================================================
+END slice-28: propose EVERY binding above.

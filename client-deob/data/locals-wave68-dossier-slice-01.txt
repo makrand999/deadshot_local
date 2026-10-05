@@ -1,0 +1,83 @@
+# DOSSIER slice-01 (wave 68, 8 bindings, 8 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/8] H6@u1770#0 | kind=var depth=3 refCount=14 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @41 (verified):
+for(var tf=0x0;tf<H5["length"];tf++){var H6=H5[tf];H4[H6]=Math["KkKRLGFtA"](H4[H6]);}
+USES: refCount=14, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @43 (verified), servedRefCount=14:
+for(var tf=0x0;tf<H5[ai1(0x3a2)];tf++){var H6=H5[tf];H4[H6]=Math[ai1(0xb00)](H4[H6]);}
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/8] a3p@u2744#0 | kind=var depth=5 refCount=6 | network/handlers.js [DIVERGED snippet-only]
+DECL @76 (verified):
+'a693b13D91R':function(a3o){var aCf=ai1;if(a3o['tdkZouYda']==a0T)return;var a3p=0.8;a3o["MfCOcfVUx"]<0x2&&(a3p=0.6);a3p*=0.7;for(var a3q=0x0;a3q<a3o['MfCOcfVUx'];a3q++){var a3r=lrRnpundBY('blood'),a3s=a0a(a3o["tdkZouYda"]);if(a3s==undefined)continue;a3r['setPosition'](a3s["r23ZS3L2g"]['position']),a3r['NGSMBcCHUv'](0x1,-a3s["r23ZS3L2g"]["position"]['y']+a3o['uBHZYKAHa']),a3r['yoghpvfQE']['CNFryyAhIm'](0x0),a3r["yoghpvfQE"]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o[[...line truncated...]
+USES: refCount=6, 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @76 (verified), servedRefCount=6:
+'a693b13D91R':function(a3o){var aCf=ai1;if(a3o['tdkZouYda']==a0T)return;var a3p=0.8;a3o[aCf(0x1ba)]<0x2&&(a3p=0.6);a3p*=0.7;for(var a3q=0x0;a3q<a3o['MfCOcfVUx'];a3q++){var a3r=lrRnpundBY('blood'),a3s=a0a(a3o[aCf(0x197)]);if(a3s==undefined)continue;a3r['setPosition'](a3s[aCf(0xc7e)]['position']),a3r['NGSMBcCHUv'](0x1,-a3s[aCf(0xc7e)][aCf(0x215)]['y']+a3o['uBHZYKAHa']),a3r['yoghpvfQE']['CNFryyAhIm'](0x0),a3r[aCf(0x48b)]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']
+SERVED USES: 7 token-occurrences in unit, showing 3 nearest outside DECL window:
+@501: NGSMBcCHUv'](0x1,-a3s[aCf(0xc7e)][aCf(0x215)]['y']+a3o['uBHZYKAHa']),a3r['yoghpvfQE']['CNFryyAhIm'](0x0),a3r[aCf(0x48b)]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o['amount']==0x3&&(a3r['yoghpvfQE']['y']+=0.5*a3p*0.4),a3r[aCf(0x564)]['add'](a3r['yoghpvfQE']);}},
+@551: +a3o['uBHZYKAHa']),a3r['yoghpvfQE']['CNFryyAhIm'](0x0),a3r[aCf(0x48b)]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o['amount']==0x3&&(a3r['yoghpvfQE']['y']+=0.5*a3p*0.4),a3r[aCf(0x564)]['add'](a3r['yoghpvfQE']);}},
+@639: om']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o['amount']==0x3&&(a3r['yoghpvfQE']['y']+=0.5*a3p*0.4),a3r[aCf(0x564)]['add'](a3r['yoghpvfQE']);}},
+==============================================================================
+[3/8] a3q@u2744#0 | kind=var depth=5 refCount=2 | network/handlers.js [DIVERGED snippet-only]
+DECL @133 (verified):
+'a693b13D91R':function(a3o){var aCf=ai1;if(a3o['tdkZouYda']==a0T)return;var a3p=0.8;a3o["MfCOcfVUx"]<0x2&&(a3p=0.6);a3p*=0.7;for(var a3q=0x0;a3q<a3o['MfCOcfVUx'];a3q++){var a3r=lrRnpundBY('blood'),a3s=a0a(a3o["tdkZouYda"]);if(a3s==undefined)continue;a3r['setPosition'](a3s["r23ZS3L2g"]['position']),a3r['NGSMBcCHUv'](0x1,-a3s["r23ZS3L2g"]["position"]['y']+a3o['uBHZYKAHa']),a3r['yoghpvfQE']['CNFryyAhIm'](0x0),a3r["yoghpvfQE"]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o[[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @132 (verified), servedRefCount=2:
+'a693b13D91R':function(a3o){var aCf=ai1;if(a3o['tdkZouYda']==a0T)return;var a3p=0.8;a3o[aCf(0x1ba)]<0x2&&(a3p=0.6);a3p*=0.7;for(var a3q=0x0;a3q<a3o['MfCOcfVUx'];a3q++){var a3r=lrRnpundBY('blood'),a3s=a0a(a3o[aCf(0x197)]);if(a3s==undefined)continue;a3r['setPosition'](a3s[aCf(0xc7e)]['position']),a3r['NGSMBcCHUv'](0x1,-a3s[aCf(0xc7e)][aCf(0x215)]['y']+a3o['uBHZYKAHa']),a3r['yoghpvfQE']['CNFryyAhIm'](0x0),a3r[aCf(0x48b)]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Mat
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/8] a3r@u2744#0 | kind=var depth=5 refCount=10 | network/handlers.js [DIVERGED snippet-only]
+DECL @173 (verified):
+'a693b13D91R':function(a3o){var aCf=ai1;if(a3o['tdkZouYda']==a0T)return;var a3p=0.8;a3o["MfCOcfVUx"]<0x2&&(a3p=0.6);a3p*=0.7;for(var a3q=0x0;a3q<a3o['MfCOcfVUx'];a3q++){var a3r=lrRnpundBY('blood'),a3s=a0a(a3o["tdkZouYda"]);if(a3s==undefined)continue;a3r['setPosition'](a3s["r23ZS3L2g"]['position']),a3r['NGSMBcCHUv'](0x1,-a3s["r23ZS3L2g"]["position"]['y']+a3o['uBHZYKAHa']),a3r['yoghpvfQE']['CNFryyAhIm'](0x0),a3r["yoghpvfQE"]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o[[...line truncated...]
+USES: refCount=10, 11 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @172 (verified), servedRefCount=10:
+'a693b13D91R':function(a3o){var aCf=ai1;if(a3o['tdkZouYda']==a0T)return;var a3p=0.8;a3o[aCf(0x1ba)]<0x2&&(a3p=0.6);a3p*=0.7;for(var a3q=0x0;a3q<a3o['MfCOcfVUx'];a3q++){var a3r=lrRnpundBY('blood'),a3s=a0a(a3o[aCf(0x197)]);if(a3s==undefined)continue;a3r['setPosition'](a3s[aCf(0xc7e)]['position']),a3r['NGSMBcCHUv'](0x1,-a3s[aCf(0xc7e)][aCf(0x215)]['y']+a3o['uBHZYKAHa']),a3r['yoghpvfQE']['CNFryyAhIm'](0x0),a3r[aCf(0x48b)]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE'][
+SERVED USES: 11 token-occurrences in unit, showing 3 nearest outside DECL window:
+@612: f(0x48b)]['x']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o['amount']==0x3&&(a3r['yoghpvfQE']['y']+=0.5*a3p*0.4),a3r[aCf(0x564)]['add'](a3r['yoghpvfQE']);}},
+@648: 5)*a3p,a3r['yoghpvfQE']['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o['amount']==0x3&&(a3r['yoghpvfQE']['y']+=0.5*a3p*0.4),a3r[aCf(0x564)]['add'](a3r['yoghpvfQE']);}},
+@671: ['y']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['z']+=(Math['random']()-0.5)*a3p,a3r['yoghpvfQE']['OpiuFvBcQd'](0.4),a3o['amount']==0x3&&(a3r['yoghpvfQE']['y']+=0.5*a3p*0.4),a3r[aCf(0x564)]['add'](a3r['yoghpvfQE']);}},
+==============================================================================
+[5/8] a3i@u2050#0 | kind=param depth=5 refCount=14 | ui/widgets.js [DIVERGED snippet-only]
+DECL @12 (verified):
+function Ki(a3i){var aqK=ai1,a3j={};a3j["jan"]='January',a3j['feb']='February',a3j['mar']='March',a3j['apr']="April",a3j["may"]='May',a3j['jun']='June',a3j["jul"]='July',a3j["aug"]='August',a3j['sep']="September",a3j['oct']='October',a3j['nov']='November',a3j["dec"]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1]["charAt"](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');[...line truncated...]
+USES: refCount=14, 15 token-occurrences in unit, showing 2 nearest outside DECL window:
+@625: 3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1]["charAt"](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');}}return a3i[0x0]+'\x20'+a3i[0x1]+a3m+',\x20'+a3i[0x2];}
+@646: (0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1]["charAt"](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');}}return a3i[0x0]+'\x20'+a3i[0x1]+a3m+',\x20'+a3i[0x2];}
+SERVED DECL @12 (verified), servedRefCount=14:
+function Ki(a3i){var aqK=ai1,a3j={};a3j[aqK(0xb7a)]='January',a3j['feb']='February',a3j['mar']='March',a3j['apr']=aqK(0x70b),a3j[aqK(0x842)]='May',a3j['jun']='June',a3j[aqK(0xcb9)]='July',a3j[aqK(0xa86)]='August',a3j['sep']=aqK(0x10ae),a3j['oct']='October',a3j['nov']='November',a3j[aqK(0xfac)]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x
+SERVED USES: 15 token-occurrences in unit, showing 4 nearest outside DECL window:
+@430: 10ae),a3j['oct']='October',a3j['nov']='November',a3j[aqK(0xfac)]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1][aqK(0x44d)](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');
+@459: j['nov']='November',a3j[aqK(0xfac)]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1][aqK(0x44d)](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');}}return a3i[0x0]+'\x20'+a3i[
+@502: er';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1][aqK(0x44d)](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');}}return a3i[0x0]+'\x20'+a3i[0x1]+a3m+',\x20'+a3i[0x2];}
+@527: split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1][aqK(0x44d)](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');}}return a3i[0x0]+'\x20'+a3i[0x1]+a3m+',\x20'+a3i[0x2];}
+==============================================================================
+[6/8] a3j@u2050#0 | kind=var depth=5 refCount=13 | ui/widgets.js [DIVERGED snippet-only]
+DECL @29 (verified):
+function Ki(a3i){var aqK=ai1,a3j={};a3j["jan"]='January',a3j['feb']='February',a3j['mar']='March',a3j['apr']="April",a3j["may"]='May',a3j['jun']='June',a3j["jul"]='July',a3j["aug"]='August',a3j['sep']="September",a3j['oct']='October',a3j['nov']='November',a3j["dec"]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1]["charAt"](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');[...line truncated...]
+USES: refCount=13, 14 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @29 (verified), servedRefCount=13:
+function Ki(a3i){var aqK=ai1,a3j={};a3j[aqK(0xb7a)]='January',a3j['feb']='February',a3j['mar']='March',a3j['apr']=aqK(0x70b),a3j[aqK(0x842)]='May',a3j['jun']='June',a3j[aqK(0xcb9)]='July',a3j[aqK(0xa86)]='August',a3j['sep']=aqK(0x10ae),a3j['oct']='October',a3j['nov']='November',a3j[aqK(0xfac)]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0)
+SERVED USES: 14 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/8] a3k@u2050#0 | kind=var depth=5 refCount=1 | ui/widgets.js [DIVERGED snippet-only]
+DECL @282 (verified):
+function Ki(a3i){var aqK=ai1,a3j={};a3j["jan"]='January',a3j['feb']='February',a3j['mar']='March',a3j['apr']="April",a3j["may"]='May',a3j['jun']='June',a3j["jul"]='July',a3j["aug"]='August',a3j['sep']="September",a3j['oct']='October',a3j['nov']='November',a3j["dec"]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1]["charAt"](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @310 (verified), servedRefCount=1:
+function Ki(a3i){var aqK=ai1,a3j={};a3j[aqK(0xb7a)]='January',a3j['feb']='February',a3j['mar']='March',a3j['apr']=aqK(0x70b),a3j[aqK(0x842)]='May',a3j['jun']='June',a3j[aqK(0xcb9)]='July',a3j[aqK(0xa86)]='August',a3j['sep']=aqK(0x10ae),a3j['oct']='October',a3j['nov']='November',a3j[aqK(0xfac)]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1][aqK(0x44d)](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='[...line truncated...]
+SERVED USES: 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/8] a3m@u2050#0 | kind=var depth=5 refCount=4 | ui/widgets.js [DIVERGED snippet-only]
+DECL @460 (verified):
+function Ki(a3i){var aqK=ai1,a3j={};a3j["jan"]='January',a3j['feb']='February',a3j['mar']='March',a3j['apr']="April",a3j["may"]='May',a3j['jun']='June',a3j["jul"]='July',a3j["aug"]='August',a3j['sep']="September",a3j['oct']='October',a3j['nov']='November',a3j["dec"]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1]["charAt"](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @490 (verified), servedRefCount=4:
+ar']='March',a3j['apr']=aqK(0x70b),a3j[aqK(0x842)]='May',a3j['jun']='June',a3j[aqK(0xcb9)]='July',a3j[aqK(0xa86)]='August',a3j['sep']=aqK(0x10ae),a3j['oct']='October',a3j['nov']='November',a3j[aqK(0xfac)]='December';var a3k=a3j;a3i=a3i['split']('\x20'),a3i[0x0]=a3k[a3i[0x0]],a3i[0x1]=a3i[0x1]['toString']();var a3l=a3i[0x1]['charAt'](0x0);a3i[0x1]['length']>0x1&&(a3l=a3i[0x1][aqK(0x44d)](0x1));var a3m='th';if(a3i[0x1]['length']==0x1||a3i[0x1]['charAt'](0x0)!='1'){if(a3l=='1')a3m='st';else{if(a3l=='2')a3m='nd';else a3l=='3'&&(a3m='rd');}}return a3i[0x0]+'\x20'+a3i[0x1]+a3m+',\x20'+a3i[0x2];}
+SERVED USES: 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-01: propose EVERY binding above.

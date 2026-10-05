@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "slice": "02a",
+    "wave": 52
+  },
+  "proposals": [
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: checked undefined plus tagName INPUT; SERVED: element tested for INPUT tagName in helper (snippet-only twin).",
+      "name": "candidateElement",
+      "selector": "ahe@u2151#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: yields deltaY preventDefault stopPropagation; SERVED: wheel handler reads deltaY then prevents default (snippet-only twin).",
+      "name": "wheelEvent",
+      "selector": "ahe@u2151#9"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: touchstart handler reading target and changedTouches; SERVED: touch handler reads changedTouches and stops propagation (snippet-only twin).",
+      "name": "touchStartEvent",
+      "selector": "ahe@u2151#10"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: touchmove handler tracking touch drag clientY; SERVED: touch handler reads changedTouches and stops propagation (snippet-only twin).",
+      "name": "touchMoveEvent",
+      "selector": "ahe@u2151#11"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: compared invalidsku cantafford hasitems ok; SERVED: claimSku response compared to invalidsku/cantafford/hasitems/ok (snippet-only twin).",
+      "name": "claimStatus",
+      "selector": "ahe@u2151#12"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: caught draw exception only logged; SERVED: caught draw exception, only logged to console (snippet-only twin).",
+      "name": "drawError",
+      "selector": "ahe@u2151#13"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: holds 0x36 cell re-added last to parent on top; SERVED: holds 0x36 cell re-added last to parent (snippet-only twin).",
+      "name": "topCell",
+      "selector": "ahe@u2151#14"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: spin reel filler entry supplying name and weapon; SERVED: spin reel entry supplying name and weapon (snippet-only twin).",
+      "name": "reelItem",
+      "selector": "ahe@u2151#15"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: skin name key for materials textures; SERVED: skin key indexing sV/pX material tables (snippet-only twin).",
+      "name": "skinName",
+      "selector": "ahe@u2151#17"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: weapon param compared ar awp; SERVED: weapon slot compared to ar/awp/smg (snippet-only twin).",
+      "name": "weaponKind",
+      "selector": "ahe@u2151#18"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: fresh default skin entry pushed; SERVED: default skin entry pushed to skins (snippet-only twin).",
+      "name": "defaultSkinEntry",
+      "selector": "ahe@u2151#19"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: horizontal drag delta drives rotation y; SERVED: horizontal touch-drag delta rotating preview (snippet-only twin).",
+      "name": "dragDeltaX",
+      "selector": "ahe@u2151#20"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: confirm dialog handle with buttons callbacks; SERVED: dialog object holding overlay/buttons/callbacks (snippet-only twin).",
+      "name": "dialogHandle",
+      "selector": "ahe@u2151#21"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: keys of inspectWeapons iterated; SERVED: Object.keys of inspectWeapons for hiding (snippet-only twin).",
+      "name": "inspectWeaponKeys",
+      "selector": "ahe@u2151#22"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: captured filter name for onclick; SERVED: filter name captured by button onclick (snippet-only twin).",
+      "name": "filterLabel",
+      "selector": "ahe@u2151#23"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: party roster line widget updated; SERVED: per-player line UI getting name/ready/kick (snippet-only twin).",
+      "name": "rosterRow",
+      "selector": "ahf@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: xsolla payload carries character_id; SERVED: Xsolla custom parameters carrying character id (snippet-only twin).",
+      "name": "customParams",
+      "selector": "ahf@u2151#2"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: extends hash constants to 64; SERVED: cached constants length, loop bound and index (snippet-only twin).",
+      "name": "cacheLen",
+      "selector": "ahf@u2151#3"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: cached clientHeight compared reassigned; SERVED: cached clientHeight compared each resize check (snippet-only twin).",
+      "name": "cachedClientH",
+      "selector": "ahf@u2151#6"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: number input paired range slider; SERVED: number input synced with range slider (snippet-only twin).",
+      "name": "numberInput",
+      "selector": "ahf@u2151#7"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: latest touch Y drives scrollTop; SERVED: current touch clientY driving scroll delta (snippet-only twin).",
+      "name": "touchClientY",
+      "selector": "ahf@u2151#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: first carousel cell rotated to end; SERVED: first carousel cell rotated to end (snippet-only twin).",
+      "name": "firstCell",
+      "selector": "ahf@u2151#10"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: skin name useLink-resolved for preload; SERVED: skin name resolved via useLink for preload (snippet-only twin).",
+      "name": "skinKey",
+      "selector": "ahf@u2151#11"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: wear index into names colors; SERVED: zero wear index into label/color tables (snippet-only twin).",
+      "name": "wearIndex",
+      "selector": "ahf@u2151#12"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: fallback shotgun wear0 skin object; SERVED: fallback shotgun skin descriptor when undefined (snippet-only twin).",
+      "name": "fallbackSkin",
+      "selector": "ahf@u2151#13"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: flag routes equipped unequipped parent; SERVED: flag routing card to equipped container (snippet-only twin).",
+      "name": "isEquipped",
+      "selector": "ahf@u2151#14"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: function returning pX rarity for sort and filter (source-verified); SERVED: returns pX rarity for skin sorting/filtering (snippet-only twin).",
+      "name": "getSkinRarity",
+      "selector": "ahf@u2151#15"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: vertical drag delta rotates z; SERVED: vertical touch-drag delta rotating preview (snippet-only twin).",
+      "name": "dragDeltaY",
+      "selector": "ahf@u2151#16"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: dialog overlay scene holds widgets; SERVED: overlay scene collecting dialog children (snippet-only twin).",
+      "name": "dialogScene",
+      "selector": "ahf@u2151#17"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: index over inspect weapon keys; SERVED: loop index hiding inspect weapon meshes (snippet-only twin).",
+      "name": "keyIndex",
+      "selector": "ahf@u2151#18"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: index unsticks filter buttons; SERVED: loop index unsticking filter buttons (snippet-only twin).",
+      "name": "filterIndex",
+      "selector": "ahf@u2151#19"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: XHR posts tradeUp request; SERVED: XMLHttpRequest posting tradeUp skin exchange (snippet-only twin).",
+      "name": "tradeUpXhr",
+      "selector": "ahf@u2151#20"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: origin plus ref link copied; SERVED: origin plus ref token for sharing (snippet-only twin).",
+      "name": "referralUrl",
+      "selector": "ahf@u2151#21"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+ "meta": {
+  "wave": 66,
+  "slice": "01"
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Spec object encoded: globalKeys, globalIndex, byteSizes, field values. SERVED: identical (snippet-only twin).",
+   "name": "messageSpec",
+   "selector": "a3i@u1959#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: DataView written via setUint16 and dynamic setters; mirrors decodeMessage. SERVED: identical (snippet-only twin).",
+   "name": "dataView",
+   "selector": "a3j@u1959#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Write cursor advanced per field; mirrors sibling readOffset. SERVED: identical (snippet-only twin).",
+   "name": "writeOffset",
+   "selector": "a3k@u1959#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Holds globalKeys array looped for encode; disjoint namesakes benign. SERVED: identical (snippet-only twin).",
+   "name": "globalKeyList",
+   "selector": "a3l@u1959#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index over key list; disjoint namesakes benign. SERVED: identical (snippet-only twin).",
+   "name": "keyIndex",
+   "selector": "a3m@u1959#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: Bloom key rounded in place; uses captured as oldKey, hold. SERVED: identical (snippet-only twin).",
+   "name": "tuningKey",
+   "selector": "H6@u1770#0"
+  }
+ ]
+}

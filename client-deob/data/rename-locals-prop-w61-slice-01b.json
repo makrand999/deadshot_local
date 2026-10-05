@@ -1,0 +1,238 @@
+{
+ "meta": {
+  "slice": "01b",
+  "wave": 61
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Color mult uniform for skybox MeshBasicReplacement material; SERVED: identical (snippet-only twin).",
+   "name": "skyboxMult",
+   "selector": "a4K@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: GLSL timeDiff UV chunk appended for Frame materials; SERVED: identical (snippet-only twin).",
+   "name": "frameUvSnippet",
+   "selector": "a4K@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Animation-synced audio entry driving obj source playback; SERVED: identical (snippet-only twin).",
+   "name": "syncedAudio",
+   "selector": "a4K@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Constructed ShaderMaterial with blending defines, pushed returned; SERVED: identical (snippet-only twin).",
+   "name": "builtMaterial",
+   "selector": "a4K@u2654#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Name list gating transparent double-side material flags; SERVED: identical (snippet-only twin).",
+   "name": "transparentNames",
+   "selector": "a4L@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Map uniform wrapper holding material map texture; SERVED: identical (snippet-only twin).",
+   "name": "mapUniform",
+   "selector": "a4L@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Box hitbox array scaled then meshed per entry; SERVED: identical (snippet-only twin).",
+   "name": "hitboxList",
+   "selector": "a4L@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Time uniform wrapper initialized to zero value; SERVED: identical (snippet-only twin).",
+   "name": "timeUniform",
+   "selector": "a4M@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Cylinder hitbox array scaled then meshed per entry; SERVED: identical (snippet-only twin).",
+   "name": "cylinderList",
+   "selector": "a4M@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loaded skybox texture assigned to map uniform cache; SERVED: identical (snippet-only twin). (GVAL patch: skyboxTexture collides with rename-map value)",
+   "name": "skyboxTex",
+   "selector": "a4N@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Uniforms object map mult time plus lights; SERVED: identical (snippet-only twin).",
+   "name": "shaderUniforms",
+   "selector": "a4N@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Grass position array scaled then placed per triple; SERVED: identical (snippet-only twin).",
+   "name": "grassList",
+   "selector": "a4N@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Traversed skybox mesh node getting BufferGeometry merge; SERVED: identical (snippet-only twin).",
+   "name": "skyboxChild",
+   "selector": "a4O@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Shared loop counter across hitbox lights geometry loops; SERVED: identical (snippet-only twin).",
+   "name": "loopIdx",
+   "selector": "a4O@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: First SubwayLights entry pairing preset with position; SERVED: identical (snippet-only twin).",
+   "name": "subwayLightA",
+   "selector": "a4P@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Scratch Matrix4 composing hitbox mesh transforms; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMatrix",
+   "selector": "a4P@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Second hardcoded SubwayLights position coordinate triple; SERVED: identical (snippet-only twin).",
+   "name": "subwayPosB",
+   "selector": "a4Q@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Debug material params color transparent opacity triple; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMatParams",
+   "selector": "a4Q@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Second SubwayLights entry pairing preset with position; SERVED: identical (snippet-only twin).",
+   "name": "subwayLightB",
+   "selector": "a4R@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Debug box mesh transformed shown and collected; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMesh",
+   "selector": "a4R@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Third hardcoded SubwayLights position coordinate triple; SERVED: identical (snippet-only twin).",
+   "name": "subwayPosC",
+   "selector": "a4S@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Reused Vector3 for grass lights placement math; SERVED: identical (snippet-only twin).",
+   "name": "scratchVec",
+   "selector": "a4S@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Grass instance positioned scaled rotated per entry; SERVED: identical (snippet-only twin).",
+   "name": "grassBlade",
+   "selector": "a4T@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Light instance positioned and aimed per facing; SERVED: identical (snippet-only twin).",
+   "name": "placedLight",
+   "selector": "a4U@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Geometry group start offset advanced per group; SERVED: identical (snippet-only twin).",
+   "name": "groupStart",
+   "selector": "a4V@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Geometry group run length counted then reset; SERVED: identical (snippet-only twin).",
+   "name": "groupCount",
+   "selector": "a4W@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Fifth SubwayLights entry pairing preset with position; SERVED: identical (snippet-only twin).",
+   "name": "subwayLightE",
+   "selector": "a4X@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Previous face color value detecting group boundaries; SERVED: identical (snippet-only twin).",
+   "name": "prevColorVal",
+   "selector": "a4X@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Index converting light entry positions to Vector3; SERVED: identical (snippet-only twin).",
+   "name": "lightIdx",
+   "selector": "a4Y@u2654#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding refCount zero assigned never read",
+   "selector": "a4Y@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Geometry index buffer iterated for color groups; SERVED: identical (snippet-only twin).",
+   "name": "geomIndex",
+   "selector": "a4Z@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Uniform key list iterated for texture disposal; SERVED: identical (snippet-only twin).",
+   "name": "uniformKeys",
+   "selector": "a4a@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Index disposing ambient-occlusion texture values; SERVED: identical (snippet-only twin).",
+   "name": "aoIdx",
+   "selector": "a4b@u2654#0"
+  }
+ ]
+}

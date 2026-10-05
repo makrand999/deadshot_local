@@ -1,0 +1,70 @@
+{
+ "meta": {
+  "slice": "03",
+  "wave": 61
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ring-buffer tick snapshot distance-checked against server position; SERVED: identical (snippet-only twin).",
+   "name": "sentTickEntry",
+   "selector": "a3p@u2737#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: epsilon threshold gating position-difference debug branch; SERVED: identical (snippet-only twin).",
+   "name": "posDiffTolerance",
+   "selector": "a3q@u2737#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shared counter over tick buffer and entity queue loops; SERVED: identical (snippet-only twin). (GVAL patch: loopIndex collides with rename-map value)",
+   "name": "tickQueueIdx",
+   "selector": "a3r@u2737#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: id-to-type lookup fed into entity factory and weapon table; SERVED: identical (snippet-only twin).",
+   "name": "entityTypeIdx",
+   "selector": "a3t@u2737#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: alias of global entity array appending new entity; SERVED: identical (snippet-only twin). (GVAL patch: entityList collides with rename-map value)",
+   "name": "spawnedEntities",
+   "selector": "a3u@u2737#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tail queue snapshot checked for stale timestamp pop; SERVED: identical (snippet-only twin).",
+   "name": "lastQueuedSnapshot",
+   "selector": "a3w@u2737#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: previous snapshot anchoring time lerp and clamp; SERVED: identical (snippet-only twin).",
+   "name": "prevSnapshot",
+   "selector": "a3x@u2737#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fresh queue slot filled from packet position rotation time; SERVED: identical (snippet-only twin).",
+   "name": "curSnapshot",
+   "selector": "a3y@u2737#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead catch parameter refCount zero empty handler",
+   "selector": "a3z@u2737#0"
+  }
+ ]
+}

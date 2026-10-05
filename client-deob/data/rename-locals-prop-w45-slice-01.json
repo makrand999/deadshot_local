@@ -1,0 +1,222 @@
+{
+ "meta": {
+  "wave": 45,
+  "slice": "01",
+  "mergedFrom": [
+   "01a",
+   "01b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat2d scale out-param with a3y[0..5] written and returned; served window shows the same region shifted (scale tail + translate) with identical write-all-lanes-and-return out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#112"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat2d translate out-param (a3y[0..5] written incl translation terms, returned); served window shows the same translate tail shifted, same out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#113"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 create start with var a3y=new 9-array; served window shows the full identity fill a3y[0..8] and return — fresh identity matrix built and returned on both sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#114"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL is mat3 fromMat4 out-param copying a3z lanes into a3y[0..8] and returning it; served window shows the same fromMat4 tail shifted, same copy-into-out role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#117"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 multiply tail + translate start; served window shows the same multiply tail + translate start — out-param written a3y[0..8] and returned on both sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#124"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 rotate tail + scale function writing a3y[0..8] from a3z rows times a3A factors; served window shows the same scale body, same out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#127"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 fromQuat out-param writing a3y[0..8] rotation terms from quat a3z; served window shows the same fromQuat body shifted, same out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#129"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat3 str=function(a3y) returning 'mat3('+a3y[0..8] formatted string; read-only format input, never written, on both VM9 and served sides.",
+   "name": "matrix",
+   "selector": "a3y@u0008#131"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 create start with var a3y=new 16-array; served window shows the full identity fill a3y[0..15] and return — fresh identity matrix built and returned on both sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#132"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat4 clone reading a3y[0..15] into a new 16-array (16 read-only uses); read-only source matrix on both VM9 and served sides.",
+   "name": "sourceMat",
+   "selector": "a3y@u0008#133"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat4 copy assigning a3y[0..15]=a3z[0..15] and returning a3y; written out-param on both VM9 and served sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#135"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat4 invert tail + adjoint start with a3y written 16 lanes and returned (refCount 17); adjoint out-param on both VM9 and served sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#138"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show mat4 multiply tail + translate start with the alias-aware write pattern; out-param receiving the translated matrix on both VM9 and served sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#141"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show the axis-angle rotate tail (a3y[0..11] computed, alias-guarded copy of [12..15], returned, refCount 18); rotate out-param on both VM9 and served sides.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#144"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL is mat4 rotateX out-param (alias-guarded copies + 8 sin/cos-mixed writes, returned); served window shows the same rotateX tail, same out-matrix role.",
+   "name": "outMatrix",
+   "selector": "a3y@u0008#145"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL window ends at the rotateZ header (token at 36761 = rotateZ out param) and SERVED DECL shows the rotateZ body writing a3y[0x0-0x3,0x8-0xb] and returning a3y on both sides.",
+   "name": "rotateZOut",
+   "selector": "a3y@u0008#146"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 38770 is the first param of the 7-arg frustum builder QTyIRIwcUl and SERVED DECL shows the same body writing all 16 of a3y[0x0-0xf] as the output matrix on both sides.",
+   "name": "frustumOut",
+   "selector": "a3y@u0008#150"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 39120 is the perspective out param (1/tan(fovy/2) projection body) and SERVED DECL shows the identical body writing a3y[0x0-0xf] and returning a3y on both sides.",
+   "name": "perspectiveOut",
+   "selector": "a3y@u0008#151"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 40550 is the str param whose body formats 'mat4('+a3y[0x0..0xf]+')' and SERVED DECL shows the same stringify body reading all 16 elements on both sides.",
+   "name": "matForStr",
+   "selector": "a3y@u0008#153"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 40868 is the frob param inside sqrt(sum of pow(a3y[i],2)) (Frobenius norm) and SERVED DECL shows the same norm body reading a3y[0x0-0xf] on both sides.",
+   "name": "frobMat",
+   "selector": "a3y@u0008#154"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 41433 is the quat create local (var a3y=new a3m(0x4), identity-initialized, returned) and SERVED DECL shows the same create body on both sides.",
+   "name": "newQuat",
+   "selector": "a3y@u0008#155"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 42532 is the quat identity out param (sets 0,0,0,1, returns a3y) and SERVED DECL shows the identical identity body on both sides.",
+   "name": "identityOut",
+   "selector": "a3y@u0008#158"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 42631 is the setAxisAngle out param (writes sin(halfAngle)*axis + cos(halfAngle)) and SERVED DECL shows the same body writing a3y[0x0-0x3] on both sides.",
+   "name": "axisAngleOut",
+   "selector": "a3y@u0008#159"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 42842 is the quat multiply out param (Hamilton product into a3y[0x0-0x3]) and SERVED DECL shows the same multiply body on both sides.",
+   "name": "multiplyOut",
+   "selector": "a3y@u0008#160"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 43217 is the quat rotateX out param (half-angle sin/cos rotation of input quat) and SERVED DECL shows the same rotateX body writing a3y[0x0-0x3] on both sides.",
+   "name": "rotateXOut",
+   "selector": "a3y@u0008#161"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 44027 is the calculateW out param (copies xyz, derives w=-sqrt(|1-x^2-y^2-z^2|)) and SERVED DECL shows the same body on both sides.",
+   "name": "calculateWOut",
+   "selector": "a3y@u0008#164"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 44272 is the slerp out param (acos/dot spherical interpolation into a3y[0x0-0x3]) and SERVED DECL shows the same slerp body on both sides.",
+   "name": "slerpOut",
+   "selector": "a3y@u0008#165"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token at 45318 is the fromMat3 out param (trace-branch mat3-to-quat conversion into a3y) and SERVED DECL shows the same conversion body on both sides.",
+   "name": "fromMat3Out",
+   "selector": "a3y@u0008#168"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token is the vec2 copy source param (read twice as a3z[0x0],a3z[0x1]) and SERVED DECL shows the same copy body reading the source vector on both sides.",
+   "name": "copySrc",
+   "selector": "a3z@u0008#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL token is the vec2 set x-scalar param (single read a3y[0x0]=a3z) and SERVED DECL shows the same set body assigning it on both sides.",
+   "name": "setX",
+   "selector": "a3z@u0008#3"
+  }
+ ]
+}

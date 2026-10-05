@@ -1,0 +1,1635 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 42,
+  "date": "2026-09-28",
+  "merged": 0,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 180,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @106320 in Plane region of engine/shaders.js; use sites @107240/@107412 show this.constant plane-constant semantics. Token already idiomatic.",
+   "selector": "constant@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @106545 function Plane(normal,constant) constructor param; use sites @107240+ show this.constant assignment. Token already idiomatic.",
+   "selector": "constant@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @890585 Curve.create param region with 5 refs in scope; token matches idiomatic Curve.create(construct, getPoint) factory naming. Already readable.",
+   "selector": "construct@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @60150 _proto.containsPoint/containsBox Box3 region; Box2 twin at @843731. Idiomatic bounds-check method name.",
+   "selector": "containsBox@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @843752 Box2 containsBox region; Box3 twin at @60150. Idiomatic bounds-check method name.",
+   "selector": "containsBox@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @121571 Color copyGammaToLinear/copyLinearToGamma region; convertGammaToLinear wrapper. Idiomatic color-space method name.",
+   "selector": "convertGammaToLinear@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @121697 Color convertGammaToLinear/convertLinearToGamma region. Idiomatic color-space method name.",
+   "selector": "convertLinearToGamma@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @122238 Color copyLinearToSRGB/convertSRGBToLinear region. Idiomatic color-space method name.",
+   "selector": "convertLinearToSRGB@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @122138 Color SRGB/Linear region; call site @872860 background.convertSRGBToLinear(). Idiomatic color-space method name.",
+   "selector": "convertSRGBToLinear@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @878207 PMREM/sigma/texelSize/uv cube-face region with 1 ref. Token already plain-English and readable.",
+   "selector": "coordinates@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @838655 Raycaster/_intersectObject region param with 4 refs; nearby uses are GLSL coords[] strings. Token already idiomatic NDC-coords naming.",
+   "selector": "coords@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @108964 Plane intersectsLine/intersectsBox/intersectsSphere region. Idiomatic Plane method name.",
+   "selector": "coplanarPoint@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @870394 PMREMGenerator.fromScene region; fromEquirectangular sibling method. Idiomatic PMREM API name.",
+   "selector": "fromEquirectangular@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @146186 DirectGeometry.computeGroups/fromGeometry region; call sites @153912/@156278. Idiomatic geometry-conversion name.",
+   "selector": "fromGeometry@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @156204 BufferGeometry update/fromGeometry region; sibling def @146186 and call @590717. Idiomatic geometry-conversion name.",
+   "selector": "fromGeometry@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @540846 Skeleton clone/getBoneByName/dispose/fromJSON region. Idiomatic serialization method name.",
+   "selector": "fromJSON@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @701503 Curve clone/copy/toJSON/fromJSON region. Idiomatic serialization method name.",
+   "selector": "fromJSON@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @720545 CurvePath copy/toJSON/fromJSON region. Idiomatic serialization method name.",
+   "selector": "fromJSON@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @723438 Path copy/toJSON/fromJSON region. Idiomatic serialization method name.",
+   "selector": "fromJSON@u0020#3",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @724475 Shape copy/toJSON/fromJSON region. Idiomatic serialization method name.",
+   "selector": "fromJSON@u0020#4",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @739592 LightProbe copy/fromJSON region. Idiomatic serialization method name.",
+   "selector": "fromJSON@u0020#5",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @891834 CurvePath createGeometry/Path.fromPoints region. Idiomatic point-list factory name.",
+   "selector": "fromPoints@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @869945 PMREMGenerator constructor/fromScene region. Idiomatic PMREM API name.",
+   "selector": "fromScene@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @427857 setMaterial(material,frontFaceCW) param; twin var @499156 and use @427966 flipSided logic. Already idiomatic GL winding name.",
+   "selector": "frontFaceCW@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @499156 renderBufferDirect var frontFaceCW=object.isMesh&&determinant()<0; passed @499301 to setMaterial. Already idiomatic.",
+   "selector": "frontFaceCW@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @186277 PerspectiveCamera.setViewOffset(fullWidth,fullHeight,...) param; use sites @186398/@186526. Already idiomatic.",
+   "selector": "fullHeight@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @187033 updateProjectionMatrix var fullWidth=view.fullWidth,fullHeight=view.fullHeight; uses @187120/@187179. Already idiomatic.",
+   "selector": "fullHeight@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @732965 OrthographicCamera.setViewOffset(fullWidth,fullHeight,...) param; uses @733053/@733827. Already idiomatic.",
+   "selector": "fullHeight@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @412046 shadow-map fullScreenTri/fullScreenMesh region; uses @414911/@415257/@415616 in VSMPass. Already idiomatic.",
+   "selector": "fullScreenMesh@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @411900 shadow-map shadowMaterialVertical/Horizontal/fullScreenTri region with 2 refs. Already idiomatic.",
+   "selector": "fullScreenTri@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @119273 (var components=m[2] in Color.setStyle) with use sites @119666/@119966 matching rgb/hsl component regexes; idiomatic English name already readable.",
+   "selector": "components@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @366410 (var components=getEncodingComponents in getTexelDecodingFunction) with uses building 'ToLinear' shader strings; idiomatic name, keep.",
+   "selector": "components@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @366614 (var components=getEncodingComponents in getTexelEncodingFunction) with uses building 'LinearTo' shader strings; idiomatic name, keep.",
+   "selector": "components@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @84245 (_proto.compose Matrix4 method) called at @77749/@101100/@471688 composing position/quaternion/scale; standard three.js API name, keep.",
+   "selector": "compose@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @430747 (state compressedTexImage2D wrapper) exported at @432364 and called at @445071/@448066 for compressed texture upload; WebGL API name, keep.",
+   "selector": "compressedTexImage2D@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @158310 (BufferGeometry computeBoundingBox) with call sites at @152880/@59707 and error string naming it; standard geometry API name, keep.",
+   "selector": "computeBoundingBox@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @566110 (Geometry computeBoundingBox via setFromPoints) with call sites at @561658/@558631; standard geometry API name, keep.",
+   "selector": "computeBoundingBox@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @159708 (BufferGeometry computeBoundingSphere) with call sites at @171083/@195717/@545947 for raycast/frustum culling; standard API name, keep.",
+   "selector": "computeBoundingSphere@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @566268 (Geometry computeBoundingSphere) with call sites at @561831/@558689 and helper geometry calls at @862930+; standard API name, keep.",
+   "selector": "computeBoundingSphere@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @161670 (BufferGeometry computeFaceNormals stub) with Geometry-side calls at @561418/@563034/@565502; standard API name, keep.",
+   "selector": "computeFaceNormals@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @562123 (Geometry computeFaceNormals via cross products) called at @561418/@563034/@563861; standard API name, keep.",
+   "selector": "computeFaceNormals@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @563829 (Geometry computeFlatVertexNormals copying face normals to vertex normals); self-descriptive API name with no cryptic token, keep.",
+   "selector": "computeFlatVertexNormals@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @699646 (Curve computeFrenetFrames) consumed at @638438 (TubeBufferGeometry frames) and @604598 (extrude splineTube); standard curve API name, keep.",
+   "selector": "computeFrenetFrames@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @145723 (DirectGeometry.computeGroups) called at @149072 (fromGeometry) and @156070 (groupsNeedUpdate path); descriptive API name, keep.",
+   "selector": "computeGroups@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @544832 (Line computeLineDistances building 'lineDistance' attribute) with sibling override at @549475 and shim refs at @907810+; standard API name, keep.",
+   "selector": "computeLineDistances@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @549475 (LineSegments computeLineDistances override for segment pairs) alongside Line version at @544832; standard API name, keep.",
+   "selector": "computeLineDistances@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @907840 (Geometry deprecation shim logging removal notice) referencing Line.computeLineDistances; readable shim name, keep.",
+   "selector": "computeLineDistances@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @564322 (Geometry computeMorphNormals); self-descriptive morph-normal API name with no cryptic token, keep.",
+   "selector": "computeMorphNormals@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @915979 (BufferGeometry deprecation shim warning computeOffsets removed); readable shim name, keep.",
+   "selector": "computeOffsets@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @907715 (Geometry shim: computeTangents removed) with BufferGeometry counterpart at @915833/@915858; readable shim name, keep.",
+   "selector": "computeTangents@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @915858 (BufferGeometry shim: computeTangents removed) with Geometry counterpart at @907715/@907770; readable shim name, keep.",
+   "selector": "computeTangents@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @161723 (BufferGeometry computeVertexNormals from position attribute) called at @585837/@603517/@616904 by geometry builders; standard API name, keep.",
+   "selector": "computeVertexNormals@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @562468 (Geometry computeVertexNormals areaWeighted) called at @565530 (morph normals path); standard API name, keep.",
+   "selector": "computeVertexNormals@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793874 (setDirectionalCone param coneInnerAngle, refCount=1); descriptive WebAudio panner-cone param name, keep.",
+   "selector": "coneInnerAngle@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @848788 (SpotLightHelper.update var coneLength from light.distance, refCount=2); descriptive helper local name, keep.",
+   "selector": "coneLength@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793889 (setDirectionalCone param coneOuterAngle, refCount=1); descriptive WebAudio panner-cone param name, keep.",
+   "selector": "coneOuterAngle@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793904 (setDirectionalCone param coneOuterGain, refCount=1); descriptive WebAudio panner-cone param name, keep.",
+   "selector": "coneOuterGain@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @848854 (SpotLightHelper.update var coneWidth, refCount=2) next to coneLength at @848788; descriptive helper local name, keep.",
+   "selector": "coneWidth@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @42572 (Quaternion _proto.conjugate) called by invert at same site and at @664184 for animation reference quats; standard math API name, keep.",
+   "selector": "conjugate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @789939 (Audio _proto.connect) called at @789233/@790789/@788368/@788142/@787917 to wire audio graph nodes; standard WebAudio API name, keep.",
+   "selector": "connect@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @47118 defines Vector3-style setComponent/index switch; idiomatic three.js API name, no rename needed.",
+   "selector": "getComponent@u0020#2",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @489324 iterates contextNames via canvas.getContext; called at @490084/@490145. Idiomatic WebGL helper name.",
+   "selector": "getContext@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @779529 AudioContext.getContext singleton accessor; used at @780213/@784847. Idiomatic name.",
+   "selector": "getContext@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @892933 Spline deprecated-shim method; self-descriptive API name, keep.",
+   "selector": "getControlPointsArray@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @534348 LOD getCurrentLevel next to addLevel; idiomatic getter name.",
+   "selector": "getCurrentLevel@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @921898 WebGLRenderer deprecated-shim getter; idiomatic readable name.",
+   "selector": "getCurrentRenderTarget@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @718943 CurvePath arc-length cache accessor, called by getPoint/getLength; idiomatic name.",
+   "selector": "getCurveLengths@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @21728 ImageUtils.getDataURL; called at @27129 for texture serialize. Idiomatic name.",
+   "selector": "getDataURL@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @784181 Clock.getDelta; called at @786113 via _clock.getDelta. Idiomatic name.",
+   "selector": "getDelta@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @416329 shadow depth-material factory; called at @419077/@419307. Idiomatic name.",
+   "selector": "getDepthMaterial@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @415647 cached MeshDepthMaterial variant factory; referenced at @416457. Idiomatic name.",
+   "selector": "getDepthMaterialVariant@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @791093 Audio.getDetune returning this.detune; idiomatic getter name.",
+   "selector": "getDetune@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @415997 cached MeshDistanceMaterial variant factory; idiomatic name.",
+   "selector": "getDistanceMaterialVariant@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793473 PositionalAudio getter over UDYrzIiOP.distanceModel; idiomatic name.",
+   "selector": "getDistanceModel@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @185942 PerspectiveCamera zoom-aware FOV getter; idiomatic name.",
+   "selector": "getEffectiveFOV@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @818905 AnimationAction time-scale getter next to setEffectiveTimeScale; idiomatic name.",
+   "selector": "getEffectiveTimeScale@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @817720 AnimationAction weight getter next to setEffectiveWeight; idiomatic name.",
+   "selector": "getEffectiveWeight@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @784097 Clock.getElapsedTime calling getDelta; idiomatic name.",
+   "selector": "getElapsedTime@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @365484 encoding->components helper; called at @366421/@366625 for texel encode/decode GLSL. Idiomatic name.",
+   "selector": "getEncodingComponents@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @186166 PerspectiveCamera film-height getter; idiomatic name.",
+   "selector": "getFilmHeight@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @186080 PerspectiveCamera film-width getter; used at @187249 for skew. Idiomatic name.",
+   "selector": "getFilmWidth@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @785361 AudioListener.getFilter returning this.filter; idiomatic name.",
+   "selector": "getFilter@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @791152 Audio.getFilter returning getFilters()[0]; idiomatic name.",
+   "selector": "getFilter@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @790613 Audio.getFilters returning this.filters; idiomatic name.",
+   "selector": "getFilters@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @185795 PerspectiveCamera focal-length getter; idiomatic name.",
+   "selector": "getFocalLength@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @727619 LightShadow frame-extents getter; called at @413008. Idiomatic name.",
+   "selector": "getFrameExtents@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @795424 AudioAnalyser FFT getter; aliased at @932404/@932438. Idiomatic name.",
+   "selector": "getFrequencyData@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @726731 LightShadow frustum getter; called at @414554. Idiomatic name.",
+   "selector": "getFrustum@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @764630 ObjectLoader parse helper; 7 use sites @766915-@768024 resolving geometry by uuid. Idiomatic name.",
+   "selector": "getGeometry@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @464397 WebXRController grip-space getter; called at @467942. Idiomatic name.",
+   "selector": "getGripSpace@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @122509 defines Color.prototype.getHSL; use sites @123223/@124168 call this.getHSL(_hslA). Name is idiomatic three.js API.",
+   "selector": "getHSL@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @463800 defines WebXRController getHandSpace; use site @468131 calls controller.getHandSpace(). Name is idiomatic WebXR API.",
+   "selector": "getHandSpace@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @122325 defines Color.prototype.getHex; use sites @125085/@128608 call color.getHex(). Name is idiomatic three.js API.",
+   "selector": "getHex@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @122415 defines Color.prototype.getHexString next to getHex. Name is idiomatic and already readable.",
+   "selector": "getHexString@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @150782 defines BufferGeometry getIndex; use sites @590893/@1001022 call geometry.getIndex(). Name is idiomatic three.js API.",
+   "selector": "getIndex@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @785079 defines AudioListener.prototype.getInput; use site @787329 calls listener.getInput(). Name is idiomatic audio API.",
+   "selector": "getInput@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @750895 defines getInterleavedBuffer helper in BufferGeometryLoader.parse; use sites @752025/@752903 pass (json.data, attribute.data). Name is descriptive and readable.",
+   "selector": "getInterleavedBuffer@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @435003 defines getInternalFormat helper; use sites @443095/@447730/@449574 resolve GL internal formats. Name is descriptive and readable.",
+   "selector": "getInternalFormat@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @671793 defines KeyframeTrack getInterpolation; use sites @670221/@674042 call track.getInterpolation(). Name is idiomatic animation API.",
+   "selector": "getInterpolation@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @898600 defines Matrix3 getInverse shim warning to use copy().invert(). Name is idiomatic matrix API.",
+   "selector": "getInverse@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @901744 defines Matrix4 getInverse shim warning to use copy().invert(). Name is idiomatic matrix API.",
+   "selector": "getInverse@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @737186 defines SphericalHarmonics getIrradianceAt next to getAt. Name is idiomatic lighting API.",
+   "selector": "getIrradianceAt@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @843898 defines Box2 getParameter; other getParameter hits are WebGL gl.getParameter calls. Name is idiomatic geometry API.",
+   "selector": "getParameter@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @387117 defines WebGLPrograms getParameters; use site @509131 calls programCache.getParameters(material,...). Name is descriptive and readable.",
+   "selector": "getParameters@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @112645 defines Triangle.prototype.getPlane; use sites @903817/@903843 confirm .plane() renamed to .getPlane(). Name is idiomatic.",
+   "selector": "getPlane@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @791641 defines Audio.prototype.getPlaybackRate next to setPlaybackRate. Name is idiomatic audio API.",
+   "selector": "getPlaybackRate@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @697252 defines Curve.prototype.getPoint base; use sites @698196/@698275 call this.getPoint(t). Name is idiomatic curve API.",
+   "selector": "getPoint@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @718379 defines CurvePath getPoint override dispatching over sub-curves; use site @719370 calls this.getPoint. Name is idiomatic curve API.",
+   "selector": "getPoint@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @890595 is a param named getPoint in Curve.create factory; surrounding token hits are Curve getPoint calls. Name is already readable.",
+   "selector": "getPoint@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @697360 defines Curve.prototype.getPointAt via getUtoTmapping; use site @639179 calls path.getPointAt(u). Name is idiomatic curve API.",
+   "selector": "getPointAt@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @697478 defines Curve.prototype.getPoints sampling getPoint; override at @719472 and callers @719810/@891069. Name is idiomatic.",
+   "selector": "getPoints@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @719472 defines CurvePath getPoints override aggregating sub-curve points; base at @697478. Name is idiomatic curve API.",
+   "selector": "getPoints@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @723778 defines Shape.prototype.getPointsHoles iterating this.holes. Name is descriptive and readable.",
+   "selector": "getPointsHoles@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @899199 defines Matrix4 getPosition deprecated shim next to copyPosition. Name is idiomatic matrix API.",
+   "selector": "getPosition@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @905918 defines Vector3 getPositionFromMatrix deprecated shim. Name is descriptive and readable.",
+   "selector": "getPositionFromMatrix@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @922266 defines WebGLRenderer getPrecision shim delegating to capabilities. Name is idiomatic renderer API.",
+   "selector": "getPrecision@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @392420 defines WebGLPrograms getProgramCacheKey; use site @509227 calls programCache.getProgramCacheKey(parameters). Name is descriptive.",
+   "selector": "getProgramCacheKey@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @362166 defines getPureArraySetter among uniform setters; use site @363034 wires PureArrayUniform.setValue. Name is descriptive.",
+   "selector": "getPureArraySetter@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793091 defines PositionalAudio.prototype.getRefDistance next to getOutput. Name is idiomatic audio API.",
+   "selector": "getRefDistance@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @457906 defines getRenderTargetSamples; use sites @455130/@451295/@450780 for multisample storage. Name is descriptive.",
+   "selector": "getRenderTargetSamples@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @186267 setViewOffset param fullWidth with uses @187008+; already idiomatic camera view-offset name.",
+   "selector": "fullWidth@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @187008 local var fullWidth destructured from view with uses @186386+; already idiomatic.",
+   "selector": "fullWidth@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @925737 function-name getActiveMipMapLevel, refCount=0; already readable API name.",
+   "selector": "getActiveMipMapLevel@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @112162 Triangle getArea with compat uses @903190+; already idiomatic.",
+   "selector": "getArea@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @751351 nested function getArrayBuffer in parse(), refCount=1; already readable.",
+   "selector": "getArrayBuffer@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @918385 ExtrudeBufferGeometry getArrays compat shim, refCount=0; already readable.",
+   "selector": "getArrays@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @736661 SphericalHarmonics3 getAt, refCount=0; already idiomatic.",
+   "selector": "getAt@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @151025 BufferGeometry getAttribute with uses @161794+; already idiomatic.",
+   "selector": "getAttribute@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @795544 AudioAnalyser getAverageFrequency, refCount=0; already readable.",
+   "selector": "getAverageFrequency@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @110551 static Triangle.getBarycoord with uses @111190+; already idiomatic.",
+   "selector": "getBarycoord@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @112866 proto Triangle getBarycoord delegating to static, uses @110551+; already idiomatic.",
+   "selector": "getBarycoord@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @738899 SphericalHarmonics3.getBasisAt, refCount=0; already readable.",
+   "selector": "getBasisAt@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @605481 nested getBevelVec with uses @607101/@607459; already meaningful.",
+   "selector": "getBevelVec@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @330292 nested getBindingState with use @329123; already readable.",
+   "selector": "getBindingState@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @540581 Skeleton getBoneByName with use @803109; already idiomatic.",
+   "selector": "getBoneByName@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @851092 nested getBoneList with use @849434; already readable.",
+   "selector": "getBoneList@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @66913 Sphere getBoundingBox, refCount=0; already idiomatic.",
+   "selector": "getBoundingBox@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @62764 Box3 getBoundingSphere, refCount=0; already idiomatic.",
+   "selector": "getBoundingSphere@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @58709 Box3 getCenter with uses @61676+; already idiomatic.",
+   "selector": "getCenter@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @842773 Box2 getCenter with uses @845603+; already idiomatic.",
+   "selector": "getCenter@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @845622 Line3 getCenter with uses @842754+; already idiomatic.",
+   "selector": "getCenter@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @908218 Object3D-compat getChildByName shim, refCount=0; already readable.",
+   "selector": "getChildByName@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @328517 background getClearAlpha with uses @495927+; already idiomatic.",
+   "selector": "getClearAlpha@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @328307 background getClearColor with uses @495630+; already idiomatic.",
+   "selector": "getClearColor@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @820098 AnimationAction getClip, refCount=0; already readable.",
+   "selector": "getClip@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @542213 InstancedMesh getColorAt, refCount=0; already idiomatic.",
+   "selector": "getColorAt@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @572992 nested getColorIndex, refCount=4; already meaningful.",
+   "selector": "getColorIndex@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @906287 Vector3-compat getColumnFromMatrix shim, refCount=0; already readable.",
+   "selector": "getColumnFromMatrix@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @11839 Vector2 getComponent with uses @28282+; already idiomatic.",
+   "selector": "getComponent@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @28304 Vector4 getComponent with uses @11839+; already idiomatic.",
+   "selector": "getComponent@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793277 names PositionalAudio rolloff-factor getter; token is idiomatic public API, no cryptic rename needed.",
+   "selector": "getRolloffFactor@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @820152 names AnimationAction root getter returning _localRoot||_mixer._root; readable getter confirmed by twin use @834441.",
+   "selector": "getRoot@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834458 names mixer getRoot returning _root; readable getter mirrored at @820152.",
+   "selector": "getRoot@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @906097 names deprecated Matrix4 getScaleFromMatrix shim; idiomatic three.js API name.",
+   "selector": "getScaleFromMatrix@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @666238 names interpolant getSettings_ accessor, used at @667396/@667613 for endingStart/End; readable internal convention.",
+   "selector": "getSettings_@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @366067 names shader-diagnostic helper called at @383019/@383082 for vertex/fragment errors; descriptive as-is.",
+   "selector": "getShaderErrors@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @360148 names uniform setter factory, used at @362872 for SingleUniform.setValue; readable role name.",
+   "selector": "getSingularSetter@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @58962 names Box3 getSize(target) filling target dims; idiomatic API used at @62941 and Box2 twin @843026.",
+   "selector": "getSize@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @843026 names Box2 getSize(target); idiomatic twin of Box3 @58962, used e.g. @864037.",
+   "selector": "getSize@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @697661 names Curve getSpacedPoints; idiomatic API with twin @719220 and callers @604514/@891360.",
+   "selector": "getSpacedPoints@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @815973 readable AnimationAction interpolant-settings var; refCount=2, already meaningful.",
+   "selector": "interpolantSettings@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @821276 readable interpolant value var in _updateWeight; refCount=2, already meaningful.",
+   "selector": "interpolantValue@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @262409 names roughness GLSL chunk string; snake_case matches shader-chunk convention, referenced @304450/@316400.",
+   "selector": "roughnessmap_fragment@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @262602 names roughness pars GLSL chunk; convention-matching, referenced @303806/@316444.",
+   "selector": "roughnessmap_pars_fragment@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @14318 names Vector2 round() applying Math.round to x/y; idiomatic with Vector4/Vector3 twins.",
+   "selector": "round@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @32789 names Vector4 round() over x/y/z/w; idiomatic twin of Vector2 @14318 and Vector3 @51830.",
+   "selector": "round@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @51830 names Vector3 round() over x/y/z; idiomatic twin of @14318/@32789.",
+   "selector": "round@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @328366 names background setClearColor in returned API; idiomatic, delegated at @495842/@495878.",
+   "selector": "setClearColor@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @867288 names ArrowHelper setColor after setLength; idiomatic public API.",
+   "selector": "setColor@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @543096 names InstancedMesh setColorAt in raycast-adjacent block; idiomatic public API.",
+   "selector": "setColorAt@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @120679 names Color setColorName called from setStyle fallback; idiomatic API.",
+   "selector": "setColorName@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @11646 names Vector2 setComponent(index,value); idiomatic with Vector4 @28059 and Vector3 @46899 twins.",
+   "selector": "setComponent@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @28059 names Vector4 setComponent(index,value) over x/y/z/w; idiomatic twin of @11646/@46899.",
+   "selector": "setComponent@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @46899 names Vector3 setComponent(index,value); idiomatic twin of @11646/@28059.",
+   "selector": "setComponent@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @106647 names Plane setComponents; idiomatic, called 6x in Frustum.setFromMatrix @195141+.",
+   "selector": "setComponents@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @197407 names WebGLAnimation setContext(value); idiomatic, called at @468701/@502159.",
+   "selector": "setContext@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @779669 names AudioContext.setContext(value) setting _context; idiomatic twin-scope setter.",
+   "selector": "setContext@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @837680 names GLBufferAttribute setCount alongside setBuffer/setType/setItemSize; idiomatic.",
+   "selector": "setCount@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @686568 names Loader setCrossOrigin; idiomatic API with callers @694699/@696800/@761795.",
+   "selector": "setCrossOrigin@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @429069 names WebGLState setCullFace after setFlipSided; idiomatic, exported @432170 and called @424351.",
+   "selector": "setCullFace@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  }
+ ]
+}

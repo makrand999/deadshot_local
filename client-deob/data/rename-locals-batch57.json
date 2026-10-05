@@ -1,0 +1,4147 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 57,
+  "date": "2026-09-29",
+  "merged": 166,
+  "heldLow": 4,
+  "heldInvalid": 0,
+  "kept": 12,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Saved param before anim reassign; local-player compare, input source; SERVED: Saved param before anim reassign; local-player compare, input source (snippet-only twin).",
+   "name": "characterRef",
+   "selector": "a3p@u2725#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "function a0p(a3o){var aC4=ai1;if(a3o[\"r23ZS3L2g\"]==undefined)return;var a3p=a3o;a3o=a3o[\"r23ZS3L2g\"];if(a3o['runSidewaysAnim']==unde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "function a0p(a3o){var aC4=ai1;if(a3o[\"r23ZS3L2g\"]==undefined)return;var a3p=a3o;a3o=a3o[aC4(0xc7e)];if(a3o['runSidewaysAnim']==undef"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Movement flag object: up/down/left/right, crouch, death, grounded reads; SERVED: Movement flag object: up/down/left/right, crouch, death, grounded reads (snippet-only twin).",
+   "name": "moveInput",
+   "selector": "a3r@u2725#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "a3o['jumpFP']['weight']=0x1):(a29(a3o,a3o['jumpFP'],0.6),a3o[\"jumpFP\"]['weight']=0x1);}}return;}var a3r=a3p[\"KWC92ef2Y9\"],a3s=a3r['up']||a3r['down'],a3t=a3r['le"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "o['jumpFP']['weight']=0x1):(a29(a3o,a3o['jumpFP'],0.6),a3o[aC4(0x3bc)]['weight']=0x1);}}return;}var a3r=a3p[\"KWC92ef2Y9\"],a3s=a3r['up']||a3r['down'],a3t=a3r['le"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: left||right lateral flag gating crouchWalk vs crouchIdle choice; SERVED: left||right lateral flag gating crouchWalk vs crouchIdle choice (snippet-only twin).",
+   "name": "strafeInput",
+   "selector": "a3t@u2725#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "'],0.6),a3o[\"jumpFP\"]['weight']=0x1);}}return;}var a3r=a3p[\"KWC92ef2Y9\"],a3s=a3r['up']||a3r['down'],a3t=a3r['left']||a3r[\"right\"],a3u=0x1;a3r['OUsPgMLOT']&&(a3u"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ",0.6),a3o[aC4(0x3bc)]['weight']=0x1);}}return;}var a3r=a3p[\"KWC92ef2Y9\"],a3s=a3r['up']||a3r['down'],a3t=a3r['left']||a3r[aC4(0xff3)],a3u=0x1;a3r['OUsPgMLOT']&&("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Numeric speed multiplier assigned to currentAnim timeScale finally; SERVED: Numeric speed multiplier assigned to currentAnim timeScale finally (snippet-only twin).",
+   "name": "animTimeScale",
+   "selector": "a3u@u2725#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "]=0x1);}}return;}var a3r=a3p[\"KWC92ef2Y9\"],a3s=a3r['up']||a3r['down'],a3t=a3r['left']||a3r[\"right\"],a3u=0x1;a3r['OUsPgMLOT']&&(a3u=0.7);var a3v=0.85,a3w=0.5;a3o"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "x1);}}return;}var a3r=a3p[\"KWC92ef2Y9\"],a3s=a3r['up']||a3r['down'],a3t=a3r['left']||a3r[aC4(0xff3)],a3u=0x1;a3r['OUsPgMLOT']&&(a3u=0.7);var a3v=0.85,a3w=0.5;a3o"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Fade duration third arg to anim crossfade calls, per-state values; SERVED: Fade duration third arg to anim crossfade calls, per-state values (snippet-only twin).",
+   "name": "blendDuration",
+   "selector": "a3w@u2725#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "r['up']||a3r['down'],a3t=a3r['left']||a3r[\"right\"],a3u=0x1;a3r['OUsPgMLOT']&&(a3u=0.7);var a3v=0.85,a3w=0.5;a3o[\"currentAnim\"]==a3o['idleAnim']&&(a3w=0.3);(a3o["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2725",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "up']||a3r['down'],a3t=a3r['left']||a3r[aC4(0xff3)],a3u=0x1;a3r['OUsPgMLOT']&&(a3u=0.7);var a3v=0.85,a3w=0.5;a3o[aC4(0xe56)]==a3o['idleAnim']&&(a3w=0.3);(a3o['cu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: constant 1 assigned to border lineWidth; SERVED: constant 1 assigned to border lineWidth (snippet-only twin).",
+   "name": "lineWidth",
+   "selector": "a3k@u0051#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 2,
+    "snippet": " amb=am0;this[\"iUQPmndsy\"]=0x1,this[\"JOhcgTNbwm\"]();}};},pc=function(){var amc=ai1,a3i=0x5,a3j=0x14,a3k=0x1,a3l=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(\"QTOKQmNlEY\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "var amb=am0;this[amb(0x6a0)]=0x1,this[amb(0x54c)]();}};},pc=function(){var amc=ai1,a3i=0x5,a3j=0x14,a3k=0x1,a3l=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(amc(0x1001))"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new object collecting red arcs via add; SERVED: new object collecting red arcs via add (snippet-only twin).",
+   "name": "arcGroup",
+   "selector": "a3k@u0051#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 4,
+    "refCount": 17,
+    "snippet": "dlX']!=undefined)var a3i=window[\"pkghYgdlX\"];else var a3i=gameIO();}var a3j=Gz;a3j=![];if(!a3j){var a3k=new a3i['object']();a3k[\"add\"](new a3i[(\"ycBClXLTJc\")]()"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 4,
+    "refCount": 17,
+    "snippet": "gdlX']!=undefined)var a3i=window[ami(0x232)];else var a3i=gameIO();}var a3j=Gz;a3j=![];if(!a3j){var a3k=new a3i['object']();a3k[ami(0x8da)](new a3i[(ami(0x9cd))"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: p7 mesh given shader material returned; SERVED: p7 mesh given shader material returned (snippet-only twin).",
+   "name": "shaderMesh",
+   "selector": "a3k@u0051#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 5,
+    "refCount": 8,
+    "snippet": "r amo=ai1,a3j={};a3j['width']=0x1,a3j[\"height\"]=0x1,a3j['transparent']=!![],a3j[\"color\"]='#F00';let a3k=p7(a3j);var a3l={};a3l['type']='t',a3l['value']=a3i;var "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 5,
+    "refCount": 8,
+    "snippet": "=ai1,a3j={};a3j['width']=0x1,a3j[amo(0x300)]=0x1,a3j['transparent']=!![],a3j[amo(0x193)]='#F00';let a3k=p7(a3j);var a3l={};a3l['type']='t',a3l['value']=a3i;var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: builds gradient canvas from stops array; SERVED: builds gradient canvas from stops array (snippet-only twin).",
+   "name": "makeGradientCanvas",
+   "selector": "a3k@u0051#6",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "ined){if(window['pkghYgdlX']!=undefined)var a3j=window[\"pkghYgdlX\"];else var a3j=gameIO();}function a3k(a3X,a3Y,a3Z,a40,a41){var amv=amu,a42=document[\"createEle"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "fined){if(window['pkghYgdlX']!=undefined)var a3j=window[amu(0x232)];else var a3j=gameIO();}function a3k(a3X,a3Y,a3Z,a40,a41){var amv=amu,a42=document[amv(0x8b0)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: array of two meshes reparented together; SERVED: array of two meshes reparented together (snippet-only twin).",
+   "name": "sideBars",
+   "selector": "a3k@u0051#7",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 7,
+    "refCount": 13,
+    "snippet": "if(window[\"pkghYgdlX\"]!=undefined)var a3i=window[\"pkghYgdlX\"];else var a3i=gameIO();}var a3j=\"#F44\",a3k=[];a3k[\"push\"](new a3i['QtjDeukbWl'](0x0,0x0,0x0,0x762,\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 7,
+    "refCount": 13,
+    "snippet": "(window[amC(0x232)]!=undefined)var a3i=window[amC(0x232)];else var a3i=gameIO();}var a3j=amC(0x65c),a3k=[];a3k[amC(0xf1e)](new a3i['QtjDeukbWl'](0x0,0x0,0x0,0x7"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: p7 mesh sourcing instanced geometry template; SERVED: p7 mesh sourcing instanced geometry template (snippet-only twin).",
+   "name": "templateMesh",
+   "selector": "a3k@u0051#9",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 9,
+    "refCount": 10,
+    "snippet": "[];}var a3j={};a3j[\"width\"]=0xd,a3j['height']=0x190,a3j['transparent']=!![],a3j['color']='#FFF';var a3k=p7(a3j);for(var a3l=0x0;a3l<a3k['RNQDluasaN'][\"AUbXpMajF"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 9,
+    "refCount": 10,
+    "snippet": "}var a3j={};a3j[amT(0xad0)]=0xd,a3j['height']=0x190,a3j['transparent']=!![],a3j['color']='#FFF';var a3k=p7(a3j);for(var a3l=0x0;a3l<a3k['RNQDluasaN'][amT(0x8af)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: offscreen canvas for glow compositing routine; SERVED: offscreen canvas for glow compositing routine (snippet-only twin).",
+   "name": "scratchCanvas",
+   "selector": "a3k@u0051#10",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 10,
+    "refCount": 6,
+    "snippet": "ration\"]=\"source-in\",a3F['fillStyle']=a3E,a3F['fillRect'](0x0,0x0,a3D['width'],a3D['height']));}var a3k=document[\"createElement\"](\"canvas\"),a3l=a3k[\"getContext\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 10,
+    "refCount": 6,
+    "snippet": "Z(0x7c1)]=amZ(0xc41),a3F['fillStyle']=a3E,a3F['fillRect'](0x0,0x0,a3D['width'],a3D['height']));}var a3k=document[amY(0x8b0)](amY(0x483)),a3l=a3k[amY(0x616)]('2d"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: copies canvas with optional tint fill; SERVED: copies canvas with optional tint fill (snippet-only twin).",
+   "name": "copyCanvas",
+   "selector": "a3k@u0051#11",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "a3i=window['pkghYgdlX'];else var a3i=gameIO();}var a3j=document['createElement']('canvas');function a3k(a3v,a3w,a3x){var an6=an5;a3w['width']=a3v[\"width\"],a3w['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 3,
+    "snippet": "a3i=window['pkghYgdlX'];else var a3i=gameIO();}var a3j=document['createElement']('canvas');function a3k(a3v,a3w,a3x){var an6=an5;a3w['width']=a3v[an6(0xad0)],a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2d context drawing gold bar pattern; SERVED: 2d context drawing gold bar pattern (snippet-only twin).",
+   "name": "canvasCtx",
+   "selector": "a3k@u0051#12",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 12,
+    "refCount": 8,
+    "snippet": "a3i){var anf=ai1,a3j=document['createElement'](\"canvas\");a3j['width']=0x100,a3j[\"height\"]=0x100;var a3k=a3j[\"getContext\"]('2d');a3k['translate'](0x14,0x0),a3k[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 12,
+    "refCount": 8,
+    "snippet": "{var anf=ai1,a3j=document['createElement'](anf(0x483));a3j['width']=0x100,a3j[anf(0x300)]=0x100;var a3k=a3j[anf(0x616)]('2d');a3k['translate'](0x14,0x0),a3k[anf"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: canvas array per label textured later; SERVED: canvas array per label textured later (snippet-only twin).",
+   "name": "letterCanvases",
+   "selector": "a3k@u0051#13",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0051",
+    "index": 13,
+    "refCount": 7,
+    "snippet": "\"bbGtpmsnoL\"]=!![],a3z[a3C]['visible']=!![];}}};},pl=function(a3i){var ank=ai1,a3j=['A','B','C',''],a3k=[],a3l=0x1;Gj&&(a3l=1.5,Gl&&(a3l=1.2));for(var a3m=0x0;a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 13,
+    "refCount": 7,
+    "snippet": "][anj(0x13a)]=!![],a3z[a3C]['visible']=!![];}}};},pl=function(a3i){var ank=ai1,a3j=['A','B','C',''],a3k=[],a3l=0x1;Gj&&(a3l=1.5,Gl&&(a3l=1.2));for(var a3m=0x0;a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: added shader object with mesh hooks; SERVED: added shader object with mesh hooks (snippet-only twin).",
+   "name": "effectObj",
+   "selector": "a3l@u0051#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "aKmLbYuMC':a3j,'xBnZSPfiqVa':![],'scene':new usvzFuAsEB[(\"QwysDsAqBdy\")](),'objs':[],'add':function(a3l){var alN=alM;if(this[\"objs\"]['includes'](a3l))return![];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "i,'aKmLbYuMC':a3j,'xBnZSPfiqVa':![],'scene':new usvzFuAsEB[(alM(0x722))](),'objs':[],'add':function(a3l){var alN=alM;if(this[alN(0xc99)]['includes'](a3l))return"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: removed shader object spliced out; SERVED: removed shader object spliced out (snippet-only twin).",
+   "name": "effectObj",
+   "selector": "a3l@u0051#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "']&&a3l['resize'](),a3l['auClgdgAbXO']&&a3l['auClgdgAbXO'](this['xBnZSPfiqVa']);},'remove':function(a3l){var alO=alM;this['objs'][\"includes\"](a3l)&&this['objs']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "']&&a3l['resize'](),a3l['auClgdgAbXO']&&a3l['auClgdgAbXO'](this['xBnZSPfiqVa']);},'remove':function(a3l){var alO=alM;this['objs'][alO(0x900)](a3l)&&this['objs']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: render arg forwarded to obj updates; SERVED: render arg forwarded to obj updates (snippet-only twin).",
+   "name": "frameDelta",
+   "selector": "a3l@u0051#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "splice\"](this['objs'][\"indexOf\"](a3l),0x1),this['scene'][\"remove\"](a3l['mesh']);},'render':function(a3l){var alP=alM;this['needsResize']&&this['resize']();for(v"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "5de)](this['objs'][alO(0xfad)](a3l),0x1),this['scene'][alO(0x944)](a3l['mesh']);},'render':function(a3l){var alP=alM;this['needsResize']&&this['resize']();for(v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: viewport width from aspect ratio math; SERVED: viewport width from aspect ratio math (snippet-only twin).",
+   "name": "viewWidth",
+   "selector": "a3l@u0051#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "ndefined)return;if(this['qIySEZgti']['domElement']==undefined){this[\"needsResize\"]=!![];return;}var a3l=0x780,a3m=0x438;a3l=parseFloat(this['qIySEZgti'][\"domEle"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "==undefined)return;if(this['qIySEZgti']['domElement']==undefined){this[alQ(0xb56)]=!![];return;}var a3l=0x780,a3m=0x438;a3l=parseFloat(this['qIySEZgti'][alQ(0xf"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: opacity 1 for borders and children; SERVED: opacity 1 for borders and children (snippet-only twin).",
+   "name": "borderOpacity",
+   "selector": "a3l@u0051#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "[\"resize\"]();},pa=function(){var alR=ai1,a3i=0x3,a3j=0xf,a3k=0x1;Gj&&(a3i=3.9,a3k=1.3,a3j=0x12);var a3l=0x1,a3m=0x1,a3n=0.65,a3o=0x1,a3p=a3j,a3q=0x1,a3r=a3i,a3s"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "lM(0x226)]();},pa=function(){var alR=ai1,a3i=0x3,a3j=0xf,a3k=0x1;Gj&&(a3i=3.9,a3k=1.3,a3j=0x12);var a3l=0x1,a3m=0x1,a3n=0.65,a3o=0x1,a3p=a3j,a3q=0x1,a3r=a3i,a3s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: alpha factor scaling stroke and fill; SERVED: alpha factor scaling stroke and fill (snippet-only twin).",
+   "name": "baseAlpha",
+   "selector": "a3l@u0051#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "nction(){var alZ=alR;this['mesh'][\"visible\"]=!![];}};},pb=function(a3i){var am0=ai1,a3j=0.3,a3k=0x2,a3l=0.2,a3m=0.7;let a3n=document['createElement']('canvas');"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "ction(){var alZ=alR;this['mesh'][alZ(0x5c5)]=!![];}};},pb=function(a3i){var am0=ai1,a3j=0.3,a3k=0x2,a3l=0.2,a3m=0.7;let a3n=document['createElement']('canvas');"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding assigned never read",
+   "selector": "a3l@u0051#6",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: false flag gating detailed arc branch; SERVED: false flag gating detailed arc branch (snippet-only twin).",
+   "name": "useDetailedArcs",
+   "selector": "a3l@u0051#7",
+   "slice": "slice-01",
+   "disposition": "held-low",
+   "reason": "low confidence: held for review"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: noise texture uniform descriptor object; SERVED: noise texture uniform descriptor object (snippet-only twin).",
+   "name": "noiseUniform",
+   "selector": "a3l@u0051#8",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 8,
+    "refCount": 3,
+    "snippet": ";a3j['width']=0x1,a3j[\"height\"]=0x1,a3j['transparent']=!![],a3j[\"color\"]='#F00';let a3k=p7(a3j);var a3l={};a3l['type']='t',a3l['value']=a3i;var a3m={};a3m[\"valu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "'width']=0x1,a3j[amo(0x300)]=0x1,a3j['transparent']=!![],a3j[amo(0x193)]='#F00';let a3k=p7(a3j);var a3l={};a3l['type']='t',a3l['value']=a3i;var a3m={};a3m[amo(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: red component 250 for gradient; SERVED: red component 250 for gradient (snippet-only twin).",
+   "name": "redChannel",
+   "selector": "a3l@u0051#9",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 9,
+    "refCount": 4,
+    "snippet": "a41[a45][0x0],a41[a45][0x1]);}return a43['fillStyle']=a44,a43[\"fillRect\"](0x0,0x0,a3X,a3Y),a42;}var a3l=0xfa,a3m=0x0,a3n=0x0,a3o=a3k(0x200,0x200,0x1,0x0,[[0.05,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 9,
+    "refCount": 4,
+    "snippet": "a41[a45][0x0],a41[a45][0x1]);}return a43['fillStyle']=a44,a43[amv(0xbba)](0x0,0x0,a3X,a3Y),a42;}var a3l=0xfa,a3m=0x0,a3n=0x0,a3o=a3k(0x200,0x200,0x1,0x0,[[0.05,"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead function never called",
+   "selector": "a3l@u0051#10",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over vertex attributes; SERVED: loop index over vertex attributes (snippet-only twin).",
+   "name": "vertLoopIdx",
+   "selector": "a3l@u0051#11",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 10,
+    "snippet": "width\"]=0xd,a3j['height']=0x190,a3j['transparent']=!![],a3j['color']='#FFF';var a3k=p7(a3j);for(var a3l=0x0;a3l<a3k['RNQDluasaN'][\"AUbXpMajF\"]['length'];a3l++){"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 10,
+    "snippet": "0xad0)]=0xd,a3j['height']=0x190,a3j['transparent']=!![],a3j['color']='#FFF';var a3k=p7(a3j);for(var a3l=0x0;a3l<a3k['RNQDluasaN'][amT(0x8af)]['length'];a3l++){a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2d context of scratch canvas; SERVED: 2d context of scratch canvas (snippet-only twin).",
+   "name": "scratchCtx",
+   "selector": "a3l@u0051#14",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "E,a3F['fillRect'](0x0,0x0,a3D['width'],a3D['height']));}var a3k=document[\"createElement\"](\"canvas\"),a3l=a3k[\"getContext\"]('2d'),a3m=document[\"createElement\"]('c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 14,
+    "refCount": 4,
+    "snippet": "=a3E,a3F['fillRect'](0x0,0x0,a3D['width'],a3D['height']));}var a3k=document[amY(0x8b0)](amY(0x483)),a3l=a3k[amY(0x616)]('2d'),a3m=document[amY(0x8b0)]('canvas')"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: offscreen canvas reset after compositing; SERVED: offscreen canvas reset after compositing (snippet-only twin).",
+   "name": "scratchCanvas",
+   "selector": "a3l@u0051#15",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 15,
+    "refCount": 6,
+    "snippet": "ration']='source-in',a3y[\"fillStyle\"]=a3x,a3y['fillRect'](0x0,0x0,a3w[\"width\"],a3w[\"height\"]));}var a3l=document['createElement']('canvas'),a3m=a3l['getContext'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 15,
+    "refCount": 6,
+    "snippet": "on']='source-in',a3y[an6(0xfee)]=a3x,a3y['fillRect'](0x0,0x0,a3w[an6(0xad0)],a3w[an6(0x300)]));}var a3l=document['createElement']('canvas'),a3m=a3l['getContext'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: plane geometry for canvas mesh; SERVED: plane geometry for canvas mesh (snippet-only twin).",
+   "name": "planeGeom",
+   "selector": "a3l@u0051#16",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 16,
+    "refCount": 1,
+    "snippet": "']='destination-out',a3k['globalAlpha']=0.1,a3k[\"fillRect\"](0x0,0x0,a3j['width'],a3j['height']);var a3l=new usvzFuAsEB[(\"PlaneGeometry\")](0xb4,0xb4),a3m=new usv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 16,
+    "refCount": 1,
+    "snippet": "']='destination-out',a3k['globalAlpha']=0.1,a3k[anf(0xbba)](0x0,0x0,a3j['width'],a3j['height']);var a3l=new usvzFuAsEB[(anf(0x64d))](0xb4,0xb4),a3m=new usvzFuAs"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: platform-adjusted plane size multiplier; SERVED: platform-adjusted plane size multiplier (snippet-only twin).",
+   "name": "scaleFactor",
+   "selector": "a3l@u0051#17",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0051",
+    "index": 17,
+    "refCount": 12,
+    "snippet": "snoL\"]=!![],a3z[a3C]['visible']=!![];}}};},pl=function(a3i){var ank=ai1,a3j=['A','B','C',''],a3k=[],a3l=0x1;Gj&&(a3l=1.5,Gl&&(a3l=1.2));for(var a3m=0x0;a3m<a3j["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 17,
+    "refCount": 12,
+    "snippet": "x13a)]=!![],a3z[a3C]['visible']=!![];}}};},pl=function(a3i){var ank=ai1,a3j=['A','B','C',''],a3k=[],a3l=0x1;Gj&&(a3l=1.5,Gl&&(a3l=1.2));for(var a3m=0x0;a3m<a3j["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over scene objects; SERVED: loop index over scene objects (snippet-only twin).",
+   "name": "objIndex",
+   "selector": "a3m@u0051#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "e\"](a3l['mesh']);},'render':function(a3l){var alP=alM;this['needsResize']&&this['resize']();for(var a3m=0x0;a3m<this['objs']['length'];a3m++){this['objs'][a3m]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "4)](a3l['mesh']);},'render':function(a3l){var alP=alM;this['needsResize']&&this['resize']();for(var a3m=0x0;a3m<this['objs']['length'];a3m++){this['objs'][a3m]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: viewport height constant 1080; SERVED: viewport height constant 1080 (snippet-only twin).",
+   "name": "viewHeight",
+   "selector": "a3m@u0051#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "eturn;if(this['qIySEZgti']['domElement']==undefined){this[\"needsResize\"]=!![];return;}var a3l=0x780,a3m=0x438;a3l=parseFloat(this['qIySEZgti'][\"domElement\"]['wi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "d)return;if(this['qIySEZgti']['domElement']==undefined){this[alQ(0xb56)]=!![];return;}var a3l=0x780,a3m=0x438;a3l=parseFloat(this['qIySEZgti'][alQ(0xfa1)]['widt"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: opacity 1 for fills and meshes; SERVED: opacity 1 for fills and meshes (snippet-only twin).",
+   "name": "fillOpacity",
+   "selector": "a3m@u0051#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "\"]();},pa=function(){var alR=ai1,a3i=0x3,a3j=0xf,a3k=0x1;Gj&&(a3i=3.9,a3k=1.3,a3j=0x12);var a3l=0x1,a3m=0x1,a3n=0.65,a3o=0x1,a3p=a3j,a3q=0x1,a3r=a3i,a3s=a3j,a3t"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 2,
+    "refCount": 4,
+    "snippet": ")]();},pa=function(){var alR=ai1,a3i=0x3,a3j=0xf,a3k=0x1;Gj&&(a3i=3.9,a3k=1.3,a3j=0x12);var a3l=0x1,a3m=0x1,a3n=0.65,a3o=0x1,a3p=a3j,a3q=0x1,a3r=a3i,a3s=a3j,a3t"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: 0.7 multiplier for stroke widths; SERVED: 0.7 multiplier for stroke widths (snippet-only twin).",
+   "name": "widthScale",
+   "selector": "a3m@u0051#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "{var alZ=alR;this['mesh'][\"visible\"]=!![];}};},pb=function(a3i){var am0=ai1,a3j=0.3,a3k=0x2,a3l=0.2,a3m=0.7;let a3n=document['createElement']('canvas');a3n['wid"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "var alZ=alR;this['mesh'][alZ(0x5c5)]=!![];}};},pb=function(a3i){var am0=ai1,a3j=0.3,a3k=0x2,a3l=0.2,a3m=0.7;let a3n=document['createElement']('canvas');a3n['wid"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: opacity 0.2 for border config; SERVED: opacity 0.2 for border config (snippet-only twin).",
+   "name": "borderOpacity",
+   "selector": "a3m@u0051#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "ndsy\"]=0x1,this[\"JOhcgTNbwm\"]();}};},pc=function(){var amc=ai1,a3i=0x5,a3j=0x14,a3k=0x1,a3l=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(\"QTOKQmNlEY\")]();a3n[\"rotation\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "(0x6a0)]=0x1,this[amb(0x54c)]();}};},pc=function(){var amc=ai1,a3i=0x5,a3j=0x14,a3k=0x1,a3l=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(amc(0x1001))]();a3n[amc(0x90d)]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter building arc sequence; SERVED: loop counter building arc sequence (snippet-only twin).",
+   "name": "arcIndex",
+   "selector": "a3m@u0051#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "EtWhIm'][0x0][\"position\"]['y']=-0x11,a3k[\"DgJwEtWhIm\"][0x0]['size']=0.3;var a3l=![];if(a3l){for(var a3m=0x0;a3m<0x5a;a3m++){var a3n=a3m/0x3,a3o=(Math['PI']/0x2-"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "JwEtWhIm'][0x0][ami(0x215)]['y']=-0x11,a3k[ami(0x152)][0x0]['size']=0.3;var a3l=![];if(a3l){for(var a3m=0x0;a3m<0x5a;a3m++){var a3n=a3m/0x3,a3o=(Math['PI']/0x2-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: opacity uniform descriptor initial zero; SERVED: opacity uniform descriptor initial zero (snippet-only twin).",
+   "name": "opacityUniformDef",
+   "selector": "a3m@u0051#6",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "nsparent']=!![],a3j[\"color\"]='#F00';let a3k=p7(a3j);var a3l={};a3l['type']='t',a3l['value']=a3i;var a3m={};a3m[\"value\"]=0x0;var a3n={};a3n['value']=0x1;var a3o="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "arent']=!![],a3j[amo(0x193)]='#F00';let a3k=p7(a3j);var a3l={};a3l['type']='t',a3l['value']=a3i;var a3m={};a3m[amo(0x9c5)]=0x0;var a3n={};a3n['value']=0x1;var a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: green channel zero in rgba gradient stops both sides; SERVED: green channel zero in rgba gradient stops both sides (snippet-only twin).",
+   "name": "gradientGreen",
+   "selector": "a3m@u0051#7",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 7,
+    "refCount": 4,
+    "snippet": "0x0],a41[a45][0x1]);}return a43['fillStyle']=a44,a43[\"fillRect\"](0x0,0x0,a3X,a3Y),a42;}var a3l=0xfa,a3m=0x0,a3n=0x0,a3o=a3k(0x200,0x200,0x1,0x0,[[0.05,'rgba(\\x2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 7,
+    "refCount": 4,
+    "snippet": "0x0],a41[a45][0x1]);}return a43['fillStyle']=a44,a43[amv(0xbba)](0x0,0x0,a3X,a3Y),a42;}var a3l=0xfa,a3m=0x0,a3n=0x0,a3o=a3k(0x200,0x200,0x1,0x0,[[0.05,'rgba(\\x2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: InstancedMesh setMatrixAt alphas returned as mesh; SERVED: InstancedMesh setMatrixAt alphas returned as mesh (snippet-only twin).",
+   "name": "instancedMesh",
+   "selector": "a3m@u0051#9",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 9,
+    "refCount": 10,
+    "snippet": "opacity']=0x1,a3k[\"material\"][\"equzRsyKrD\"]=![],a3k['frustumCulled']=![],a3k['StjesvYqIxf']=0x3;var a3m=new usvzFuAsEB[(\"InstancedMesh\")](new usvzFuAsEB[(\"kwrjV"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 9,
+    "refCount": 10,
+    "snippet": "['opacity']=0x1,a3k[amT(0x52e)][amT(0x328)]=![],a3k['frustumCulled']=![],a3k['StjesvYqIxf']=0x3;var a3m=new usvzFuAsEB[(amT(0xdbb))](new usvzFuAsEB[(amT(0xdfe))"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: spare canvas copied into then reset 1x1; SERVED: spare canvas copied into then reset 1x1 (snippet-only twin).",
+   "name": "tempCanvas",
+   "selector": "a3m@u0051#10",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "D['width'],a3D['height']));}var a3k=document[\"createElement\"](\"canvas\"),a3l=a3k[\"getContext\"]('2d'),a3m=document[\"createElement\"]('canvas'),a3n=a3k['getContext'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 10,
+    "refCount": 3,
+    "snippet": "x0,a3D['width'],a3D['height']));}var a3k=document[amY(0x8b0)](amY(0x483)),a3l=a3k[amY(0x616)]('2d'),a3m=document[amY(0x8b0)]('canvas'),a3n=a3k['getContext']('2d"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2d context drawing tinted glow copies; SERVED: 2d context drawing tinted glow copies (snippet-only twin).",
+   "name": "canvasCtx",
+   "selector": "a3m@u0051#11",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 4,
+    "snippet": "x,a3y['fillRect'](0x0,0x0,a3w[\"width\"],a3w[\"height\"]));}var a3l=document['createElement']('canvas'),a3m=a3l['getContext']('2d'),a3n=document['createElement'](\"c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 4,
+    "snippet": "['fillRect'](0x0,0x0,a3w[an6(0xad0)],a3w[an6(0x300)]));}var a3l=document['createElement']('canvas'),a3m=a3l['getContext']('2d'),a3n=document['createElement'](an"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: CanvasTexture from canvas used as material map; SERVED: CanvasTexture from canvas used as material map (snippet-only twin).",
+   "name": "canvasTexture",
+   "selector": "a3m@u0051#12",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0051",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "fillRect\"](0x0,0x0,a3j['width'],a3j['height']);var a3l=new usvzFuAsEB[(\"PlaneGeometry\")](0xb4,0xb4),a3m=new usvzFuAsEB['CanvasTexture'](a3j);a3m['minFilter']=us"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 12,
+    "refCount": 2,
+    "snippet": "a3k[anf(0xbba)](0x0,0x0,a3j['width'],a3j['height']);var a3l=new usvzFuAsEB[(anf(0x64d))](0xb4,0xb4),a3m=new usvzFuAsEB['CanvasTexture'](a3j);a3m['minFilter']=us"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ortho frustum aspect left right top bottom; SERVED: ortho frustum aspect left right top bottom (snippet-only twin).",
+   "name": "orthoCamera",
+   "selector": "a3n@u0051#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "['qIySEZgti'][\"domElement\"]['width'])/parseFloat(this['qIySEZgti']['domElement'][\"height\"])*a3m;var a3n=this[\"aKmLbYuMC\"];a3n['aspect']=0x1,a3n['left']=a3l/0x2,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "['qIySEZgti'][alQ(0xfa1)]['width'])/parseFloat(this['qIySEZgti']['domElement'][alQ(0x300)])*a3m;var a3n=this[alQ(0x966)];a3n['aspect']=0x1,a3n['left']=a3l/0x2,a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: nameplate canvas drawn then textured and returned; SERVED: nameplate canvas drawn then textured and returned (snippet-only twin).",
+   "name": "labelCanvas",
+   "selector": "a3n@u0051#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 2,
+    "refCount": 14,
+    "snippet": ";this['mesh'][\"visible\"]=!![];}};},pb=function(a3i){var am0=ai1,a3j=0.3,a3k=0x2,a3l=0.2,a3m=0.7;let a3n=document['createElement']('canvas');a3n['width']=a3n['he"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 2,
+    "refCount": 14,
+    "snippet": "this['mesh'][alZ(0x5c5)]=!![];}};},pb=function(a3i){var am0=ai1,a3j=0.3,a3k=0x2,a3l=0.2,a3m=0.7;let a3n=document['createElement']('canvas');a3n['width']=a3n['he"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: group collecting rect clones returned as mesh; SERVED: group collecting rect clones returned as mesh (snippet-only twin).",
+   "name": "rectGroup",
+   "selector": "a3n@u0051#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "x1,this[\"JOhcgTNbwm\"]();}};},pc=function(){var amc=ai1,a3i=0x5,a3j=0x14,a3k=0x1,a3l=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(\"QTOKQmNlEY\")]();a3n[\"rotation\"]['z']=Ma"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "=0x1,this[amb(0x54c)]();}};},pc=function(){var amc=ai1,a3i=0x5,a3j=0x14,a3k=0x1,a3l=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(amc(0x1001))]();a3n[amc(0x90d)]['z']=Mat"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: arc step value reused as child loop counter; SERVED: arc step value reused as child loop counter (snippet-only twin).",
+   "name": "arcStepIndex",
+   "selector": "a3n@u0051#4",
+   "slice": "slice-01",
+   "disposition": "held-low",
+   "reason": "low confidence: held for review"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: widthRatio shader uniform object value one; SERVED: widthRatio shader uniform object value one (snippet-only twin).",
+   "name": "widthRatioUniform",
+   "selector": "a3n@u0051#10",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "='#F00';let a3k=p7(a3j);var a3l={};a3l['type']='t',a3l['value']=a3i;var a3m={};a3m[\"value\"]=0x0;var a3n={};a3n['value']=0x1;var a3o={};a3o[\"value\"]=0x0,a3k['mat"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "F00';let a3k=p7(a3j);var a3l={};a3l['type']='t',a3l['value']=a3i;var a3m={};a3m[amo(0x9c5)]=0x0;var a3n={};a3n['value']=0x1;var a3o={};a3o[amo(0x9c5)]=0x0,a3k['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blue channel zero in rgba gradient stops; SERVED: blue channel zero in rgba gradient stops (snippet-only twin).",
+   "name": "gradientBlue",
+   "selector": "a3n@u0051#11",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 4,
+    "snippet": "[a45][0x1]);}return a43['fillStyle']=a44,a43[\"fillRect\"](0x0,0x0,a3X,a3Y),a42;}var a3l=0xfa,a3m=0x0,a3n=0x0,a3o=a3k(0x200,0x200,0x1,0x0,[[0.05,'rgba(\\x20'+a3l+'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 4,
+    "snippet": "[a45][0x1]);}return a43['fillStyle']=a44,a43[amv(0xbba)](0x0,0x0,a3X,a3Y),a42;}var a3l=0xfa,a3m=0x0,a3n=0x0,a3o=a3k(0x200,0x200,0x1,0x0,[[0.05,'rgba(\\x20'+a3l+'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: default 0.55 opacityMult seed for tweens; SERVED: default 0.55 opacityMult seed for tweens (snippet-only twin).",
+   "name": "baseOpacityMult",
+   "selector": "a3n@u0051#13",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "3m['bbGtpmsnoL']=![],a3m[\"instanceMatrix\"]['setUsage'](usvzFuAsEB[\"DynamicDrawUsage\"]),a3i(a3m);var a3n=0.55,a3o=[];for(var a3l=0x0;a3l<0x82;a3l++){var a3p=new "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 13,
+    "refCount": 3,
+    "snippet": "x52e)],0x82);a3m['bbGtpmsnoL']=![],a3m[amT(0x104)]['setUsage'](usvzFuAsEB[amT(0xd4d)]),a3i(a3m);var a3n=0.55,a3o=[];for(var a3l=0x0;a3l<0x82;a3l++){var a3p=new "
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount zero never read",
+   "selector": "a3n@u0051#14",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: spare canvas target reset after glow pass; SERVED: spare canvas target reset after glow pass (snippet-only twin).",
+   "name": "workCanvas",
+   "selector": "a3n@u0051#15",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 15,
+    "refCount": 3,
+    "snippet": "w[\"width\"],a3w[\"height\"]));}var a3l=document['createElement']('canvas'),a3m=a3l['getContext']('2d'),a3n=document['createElement'](\"canvas\"),a3o=a3l['getContext'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 15,
+    "refCount": 3,
+    "snippet": "(0xad0)],a3w[an6(0x300)]));}var a3l=document['createElement']('canvas'),a3m=a3l['getContext']('2d'),a3n=document['createElement'](an5(0x483)),a3o=a3l['getContex"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: double-sided textured material for plane mesh; SERVED: double-sided textured material for plane mesh (snippet-only twin).",
+   "name": "planeMaterial",
+   "selector": "a3n@u0051#16",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "0xb4,0xb4),a3m=new usvzFuAsEB['CanvasTexture'](a3j);a3m['minFilter']=usvzFuAsEB['LinearFilter'];var a3n=new usvzFuAsEB[(\"KibzRdopc\")]({'map':a3m,'side':usvzFuAs"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "0xb4,0xb4),a3m=new usvzFuAsEB['CanvasTexture'](a3j);a3m['minFilter']=usvzFuAsEB['LinearFilter'];var a3n=new usvzFuAsEB[(anf(0x104b))]({'map':a3m,'side':usvzFuAs"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 2d context stroking marker glyph paths; SERVED: 2d context stroking marker glyph paths (snippet-only twin).",
+   "name": "markerCtx",
+   "selector": "a3n@u0051#17",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0051",
+    "index": 17,
+    "refCount": 36,
+    "snippet": "j['length'];a3m++){let a3R=document['createElement']('canvas');a3R[\"width\"]=a3R['height']=0x100;var a3n=a3R['getContext']('2d');a3n[\"fillStyle\"]=\"#000\",a3n['sca"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 17,
+    "refCount": 36,
+    "snippet": "length'];a3m++){let a3R=document['createElement']('canvas');a3R[ank(0xad0)]=a3R['height']=0x100;var a3n=a3R['getContext']('2d');a3n[ank(0xfee)]=ank(0x26c),a3n['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over scene objs in resize; SERVED: loop index over scene objs in resize (snippet-only twin).",
+   "name": "objIndex",
+   "selector": "a3o@u0051#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "far']=0x3e8,a3n['JoIkrtRxhZ'](new usvzFuAsEB['gURkzCzeY'](0x0,0x0,0x1)),a3n[\"mPDLPePIID\"]();for(var a3o=0x0;a3o<this['objs']['length'];a3o++){this['objs'][a3o]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "['far']=0x3e8,a3n['JoIkrtRxhZ'](new usvzFuAsEB['gURkzCzeY'](0x0,0x0,0x1)),a3n[alQ(0xf6b)]();for(var a3o=0x0;a3o<this['objs']['length'];a3o++){this['objs'][a3o]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cloned rects array returned as rects; SERVED: cloned rects array returned as rects (snippet-only twin).",
+   "name": "rectList",
+   "selector": "a3o@u0051#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "x1,a3l=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(\"QTOKQmNlEY\")]();a3n[\"rotation\"]['z']=Math['PI']/0x4;var a3o=[],a3p=[],a3q={};a3q['lineWidth']=a3k,a3q['opacity']=a3m"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "0x1,a3l=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(amc(0x1001))]();a3n[amc(0x90d)]['z']=Math['PI']/0x4;var a3o=[],a3p=[],a3q={};a3q['lineWidth']=a3k,a3q['opacity']=a3m"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: single-use arc angle correction in dead branch; SERVED: single-use arc angle correction in dead branch (snippet-only twin).",
+   "name": "angleOffset",
+   "selector": "a3o@u0051#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "[\"DgJwEtWhIm\"][0x0]['size']=0.3;var a3l=![];if(a3l){for(var a3m=0x0;a3m<0x5a;a3m++){var a3n=a3m/0x3,a3o=(Math['PI']/0x2-a3n/0x13)*0.9-(Math['PI']/0x2-a3n/0x13),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "3k[ami(0x152)][0x0]['size']=0.3;var a3l=![];if(a3l){for(var a3m=0x0;a3m<0x5a;a3m++){var a3n=a3m/0x3,a3o=(Math['PI']/0x2-a3n/0x13)*0.9-(Math['PI']/0x2-a3n/0x13),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time shader uniform object value zero; SERVED: time shader uniform object value zero (snippet-only twin).",
+   "name": "timeUniform",
+   "selector": "a3o@u0051#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "a3l={};a3l['type']='t',a3l['value']=a3i;var a3m={};a3m[\"value\"]=0x0;var a3n={};a3n['value']=0x1;var a3o={};a3o[\"value\"]=0x0,a3k['material']=new usvzFuAsEB[(\"wPC"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "={};a3l['type']='t',a3l['value']=a3i;var a3m={};a3m[amo(0x9c5)]=0x0;var a3n={};a3n['value']=0x1;var a3o={};a3o[amo(0x9c5)]=0x0,a3k['material']=new usvzFuAsEB[(a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: red gradient canvas fed to banner image; SERVED: red gradient canvas fed to banner image (snippet-only twin).",
+   "name": "gradientCanvas",
+   "selector": "a3o@u0051#6",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "1]);}return a43['fillStyle']=a44,a43[\"fillRect\"](0x0,0x0,a3X,a3Y),a42;}var a3l=0xfa,a3m=0x0,a3n=0x0,a3o=a3k(0x200,0x200,0x1,0x0,[[0.05,'rgba(\\x20'+a3l+',\\x20'+a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "1]);}return a43['fillStyle']=a44,a43[amv(0xbba)](0x0,0x0,a3X,a3Y),a42;}var a3l=0xfa,a3m=0x0,a3n=0x0,a3o=a3k(0x200,0x200,0x1,0x0,[[0.05,'rgba(\\x20'+a3l+',\\x20'+a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: pooled nodes animated by timeAlive each update; SERVED: pooled nodes animated by timeAlive each update (snippet-only twin).",
+   "name": "particlePool",
+   "selector": "a3o@u0051#8",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 8,
+    "refCount": 36,
+    "snippet": "msnoL']=![],a3m[\"instanceMatrix\"]['setUsage'](usvzFuAsEB[\"DynamicDrawUsage\"]),a3i(a3m);var a3n=0.55,a3o=[];for(var a3l=0x0;a3l<0x82;a3l++){var a3p=new usvzFuAsE"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 8,
+    "refCount": 36,
+    "snippet": "82);a3m['bbGtpmsnoL']=![],a3m[amT(0x104)]['setUsage'](usvzFuAsEB[amT(0xd4d)]),a3i(a3m);var a3n=0.55,a3o=[];for(var a3l=0x0;a3l<0x82;a3l++){var a3p=new usvzFuAsE"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bakes radial glow outline onto canvas once; SERVED: bakes radial glow outline onto canvas once (snippet-only twin).",
+   "name": "applyCanvasGlow",
+   "selector": "a3o@u0051#9",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "3k[\"getContext\"]('2d'),a3m=document[\"createElement\"]('canvas'),a3n=a3k['getContext']('2d');function a3o(a3C,a3D,a3E,a3F){var an0=amY,a3G=a3C,a3C=a3m;a3j(a3G,a3C"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "),a3l=a3k[amY(0x616)]('2d'),a3m=document[amY(0x8b0)]('canvas'),a3n=a3k['getContext']('2d');function a3o(a3C,a3D,a3E,a3F){var an0=amY,a3G=a3C,a3C=a3m;a3j(a3G,a3C"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount zero never read",
+   "selector": "a3o@u0051#10",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: root mesh parenting timer display planes; SERVED: root mesh parenting timer display planes (snippet-only twin).",
+   "name": "timerMesh",
+   "selector": "a3o@u0051#11",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 7,
+    "snippet": "r a3n=new usvzFuAsEB[(\"KibzRdopc\")]({'map':a3m,'side':usvzFuAsEB[\"DoubleSide\"],'transparent':!![]}),a3o=new usvzFuAsEB['Mesh'](a3l,a3n);a3o['bbGtpmsnoL']=![],a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 7,
+    "snippet": "var a3n=new usvzFuAsEB[(anf(0x104b))]({'map':a3m,'side':usvzFuAsEB[anf(0x15a)],'transparent':!![]}),a3o=new usvzFuAsEB['Mesh'](a3l,a3n);a3o['bbGtpmsnoL']=![],a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: x inset constant for marker outline path; SERVED: x inset constant for marker outline path (snippet-only twin).",
+   "name": "markerInsetX",
+   "selector": "a3o@u0051#12",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0051",
+    "index": 12,
+    "refCount": 6,
+    "snippet": "['getContext']('2d');a3n[\"fillStyle\"]=\"#000\",a3n['scale'](a3R['width']/0x64,a3R[\"height\"]/0x64);var a3o=0xf,a3p=0x3c,a3q=0x5;function a3S(){var anl=ank;a3n['mov"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 12,
+    "refCount": 6,
+    "snippet": "Context']('2d');a3n[ank(0xfee)]=ank(0x26c),a3n['scale'](a3R['width']/0x64,a3R[ank(0x300)]/0x64);var a3o=0xf,a3p=0x3c,a3q=0x5;function a3S(){var anl=ank;a3n['mov"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cloned materials array faded by setOpacity; SERVED: cloned materials array faded by setOpacity (snippet-only twin).",
+   "name": "matList",
+   "selector": "a3p@u0051#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u0051",
+    "index": 2,
+    "refCount": 10,
+    "snippet": "a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(\"QTOKQmNlEY\")]();a3n[\"rotation\"]['z']=Math['PI']/0x4;var a3o=[],a3p=[],a3q={};a3q['lineWidth']=a3k,a3q['opacity']=a3m,a3q['c"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 2,
+    "refCount": 10,
+    "snippet": "=a3i+a3k,a3m=0.2,a3n=new usvzFuAsEB[(amc(0x1001))]();a3n[amc(0x90d)]['z']=Math['PI']/0x4;var a3o=[],a3p=[],a3q={};a3q['lineWidth']=a3k,a3q['opacity']=a3m,a3q['c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: reused for arcs then rendered sprite; SERVED: reused for arcs then rendered sprite (snippet-only twin).",
+   "name": "arcSprite",
+   "selector": "a3p@u0051#3",
+   "slice": "slice-01",
+   "disposition": "held-low",
+   "reason": "low confidence: held for review"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: container of Eliminated banner image text; SERVED: container of Eliminated banner image text (snippet-only twin).",
+   "name": "bannerGroup",
+   "selector": "a3p@u0051#8",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u0051",
+    "index": 8,
+    "refCount": 5,
+    "snippet": "x20'+a3m+',\\x20'+a3n+\", 1 )\"],[0.95,'rgba(\\x20'+a3l+',\\x20'+a3m+',\\x20'+a3n+\", 0 )\"]]);if(!a3i){var a3p=new a3j['object']();a3p['add'](new a3j['image'](a3o,0x0,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 8,
+    "refCount": 5,
+    "snippet": "m+',\\x20'+a3n+amu(0x638)],[0.95,'rgba(\\x20'+a3l+',\\x20'+a3m+',\\x20'+a3n+amu(0x1022)]]);if(!a3i){var a3p=new a3j['object']();a3p['add'](new a3j['image'](a3o,0x0,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop particle pushed with timeAlive opacity; SERVED: loop particle pushed with timeAlive opacity (snippet-only twin).",
+   "name": "burstParticle",
+   "selector": "a3p@u0051#10",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u0051",
+    "index": 10,
+    "refCount": 7,
+    "snippet": "'](usvzFuAsEB[\"DynamicDrawUsage\"]),a3i(a3m);var a3n=0.55,a3o=[];for(var a3l=0x0;a3l<0x82;a3l++){var a3p=new usvzFuAsEB['QTOKQmNlEY']();a3p['visible']=![],a3o['p"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 10,
+    "refCount": 7,
+    "snippet": "setUsage'](usvzFuAsEB[amT(0xd4d)]),a3i(a3m);var a3n=0.55,a3o=[];for(var a3l=0x0;a3l<0x82;a3l++){var a3p=new usvzFuAsEB['QTOKQmNlEY']();a3p['visible']=![],a3o['p"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: factory returning Vector2 glyph point pairs; SERVED: factory returning Vector2 glyph point pairs (snippet-only twin).",
+   "name": "makeVec2",
+   "selector": "a3p@u0051#11",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 17,
+    "snippet": "0,0x0),a3j(a3C,a3G),a3k[\"width\"]=a3k[\"height\"]=0x1,a3m[\"width\"]=a3m[\"height\"]=0x1,a3G,a3C;}function a3p(a3C,a3D){return new usvzFuAsEB['vFgdYWoMXeQ'](a3C,a3D);}"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 11,
+    "refCount": 17,
+    "snippet": "(a3C,a3G),a3k[an0(0xad0)]=a3k[an0(0x300)]=0x1,a3m[an0(0xad0)]=a3m[an0(0x300)]=0x1,a3G,a3C;}function a3p(a3C,a3D){return new usvzFuAsEB['vFgdYWoMXeQ'](a3C,a3D);}"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bakes glow outline onto sprite canvas; SERVED: bakes glow outline onto sprite canvas (snippet-only twin).",
+   "name": "applySpriteGlow",
+   "selector": "a3p@u0051#12",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u0051",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "3l['getContext']('2d'),a3n=document['createElement'](\"canvas\"),a3o=a3l['getContext']('2d');function a3p(a3v,a3w,a3x,a3y){var an7=an5,a3z=a3v,a3v=a3n;a3k(a3z,a3v"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0051",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "['getContext']('2d'),a3n=document['createElement'](an5(0x483)),a3o=a3l['getContext']('2d');function a3p(a3v,a3w,a3x,a3y){var an7=an5,a3z=a3v,a3v=a3n;a3k(a3z,a3v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: lifetime incremented by value over 1000 both sides; SERVED: lifetime incremented by value over 1000 both sides (snippet-only twin).",
+   "name": "deltaMs",
+   "selector": "a3k@u2128#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "'splice'](a3o,0x1),a3o--,Kq[\"WpuCzbdCUqV\"][\"afCJVYrCGK\"]=!![];continue;}}},Kq['GKABXbqrG']=function(a3k,a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "),M0['splice'](a3o,0x1),a3o--,Kq[arp(0xfdc)][arp(0xd69)]=!![];continue;}}},Kq['GKABXbqrG']=function(a3k,a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: stored in roster, mesh animated via homeAnim; SERVED: stored in roster, mesh animated via homeAnim (snippet-only twin).",
+   "name": "playerEntry",
+   "selector": "a3k@u2128#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2128",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "+0x1),a3r['message'][\"wAijZbUAD\"][0x0]['text']=a3r['message']['text'];},Kq['renderPlayer']=function(a3k,a3l){var arr=ai1;Fx=!![];var a3m=a3k[\"r23ZS3L2g\"];this[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "n+0x1),a3r['message'][arq(0xada)][0x0]['text']=a3r['message']['text'];},Kq['renderPlayer']=function(a3k,a3l){var arr=ai1;Fx=!![];var a3m=a3k[\"r23ZS3L2g\"];this[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter indexing player roster array; SERVED: loop counter indexing player roster array (snippet-only twin).",
+   "name": "playerIndex",
+   "selector": "a3k@u2128#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "Camera\"]),this['threeScene'][\"remove\"](a3m),Fx=![];},Kq[\"decvesKgt\"]=function(){var ars=ai1;for(var a3k=0x0;a3k<Kq[\"xGnxhWRENA\"]['length'];a3k++){var a3l=Kq['xG"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "x1036)]),this['threeScene'][arr(0x944)](a3m),Fx=![];},Kq[ai1(0x4ae)]=function(){var ars=ai1;for(var a3k=0x0;a3k<Kq[ars(0xf42)]['length'];a3k++){var a3l=Kq['xGnx"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sole use feeds mixer update call; SERVED: sole use feeds mixer update call (snippet-only twin).",
+   "name": "deltaTime",
+   "selector": "a3k@u2128#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2128",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "hreeScene']['remove'](a3l[\"r23ZS3L2g\"]),a3l[\"r23ZS3L2g\"]['disable']();}},Kq['JmnnJbxXOlM']=function(a3k){var art=ai1;if(Kq[\"xGnxhWRENA\"][this[\"MqaFuSJOX\"]]==und"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "threeScene']['remove'](a3l[ars(0xc7e)]),a3l[\"r23ZS3L2g\"]['disable']();}},Kq['JmnnJbxXOlM']=function(a3k){var art=ai1;if(Kq[art(0xf42)][this[art(0xd07)]]==undefi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sole use feeds mixer update call; SERVED: sole use feeds mixer update call (snippet-only twin).",
+   "name": "deltaTime",
+   "selector": "a3k@u2128#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2128",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "cene']['remove'](a3l[\"r23ZS3L2g\"]),a3l[\"r23ZS3L2g\"]['disable']();},Kq[\"animateElimPlayer\"]=function(a3k){var aru=ai1;if(Kq['xGnxhWRENA'][this['aGWYarmepiQ']]==u"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "s['threeScene']['remove'](a3l[\"r23ZS3L2g\"]),a3l[\"r23ZS3L2g\"]['disable']();},Kq[ai1(0xd7c)]=function(a3k){var aru=ai1;if(Kq['xGnxhWRENA'][this['aGWYarmepiQ']]==u"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sole use feeds mixer update call; SERVED: sole use feeds mixer update call (snippet-only twin).",
+   "name": "deltaTime",
+   "selector": "a3k@u2128#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2128",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "'threeScene']['remove'](a3l[\"r23ZS3L2g\"]),a3l[\"r23ZS3L2g\"][\"disable\"]();},Kq['animateMVP']=function(a3k){var arv=ai1;if(Kq[\"xGnxhWRENA\"][this['AuTRLFmrA']]==und"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 6,
+    "refCount": 1,
+    "snippet": "threeScene']['remove'](a3l[\"r23ZS3L2g\"]),a3l[\"r23ZS3L2g\"][aru(0x523)]();},Kq['animateMVP']=function(a3k){var arv=ai1;if(Kq[arv(0xf42)][this['AuTRLFmrA']]==undef"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: sole use feeds mixer update call; SERVED: sole use feeds mixer update call (snippet-only twin).",
+   "name": "deltaTime",
+   "selector": "a3k@u2128#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2128",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "'threeScene'][\"remove\"](a3l[\"r23ZS3L2g\"]),a3l[\"r23ZS3L2g\"]['disable']();},Kq['animateAll']=function(a3k){var arw=ai1;if(Mm[\"tGTnWzZUhv\"]&&Kq[\"HmUBHsPNgO\"][\"opac"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 7,
+    "refCount": 1,
+    "snippet": "hreeScene'][arv(0x944)](a3l[\"r23ZS3L2g\"]),a3l[\"r23ZS3L2g\"]['disable']();},Kq['animateAll']=function(a3k){var arw=ai1;if(Mm[arw(0xb64)]&&Kq[arw(0x1000)][arw(0x40"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: running y assigned to positions, stepped by height; SERVED: running y assigned to positions, stepped by height (snippet-only twin).",
+   "name": "cursorY",
+   "selector": "a3l@u2128#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "ice'](a3o,0x1),a3o--,Kq[\"WpuCzbdCUqV\"][\"afCJVYrCGK\"]=!![];continue;}}},Kq['GKABXbqrG']=function(a3k,a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3n>0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "['splice'](a3o,0x1),a3o--,Kq[arp(0xfdc)][arp(0xd69)]=!![];continue;}}},Kq['GKABXbqrG']=function(a3k,a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3n>0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: split wrapped recursed as chat message string; SERVED: split wrapped recursed as chat message string (snippet-only twin).",
+   "name": "messageText",
+   "selector": "a3l@u2128#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2128",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "),a3r['message'][\"wAijZbUAD\"][0x0]['text']=a3r['message']['text'];},Kq['renderPlayer']=function(a3k,a3l){var arr=ai1;Fx=!![];var a3m=a3k[\"r23ZS3L2g\"];this[\"play"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "1),a3r['message'][arq(0xada)][0x0]['text']=a3r['message']['text'];},Kq['renderPlayer']=function(a3k,a3l){var arr=ai1;Fx=!![];var a3m=a3k[\"r23ZS3L2g\"];this[arr(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slot key into roster, compared current slot; SERVED: slot key into roster, compared current slot (snippet-only twin).",
+   "name": "playerIndex2",
+   "selector": "a3l@u2128#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 5,
+    "snippet": ";},Kq[\"decvesKgt\"]=function(){var ars=ai1;for(var a3k=0x0;a3k<Kq[\"xGnxhWRENA\"]['length'];a3k++){var a3l=Kq['xGnxhWRENA'][a3k];if(a3l==undefined)return;a3l[\"r23Z"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "![];},Kq[ai1(0x4ae)]=function(){var ars=ai1;for(var a3k=0x0;a3k<Kq[ars(0xf42)]['length'];a3k++){var a3l=Kq['xGnxhWRENA'][a3k];if(a3l==undefined)return;a3l[\"r23Z"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: roster entry at current slot, skinned rendered; SERVED: roster entry at current slot, skinned rendered (snippet-only twin).",
+   "name": "currentPlayer",
+   "selector": "a3l@u2128#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2128",
+    "index": 4,
+    "refCount": 10,
+    "snippet": "ion(a3k){var art=ai1;if(Kq[\"xGnxhWRENA\"][this[\"MqaFuSJOX\"]]==undefined||!Mu[\"ReDNKHkwk\"])return;let a3l=Kq['xGnxhWRENA'][this['MqaFuSJOX']];!a3l['OcmOJHCFmX']&&"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 4,
+    "refCount": 10,
+    "snippet": "unction(a3k){var art=ai1;if(Kq[art(0xf42)][this[art(0xd07)]]==undefined||!Mu[art(0xb1d)])return;let a3l=Kq['xGnxhWRENA'][this['MqaFuSJOX']];!a3l['OcmOJHCFmX']&&"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: elim slot entry animated and snapshotted; SERVED: elim slot entry animated and snapshotted (snippet-only twin).",
+   "name": "elimPlayer",
+   "selector": "a3l@u2128#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2128",
+    "index": 5,
+    "refCount": 6,
+    "snippet": "f(Kq['xGnxhWRENA'][this['aGWYarmepiQ']]==undefined||!(Mn['ReDNKHkwk']||Mn['tGTnWzZUhv']))return;var a3l=Kq['xGnxhWRENA'][this['aGWYarmepiQ']];a3l[\"r23ZS3L2g\"][\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 5,
+    "refCount": 6,
+    "snippet": "f(Kq['xGnxhWRENA'][this['aGWYarmepiQ']]==undefined||!(Mn['ReDNKHkwk']||Mn['tGTnWzZUhv']))return;var a3l=Kq['xGnxhWRENA'][this['aGWYarmepiQ']];a3l[\"r23ZS3L2g\"][a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mvp slot entry animated and snapshotted; SERVED: mvp slot entry animated and snapshotted (snippet-only twin).",
+   "name": "mvpPlayer",
+   "selector": "a3l@u2128#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2128",
+    "index": 6,
+    "refCount": 6,
+    "snippet": "on(a3k){var arv=ai1;if(Kq[\"xGnxhWRENA\"][this['AuTRLFmrA']]==undefined||!Mm[\"tGTnWzZUhv\"])return;var a3l=Kq['xGnxhWRENA'][this[\"AuTRLFmrA\"]];a3l[\"r23ZS3L2g\"]['kD"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 6,
+    "refCount": 6,
+    "snippet": "nction(a3k){var arv=ai1;if(Kq[arv(0xf42)][this['AuTRLFmrA']]==undefined||!Mm[arv(0xb64)])return;var a3l=Kq['xGnxhWRENA'][this[arv(0x80f)]];a3l[\"r23ZS3L2g\"]['kDC"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over classes canvases contexts; SERVED: loop index over classes canvases contexts (snippet-only twin).",
+   "name": "slotIndex",
+   "selector": "a3l@u2128#7",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2128",
+    "index": 7,
+    "refCount": 14,
+    "snippet": "NKHkwk']){}else return;Mu['ReDNKHkwk']&&Kq[\"GJklRqbLTCs\"]&&(Kq[\"mvpClasses\"]=[0x2,0x0,0x3]);for(let a3l=0x0;a3l<Kq[\"mvpClasses\"][\"length\"];a3l++){let a3m=Kq['mv"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 7,
+    "refCount": 14,
+    "snippet": "['ReDNKHkwk']){}else return;Mu['ReDNKHkwk']&&Kq[arw(0x156)]&&(Kq[arw(0x362)]=[0x2,0x0,0x3]);for(let a3l=0x0;a3l<Kq[arw(0x362)][arw(0x3a2)];a3l++){let a3m=Kq['mv"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: constant 50 stepping cursor y positions; SERVED: constant 50 stepping cursor y positions (snippet-only twin).",
+   "name": "rowHeight",
+   "selector": "a3m@u2128#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "](a3o,0x1),a3o--,Kq[\"WpuCzbdCUqV\"][\"afCJVYrCGK\"]=!![];continue;}}},Kq['GKABXbqrG']=function(a3k,a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3n>0x4)re"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "lice'](a3o,0x1),a3o--,Kq[arp(0xfdc)][arp(0xd69)]=!![];continue;}}},Kq['GKABXbqrG']=function(a3k,a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3n>0x4)re"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: player model positioned scaled scene added removed; SERVED: player model positioned scaled scene added removed (snippet-only twin).",
+   "name": "playerMesh",
+   "selector": "a3m@u2128#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u2128",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "[0x0]['text']=a3r['message']['text'];},Kq['renderPlayer']=function(a3k,a3l){var arr=ai1;Fx=!![];var a3m=a3k[\"r23ZS3L2g\"];this[\"playerCamera\"]=new usvzFuAsEB['jh"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "[0x0]['text']=a3r['message']['text'];},Kq['renderPlayer']=function(a3k,a3l){var arr=ai1;Fx=!![];var a3m=a3k[\"r23ZS3L2g\"];this[arr(0x1036)]=new usvzFuAsEB['jhtmw"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: class id indexing roster, negativity checked; SERVED: class id indexing roster, negativity checked (snippet-only twin).",
+   "name": "mvpClassId",
+   "selector": "a3m@u2128#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "bLTCs\"]&&(Kq[\"mvpClasses\"]=[0x2,0x0,0x3]);for(let a3l=0x0;a3l<Kq[\"mvpClasses\"][\"length\"];a3l++){let a3m=Kq['mvpClasses'][a3l],a3n=![];a3m<0x0&&(a3n=!![]);if(a3l"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "w(0x156)]&&(Kq[arw(0x362)]=[0x2,0x0,0x3]);for(let a3l=0x0;a3l<Kq[arw(0x362)][arw(0x3a2)];a3l++){let a3m=Kq['mvpClasses'][a3l],a3n=![];a3m<0x0&&(a3n=!![]);if(a3l"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: constant 5 threshold splitting fade opacity branch; SERVED: constant 5 threshold splitting fade opacity branch (snippet-only twin).",
+   "name": "fadeThreshold",
+   "selector": "a3n@u2128#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "o,0x1),a3o--,Kq[\"WpuCzbdCUqV\"][\"afCJVYrCGK\"]=!![];continue;}}},Kq['GKABXbqrG']=function(a3k,a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3n>0x4)return"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "'](a3o,0x1),a3o--,Kq[arp(0xfdc)][arp(0xd69)]=!![];continue;}}},Kq['GKABXbqrG']=function(a3k,a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3n>0x4)return"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Boolean skip flag set for invalid mvp slots; SERVED: Boolean skip flag set for invalid mvp slots (snippet-only twin).",
+   "name": "skipSlotFlag",
+   "selector": "a3n@u2128#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "=[0x2,0x0,0x3]);for(let a3l=0x0;a3l<Kq[\"mvpClasses\"][\"length\"];a3l++){let a3m=Kq['mvpClasses'][a3l],a3n=![];a3m<0x0&&(a3n=!![]);if(a3l<Kq['aMWaisFtZ']['length']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "=[0x2,0x0,0x3]);for(let a3l=0x0;a3l<Kq[arw(0x362)][arw(0x3a2)];a3l++){let a3m=Kq['mvpClasses'][a3l],a3n=![];a3m<0x0&&(a3n=!![]);if(a3l<Kq['aMWaisFtZ']['length']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index stacking and fading M0 array items; SERVED: Loop index stacking and fading M0 array items (snippet-only twin).",
+   "name": "stackIndex",
+   "selector": "a3o@u2128#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 24,
+    "snippet": "{var arp=ai1,a3l=0x41+Kq['ESnDbkgGOxR'],a3m=0x32,a3n=0x5;if(M0['length']==0x0)return;if(M1){for(var a3o=0x0;a3o<M0[\"length\"];a3o++){M0['array'][a3o][\"abMNQQaLK\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 24,
+    "snippet": "{var arp=ai1,a3l=0x41+Kq['ESnDbkgGOxR'],a3m=0x32,a3n=0x5;if(M0['length']==0x0)return;if(M1){for(var a3o=0x0;a3o<M0[arp(0x3a2)];a3o++){M0['array'][a3o][arp(0xa01"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Home animation handle weighted then played; SERVED: Home animation handle weighted then played (snippet-only twin).",
+   "name": "homeAnim",
+   "selector": "a3o@u2128#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "e']['z']*=0.9,this['threeScene']['add'](a3m));a3k[\"r23ZS3L2g\"][\"kDCTWhoSiT\"][\"stopAllAction\"]();var a3o=a3k[\"r23ZS3L2g\"]['homeAnim'];a3o['weight']=0x1,a3o['play"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "m['scale']['z']*=0.9,this['threeScene']['add'](a3m));a3k[\"r23ZS3L2g\"][arr(0xee1)][arr(0xf65)]();var a3o=a3k[\"r23ZS3L2g\"]['homeAnim'];a3o['weight']=0x1,a3o['play"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Mvp slot entry enabled rendered then disabled; SERVED: Mvp slot entry enabled rendered then disabled (snippet-only twin).",
+   "name": "mvpSlotEntry",
+   "selector": "a3o@u2128#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2128",
+    "index": 4,
+    "refCount": 10,
+    "snippet": "isClear']&&(a3s[\"clearRect\"](0x0,0x0,a3r['width'],a3r[\"height\"]),a3s[\"isClear\"]=!![]);continue;}let a3o=Kq[\"xGnxhWRENA\"][a3m];!a3o[\"OcmOJHCFmX\"]&&(a3o[\"r23ZS3L2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 4,
+    "refCount": 10,
+    "snippet": "Clear']&&(a3s[arw(0x3b1)](0x0,0x0,a3r['width'],a3r[arw(0x300)]),a3s[arw(0x6e6)]=!![]);continue;}let a3o=Kq[arw(0xf42)][a3m];!a3o[arw(0xd27)]&&(a3o[\"r23ZS3L2g\"]["
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding assigned never read",
+   "selector": "a3p@u2128#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Per-slot canvas sized for clear and draw; SERVED: Per-slot canvas sized for clear and draw (snippet-only twin).",
+   "name": "playerCanvas",
+   "selector": "a3p@u2128#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2128",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "KNqVhpg'](a3o[\"r23ZS3L2g\"],Kq['iEFWcRHQD'][Kq['vfZwlPzAYy'][a3l]]);a3o[\"r23ZS3L2g\"]['enable']();let a3p=this[\"pXZ2Lx32Vb\"][a3l],a3q=this['playerCtxs'][a3l];a3q["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 2,
+    "refCount": 6,
+    "snippet": "gKNqVhpg'](a3o[arw(0xc7e)],Kq['iEFWcRHQD'][Kq['vfZwlPzAYy'][a3l]]);a3o[\"r23ZS3L2g\"]['enable']();let a3p=this[arw(0xd59)][a3l],a3q=this['playerCtxs'][a3l];a3q['i"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Loop index over chats then message words; SERVED: Loop index over chats then message words (snippet-only twin).",
+   "name": "msgIndex",
+   "selector": "a3q@u2128#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ",a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3n>0x4)return;var a3o=0x24,a3p=0x16;for(var a3q=0x0;a3q<Kq['chats']['length'];a3q++){Kq['chats'][a3q][\"n"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ",a3l,a3m,a3n){var arq=ai1;a3n==undefined&&(a3n=0x1);if(a3n>0x4)return;var a3o=0x24,a3p=0x16;for(var a3q=0x0;a3q<Kq['chats']['length'];a3q++){Kq['chats'][a3q][ar"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding assigned never read",
+   "selector": "a3q@u2128#2",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Per-slot 2d context for compositing passes; SERVED: Per-slot 2d context for compositing passes (snippet-only twin).",
+   "name": "playerCtx",
+   "selector": "a3q@u2128#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 14,
+    "snippet": "q['iEFWcRHQD'][Kq['vfZwlPzAYy'][a3l]]);a3o[\"r23ZS3L2g\"]['enable']();let a3p=this[\"pXZ2Lx32Vb\"][a3l],a3q=this['playerCtxs'][a3l];a3q['isClear']=![],this[\"threeSc"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 3,
+    "refCount": 14,
+    "snippet": ",Kq['iEFWcRHQD'][Kq['vfZwlPzAYy'][a3l]]);a3o[\"r23ZS3L2g\"]['enable']();let a3p=this[arw(0xd59)][a3l],a3q=this['playerCtxs'][a3l];a3q['isClear']=![],this[arw(0xd0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Chat row object with name message bottom; SERVED: Chat row object with name message bottom (snippet-only twin).",
+   "name": "chatRow",
+   "selector": "a3r@u2128#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 47,
+    "snippet": "chats'][a3q]['message'][\"position\"]['y']-=a3o,Kq['chats'][a3q]['bottom']['position']['y']-=a3o;}var a3r;Kq['chats']['length']>0x5?(a3r=Kq['chats'][0x0],Kq[\"chat"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 47,
+    "snippet": "chats'][a3q]['message'][arq(0x215)]['y']-=a3o,Kq['chats'][a3q]['bottom']['position']['y']-=a3o;}var a3r;Kq['chats']['length']>0x5?(a3r=Kq['chats'][0x0],Kq[arq(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Skipped-slot canvas cleared using width height; SERVED: Skipped-slot canvas cleared using width height (snippet-only twin).",
+   "name": "slotCanvas",
+   "selector": "a3r@u2128#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "ength']){}else Mu['ReDNKHkwk']&&(a3n=!![]);Kq['xGnxhWRENA'][a3m]==undefined&&(a3n=!![]);if(a3n){let a3r=this[\"pXZ2Lx32Vb\"][a3l],a3s=this[\"playerCtxs\"][a3l];!a3s"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "ength']){}else Mu['ReDNKHkwk']&&(a3n=!![]);Kq['xGnxhWRENA'][a3m]==undefined&&(a3n=!![]);if(a3n){let a3r=this[\"pXZ2Lx32Vb\"][a3l],a3s=this[arw(0x4bb)][a3l];!a3s['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Width padding added into chat bottom; SERVED: Width padding added into chat bottom (snippet-only twin).",
+   "name": "bubblePadding",
+   "selector": "a3t@u2128#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tion\"]['x']-=0xa);a3r[\"name\"]['position']['x']-=0x5;a3m&&(a3r['message']['position']['x']-=0xa);var a3t=0x14,a3u=0xc8;a3r[\"bottom\"]['position']['x']=0xd5,a3r['b"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ")]['x']-=0xa);a3r[arq(0x9ec)]['position']['x']-=0x5;a3m&&(a3r['message']['position']['x']-=0xa);var a3t=0x14,a3u=0xc8;a3r[arq(0x903)]['position']['x']=0xd5,a3r["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Caught skin-apply error logged to console; SERVED: Caught skin-apply error logged to console (snippet-only twin).",
+   "name": "skinError",
+   "selector": "a3t@u2128#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "q[\"aMWaisFtZ\"][\"length\"])try{Kq['ZgKNqVhpg'](a3o[\"r23ZS3L2g\"],Kq[\"aMWaisFtZ\"][a3l][\"skins\"]);}catch(a3t){console['log'](a3t);}}else Kq['vfZwlPzAYy'][a3l]!=-0x1&"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "rw(0xa39)][arw(0x3a2)])try{Kq['ZgKNqVhpg'](a3o[\"r23ZS3L2g\"],Kq[arw(0xa39)][a3l][arw(0x674)]);}catch(a3t){console['log'](a3t);}}else Kq['vfZwlPzAYy'][a3l]!=-0x1&"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Base width added into chat bottom; SERVED: Base width added into chat bottom (snippet-only twin).",
+   "name": "bubbleBaseWidth",
+   "selector": "a3u@u2128#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "']-=0xa);a3r[\"name\"]['position']['x']-=0x5;a3m&&(a3r['message']['position']['x']-=0xa);var a3t=0x14,a3u=0xc8;a3r[\"bottom\"]['position']['x']=0xd5,a3r['bottom']['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0xa);a3r[arq(0x9ec)]['position']['x']-=0x5;a3m&&(a3r['message']['position']['x']-=0xa);var a3t=0x14,a3u=0xc8;a3r[arq(0x903)]['position']['x']=0xd5,a3r['bottom']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Spotlight horizontal inset in drawImage call; SERVED: Spotlight horizontal inset in drawImage call (snippet-only twin).",
+   "name": "spotlightInsetX",
+   "selector": "a3u@u2128#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "earRect'](0x0,0x0,a3p[\"width\"],a3p['height']);if(Kq[\"PElxUhFRqdD\"]==a3l){a3q[\"globalAlpha\"]=0.8;let a3u=0x82;a3q[\"drawImage\"](Kq['spotlight'],a3u,0x3c,a3p[\"widt"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "'clearRect'](0x0,0x0,a3p[arw(0xad0)],a3p['height']);if(Kq[arw(0x317)]==a3l){a3q[arw(0xcf4)]=0.8;let a3u=0x82;a3q[arw(0xccc)](Kq['spotlight'],a3u,0x3c,a3p[arw(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Accumulated wrapped chat line text; SERVED: Accumulated wrapped chat line text (snippet-only twin).",
+   "name": "chatLineText",
+   "selector": "a3w@u2128#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ottom']['position']['x']+=0x0+a3t/0x2-a3u/0x2,Kq[\"chats\"]['push'](a3r);var a3v=a3l['split']('\\x20'),a3w='';if(a3v['length']>0x0){var a3x='';for(var a3q=0x0;a3q<"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "om']['position']['x']+=0x0+a3t/0x2-a3u/0x2,Kq[arq(0xd09)]['push'](a3r);var a3v=a3l['split']('\\x20'),a3w='';if(a3v['length']>0x0){var a3x='';for(var a3q=0x0;a3q<"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Prior fitting line for overflow rollback; SERVED: Prior fitting line for overflow rollback (snippet-only twin).",
+   "name": "prevLineText",
+   "selector": "a3x@u2128#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "/0x2-a3u/0x2,Kq[\"chats\"]['push'](a3r);var a3v=a3l['split']('\\x20'),a3w='';if(a3v['length']>0x0){var a3x='';for(var a3q=0x0;a3q<a3v['length'];a3q++){a3x=a3w,a3w+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2128",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "2-a3u/0x2,Kq[arq(0xd09)]['push'](a3r);var a3v=a3l['split']('\\x20'),a3w='';if(a3v['length']>0x0){var a3x='';for(var a3q=0x0;a3q<a3v['length'];a3q++){a3x=a3w,a3w+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: template table entry getting ArrayBuffer plus DataView; SERVED: template table entry getting ArrayBuffer plus DataView (snippet-only twin).",
+   "name": "templateEntry",
+   "selector": "Ja@u2713#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "Ja",
+   "binding": {
+    "unit": "u2713",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "for(var tf=0x0;tf<J9['length'];tf++){var Ja=J3[J9[tf]];Ja['internalBuffer']=new ArrayBuffer(Ja[\"total"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2713",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "for(var tf=0x0;tf<J9['length'];tf++){var Ja=J3[J9[tf]];Ja['internalBuffer']=new ArrayBuffer(Ja[ai1(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: rotated destination-out image beside health bar; SERVED: rotated destination-out image beside health bar (snippet-only twin).",
+   "name": "healthBarMask",
+   "selector": "a3A@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "EpyzjenecZQ\"]=!![],a3z['gradientOpacity']=0.6,this[\"healthText\"]=a3z,a3s[\"add\"](a3z['gameobj']);var a3A=new a3k['image'](Mg,-0x52,-0x14,0x1e,0x64);a3A['rotation"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "rx(0x687)]=!![],a3z['gradientOpacity']=0.6,this[arx(0x9be)]=a3z,a3s[arx(0x8da)](a3z['gameobj']);var a3A=new a3k['image'](Mg,-0x52,-0x14,0x1e,0x64);a3A['rotation"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "low",
+   "evidence": "VM9: cryptic array element having flag cleared; SERVED: cryptic array element having flag cleared (snippet-only twin).",
+   "name": "statusEntry",
+   "selector": "a3A@u2130#1",
+   "slice": "slice-03",
+   "disposition": "held-low",
+   "reason": "low confidence: held for review"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: HP text stored to this hp slot; SERVED: HP text stored to this hp slot (snippet-only twin).",
+   "name": "hpLabel",
+   "selector": "a3B@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ";a3A['rotation']=-Math['PI']/0x2,a3A['opacity']=0.5,a3A['compositeOperation']='destination-out';var a3B=new a3k['text']('HP',0x0,0x0,\"#DDD\",'Verdana',0x1e,'',0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ";a3A['rotation']=-Math['PI']/0x2,a3A['opacity']=0.5,a3A['compositeOperation']='destination-out';var a3B=new a3k['text']('HP',0x0,0x0,arx(0x9cb),'Verdana',0x1e,'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: loop index stamping pc ids mustUpdate; SERVED: loop index stamping pc ids mustUpdate (snippet-only twin).",
+   "name": "canvasIndex",
+   "selector": "a3B@u2130#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u2130",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "A']['length'];a3z++){let a3A=Kq['xGnxhWRENA'][a3z];a3A!=undefined&&(a3A['OcmOJHCFmX']=![]);}for(let a3B=0x0;a3B<Kq[\"pXZ2Lx32Vb\"]['length'];a3B++){Kq[\"pXZ2Lx32Vb"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "A']['length'];a3z++){let a3A=Kq['xGnxhWRENA'][a3z];a3A!=undefined&&(a3A['OcmOJHCFmX']=![]);}for(let a3B=0x0;a3B<Kq[ary(0xd59)]['length'];a3B++){Kq[ary(0xd59)][a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: reused ammo count then Ammo label; SERVED: reused ammo count then Ammo label (snippet-only twin).",
+   "name": "ammoTextElem",
+   "selector": "a3C@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "a3z['ruPZxXVQKTp'](),a3B[\"position\"]['x']=-0x81+0x5+this['healthText']['width'],a3s['add'](a3B);var a3C=new M7('xqItLdaOH','29','right');a3C[\"position\"]['y']=0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "a3z['ruPZxXVQKTp'](),a3B[arx(0x215)]['x']=-0x81+0x5+this['healthText']['width'],a3s['add'](a3B);var a3C=new M7('xqItLdaOH','29','right');a3C[arx(0x215)]['y']=0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: loop index rendering ogObj entries; SERVED: loop index rendering ogObj entries (snippet-only twin).",
+   "name": "renderIndex",
+   "selector": "a3C@u2130#2",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u2130",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "fined&&N2[\"r23ZS3L2g\"][\"opacity\"]>0x0&&N2[\"ReDNKHkwk\"]&&(Kq['mmArc'][\"rotation\"]+=a3k/0x64);for(let a3C=0x0;a3C<this['tQXunBaduy'][\"length\"];a3C++){this[\"tQXunB"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "fined&&N2[\"r23ZS3L2g\"][ary(0x40e)]>0x0&&N2[ary(0xb1d)]&&(Kq['mmArc'][ary(0x90d)]+=a3k/0x64);for(let a3C=0x0;a3C<this['tQXunBaduy'][ary(0x3a2)];a3C++){this[ary(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: temp holding node across container swap; SERVED: temp holding node across container swap (snippet-only twin).",
+   "name": "swapTemp",
+   "selector": "a3E@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "add\"](a3C[\"gameobj\"]);var a3D=a3C['gameobj'];a3D[\"EpyzjenecZQ\"]=!![],a3D['gradientOpacity']=0.6;var a3E=a3D;a3D=this[\"ammoText\"],this[\"fbgKsskemj\"]['add'](this["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "0x8da)](a3C[arx(0x999)]);var a3D=a3C['gameobj'];a3D[arx(0x687)]=!![],a3D['gradientOpacity']=0.6;var a3E=a3D;a3D=this[arx(0x201)],this[arx(0x886)]['add'](this['a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slash-thirty text stored to max; SERVED: slash-thirty text stored to max (snippet-only twin).",
+   "name": "maxAmmoLabel",
+   "selector": "a3F@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "r a3E=a3D;a3D=this[\"ammoText\"],this[\"fbgKsskemj\"]['add'](this['ammoText']),this[\"ammoText\"]=a3E;var a3F=new a3k['text']('/\\x20\\x2030',0x0,0x0,\"#BBB\",'Verdana',0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "var a3E=a3D;a3D=this[arx(0x201)],this[arx(0x886)]['add'](this['ammoText']),this[arx(0x201)]=a3E;var a3F=new a3k['text']('/\\x20\\x2030',0x0,0x0,arx(0x251),'Verdan"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: x constant for polygon point series; SERVED: x constant for polygon point series (snippet-only twin).",
+   "name": "shapeX",
+   "selector": "a3G@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "c8,0x46),a3C['position']['x']=0x0,a3C['position']['y']=-0x2b,a3C[\"opacity\"]=0.5,a3D['add'](a3C);var a3G=3.5,a3H=0x14,a3I=0xf,a3J=0.8,a3K=[new a3k[(\"vFgdYWoMXeQ\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "8,0x46),a3C['position']['x']=0x0,a3C['position']['y']=-0x2b,a3C[arx(0x40e)]=0.5,a3D['add'](a3C);var a3G=3.5,a3H=0x14,a3I=0xf,a3J=0.8,a3K=[new a3k[(arx(0x5ee))]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: y extent constant for polygon points; SERVED: y extent constant for polygon points (snippet-only twin).",
+   "name": "shapeHeight",
+   "selector": "a3H@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 5,
+    "snippet": ",a3C['position']['x']=0x0,a3C['position']['y']=-0x2b,a3C[\"opacity\"]=0.5,a3D['add'](a3C);var a3G=3.5,a3H=0x14,a3I=0xf,a3J=0.8,a3K=[new a3k[(\"vFgdYWoMXeQ\")](a3G,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "a3C['position']['x']=0x0,a3C['position']['y']=-0x2b,a3C[arx(0x40e)]=0.5,a3D['add'](a3C);var a3G=3.5,a3H=0x14,a3I=0xf,a3J=0.8,a3K=[new a3k[(arx(0x5ee))](a3G,a3H)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: y offset constant for polygon points; SERVED: y offset constant for polygon points (snippet-only twin).",
+   "name": "shapeOffsetY",
+   "selector": "a3I@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ition']['x']=0x0,a3C['position']['y']=-0x2b,a3C[\"opacity\"]=0.5,a3D['add'](a3C);var a3G=3.5,a3H=0x14,a3I=0xf,a3J=0.8,a3K=[new a3k[(\"vFgdYWoMXeQ\")](a3G,a3H),new a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tion']['x']=0x0,a3C['position']['y']=-0x2b,a3C[arx(0x40e)]=0.5,a3D['add'](a3C);var a3G=3.5,a3H=0x14,a3I=0xf,a3J=0.8,a3K=[new a3k[(arx(0x5ee))](a3G,a3H),new a3k["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: point list mirrored then meshed; SERVED: point list mirrored then meshed (snippet-only twin).",
+   "name": "shapePoints",
+   "selector": "a3K@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3K",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": ",a3C['position']['y']=-0x2b,a3C[\"opacity\"]=0.5,a3D['add'](a3C);var a3G=3.5,a3H=0x14,a3I=0xf,a3J=0.8,a3K=[new a3k[(\"vFgdYWoMXeQ\")](a3G,a3H),new a3k['vFgdYWoMXeQ'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "a3C['position']['y']=-0x2b,a3C[arx(0x40e)]=0.5,a3D['add'](a3C);var a3G=3.5,a3H=0x14,a3I=0xf,a3J=0.8,a3K=[new a3k[(arx(0x5ee))](a3G,a3H),new a3k['vFgdYWoMXeQ'](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: point mirrored across vertical axis; SERVED: point mirrored across vertical axis (snippet-only twin).",
+   "name": "srcPoint",
+   "selector": "a3L@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3L",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "](a3J,-a3H+a3J),new a3k['vFgdYWoMXeQ'](0x0,-a3H)];for(var a3o=a3K[\"length\"]-0x1;a3o>=0x0;a3o--){var a3L=a3K[a3o];a3K['push'](new a3k[(\"vFgdYWoMXeQ\")](-a3L['x'],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a3J,-a3H+a3J),new a3k['vFgdYWoMXeQ'](0x0,-a3H)];for(var a3o=a3K[arx(0x3a2)]-0x1;a3o>=0x0;a3o--){var a3L=a3K[a3o];a3K['push'](new a3k[(arx(0x5ee))](-a3L['x'],a3L"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: container grouping three polygon meshes; SERVED: container grouping three polygon meshes (snippet-only twin).",
+   "name": "shapeGroup",
+   "selector": "a3M@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3M",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "0x1;a3o>=0x0;a3o--){var a3L=a3K[a3o];a3K['push'](new a3k[(\"vFgdYWoMXeQ\")](-a3L['x'],a3L['y']));}var a3M=new a3k['object']();for(var a3o=0x0;a3o<0x3;a3o++){var a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 7,
+    "snippet": ")]-0x1;a3o>=0x0;a3o--){var a3L=a3K[a3o];a3K['push'](new a3k[(arx(0x5ee))](-a3L['x'],a3L['y']));}var a3M=new a3k['object']();for(var a3o=0x0;a3o<0x3;a3o++){var a"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dual-role mesh then gradient-blue channel",
+   "selector": "a3N@u2130#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: container added to tdmScoreParent holding texts; SERVED: container added to tdmScoreParent holding texts (snippet-only twin).",
+   "name": "scorePanel",
+   "selector": "a3O@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3O",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "64,0x28),a3M[\"position\"]['x']=0x64,a3M['position']['y']=-0xc,a3M[\"opacity\"]=0.4,a3D['add'](a3M);var a3O=new a3k['arc'](0x0,0x1,0x1a,KP,Math['PI']*0x2,0x0,0x5),a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "4,0x28),a3M[arx(0x215)]['x']=0x64,a3M['position']['y']=-0xc,a3M[arx(0x40e)]=0.4,a3D['add'](a3M);var a3O=new a3k['arc'](0x0,0x1,0x1a,KP,Math['PI']*0x2,0x0,0x5),a"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding, saved arc assigned never read",
+   "selector": "a3P@u2130#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: black UIPanel added first to score container; SERVED: black UIPanel added first to score container (snippet-only twin).",
+   "name": "scoreBgPanel",
+   "selector": "a3Q@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Q",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ar a3O=new a3k['arc'](0x0,0x1,0x1a,KP,Math['PI']*0x2,0x0,0x5),a3P=a3O;a3O=new a3k[(\"object\")]();var a3Q=new a3k['QtjDeukbWl'](0x0,0x0-0x14,0x64,0x72-0x28,\"#000\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 1,
+    "snippet": " a3O=new a3k['arc'](0x0,0x1,0x1a,KP,Math['PI']*0x2,0x0,0x5),a3P=a3O;a3O=new a3k[(arx(0x478))]();var a3Q=new a3k['QtjDeukbWl'](0x0,0x0-0x14,0x64,0x72-0x28,arx(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: width constant for mirrored side gradient images; SERVED: width constant for mirrored side gradient images (snippet-only twin).",
+   "name": "sideImageWidth",
+   "selector": "a3R@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3R",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "bject\")]();var a3Q=new a3k['QtjDeukbWl'](0x0,0x0-0x14,0x64,0x72-0x28,\"#000\",L7);a3O[\"add\"](a3Q);var a3R=0x46,a3S=new a3k['image'](Mg,0x32+a3R/0x2,-0x14,a3R,0x72"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": ");var a3Q=new a3k['QtjDeukbWl'](0x0,0x0-0x14,0x64,0x72-0x28,arx(0x26c),L7);a3O[arx(0x8da)](a3Q);var a3R=0x46,a3S=new a3k['image'](Mg,0x32+a3R/0x2,-0x14,a3R,0x72"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: reused temp holding each mirrored side image; SERVED: reused temp holding each mirrored side image (snippet-only twin).",
+   "name": "sideImage",
+   "selector": "a3S@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3S",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 6,
+    "snippet": ");var a3Q=new a3k['QtjDeukbWl'](0x0,0x0-0x14,0x64,0x72-0x28,\"#000\",L7);a3O[\"add\"](a3Q);var a3R=0x46,a3S=new a3k['image'](Mg,0x32+a3R/0x2,-0x14,a3R,0x72-0x28);a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "=new a3k['QtjDeukbWl'](0x0,0x0-0x14,0x64,0x72-0x28,arx(0x26c),L7);a3O[arx(0x8da)](a3Q);var a3R=0x46,a3S=new a3k['image'](Mg,0x32+a3R/0x2,-0x14,a3R,0x72-0x28);a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: '60 fps' text stored as party fpscounter; SERVED: '60 fps' text stored as party fpscounter (snippet-only twin).",
+   "name": "fpsCounterText",
+   "selector": "a3T@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3T",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "]=Math['PI'],a3S['opacity']=L7,a3O[\"add\"](a3S),a3O['position']=new a3k['vFgdYWoMXeQ'](0x0,0x50);var a3T=new a3k['text']('60\\x20fps',0x32,0x32,\"#3C3\",\"Verdana\",0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "h['PI'],a3S['opacity']=L7,a3O[arx(0x8da)](a3S),a3O['position']=new a3k['vFgdYWoMXeQ'](0x0,0x50);var a3T=new a3k['text']('60\\x20fps',0x32,0x32,arx(0xae5),arx(0xf"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: '60 ms' text stored as party pingcounter; SERVED: '60 ms' text stored as party pingcounter (snippet-only twin).",
+   "name": "pingCounterText",
+   "selector": "a3U@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3U",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "x32,\"#3C3\",\"Verdana\",0x16);a3T['align']='left',Kq[\"nwxurZsxI\"]['add'](a3T),Kq['fpscounter']=a3T;var a3U=new a3k['text'](\"60 ms\",0x32,0x50,'#3C3',\"Verdana\",0x16)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "arx(0xae5),arx(0xfeb),0x16);a3T['align']='left',Kq[arx(0xc5a)]['add'](a3T),Kq['fpscounter']=a3T;var a3U=new a3k['text'](arx(0x260),0x32,0x50,'#3C3',arx(0xfeb),0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time preset text stored as this.timeText; SERVED: time preset text stored as this.timeText (snippet-only twin).",
+   "name": "matchTimeText",
+   "selector": "a3V@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3V",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "50,'#3C3',\"Verdana\",0x16);a3U[\"align\"]='left',Kq['nwxurZsxI']['add'](a3U),Kq['pingcounter']=a3U;var a3V=Mj(a3k,\"time\",0x0,0x0,0x2d,\"center\",'',0x5);a3V['Epyzjen"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "#3C3',arx(0xfeb),0x16);a3U[arx(0xa85)]='left',Kq['nwxurZsxI']['add'](a3U),Kq['pingcounter']=a3U;var a3V=Mj(a3k,arx(0x35c),0x0,0x0,0x2d,arx(0x5e7),'',0x5);a3V['E"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'FFA on Factory' centered mode map label; SERVED: 'FFA on Factory' centered mode map label (snippet-only twin).",
+   "name": "modeLabelText",
+   "selector": "a3W@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "0,a3V[\"position\"]['y']=-0x7,a3V['oldTimeText']=a3V['text'],this['timeText']=a3V,a3O[\"add\"](a3V);var a3W=new a3k[(\"text\")](\"FFA on Factory\",0x0,0x0,\"#EEE\",'Verda"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "[arx(0x215)]['y']=-0x7,a3V['oldTimeText']=a3V['text'],this['timeText']=a3V,a3O[arx(0x8da)](a3V);var a3W=new a3k[(arx(0x5a6))](arx(0x8cc),0x0,0x0,arx(0x5d3),'Ver"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: strokeText twin of mode label, lineWidth set; SERVED: strokeText twin of mode label, lineWidth set (snippet-only twin).",
+   "name": "modeLabelStroke",
+   "selector": "a3X@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "kAm\"]=a3W,a3W[\"position\"]=new a3k['vFgdYWoMXeQ'](a3V['position']['x'],-0x28),a3W['opacity']=0.3;var a3X=new a3k[(\"strokeText\")](\"FFA on Factory\",0x0,0x0,'#222',"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "904)]=a3W,a3W[arx(0x215)]=new a3k['vFgdYWoMXeQ'](a3V['position']['x'],-0x28),a3W['opacity']=0.3;var a3X=new a3k[(arx(0x857))](arx(0x8cc),0x0,0x0,'#222','Verdana"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'Time Left:' caption above time text; SERVED: 'Time Left:' caption above time text (snippet-only twin).",
+   "name": "timeLeftLabel",
+   "selector": "a3Y@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Y",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "xf,'',0x1,\"center\");a3X['lineWidth']=1.5,a3X[\"opacity\"]=0.3,Kq['XIAOuPtKt']=a3X,a3O[\"add\"](a3W);var a3Y=new a3k['text']('Time\\x20Left:',0x0,0x0,'#EEE',\"Verdana\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "1,arx(0x5e7));a3X['lineWidth']=1.5,a3X[arx(0x40e)]=0.3,Kq['XIAOuPtKt']=a3X,a3O[arx(0x8da)](a3W);var a3Y=new a3k['text']('Time\\x20Left:',0x0,0x0,'#EEE',arx(0xfeb"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: symmetric x-anchor for team bars and scores; SERVED: symmetric x-anchor for team bars and scores (snippet-only twin).",
+   "name": "scoreHalfWidth",
+   "selector": "a3Z@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Z",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "tion']['y']=-0x1d,a3Y['opacity']=0.6,this[\"tdmScoreParent\"][\"otYTUIhzc\"](a3O);var a3q=0x78,a3r=0x4a,a3Z=0x37+0x5;a3Z=a3q/0x2+0x23;var a40=0xf;a40=0x0,this[\"AbDs"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "3Y['position']['y']=-0x1d,a3Y['opacity']=0.6,this[arx(0x9b7)][arx(0xcb)](a3O);var a3q=0x78,a3r=0x4a,a3Z=0x37+0x5;a3Z=a3q/0x2+0x23;var a40=0xf;a40=0x0,this[arx(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: this.pkghYgdlX element factory alias, 61 uses; SERVED: this.pkghYgdlX element factory alias, 61 uses (snippet-only twin).",
+   "name": "uiFactory",
+   "selector": "a3k@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 61,
+    "snippet": "Kq[\"setupHealthbar\"]=function(){var arx=ai1,a3k=this[\"pkghYgdlX\"],a3l=[[0x0,\"rgba( 0, 0, 0, 0.8 )\"],[0.7"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 61,
+    "snippet": "Kq[ai1(0x5ed)]=function(){var arx=ai1,a3k=this[arx(0x232)],a3l=[[0x0,arx(0x1014)],[0.7,'rgba(\\x200"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: update frame delta decrementing ms timers fades; SERVED: update frame delta decrementing ms timers fades (snippet-only twin).",
+   "name": "deltaMs",
+   "selector": "a3k@u2130#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u2130",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "AD'][a3o][\"position\"]['y']+=0x17;}this[\"tdmScoreParent\"][\"afCJVYrCGK\"]=!![];},Kq['update']=function(a3k){var ary=ai1;Kq['iqlClVqgmb']&&KY();var a3l=Kq['pkghYgdl"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "'wAijZbUAD'][a3o][arx(0x215)]['y']+=0x17;}this[arx(0x9b7)][arx(0xd69)]=!![];},Kq['update']=function(a3k){var ary=ai1;Kq['iqlClVqgmb']&&KY();var a3l=Kq['pkghYgdl"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rgba stop list mirrored for right gradient; SERVED: rgba stop list mirrored for right gradient (snippet-only twin).",
+   "name": "gradientStops",
+   "selector": "a3l@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "Kq[\"setupHealthbar\"]=function(){var arx=ai1,a3k=this[\"pkghYgdlX\"],a3l=[[0x0,\"rgba( 0, 0, 0, 0.8 )\"],[0.7,'rgba(\\x200,\\x200,\\x2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "Kq[ai1(0x5ed)]=function(){var arx=ai1,a3k=this[arx(0x232)],a3l=[[0x0,arx(0x1014)],[0.7,'rgba(\\x200,\\x200,\\x200,\\x200.45"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding, factory fetched never used",
+   "selector": "a3l@u2130#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: left '0' score text at negative x; SERVED: left '0' score text at negative x (snippet-only twin).",
+   "name": "leftScoreText",
+   "selector": "a48@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a48",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'](a46,a3Z+a3q/0x2,a3r/0x2,a3q-a40,a3r);a47['opacity']=0.7,this['AbDsVAQRPz']['otYTUIhzc'](a47);var a48=Mj(Kq['pkghYgdlX'],'0',-a3Z-0x35,a3r/0x2+0x4,0x2d,\"cente"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'](a46,a3Z+a3q/0x2,a3r/0x2,a3q-a40,a3r);a47['opacity']=0.7,this['AbDsVAQRPz']['otYTUIhzc'](a47);var a48=Mj(Kq['pkghYgdlX'],'0',-a3Z-0x35,a3r/0x2+0x4,0x2d,arx(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: right '0' score text at positive x; SERVED: right '0' score text at positive x (snippet-only twin).",
+   "name": "rightScoreText",
+   "selector": "a49@u2130#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a49",
+   "binding": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "-0x35,a3r/0x2+0x4,0x2d,\"center\",'',2.5,![]);a48[\"EpyzjenecZQ\"]=!![],a48['gradientOpacity']=0.65;var a49=Mj(Kq['pkghYgdlX'],'0',a3Z+0x35,a3r/0x2+0x4,0x2d,\"center"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2130",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "Z-0x35,a3r/0x2+0x4,0x2d,arx(0x5e7),'',2.5,![]);a48[arx(0x687)]=!![],a48['gradientOpacity']=0.65;var a49=Mj(Kq['pkghYgdlX'],'0',a3Z+0x35,a3r/0x2+0x4,0x2d,arx(0x5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Alias of loadSessionState; bracket-reads map/socket/matchmaker stall flags; SERVED: Alias of loadSessionState; bracket-reads map/socket/matchmaker stall flags (snippet-only twin).",
+   "name": "sessionState",
+   "selector": "a3o@u2806#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u2806",
+    "index": 0,
+    "refCount": 33,
+    "snippet": "function a1h(){var aCZ=ai1;if(a12==null)return'unknown';var a3o=a12;a1f();if(a3o['reasonOverride'])return a3o[\"reasonOve"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2806",
+    "index": 0,
+    "refCount": 33,
+    "snippet": "function a1h(){var aCZ=ai1;if(a12==null)return'unknown';var a3o=a12;a1f();if(a3o['reasonOverride'])return a3o[aCZ(0x76f)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {types} payload emitted with matchmaker-packets-sent event; SERVED: {types} payload emitted with matchmaker-packets-sent event (snippet-only twin).",
+   "name": "packetsSentPayload",
+   "selector": "a3A@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "]['type']||'unknown'),a1v[a3z]['type']=='matchmake'&&(a12['matchmaker'][\"matchmakeSent\"]=!![]);}var a3A={};a3A[\"types\"]=a3y,a1e(\"matchmaker-packets-sent\",a3A);}"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "v[a3z]['type']||'unknown'),a1v[a3z]['type']=='matchmake'&&(a12['matchmaker'][aDm(0x651)]=!![]);}var a3A={};a3A[aDm(0xefd)]=a3y,a1e(aDm(0x71e),a3A);}a1t['send']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {default:endpoint} wrapper nested under ports key; SERVED: {default:endpoint} wrapper nested under ports key (snippet-only twin).",
+   "name": "defaultEndpointMap",
+   "selector": "a3A@u2823#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "Tls']=!![],a3z['origin']=\"ip_\"+a3x['ip']+\".de\"+'adshot.io:'+a3x['port'],a3z['port']=a3x[\"port\"];var a3A={};a3A['default']=a3z;var a3B={};a3B['ports']=a3A;var a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "['origin']=aDn(0x117)+a3x['ip']+aDn(0x6f5)+'adshot.io:'+a3x['port'],a3z['port']=a3x[aDn(0x3d7)];var a3A={};a3A['default']=a3z;var a3B={};a3B['ports']=a3A;var a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index iterating party members array; SERVED: loop index iterating party members array (snippet-only twin).",
+   "name": "memberIndex",
+   "selector": "a3A@u2823#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "]();}},'pu':function(a3x){var aDo=aDl,a3y=[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x['leader'];for(var a3A=0x0;a3A<a3x['m'][\"length\"];a3A++){var a3B=a3x['m'][a3A],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 5,
+    "snippet": "]();}},'pu':function(a3x){var aDo=aDl,a3y=[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x['leader'];for(var a3A=0x0;a3A<a3x['m'][aDo(0x3a2)];a3A++){var a3B=a3x['m'][a3A"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inviteLink callback error param, logged on failure; SERVED: inviteLink callback error param, logged on failure (snippet-only twin).",
+   "name": "inviteError",
+   "selector": "a3A@u2823#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "efined)a1z(a1x,\"Join my pa\"+'rty\\x20on\\x20De'+\"adshot!\");else var a3z=Gn['inviteLink'](a3y,function(a3A,a3B){var aDq=aDp;!a3A?a1z(a3B,'Join\\x20my\\x20pa'+'rty\\x2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "defined)a1z(a1x,aDp(0x1a4)+'rty\\x20on\\x20De'+aDp(0x4b9));else var a3z=Gn['inviteLink'](a3y,function(a3A,a3B){var aDq=aDp;!a3A?a1z(a3B,'Join\\x20my\\x20pa'+'rty\\x2"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index collecting decoded message type strings; SERVED: loop index collecting decoded message type strings (snippet-only twin).",
+   "name": "msgIndex",
+   "selector": "a3A@u2823#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u2823",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "12!=null){a12['matchmaker'][\"messages\"]=(a12[\"matchmaker\"]['messages']||0x0)+0x1;var a3z=[];for(var a3A=0x0;a3A<a3y['length'];a3A++){a3z[\"push\"](a3y[a3A]['t']||"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "(a12!=null){a12['matchmaker'][aDu(0x135)]=(a12[aDu(0xa7b)]['messages']||0x0)+0x1;var a3z=[];for(var a3A=0x0;a3A<a3y['length'];a3A++){a3z[aDu(0xf1e)](a3y[a3A]['t"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {ports:defaultMap} config passed to connector; SERVED: {ports:defaultMap} config passed to connector (snippet-only twin).",
+   "name": "portsConfig",
+   "selector": "a3B@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "+a3x['ip']+\".de\"+'adshot.io:'+a3x['port'],a3z['port']=a3x[\"port\"];var a3A={};a3A['default']=a3z;var a3B={};a3B['ports']=a3A;var a3C=a3B;a1o(a3C);}else{var a3D={"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "]+aDn(0x6f5)+'adshot.io:'+a3x['port'],a3z['port']=a3x[aDn(0x3d7)];var a3A={};a3A['default']=a3z;var a3B={};a3B['ports']=a3A;var a3C=a3B;a1o(a3C);}else{var a3D={"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: raw member tuple destructured into profile object; SERVED: raw member tuple destructured into profile object (snippet-only twin).",
+   "name": "memberEntry",
+   "selector": "a3B@u2823#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x['leader'];for(var a3A=0x0;a3A<a3x['m'][\"length\"];a3A++){var a3B=a3x['m'][a3A],a3C={};a3C[\"name\"]=a3B[0x0],a3C['skins']=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 6,
+    "snippet": ",a3z=0x0;Kq['isLeader']=a3x['u']==a3x['leader'];for(var a3A=0x0;a3A<a3x['m'][aDo(0x3a2)];a3A++){var a3B=a3x['m'][a3A],a3C={};a3C[aDo(0x9ec)]=a3B[0x0],a3C['skins"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inviteLink callback link value shared via a1z; SERVED: inviteLink callback link value shared via a1z (snippet-only twin).",
+   "name": "inviteLinkUrl",
+   "selector": "a3B@u2823#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "ed)a1z(a1x,\"Join my pa\"+'rty\\x20on\\x20De'+\"adshot!\");else var a3z=Gn['inviteLink'](a3y,function(a3A,a3B){var aDq=aDp;!a3A?a1z(a3B,'Join\\x20my\\x20pa'+'rty\\x20on\\"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "ned)a1z(a1x,aDp(0x1a4)+'rty\\x20on\\x20De'+aDp(0x4b9));else var a3z=Gn['inviteLink'](a3y,function(a3A,a3B){var aDq=aDp;!a3A?a1z(a3B,'Join\\x20my\\x20pa'+'rty\\x20on\\"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {types} payload emitted with matchmaker-message event; SERVED: {types} payload emitted with matchmaker-message event (snippet-only twin).",
+   "name": "messageTypesPayload",
+   "selector": "a3B@u2823#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "+0x1;var a3z=[];for(var a3A=0x0;a3A<a3y['length'];a3A++){a3z[\"push\"](a3y[a3A]['t']||\"unknown\");}var a3B={};a3B[\"types\"]=a3z,a1e(\"matchmaker-message\",a3B);}for(v"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "var a3z=[];for(var a3A=0x0;a3A<a3y['length'];a3A++){a3z[aDu(0xf1e)](a3y[a3A]['t']||aDu(0xb1c));}var a3B={};a3B[aDu(0xefd)]=a3z,a1e(aDu(0x5c8),a3B);}for(var a3C="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: aliases ports wrapper passed to connector; SERVED: aliases ports wrapper passed to connector (snippet-only twin).",
+   "name": "serverConfig",
+   "selector": "a3C@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'+a3x['port'],a3z['port']=a3x[\"port\"];var a3A={};a3A['default']=a3z;var a3B={};a3B['ports']=a3A;var a3C=a3B;a1o(a3C);}else{var a3D={};a3D[\"hostname\"]=location[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "x['port'],a3z['port']=a3x[aDn(0x3d7)];var a3A={};a3A['default']=a3z;var a3B={};a3B['ports']=a3A;var a3C=a3B;a1o(a3C);}else{var a3D={};a3D[aDn(0x157)]=location[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: member object with name skins ready team; SERVED: member object with name skins ready team (snippet-only twin).",
+   "name": "memberProfile",
+   "selector": "a3C@u2823#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 7,
+    "snippet": "eader']=a3x['u']==a3x['leader'];for(var a3A=0x0;a3A<a3x['m'][\"length\"];a3A++){var a3B=a3x['m'][a3A],a3C={};a3C[\"name\"]=a3B[0x0],a3C['skins']=a3B[0x1],a3C['ready"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 7,
+    "snippet": "der']=a3x['u']==a3x['leader'];for(var a3A=0x0;a3A<a3x['m'][aDo(0x3a2)];a3A++){var a3B=a3x['m'][a3A],a3C={};a3C[aDo(0x9ec)]=a3B[0x0],a3C['skins']=a3B[0x1],a3C['r"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: dispatch loop index over decoded packets; SERVED: dispatch loop index over decoded packets (snippet-only twin).",
+   "name": "packetIndex",
+   "selector": "a3C@u2823#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "ush\"](a3y[a3A]['t']||\"unknown\");}var a3B={};a3B[\"types\"]=a3z,a1e(\"matchmaker-message\",a3B);}for(var a3C=0x0;a3C<a3y['length'];a3C++){var a3D=a3y[a3C];if(a3t[a3D"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "aDu(0xf1e)](a3y[a3A]['t']||aDu(0xb1c));}var a3B={};a3B[aDu(0xefd)]=a3z,a1e(aDu(0x5c8),a3B);}for(var a3C=0x0;a3C<a3y['length'];a3C++){var a3D=a3y[a3C];if(a3t[a3D"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {default:localEndpoint} wrapper under ports key; SERVED: {default:localEndpoint} wrapper under ports key (snippet-only twin).",
+   "name": "localDefaultMap",
+   "selector": "a3E@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tion[\"hostname\"],a3D['isTls']=![],a3D['origin']=location['hostname']+':8080',a3D['port']=0x1f90;var a3E={};a3E[\"default\"]=a3D;var a3F={};a3F['ports']=a3E;var a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tion[aDn(0x157)],a3D['isTls']=![],a3D['origin']=location['hostname']+':8080',a3D['port']=0x1f90;var a3E={};a3E[aDn(0xe5)]=a3D;var a3F={};a3F['ports']=a3E;var a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {ports:localDefault} config receiving player stub; SERVED: {ports:localDefault} config receiving player stub (snippet-only twin).",
+   "name": "localPortsConfig",
+   "selector": "a3F@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "![],a3D['origin']=location['hostname']+':8080',a3D['port']=0x1f90;var a3E={};a3E[\"default\"]=a3D;var a3F={};a3F['ports']=a3E;var a3C=a3F,a3G={};a3G['token']='',a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "![],a3D['origin']=location['hostname']+':8080',a3D['port']=0x1f90;var a3E={};a3E[aDn(0xe5)]=a3D;var a3F={};a3F['ports']=a3E;var a3C=a3F,a3G={};a3G['token']='',a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {token:''} attached as player field; SERVED: {token:''} attached as player field (snippet-only twin).",
+   "name": "playerStub",
+   "selector": "a3G@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "']+':8080',a3D['port']=0x1f90;var a3E={};a3E[\"default\"]=a3D;var a3F={};a3F['ports']=a3E;var a3C=a3F,a3G={};a3G['token']='',a3C['pla'+'yer']=a3G,a1o(a3C);}if(!Kq"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "']+':8080',a3D['port']=0x1f90;var a3E={};a3E[aDn(0xe5)]=a3D;var a3F={};a3F['ports']=a3E;var a3C=a3F,a3G={};a3G['token']='',a3C['pla'+'yer']=a3G,a1o(a3C);}if(!Kq"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: document body element for requestFullscreen call; SERVED: document body element for requestFullscreen call (snippet-only twin).",
+   "name": "bodyEl",
+   "selector": "a3H@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3G={};a3G['token']='',a3C['pla'+'yer']=a3G,a1o(a3C);}if(!Kq[\"GJklRqbLTCs\"])a1t['close']();else{var a3H=document['body'];GA&&a3H[\"requestFullscreen\"]();}},'pu':"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "3F,a3G={};a3G['token']='',a3C['pla'+'yer']=a3G,a1o(a3C);}if(!Kq[aDn(0x156)])a1t['close']();else{var a3H=document['body'];GA&&a3H[aDn(0x926)]();}},'pu':function("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {isParty,error} payload for create-error event; SERVED: {isParty,error} payload for create-error event (snippet-only twin).",
+   "name": "createErrorPayload",
+   "selector": "a3q@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a1B['fail'](\"create\",a12!=null?a12['matchmaker']['createError']:a19(a3v));return;}if(a12!=null){var a3q={};a3q['isParty']=a3p,a3q['error']=a12['matchmaker'][\"cr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "B['fail'](aDl(0xf2a),a12!=null?a12['matchmaker']['createError']:a19(a3v));return;}if(a12!=null){var a3q={};a3q['isParty']=a3p,a3q['error']=a12['matchmaker'][aDl"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: {isParty} payload for socket-create event; SERVED: {isParty} payload for socket-create event (snippet-only twin).",
+   "name": "socketCreatePayload",
+   "selector": "a3r@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "rl']=a1b(a1t[\"url\"]||(a3p?'wss://aMWaisFtZ.deadshot.io/ws':'wss://matchmaking.deadshot.io/ws'));var a3r={};a3r['isParty']=a3p,a1e(\"matchmaker-socket-create\",a3r"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a1b(a1t[aDl(0x51f)]||(a3p?'wss://aMWaisFtZ.deadshot.io/ws':'wss://matchmaking.deadshot.io/ws'));var a3r={};a3r['isParty']=a3p,a1e(aDl(0x1017),a3r);}try{a1t[aDl("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: handler table dispatched by packet type; SERVED: handler table dispatched by packet type (snippet-only twin).",
+   "name": "packetHandlers",
+   "selector": "a3t@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "[\"types\"]=a3y,a1e(\"matchmaker-packets-sent\",a3A);}a1t['send'](msgpack['encode'](a1v)),a1v=[];}};var a3t={'connect':function(a3x){var aDn=aDl;if(a12!=null){a12[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "r a3A={};a3A[aDm(0xefd)]=a3y,a1e(aDm(0x71e),a3A);}a1t['send'](msgpack['encode'](a1v)),a1v=[];}};var a3t={'connect':function(a3x){var aDn=aDl;if(a12!=null){a12[a"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead catch param in empty block, never read",
+   "selector": "a3u@u2823#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: caught binaryType-set error reported via onerror; SERVED: caught binaryType-set error reported via onerror (snippet-only twin).",
+   "name": "binaryTypeError",
+   "selector": "a3w@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ";a3r['isParty']=a3p,a1e(\"matchmaker-socket-create\",a3r);}try{a1t[\"binaryType\"]=\"arraybuffer\";}catch(a3w){window[\"onerror\"](\"Matchmaker socket setup failed\"),win"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ".io/ws'));var a3r={};a3r['isParty']=a3p,a1e(aDl(0x1017),a3r);}try{a1t[aDl(0x959)]=aDl(0x1e2);}catch(a3w){window[aDl(0x15f)](aDl(0x791)),window['onerror'](a3w);a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Waiting-branch payload reporting queuedPackets length both sides; SERVED: Waiting-branch payload reporting queuedPackets length both sides (snippet-only twin).",
+   "name": "handshakeWaitEvent",
+   "selector": "a3x@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",a3s);}return;}a1v=[],a1w=function(){var aDm=aDl;if(a1u==-0x1){if(a12!=null&&a1v['length']>0x0){var a3x={};a3x['queuedPackets']=a1v[\"length\"],a1e('matchmaker-wa"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",a3s);}return;}a1v=[],a1w=function(){var aDm=aDl;if(a1u==-0x1){if(a12!=null&&a1v['length']>0x0){var a3x={};a3x['queuedPackets']=a1v[aDm(0x3a2)],a1e('matchmaker-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Connect handler reads port, r, ip both sides; SERVED: Connect handler reads port, r, ip both sides (snippet-only twin).",
+   "name": "connectPacket",
+   "selector": "a3x@u2823#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 7,
+    "snippet": "maker-packets-sent\",a3A);}a1t['send'](msgpack['encode'](a1v)),a1v=[];}};var a3t={'connect':function(a3x){var aDn=aDl;if(a12!=null){a12[\"matchmaker\"][\"connectRec"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 7,
+    "snippet": "=a3y,a1e(aDm(0x71e),a3A);}a1t['send'](msgpack['encode'](a1v)),a1v=[];}};var a3t={'connect':function(a3x){var aDn=aDl;if(a12!=null){a12[aDn(0xa7b)][aDn(0x415)]=!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Party update reads u, leader, members, priv both sides; SERVED: Party update reads u, leader, members, priv both sides (snippet-only twin).",
+   "name": "partyUpdatePacket",
+   "selector": "a3x@u2823#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "LTCs\"])a1t['close']();else{var a3H=document['body'];GA&&a3H[\"requestFullscreen\"]();}},'pu':function(a3x){var aDo=aDl,a3y=[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "!Kq[aDn(0x156)])a1t['close']();else{var a3H=document['body'];GA&&a3H[aDn(0x926)]();}},'pu':function(a3x){var aDo=aDl,a3y=[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Party-id handler builds invite URL from id, copy; SERVED: Party-id handler builds invite URL from id, copy (snippet-only twin).",
+   "name": "partyIdPacket",
+   "selector": "a3x@u2823#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 7,
+    "snippet": "'priv'],Kq[\"aMWaisFtZ\"]=a3y,Kq[\"partyInfo\"]=a3x[\"inf\"],Kq[\"updateParty\"](),Rj();},'prtyid':function(a3x){var aDp=aDl;Kq['nqGdHvcxPf'](),Kq[\"ARtNrebjC\"](),a1x='h"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 7,
+    "snippet": "'priv'],Kq[aDo(0xa39)]=a3y,Kq[aDo(0xc52)]=a3x[aDo(0x7ce)],Kq[aDo(0x9fe)](),Rj();},'prtyid':function(a3x){var aDp=aDl;Kq['nqGdHvcxPf'](),Kq[aDp(0x1e5)](),a1x='ht"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Challenge handler solves a3x['a'], stamps queue; SERVED: Challenge handler solves a3x['a'], stamps queue (snippet-only twin).",
+   "name": "challengePacket",
+   "selector": "a3x@u2823#5",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2823",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "hBqACvqzO']();},'joinsuccess':function(a3x){Kq['ARtNrebjC'](),Kq['GJklRqbLTCs']=!![];},'a':function(a3x){var aDr=aDl;a12!=null&&(a12[\"matchmaker\"]['challengeRec"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "hBqACvqzO']();},'joinsuccess':function(a3x){Kq['ARtNrebjC'](),Kq['GJklRqbLTCs']=!![];},'a':function(a3x){var aDr=aDl;a12!=null&&(a12[aDr(0xa7b)]['challengeRecei"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Error handler surfaces message thrice; key hits benign; SERVED: Error handler surfaces message thrice; key hits benign (snippet-only twin).",
+   "name": "errorPacket",
+   "selector": "a3x@u2823#6",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2823",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "\"];a3y++){a1v[a3y]['b']!=undefined&&(a1v[a3y]['b']=a1u);}Kq['hBqACvqzO'](),a1w();},'error':function(a3x){var aDs=aDl;if(a12!=null){a12['matchmaker']['errorPacke"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 6,
+    "refCount": 3,
+    "snippet": ")];a3y++){a1v[a3y]['b']!=undefined&&(a1v[a3y]['b']=a1u);}Kq['hBqACvqzO'](),a1w();},'error':function(a3x){var aDs=aDl;if(a12!=null){a12['matchmaker']['errorPacke"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Unused kicked-handler parameter, refCount zero",
+   "selector": "a3x@u2823#7",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Message event data msgpack-decoded dispatching packets; SERVED: Message event data msgpack-decoded dispatching packets (snippet-only twin).",
+   "name": "socketMessageEvent",
+   "selector": "a3x@u2823#8",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2823",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "['message']);},'kicked':function(a3x){var aDt=aDl;Kq[\"wasKicked\"]=!![];}};a1t['onmessage']=function(a3x){var aDu=aDl;if(msgpack!==undefined){var a3y=msgpack['de"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 8,
+    "refCount": 1,
+    "snippet": "x['message']);},'kicked':function(a3x){var aDt=aDl;Kq[aDt(0x976)]=!![];}};a1t['onmessage']=function(a3x){var aDu=aDl;if(msgpack!==undefined){var a3y=msgpack['de"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Socket error formatted into telemetry payload; SERVED: Socket error formatted into telemetry payload (snippet-only twin).",
+   "name": "socketError",
+   "selector": "a3x@u2823#9",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2823",
+    "index": 9,
+    "refCount": 1,
+    "snippet": "le['log'](\"Encountered issue: unknown packet type\"),console['log'](a3y);}}},a1t['onerror']=function(a3x){var aDv=aDl;if(a12!=null){a12[\"matchmaker\"]['errors']=("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 9,
+    "refCount": 1,
+    "snippet": ")a3t[a3D['t']](a3D);else console['log'](aDu(0x7b3)),console['log'](a3y);}}},a1t['onerror']=function(a3x){var aDv=aDl;if(a12!=null){a12[aDv(0xa7b)]['errors']=(a1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Flush collects queued packet type strings; SERVED: Flush collects queued packet type strings (snippet-only twin).",
+   "name": "sentPacketTypes",
+   "selector": "a3y@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "aiting-for-handshake',a3x);}return;}if(a1t['readyState']==0x1){if(a12!=null&&a1v['length']>0x0){var a3y=[];for(var a3z=0x0;a3z<a1v[\"length\"];a3z++){a3y['push']("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "aiting-for-handshake',a3x);}return;}if(a1t['readyState']==0x1){if(a12!=null&&a1v['length']>0x0){var a3y=[];for(var a3z=0x0;a3z<a1v[aDm(0x3a2)];a3z++){a3y['push'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Connect-received event carries game port; SERVED: Connect-received event carries game port (snippet-only twin).",
+   "name": "connectEvent",
+   "selector": "a3y@u2823#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "(a12!=null){a12[\"matchmaker\"][\"connectReceived\"]=!![],a12[\"matchmaker\"]['gamePort']=a3x[\"port\"];var a3y={};a3y[\"port\"]=a3x['port'],a1e('matchmaker-connect-recei"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "=aDl;if(a12!=null){a12[aDn(0xa7b)][aDn(0x415)]=!![],a12[aDn(0xa7b)]['gamePort']=a3x[aDn(0x3d7)];var a3y={};a3y[aDn(0x3d7)]=a3x['port'],a1e('matchmaker-connect-r"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Party member objects pushed then stored; SERVED: Party member objects pushed then stored (snippet-only twin).",
+   "name": "partyRoster",
+   "selector": "a3y@u2823#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "']();else{var a3H=document['body'];GA&&a3H[\"requestFullscreen\"]();}},'pu':function(a3x){var aDo=aDl,a3y=[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x['leader'];for(va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "1t['close']();else{var a3H=document['body'];GA&&a3H[aDn(0x926)]();}},'pu':function(a3x){var aDo=aDl,a3y=[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x['leader'];for(va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Invite payload passed to inviteLink and button; SERVED: Invite payload passed to inviteLink and button (snippet-only twin).",
+   "name": "partyInvitePayload",
+   "selector": "a3y@u2823#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "UqMaJVeTK\"]['text']='Party\\x20ID:\\x20'+a1y[\"toUpperCase\"](),Kq[\"psUqMaJVeTK\"][\"ReDNKHkwk\"]=!![];let a3y={};a3y['pa'+'rty']=a3x['id'];if(a3x['copy']){if(QN)a1x='"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "d'],Kq[aDp(0xc8b)]['text']='Party\\x20ID:\\x20'+a1y[aDp(0xe30)](),Kq[aDp(0xc8b)][aDp(0xb1d)]=!![];let a3y={};a3y['pa'+'rty']=a3x['id'];if(a3x['copy']){if(QN)a1x='"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index stamping queued packets handshake id; SERVED: Loop index stamping queued packets handshake id (snippet-only twin).",
+   "name": "sendQueueIndex",
+   "selector": "a3y@u2823#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2823",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "maker\"]['challengeReceived']=!![],a1e(\"matchmaker-handshake-received\",{}));a1u=I1(a3x['a']);for(var a3y=0x0;a3y<a1v[\"length\"];a3y++){a1v[a3y]['b']!=undefined&&("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 4,
+    "refCount": 4,
+    "snippet": ";a12!=null&&(a12[aDr(0xa7b)]['challengeReceived']=!![],a1e(aDr(0xf9e),{}));a1u=I1(a3x['a']);for(var a3y=0x0;a3y<a1v[aDr(0x3a2)];a3y++){a1v[a3y]['b']!=undefined&"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Msgpack-decoded packets dispatched by type; SERVED: Msgpack-decoded packets dispatched by type (snippet-only twin).",
+   "name": "decodedPackets",
+   "selector": "a3y@u2823#6",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2823",
+    "index": 6,
+    "refCount": 5,
+    "snippet": "=aDl;Kq[\"wasKicked\"]=!![];}};a1t['onmessage']=function(a3x){var aDu=aDl;if(msgpack!==undefined){var a3y=msgpack['decode'](new Uint8Array(a3x[\"data\"]));if(a12!=n"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 6,
+    "refCount": 5,
+    "snippet": "t=aDl;Kq[aDt(0x976)]=!![];}};a1t['onmessage']=function(a3x){var aDu=aDl;if(msgpack!==undefined){var a3y=msgpack['decode'](new Uint8Array(a3x[aDu(0x7d1)]));if(a1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Socket-error telemetry carries lastError string; SERVED: Socket-error telemetry carries lastError string (snippet-only twin).",
+   "name": "socketErrorEvent",
+   "selector": "a3y@u2823#7",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2823",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "aker\"]['errors']=(a12[\"matchmaker\"]['errors']||0x0)+0x1,a12['matchmaker']['lastError']=a19(a3x);var a3y={};a3y[\"error\"]=a12[\"matchmaker\"][\"lastError\"],a1e(\"matc"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "(0xa7b)]['errors']=(a12[aDv(0xa7b)]['errors']||0x0)+0x1,a12['matchmaker']['lastError']=a19(a3x);var a3y={};a3y[aDv(0x646)]=a12[aDv(0xa7b)][aDv(0x59c)],a1e(aDv(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop index scanning queued packet types; SERVED: Loop index scanning queued packet types (snippet-only twin).",
+   "name": "packetIndex",
+   "selector": "a3z@u2823#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "shake',a3x);}return;}if(a1t['readyState']==0x1){if(a12!=null&&a1v['length']>0x0){var a3y=[];for(var a3z=0x0;a3z<a1v[\"length\"];a3z++){a3y['push'](a1v[a3z]['type'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "shake',a3x);}return;}if(a1t['readyState']==0x1){if(a12!=null&&a1v['length']>0x0){var a3y=[];for(var a3z=0x0;a3z<a1v[aDm(0x3a2)];a3z++){a3y['push'](a1v[a3z]['typ"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Game server hostname, tls, origin, port object; SERVED: Game server hostname, tls, origin, port object (snippet-only twin).",
+   "name": "gameServerConfig",
+   "selector": "a3z@u2823#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "a3y={};a3y[\"port\"]=a3x['port'],a1e('matchmaker-connect-received',a3y);}a1C=a3x['r'];if(!Gq||Fz){var a3z={};a3z['hostname']='ip_'+a3x['ip']+'.de'+'adshot.io',a3z"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "{};a3y[aDn(0x3d7)]=a3x['port'],a1e('matchmaker-connect-received',a3y);}a1C=a3x['r'];if(!Gq||Fz){var a3z={};a3z['hostname']='ip_'+a3x['ip']+'.de'+'adshot.io',a3z"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: Counter assigning podium slots to members; SERVED: Counter assigning podium slots to members (snippet-only twin).",
+   "name": "memberSlotCounter",
+   "selector": "a3z@u2823#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "se{var a3H=document['body'];GA&&a3H[\"requestFullscreen\"]();}},'pu':function(a3x){var aDo=aDl,a3y=[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x['leader'];for(var a3A=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "se']();else{var a3H=document['body'];GA&&a3H[aDn(0x926)]();}},'pu':function(a3x){var aDo=aDl,a3y=[],a3z=0x0;Kq['isLeader']=a3x['u']==a3x['leader'];for(var a3A=0"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding, inviteLink result never read",
+   "selector": "a3z@u2823#3",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Onmessage collects received packet type strings; SERVED: Onmessage collects received packet type strings (snippet-only twin).",
+   "name": "receivedPacketTypes",
+   "selector": "a3z@u2823#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u2823",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "[\"data\"]));if(a12!=null){a12['matchmaker'][\"messages\"]=(a12[\"matchmaker\"]['messages']||0x0)+0x1;var a3z=[];for(var a3A=0x0;a3A<a3y['length'];a3A++){a3z[\"push\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2823",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "Du(0x7d1)]));if(a12!=null){a12['matchmaker'][aDu(0x135)]=(a12[aDu(0xa7b)]['messages']||0x0)+0x1;var a3z=[];for(var a3A=0x0;a3A<a3y['length'];a3A++){a3z[aDu(0xf1"
+   }
+  }
+ ]
+}

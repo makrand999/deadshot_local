@@ -1,0 +1,223 @@
+{
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @819412 warp(): var timeScale=this.timeScale; USES 2 refs in interpolant values; canonical AnimationAction.timeScale — already readable, keep.",
+      "name": "timeScale",
+      "selector": "timeScale@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @821564 _updateTimeScale(): var timeScale=0 accumulates this.timeScale*interpolant; USES 6 refs; canonical engine term — keep.",
+      "name": "timeScale",
+      "selector": "timeScale@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @819828 stopWarping(): var timeScaleInterpolant=this._timeScaleInterpolant; USES 2 refs (null-check + takeBack); descriptive engine term — keep.",
+      "name": "timeScaleInterpolant",
+      "selector": "timeScaleInterpolant@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @659996 getKeyframeOrder(times) param; USES 3 refs (times[i], times.length sort); canonical KeyframeTrack.times — keep.",
+      "name": "times",
+      "selector": "times@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @660505 flattenJSON(jsonKeys,times,...) param; USES 3 refs (times.push keyframe times); canonical term — keep.",
+      "name": "times",
+      "selector": "times@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @661487 subclip(): var times=[] collects track.times[j] in frame window; USES 3 refs; canonical term — keep.",
+      "name": "times",
+      "selector": "times@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @669442 KeyframeTrack(name,times,values,...) ctor param; USES 3 refs; canonical three.js constructor signature — keep.",
+      "name": "times",
+      "selector": "times@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @672187 shift(): var times=this.times, times[i]+=offset; USES 2 refs; mirrors this.times property — keep.",
+      "name": "times",
+      "selector": "times@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @672333 scale(): var times=this.times, times[i]*=timeScale; USES 2 refs; mirrors this.times property — keep.",
+      "name": "times",
+      "selector": "times@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @672466 trim(): var times=this.times,nKeys=times.length window scan; USES 4 refs; mirrors this.times — keep.",
+      "name": "times",
+      "selector": "times@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @673070 validate(): var times=this.times,values=...,nKeys=times.length checks; USES 2 refs; mirrors this.times — keep.",
+      "name": "times",
+      "selector": "times@u0020#7"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @673900 optimize(): var times=arraySlice(this.times) dedupe compaction; USES 10 refs; canonical buffer copy — keep.",
+      "name": "times",
+      "selector": "times@u0020#8"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @675139 clone(): var times=arraySlice(this.times,0) passed to new track; USES 1 ref; canonical clone — keep.",
+      "name": "times",
+      "selector": "times@u0020#9"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @675433 BooleanKeyframeTrack(name,times,values) param forwarded to KeyframeTrack.call; USES 1 ref; canonical signature — keep.",
+      "name": "times",
+      "selector": "times@u0020#10"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @675810 ColorKeyframeTrack(name,times,values,interpolation) param forwarded to KeyframeTrack.call; USES 1 ref; canonical signature — keep.",
+      "name": "times",
+      "selector": "times@u0020#11"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @676068 param of NumberKeyframeTrack(name,times,values,interpolation), forwarded to KeyframeTrack.call; canonical three.js animation API name (threejs-animation.md).",
+      "name": "times",
+      "selector": "times@u0020#12"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @676942 param of QuaternionKeyframeTrack(name,times,values,interpolation), forwarded to KeyframeTrack.call; canonical three.js animation API name.",
+      "name": "times",
+      "selector": "times@u0020#13"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @677467 param of StringKeyframeTrack(name,times,values,interpolation), forwarded to KeyframeTrack.call; canonical three.js animation API name.",
+      "name": "times",
+      "selector": "times@u0020#14"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @677873 param of VectorKeyframeTrack(name,times,values,interpolation), forwarded to KeyframeTrack.call; canonical three.js animation API name.",
+      "name": "times",
+      "selector": "times@u0020#15"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @679148 var times=[] in parseKeyframeTrack, filled via AnimationUtils.flattenJSON(json.keys,...) then json.times=times; canonical keyframe-times array.",
+      "name": "times",
+      "selector": "times@u0020#16"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @680233 var times=[] in CreateFromMorphTargetSequence, pushed/sorted then passed to NumberKeyframeTrack; canonical keyframe-times array.",
+      "name": "times",
+      "selector": "times@u0020#17"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @682042 var times=[] in addNonemptyTrack, filled via flattenJSON then passed to new trackType(trackName,times,values); canonical keyframe-times array.",
+      "name": "times",
+      "selector": "times@u0020#18"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @682844 var times=[] in parseAnimation morph-target loop, pushed from animationKey.time then passed to NumberKeyframeTrack; canonical keyframe-times array.",
+      "name": "times",
+      "selector": "times@u0020#19"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @819596 var times=interpolant.parameterPositions in AnimationAction.warp, times[0]=now/times[1]=now+duration; canonical interpolant alias, already-readable.",
+      "name": "times",
+      "selector": "times@u0020#20"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @824259 var times=interpolant.parameterPositions in _scheduleFading, times[0]=now/times[1]=now+duration; canonical interpolant alias, already-readable.",
+      "name": "times",
+      "selector": "times@u0020#21"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @72244 var tmin,tmax,... in Ray.intersectBox slab test, refCount=14 tightening per-axis bounds; canonical ray-box idiom, already-readable.",
+      "name": "tmax",
+      "selector": "tmax@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @72239 var tmin,tmax,... in Ray.intersectBox slab test, refCount=14 tightening per-axis bounds; canonical ray-box idiom, already-readable.",
+      "name": "tmin",
+      "selector": "tmin@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @564826 var tmpGeo=new Geometry() in computeMorphNormals, vertices swapped per morph target to computeFace/VertexNormals; readable temp-geometry idiom.",
+      "name": "tmpGeo",
+      "selector": "tmpGeo@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @776605 var tmpHoles in ShapeGeometry hole-reassignment block, refCount=3; readable temp-holes idiom, role clear from context.",
+      "name": "tmpHoles",
+      "selector": "tmpHoles@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @872215 var tmpMesh=new Mesh(_lodPlanes[0],material) in _compileMaterial to force-compile; readable temp-mesh idiom, role clear.",
+      "name": "tmpMesh",
+      "selector": "tmpMesh@u0020#0"
+    }
+  ],
+  "slice": "01",
+  "stats": {
+    "total": 30,
+    "rename": 0,
+    "keep": 30,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

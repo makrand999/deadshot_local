@@ -1,0 +1,87 @@
+# DOSSIER slice-04 (wave 56, 10 bindings, 10 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/10] GA@u1720#0 | kind=var depth=3 refCount=12 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @312 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=12, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @313 (verified), servedRefCount=12:
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()[ai1(0xfad)]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500);var GD=![],GE=![];}
+SERVED USES: 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/10] GB@u1720#0 | kind=var depth=3 refCount=4 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @422 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=4, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @425 (verified), servedRefCount=4:
+'platform']['toUpperCase']()[ai1(0xfad)]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500);var GD=![],GE=![];}
+SERVED USES: 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/10] GC@u1720#0 | kind=var depth=3 refCount=5 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @429 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=5, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @432 (verified), servedRefCount=5:
+rm']['toUpperCase']()[ai1(0xfad)]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500);var GD=![],GE=![];}
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/10] GD@u1720#0 | kind=var depth=3 refCount=5 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @489 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=5, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @484 (verified), servedRefCount=5:
+vigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500);var GD=![],GE=![];}
+SERVED USES: 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/10] GE@u1720#0 | kind=var depth=3 refCount=4 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @496 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=4, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @491 (verified), servedRefCount=4:
+['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500);var GD=![],GE=![];}
+SERVED USES: 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/10] Gv@u1720#0 | kind=var depth=3 refCount=5 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @12 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=5, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @12 (verified), servedRefCount=5:
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()[ai1(0xfad)]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(
+SERVED USES: 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/10] Gw@u1720#0 | kind=var depth=3 refCount=2 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @78 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=2, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @79 (verified), servedRefCount=2:
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()[ai1(0xfad)]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500)
+SERVED USES: 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/10] Gx@u1720#0 | kind=var depth=3 refCount=3 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @147 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=3, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @148 (verified), servedRefCount=3:
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()[ai1(0xfad)]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500);var GD=![],GE=![];}
+SERVED USES: 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/10] Gy@u1720#0 | kind=var depth=3 refCount=2 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @201 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @202 (verified), servedRefCount=2:
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()[ai1(0xfad)]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500);var GD=![],GE=![];}
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/10] Gz@u1720#0 | kind=var depth=3 refCount=13 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @254 (verified):
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()["indexOf"]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator["userAgent"]['indexOf']("Firefox")!=-0x1,Gy=navigator["userAgent"]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent']["indexOf"]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location["protocol"]!=="https:"){}var GB=![],GC='default';Gw&&(GC='low-power');GC="high-performance";var GD=![],GE=![];}
+USES: refCount=13, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @254 (verified), servedRefCount=13:
+if(!pZ){var Gv=navigator['platform']['toUpperCase']()[ai1(0xfad)]('MAC')!=-0x1,Gw=navigator['platform']['toUpperCase']()['indexOf']('IPHONE')!=-0x1,Gx=navigator[ai1(0xec9)]['indexOf'](ai1(0x64f))!=-0x1,Gy=navigator[ai1(0xec9)]['indexOf']('Chrome')!=-0x1,Gz=!Gy&&navigator['userAgent'][ai1(0xfad)]('Safari')!=-0x1,GA=window['location']==window['par'+'ent']['location']&&!Gv&&!Gx&&Gy;if(location[ai1(0xeee)]!==ai1(0x980)){}var GB=![],GC='default';Gw&&(GC='low-power');GC=ai1(0x500);var GD=![],GE=![];}
+SERVED USES: 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-04: propose EVERY binding above.

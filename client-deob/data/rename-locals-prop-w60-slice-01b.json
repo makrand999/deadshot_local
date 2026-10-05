@@ -1,0 +1,204 @@
+{
+ "meta": {
+  "slice": "01b",
+  "wave": 60
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a4g-built material clone, map uniform copied, side set; SERVED: identical (snippet-only twin).",
+   "name": "clonedMaterial",
+   "selector": "a5K@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: base plus textures path, webp override, loader input; SERVED: identical (snippet-only twin).",
+   "name": "textureUrl",
+   "selector": "a5a@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cached or loaded texture; wrap, anisotropy, uniforms push; SERVED: identical (snippet-only twin).",
+   "name": "mapTexture",
+   "selector": "a5b@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: name-keyed dict memoizing built face materials; SERVED: identical (snippet-only twin).",
+   "name": "materialCache",
+   "selector": "a5c@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vertex-color table lookup keying defs, cache, textures; SERVED: identical (snippet-only twin).",
+   "name": "faceMaterialName",
+   "selector": "a5d@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag marking material inserted into material array; SERVED: identical (snippet-only twin).",
+   "name": "materialPlaced",
+   "selector": "a5f@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: OY map 2D grid iterated, cells replaced by meshes; SERVED: identical (snippet-only twin).",
+   "name": "cullGrid",
+   "selector": "a5g@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flat mesh list collected, re-added in material order; SERVED: identical (snippet-only twin).",
+   "name": "splitMeshes",
+   "selector": "a5h@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: outer loop index over cull grid rows; SERVED: identical (snippet-only twin).",
+   "name": "gridRow",
+   "selector": "a5i@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner loop index over cull grid columns; SERVED: identical (snippet-only twin).",
+   "name": "gridCol",
+   "selector": "a5j@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-cell mesh list stored back into grid; SERVED: identical (snippet-only twin).",
+   "name": "cellMeshes",
+   "selector": "a5k@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: grid cell chunk converted into split mesh geometry; SERVED: identical (snippet-only twin).",
+   "name": "cellGeometry",
+   "selector": "a5l@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mesh copy sorted by boxSize for bbox combining; SERVED: identical (snippet-only twin).",
+   "name": "sortedMeshes",
+   "selector": "a5m@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bubble-sort swap temp for mesh ordering; SERVED: identical (snippet-only twin).",
+   "name": "swapMesh",
+   "selector": "a5n@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: bbox combine group size from config or one; SERVED: identical (snippet-only twin).",
+   "name": "combineCount",
+   "selector": "a5o@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: group lead mesh, merged bounds; else fresh cell mesh; SERVED: identical (snippet-only twin).",
+   "name": "chunkMesh",
+   "selector": "a5p@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mesh group whose bounds merge into lead mesh; SERVED: identical (snippet-only twin).",
+   "name": "combineGroup",
+   "selector": "a5q@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: WireframeGeometry built from map geometry for debug; SERVED: identical (snippet-only twin).",
+   "name": "wireframeGeometry",
+   "selector": "a5r@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: LineSegments overlay added to scene, faint transparent; SERVED: identical (snippet-only twin).",
+   "name": "wireframeLines",
+   "selector": "a5s@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: collected scene geometries merged by combineGeometries; SERVED: identical (snippet-only twin).",
+   "name": "geometriesToCombine",
+   "selector": "a5t@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traverse callback node contributing its geometry; SERVED: identical (snippet-only twin).",
+   "name": "traverseNode",
+   "selector": "a5u@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index disposing old hitbox meshes; SERVED: identical (snippet-only twin).",
+   "name": "hitboxIndex",
+   "selector": "a5u@u2654#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: shared translucent material for hitbox debug meshes; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMaterial",
+   "selector": "a5v@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: replaced geometry disposed and nulled after toBuffer; SERVED: identical (snippet-only twin).",
+   "name": "oldGeometry",
+   "selector": "a5w@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: spaceless name matched against material flag lists; SERVED: identical (snippet-only twin).",
+   "name": "normalizedTexName",
+   "selector": "a5x@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: constant-true gate selecting EQ occlusion-split path; SERVED: identical (snippet-only twin).",
+   "name": "useOcclusionSplit",
+   "selector": "a5y@u2654#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: flag true when texture src matches no exclusion pattern; SERVED: identical (snippet-only twin).",
+   "name": "srcUnmatched",
+   "selector": "a5z@u2654#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: per-cell per-material mesh pushed to both lists; SERVED: identical (snippet-only twin).",
+   "name": "splitMesh",
+   "selector": "a5z@u2654#1"
+  }
+ ]
+}

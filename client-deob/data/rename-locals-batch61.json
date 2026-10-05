@@ -1,0 +1,4755 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 61,
+  "date": "2026-09-29",
+  "merged": 195,
+  "heldLow": 0,
+  "heldInvalid": 1,
+  "kept": 4,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: array seeded from inputs, midpoints appended, scales first parameter; SERVED: identical (snippet-only twin).",
+   "name": "xCandidates",
+   "selector": "a3C@u2838#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "function a1W(a3x,a3y,a3z){var aDZ=ai1;if(OV!=null){var a3A=WY[RY][OO],a3B=X7,a3C=[],a3D=[];for(var a3E=0x0;a3E<a3z['length'];a3E++){a3C[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "function a1W(a3x,a3y,a3z){var aDZ=ai1;if(OV!=null){var a3A=WY[RY][OO],a3B=X7,a3C=[],a3D=[];for(var a3E=0x0;a3E<a3z['length'];a3E++){a3C[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: reused loop counter indexing candidates and score arrays; SERVED: identical (snippet-only twin).",
+   "name": "candIndex",
+   "selector": "a3E@u2838#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 33,
+    "snippet": "function a1W(a3x,a3y,a3z){var aDZ=ai1;if(OV!=null){var a3A=WY[RY][OO],a3B=X7,a3C=[],a3D=[];for(var a3E=0x0;a3E<a3z['length'];a3E++){a3C[\"push\"](a3z[a3E]),a3D['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 33,
+    "snippet": "function a1W(a3x,a3y,a3z){var aDZ=ai1;if(OV!=null){var a3A=WY[RY][OO],a3B=X7,a3C=[],a3D=[];for(var a3E=0x0;a3E<a3z['length'];a3E++){a3C[aDZ(0xf1e)](a3z[a3E]),a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: stores evaluator results for first-parameter trial perturbations; SERVED: identical (snippet-only twin).",
+   "name": "xTrialScores",
+   "selector": "a3F@u2838#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "[],a3D=[];for(var a3E=0x0;a3E<a3z['length'];a3E++){a3C[\"push\"](a3z[a3E]),a3D['push'](a3z[a3E]);}var a3F=[],a3G=[];for(var a3H=0x0;a3H<0x4;a3H++){for(var a3E=0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "3D=[];for(var a3E=0x0;a3E<a3z['length'];a3E++){a3C[aDZ(0xf1e)](a3z[a3E]),a3D['push'](a3z[a3E]);}var a3F=[],a3G=[];for(var a3H=0x0;a3H<0x4;a3H++){for(var a3E=0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: stores evaluator results for second-parameter trial perturbations; SERVED: identical (snippet-only twin).",
+   "name": "yTrialScores",
+   "selector": "a3G@u2838#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "[];for(var a3E=0x0;a3E<a3z['length'];a3E++){a3C[\"push\"](a3z[a3E]),a3D['push'](a3z[a3E]);}var a3F=[],a3G=[];for(var a3H=0x0;a3H<0x4;a3H++){for(var a3E=0x0;a3E<a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "or(var a3E=0x0;a3E<a3z['length'];a3E++){a3C[aDZ(0xf1e)](a3z[a3E]),a3D['push'](a3z[a3E]);}var a3F=[],a3G=[];for(var a3H=0x0;a3H<0x4;a3H++){for(var a3E=0x0;a3E<a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: outer refinement loop counter running four iterations; SERVED: identical (snippet-only twin).",
+   "name": "refineIter",
+   "selector": "a3H@u2838#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "0x0;a3E<a3z['length'];a3E++){a3C[\"push\"](a3z[a3E]),a3D['push'](a3z[a3E]);}var a3F=[],a3G=[];for(var a3H=0x0;a3H<0x4;a3H++){for(var a3E=0x0;a3E<a3C['length'];a3E"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "a3E<a3z['length'];a3E++){a3C[aDZ(0xf1e)](a3z[a3E]),a3D['push'](a3z[a3E]);}var a3F=[],a3G=[];for(var a3H=0x0;a3H<0x4;a3H++){for(var a3E=0x0;a3E<a3C['length'];a3E"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: running minimum score across both selection passes; SERVED: identical (snippet-only twin).",
+   "name": "bestScore",
+   "selector": "a3M@u2838#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3M",
+   "binding": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 5,
+    "snippet": ";else a3G[a3E]<a3G[a3L]&&(a3L=a3E);}a3D[\"push\"]((a3D[a3K]+a3D[a3L])/0x2);}WY[RY][OO]=a3A,X7=a3B;var a3M=a3F[0x0],a3N=a3C[0x0];for(var a3E=0x1;a3E<a3F['length'];"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "e a3G[a3E]<a3G[a3L]&&(a3L=a3E);}a3D[aDZ(0xf1e)]((a3D[a3K]+a3D[a3L])/0x2);}WY[RY][OO]=a3A,X7=a3B;var a3M=a3F[0x0],a3N=a3C[0x0];for(var a3E=0x1;a3E<a3F['length'];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: candidate paired with running minimum score; SERVED: identical (snippet-only twin).",
+   "name": "bestCandidate",
+   "selector": "a3N@u2838#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3N",
+   "binding": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "]<a3G[a3L]&&(a3L=a3E);}a3D[\"push\"]((a3D[a3K]+a3D[a3L])/0x2);}WY[RY][OO]=a3A,X7=a3B;var a3M=a3F[0x0],a3N=a3C[0x0];for(var a3E=0x1;a3E<a3F['length'];a3E++){a3F[a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "G[a3L]&&(a3L=a3E);}a3D[aDZ(0xf1e)]((a3D[a3K]+a3D[a3L])/0x2);}WY[RY][OO]=a3A,X7=a3B;var a3M=a3F[0x0],a3N=a3C[0x0];for(var a3E=0x1;a3E<a3F['length'];a3E++){a3F[a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: result object returning both scaled parameters; SERVED: identical (snippet-only twin).",
+   "name": "fitResult",
+   "selector": "a3O@u2838#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3O",
+   "binding": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "];for(var a3E=0x1;a3E<a3G['length'];a3E++){a3G[a3E]<a3M&&(a3M=a3G[a3E],a3N=a3D[a3E]);}a3y*=a3N;}var a3O={};return a3O['aqlERUszRBZ']=a3x,a3O[\"dpXVcjPBbU\"]=a3y,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2838",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "];for(var a3E=0x1;a3E<a3G['length'];a3E++){a3G[a3E]<a3M&&(a3M=a3G[a3E],a3N=a3D[a3E]);}a3y*=a3N;}var a3O={};return a3O['aqlERUszRBZ']=a3x,a3O[aDZ(0x36f)]=a3y,a3O"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: setting ids disabled on mobile clients; SERVED: identical (snippet-only twin).",
+   "name": "desktopOnlySettingIds",
+   "selector": "Rx@u2263#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "Rx",
+   "binding": {
+    "unit": "u2263",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "if(Gk||window[\"MobileApp\"]){var Rx=[\"rawmouse\",\"toggleads\",'antialias','fullscreen',\"inverse"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2263",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "if(Gk||window[ai1(0x7c8)]){var Rx=[ai1(0x1002),ai1(0xb10),'antialias','fullscreen',ai1(0x2f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner loop index over disabled id list; SERVED: identical (snippet-only twin).",
+   "name": "settingIdIdx",
+   "selector": "th@u2263#0",
+   "slice": "slice-01",
+   "disposition": "held-invalid",
+   "reason": "cross-unit top-level redecl: th already renamed file-wide by th@u2470#0->variantIdx (LD5/LD14 precedent)",
+   "token": "th",
+   "binding": {
+    "unit": "u2263",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "use\"];for(var tf=0x0;tf<Rw['length'];tf++){Rw[tf]['mobileOnly']&&(Rw[tf]['ReDNKHkwk']=!![]);for(var th=0x0;th<Rx[\"length\"];th++){Rw[tf]['id']==Rx[th]&&(Rw[tf][\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2263",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "2fe)];for(var tf=0x0;tf<Rw['length'];tf++){Rw[tf]['mobileOnly']&&(Rw[tf]['ReDNKHkwk']=!![]);for(var th=0x0;th<Rx[ai1(0x3a2)];th++){Rw[tf]['id']==Rx[th]&&(Rw[tf]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: default 3 overridden per-texture, passed to finalizer; SERVED: identical (snippet-only twin).",
+   "name": "anisoLevel",
+   "selector": "a4B@u2654#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4B",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "(var a4A=0x0;a4A<a3R['length'];a4A++){a4y[\"src\"]['indexOf'](a3R[a4A])!=-0x1&&(a4z=![]);}if(a4z){var a4B=0x3;for(var a4A=0x0;a4A<a3X['length'];a4A++){a4y[\"src\"]["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 2,
+    "snippet": "a4A=0x0;a4A<a3R['length'];a4A++){a4y[aBn(0x18d)]['indexOf'](a3R[a4A])!=-0x1&&(a4z=![]);}if(a4z){var a4B=0x3;for(var a4A=0x0;a4A<a3X['length'];a4A++){a4y[aBn(0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: t-type uniform object assigned to shader map; SERVED: identical (snippet-only twin).",
+   "name": "mapUniform",
+   "selector": "a4E@u2654#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4E",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "=undefined&&a4x['addUniforms']!=undefined&&a4x[\"addUniforms\"](a4B,Fg,Fu,a4y);if(a4x!=undefined){var a4E={};a4E['type']='t',a4E[\"value\"]=null,a4B[\"map\"]=a4E;}els"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "4x!=undefined&&a4x['addUniforms']!=undefined&&a4x[aBm(0xd0c)](a4B,Fg,Fu,a4y);if(a4x!=undefined){var a4E={};a4E['type']='t',a4E[aBm(0x9c5)]=null,a4B[aBm(0xff7)]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: never-set flag selecting color-group geometry path; SERVED: identical (snippet-only twin).",
+   "name": "useColorGroups",
+   "selector": "a4E@u2654#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4E",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "ndefined&&(a40['dracoLoader']['dispose'](),a40[\"dracoLoader\"]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][\"children\"][0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "!=undefined&&(a40['dracoLoader']['dispose'](),a40[aBt(0x910)]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][aBt(0xc76)][0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: set true for SubwayTrain, consumed as skinning; SERVED: identical (snippet-only twin).",
+   "name": "enableSkinning",
+   "selector": "a4F@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4F",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": ";}let a4D=a4C['material'];a4C['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": ";}let a4D=a4C['material'];a4C['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: finished event exposing action actionGroup index; SERVED: identical (snippet-only twin).",
+   "name": "finishedEvent",
+   "selector": "a4F@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4F",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "]);Yx[\"mixers\"]['push'](a4E),a4z[a4A][\"kDCTWhoSiT\"]=a4E,a4E[\"addEventListener\"]('finished',function(a4F){var aBl=aBi;let a4G=a4z[a4F[\"action\"]['actionGroup']]['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "i(0x39e)]);Yx[aBi(0x562)]['push'](a4E),a4z[a4A][aBi(0xee1)]=a4E,a4E[aBi(0xa9a)]('finished',function(a4F){var aBl=aBi;let a4G=a4z[a4F[aBl(0xa7)]['actionGroup']]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over gltf animations array; SERVED: identical (snippet-only twin).",
+   "name": "animIdx",
+   "selector": "a4F@u2654#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4F",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "]['source']=undefined),a4J['obj']['source']=tw(tx[a4J['file']],a4J[\"obj\"]['gain'],![]);}});}for(let a4F=0x0;a4F<a4w['animations'][\"length\"];a4F++){let a4G=0x0;f"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "urce']=undefined),a4J['obj']['source']=tw(tx[a4J['file']],a4J[aBl(0x9a0)]['gain'],![]);}});}for(let a4F=0x0;a4F<a4w['animations'][aBi(0x3a2)];a4F++){let a4G=0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: empty array backing fallback t uniform; SERVED: identical (snippet-only twin).",
+   "name": "fallbackTexArray",
+   "selector": "a4F@u2654#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4F",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "Fg,Fu,a4y);if(a4x!=undefined){var a4E={};a4E['type']='t',a4E[\"value\"]=null,a4B[\"map\"]=a4E;}else{var a4F=[],a4G={};a4G['type']='t',a4G[\"value\"]=a4F,a4B['t']=a4G;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 1,
+    "snippet": "y);if(a4x!=undefined){var a4E={};a4E['type']='t',a4E[aBm(0x9c5)]=null,a4B[aBm(0xff7)]=a4E;}else{var a4F=[],a4G={};a4G['type']='t',a4G[aBm(0x9c5)]=a4F,a4B['t']=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first scene child rebuilt into map mesh; SERVED: identical (snippet-only twin).",
+   "name": "rootMesh",
+   "selector": "a4F@u2654#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4F",
+   "binding": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 57,
+    "snippet": "&&(a40['dracoLoader']['dispose'](),a40[\"dracoLoader\"]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][\"children\"][0x0],a4G=a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 57,
+    "snippet": "ned&&(a40['dracoLoader']['dispose'](),a40[aBt(0x910)]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][aBt(0xc76)][0x0],a4G=a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time uniform object for waterfall1 shader; SERVED: identical (snippet-only twin).",
+   "name": "waterfallTimeUniform",
+   "selector": "a4G@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4G",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "x'],'transparent':!![],'name':a4E['name']}),FU['push'](a4E);}else{if(a4E['name']==\"waterfall1\"){var a4G={};a4G['value']=0x0,a4E=new usvzFuAsEB[(\"wPChizNknM\")]({"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tex'],'transparent':!![],'name':a4E['name']}),FU['push'](a4E);}else{if(a4E['name']==aBg(0xd41)){var a4G={};a4G['value']=0x0,a4E=new usvzFuAsEB[(aBg(0x3d9))]({'u"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: varying declarations prepended to vertex shader; SERVED: identical (snippet-only twin).",
+   "name": "vertexHeadSrc",
+   "selector": "a4G@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4G",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "D=a4C['material'];a4C['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][\"side\"]=u"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "D=a4C['material'];a4C['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][aBj(0x271"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding assigned never read",
+   "selector": "a4G@u2654#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: matched train animation group index; SERVED: identical (snippet-only twin).",
+   "name": "animGroupIdx",
+   "selector": "a4G@u2654#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4G",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "4J['file']],a4J[\"obj\"]['gain'],![]);}});}for(let a4F=0x0;a4F<a4w['animations'][\"length\"];a4F++){let a4G=0x0;for(let a4I=0x0;a4I<a4y['length'];a4I++){a4y[a4I]['i"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "e']],a4J[aBl(0x9a0)]['gain'],![]);}});}for(let a4F=0x0;a4F<a4w['animations'][aBi(0x3a2)];a4F++){let a4G=0x0;for(let a4I=0x0;a4I<a4y['length'];a4I++){a4y[a4I]['i"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fallback t uniform holding empty array; SERVED: identical (snippet-only twin).",
+   "name": "fallbackTexUniform",
+   "selector": "a4G@u2654#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4G",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "4y);if(a4x!=undefined){var a4E={};a4E['type']='t',a4E[\"value\"]=null,a4B[\"map\"]=a4E;}else{var a4F=[],a4G={};a4G['type']='t',a4G[\"value\"]=a4F,a4B['t']=a4G;}var a4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "4x!=undefined){var a4E={};a4E['type']='t',a4E[aBm(0x9c5)]=null,a4B[aBm(0xff7)]=a4E;}else{var a4F=[],a4G={};a4G['type']='t',a4G[aBm(0x9c5)]=a4F,a4B['t']=a4G;}var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: userData materials chunked into groups; SERVED: identical (snippet-only twin).",
+   "name": "materialNames",
+   "selector": "a4G@u2654#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4G",
+   "binding": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 14,
+    "snippet": "40['dracoLoader']['dispose'](),a40[\"dracoLoader\"]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][\"children\"][0x0],a4G=a4F['u"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 14,
+    "snippet": "&(a40['dracoLoader']['dispose'](),a40[aBt(0x910)]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][aBt(0xc76)][0x0],a4G=a4F['u"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time uniform object for Water shader; SERVED: identical (snippet-only twin).",
+   "name": "waterTimeUniform",
+   "selector": "a4H@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4H",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "vertex'],'transparent':!![],'name':a4E['name']}),FU['push'](a4E);}else{if(a4E['name']=='Water'){var a4H={};a4H[\"value\"]=0x0,a4E=new usvzFuAsEB[(\"wPChizNknM\")]({"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "vertex'],'transparent':!![],'name':a4E['name']}),FU['push'](a4E);}else{if(a4E['name']=='Water'){var a4H={};a4H[aBg(0x9c5)]=0x0,a4E=new usvzFuAsEB[(aBg(0x3d9))]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: uv and sway code injected into vertex main; SERVED: identical (snippet-only twin).",
+   "name": "vertexBodySrc",
+   "selector": "a4H@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4H",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "material'];a4C['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][\"side\"]=usvzFuAs"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "material'];a4C['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][aBj(0x271)]=usvz"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: action list cycled for finished group; SERVED: identical (snippet-only twin).",
+   "name": "groupActions",
+   "selector": "a4H@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4H",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "ener\"]('finished',function(a4F){var aBl=aBi;let a4G=a4z[a4F[\"action\"]['actionGroup']]['kDCTWhoSiT'],a4H=a4z[a4F['action']['actionGroup']];a4H[a4H[\"onAction\"]]['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "a9a)]('finished',function(a4F){var aBl=aBi;let a4G=a4z[a4F[aBl(0xa7)]['actionGroup']]['kDCTWhoSiT'],a4H=a4z[a4F['action']['actionGroup']];a4H[a4H[aBl(0x1084)]]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: group mixer creating animation clipAction; SERVED: identical (snippet-only twin).",
+   "name": "groupMixer",
+   "selector": "a4H@u2654#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4H",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 1,
+    "snippet": ";a4I<a4y['length'];a4I++){a4y[a4I]['indexOf'](a4w[\"animations\"][a4F]['name'])!=-0x1&&(a4G=a4I);}let a4H=a4z[a4G][\"kDCTWhoSiT\"];var a4B=a4H['clipAction'](a4w['an"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "x0;a4I<a4y['length'];a4I++){a4y[a4I]['indexOf'](a4w[aBi(0xb51)][a4F]['name'])!=-0x1&&(a4G=a4I);}let a4H=a4z[a4G][aBi(0xee1)];var a4B=a4H['clipAction'](a4w['anim"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: default shader sources overridden by variant; SERVED: identical (snippet-only twin).",
+   "name": "shaderSrc",
+   "selector": "a4H@u2654#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4H",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "ue\"]=null,a4B[\"map\"]=a4E;}else{var a4F=[],a4G={};a4G['type']='t',a4G[\"value\"]=a4F,a4B['t']=a4G;}var a4H=qK;a4x!=undefined&&(a4H=a4x);if(Px){}let a4I=usvzFuAsEB["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "l,a4B[aBm(0xff7)]=a4E;}else{var a4F=[],a4G={};a4G['type']='t',a4G[aBm(0x9c5)]=a4F,a4B['t']=a4G;}var a4H=qK;a4x!=undefined&&(a4H=a4x);if(Px){}let a4I=usvzFuAsEB["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: combined map geometry with faces iterated; SERVED: identical (snippet-only twin).",
+   "name": "mapGeometry",
+   "selector": "a4H@u2654#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4H",
+   "binding": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 16,
+    "snippet": "dracoLoader']['dispose'](),a40[\"dracoLoader\"]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][\"children\"][0x0],a4G=a4F['userD"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 16,
+    "snippet": "0['dracoLoader']['dispose'](),a40[aBt(0x910)]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][aBt(0xc76)][0x0],a4G=a4F['userD"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time uniform object for aurora shader; SERVED: identical (snippet-only twin).",
+   "name": "auroraTimeUniform",
+   "selector": "a4I@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4I",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ":!![],'name':a4E[\"name\"]}),FU['push'](a4E);}else{if(a4E[\"name\"]==\"aurora\"){a3p==0x1&&(a4C=!![]);var a4I={};a4I[\"value\"]=0x0,a4E=new usvzFuAsEB['wPChizNknM']({'u"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "e':a4E[aBg(0x9ec)]}),FU['push'](a4E);}else{if(a4E[aBg(0x9ec)]==aBg(0xf20)){a3p==0x1&&(a4C=!![]);var a4I={};a4I[aBg(0x9c5)]=0x0,a4E=new usvzFuAsEB['wPChizNknM']("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: light struct declarations for fragment shader; SERVED: identical (snippet-only twin).",
+   "name": "fragmentHeadSrc",
+   "selector": "a4I@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4I",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "l'];a4C['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][\"side\"]=usvzFuAsEB['Fro"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "l'];a4C['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][aBj(0x271)]=usvzFuAsEB["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: selected group action played with audio; SERVED: identical (snippet-only twin).",
+   "name": "nextAction",
+   "selector": "a4I@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4I",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "[\"onAction\"]]['stop'](),a4H[\"onAction\"]++;a4H['onAction']>=a4H['length']&&(a4H['onAction']=0x0);let a4I=a4H[a4H[\"onAction\"]];a4I['play']();if(a4I['UVCeyZNLZ']!="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "Bl(0x1084)]]['stop'](),a4H[aBl(0x1084)]++;a4H['onAction']>=a4H['length']&&(a4H['onAction']=0x0);let a4I=a4H[a4H[aBl(0x1084)]];a4I['play']();if(a4I['UVCeyZNLZ']!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index matching animation to group; SERVED: identical (snippet-only twin).",
+   "name": "groupIdx",
+   "selector": "a4I@u2654#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4I",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "\"obj\"]['gain'],![]);}});}for(let a4F=0x0;a4F<a4w['animations'][\"length\"];a4F++){let a4G=0x0;for(let a4I=0x0;a4I<a4y['length'];a4I++){a4y[a4I]['indexOf'](a4w[\"an"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "a0)]['gain'],![]);}});}for(let a4F=0x0;a4F<a4w['animations'][aBi(0x3a2)];a4F++){let a4G=0x0;for(let a4I=0x0;a4I<a4y['length'];a4I++){a4y[a4I]['indexOf'](a4w[aBi"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding assigned never read",
+   "selector": "a4I@u2654#4",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: imported transparent names driving transparency flags; SERVED: identical (snippet-only twin).",
+   "name": "transparentNames",
+   "selector": "a4I@u2654#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4I",
+   "binding": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "oLoader']['dispose'](),a40[\"dracoLoader\"]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][\"children\"][0x0],a4G=a4F['userData'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "racoLoader']['dispose'](),a40[aBt(0x910)]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][aBt(0xc76)][0x0],a4G=a4F['userData'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: time uniform object for Bush shader; SERVED: identical (snippet-only twin).",
+   "name": "bushTimeUniform",
+   "selector": "a4J@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4J",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "rent':!![],'uVuzMlCOokm':![],'name':a4E[\"name\"]}),FU[\"push\"](a4E);}else{if(a4E[\"name\"]=='Bush'){var a4J={};a4J['value']=0x0,a4E=new usvzFuAsEB['wPChizNknM']({'u"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "uVuzMlCOokm':![],'name':a4E[aBg(0x9ec)]}),FU[aBg(0xf1e)](a4E);}else{if(a4E[aBg(0x9ec)]=='Bush'){var a4J={};a4J['value']=0x0,a4E=new usvzFuAsEB['wPChizNknM']({'u"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: post-lighting code appended to fragment main; SERVED: identical (snippet-only twin).",
+   "name": "fragmentTailSrc",
+   "selector": "a4J@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4J",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][\"side\"]=usvzFuAsEB['FrontSide'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": "['frustumCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][aBj(0x271)]=usvzFuAsEB['FrontS"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: synced audio descriptor restarted on change; SERVED: identical (snippet-only twin).",
+   "name": "syncAudio",
+   "selector": "a4J@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4J",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 7,
+    "snippet": "a4H['onAction']=0x0);let a4I=a4H[a4H[\"onAction\"]];a4I['play']();if(a4I['UVCeyZNLZ']!=undefined){let a4J=a4I['UVCeyZNLZ'];if(a4J[\"obj\"]==undefined)return;a4J['ob"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 7,
+    "snippet": "4H['onAction']=0x0);let a4I=a4H[a4H[aBl(0x1084)]];a4I['play']();if(a4I['UVCeyZNLZ']!=undefined){let a4J=a4I['UVCeyZNLZ'];if(a4J[aBl(0x9a0)]==undefined)return;a4"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index matching Wp entries to animation; SERVED: identical (snippet-only twin).",
+   "name": "syncListIdx",
+   "selector": "a4J@u2654#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4J",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "4B),a4B['clampWhenFinished']=!![],a4B[\"loop\"]=usvzFuAsEB['LoopOnce'],a4B['actionGroup']=a4G;for(let a4J=0x0;a4J<Wp[\"length\"];a4J++){Wp[a4J]['syncToAnimation']=="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 4,
+    "snippet": "a4B['clampWhenFinished']=!![],a4B[aBi(0x68e)]=usvzFuAsEB['LoopOnce'],a4B['actionGroup']=a4G;for(let a4J=0x0;a4J<Wp[aBi(0x3a2)];a4J++){Wp[a4J]['syncToAnimation']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: defines object for lightmap shader material; SERVED: identical (snippet-only twin).",
+   "name": "shaderDefines",
+   "selector": "a4J@u2654#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4J",
+   "binding": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "a4F,a4B['t']=a4G;}var a4H=qK;a4x!=undefined&&(a4H=a4x);if(Px){}let a4I=usvzFuAsEB[\"wPChizNknM\"];var a4J={};a4J['USE_LIGHTMAP']='',a4J['USE_WORLD_PROJECTION']=0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "]=a4F,a4B['t']=a4G;}var a4H=qK;a4x!=undefined&&(a4H=a4x);if(Px){}let a4I=usvzFuAsEB[aBm(0x3d9)];var a4J={};a4J['USE_LIGHTMAP']='',a4J['USE_WORLD_PROJECTION']=0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: imported alpha-test names driving clip defines; SERVED: identical (snippet-only twin).",
+   "name": "alphaTestNames",
+   "selector": "a4J@u2654#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4J",
+   "binding": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "der']['dispose'](),a40[\"dracoLoader\"]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][\"children\"][0x0],a4G=a4F['userData']['m"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "Loader']['dispose'](),a40[aBt(0x910)]=null);YS===a40&&(YS=null);let a4D=![],a4E=![],a4F,a4G,a4H,a4I,a4J;a4F=a4y['scene'][aBt(0xc76)][0x0],a4G=a4F['userData']['m"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Color mult uniform for skybox MeshBasicReplacement material; SERVED: identical (snippet-only twin).",
+   "name": "skyboxMult",
+   "selector": "a4K@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4K",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "zFuAsEB[\"DoubleSide\"],'name':a4E['name']}),FU['push'](a4E);}else{if(a4E['name']=='light'){}else{var a4K=new usvzFuAsEB['gURkzCzeY']()['CNFryyAhIm'](0.4);a3F['sk"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "svzFuAsEB[aBg(0x15a)],'name':a4E['name']}),FU['push'](a4E);}else{if(a4E['name']=='light'){}else{var a4K=new usvzFuAsEB['gURkzCzeY']()['CNFryyAhIm'](0.4);a3F['sk"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: GLSL timeDiff UV chunk appended for Frame materials; SERVED: identical (snippet-only twin).",
+   "name": "frameUvSnippet",
+   "selector": "a4K@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4K",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "umCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][\"side\"]=usvzFuAsEB['FrontSide'];a4C[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "umCulled']=![];if(a4C['material']==undefined)return;let a4E=![],a4F=![],a4G='',a4H='',a4I='',a4J='',a4K='';a4C['material'][aBj(0x271)]=usvzFuAsEB['FrontSide'];a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Animation-synced audio entry driving obj source playback; SERVED: identical (snippet-only twin).",
+   "name": "syncedAudio",
+   "selector": "a4K@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4K",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 7,
+    "snippet": "UVCeyZNLZ']=Wp[a4J]);}if(a4z[a4G]['length']==0x1){a4B[\"play\"]();if(a4B['UVCeyZNLZ']!=undefined){let a4K=a4B['UVCeyZNLZ'];if(a4K['obj']==undefined)continue;a4K[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 7,
+    "snippet": "yZNLZ']=Wp[a4J]);}if(a4z[a4G]['length']==0x1){a4B[aBi(0x897)]();if(a4B['UVCeyZNLZ']!=undefined){let a4K=a4B['UVCeyZNLZ'];if(a4K['obj']==undefined)continue;a4K[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Constructed ShaderMaterial with blending defines, pushed returned; SERVED: identical (snippet-only twin).",
+   "name": "builtMaterial",
+   "selector": "a4K@u2654#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4K",
+   "binding": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 12,
+    "snippet": " a4I=usvzFuAsEB[\"wPChizNknM\"];var a4J={};a4J['USE_LIGHTMAP']='',a4J['USE_WORLD_PROJECTION']=0x1;let a4K=new usvzFuAsEB['wPChizNknM']({'uniforms':a4B,'fragmentSh"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 3,
+    "refCount": 12,
+    "snippet": "et a4I=usvzFuAsEB[aBm(0x3d9)];var a4J={};a4J['USE_LIGHTMAP']='',a4J['USE_WORLD_PROJECTION']=0x1;let a4K=new usvzFuAsEB['wPChizNknM']({'uniforms':a4B,'fragmentSh"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Name list gating transparent double-side material flags; SERVED: identical (snippet-only twin).",
+   "name": "transparentNames",
+   "selector": "a4L@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4L",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a4E:a4A[a4D]=a4E;if(a4C){a4w['remove'](a4w[\"children\"][a4z]),a4z--;break;}if(a4E==null)continue;var a4L=[\"icicles\",\"vines1\",\"HazardStripe1\",\"tiretracks1\",'Leave"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a4E:a4A[a4D]=a4E;if(a4C){a4w['remove'](a4w[aBg(0xc76)][a4z]),a4z--;break;}if(a4E==null)continue;var a4L=[aBg(0xaef),aBg(0x171),aBg(0x297),aBg(0x10a5),'Leaves',a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Map uniform wrapper holding material map texture; SERVED: identical (snippet-only twin).",
+   "name": "mapUniform",
+   "selector": "a4L@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4L",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "sedTextures/')+a50+'.webp'),a4C['material'][\"map\"]=Fg(a52),a4C['material'][\"map\"]['flipY']=![];}var a4L={};a4L['value']=a4C[\"material\"]['map'];var a4M={};a4M['v"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "s/')+a50+'.webp'),a4C['material'][aBj(0xff7)]=Fg(a52),a4C['material'][aBj(0xff7)]['flipY']=![];}var a4L={};a4L['value']=a4C[aBj(0x52e)]['map'];var a4M={};a4M['v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Box hitbox array scaled then meshed per entry; SERVED: identical (snippet-only twin).",
+   "name": "hitboxList",
+   "selector": "a4L@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4L",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "=undefined){if(typeof a3y['hitboxes']=='string'){a3y['hitboxes']=JSON['parse'](a3y['hitboxes']);var a4L=a3y[\"hitboxes\"][\"hitboxes\"],a4M=a3y['hitboxes']['cylinde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 4,
+    "snippet": "=undefined){if(typeof a3y['hitboxes']=='string'){a3y['hitboxes']=JSON['parse'](a3y['hitboxes']);var a4L=a3y[aBt(0x988)][aBt(0x988)],a4M=a3y['hitboxes']['cylinde"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Time uniform wrapper initialized to zero value; SERVED: identical (snippet-only twin).",
+   "name": "timeUniform",
+   "selector": "a4M@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4M",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "p\"]=Fg(a52),a4C['material'][\"map\"]['flipY']=![];}var a4L={};a4L['value']=a4C[\"material\"]['map'];var a4M={};a4M['value']=0x0;let a4N={'map':a4L,'mult':{'value':n"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "g(a52),a4C['material'][aBj(0xff7)]['flipY']=![];}var a4L={};a4L['value']=a4C[aBj(0x52e)]['map'];var a4M={};a4M['value']=0x0;let a4N={'map':a4L,'mult':{'value':n"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Cylinder hitbox array scaled then meshed per entry; SERVED: identical (snippet-only twin).",
+   "name": "cylinderList",
+   "selector": "a4M@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4M",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "xes']=='string'){a3y['hitboxes']=JSON['parse'](a3y['hitboxes']);var a4L=a3y[\"hitboxes\"][\"hitboxes\"],a4M=a3y['hitboxes']['cylinders'];a4M==undefined&&(a4M=[]);va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 8,
+    "snippet": "xes']=='string'){a3y['hitboxes']=JSON['parse'](a3y['hitboxes']);var a4L=a3y[aBt(0x988)][aBt(0x988)],a4M=a3y['hitboxes']['cylinders'];a4M==undefined&&(a4M=[]);va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loaded skybox texture assigned to map uniform cache; SERVED: identical (snippet-only twin). (GVAL patch: skyboxTexture collides with rename-map value)",
+   "name": "skyboxTex",
+   "selector": "a4N@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4N",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "niforms\"]['map'][\"value\"]=a4y[a4E['name']],a4E['uniforms']['map']['afCJVYrCGK']=!![]);continue;}var a4N;a4x[a4E['name']][\"indexOf\"]('compressedTextures')!=-0x1?"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "x29b)]['map'][aBg(0x9c5)]=a4y[a4E['name']],a4E['uniforms']['map']['afCJVYrCGK']=!![]);continue;}var a4N;a4x[a4E['name']][aBg(0xfad)]('compressedTextures')!=-0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Uniforms object map mult time plus lights; SERVED: identical (snippet-only twin).",
+   "name": "shaderUniforms",
+   "selector": "a4N@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4N",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "\"map\"]['flipY']=![];}var a4L={};a4L['value']=a4C[\"material\"]['map'];var a4M={};a4M['value']=0x0;let a4N={'map':a4L,'mult':{'value':new usvzFuAsEB['gURkzCzeY']()"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "xff7)]['flipY']=![];}var a4L={};a4L['value']=a4C[aBj(0x52e)]['map'];var a4M={};a4M['value']=0x0;let a4N={'map':a4L,'mult':{'value':new usvzFuAsEB['gURkzCzeY']()"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Grass position array scaled then placed per triple; SERVED: identical (snippet-only twin).",
+   "name": "grassList",
+   "selector": "a4N@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4N",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 9,
+    "snippet": ");var a4L=a3y[\"hitboxes\"][\"hitboxes\"],a4M=a3y['hitboxes']['cylinders'];a4M==undefined&&(a4M=[]);var a4N=a3y[\"hitboxes\"]['grass'];if(a3y[\"hitboxes\"]['precision']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 9,
+    "snippet": ");var a4L=a3y[aBt(0x988)][aBt(0x988)],a4M=a3y['hitboxes']['cylinders'];a4M==undefined&&(a4M=[]);var a4N=a3y[aBt(0x988)]['grass'];if(a3y[aBt(0x988)]['precision']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Traversed skybox mesh node getting BufferGeometry merge; SERVED: identical (snippet-only twin).",
+   "name": "skyboxChild",
+   "selector": "a4O@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4O",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "CQ']();a3J[\"load\"](a3z+\"skybox/\"+a3y['skybox'],function(a4w){var aBg=aB5;a4w[\"XOVWraMIAg\"](function(a4O){var aBh=aBg;a4O[\"RNQDluasaN\"]&&(a4O[\"RNQDluasaN\"]=usvzF"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "]();a3J[aB5(0x199)](a3z+aB5(0xd6b)+a3y['skybox'],function(a4w){var aBg=aB5;a4w[aBg(0x4a2)](function(a4O){var aBh=aBg;a4O[aBh(0xbac)]&&(a4O[aBh(0xbac)]=usvzFuAsE"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Shared loop counter across hitbox lights geometry loops; SERVED: identical (snippet-only twin).",
+   "name": "loopIdx",
+   "selector": "a4O@u2654#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4O",
+   "binding": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 66,
+    "snippet": "ined&&(a4M=[]);var a4N=a3y[\"hitboxes\"]['grass'];if(a3y[\"hitboxes\"]['precision']!=undefined){for(var a4O=0x0;a4O<a4L[\"length\"];a4O++){a4L[a4O]/=a3y[\"hitboxes\"]['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 2,
+    "refCount": 66,
+    "snippet": "ined&&(a4M=[]);var a4N=a3y[aBt(0x988)]['grass'];if(a3y[aBt(0x988)]['precision']!=undefined){for(var a4O=0x0;a4O<a4L[aBt(0x3a2)];a4O++){a4L[a4O]/=a3y[aBt(0x988)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: First SubwayLights entry pairing preset with position; SERVED: identical (snippet-only twin).",
+   "name": "subwayLightA",
+   "selector": "a4P@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4P",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "[];var a4O={};a4O['x']=5.096442213359572,a4O['y']=1.056485669501615,a4O['z']=-4.845407751469422;var a4P={};a4P['preset']='SubwayLights',a4P[\"position\"]=a4O;var "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "[];var a4O={};a4O['x']=5.096442213359572,a4O['y']=1.056485669501615,a4O['z']=-4.845407751469422;var a4P={};a4P['preset']='SubwayLights',a4P[aBj(0x215)]=a4O;var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Scratch Matrix4 composing hitbox mesh transforms; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMatrix",
+   "selector": "a4P@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4P",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "]/=a3y['hitboxes'][\"precision\"];}}}var a4L=a3y['hitboxes'][\"hitboxes\"],a4N=a3y[\"hitboxes\"]['grass'],a4P=new usvzFuAsEB['Matrix4'](),a4Q={};a4Q[\"color\"]=0xffffff"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "O]/=a3y['hitboxes'][aBt(0x396)];}}}var a4L=a3y['hitboxes'][aBt(0x988)],a4N=a3y[aBt(0x988)]['grass'],a4P=new usvzFuAsEB['Matrix4'](),a4Q={};a4Q[aBt(0x193)]=0xfff"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Second hardcoded SubwayLights position coordinate triple; SERVED: identical (snippet-only twin).",
+   "name": "subwayPosB",
+   "selector": "a4Q@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Q",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "9501615,a4O['z']=-4.845407751469422;var a4P={};a4P['preset']='SubwayLights',a4P[\"position\"]=a4O;var a4Q={};a4Q['x']=5.437640081737436,a4Q['y']=1.055031647439590"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "9501615,a4O['z']=-4.845407751469422;var a4P={};a4P['preset']='SubwayLights',a4P[aBj(0x215)]=a4O;var a4Q={};a4Q['x']=5.437640081737436,a4Q['y']=1.055031647439590"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Debug material params color transparent opacity triple; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMatParams",
+   "selector": "a4Q@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Q",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "}}}var a4L=a3y['hitboxes'][\"hitboxes\"],a4N=a3y[\"hitboxes\"]['grass'],a4P=new usvzFuAsEB['Matrix4'](),a4Q={};a4Q[\"color\"]=0xffffff,a4Q['transparent']=!![],a4Q['op"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "}}}var a4L=a3y['hitboxes'][aBt(0x988)],a4N=a3y[aBt(0x988)]['grass'],a4P=new usvzFuAsEB['Matrix4'](),a4Q={};a4Q[aBt(0x193)]=0xffffff,a4Q['transparent']=!![],a4Q["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Second SubwayLights entry pairing preset with position; SERVED: identical (snippet-only twin).",
+   "name": "subwayLightB",
+   "selector": "a4R@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4R",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "O;var a4Q={};a4Q['x']=5.437640081737436,a4Q['y']=1.0550316474395904,a4Q['z']=-3.671301334230287;var a4R={};a4R[\"preset\"]='SubwayLights',a4R['position']=a4Q;var "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "O;var a4Q={};a4Q['x']=5.437640081737436,a4Q['y']=1.0550316474395904,a4Q['z']=-3.671301334230287;var a4R={};a4R[aBj(0x932)]='SubwayLights',a4R['position']=a4Q;va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Debug box mesh transformed shown and collected; SERVED: identical (snippet-only twin).",
+   "name": "hitboxMesh",
+   "selector": "a4R@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4R",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 8,
+    "snippet": "y']=0.3;let a5v=new usvzFuAsEB[(\"KibzRdopc\")](a4Q);for(var a4O=0x0;a4O<a4L['length'];a4O+=0x10){var a4R=new usvzFuAsEB['Mesh'](new usvzFuAsEB[(\"BoxGeometry\")]()"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 8,
+    "snippet": "y']=0.3;let a5v=new usvzFuAsEB[(aBt(0x104b))](a4Q);for(var a4O=0x0;a4O<a4L['length'];a4O+=0x10){var a4R=new usvzFuAsEB['Mesh'](new usvzFuAsEB[(aBt(0x3c5))](),a5"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Third hardcoded SubwayLights position coordinate triple; SERVED: identical (snippet-only twin).",
+   "name": "subwayPosC",
+   "selector": "a4S@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4S",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "4395904,a4Q['z']=-3.671301334230287;var a4R={};a4R[\"preset\"]='SubwayLights',a4R['position']=a4Q;var a4S={};a4S['x']=5.767989010805856,a4S['y']=1.055438057025341"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "95904,a4Q['z']=-3.671301334230287;var a4R={};a4R[aBj(0x932)]='SubwayLights',a4R['position']=a4Q;var a4S={};a4S['x']=5.767989010805856,a4S['y']=1.055438057025341"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Reused Vector3 for grass lights placement math; SERVED: identical (snippet-only twin).",
+   "name": "scratchVec",
+   "selector": "a4S@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4S",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 11,
+    "snippet": ",a4R[\"RNQDluasaN\"]['GdTYEgIav'](a4P),a0L&&(Yx['add'](a4R),a4R['visible']=a0L),a0M['push'](a4R);}var a4S=new usvzFuAsEB[(\"gURkzCzeY\")]();for(var a4O=0x0;a4O<a4N["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 11,
+    "snippet": "]),a4R[aBt(0xbac)]['GdTYEgIav'](a4P),a0L&&(Yx['add'](a4R),a4R['visible']=a0L),a0M['push'](a4R);}var a4S=new usvzFuAsEB[(aBt(0x736))]();for(var a4O=0x0;a4O<a4N[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Grass instance positioned scaled rotated per entry; SERVED: identical (snippet-only twin).",
+   "name": "grassBlade",
+   "selector": "a4T@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4T",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": ");}var a4S=new usvzFuAsEB[(\"gURkzCzeY\")]();for(var a4O=0x0;a4O<a4N[\"length\"];a4O+=0x3){continue;var a4T=lrRnpundBY(\"grass\");a4T[\"setPosition\"](a4S[\"fromArray\"]("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 5,
+    "snippet": ";}var a4S=new usvzFuAsEB[(aBt(0x736))]();for(var a4O=0x0;a4O<a4N[aBt(0x3a2)];a4O+=0x3){continue;var a4T=lrRnpundBY(aBt(0x669));a4T[aBt(0x784)](a4S[aBt(0x10c5)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Light instance positioned and aimed per facing; SERVED: identical (snippet-only twin).",
+   "name": "placedLight",
+   "selector": "a4U@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4U",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 8,
+    "snippet": "();}}if(a3y[\"lights\"]!=undefined){for(var a4O=0x0;a4O<a3y['lights']['facingX']['length'];a4O++){var a4U=lrRnpundBY(\"light\");a4S[\"copy\"](a3y['lights']['facingX']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 8,
+    "snippet": ";}}if(a3y[aBt(0xb31)]!=undefined){for(var a4O=0x0;a4O<a3y['lights']['facingX']['length'];a4O++){var a4U=lrRnpundBY(aBt(0x151));a4S[aBt(0x609)](a3y['lights']['fa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Geometry group start offset advanced per group; SERVED: identical (snippet-only twin).",
+   "name": "groupStart",
+   "selector": "a4V@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4V",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "),a4U['matrixUpdate']=!![],a4S['z']+=0x1,a4U[\"JoIkrtRxhZ\"](a4S),a4U['updateMatrix']();}}if(a4E){var a4V=0x0,a4W=0x0,a4X=-0x1,a4Y=a4F['RNQDluasaN'][\"attributes\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "4S),a4U['matrixUpdate']=!![],a4S['z']+=0x1,a4U[aBt(0xf5f)](a4S),a4U['updateMatrix']();}}if(a4E){var a4V=0x0,a4W=0x0,a4X=-0x1,a4Y=a4F['RNQDluasaN'][aBt(0x672)]['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Geometry group run length counted then reset; SERVED: identical (snippet-only twin).",
+   "name": "groupCount",
+   "selector": "a4W@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4W",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "atrixUpdate']=!![],a4S['z']+=0x1,a4U[\"JoIkrtRxhZ\"](a4S),a4U['updateMatrix']();}}if(a4E){var a4V=0x0,a4W=0x0,a4X=-0x1,a4Y=a4F['RNQDluasaN'][\"attributes\"]['positi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 6,
+    "snippet": "'matrixUpdate']=!![],a4S['z']+=0x1,a4U[aBt(0xf5f)](a4S),a4U['updateMatrix']();}}if(a4E){var a4V=0x0,a4W=0x0,a4X=-0x1,a4Y=a4F['RNQDluasaN'][aBt(0x672)]['position"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Fifth SubwayLights entry pairing preset with position; SERVED: identical (snippet-only twin).",
+   "name": "subwayLightE",
+   "selector": "a4X@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4X",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "U;var a4W={};a4W['x']=6.403357356460155,a4W['y']=1.05521444059119,a4W['z']=0.008004951435420349;var a4X={};a4X['preset']=\"SubwayLights\",a4X[\"position\"]=a4W;let "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "U;var a4W={};a4W['x']=6.403357356460155,a4W['y']=1.05521444059119,a4W['z']=0.008004951435420349;var a4X={};a4X['preset']=aBj(0xdc3),a4X[aBj(0x215)]=a4W;let a53="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Previous face color value detecting group boundaries; SERVED: identical (snippet-only twin).",
+   "name": "prevColorVal",
+   "selector": "a4X@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4X",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "ate']=!![],a4S['z']+=0x1,a4U[\"JoIkrtRxhZ\"](a4S),a4U['updateMatrix']();}}if(a4E){var a4V=0x0,a4W=0x0,a4X=-0x1,a4Y=a4F['RNQDluasaN'][\"attributes\"]['position'],a4Z"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "pdate']=!![],a4S['z']+=0x1,a4U[aBt(0xf5f)](a4S),a4U['updateMatrix']();}}if(a4E){var a4V=0x0,a4W=0x0,a4X=-0x1,a4Y=a4F['RNQDluasaN'][aBt(0x672)]['position'],a4Z=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Index converting light entry positions to Vector3; SERVED: identical (snippet-only twin).",
+   "name": "lightIdx",
+   "selector": "a4Y@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Y",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "9;var a4X={};a4X['preset']=\"SubwayLights\",a4X[\"position\"]=a4W;let a53=[a4P,a4R,a4T,a4V,a4X];for(var a4Y=0x0;a4Y<a53['length'];a4Y++){a53[a4Y]={'position':new us"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "20349;var a4X={};a4X['preset']=aBj(0xdc3),a4X[aBj(0x215)]=a4W;let a53=[a4P,a4R,a4T,a4V,a4X];for(var a4Y=0x0;a4Y<a53['length'];a4Y++){a53[a4Y]={'position':new us"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Dead binding refCount zero assigned never read",
+   "selector": "a4Y@u2654#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Geometry index buffer iterated for color groups; SERVED: identical (snippet-only twin).",
+   "name": "geomIndex",
+   "selector": "a4Z@u2654#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4Z",
+   "binding": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "teMatrix']();}}if(a4E){var a4V=0x0,a4W=0x0,a4X=-0x1,a4Y=a4F['RNQDluasaN'][\"attributes\"]['position'],a4Z=a4F['RNQDluasaN']['index'];for(var a4O=0x0;a4O<a4Z['arra"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "dateMatrix']();}}if(a4E){var a4V=0x0,a4W=0x0,a4X=-0x1,a4Y=a4F['RNQDluasaN'][aBt(0x672)]['position'],a4Z=a4F['RNQDluasaN']['index'];for(var a4O=0x0;a4O<a4Z['arra"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Uniform key list iterated for texture disposal; SERVED: identical (snippet-only twin).",
+   "name": "uniformKeys",
+   "selector": "a4a@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4a",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "alue'];for(var a3w=0x0;a3w<a3v[\"length\"];a3w++){Fi(a3v[a3w]);}a3u['uniforms']['t']['value']=[];}let a4a=Object['keys'](a3u['uniforms']);for(var a3x=0x0;a3x<a4a["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ue'];for(var a3w=0x0;a3w<a3v[aB5(0x3a2)];a3w++){Fi(a3v[a3w]);}a3u['uniforms']['t']['value']=[];}let a4a=Object['keys'](a3u['uniforms']);for(var a3x=0x0;a3x<a4a["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Index disposing ambient-occlusion texture values; SERVED: identical (snippet-only twin).",
+   "name": "aoIdx",
+   "selector": "a4b@u2654#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "map\"]=null);else{if(a3u['uniforms']['ao']!=undefined&&a3u['uniforms']['ao'][\"value\"]!=null){for(let a4b=0x0;a4b<a3u[\"uniforms\"]['ao']['values']['length'];a4b++)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2654",
+    "index": 0,
+    "refCount": 4,
+    "snippet": ")]=null);else{if(a3u['uniforms']['ao']!=undefined&&a3u['uniforms']['ao'][aB5(0x9c5)]!=null){for(let a4b=0x0;a4b<a3u[aB5(0x29b)]['ao']['values']['length'];a4b++)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat x cached from a3A[0], feeds transformQuat products; SERVED: identical (snippet-only twin).",
+   "name": "quatX",
+   "selector": "a3E@u0008#8",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 6,
+    "snippet": "xf]*a3E,a3y;},a3s[\"transformQuat\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2],a3H=a3A[0x3],a3I=a3H*"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 6,
+    "snippet": "a3A[0xf]*a3E,a3y;},a3s[ai4(0xdc5)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2],a3H=a3A[0x3],a3I=a3H*"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 determinant then reciprocal, guards singular null return; SERVED: identical (snippet-only twin).",
+   "name": "mat2Det",
+   "selector": "a3E@u0008#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 7,
+    "snippet": "eturn a3y;},a3t[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3D-a3C*a3B;return a3E?(a3E=0x1/a3E,a3y[0x0]=a3D*a3E"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 7,
+    "snippet": "urn a3y;},a3t[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3A*a3D-a3C*a3B;return a3E?(a3E=0x1/a3E,a3y[0x0]=a3D*a3E"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d invert caches src[4] translation x; SERVED: identical (snippet-only twin).",
+   "name": "invSrcTx",
+   "selector": "a3E@u0008#14",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "]=0x0,a3y;},a3u[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3A*a3D-a3B*a3C;return a3G?(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "0x0,a3y;},a3u[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3A*a3D-a3B*a3C;return a3G?(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d multiply caches src[3] for products; SERVED: identical (snippet-only twin).",
+   "name": "mulSrcElem3",
+   "selector": "a3E@u0008#15",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 15,
+    "refCount": 3,
+    "snippet": "3y[0x1]*a3y[0x2];},a3u[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3A[0x0],a3I=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 15,
+    "refCount": 3,
+    "snippet": "3y[0x1]*a3y[0x2];},a3u[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3A[0x0],a3I=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat3 translate caches src[3] passthrough output; SERVED: identical (snippet-only twin).",
+   "name": "mat3SrcElem3",
+   "selector": "a3E@u0008#23",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "]=a3v['multiply'],a3v[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3z[0x6],a3I=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "']=a3v['multiply'],a3v[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3z[0x6],a3I=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: normalFromMat4 caches mat4 src[4] cofactor input; SERVED: identical (snippet-only twin).",
+   "name": "normalSrcElem4",
+   "selector": "a3E@u0008#26",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 5,
+    "snippet": "y;},a3v[\"normalFromMat4\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z[0x6],a3H=a3z[0x7],a3I=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 5,
+    "snippet": "a3J,a3y;},a3v[ai4(0x449)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z[0x6],a3H=a3z[0x7],a3I=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 adjoint caches src[4] cofactor products; SERVED: identical (snippet-only twin).",
+   "name": "adjointSrcElem4",
+   "selector": "a3E@u0008#29",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 29,
+    "refCount": 9,
+    "snippet": "3y):null;},a3w[\"adjoint\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z[0x6],a3H=a3z[0x7],a3I=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 29,
+    "refCount": 9,
+    "snippet": "y):null;},a3w[ai4(0x1b5)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z[0x6],a3H=a3z[0x7],a3I=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 translate temp holds src[0] alias-safe copy; SERVED: identical (snippet-only twin).",
+   "name": "transCache0",
+   "selector": "a3E@u0008#32",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 32,
+    "refCount": 3,
+    "snippet": "]=a3w['multiply'],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z=="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 32,
+    "refCount": 3,
+    "snippet": "']=a3w['multiply'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z=="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotate axis z normalized, builds rotation basis; SERVED: identical (snippet-only twin).",
+   "name": "axisZ",
+   "selector": "a3E@u0008#33",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 33,
+    "refCount": 11,
+    "snippet": "y[0xf]=a3z[0xf],a3y;},a3w['rotate']=function(a3y,a3z,a3A,a3B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 33,
+    "refCount": 11,
+    "snippet": "y[0xf]=a3z[0xf],a3y;},a3w['rotate']=function(a3y,a3z,a3A,a3B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateX caches src[5] for blended rows; SERVED: identical (snippet-only twin).",
+   "name": "rotXSrcElem5",
+   "selector": "a3E@u0008#34",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 34,
+    "refCount": 2,
+    "snippet": "\"rotateX\"]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[\"sin\"](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 34,
+    "refCount": 2,
+    "snippet": "4a0)]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[air(0xbd6)](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateY caches src[1] for blended columns; SERVED: identical (snippet-only twin).",
+   "name": "rotYSrcElem1",
+   "selector": "a3E@u0008#35",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 35,
+    "refCount": 2,
+    "snippet": "\"rotateY\"]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[\"sin\"](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 35,
+    "refCount": 2,
+    "snippet": "=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[ais(0xbd6)](a3A),a3C=Math[ais(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateZ caches src[1] for blended output; SERVED: identical (snippet-only twin).",
+   "name": "rotZSrcElem1",
+   "selector": "a3E@u0008#36",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 2,
+    "snippet": "'rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 2,
+    "snippet": "teZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[ait(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: perspective reciprocal of near minus far; SERVED: identical (snippet-only twin).",
+   "name": "depthRangeInv",
+   "selector": "a3E@u0008#40",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 2,
+    "snippet": "0x0,a3y;},a3w[\"perspective\"]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[\"tan\"](a3z/0x2),a3E=0x1/(a3B-a3C);return a3y[0x0]=a3D/a3A,a3y[0x1]=0x0,a3y[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 2,
+    "snippet": "0,a3y;},a3w[ai4(0x5fc)]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[aiu(0x49d)](a3z/0x2),a3E=0x1/(a3B-a3C);return a3y[0x0]=a3D/a3A,a3y[0x1]=0x0,a3y[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ortho far plane param in depth terms; SERVED: identical (snippet-only twin).",
+   "name": "orthoFar",
+   "selector": "a3E@u0008#41",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 2,
+    "snippet": "[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[\"ortho\"]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1/(a3D-a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 2,
+    "snippet": "d]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[ai4(0x508)]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1/(a3D-a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat multiply caches first operand w; SERVED: identical (snippet-only twin).",
+   "name": "quatMulW",
+   "selector": "a3E@u0008#44",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 44,
+    "refCount": 4,
+    "snippet": "[\"add\"]=a3s['add'],a3x[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A[0x0],a3G=a3A[0x1],a3H=a3A[0x2],a3I=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 44,
+    "refCount": 4,
+    "snippet": "0x8da)]=a3s['add'],a3x[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A[0x0],a3G=a3A[0x1],a3H=a3A[0x2],a3I=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateX caches source w component; SERVED: identical (snippet-only twin).",
+   "name": "quatRotXW",
+   "selector": "a3E@u0008#45",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 45,
+    "refCount": 2,
+    "snippet": "3x['rotateX']=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[\"sin\"](a3A),a3G=Math['cos'](a3A);retur"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 45,
+    "refCount": 2,
+    "snippet": "3x['rotateX']=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[aiA(0xbd6)](a3A),a3G=Math['cos'](a3A);"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateY caches source w component; SERVED: identical (snippet-only twin).",
+   "name": "quatRotYW",
+   "selector": "a3E@u0008#46",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 46,
+    "refCount": 2,
+    "snippet": "3x['rotateY']=function(a3y,a3z,a3A){var aiB=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math['sin'](a3A),a3G=Math[\"cos\"](a3A);retur"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 46,
+    "refCount": 2,
+    "snippet": "3x['rotateY']=function(a3y,a3z,a3A){var aiB=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math['sin'](a3A),a3G=Math[aiB(0xb69)](a3A);"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateZ caches source w component; SERVED: identical (snippet-only twin).",
+   "name": "quatRotZW",
+   "selector": "a3E@u0008#47",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 47,
+    "refCount": 2,
+    "snippet": "3x['rotateZ']=function(a3y,a3z,a3A){var aiC=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[\"sin\"](a3A),a3G=Math[\"cos\"](a3A);retur"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 47,
+    "refCount": 2,
+    "snippet": "3x['rotateZ']=function(a3y,a3z,a3A){var aiC=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[aiC(0xbd6)](a3A),a3G=Math[aiC(0xb69)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slerp caches first quat z input; SERVED: identical (snippet-only twin).",
+   "name": "slerpSrcZ",
+   "selector": "a3E@u0008#48",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 48,
+    "refCount": 2,
+    "snippet": "3x[\"lerp\"]=a3s['lerp'],a3x[\"slerp\"]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F=a3z[0x3],a3G=a3A[0x0],a3H=a3A[0x1],a3I=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 48,
+    "refCount": 2,
+    "snippet": "x108e)]=a3s['lerp'],a3x[ai4(0xbd7)]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F=a3z[0x3],a3G=a3A[0x0],a3H=a3A[0x1],a3I=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fromMat3 second-next axis index selector; SERVED: identical (snippet-only twin).",
+   "name": "thirdAxisIdx",
+   "selector": "a3E@u0008#50",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u0008",
+    "index": 50,
+    "refCount": 7,
+    "snippet": "var a3C=0x0;a3z[0x4]>a3z[0x0]&&(a3C=0x1),a3z[0x8]>a3z[a3C*0x3+a3C]&&(a3C=0x2);var a3D=(a3C+0x1)%0x3,a3E=(a3C+0x2)%0x3;a3B=Math[\"sqrt\"](a3z[a3C*0x3+a3C]-a3z[a3D*"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 50,
+    "refCount": 7,
+    "snippet": "var a3C=0x0;a3z[0x4]>a3z[0x0]&&(a3C=0x1),a3z[0x8]>a3z[a3C*0x3+a3C]&&(a3C=0x2);var a3D=(a3C+0x1)%0x3,a3E=(a3C+0x2)%0x3;a3B=Math[aiF(0xba3)](a3z[a3C*0x3+a3C]-a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: cross caches second vector y component; SERVED: identical (snippet-only twin).",
+   "name": "crossVecY",
+   "selector": "a3F@u0008#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "z[0x2];},a3r[\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2];return a3y[0x0]=a3C*a3G-a3D*a3F,a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "x2];},a3r[ai4(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2];return a3y[0x0]=a3C*a3G-a3D*a3F,a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 forEach loop cursor over flat array; SERVED: identical (snippet-only twin).",
+   "name": "vec3ForEachIdx",
+   "selector": "a3F@u0008#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 9,
+    "snippet": "\"]=(function(){var aif=ai4,a3y=a3r[\"create\"]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3B=0x0),a3C?a3G=Math['min'](a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 9,
+    "snippet": "=(function(){var aif=ai4,a3y=a3r[aif(0xf2a)]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3B=0x0),a3C?a3G=Math['min'](a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat y cached from a3A[1], feeds transformQuat products; SERVED: identical (snippet-only twin).",
+   "name": "quatY",
+   "selector": "a3F@u0008#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 6,
+    "snippet": ",a3s[\"transformQuat\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2],a3H=a3A[0x3],a3I=a3H*a3B+a3F*a3D-a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 6,
+    "snippet": "a3y;},a3s[ai4(0xdc5)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2],a3H=a3A[0x3],a3I=a3H*a3B+a3F*a3D-a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 forEach loop cursor over flat array; SERVED: identical (snippet-only twin).",
+   "name": "vec4ForEachIdx",
+   "selector": "a3F@u0008#6",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 6,
+    "refCount": 11,
+    "snippet": "s['forEach']=(function(){var a3y=a3s['create']();return function(a3z,a3A,a3B,a3C,a3D,a3E){var ail=o,a3F,a3G;a3A||(a3A=0x4),a3B||(a3B=0x0),a3C?a3G=Math[\"min\"](a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 6,
+    "refCount": 11,
+    "snippet": "s['forEach']=(function(){var a3y=a3s['create']();return function(a3z,a3A,a3B,a3C,a3D,a3E){var ail=o,a3F,a3G;a3A||(a3A=0x4),a3B||(a3B=0x0),a3C?a3G=Math[ail(0x40a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d invert caches src[5] translation y; SERVED: identical (snippet-only twin).",
+   "name": "invSrcTy",
+   "selector": "a3F@u0008#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "3u[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3A*a3D-a3B*a3C;return a3G?(a3G=0x1/a3G,a3y"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3A*a3D-a3B*a3C;return a3G?(a3G=0x1/a3G,a3y"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d multiply caches src[4] translation x; SERVED: identical (snippet-only twin).",
+   "name": "mulSrcTx",
+   "selector": "a3F@u0008#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 11,
+    "refCount": 1,
+    "snippet": "x2];},a3u[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3A[0x0],a3I=a3A[0x1],a3J=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 11,
+    "refCount": 1,
+    "snippet": "x2];},a3u[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3A[0x0],a3I=a3A[0x1],a3J=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d rotate preserves src[4] translation x; SERVED: identical (snippet-only twin).",
+   "name": "rotSrcTx",
+   "selector": "a3F@u0008#12",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=Math['sin'](a3A),a3I=Math[\"cos"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 12,
+    "refCount": 1,
+    "snippet": "a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=Math['sin'](a3A),a3I=Math[ain("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat3 translate caches src[4] passthrough output; SERVED: identical (snippet-only twin).",
+   "name": "mat3SrcElem4",
+   "selector": "a3F@u0008#19",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 2,
+    "snippet": "ly'],a3v[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3z[0x6],a3I=a3z[0x7],a3J=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 2,
+    "snippet": "ply'],a3v[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3z[0x6],a3I=a3z[0x7],a3J=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: normalFromMat4 caches mat4 src[5] cofactor input; SERVED: identical (snippet-only twin).",
+   "name": "normalSrcElem5",
+   "selector": "a3F@u0008#22",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 5,
+    "snippet": "alFromMat4\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z[0x6],a3H=a3z[0x7],a3I=a3z[0x8],a3J=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 5,
+    "snippet": "[ai4(0x449)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z[0x6],a3H=a3z[0x7],a3I=a3z[0x8],a3J=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 adjoint caches src[5] cofactor products; SERVED: identical (snippet-only twin).",
+   "name": "adjointSrcElem5",
+   "selector": "a3F@u0008#25",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 25,
+    "refCount": 15,
+    "snippet": "w[\"adjoint\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z[0x6],a3H=a3z[0x7],a3I=a3z[0x8],a3J=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 25,
+    "refCount": 15,
+    "snippet": "[ai4(0x1b5)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3],a3E=a3z[0x4],a3F=a3z[0x5],a3G=a3z[0x6],a3H=a3z[0x7],a3I=a3z[0x8],a3J=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 translate temp holds src[1] alias-safe copy; SERVED: identical (snippet-only twin).",
+   "name": "transCache1",
+   "selector": "a3F@u0008#28",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 28,
+    "refCount": 3,
+    "snippet": "w['multiply'],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 28,
+    "refCount": 3,
+    "snippet": "3w['multiply'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotate axis length then reciprocal normalizer; SERVED: identical (snippet-only twin).",
+   "name": "axisLen",
+   "selector": "a3F@u0008#29",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 29,
+    "refCount": 6,
+    "snippet": "f],a3y;},a3w['rotate']=function(a3y,a3z,a3A,a3B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 29,
+    "refCount": 6,
+    "snippet": "f],a3y;},a3w['rotate']=function(a3y,a3z,a3A,a3B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateX caches src[6] for blended rows; SERVED: identical (snippet-only twin).",
+   "name": "rotXSrcElem6",
+   "selector": "a3F@u0008#30",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 30,
+    "refCount": 2,
+    "snippet": "nction(a3y,a3z,a3A){var air=ai4,a3B=Math[\"sin\"](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 30,
+    "refCount": 2,
+    "snippet": "n(a3y,a3z,a3A){var air=ai4,a3B=Math[air(0xbd6)](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateY caches src m[2]; two rotation blends; SERVED: identical (snippet-only twin).",
+   "name": "matElem02",
+   "selector": "a3F@u0008#31",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 31,
+    "refCount": 2,
+    "snippet": "nction(a3y,a3z,a3A){var ais=ai4,a3B=Math[\"sin\"](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 31,
+    "refCount": 2,
+    "snippet": ",a3z,a3A){var ais=ai4,a3B=Math[ais(0xbd6)](a3A),a3C=Math[ais(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateZ caches src m[2]; two rotation blends; SERVED: identical (snippet-only twin).",
+   "name": "matElem02",
+   "selector": "a3F@u0008#32",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 32,
+    "refCount": 2,
+    "snippet": "nction(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 32,
+    "refCount": 2,
+    "snippet": "n(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[ait(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ortho 1/(left-right); scales x row/offset; SERVED: identical (snippet-only twin).",
+   "name": "invWidthRange",
+   "selector": "a3F@u0008#36",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 2,
+    "snippet": ",a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[\"ortho\"]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1/(a3D-a3E);return"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 2,
+    "snippet": "y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[ai4(0x508)]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1/(a3D-a3E);return"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat multiply rhs x; four Hamilton lanes; SERVED: identical (snippet-only twin).",
+   "name": "quatBx",
+   "selector": "a3F@u0008#38",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 38,
+    "refCount": 4,
+    "snippet": "add'],a3x[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A[0x0],a3G=a3A[0x1],a3H=a3A[0x2],a3I=a3A[0x3];return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 38,
+    "refCount": 4,
+    "snippet": "add'],a3x[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A[0x0],a3G=a3A[0x1],a3H=a3A[0x2],a3I=a3A[0x3];return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateX sin(half angle); four blends; SERVED: identical (snippet-only twin).",
+   "name": "sinHalfAngle",
+   "selector": "a3F@u0008#39",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[\"sin\"](a3A),a3G=Math['cos'](a3A);return a3y[0x0]=a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[aiA(0xbd6)](a3A),a3G=Math['cos'](a3A);return a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateY sin(half angle); four blends; SERVED: identical (snippet-only twin).",
+   "name": "sinHalfAngle",
+   "selector": "a3F@u0008#40",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 4,
+    "snippet": "=function(a3y,a3z,a3A){var aiB=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math['sin'](a3A),a3G=Math[\"cos\"](a3A);return a3y[0x0]=a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 4,
+    "snippet": "=function(a3y,a3z,a3A){var aiB=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math['sin'](a3A),a3G=Math[aiB(0xb69)](a3A);return a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateZ sin(half angle); four blends; SERVED: identical (snippet-only twin).",
+   "name": "sinHalfAngle",
+   "selector": "a3F@u0008#41",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 4,
+    "snippet": "=function(a3y,a3z,a3A){var aiC=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[\"sin\"](a3A),a3G=Math[\"cos\"](a3A);return a3y[0x0]=a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 4,
+    "snippet": "=function(a3y,a3z,a3A){var aiC=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[aiC(0xbd6)](a3A),a3G=Math[aiC(0xb69)](a3A);return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slerp source quat w; dot plus blend; SERVED: identical (snippet-only twin).",
+   "name": "fromQuatW",
+   "selector": "a3F@u0008#42",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u0008",
+    "index": 42,
+    "refCount": 2,
+    "snippet": "s['lerp'],a3x[\"slerp\"]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F=a3z[0x3],a3G=a3A[0x0],a3H=a3A[0x1],a3I=a3A[0x2],a3J=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 42,
+    "refCount": 2,
+    "snippet": "lerp'],a3x[ai4(0xbd7)]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F=a3z[0x3],a3G=a3A[0x0],a3H=a3A[0x1],a3I=a3A[0x2],a3J=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 cross second-input z; two products; SERVED: identical (snippet-only twin).",
+   "name": "vecBZ",
+   "selector": "a3G@u0008#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2];return a3y[0x0]=a3C*a3G-a3D*a3F,a3y[0x1]=a3D*a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2];return a3y[0x0]=a3C*a3G-a3D*a3F,a3y[0x1]=a3D*a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 forEach end bound; min/len loop limit; SERVED: identical (snippet-only twin).",
+   "name": "loopEnd",
+   "selector": "a3G@u0008#3",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "function(){var aif=ai4,a3y=a3r[\"create\"]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3B=0x0),a3C?a3G=Math['min'](a3C*a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 3,
+    "snippet": "nction(){var aif=ai4,a3y=a3r[aif(0xf2a)]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),a3B||(a3B=0x0),a3C?a3G=Math['min'](a3C*a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 transformQuat quat z; six products; SERVED: identical (snippet-only twin).",
+   "name": "quatZ",
+   "selector": "a3G@u0008#4",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 6,
+    "snippet": "rmQuat\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2],a3H=a3A[0x3],a3I=a3H*a3B+a3F*a3D-a3G*a3C,a3J=a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 6,
+    "snippet": "(0xdc5)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A[0x0],a3F=a3A[0x1],a3G=a3A[0x2],a3H=a3A[0x3],a3I=a3H*a3B+a3F*a3D-a3G*a3C,a3J=a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 forEach end bound; min/len loop limit; SERVED: identical (snippet-only twin).",
+   "name": "loopEnd",
+   "selector": "a3G@u0008#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "orEach']=(function(){var a3y=a3s['create']();return function(a3z,a3A,a3B,a3C,a3D,a3E){var ail=o,a3F,a3G;a3A||(a3A=0x4),a3B||(a3B=0x0),a3C?a3G=Math[\"min\"](a3C*a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "orEach']=(function(){var a3y=a3s['create']();return function(a3z,a3A,a3B,a3C,a3D,a3E){var ail=o,a3F,a3G;a3A||(a3A=0x4),a3B||(a3B=0x0),a3C?a3G=Math[ail(0x40a)](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d multiply caches src m[5]; out[5]; SERVED: identical (snippet-only twin).",
+   "name": "srcElem5",
+   "selector": "a3G@u0008#10",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 1,
+    "snippet": "ltiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3A[0x0],a3I=a3A[0x1],a3J=a3A[0x2],a3K=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 10,
+    "refCount": 1,
+    "snippet": "(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3A[0x0],a3I=a3A[0x1],a3J=a3A[0x2],a3K=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d rotate caches src m[5]; passthrough copy; SERVED: identical (snippet-only twin).",
+   "name": "srcElem5",
+   "selector": "a3G@u0008#11",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 11,
+    "refCount": 1,
+    "snippet": "=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=Math['sin'](a3A),a3I=Math[\"cos\"](a3A);retur"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 11,
+    "refCount": 1,
+    "snippet": "=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=Math['sin'](a3A),a3I=Math[ain(0xb69)](a3A);"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat3 translate caches src m[5]; row+passthrough; SERVED: identical (snippet-only twin).",
+   "name": "mElem5",
+   "selector": "a3G@u0008#18",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "nslate\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3z[0x6],a3I=a3z[0x7],a3J=a3z[0x8],a3K=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "(0x42c)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=a3z[0x6],a3I=a3z[0x7],a3J=a3z[0x8],a3K=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 translate caches src m[2]; alias-safe copy; SERVED: identical (snippet-only twin).",
+   "name": "srcElem02",
+   "selector": "a3G@u0008#26",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "ultiply'],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 3,
+    "snippet": "multiply'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotate sin(rad); rotation matrix terms; SERVED: identical (snippet-only twin).",
+   "name": "sinAngle",
+   "selector": "a3G@u0008#27",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 27,
+    "refCount": 7,
+    "snippet": "A,a3B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 27,
+    "refCount": 7,
+    "snippet": "B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateX caches src m[7]; two blends; SERVED: identical (snippet-only twin).",
+   "name": "matElem07",
+   "selector": "a3G@u0008#28",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 28,
+    "refCount": 2,
+    "snippet": "z,a3A){var air=ai4,a3B=Math[\"sin\"](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 28,
+    "refCount": 2,
+    "snippet": "){var air=ai4,a3B=Math[air(0xbd6)](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateY caches src m[3]; two blends; SERVED: identical (snippet-only twin).",
+   "name": "matElem03",
+   "selector": "a3G@u0008#29",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 29,
+    "refCount": 2,
+    "snippet": "z,a3A){var ais=ai4,a3B=Math[\"sin\"](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 29,
+    "refCount": 2,
+    "snippet": " ais=ai4,a3B=Math[ais(0xbd6)](a3A),a3C=Math[ais(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateZ caches src m[3]; two blends; SERVED: identical (snippet-only twin).",
+   "name": "matElem03",
+   "selector": "a3G@u0008#30",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 30,
+    "refCount": 2,
+    "snippet": "z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z[0x6],a3K=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 30,
+    "refCount": 2,
+    "snippet": "){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[ait(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z[0x6],a3K=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ortho 1/(bottom-top); scales y row/offset; SERVED: identical (snippet-only twin).",
+   "name": "invHeightRange",
+   "selector": "a3G@u0008#34",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 34,
+    "refCount": 2,
+    "snippet": "a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[\"ortho\"]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1/(a3D-a3E);return a3y[0x0]=-0x2*a3F"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 34,
+    "refCount": 2,
+    "snippet": "*a3E,a3y[0xf]=0x0,a3y;},a3w[ai4(0x508)]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-a3C),a3H=0x1/(a3D-a3E);return a3y[0x0]=-0x2*a3F"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat multiply rhs y; four Hamilton lanes; SERVED: identical (snippet-only twin).",
+   "name": "quatBy",
+   "selector": "a3G@u0008#36",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 4,
+    "snippet": "ltiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A[0x0],a3G=a3A[0x1],a3H=a3A[0x2],a3I=a3A[0x3];return a3y[0x0]=a3B*a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 4,
+    "snippet": "(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3A[0x0],a3G=a3A[0x1],a3H=a3A[0x2],a3I=a3A[0x3];return a3y[0x0]=a3B*a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateX cos(half angle); four blends; SERVED: identical (snippet-only twin).",
+   "name": "cosHalfAngle",
+   "selector": "a3G@u0008#37",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 37,
+    "refCount": 4,
+    "snippet": "){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[\"sin\"](a3A),a3G=Math['cos'](a3A);return a3y[0x0]=a3B*a3G+a3E*a3F,a3y[0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 37,
+    "refCount": 4,
+    "snippet": " aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[aiA(0xbd6)](a3A),a3G=Math['cos'](a3A);return a3y[0x0]=a3B*a3G+a3E*a3F,a3y[0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateY cos(half angle); four blends; SERVED: identical (snippet-only twin).",
+   "name": "cosHalfAngle",
+   "selector": "a3G@u0008#38",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 38,
+    "refCount": 4,
+    "snippet": "){var aiB=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math['sin'](a3A),a3G=Math[\"cos\"](a3A);return a3y[0x0]=a3B*a3G-a3D*a3F,a3y[0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 38,
+    "refCount": 4,
+    "snippet": "){var aiB=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math['sin'](a3A),a3G=Math[aiB(0xb69)](a3A);return a3y[0x0]=a3B*a3G-a3D*a3F,a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateZ cos(half angle); four blends; SERVED: identical (snippet-only twin).",
+   "name": "cosHalfAngle",
+   "selector": "a3G@u0008#39",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 39,
+    "refCount": 4,
+    "snippet": "){var aiC=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[\"sin\"](a3A),a3G=Math[\"cos\"](a3A);return a3y[0x0]=a3B*a3G+a3C*a3F,a3y[0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 39,
+    "refCount": 4,
+    "snippet": " aiC=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=Math[aiC(0xbd6)](a3A),a3G=Math[aiC(0xb69)](a3A);return a3y[0x0]=a3B*a3G+a3C*a3F,a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slerp target quat x; dot/negate/blend; SERVED: identical (snippet-only twin).",
+   "name": "toQuatX",
+   "selector": "a3G@u0008#40",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 4,
+    "snippet": "[\"slerp\"]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F=a3z[0x3],a3G=a3A[0x0],a3H=a3A[0x1],a3I=a3A[0x2],a3J=a3A[0x3],a3K,a3L,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 4,
+    "snippet": "4(0xbd7)]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0x2],a3F=a3z[0x3],a3G=a3A[0x0],a3H=a3A[0x1],a3I=a3A[0x2],a3J=a3A[0x3],a3K,a3L,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d rotate sin(angle); four blends; SERVED: identical (snippet-only twin).",
+   "name": "sinAngle",
+   "selector": "a3H@u0008#5",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 4,
+    "snippet": ",a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=Math['sin'](a3A),a3I=Math[\"cos\"](a3A);return a3y[0x0]=a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 4,
+    "snippet": ",a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z[0x3],a3F=a3z[0x4],a3G=a3z[0x5],a3H=Math['sin'](a3A),a3I=Math[ain(0xb69)](a3A);return a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 translate caches src m[3]; alias-safe copy; SERVED: identical (snippet-only twin).",
+   "name": "srcElem03",
+   "selector": "a3H@u0008#20",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0008",
+    "index": 20,
+    "refCount": 3,
+    "snippet": "ply'],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 20,
+    "refCount": 3,
+    "snippet": "iply'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P;return a3z===a3y?(a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat4 rotate cos(rad); rotation matrix terms; SERVED: identical (snippet-only twin).",
+   "name": "cosAngle",
+   "selector": "a3H@u0008#21",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0008",
+    "index": 21,
+    "refCount": 5,
+    "snippet": "B){var aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 21,
+    "refCount": 5,
+    "snippet": "ar aiq=ai4,a3C=a3B[0x0],a3D=a3B[0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateX caches src m[8]; two blends; SERVED: identical (snippet-only twin).",
+   "name": "matElem08",
+   "selector": "a3H@u0008#22",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "r=ai4,a3B=Math[\"sin\"](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 2,
+    "snippet": ",a3B=Math[air(0xbd6)](a3A),a3C=Math['cos'](a3A),a3D=a3z[0x4],a3E=a3z[0x5],a3F=a3z[0x6],a3G=a3z[0x7],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateY caches src m[8]; two blends; SERVED: identical (snippet-only twin).",
+   "name": "matElem08",
+   "selector": "a3H@u0008#23",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "s=ai4,a3B=Math[\"sin\"](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "Math[ais(0xbd6)](a3A),a3C=Math[ais(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x8],a3I=a3z[0x9],a3J=a3z[0xa],a3K=a3z[0xb];return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: rotateZ caches src m[4]; two blends; SERVED: identical (snippet-only twin).",
+   "name": "matElem04",
+   "selector": "a3H@u0008#24",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u0008",
+    "index": 24,
+    "refCount": 2,
+    "snippet": "t=ai4,a3B=Math['sin'](a3A),a3C=Math[\"cos\"](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z[0x6],a3K=a3z[0x7];return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 24,
+    "refCount": 2,
+    "snippet": ",a3B=Math['sin'](a3A),a3C=Math[ait(0xb69)](a3A),a3D=a3z[0x0],a3E=a3z[0x1],a3F=a3z[0x2],a3G=a3z[0x3],a3H=a3z[0x4],a3I=a3z[0x5],a3J=a3z[0x6],a3K=a3z[0x7];return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ring-buffer tick snapshot distance-checked against server position; SERVED: identical (snippet-only twin).",
+   "name": "sentTickEntry",
+   "selector": "a3p@u2737#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 4,
+    "snippet": ");if(a3o[\"tdkZouYda\"]==a0T){if(a3o[\"rBEdfQOuYkz\"]==0x81)return;Kq['DRUHohhzr']=a3o['hkhrYayXI'];var a3p=a28[a3o['wGiOzKcGlnH']%0x80];if(a3o==undefined){}if(a3p="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "da']);if(a3o[aC8(0x197)]==a0T){if(a3o[aC8(0x20b)]==0x81)return;Kq['DRUHohhzr']=a3o['hkhrYayXI'];var a3p=a28[a3o['wGiOzKcGlnH']%0x80];if(a3o==undefined){}if(a3p="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: epsilon threshold gating position-difference debug branch; SERVED: identical (snippet-only twin).",
+   "name": "posDiffTolerance",
+   "selector": "a3q@u2737#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ed){}Fl['set'](a3o['JoHdvmpcMvL'],a3o[\"uBHZYKAHa\"],a3o['yxEKoSFAg']),a0B[\"bLuhQxfFGDS\"](a3p,Fl);var a3q=0.0001;!L1&&(a3q=0x0);if(a0B['RalTGIIEA']()>a3q&&a3p['y'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "efined){}Fl['set'](a3o['JoHdvmpcMvL'],a3o[aC8(0x939)],a3o['yxEKoSFAg']),a0B[aC8(0xb55)](a3p,Fl);var a3q=0.0001;!L1&&(a3q=0x0);if(a0B['RalTGIIEA']()>a3q&&a3p['y'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shared counter over tick buffer and entity queue loops; SERVED: identical (snippet-only twin). (GVAL patch: loopIndex collides with rename-map value)",
+   "name": "tickQueueIdx",
+   "selector": "a3r@u2737#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "y']!=-0xf423f){if(!L1){console['log'](a3p),console[\"log\"](Fl),console['log']('Pos\\x20Diff');for(var a3r=0x0;a3r<a28['length'];a3r++){a0B[\"bLuhQxfFGDS\"](a28[a3r]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "-0xf423f){if(!L1){console['log'](a3p),console[aC8(0xc04)](Fl),console['log']('Pos\\x20Diff');for(var a3r=0x0;a3r<a28['length'];a3r++){a0B[aC8(0xb55)](a28[a3r],Fl"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: id-to-type lookup fed into entity factory and weapon table; SERVED: identical (snippet-only twin).",
+   "name": "entityTypeIdx",
+   "selector": "a3t@u2737#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ",'DRUHohhzr':a3o[\"hkhrYayXI\"],'PhbhpxFxPP':a3o['qXuHmlbSlxE'],'TajejwTbs':-0x1,\"l9A2pw2R0\":0x0};var a3t=0x0;a0t[a3o[\"tdkZouYda\"]]!=undefined&&(a3t=a0t[a3o['tdkZ"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "],'DRUHohhzr':a3o[aC8(0x6e2)],'PhbhpxFxPP':a3o['qXuHmlbSlxE'],'TajejwTbs':-0x1,\"l9A2pw2R0\":0x0};var a3t=0x0;a0t[a3o[aC8(0x197)]]!=undefined&&(a3t=a0t[a3o['tdkZo"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: alias of global entity array appending new entity; SERVED: identical (snippet-only twin). (GVAL patch: entityList collides with rename-map value)",
+   "name": "spawnedEntities",
+   "selector": "a3u@u2737#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "3ZS3L2g\"],a0x[a3o[\"tdkZouYda\"]]);a3s[\"threeNametag\"]!==undefined&&XO(a3s,a0u[a3s['MqaFuSJOX']]);var a3u=V3,a3v=V3['length'];a3u[a3v]=a3s,a0i();}a3s[\"yW38T38y4\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "s[\"r23ZS3L2g\"],a0x[a3o[aC8(0x197)]]);a3s[aC8(0x418)]!==undefined&&XO(a3s,a0u[a3s['MqaFuSJOX']]);var a3u=V3,a3v=V3['length'];a3u[a3v]=a3s,a0i();}a3s[\"yW38T38y4\"]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tail queue snapshot checked for stale timestamp pop; SERVED: identical (snippet-only twin).",
+   "name": "lastQueuedSnapshot",
+   "selector": "a3w@u2737#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "s[\"aTw7B6P5H\"],a3s[\"TajejwTbs\"]=0x0);a3s[\"aTw7B6P5H\"]=a3o['hkhrYayXI'];if(a3s['cvdEaYvkM']>0x0){var a3w=a3s['queue'][a3s['cvdEaYvkM']-0x1];Math[\"abs\"](GK-a3w['t"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "3s[\"aTw7B6P5H\"],a3s[aC8(0x1f9)]=0x0);a3s[\"aTw7B6P5H\"]=a3o['hkhrYayXI'];if(a3s['cvdEaYvkM']>0x0){var a3w=a3s['queue'][a3s['cvdEaYvkM']-0x1];Math[aC8(0x4fc)](GK-a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: previous snapshot anchoring time lerp and clamp; SERVED: identical (snippet-only twin).",
+   "name": "prevSnapshot",
+   "selector": "a3x@u2737#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "var a3w=a3s['queue'][a3s['cvdEaYvkM']-0x1];Math[\"abs\"](GK-a3w['time'])<0xf&&a3s['cvdEaYvkM']--;}var a3x;a3s['cvdEaYvkM']>0x0?a3x=a3s['queue'][a3s['cvdEaYvkM']-0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "3w=a3s['queue'][a3s['cvdEaYvkM']-0x1];Math[aC8(0x4fc)](GK-a3w['time'])<0xf&&a3s['cvdEaYvkM']--;}var a3x;a3s['cvdEaYvkM']>0x0?a3x=a3s['queue'][a3s['cvdEaYvkM']-0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fresh queue slot filled from packet position rotation time; SERVED: identical (snippet-only twin).",
+   "name": "curSnapshot",
+   "selector": "a3y@u2737#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "dEaYvkM']>0x0?a3x=a3s['queue'][a3s['cvdEaYvkM']-0x1]:a3x=a3s[\"xZ99d3OY82\"];a3s['cvdEaYvkM']=0x0;var a3y=a3s['queue'][a3s['cvdEaYvkM']++];a3s[\"cvdEaYvkM\"]=Math[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2737",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "dEaYvkM']>0x0?a3x=a3s['queue'][a3s['cvdEaYvkM']-0x1]:a3x=a3s[\"xZ99d3OY82\"];a3s['cvdEaYvkM']=0x0;var a3y=a3s['queue'][a3s['cvdEaYvkM']++];a3s[aC8(0x1f0)]=Math[aC"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead catch parameter refCount zero empty handler",
+   "selector": "a3z@u2737#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 transpose output; alias-checked element writes, rc8; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#92",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 92,
+    "refCount": 8,
+    "snippet": "ion(a3y){return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3t[\"transpose\"]=function(a3y,a3z){if(a3y===a3z){var a3A=a3z[0x1];a3y[0x1]=a3z[0x2],a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 92,
+    "refCount": 8,
+    "snippet": "tion(a3y){return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3t[ai4(0x323)]=function(a3y,a3z){if(a3y===a3z){var a3A=a3z[0x1];a3y[0x1]=a3z[0x2],a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 invert output; only cryptic rc5 left; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#93",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 93,
+    "refCount": 5,
+    "snippet": "=a3z[0x0],a3y[0x1]=a3z[0x2],a3y[0x2]=a3z[0x1],a3y[0x3]=a3z[0x3];return a3y;},a3t[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 93,
+    "refCount": 5,
+    "snippet": "3z[0x0],a3y[0x1]=a3z[0x2],a3y[0x2]=a3z[0x1],a3y[0x3]=a3z[0x3];return a3y;},a3t[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 frob read-only input; str/det siblings srcVec; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#100",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 100,
+    "refCount": 4,
+    "snippet": "t2(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+',\\x20'+a3y[0x2]+',\\x20'+a3y[0x3]+'\\x20)';},a3t['frob']=function(a3y){var aim=ai4;return Math[\"sqrt\"](Math[\"pow\"](a3y[0x0],0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 100,
+    "refCount": 4,
+    "snippet": "t2(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+',\\x20'+a3y[0x2]+',\\x20'+a3y[0x3]+'\\x20)';},a3t['frob']=function(a3y){var aim=ai4;return Math[aim(0xba3)](Math[aim(0x326)](a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2 LDU first output; receives factor element; SERVED: identical (snippet-only twin).",
+   "name": "outVec",
+   "selector": "a3y@u0008#101",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 101,
+    "refCount": 3,
+    "snippet": "ath[\"pow\"](a3y[0x1],0x2)+Math['pow'](a3y[0x2],0x2)+Math['pow'](a3y[0x3],0x2));},a3t['LDU']=function(a3y,a3z,a3A,a3B){return a3y[0x2]=a3B[0x2]/a3B[0x0],a3A[0x0]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 101,
+    "refCount": 3,
+    "snippet": "im(0x326)](a3y[0x1],0x2)+Math['pow'](a3y[0x2],0x2)+Math['pow'](a3y[0x3],0x2));},a3t['LDU']=function(a3y,a3z,a3A,a3B){return a3y[0x2]=a3B[0x2]/a3B[0x0],a3A[0x0]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d create fresh identity local, six lanes; SERVED: identical (snippet-only twin).",
+   "name": "newMat2d",
+   "selector": "a3y@u0008#102",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 102,
+    "refCount": 7,
+    "snippet": ",[a3y,a3z,a3A];},typeof a3k!='undefined'&&(a3k[\"mat2\"]=a3t);var a3u={};a3u['create']=function(){var a3y=new a3m(0x6);return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 102,
+    "refCount": 7,
+    "snippet": "y,a3z,a3A];},typeof a3k!='undefined'&&(a3k[ai4(0xf99)]=a3t);var a3u={};a3u['create']=function(){var a3y=new a3m(0x6);return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d clone read-only source; six element reads; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#103",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 103,
+    "refCount": 6,
+    "snippet": "0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[\"clone\"]=function(a3y){var a3z=new a3m(0x6);return a3z[0x0]=a3y[0x0],a3z[0x1]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 103,
+    "refCount": 6,
+    "snippet": "0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[ai4(0xae2)]=function(a3y){var a3z=new a3m(0x6);return a3z[0x0]=a3y[0x0],a3z[0x1]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d invert output; six lanes written, returned; SERVED: identical (snippet-only twin).",
+   "name": "outMat",
+   "selector": "a3y@u0008#106",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 106,
+    "refCount": 7,
+    "snippet": "]=0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 106,
+    "refCount": 7,
+    "snippet": "0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d determinant read-only input, four reads; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3y@u0008#107",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 107,
+    "refCount": 4,
+    "snippet": "y[0x4]=(a3C*a3F-a3D*a3E)*a3G,a3y[0x5]=(a3B*a3E-a3A*a3F)*a3G,a3y):null;},a3u[\"determinant\"]=function(a3y){return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[\"multi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 107,
+    "refCount": 4,
+    "snippet": "a3y[0x4]=(a3C*a3F-a3D*a3E)*a3G,a3y[0x5]=(a3B*a3E-a3A*a3F)*a3G,a3y):null;},a3u[ai4(0x10b6)]=function(a3y){return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[ai4(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d multiply output; six lanes written, returned; SERVED: identical (snippet-only twin).",
+   "name": "outMat",
+   "selector": "a3y@u0008#108",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 108,
+    "refCount": 7,
+    "snippet": "[\"determinant\"]=function(a3y){return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 108,
+    "refCount": 7,
+    "snippet": "3u[ai4(0x10b6)]=function(a3y){return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: mat2d rotate output; six lanes written, returned; SERVED: identical (snippet-only twin).",
+   "name": "outMat",
+   "selector": "a3y@u0008#109",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 109,
+    "refCount": 7,
+    "snippet": "3L+a3D*a3M+a3F,a3y[0x5]=a3C*a3L+a3E*a3M+a3G,a3y;},a3u[\"mul\"]=a3u['multiply'],a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 109,
+    "refCount": 7,
+    "snippet": "D*a3M+a3F,a3y[0x5]=a3C*a3L+a3E*a3M+a3G,a3y;},a3u[ai4(0xcfe)]=a3u['multiply'],a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 divide first operand; seven merged siblings; SERVED: identical (snippet-only twin).",
+   "name": "a",
+   "selector": "a3z@u0008#7",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "x0]*a3A[0x0],a3y[0x1]=a3z[0x1]*a3A[0x1],a3y;},a3q[\"mul\"]=a3q['multiply'],a3q[\"divide\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "[0x0],a3y[0x1]=a3z[0x1]*a3A[0x1],a3y;},a3q[ai4(0xcfe)]=a3q['multiply'],a3q[ai4(0x937)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 min first operand; mirrors max operand; SERVED: identical (snippet-only twin).",
+   "name": "a",
+   "selector": "a3z@u0008#8",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]/a3A[0x1],a3y;},a3q['div']=a3q[\"divide\"],a3q['min']=function(a3y,a3z,a3A){return a3y[0x0]=Math['min'](a3z[0x0],a3A[0x0]),a3y["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 2,
+    "snippet": "z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]/a3A[0x1],a3y;},a3q['div']=a3q[ai4(0x937)],a3q['min']=function(a3y,a3z,a3A){return a3y[0x0]=Math['min'](a3z[0x0],a3A[0x0]),a3y["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 squaredDistance second point; sibling vecA; SERVED: identical (snippet-only twin).",
+   "name": "vecB",
+   "selector": "a3z@u0008#13",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 13,
+    "refCount": 2,
+    "snippet": " Math['sqrt'](a3A*a3A+a3B*a3B);},a3q[\"dist\"]=a3q[\"pLBXqJSbPlZ\"],a3q['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1];return "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 13,
+    "refCount": 2,
+    "snippet": "ath['sqrt'](a3A*a3A+a3B*a3B);},a3q[ai4(0x1033)]=a3q[ai4(0x439)],a3q['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1];return "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 length x-component cache; mirrors vec4; SERVED: identical (snippet-only twin).",
+   "name": "lenXElem",
+   "selector": "a3z@u0008#14",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 14,
+    "refCount": 2,
+    "snippet": "urn a3A*a3A+a3B*a3B;},a3q[\"sqrDist\"]=a3q['squaredDistance'],a3q[\"length\"]=function(a3y){var ai5=ai4,a3z=a3y[0x0],a3A=a3y[0x1];return Math[\"sqrt\"](a3z*a3z+a3A*a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 14,
+    "refCount": 2,
+    "snippet": " a3A*a3A+a3B*a3B;},a3q[ai4(0xdea)]=a3q['squaredDistance'],a3q[ai4(0x3a2)]=function(a3y){var ai5=ai4,a3z=a3y[0x0],a3A=a3y[0x1];return Math[ai5(0xba3)](a3z*a3z+a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 squaredLength x-component cache; mirrors vec4; SERVED: identical (snippet-only twin).",
+   "name": "sqrLenXElem",
+   "selector": "a3z@u0008#15",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "urn Math[\"sqrt\"](a3z*a3z+a3A*a3A);},a3q['len']=a3q[\"length\"],a3q[\"squaredLength\"]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1];return a3z*a3z+a3A*a3A;},a3q['sqrL"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 15,
+    "refCount": 2,
+    "snippet": "rn Math[ai5(0xba3)](a3z*a3z+a3A*a3A);},a3q['len']=a3q[ai4(0x3a2)],a3q[ai4(0x430)]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1];return a3z*a3z+a3A*a3A;},a3q['sqrL"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 negate read-only source; mirrors vec4; SERVED: identical (snippet-only twin).",
+   "name": "vecToNegate",
+   "selector": "a3z@u0008#16",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "=a3y[0x1];return a3z*a3z+a3A*a3A;},a3q['sqrLen']=a3q[\"squaredLength\"],a3q[\"dcItcWVWb\"]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y;},a3q["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 16,
+    "refCount": 2,
+    "snippet": "0],a3A=a3y[0x1];return a3z*a3z+a3A*a3A;},a3q['sqrLen']=a3q[ai4(0x430)],a3q[ai4(0x956)]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y;},a3q["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 dot second operand; sibling vecA merged; SERVED: identical (snippet-only twin).",
+   "name": "vecB",
+   "selector": "a3z@u0008#18",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "3C=0x1/Math[\"sqrt\"](a3C),a3y[0x0]=a3z[0x0]*a3C,a3y[0x1]=a3z[0x1]*a3C),a3y;},a3q[\"dot\"]=function(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1];},a3q[\"cross"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 18,
+    "refCount": 2,
+    "snippet": "th[ai6(0xba3)](a3C),a3y[0x0]=a3z[0x0]*a3C,a3y[0x1]=a3z[0x1]*a3C),a3y;},a3q[ai4(0xbe8)]=function(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1];},a3q[ai4(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 cross first operand; out-first op family; SERVED: identical (snippet-only twin).",
+   "name": "a",
+   "selector": "a3z@u0008#19",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 2,
+    "snippet": "a3q[\"dot\"]=function(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1];},a3q[\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0]*a3A[0x1]-a3z[0x1]*a3A[0x0];return "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 19,
+    "refCount": 2,
+    "snippet": "0xbe8)]=function(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1];},a3q[ai4(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0]*a3A[0x1]-a3z[0x1]*a3A[0x0];return "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 lerp start vector; mirrors vec3 lerp; SERVED: identical (snippet-only twin).",
+   "name": "firstVec",
+   "selector": "a3z@u0008#20",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "a3A[0x1]-a3z[0x1]*a3A[0x0];return a3y[0x0]=a3y[0x1]=0x0,a3y[0x2]=a3B,a3y;},a3q[\"lerp\"]=function(a3y,a3z,a3A,a3B){var a3C=a3z[0x0],a3D=a3z[0x1];return a3y[0x0]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 20,
+    "refCount": 2,
+    "snippet": "x1]-a3z[0x1]*a3A[0x0];return a3y[0x0]=a3y[0x1]=0x0,a3y[0x2]=a3B,a3y;},a3q[ai4(0x108e)]=function(a3y,a3z,a3A,a3B){var a3C=a3z[0x0],a3D=a3z[0x1];return a3y[0x0]=a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 transformMat2 input vector, cached xyz; SERVED: identical (snippet-only twin).",
+   "name": "inVec",
+   "selector": "a3z@u0008#22",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "a3y[0x0]=Math[\"cos\"](a3A)*a3z,a3y[0x1]=Math['sin'](a3A)*a3z,a3y;},a3q['transformMat2']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "x0]=Math[ai7(0xb69)](a3A)*a3z,a3y[0x1]=Math['sin'](a3A)*a3z,a3y;},a3q['transformMat2']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 transformMat2d input vector, cached xyz; SERVED: identical (snippet-only twin).",
+   "name": "inVec",
+   "selector": "a3z@u0008#23",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "A[0x0]*a3B+a3A[0x2]*a3C,a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C,a3y;},a3q[\"transformMat2d\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 23,
+    "refCount": 2,
+    "snippet": "x0]=a3A[0x0]*a3B+a3A[0x2]*a3C,a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C,a3y;},a3q[ai4(0xb66)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 transformMat3 input vector, cached xyz; SERVED: identical (snippet-only twin).",
+   "name": "inVec",
+   "selector": "a3z@u0008#24",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 24,
+    "refCount": 2,
+    "snippet": "2]*a3C+a3A[0x4],a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C+a3A[0x5],a3y;},a3q[\"transformMat3\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 24,
+    "refCount": 2,
+    "snippet": "3A[0x2]*a3C+a3A[0x4],a3y[0x1]=a3A[0x1]*a3B+a3A[0x3]*a3C+a3A[0x5],a3y;},a3q[ai4(0x811)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1];return a3y[0x0]=a3A[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec2 forEach scratch vector reused per iteration; SERVED: identical (snippet-only twin).",
+   "name": "tmpVec",
+   "selector": "a3z@u0008#26",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 6,
+    "snippet": "['search'](\"(((.+)+)+)+$\")['toString']()['constructor'](a3y)['search']('(((.+)+)+)+$');});a3y();var a3z=a3q['create']();return function(a3A,a3B,a3C,a3D,a3E,a3F)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 26,
+    "refCount": 6,
+    "snippet": "']()['search'](ai8(0x284))['toString']()['constructor'](a3y)['search']('(((.+)+)+)+$');});a3y();var a3z=a3q['create']();return function(a3A,a3B,a3C,a3D,a3E,a3F)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 clone fresh local; mirrors cloneMat2d; SERVED: identical (snippet-only twin).",
+   "name": "cloneVec3",
+   "selector": "a3z@u0008#27",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 27,
+    "refCount": 4,
+    "snippet": "a3y=new a3m(0x3);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y;},a3r[\"clone\"]=function(a3y){var a3z=new a3m(0x3);return a3z[0x0]=a3y[0x0],a3z[0x1]=a3y[0x1],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 27,
+    "refCount": 4,
+    "snippet": "=new a3m(0x3);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y;},a3r[ai4(0xae2)]=function(a3y){var a3z=new a3m(0x3);return a3z[0x0]=a3y[0x0],a3z[0x1]=a3y[0x1],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 subtract first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#32",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 32,
+    "refCount": 3,
+    "snippet": "]+a3A[0x0],a3y[0x1]=a3z[0x1]+a3A[0x1],a3y[0x2]=a3z[0x2]+a3A[0x2],a3y;},a3r[\"subtract\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]-a3A[0x0],a3y[0x1]=a3z[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 32,
+    "refCount": 3,
+    "snippet": "]+a3A[0x0],a3y[0x1]=a3z[0x1]+a3A[0x1],a3y[0x2]=a3z[0x2]+a3A[0x2],a3y;},a3r[ai4(0xc83)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]-a3A[0x0],a3y[0x1]=a3z[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 multiply first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#33",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 33,
+    "refCount": 3,
+    "snippet": "]-a3A[0x1],a3y[0x2]=a3z[0x2]-a3A[0x2],a3y;},a3r[\"sub\"]=a3r[\"subtract\"],a3r['multiply']=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A[0x0],a3y[0x1]=a3z[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 33,
+    "refCount": 3,
+    "snippet": "[0x1],a3y[0x2]=a3z[0x2]-a3A[0x2],a3y;},a3r[ai4(0xf08)]=a3r[ai4(0xc83)],a3r['multiply']=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A[0x0],a3y[0x1]=a3z[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 divide first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#34",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 34,
+    "refCount": 3,
+    "snippet": "x1]*a3A[0x1],a3y[0x2]=a3z[0x2]*a3A[0x2],a3y;},a3r[\"mul\"]=a3r['multiply'],a3r[\"divide\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 34,
+    "refCount": 3,
+    "snippet": "[0x1],a3y[0x2]=a3z[0x2]*a3A[0x2],a3y;},a3r[ai4(0xcfe)]=a3r['multiply'],a3r[ai4(0x937)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 min first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#35",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 35,
+    "refCount": 3,
+    "snippet": "a3z[0x1]/a3A[0x1],a3y[0x2]=a3z[0x2]/a3A[0x2],a3y;},a3r['div']=a3r['divide'],a3r[\"min\"]=function(a3y,a3z,a3A){var ai9=ai4;return a3y[0x0]=Math['min'](a3z[0x0],a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 35,
+    "refCount": 3,
+    "snippet": "x1]/a3A[0x1],a3y[0x2]=a3z[0x2]/a3A[0x2],a3y;},a3r['div']=a3r['divide'],a3r[ai4(0x40a)]=function(a3y,a3z,a3A){var ai9=ai4;return a3y[0x0]=Math['min'](a3z[0x0],a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 max first operand, three lanes read; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#36",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 3,
+    "snippet": "ath[\"min\"](a3z[0x1],a3A[0x1]),a3y[0x2]=Math['min'](a3z[0x2],a3A[0x2]),a3y;},a3r['max']=function(a3y,a3z,a3A){return a3y[0x0]=Math['max'](a3z[0x0],a3A[0x0]),a3y["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 36,
+    "refCount": 3,
+    "snippet": "i9(0x40a)](a3z[0x1],a3A[0x1]),a3y[0x2]=Math['min'](a3z[0x2],a3A[0x2]),a3y;},a3r['max']=function(a3y,a3z,a3A){return a3y[0x0]=Math['max'](a3z[0x0],a3A[0x0]),a3y["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 scale source vector times scalar; SERVED: identical (snippet-only twin).",
+   "name": "vecToScale",
+   "selector": "a3z@u0008#37",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 37,
+    "refCount": 3,
+    "snippet": "h['max'](a3z[0x1],a3A[0x1]),a3y[0x2]=Math['max'](a3z[0x2],a3A[0x2]),a3y;},a3r[\"scale\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A,a3y[0x1]=a3z[0x1]*a3A,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 37,
+    "refCount": 3,
+    "snippet": "'max'](a3z[0x1],a3A[0x1]),a3y[0x2]=Math['max'](a3z[0x2],a3A[0x2]),a3y;},a3r[ai4(0xd6)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A,a3y[0x1]=a3z[0x1]*a3A,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squaredDistance second point, diffed then squared; SERVED: identical (snippet-only twin).",
+   "name": "sqrDistPointB",
+   "selector": "a3z@u0008#40",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 3,
+    "snippet": "qrt\"](a3A*a3A+a3B*a3B+a3C*a3C);},a3r['dist']=a3r['pLBXqJSbPlZ'],a3r['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 40,
+    "refCount": 3,
+    "snippet": "ba3)](a3A*a3A+a3B*a3B+a3C*a3C);},a3r['dist']=a3r['pLBXqJSbPlZ'],a3r['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: length caches x component for sqrt; SERVED: identical (snippet-only twin).",
+   "name": "lenXElem",
+   "selector": "a3z@u0008#41",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 2,
+    "snippet": "urn a3A*a3A+a3B*a3B+a3C*a3C;},a3r['sqrDist']=a3r[\"squaredDistance\"],a3r['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return Math['sqrt'](a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 41,
+    "refCount": 2,
+    "snippet": "x2];return a3A*a3A+a3B*a3B+a3C*a3C;},a3r['sqrDist']=a3r[ai4(0xa8b)],a3r['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return Math['sqrt'](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: squaredLength caches x component for sum; SERVED: identical (snippet-only twin).",
+   "name": "sqrLenXElem",
+   "selector": "a3z@u0008#42",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 42,
+    "refCount": 2,
+    "snippet": "['sqrt'](a3z*a3z+a3A*a3A+a3B*a3B);},a3r[\"len\"]=a3r['length'],a3r[\"squaredLength\"]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return a3z*a3z+a3A*a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 42,
+    "refCount": 2,
+    "snippet": "['sqrt'](a3z*a3z+a3A*a3A+a3B*a3B);},a3r[ai4(0x512)]=a3r['length'],a3r[ai4(0x430)]=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2];return a3z*a3z+a3A*a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: negate source vector, lanes negated; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3z@u0008#43",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 43,
+    "refCount": 3,
+    "snippet": "];return a3z*a3z+a3A*a3A+a3B*a3B;},a3r['sqrLen']=a3r['squaredLength'],a3r[\"dcItcWVWb\"]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x2]=-"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 43,
+    "refCount": 3,
+    "snippet": "2];return a3z*a3z+a3A*a3A+a3B*a3B;},a3r['sqrLen']=a3r['squaredLength'],a3r[ai4(0x956)]=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x2]=-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec3 cross first operand, cached xyz; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#46",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 46,
+    "refCount": 3,
+    "snippet": "n(a3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1]+a3y[0x2]*a3z[0x2];},a3r[\"cross\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 46,
+    "refCount": 3,
+    "snippet": "3y,a3z){return a3y[0x0]*a3z[0x0]+a3y[0x1]*a3z[0x1]+a3y[0x2]*a3z[0x2];},a3r[ai4(0x4f1)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: random scale defaulting one, weights output; SERVED: identical (snippet-only twin).",
+   "name": "scaleVal",
+   "selector": "a3z@u0008#48",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 48,
+    "refCount": 4,
+    "snippet": "C),a3y[0x1]=a3D+a3B*(a3A[0x1]-a3D),a3y[0x2]=a3E+a3B*(a3A[0x2]-a3E),a3y;},a3r[\"random\"]=function(a3y,a3z){var aib=ai4;a3z=a3z||0x1;var a3A=a3n()*0x2*Math['PI'],a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 48,
+    "refCount": 4,
+    "snippet": ",a3y[0x1]=a3D+a3B*(a3A[0x1]-a3D),a3y[0x2]=a3E+a3B*(a3A[0x2]-a3E),a3y;},a3r[ai4(0x4bd)]=function(a3y,a3z){var aib=ai4;a3z=a3z||0x1;var a3A=a3n()*0x2*Math['PI'],a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: transformMat4 input vector cached then multiplied; SERVED: identical (snippet-only twin).",
+   "name": "inVec",
+   "selector": "a3z@u0008#49",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 49,
+    "refCount": 3,
+    "snippet": "s'](a3A)*a3C,a3y[0x1]=Math[\"sin\"](a3A)*a3C,a3y[0x2]=a3B*a3z,a3y;},a3r['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2];return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 49,
+    "refCount": 3,
+    "snippet": "3A)*a3C,a3y[0x1]=Math[aib(0xbd6)](a3A)*a3C,a3y[0x2]=a3B*a3z,a3y;},a3r['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2];return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: forEach flat array iterated and rewritten; SERVED: identical (snippet-only twin).",
+   "name": "vecArray",
+   "selector": "a3z@u0008#55",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 55,
+    "refCount": 9,
+    "snippet": "=a3D[0x2]+a3A[0x2],a3y;},a3r[\"forEach\"]=(function(){var aif=ai4,a3y=a3r[\"create\"]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 55,
+    "refCount": 9,
+    "snippet": "D[0x2]+a3A[0x2],a3y;},a3r[ai4(0x68f)]=(function(){var aif=ai4,a3y=a3r[aif(0xf2a)]();return function(a3z,a3A,a3B,a3C,a3D,a3E){var aig=aif,a3F,a3G;a3A||(a3A=0x3),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 copy source, four lanes copied; SERVED: identical (snippet-only twin).",
+   "name": "srcVec",
+   "selector": "a3z@u0008#58",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 58,
+    "refCount": 4,
+    "snippet": " a3m(0x4);return a3C[0x0]=a3y,a3C[0x1]=a3z,a3C[0x2]=a3A,a3C[0x3]=a3B,a3C;},a3s[\"copy\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]=a3z"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 58,
+    "refCount": 4,
+    "snippet": "(0x4);return a3C[0x0]=a3y,a3C[0x1]=a3z,a3C[0x2]=a3A,a3C[0x3]=a3B,a3C;},a3s[ai4(0x609)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]=a3z"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 subtract first operand, four lanes; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#61",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 61,
+    "refCount": 4,
+    "snippet": "]+a3A[0x1],a3y[0x2]=a3z[0x2]+a3A[0x2],a3y[0x3]=a3z[0x3]+a3A[0x3],a3y;},a3s[\"subtract\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]-a3A[0x0],a3y[0x1]=a3z[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 61,
+    "refCount": 4,
+    "snippet": "]+a3A[0x1],a3y[0x2]=a3z[0x2]+a3A[0x2],a3y[0x3]=a3z[0x3]+a3A[0x3],a3y;},a3s[ai4(0xc83)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]-a3A[0x0],a3y[0x1]=a3z[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 multiply first operand, four lanes; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#62",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 62,
+    "refCount": 4,
+    "snippet": "]-a3A[0x2],a3y[0x3]=a3z[0x3]-a3A[0x3],a3y;},a3s[\"sub\"]=a3s[\"subtract\"],a3s['multiply']=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A[0x0],a3y[0x1]=a3z[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 62,
+    "refCount": 4,
+    "snippet": "[0x2],a3y[0x3]=a3z[0x3]-a3A[0x3],a3y;},a3s[ai4(0xf08)]=a3s[ai4(0xc83)],a3s['multiply']=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A[0x0],a3y[0x1]=a3z[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: vec4 divide first operand, four lanes; SERVED: identical (snippet-only twin).",
+   "name": "vecA",
+   "selector": "a3z@u0008#63",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 63,
+    "refCount": 4,
+    "snippet": "x2]*a3A[0x2],a3y[0x3]=a3z[0x3]*a3A[0x3],a3y;},a3s[\"mul\"]=a3s['multiply'],a3s[\"divide\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 63,
+    "refCount": 4,
+    "snippet": "[0x2],a3y[0x3]=a3z[0x3]*a3A[0x3],a3y;},a3s[ai4(0xcfe)]=a3s['multiply'],a3s[ai4(0x937)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]/a3A[0x0],a3y[0x1]=a3z[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat multiply left operand, cached xyzw; SERVED: identical (snippet-only twin).",
+   "name": "quatA",
+   "selector": "a3z@u0008#132",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 132,
+    "refCount": 4,
+    "snippet": "x2]=a3B*a3z[0x2],a3y[0x3]=Math[\"cos\"](a3A),a3y;},a3x[\"add\"]=a3s['add'],a3x[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 132,
+    "refCount": 4,
+    "snippet": "z[0x2],a3y[0x3]=Math[aiz(0xb69)](a3A),a3y;},a3x[ai4(0x8da)]=a3s['add'],a3x[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: quat rotateX source, half-angle rotated; SERVED: identical (snippet-only twin).",
+   "name": "srcQuat",
+   "selector": "a3z@u0008#133",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 133,
+    "refCount": 4,
+    "snippet": "*a3G-a3D*a3H,a3y;},a3x[\"mul\"]=a3x['multiply'],a3x['scale']=a3s['scale'],a3x['rotateX']=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 133,
+    "refCount": 4,
+    "snippet": "a3D*a3H,a3y;},a3x[ai4(0xcfe)]=a3x['multiply'],a3x['scale']=a3s['scale'],a3x['rotateX']=function(a3y,a3z,a3A){var aiA=ai4;a3A*=0.5;var a3B=a3z[0x0],a3C=a3z[0x1],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: calculateW source xyz, w recomputed; SERVED: identical (snippet-only twin).",
+   "name": "srcQuat",
+   "selector": "a3z@u0008#136",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 136,
+    "refCount": 3,
+    "snippet": "*a3G-a3B*a3F,a3y[0x2]=a3D*a3G+a3E*a3F,a3y[0x3]=a3E*a3G-a3D*a3F,a3y;},a3x[\"calculateW\"]=function(a3y,a3z){var aiD=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2];retu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 136,
+    "refCount": 3,
+    "snippet": "3C*a3G-a3B*a3F,a3y[0x2]=a3D*a3G+a3E*a3F,a3y[0x3]=a3E*a3G-a3D*a3F,a3y;},a3x[ai4(0xf6c)]=function(a3y,a3z){var aiD=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2];retu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slerp start quat, dotted then blended; SERVED: identical (snippet-only twin).",
+   "name": "srcQuat",
+   "selector": "a3z@u0008#137",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 137,
+    "refCount": 4,
+    "snippet": "a3A-a3B*a3B-a3C*a3C)),a3y;},a3x['dot']=a3s[\"dot\"],a3x[\"lerp\"]=a3s['lerp'],a3x[\"slerp\"]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 137,
+    "refCount": 4,
+    "snippet": "3C*a3C)),a3y;},a3x['dot']=a3s[ai4(0xbe8)],a3x[ai4(0x108e)]=a3s['lerp'],a3x[ai4(0xbd7)]=function(a3y,a3z,a3A,a3B){var aiE=ai4,a3C=a3z[0x0],a3D=a3z[0x1],a3E=a3z[0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: fromMat3 source matrix, trace then branches; SERVED: identical (snippet-only twin).",
+   "name": "srcMat3",
+   "selector": "a3z@u0008#140",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 140,
+    "refCount": 22,
+    "snippet": "],a3x[\"sqrLen\"]=a3x['squaredLength'],a3x['normalize']=a3s[\"normalize\"],a3x['fromMat3']=function(a3y,a3z){var aiF=ai4,a3A=a3z[0x0]+a3z[0x4]+a3z[0x8],a3B;if(a3A>0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 140,
+    "refCount": 22,
+    "snippet": ",a3x[ai4(0x884)]=a3x['squaredLength'],a3x['normalize']=a3s[ai4(0xfc6)],a3x['fromMat3']=function(a3y,a3z){var aiF=ai4,a3A=a3z[0x0]+a3z[0x4]+a3z[0x8],a3B;if(a3A>0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Current Wo spawner entry; onTick reset, type/position/vary read; SERVED: identical (snippet-only twin).",
+   "name": "spawnEntry",
+   "selector": "a3p@u2477#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u2477",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "a3o<Wo['length'];a3o++){Wo[a3o]['onTick']++;if(Wo[a3o][\"onTick\"]<Wo[a3o][\"spawnEvery\"])continue;var a3p=Wo[a3o];a3p['onTick']=0x0;var a3q=lrRnpundBY(a3p['type']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2477",
+    "index": 0,
+    "refCount": 14,
+    "snippet": "a3o<Wo['length'];a3o++){Wo[a3o]['onTick']++;if(Wo[a3o][azL(0xf74)]<Wo[a3o][azL(0x2c1)])continue;var a3p=Wo[a3o];a3p['onTick']=0x0;var a3q=lrRnpundBY(a3p['type']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Factory-made particle from type; alpha, scale, position configured; SERVED: identical (snippet-only twin).",
+   "name": "spawnedParticle",
+   "selector": "a3q@u2477#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u2477",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "nTick']++;if(Wo[a3o][\"onTick\"]<Wo[a3o][\"spawnEvery\"])continue;var a3p=Wo[a3o];a3p['onTick']=0x0;var a3q=lrRnpundBY(a3p['type']);a3q['alphaMultiplier']=0x1;var a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2477",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "nTick']++;if(Wo[a3o][azL(0xf74)]<Wo[a3o][azL(0x2c1)])continue;var a3p=Wo[a3o];a3p['onTick']=0x0;var a3q=lrRnpundBY(a3p['type']);a3q['alphaMultiplier']=0x1;var a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Aux vector loaded from position, jittered, passed to setPosition; SERVED: identical (snippet-only twin).",
+   "name": "spawnPosition",
+   "selector": "a3r@u2477#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u2477",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ue;var a3p=Wo[a3o];a3p['onTick']=0x0;var a3q=lrRnpundBY(a3p['type']);a3q['alphaMultiplier']=0x1;var a3r=a3p['aux'],a3s=a3p['aux2'];a3r[\"fromArray\"](a3p[\"positio"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2477",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ue;var a3p=Wo[a3o];a3p['onTick']=0x0;var a3q=lrRnpundBY(a3p['type']);a3q['alphaMultiplier']=0x1;var a3r=a3p['aux'],a3s=a3p['aux2'];a3r[azL(0x10c5)](a3p[azL(0x21"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Loop counter over three vector components with setComponent; SERVED: identical (snippet-only twin).",
+   "name": "componentIndex",
+   "selector": "a3t@u2477#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u2477",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "a3p['aux2'];a3r[\"fromArray\"](a3p[\"position\"]);if(a3p[\"vary\"]){a3s['fromArray'](a3p['vary']);for(var a3t=0x0;a3t<0x3;a3t++){a3s['setComponent'](a3t,a3s['getCompo"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2477",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'aux2'];a3r[azL(0x10c5)](a3p[azL(0x215)]);if(a3p[azL(0x98d)]){a3s['fromArray'](a3p['vary']);for(var a3t=0x0;a3t<0x3;a3t++){a3s['setComponent'](a3t,a3s['getCompo"
+   }
+  }
+ ]
+}

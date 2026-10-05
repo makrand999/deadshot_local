@@ -1,0 +1,85 @@
+# DOSSIER slice-24 (wave 8, 14 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/14] tempKeys@u2252#0 | kind=var depth=5 refCount=6 | sim/game-loop.js
+DECL @225 (verified):
+function loadSettings(){var mNZeiqoUotp;try{try{if(localStorage.settings!=undefined){mNZeiqoUotp=JSON.parse(localStorage.settings);Rz=JSON.parse(JSON.stringify(mNZeiqoUotp));}}catch(e){}if(mNZeiqoUotp==undefined){return;}var tempKeys=Object.keys(mNZeiqoUotp);for(var i=0;i<tempKeys.length;i++){for(var j=0;j<Rw.length;j++){if(Rw[j].id==tempKeys[i]){if(tempKeys[i]==undefined){continue;}Rw[j].default=mNZeiqoUotp[tempKeys[i]];if(tempKeys[i]=='region'){Rw[j].default='';}if(mNZeiqoUotp.version==undefined&&tempKeys[i]=='sensitivity'){if(Rw[j].default!=1){Rw[j].default*=1.4;}}break;}}}}catch(e){}}
+USES: refCount=6, 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/14] gtag@u2868#0 | kind=function depth=5 refCount=3 | characters/mesh-pool.js
+DECL @164 (verified):
+if(L1){var Sk=document.createElement('script');Sk.async=true;Sk.crossOrigin='anonymous';Sk.src='https://www.googletagmanager.com/gtag/js?id=UA-87346685-5';function gtag(){dataLayer.push(arguments);}gtag('js',new Date());Sk.onload=function(){try{if(gtag!==undefined){gtag('config','G-4T2ZJXRRCK',{cookie_flags:'secure;samesite=none'});}}catch(e){if(!L1){console.log(e);}}};document.head.appendChild(Sk);}
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/14] a3q@u2131#0 | kind=param depth=5 refCount=2 | characters/animation.js
+DECL @46 (verified):
+var M3=[],M4=function(a3k,a3l,a3m,a3n,a3o,a3p,a3q,a3r,a3s,a3t){var arA=ai1,a3u=Kq['pkghYgdlX'];a3l=a3l||'#EEE',a3m=a3m||"Verdana",a3n=a3n||0x21,a3o=a3o||0x0,a3q=a3q||0x3;a3t==undefined&&(a3t=![]);var a3v={};a3v['type']=a3k,a3v["space"]=a3o,a3v["properties"]={},a3v["properties"]["name"]=a3k,a3v["properties"]['color']=a3l,a3v["properties"]['font']=a3m,a3v["properties"]["fontSize"]=a3n,a3v["properties"]['otherParams']=''+(a3t?'\x20italic':'');var a3w=a3v;M3['push'](a3w);};
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/14] FullScreenQuad@u0025#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @158 (verified):
+usvzFuAsEB.Pass.FullScreenQuad=(function(){var aKmLbYuMC=new usvzFuAsEB.lUtmuvURyPI(-1,1,1,-1,0,1);var RNQDluasaN=new usvzFuAsEB.PlaneBufferGeometry(2,2);var FullScreenQuad=function(material){this._mesh=new usvzFuAsEB.Mesh(RNQDluasaN,material);};Object.defineProperty(FullScreenQuad.prototype,'material',{get:function(){return this._mesh.material;},set:function(value){this._mesh.material=value;}});Object.assign(FullScreenQuad.prototype,{dispose:function(){this._mesh.RNQDluasaN.dispose();},render:function(qIySEZgti){qIySEZgti.render(this._mesh,aKmLbYuMC);}});return FullScreenQuad;}());
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/14] a3i@u0354#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function ta(a3i){return a3i;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/14] W3@u2497#0 | kind=var depth=3 refCount=1 | sim/game-loop.js
+DECL @4 (verified):
+var W3=!![];
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/14] a00@u2705#0 | kind=var depth=3 refCount=1 | engine/webgl-renderer.js
+DECL @4 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/14] a01@u2705#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @12 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/14] a02@u2705#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @46 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/14] a03@u2705#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @80 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/14] a04@u2705#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @88 (verified):
+var a00=0.2,a01=new usvzFuAsEB['gURkzCzeY'](),a02=new usvzFuAsEB['gURkzCzeY'](),a03=1.2,a04='',a05={'ar2':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.3,-0.4,-0.35),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.4+0.11,-0.5+0.33),'scale':new usvzFuAsEB[("gURkzCzeY")](0x1,0x1,0.8),'clPJAbVChXM':0x1},'shotgun':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.23,0.33-0.52),'scale':new usvzFuAsEB['gURkzCzeY'](0x1,0x1,0.7),'clPJAbVChXM':0x1},'vector':{'inhands':new usvzFuAsEB['gURkzCzeY'](0.2,-0.3,-0.25),'ads':new usvzFuAsEB['gURkzCzeY'](0x0,-0.251,0.33-0.35),'s[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/14] RA@u2265#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @70 (verified):
+var Ry=NJ([-0x6a,-0x65,-0x6b,-0x59,-0x5e,-0x63,-0x65,-0x6c,-0x5b]),Rz,RA,RB=0x0;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/14] a0m@u2724#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var a0m=[],a0n=![],a0o=new GQ();
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/14] a3E@u0365#24 | kind=let depth=8 refCount=0 | ui/widgets.js
+DECL @14466 (verified):
+ier']&&(a3E["push"](tl[a3G]),tl["splice"](a3G,0x1),a3G--,found=!![]);}}a3C['stopPropagation']();if(!found)return;a3k['mice']!=undefined&&a3k['mice']["length"]==0x1&&(a3k["mice"][0x0]['y']=0x174876e7ff,a3k['mice'][0x0]['afCJVYrCGK']=![],setTimeout(function(){a3k['mice'][0x0]['y']=0x174876e7ff,a3k['mice'][0x0]['afCJVYrCGK']=![];},0x0)),a3t(null,tl);}window['addEventListener']('touchend',a3v),window['addEventListener']('touchcancel',a3v);var a3w={};a3w['passive']=![],window['addEventListener']('touchmove',function(a3C){var aox=aor;if(a3k['stayInPlace'])return;var a3D=a3C['chan'+'gedTouches'];let [...line truncated...]
+USES: refCount=0, 86 token-occurrences in unit, showing 8 nearest outside DECL window:
+@13738: a3E(a3D);}a3k['hWWDFvAyq']=a3t;var a3u={};a3u["capture"]=!![],a3u['passive']=!![],document['body']['addEventListener']('mouseup',function(a3C){a3t(a3C);},a3u);function a3v(a3C){var aow=aor;if(tl['length']==0x0)return;let a3D=a3C['chan'+'gedTouches'],a3E=[];for(let a3F=0x0;a3F<a3D['length'];a3F++){for(let a3G=0x0;a3G<tl["length"];a3G++){a3D[a3F]['identifier']==tl[a3G]['identifier']&&(a3E["push"](tl[a3G]),tl["splice"](a3G,0x1),a3G--,found=!![]);}}a3C['stopPropagation']();if(!found)return;a3k['mice
+@13488: ]&&a3H['onmouseup2'](a3H));a3H["dragging"]&&(a3L['dragging']['VCrBCvukZHe'](a3H),a3H["dragging"]=![]),a3H['mousedown']=![],a3H['mouseWasDown']=![];}}}Math["abs"](Date["now"]()-a3m)<0xa?setTimeout(function(){Gj&&a3k['update'](0x1,tl),a3E(a3D);},0x1e):a3E(a3D);}a3k['hWWDFvAyq']=a3t;var a3u={};a3u["capture"]=!![],a3u['passive']=!![],document['body']['addEventListener']('mouseup',function(a3C){a3t(a3C);},a3u);function a3v(a3C){var aow=aor;if(tl['length']==0x0)return;let a3D=a3C['chan'+'gedTouches'],
+@13471: ,a3H["onmouseup2"]&&a3H['onmouseup2'](a3H));a3H["dragging"]&&(a3L['dragging']['VCrBCvukZHe'](a3H),a3H["dragging"]=![]),a3H['mousedown']=![],a3H['mouseWasDown']=![];}}}Math["abs"](Date["now"]()-a3m)<0xa?setTimeout(function(){Gj&&a3k['update'](0x1,tl),a3E(a3D);},0x1e):a3E(a3D);}a3k['hWWDFvAyq']=a3t;var a3u={};a3u["capture"]=!![],a3u['passive']=!![],document['body']['addEventListener']('mouseup',function(a3C){a3t(a3C);},a3u);function a3v(a3C){var aow=aor;if(tl['length']==0x0)return;let a3D=a3C['cha
+@16106: ive"]=![],window["addEventListener"]("touchstart",a3x,a3A),window["addEventListener"]('wheel',function(a3C){var aoy=aor;if(Kq["pointerLocked"])return;for(var a3D=0x0;a3D<a3k['scenes']["length"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"
+@16152: rt",a3x,a3A),window["addEventListener"]('wheel',function(a3C){var aoy=aor;if(Kq["pointerLocked"])return;for(var a3D=0x0;a3D<a3k['scenes']["length"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"];a3F++){var a3G=a3E["hoverElements"][a3F];a3G
+@16196: el',function(a3C){var aoy=aor;if(Kq["pointerLocked"])return;for(var a3D=0x0;a3D<a3k['scenes']["length"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"];a3F++){var a3G=a3E["hoverElements"][a3F];a3G['hovering']&&a3G['ReDNKHkwk']&&(a3G['onscro
+@16240: Locked"])return;for(var a3D=0x0;a3D<a3k['scenes']["length"];a3D++){if(!a3k['scenes'][a3D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"];a3F++){var a3G=a3E["hoverElements"][a3F];a3G['hovering']&&a3G['ReDNKHkwk']&&(a3G['onscroll']&&a3G["onscroll"](a3C["deltaY"]));}}});v
+@16327: D]['ReDNKHkwk'])continue;var a3E=a3k['scenes'][a3D];if(a3k['hasOverlay']&&!a3E["overlay"])continue;for(var a3F=0x0;a3F<a3E['TyaujfTtdvZ']['length'];a3F++){var a3G=a3E['TyaujfTtdvZ'][a3F];a3G['onscroll']&&a3G["onscroll"](a3G,a3C);}for(var a3F=0x0;a3F<a3E['hoverElements']["length"];a3F++){var a3G=a3E["hoverElements"][a3F];a3G['hovering']&&a3G['ReDNKHkwk']&&(a3G['onscroll']&&a3G["onscroll"](a3C["deltaY"]));}}});var a3B={};return a3B["passive"]=![],window['addEventListener']("scroll",function(a3C){a
+==============================================================================
+END slice-24: propose EVERY binding above.

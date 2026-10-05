@@ -1,0 +1,223 @@
+{
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @49966 applyQuaternion: iw=-qx*x-qy*y-qz*z intermediate quaternion-product w-component; idiomatic x/y/z/w-style math temp.",
+      "name": "iw",
+      "selector": "iw@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @49900 applyQuaternion: ix=qw*x+qy*z-qz*y intermediate quaternion-product x-component; idiomatic math temp.",
+      "name": "ix",
+      "selector": "ix@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @179138 BoxGeometry buildPlane: for(ix=0;ix<gridX1;ix++) x-loop temp computing x and ix/gridX uv; idiomatic loop index.",
+      "name": "ix",
+      "selector": "ix@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @200848 PlaneBufferGeometry: for(ix=0;ix<gridX1;ix++) x-loop temp computing x and ix/gridX uv; idiomatic loop index.",
+      "name": "ix",
+      "selector": "ix@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @628689 SphereBufferGeometry: for(ix=0;ix<=widthSegments;ix++) u=ix/widthSegments loop temp; idiomatic loop index.",
+      "name": "ix",
+      "selector": "ix@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @49922 applyQuaternion: iy=qw*y+qz*x-qx*z intermediate quaternion-product y-component; idiomatic math temp.",
+      "name": "iy",
+      "selector": "iy@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @179075 BoxGeometry buildPlane: for(iy=0;iy<gridY1;iy++) y-loop temp computing y and 1-iy/gridY uv; idiomatic loop index.",
+      "name": "iy",
+      "selector": "iy@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @200783 PlaneBufferGeometry: for(iy=0;iy<gridY1;iy++) y-loop temp computing y and 1-iy/gridY uv; idiomatic loop index.",
+      "name": "iy",
+      "selector": "iy@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @628467 SphereBufferGeometry: for(iy=0;iy<=heightSegments;iy++) v=iy/heightSegments loop temp; idiomatic loop index.",
+      "name": "iy",
+      "selector": "iy@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @49944 applyQuaternion: iz=qw*z+qx*y-qy*x intermediate quaternion-product z-component; idiomatic math temp.",
+      "name": "iz",
+      "selector": "iz@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @591930 mergeVertices loop: jNext=(j+1)%3 next-edge index with vecHash1=hashes[jNext]; already readable.",
+      "name": "jNext",
+      "selector": "jNext@u0020#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @39345 Quaternion.copy(jWFyoTPALsS): this._x/y/z/w=<p>.x/y/z/w; cryptic param is the source quaternion copied from.",
+      "name": "sourceQuat",
+      "selector": "jWFyoTPALsS@u0020#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @44891 Quaternion.equals(jWFyoTPALsS): compares <p>._x/y/z/w===this._x/y/z/w; cryptic param is the other quaternion compared against.",
+      "name": "otherQuat",
+      "selector": "jWFyoTPALsS@u0020#1"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @84262 Matrix4.compose(position,<p>,scale): reads <p>._x/y/z/w to build rotation terms; canonical three.js name 'quaternion' collides with existing rename-locals name, so role-evidenced rotationQuat.",
+      "name": "rotationQuat",
+      "selector": "jWFyoTPALsS@u0020#2"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @84817 Matrix4.decompose(position,<p>,scale): USES @85358 <p>.setFromRotationMatrix(_m1); cryptic param is the output quaternion receiving decomposed rotation.",
+      "name": "targetQuat",
+      "selector": "jWFyoTPALsS@u0020#3"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @92505 var jWFyoTPALsS=new Quaternion in Object3D ctor; USES @93129 _onChange(onQuaternionChange) + property slot between rotation/scale; object orientation quaternion (quaternion taken -> objectQuaternion).",
+      "name": "objectQuaternion",
+      "selector": "jWFyoTPALsS@u0020#4"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @921729 WebGLRenderer shim jWTjxRTVr(callback) warns '.jWTjxRTVr() is now .setAnimationLoop()' then delegates; canonical deprecated three.js name is animate.",
+      "name": "animate",
+      "selector": "jWTjxRTVr@u0020#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @184739 function jhtmwYcJfq(fov,aspect,near,far) fov default 50; USES CubeCamera 6 faces + ArrayCamera extends it; hub confirms canonical PerspectiveCamera(fov,aspect,near,far).",
+      "name": "PerspectiveCamera",
+      "selector": "jhtmwYcJfq@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @161146 for(var j=0,jl=_morphAttribute.count;j<jl;j++); USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @172075 for(var j=start,jl=end;j<jl;j+=3) raycast triangles; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @507963 for(var j=0,jl=cameras.length;j<jl;j++) ArrayCamera render; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @558496 for(var j=0,jl=face.vertexNormals.length;j<jl;j++); USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @561039 for(var j=start,jl=start+count;j<jl;j+=3) addFace; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @567610 for(var j=0,jl=faceVertexNormals.length;j<jl;j++) merge; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @569613 for(var j=0,jl=this.faceVertexUvs.length;j<jl;j++) splice; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @574458 for(var j=0,jl=faceVertexUvs.length;j<jl;j++) copy; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#7"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @759131 for(var j=0,jl=data.shapes.length;j<jl;j++) geometry loader; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#8"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @761958 for(var j=0,jl=url.length;j<jl;j++) image loader; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#9"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @776745 for(var j=0,jl=tmpHoles.length;j<jl;j++) shape holes; USES single bound check; idiomatic loop-limit temp.",
+      "name": "jl",
+      "selector": "jl@u0020#10"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "DECL @392455 var join='' in getProgramCacheKey; USES 10x join+=shaderID/shaders/defines/params accumulation, returned as key; misleading token, role is program cache-key string.",
+      "name": "programCacheKey",
+      "selector": "join@u0020#0"
+    }
+  ],
+  "slice": "01",
+  "stats": {
+    "total": 30,
+    "rename": 8,
+    "keep": 22,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

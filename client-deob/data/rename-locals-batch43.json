@@ -1,0 +1,1590 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 43,
+  "date": "2026-09-28",
+  "merged": 0,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 175,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @795844 in PropertyMixer ctor region; use @796495 assigns setIdentity=this._setAdditiveIdentityNumeric then this._setIdentity=setIdentity. Token is already idiomatic setter-style English.",
+   "selector": "setIdentity@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @150831 setIndex:function setIndex(index) on BufferGeometry proto; uses @167874 this.setIndex(index.clone(data)) and @178540 _this.setIndex(indices). Already idiomatic.",
+   "selector": "setIndex@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @349585 function setIndex(value) in WebGLIndexedBufferRenderer storing type/bytesPerElement; use @350345 this.setIndex=setIndex. Already idiomatic.",
+   "selector": "setIndex@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @671043 setInterpolation:function on KeyframeTrack statics; use @669832 this.setInterpolation(interpolation||...). Already idiomatic.",
+   "selector": "setInterpolation@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @837603 setItemSize:function on GLBufferAttribute proto; no outside uses. Already idiomatic setter name.",
+   "selector": "setItemSize@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @15488 _proto.setLength=function setLength(length) on Vector2 (normalize().OpiuFvBcQd); sibling uses @33822/@52713 show same idiom on Vector4/Vector3. Already idiomatic.",
+   "selector": "setLength@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @33822 _proto.setLength on Vector4; sibling uses @15488 (Vector2) and @52713 (Vector3) show identical idiom. Already idiomatic.",
+   "selector": "setLength@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @52713 _proto.setLength on Vector3; sibling uses @15488/@33822 show identical Vector2/Vector4 idiom. Already idiomatic.",
+   "selector": "setLength@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @866934 _proto.setLength(length,headLength,headWidth) on ArrowHelper scaling line/cone; use @866547 _this.setLength(length,headLength,headWidth). Already idiomatic.",
+   "selector": "setLength@u0020#3",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @429344 in WebGLState region; uses @432194 export setLineWidth:setLineWidth and @500347 state.setLineWidth(...). Already idiomatic.",
+   "selector": "setLineWidth@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @118637 _proto.setRGB on Color (this.r=r;this.g=g;this.b=b); no outside uses in window. Already idiomatic.",
+   "selector": "setRGB@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793175 _proto.setRefDistance on PositionalAudio wrapping UDYrzIiOP.refDistance; no outside uses. Already idiomatic.",
+   "selector": "setRefDistance@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @686920 setRequestHeader:function on Loader proto; uses @690449 XHR request.setRequestHeader and @691032 loader.setRequestHeader(scope.requestHeader). Already idiomatic DOM-style name.",
+   "selector": "setRequestHeader@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @686819 setResourcePath:function on Loader proto; uses @770914/@770947 deprecation shim setTexturePath delegating to setResourcePath. Already idiomatic.",
+   "selector": "setResourcePath@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @690593 setResponseType:function on FileLoader; uses @691836/@695328 loader.setResponseType('arraybuffer'). Already idiomatic.",
+   "selector": "setResponseType@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793367 _proto.setRolloffFactor on PositionalAudio wrapping UDYrzIiOP.rolloffFactor; no outside uses. Already idiomatic.",
+   "selector": "setRolloffFactor@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @94217 setRotationFromAxisAngle on Object3D proto delegating to quaternion setFromAxisAngle; no outside uses. Already idiomatic.",
+   "selector": "setRotationFromAxisAngle@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @94332 setRotationFromEuler on Object3D proto delegating to quaternion setFromEuler; no outside uses. Already idiomatic.",
+   "selector": "setRotationFromEuler@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @94435 setRotationFromMatrix on Object3D proto delegating to setFromRotationMatrix; no outside uses. Already idiomatic.",
+   "selector": "setRotationFromMatrix@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @94539 setRotationFromQuaternion on Object3D (quaternion.copy(q)); nearby @899379 shows Matrix4 shim of same name. Already idiomatic.",
+   "selector": "setRotationFromQuaternion@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @899414 setRotationFromQuaternion deprecated Matrix4 shim delegating to makeRotationFromQuaternion; uses @94539/@94504 show Object3D sibling def. Already idiomatic.",
+   "selector": "setRotationFromQuaternion@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @429751 WebGLState setter region; uses @432254 export setScissorTest:setScissorTest and @495423 state.setScissorTest(...). Already idiomatic.",
+   "selector": "setScissorTest@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @36443 setSize:function on WebGLRenderTarget proto; uses @493463/@493699 renderer this.setSize(_width,_height). Already idiomatic.",
+   "selector": "setSize@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @119006 _proto.setStyle on Color; use @118342 this.setStyle(value) for string inputs. Already idiomatic.",
+   "selector": "setStyle@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @420539 DepthBuffer setTest(equzRsyKrD) toggling gl 2929; uses @428356 depthBuffer.setTest(...) and @412652 setTest(true). Already idiomatic.",
+   "selector": "setTest@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @421444 StencilBuffer setTest(stencilTest) toggling gl 2960; uses @428543 stencilBuffer.setTest(stencilWrite) and @420539 depth sibling. Already idiomatic.",
+   "selector": "setTest@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @925382 setTexture removed-shim on WebGLRenderer (console.warn only); no outside uses. Already idiomatic public API name.",
+   "selector": "setTexture@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @438243 function setTexture2D(texture,slot) WebGLTextures uploader; uses @452321 setTexture2D(depthTexture,0) and @459009 export. Already idiomatic.",
+   "selector": "setTexture2D@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @925493 setTexture2D removed-shim on WebGLRenderer; uses @521162/@520440 textures.setTexture2D(...) live call sites. Already idiomatic.",
+   "selector": "setTexture2D@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @438861 WebGLTextures uploader region; uses @459040 export setTexture2DArray and @359069 textures.setTexture2DArray(...). Already idiomatic.",
+   "selector": "setTexture2DArray@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @439162 defines function setTexture3D(texture,slot); use at @459081 exports it as this.setTexture3D. Already idiomatic.",
+   "selector": "setTexture3D@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @439458 defines function setTextureCube(texture,slot); uses at @458888 and @459112 call/export it. Already idiomatic.",
+   "selector": "setTextureCube@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @925610 is the named stub setTextureCube in a removed-API warning object; refCount=0. Already idiomatic.",
+   "selector": "setTextureCube@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @440214 defines function setTextureParameters; called at @443153, @447788, @455888, @456322. Already idiomatic.",
+   "selector": "setTextureParameters@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @770814 is _proto.setTexturePath stub on ObjectLoader; refCount=0. Already idiomatic.",
+   "selector": "setTexturePath@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @748286 defines setTextures on MaterialLoader; called at @760394 via loader.setTextures(textures). Already idiomatic.",
+   "selector": "setTextures@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @834305 defines setTime on the animation mixer update object; refCount=0. Already idiomatic.",
+   "selector": "setTime@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @837498 defines setType on GLBufferAttribute prototype; refCount=0. Already idiomatic.",
+   "selector": "setType@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @137914 defines setUsage(value) on BufferAttribute prototype setting this.usage; referenced at @888593/@914039. Already idiomatic.",
+   "selector": "setUsage@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @524310 defines setUsage(value) on InterleavedBuffer prototype setting this.usage; called at @525255. Already idiomatic.",
+   "selector": "setUsage@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @361092 defines function setValueV4iArray(gl,v) calling gl.uniform4iv; dispatched at @362611. Already idiomatic.",
+   "selector": "setValueV4iArray@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @804745 defines setter setValue_array(buffer,offset) copying buffer into resolvedProperty; refCount=0. Already idiomatic.",
+   "selector": "setValue_array@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @805273 defines setter setValue_arrayElement(buffer,offset) writing one indexed element; refCount=0. Already idiomatic.",
+   "selector": "setValue_arrayElement@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @805532 defines setter setValue_arrayElement_setMatrixWorldNeedsUpdate; refCount=0. Already idiomatic.",
+   "selector": "setValue_arrayElement_setMatrixWorldNeedsUpdate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @805378 defines setter setValue_arrayElement_setNeedsUpdate; refCount=0. Already idiomatic.",
+   "selector": "setValue_arrayElement_setNeedsUpdate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @805064 defines setter setValue_array_setMatrixWorldNeedsUpdate; refCount=0. Already idiomatic.",
+   "selector": "setValue_array_setMatrixWorldNeedsUpdate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @804880 defines setter setValue_array_setNeedsUpdate; refCount=0. Already idiomatic.",
+   "selector": "setValue_array_setNeedsUpdate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @804340 defines setter setValue_direct(buffer,offset) assigning targetObject[propertyName]; refCount=0. Already idiomatic.",
+   "selector": "setValue_direct@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @804577 defines setter setValue_direct_setMatrixWorldNeedsUpdate; refCount=0. Already idiomatic.",
+   "selector": "setValue_direct_setMatrixWorldNeedsUpdate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @804434 defines setter setValue_direct_setNeedsUpdate; refCount=0. Already idiomatic.",
+   "selector": "setValue_direct_setNeedsUpdate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @805711 defines setter setValue_fromArray via resolvedProperty.fromArray; refCount=0. Already idiomatic.",
+   "selector": "setValue_fromArray@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @805944 defines setter setValue_fromArray_setMatrixWorldNeedsUpdate; refCount=0. Already idiomatic.",
+   "selector": "setValue_fromArray_setMatrixWorldNeedsUpdate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @805803 defines setter setValue_fromArray_setNeedsUpdate; refCount=0. Already idiomatic.",
+   "selector": "setValue_fromArray_setNeedsUpdate@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @127527 defines setValues on Material prototype; called as this.setValues(parameters) at @136318/@181476 and others. Already idiomatic.",
+   "selector": "setValues@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @186253 defines setViewOffset on perspective camera prototype; sibling copy at @732918. Already idiomatic.",
+   "selector": "setViewOffset@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @732941 defines setViewOffset on orthographic camera prototype; sibling copy at @186253. Already idiomatic.",
+   "selector": "setViewOffset@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @27999 defines _proto.setW(w) on Vector4 setting this.w; refCount=0. Already idiomatic.",
+   "selector": "setW@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @141688 defines setW(index,w) on BufferAttribute writing itemSize+3 slot; refCount=0. Already idiomatic.",
+   "selector": "setW@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @526912 defines setW(index,w) on InterleavedBufferAttribute via stride+offset; refCount=0. Already idiomatic.",
+   "selector": "setW@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @686667 defines setWithCredentials on Loader prototype; called at @691077/@691918 and other loaders. Already idiomatic.",
+   "selector": "setWithCredentials@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @11534 defines Vector2 _proto.setX setter (this.x=x); token repeats at 12 sites incl. Vector3/Vector4 twins. Already-readable public API name.",
+   "selector": "setX@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @27843 defines Vector4 _proto.setX setter (this.x=x); mirrors Vector2/Vector3 setX twins. Already-readable public API name.",
+   "selector": "setX@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @46735 defines Vector3 (gURkzCzeY) _proto.setX setter; same shape as Vector2/Vector4 twins. Already-readable public API name.",
+   "selector": "setX@u0020#2",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @141249 defines BufferAttribute setX(index,x) writing array[index*itemSize]; twin at @526620. Already-readable public API name.",
+   "selector": "setX@u0020#3",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @526620 defines InterleavedBufferAttribute setX(index,x) via stride+offset; twin at @141249. Already-readable public API name.",
+   "selector": "setX@u0020#4",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @141767 defines BufferAttribute setXY(index,x,y); called at @140087 in applyMatrix3. Already-readable public API name.",
+   "selector": "setXY@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @527365 defines InterleavedBufferAttribute setXY via stride+offset; twin at @141767. Already-readable public API name.",
+   "selector": "setXY@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @141879 defines BufferAttribute setXYZ(index,x,y,z); called at @140260/@140492/@141003 in matrix/normal transforms. Already-readable public API name.",
+   "selector": "setXYZ@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @527507 defines InterleavedBufferAttribute setXYZ via stride+offset; called at @526545 in GdTYEgIav loop. Already-readable public API name.",
+   "selector": "setXYZ@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @142017 defines BufferAttribute setXYZW(index,x,y,z,w); called at @537245 for skin weights. Already-readable public API name.",
+   "selector": "setXYZW@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @923055 defines WebGLRenderer supportsStandardDerivatives deprecation shim delegating to extensions.get. Already-readable descriptive name.",
+   "selector": "supportsStandardDerivatives@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @924059 defines WebGLRenderer supportsVertexTextures deprecation shim; parameter key reused at @388312/@385213. Already-readable descriptive name.",
+   "selector": "supportsVertexTextures@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @819110 defines AnimationAction _proto.syncWith next to setEffectiveTimeScale/setDuration twins. Already-readable descriptive name.",
+   "selector": "syncWith@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @19333 defines Matrix3 invert cofactor temp t11=n33*n22-n32*n23 used in det and te[0]; Matrix4 twin at @81106. Idiomatic matrix-math convention; renaming one member of the t11/t12/t13 family alone would harm readability.",
+   "selector": "t11@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @81106 defines Matrix4 invert cofactor temp t11 (6-term expansion) used in det and te[0]; Matrix3 twin at @19333. Idiomatic matrix-math convention; keep with t12/t13/t14 family.",
+   "selector": "t11@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "DECL @775949 sits in shape/hole sorting code but the window is truncated and shows 0 use sites outside DECL despite refCount=2. Role unclear from evidence.",
+   "selector": "toChange@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @868321 defines DataUtils.toHalfFloat next to Float32/Int32 views. Already-readable descriptive name.",
+   "selector": "toHalfFloat@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @24787 defines Texture toJSON serializer; one of 160 toJSON occurrences (standard three.js convention). Already-readable public API name.",
+   "selector": "toJSON@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @102109 defines Object3D toJSON(meta) building versioned output; recursive child calls at @104189. Already-readable public API name.",
+   "selector": "toJSON@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @125064 defines Color _proto.toJSON returning getHex(); Material twin at @128290. Already-readable public API name.",
+   "selector": "toJSON@u0020#2",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @128290 defines Material toJSON(meta) with version 4.5 metadata; map serializers call .toJSON(meta) at @129350+. Already-readable public API name.",
+   "selector": "toJSON@u0020#3",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @142351 defines BufferAttribute toJSON after clone/onUpload; geometry serializes attributes via it at @166630. Already-readable public API name.",
+   "selector": "toJSON@u0020#4",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @165950 defines BufferGeometry toJSON emitting kwrjVVjSgIH metadata; camera twin at @187432. Already-readable public API name.",
+   "selector": "toJSON@u0020#5",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @187432 defines camera toJSON extending QTOKQmNlEY toJSON with fov/near/far; twin at @165950. Already-readable public API name.",
+   "selector": "toJSON@u0020#6",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @521927 defines FogExp2 _proto.toJSON returning type/color/density; Fog twin at @522362. Already-readable public API name.",
+   "selector": "toJSON@u0020#7",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @522362 defines Fog _proto.toJSON returning type/color/near/far; FogExp2 twin at @521927. Already-readable public API name.",
+   "selector": "toJSON@u0020#8",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @523487 defines Scene (QwysDsAqBdy) _proto.toJSON serializing background/environment/fog. Already-readable public API name.",
+   "selector": "toJSON@u0020#9",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @525386 defines InterleavedBuffer toJSON(data) with arrayBuffers dedup; attribute twin at @528627. Already-readable public API name.",
+   "selector": "toJSON@u0020#10",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @528627 defines InterleavedBufferAttribute toJSON with deinterleave path; buffer twin at @525386. Already-readable public API name.",
+   "selector": "toJSON@u0020#11",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @535374 defines LOD toJSON after update(); Skeleton twin at @541196. Already-readable public API name.",
+   "selector": "toJSON@u0020#12",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @140835 defines an idiomatic transformDirection method; use sites (@152070, @50409, GLSL at @191933/@214347) confirm it is the standard readable API name.",
+   "selector": "transformDirection@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @26083 defines idiomatic transformUv on Texture; token already human-readable with no cryptic form to rename.",
+   "selector": "transformUv@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @532946 defines idiomatic transformVertex helper; 4 call sites (@531851-@532238) use the same readable name.",
+   "selector": "transformVertex@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @20878 defines idiomatic Matrix3.translate(tx,ty); readable standard API name, no rename warranted.",
+   "selector": "translate@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @63896 defines idiomatic Box3.translate(offset); readable standard API name shared across 23 occurrences.",
+   "selector": "translate@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @67359 defines idiomatic Sphere.translate(offset); readable standard API name.",
+   "selector": "translate@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @109520 defines idiomatic Plane.translate(offset); readable standard API name.",
+   "selector": "translate@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @152556 defines idiomatic BufferGeometry.translate(x,y,z); readable standard API name with live callers (@152954, @561734).",
+   "selector": "translate@u0020#4",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @559089 defines idiomatic Geometry.translate(x,y,z); readable standard API name.",
+   "selector": "translate@u0020#5",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @844918 defines idiomatic Box2.translate(offset); readable standard API name.",
+   "selector": "translate@u0020#6",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @900627 defines the legacy-compat translate stub on Matrix4; token is already the readable public name.",
+   "selector": "translate@u0020#7",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @908525 defines the legacy-compat translate stub on Object3D; token is already the readable public name.",
+   "selector": "translate@u0020#8",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @728506 defines idiomatic SpotLightShadow.updateMatrices(light); readable standard API name.",
+   "selector": "updateMatrices@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @730596 defines idiomatic PointLightShadow.updateMatrices(light,viewportIndex); readable standard API name.",
+   "selector": "updateMatrices@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @734770 defines idiomatic DirectionalLightShadow.updateMatrices(light); readable standard API name, called at @414513.",
+   "selector": "updateMatrices@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @23794 defines idiomatic Texture.updateMatrix(); readable standard API name with callers at @327723/@478406.",
+   "selector": "updateMatrix@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @101073 defines idiomatic Object3D.updateMatrix(); readable standard API name with callers at @93979/@101804.",
+   "selector": "updateMatrix@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @101213 defines idiomatic Object3D.updateMatrixWorld(force); readable standard API name across 35 occurrences.",
+   "selector": "updateMatrixWorld@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @184325 defines idiomatic Camera.updateMatrixWorld override; readable standard API name.",
+   "selector": "updateMatrixWorld@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @537322 defines idiomatic SkinnedMesh.updateMatrixWorld override; readable standard API name.",
+   "selector": "updateMatrixWorld@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @785956 defines idiomatic AudioListener/Audio.updateMatrixWorld override; readable standard API name.",
+   "selector": "updateMatrixWorld@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @794100 defines idiomatic PositionalAudio.updateMatrixWorld override; readable standard API name.",
+   "selector": "updateMatrixWorld@u0020#4",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @850344 defines idiomatic SkeletonHelper.updateMatrixWorld override; readable standard API name.",
+   "selector": "updateMatrixWorld@u0020#5",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @863938 defines idiomatic Box3Helper.updateMatrixWorld override; readable standard API name.",
+   "selector": "updateMatrixWorld@u0020#6",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @865147 defines idiomatic PlaneHelper.updateMatrixWorld override; readable standard API name.",
+   "selector": "updateMatrixWorld@u0020#7",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @790873 _proto.setDetune=function; called at @789158 this.setDetune(this.detune). Idiomatic three.js Audio setter name.",
+   "selector": "setDetune@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @866662 ArrowHelper _proto.setDirection=function; no outside uses. Idiomatic three.js setter name.",
+   "selector": "setDirection@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793855 PositionalAudio _proto.setDirectionalCone=function; no outside uses. Idiomatic setter name.",
+   "selector": "setDirectionalCone@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @793563 PositionalAudio _proto.setDistanceModel=function; no outside uses. Idiomatic setter name.",
+   "selector": "setDistanceModel@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @909728 Mesh.prototype setDrawMode; no outside uses. Idiomatic three.js API name.",
+   "selector": "setDrawMode@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @151592 BufferGeometry setDrawRange; no outside uses. Idiomatic three.js API name.",
+   "selector": "setDrawRange@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @818991 AnimationAction _proto.setDuration=function; no outside uses. Idiomatic setter name.",
+   "selector": "setDuration@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @914132 BufferAttribute.prototype setDynamic; sibling InterleavedBuffer occurrences at @917926+. Idiomatic deprecated three.js API name.",
+   "selector": "setDynamic@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @917946 InterleavedBuffer.prototype setDynamic; sibling BufferAttribute occurrences at @914132+. Idiomatic deprecated three.js API name.",
+   "selector": "setDynamic@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @818728 AnimationAction _proto.setEffectiveTimeScale=function; no outside uses. Idiomatic setter name.",
+   "selector": "setEffectiveTimeScale@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @817566 AnimationAction _proto.setEffectiveWeight=function; no outside uses. Idiomatic setter name.",
+   "selector": "setEffectiveWeight@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @905738 Quaternion deprecation shim setEulerFromQuaternion; no outside uses. Idiomatic (removed-API stub) name.",
+   "selector": "setEulerFromQuaternion@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @905545 Quaternion deprecation shim setEulerFromRotationMatrix; no outside uses. Idiomatic (removed-API stub) name.",
+   "selector": "setEulerFromRotationMatrix@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @925138 WebGLRenderer deprecation shim setFaceCulling; no outside uses. Idiomatic (removed-API stub) name.",
+   "selector": "setFaceCulling@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @785420 AudioListener _proto.setFilter=function; sibling Audio.setFilter at @791201+. Idiomatic setter name.",
+   "selector": "setFilter@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @791220 Audio _proto.setFilter=function delegating to setFilters; sibling AudioListener.setFilter at @785420. Idiomatic setter name.",
+   "selector": "setFilter@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @790675 Audio _proto.setFilters=function; no outside uses. Idiomatic setter name.",
+   "selector": "setFilters@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @428915 function setFlipSided; used at @427999, @424331 and exported at @432144. Idiomatic WebGL state helper name.",
+   "selector": "setFlipSided@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @185616 PerspectiveCamera setFocalLength; referenced by deprecated setLens at @911414/@911531. Idiomatic three.js API name.",
+   "selector": "setFocalLength@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @56936 Box3 _proto.setFromArray=function; no outside uses. Idiomatic three.js API name.",
+   "selector": "setFromArray@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @40802 Quaternion _proto.setFromAxisAngle=function; used at @49208, @94271, @94646, @94781, @866873. Idiomatic three.js API name.",
+   "selector": "setFromAxisAngle@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @57370 Box3 _proto.setFromBufferAttribute=function; used at @158860, @159030, @160229, @160409. Idiomatic three.js API name.",
+   "selector": "setFromBufferAttribute@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @838641 Raycaster setFromCamera; no outside uses. Idiomatic three.js API name.",
+   "selector": "setFromCamera@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @840646 Spherical _proto.setFromCartesianCoords=function; sibling Cylindrical occurrences at @841437+. Idiomatic three.js API name.",
+   "selector": "setFromCartesianCoords@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @841514 Cylindrical _proto.setFromCartesianCoords=function; sibling Spherical occurrences at @840646+. Idiomatic three.js API name.",
+   "selector": "setFromCartesianCoords@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @57994 Box3 _proto.setFromCenterAndSize=function; sibling Box2 occurrences at @842179+. Idiomatic three.js API name.",
+   "selector": "setFromCenterAndSize@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @842209 Box2 _proto.setFromCenterAndSize=function; sibling Box3 occurrences at @57994. Idiomatic three.js API name.",
+   "selector": "setFromCenterAndSize@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @106928 Plane _proto.setFromCoplanarPoints=function; used by Triangle.getPlane at @112791. Idiomatic three.js API name.",
+   "selector": "setFromCoplanarPoints@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @54817 Vector3 _proto.setFromCylindrical=function; no outside uses. Idiomatic three.js API name.",
+   "selector": "setFromCylindrical@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @54941 Vector3 _proto.setFromCylindricalCoords=function; no outside uses. Idiomatic three.js API name.",
+   "selector": "setFromCylindricalCoords@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @541212 is `toJSON:function toJSON(){...}` on Skeleton (emits bones/boneInverses); refCount=0 and 160 same-token occurrences are sibling toJSON methods, not uses. Standard serialization name.",
+   "selector": "toJSON@u0020#13",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @570624 follows sortByMaterialIndex/geometry code as `toJSON:function toJSON...`; refCount=0, nearby occurrences are other classes' toJSON methods. Idiomatic serialization name.",
+   "selector": "toJSON@u0020#14",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @611875 is `ExtrudeBufferGeometry.prototype;_proto.toJSON=function toJSON...`; refCount=0, use windows show only sibling geometry toJSONs. Standard serialization name.",
+   "selector": "toJSON@u0020#15",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @613877 is `ExtrudeGeometry.prototype;_proto.toJSON=function toJSON...`; refCount=0, nearest occurrences are ExtrudeBuffer/Shape toJSON siblings. Idiomatic serialization name.",
+   "selector": "toJSON@u0020#16",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @626093 is `ShapeBufferGeometry.prototype;_proto.toJSON=function toJSON...`; refCount=0, use sites are ShapeGeometry/Extrude sibling toJSONs. Standard serialization name.",
+   "selector": "toJSON@u0020#17",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @627046 is `ShapeGeometry.prototype;_proto.toJSON=function toJSON...`; refCount=0, nearby matches are ShapeBuffer/Tube sibling toJSONs. Idiomatic serialization name.",
+   "selector": "toJSON@u0020#18",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @640149 is `TubeBufferGeometry.prototype;_proto.toJSON=function toJSON...`; refCount=0, use windows show only Shape/Extrude sibling toJSONs. Standard serialization name.",
+   "selector": "toJSON@u0020#19",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @669937 is `Object.assign(KeyframeTrack,{toJSON:function toJSON(track)...`; refCount=0, nearby occurrences are AnimationClip/Curve sibling toJSONs. Idiomatic serialization name.",
+   "selector": "toJSON@u0020#20",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @679757 is `Object.assign(AnimationClip,{...toJSON:function toJSON(clip)...`; refCount=0, use sites are KeyframeTrack/Cache sibling toJSONs. Standard serialization name.",
+   "selector": "toJSON@u0020#21",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @684455 is AnimationClip instance `toJSON:function toJSON(){return AnimationClip.toJSON(this);}`; refCount=0, neighbors are KeyframeTrack/Curve sibling toJSONs. Idiomatic serialization name.",
+   "selector": "toJSON@u0020#22",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @701322 is Curve `toJSON:function toJSON...` (arcLengthDivisions/type payload); refCount=0, use sites are Ellipse/CatmullRom/CubicBezier sibling toJSONs. Standard serialization name.",
+   "selector": "toJSON@u0020#23",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @720315 is CurvePath `toJSON:function toJSON...`; refCount=0, nearest occurrences are Path/SplineCurve sibling toJSONs. Idiomatic serialization name.",
+   "selector": "toJSON@u0020#24",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @723304 is Path `toJSON:function toJSON...` (adds currentPoint); refCount=0, use windows show Shape/Light sibling toJSONs. Standard serialization name.",
+   "selector": "toJSON@u0020#25",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @724262 is Shape `toJSON:function toJSON...` (adds uuid/holes); refCount=0, nearby matches are Path/Light sibling toJSONs. Idiomatic serialization name.",
+   "selector": "toJSON@u0020#26",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @725111 is Light `toJSON:function toJSON(meta)...` (color/intensity payload); refCount=0, use sites are Shape/Path sibling toJSONs. Standard serialization name.",
+   "selector": "toJSON@u0020#27",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @727910 LightShadow toJSON serializer; token is idiomatic three.js API name with 160 unit occurrences.",
+   "selector": "toJSON@u0020#28",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @734151 camera toJSON serializer after projectionMatrix update; idiomatic API name, refCount=0.",
+   "selector": "toJSON@u0020#29",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @736032 RectAreaLight toJSON serializer; idiomatic API name shared across prototype defs.",
+   "selector": "toJSON@u0020#30",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @739694 LightProbe toJSON serializer; idiomatic API name, no rename needed.",
+   "selector": "toJSON@u0020#31",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @749233 InstancedBufferGeometry toJSON serializer; idiomatic API name.",
+   "selector": "toJSON@u0020#32",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @750062 InstancedBufferAttribute toJSON serializer; idiomatic API name.",
+   "selector": "toJSON@u0020#33",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @781122 HemisphereLightProbe toJSON serializer; idiomatic API name.",
+   "selector": "toJSON@u0020#34",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @781649 AmbientLightProbe toJSON serializer; idiomatic API name.",
+   "selector": "toJSON@u0020#35",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @836862 InstancedInterleavedBuffer toJSON serializer; idiomatic API name.",
+   "selector": "toJSON@u0020#36",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @164553 geometry toNonIndexed converter after normalizeNormals; idiomatic three.js API name.",
+   "selector": "toNonIndexed@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @773850 ShapePath toShapes converter; idiomatic API name, called at @777140.",
+   "selector": "toShapes@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @773883 nested toShapesNoHoles helper called at @775012 and @775876; already readable.",
+   "selector": "toShapesNoHoles@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @90547 Euler toVector3 converter after toArray; idiomatic API name.",
+   "selector": "toVector3@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @685609 param named transform; token is idiomatic English, role unclear from mixed use sites.",
+   "selector": "transform@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @50409 Vector3 transformDirection method; idiomatic API name used across Ray/BufferAttribute/GLSL.",
+   "selector": "transformDirection@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  }
+ ]
+}

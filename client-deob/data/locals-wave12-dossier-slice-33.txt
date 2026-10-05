@@ -1,0 +1,63 @@
+# DOSSIER slice-33 (wave 12, 10 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/10] oldAutoClear@u0029#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @176 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1086: SEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[2/10] oldClearAlpha@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @253 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@963: pth){qIySEZgti.clear(false,true,false);}if(this.clear)qIySEZgti.clear(qIySEZgti.autoClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[3/10] oldClearColor@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @239 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@949: f(this.clearDepth){qIySEZgti.clear(false,true,false);}if(this.clear)qIySEZgti.clear(qIySEZgti.autoClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[4/10] oldOverrideMaterial@u0029#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @267 (verified):
+usvzFuAsEB.RenderPass.prototype=Object.assign(Object.create(usvzFuAsEB.Pass.prototype),{constructor:usvzFuAsEB.RenderPass,render:function(qIySEZgti,writeBuffer,readBuffer){var oldAutoClear=qIySEZgti.autoClear;qIySEZgti.autoClear=false;var oldClearColor,oldClearAlpha,oldOverrideMaterial;if(this.overrideMaterial!==undefined){oldOverrideMaterial=this.scene.overrideMaterial;this.scene.overrideMaterial=this.overrideMaterial;}if(this.clearColor){oldClearColor=qIySEZgti.getClearColor().getHex();oldClearAlpha=qIySEZgti.getClearAlpha();qIySEZgti.setClearColor(this.clearColor,this.clearAlpha);}if(this.c[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1045: toClearColor,qIySEZgti.autoClearDepth,qIySEZgti.autoClearStencil);qIySEZgti.render(this.scene,this.aKmLbYuMC);if(this.clearColor){qIySEZgti.setClearColor(oldClearColor,oldClearAlpha);}if(this.overrideMaterial!==undefined){this.scene.overrideMaterial=oldOverrideMaterial;}qIySEZgti.autoClear=oldAutoClear;}});
+==============================================================================
+[5/10] result@u0146#0 | kind=var depth=5 refCount=1 | world/modes.js
+DECL @141 (verified):
+var fpsCounter={startTime:0,frameNumber:0,getFPS:function(){this.frameNumber++;var d=new Date().getTime(),IUTkaCQgos=(d-this.startTime)/1000,result=Math.floor(this.frameNumber/IUTkaCQgos);if(IUTkaCQgos>1){this.startTime=new Date().getTime();this.frameNumber=0;}return result;}};
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/10] self@u0019#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @212 (verified):
+Array["prototype"]['join']=function(a3i=','){var aiG=ai1,a3j=this,a3k='';for(var a3l=0x0;a3l<a3j["length"];a3l++){a3l>0x0&&(a3k+=a3i),a3j[a3l]!==undefined&&a3j[a3l]!==null&&(a3k+=a3j[a3l]);}return a3k;},function(self){'use strict';var aiH=ai1;if(self['WeakMap']){}var a3i=Object["prototype"]["hasOwnProperty"],a3j=Object['defineProperty']&&(function(){var aiI=aiH;try{var a3m={};return a3m["value"]=0x1,Object['defineProperty']({},'x',a3m)['x']===0x1;}catch(a3n){}}()),a3k=function(a3m,a3n,a3o){if(a3j){var a3p={};a3p['configurable']=!![],a3p['writable']=!![],a3p['value']=a3o,Object['defineProperty'[...line truncated...]
+USES: refCount=1, 4 token-occurrences in unit, showing 2 nearest outside DECL window:
+@2103: 3o(a3q){return a3q+'_'+a3p()+'.'+a3p();}function a3p(){return Math['random']()['toString']()['substring'](0x2);}return a3k(a3m,"_polyfill",!![]),a3m;}());function a3l(a3m){return Object(a3m)===a3m;}}(typeof globalThis!=="undefined"?globalThis:typeof self!=='undefined'?self:typeof window!=='undefined'?window:typeof global!=='undefined'?global:this);
+@2122: '_'+a3p()+'.'+a3p();}function a3p(){return Math['random']()['toString']()['substring'](0x2);}return a3k(a3m,"_polyfill",!![]),a3m;}());function a3l(a3m){return Object(a3m)===a3m;}}(typeof globalThis!=="undefined"?globalThis:typeof self!=='undefined'?self:typeof window!=='undefined'?window:typeof global!=='undefined'?global:this);
+==============================================================================
+[7/10] ra@u0198#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var ra=r9,rb={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/10] NR@u2182#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @18 (verified):
+var NP=0x0,NQ=0x1,NR=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/10] WD@u2520#0 | kind=var depth=3 refCount=0 | sim/input.js
+DECL @4 (verified):
+var WD=![],WE=[],WF=new HQ();
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/10] a4q@u2855#0 | kind=var depth=5 refCount=0 | sim/input.js
+DECL @13381 (verified):
+M]["uniforms"]["worldProjection"]['value']),a4o=!![],a4p[a4M]['uniforms']["worldProjection"]['afCJVYrCGK']=!![];}a3R["OXlovQoaFkR"]!=undefined&&(a3R["OXlovQoaFkR"]['material']["uniforms"]['worldProjection']["value"]["copy"](OC),a3R["OXlovQoaFkR"]['material']['uniforms']["worldProjection"]['afCJVYrCGK']=!![],!a4o&&console['log']('Didn\x27t\x20set\x20mat'));}}if(Px&&OY!=null){EY(OY,WY["position"],Fl,OY["splitScale"]);isNaN(Fl['x'])&&Math['random']()<0.1&&(console["log"](OY),console["log"](WY['position']));if(Qv!=Fl['x']||Qw!=Fl['z']){a2g(Yx);if(Array['isArray'](OY['map'][Fl['x']][Fl['z']])){var [...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-33: propose EVERY binding above.

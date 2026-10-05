@@ -1,0 +1,222 @@
+{
+ "slice": "slice-18",
+ "proposals": [
+  {
+   "selector": "normalLerp@u0147#0",
+   "action": "keep",
+   "name": "normalLerp",
+   "confidence": "high",
+   "evidence": "KEEP real-word compound: DECL @56429 lerp context, USES @57381/@57524 pkghYgdlX.normalLerp(...) interpolation calls"
+  },
+  {
+   "selector": "offscreen@u0147#0",
+   "action": "keep",
+   "name": "offscreen",
+   "confidence": "high",
+   "evidence": "KEEP real word: DECL @12582 canvas setup, USES @13372/@13423 this.offscreen.width/height viewport math"
+  },
+  {
+   "selector": "oldCanvas@u0147#0",
+   "action": "keep",
+   "name": "oldCanvas",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @22790 param of textImage(oldCanvas,...) canvas-recycling context"
+  },
+  {
+   "selector": "oldMiter@u0147#0",
+   "action": "keep",
+   "name": "oldMiter",
+   "confidence": "high",
+   "evidence": "KEEP canvas-domain term: DECL @46370 saved miterLimit in polygon draw fn"
+  },
+  {
+   "selector": "oldX@u0147#0",
+   "action": "keep",
+   "name": "oldX",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic temp: DECL @34901 oldX=obj.position.x, USE @35752 new image(canvas,oldX,oldY,...)"
+  },
+  {
+   "selector": "oldY@u0147#0",
+   "action": "keep",
+   "name": "oldY",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic temp: DECL @34925 oldY=obj.position.y, USE @35757 new image(canvas,oldX,oldY,...)"
+  },
+  {
+   "selector": "onclose@u0147#0",
+   "action": "keep",
+   "name": "onclose",
+   "confidence": "high",
+   "evidence": "KEEP DOM WebSocket handler name: DECL @15197 param of socket(ip,onmessage,onopen,onclose,...)"
+  },
+  {
+   "selector": "onerror@u0147#0",
+   "action": "keep",
+   "name": "onerror",
+   "confidence": "high",
+   "evidence": "KEEP DOM WebSocket handler name: DECL @15205 param of socket(...) callback set"
+  },
+  {
+   "selector": "onmessage@u0147#0",
+   "action": "keep",
+   "name": "onmessage",
+   "confidence": "high",
+   "evidence": "KEEP DOM WebSocket handler name: DECL @15180 param of socket(ip,onmessage,...)"
+  },
+  {
+   "selector": "onopen@u0147#0",
+   "action": "keep",
+   "name": "onopen",
+   "confidence": "high",
+   "evidence": "KEEP DOM WebSocket handler name: DECL @15190 param of socket(ip,onmessage,onopen,...)"
+  },
+  {
+   "selector": "open@u0147#0",
+   "action": "keep",
+   "name": "open",
+   "confidence": "high",
+   "evidence": "KEEP real word: DECL @52164 function open() socket-open callback clearing connecting flag"
+  },
+  {
+   "selector": "originalOnabort@u0147#0",
+   "action": "keep",
+   "name": "originalOnabort",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @5986 saved img.onabort before timeout wrapper"
+  },
+  {
+   "selector": "packets@u0147#0",
+   "action": "keep",
+   "name": "packets",
+   "confidence": "high",
+   "evidence": "KEEP real word: DECL @59755 decoded message packets in actualMessageEvent"
+  },
+  {
+   "selector": "prerenderCanvas@u0147#0",
+   "action": "keep",
+   "name": "prerenderCanvas",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @34003 createElement canvas, USES @35124/@35159 blur prerender sizing"
+  },
+  {
+   "selector": "prerenderCtx@u0147#0",
+   "action": "keep",
+   "name": "prerenderCtx",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @34056 2d ctx of prerender canvas, USES @35038/@35196/@35262"
+  },
+  {
+   "selector": "prerenderPosition@u0147#0",
+   "action": "keep",
+   "name": "prerenderPosition",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @34106, USE @34958 obj.position=prerenderPosition scratch swap"
+  },
+  {
+   "selector": "props@u0147#0",
+   "action": "keep",
+   "name": "props",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic short: DECL @54821 packet field-name list ['i','b','x','y','a','n']"
+  },
+  {
+   "selector": "queue@u0147#0",
+   "action": "keep",
+   "name": "queue",
+   "confidence": "high",
+   "evidence": "KEEP real word: DECL @25025 param in text-render queue context"
+  },
+  {
+   "selector": "recycleCanvas@u0147#0",
+   "action": "keep",
+   "name": "recycleCanvas",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @2231 let, USE @13714 recycleCanvas(text.canvas) pool return"
+  },
+  {
+   "selector": "remove@u0147#0",
+   "action": "keep",
+   "name": "remove",
+   "confidence": "high",
+   "evidence": "KEEP real word/DOM+three.js term: DECL @63404 param of addType(type,create,tickUpdate,updatePacket,remove)"
+  },
+  {
+   "selector": "renderSize@u0147#0",
+   "action": "keep",
+   "name": "renderSize",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @15552 vLxByoIlFO*devicePixelRatio in resize()"
+  },
+  {
+   "selector": "result@u0147#0",
+   "action": "keep",
+   "name": "result",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic temp: DECL @39918 regex match result in color fromHex()"
+  },
+  {
+   "selector": "rotation@u0147#0",
+   "action": "keep",
+   "name": "rotation",
+   "confidence": "high",
+   "evidence": "KEEP domain term: DECL @47429 param in shape factory (matches .rotation scene-graph prop)"
+  },
+  {
+   "selector": "safariBlur@u0147#0",
+   "action": "keep",
+   "name": "safariBlur",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @35005 Gz||testSafariBlur fallback-blur flag"
+  },
+  {
+   "selector": "slowLerp@u0147#0",
+   "action": "keep",
+   "name": "slowLerp",
+   "confidence": "high",
+   "evidence": "KEEP descriptive compound: DECL @56025 direction-reversal lerp factor in packet 'y' handler"
+  },
+  {
+   "selector": "socket@u0147#0",
+   "action": "keep",
+   "name": "socket",
+   "confidence": "high",
+   "evidence": "KEEP real word: DECL @15248 var socket=new WebSocket(ip), USES @52125/@52226 new pkghYgdlX.socket(...)"
+  },
+  {
+   "selector": "strLen@u0147#0",
+   "action": "keep",
+   "name": "strLen",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic abbrev: DECL @52716 loop bound in toBuffer(string) ArrayBuffer fill"
+  },
+  {
+   "selector": "stroke@u0147#0",
+   "action": "keep",
+   "name": "stroke",
+   "confidence": "high",
+   "evidence": "KEEP canvas-domain term: DECL @22852 param of textImage(...), USES @23543/@23773/@23945 if(stroke) strokeText path"
+  },
+  {
+   "selector": "strokeStyle@u0147#0",
+   "action": "keep",
+   "name": "strokeStyle",
+   "confidence": "high",
+   "evidence": "KEEP canvas API term: DECL @29940 param of strokeText(text,x,y,...)"
+  },
+  {
+   "selector": "tempCtx@u0147#0",
+   "action": "keep",
+   "name": "tempCtx",
+   "confidence": "high",
+   "evidence": "KEEP idiomatic temp: DECL @21118 scratch 2d ctx from tempCtxs pool in drawBorder"
+  }
+ ],
+ "stats": {
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ }
+}

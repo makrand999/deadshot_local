@@ -1,0 +1,55 @@
+# DOSSIER slice-01 (wave 66, 6 bindings, 6 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/6] a3i@u1959#0 | kind=param depth=5 refCount=7 | network/codec.js [DIVERGED snippet-only]
+DECL @12 (verified):
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i["globalKeys"];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i["byteSizes"][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+USES: refCount=7, 8 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @12 (verified), servedRefCount=7:
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i[aqs(0x3e9)][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+SERVED USES: 8 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/6] a3j@u1959#0 | kind=param depth=5 refCount=3 | network/codec.js [DIVERGED snippet-only]
+DECL @16 (verified):
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i["globalKeys"];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i["byteSizes"][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @16 (verified), servedRefCount=3:
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i[aqs(0x3e9)][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+SERVED USES: 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/6] a3k@u1959#0 | kind=param depth=5 refCount=9 | network/codec.js [DIVERGED snippet-only]
+DECL @20 (verified):
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i["globalKeys"];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i["byteSizes"][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+USES: refCount=9, 10 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @20 (verified), servedRefCount=9:
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i[aqs(0x3e9)][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+SERVED USES: 10 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/6] a3l@u1959#0 | kind=var depth=5 refCount=2 | network/codec.js [DIVERGED snippet-only]
+DECL @54 (verified):
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i["globalKeys"];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i["byteSizes"][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @54 (verified), servedRefCount=2:
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i[aqs(0x3e9)][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/6] a3m@u1959#0 | kind=var depth=5 refCount=5 | network/codec.js [DIVERGED snippet-only]
+DECL @134 (verified):
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i["globalKeys"];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i["byteSizes"][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @132 (verified), servedRefCount=5:
+function Je(a3i,a3j,a3k){var aqs=ai1;a3k=a3k||0x0;var a3l=a3i[aqs(0x734)];a3j['setUint16'](a3k,a3i['globalIndex']),a3k+=0x2;for(var a3m=0x0;a3m<a3l['length'];a3m++){a3j[Ib[a3i[aqs(0x3e9)][a3m]]](a3k,a3i[a3l[a3m]]),a3k+=I2[a3i['byteSizes'][a3m]];}return a3i['hasString']&&(a3k=Jd(a3i,a3j,a3k)),a3k;}
+SERVED USES: 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/6] H6@u1770#0 | kind=var depth=3 refCount=14 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @41 (verified):
+for(var tf=0x0;tf<H5["length"];tf++){var H6=H5[tf];H4[H6]=Math["KkKRLGFtA"](H4[H6]);}
+USES: refCount=14, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @43 (verified), servedRefCount=14:
+for(var tf=0x0;tf<H5[ai1(0x3a2)];tf++){var H6=H5[tf];H4[H6]=Math[ai1(0xb00)](H4[H6]);}
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-01: propose EVERY binding above.

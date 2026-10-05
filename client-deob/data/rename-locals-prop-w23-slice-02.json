@@ -1,0 +1,223 @@
+{
+ "slice": "02",
+ "stats": {
+  "total": 30,
+  "rename": 26,
+  "keep": 4,
+  "high": 28,
+  "medium": 2,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @963423 function a3p sets this.name=KHR_MATERIALS_CLEARCOAT; USES @954618 registers new a3p via this.register",
+   "name": "clearcoatExtension",
+   "selector": "a3p@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @969418 function a3z requires dracoLoader and sets name=KHR_DRACO_MESH_COMPRESSION; USES @958865 new a3z(json,dracoLoader)",
+   "name": "dracoExtension",
+   "selector": "a3z@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @78793 var a41=ae[3] among a11..a44 siblings in Matrix4.multiplyMatrices; USES @79483+ te[3/7/11/15] products (original three.js element names)",
+   "name": "a41",
+   "selector": "a41@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @78803 var a42=ae[7] among a11..a44 siblings in Matrix4.multiplyMatrices; USES @79491+ te[3/7/11/15] products (original three.js element names)",
+   "name": "a42",
+   "selector": "a42@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @78813 var a43=ae[11] among a11..a44 siblings in Matrix4.multiplyMatrices; USES @79499+ te[3/7/11/15] products (original three.js element names)",
+   "name": "a43",
+   "selector": "a43@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @78824 var a44=ae[15] among a11..a44 siblings in Matrix4.multiplyMatrices; USES @79507+ te[3/7/11/15] products (original three.js element names)",
+   "name": "a44",
+   "selector": "a44@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000336 function a47(geometry,primitiveDef,parser) assigns attributes+index, computes bounds, resolves morphs; USES @1002261/@1002522 build geometry per primitive",
+   "name": "addPrimitiveAttributes",
+   "selector": "a47@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @956946 param of setDDSLoader; body assigns this.ddsLoader=a49",
+   "name": "ddsLoader",
+   "selector": "a49@u0020#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @957012 param of setKTX2Loader; body assigns this.ktx2Loader=a49",
+   "name": "ktx2Loader",
+   "selector": "a49@u0020#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @963427 UNLIT extendParams(a49,...) assigns a49.color/opacity and a49.map via assignTexture",
+   "name": "unlitMatParams",
+   "selector": "a49@u0020#20"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @966367 param of EXT_TEXTURE_WEBP loadTexture; USES pass a49 as texture index to loadTextureImage/loadTexture",
+   "name": "textureIndex",
+   "selector": "a49@u0020#29"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @969422 first param of a3z draco extension; body assigns this.json=a49",
+   "name": "json",
+   "selector": "a49@u0020#34"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000340 first param of a47; receives setAttribute/setIndex and is returned as the built geometry",
+   "name": "outGeometry",
+   "selector": "a49@u0020#73"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006661 var a4A=a4s[a4w] output accessor per animation channel; USES @1007384 a4A.array and @1007400 a4A.normalized denormalization",
+   "name": "outputAccessor",
+   "selector": "a4A@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @969426 second param of a3z; body throws when missing and assigns this.dracoLoader=a4a",
+   "name": "dracoLoader",
+   "selector": "a4a@u0020#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000344 param of a47 geometry builder (signature at @1000365: a47(a49,a4a,a4b)); USES @1000951 a4a['indices'] + @1000996 a4a['targets'] = mesh primitive def",
+   "name": "primitiveDef",
+   "selector": "a4a@u0020#59"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @959395 a4a['get']=function(a4b){return a49[a4b];} — sole param, dictionary lookup key of a3j cache",
+   "name": "key",
+   "selector": "a4b@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @959442 a4a['add']=function(a4b,a4c){a49[a4b]=a4c;} — first param, dictionary store key of a3j cache",
+   "name": "key",
+   "selector": "a4b@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000348 third param of a47 (a47(a49,a4a,a4b) at @1000365); USES a4b['getDependency']('accessor',..) + a4b['json']['accessors'] = GLTF parser",
+   "name": "parser",
+   "selector": "a4b@u0020#47"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @959399 a4a['add']=function(a4b,a4c){a49[a4b]=a4c;} — second param, value stored under key in a3j cache",
+   "name": "cachedValue",
+   "selector": "a4c@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @968975 a3y GLB ctor var a4b=new DataView..,a4c=0x0; + @969016 while(a4c<a4b['byteLength']) — chunk-walk byte cursor",
+   "name": "chunkIndex",
+   "selector": "a4c@u0020#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @983507 a44 key-builder: for(var a4c=0x0,a4d=a4b['length'];a4c<a4d;a4c++){a4a+=a4b[a4c]+..} — index into sorted keys",
+   "name": "sortedIndex",
+   "selector": "a4c@u0020#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @998894 loadMaterial scope; USES @995818 var a4c=this['extensions'] + a4c[SPECULAR]['createMaterial'] — extensions registry",
+   "name": "extensions",
+   "selector": "a4c@u0020#40"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000365 a47 head: var a4c=a4a['attributes']; USES @1000530/@1000627 for(a4f in a4c) assignAttributeBuffer loop",
+   "name": "attributes",
+   "selector": "a4c@u0020#42"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @963106 createNodeAttachment: a4d=a4c['extensions'][this['name']]||{}, a4e=a4d['light'] — node's punctual-light ext object",
+   "name": "lightExtension",
+   "selector": "a4d@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "DECL @969016 first var inside while(a4c<a4b['byteLength']) GLB chunk loop (window truncated at 'var '); refCount=3 matches chunkLength read+advance pattern",
+   "name": "chunkLength",
+   "selector": "a4d@u0020#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "DECL @986391 _invokeAll tail 'for(...){var ' truncated; refCount=2 matches var a4d=a49(a4a[a4c]);if(a4d)push (cf _invokeOne line above)",
+   "name": "pluginResult",
+   "selector": "a4d@u0020#23"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @987048 getDependency mesh case: _invokeOne(function(a4d){return a4d['loadMesh']&&a4d['loadMesh'](a4a);}) — iterated plugin",
+   "name": "plugin",
+   "selector": "a4d@u0020#26"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @987161 getDependency bufferView case: _invokeOne(function(a4d){return a4d['loadBufferView']&&...}) — iterated plugin",
+   "name": "plugin",
+   "selector": "a4d@u0020#27"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1000387 a47 head var a4c=..,a4d=[] (tail of window); USES a4d['push'](..) + Promise['all'](a4d) at @1001061 — attribute load promises",
+   "name": "attributePromises",
+   "selector": "a4d@u0020#38"
+  }
+ ]
+}

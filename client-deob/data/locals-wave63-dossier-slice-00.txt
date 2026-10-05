@@ -1,0 +1,15 @@
+# DOSSIER slice-00 (wave 63, 1 bindings, 1 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/1] th@u2263#0 | kind=var depth=3 refCount=19 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @194 (verified):
+if(Gk||window["MobileApp"]){var Rx=["rawmouse","toggleads",'antialias','fullscreen',"inversemouse"];for(var tf=0x0;tf<Rw['length'];tf++){Rw[tf]['mobileOnly']&&(Rw[tf]['ReDNKHkwk']=!![]);for(var th=0x0;th<Rx["length"];th++){Rw[tf]['id']==Rx[th]&&(Rw[tf]["ReDNKHkwk"]=![],th+=Rx['length']);}}}
+USES: refCount=19, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @189 (verified), servedRefCount=19:
+if(Gk||window[ai1(0x7c8)]){var Rx=[ai1(0x1002),ai1(0xb10),'antialias','fullscreen',ai1(0x2fe)];for(var tf=0x0;tf<Rw['length'];tf++){Rw[tf]['mobileOnly']&&(Rw[tf]['ReDNKHkwk']=!![]);for(var th=0x0;th<Rx[ai1(0x3a2)];th++){Rw[tf]['id']==Rx[th]&&(Rw[tf][ai1(0xb1d)]=![],th+=Rx['length']);}}}
+SERVED USES: 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-00: propose EVERY binding above.

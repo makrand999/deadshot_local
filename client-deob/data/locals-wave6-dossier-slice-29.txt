@@ -1,0 +1,151 @@
+# DOSSIER slice-29 (wave 6, 28 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/28] context@u0022#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @943 (verified):
+sLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this.qIySEZgti.getRenderTarget();var maskActive=false;var pass,i,il=this.passes.length;for(i=0;i<il;i++){pass=this.passes[i];if(pass.ReDNKHkwk===false)continue;pass.renderToScreen=this.renderToScreen&&this.isLastEnabledPass(i);pass.render(this.qIySEZgti,this.writeBuffer,this.readBuffer,deltaTime,maskActive);if(pass.needsSwap){if(maskActive){var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/28] currentRenderTarget@u0022#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @576 (verified):
+Object.assign(usvzFuAsEB.EffectComposer.prototype,{swapBuffers:function(){var tmp=this.readBuffer;this.readBuffer=this.writeBuffer;this.writeBuffer=tmp;},addPass:function(pass){this.passes.push(pass);pass.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);},insertPass:function(pass,index){this.passes.splice(index,0,pass);},isLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1414: etFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZgti.setRenderTarget(currentRenderTarget);},reset:function(renderTarget){if(renderTarget===undefined){var size=this.qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=this.qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarge
+==============================================================================
+[3/28] deltaTime@u0022#0 | kind=param depth=5 refCount=4 | engine/webgl-renderer.js
+DECL @502 (verified):
+Object.assign(usvzFuAsEB.EffectComposer.prototype,{swapBuffers:function(){var tmp=this.readBuffer;this.readBuffer=this.writeBuffer;this.writeBuffer=tmp;},addPass:function(pass){this.passes.push(pass);pass.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);},insertPass:function(pass,index){this.passes.splice(index,0,pass);},isLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 1 nearest outside DECL window:
+@1144: askActive);if(pass.needsSwap){if(maskActive){var context=this.qIySEZgti.getContext();var stencil=this.qIySEZgti.state.buffers.stencil;stencil.setFunc(context.NOTEQUAL,1,4294967295);this.copyPass.render(this.qIySEZgti,this.writeBuffer,this.readBuffer,deltaTime);stencil.setFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZ
+==============================================================================
+[4/28] effectiveHeight@u0022#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @2107 (verified):
+s.qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=this.qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarget=this.renderTarget1.clone(true);renderTarget.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);}this.renderTarget1.dispose();this.renderTarget2.dispose();this.renderTarget1=renderTarget;this.renderTarget2=renderTarget.clone(true);this.writeBuffer=this.renderTarget1;this.readBuffer=this.renderTarget2;},setSize:function(width,height){this._width=width;this._height=height;var effectiveWidth=this._width*this._pixelRatio;var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/28] effectiveWidth@u0022#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @2059 (verified):
+arget){if(renderTarget===undefined){var size=this.qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=this.qIySEZgti.getPixelRatio();this._width=size.width;this._height=size.height;renderTarget=this.renderTarget1.clone(true);renderTarget.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);}this.renderTarget1.dispose();this.renderTarget2.dispose();this.renderTarget1=renderTarget;this.renderTarget2=renderTarget.clone(true);this.writeBuffer=this.renderTarget1;this.readBuffer=this.renderTarget2;},setSize:function(width,height){this._width=width;this._height=height;var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/28] maskActive@u0022#0 | kind=var depth=5 refCount=4 | engine/webgl-renderer.js
+DECL @633 (verified):
+mposer.prototype,{swapBuffers:function(){var tmp=this.readBuffer;this.readBuffer=this.writeBuffer;this.writeBuffer=tmp;},addPass:function(pass){this.passes.push(pass);pass.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);},insertPass:function(pass,index){this.passes.splice(index,0,pass);},isLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this.qIySEZgti.getRenderTarget();var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 2 nearest outside DECL window:
+@1296: ntext.NOTEQUAL,1,4294967295);this.copyPass.render(this.qIySEZgti,this.writeBuffer,this.readBuffer,deltaTime);stencil.setFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZgti.setRenderTarget(currentRenderTarget);},reset:function(renderTarget){if(renderTarget===undefined){var size=this.qIySEZgti.getSize(new usvzFuAsEB.vFgd
+@1363: is.writeBuffer,this.readBuffer,deltaTime);stencil.setFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZgti.setRenderTarget(currentRenderTarget);},reset:function(renderTarget){if(renderTarget===undefined){var size=this.qIySEZgti.getSize(new usvzFuAsEB.vFgdYWoMXeQ());this._pixelRatio=this.qIySEZgti.getPixelRatio();this._wi
+==============================================================================
+[7/28] passIndex@u0022#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @369 (verified):
+Object.assign(usvzFuAsEB.EffectComposer.prototype,{swapBuffers:function(){var tmp=this.readBuffer;this.readBuffer=this.writeBuffer;this.writeBuffer=tmp;},addPass:function(pass){this.passes.push(pass);pass.setSize(this._width*this._pixelRatio,this._height*this._pixelRatio);},insertPass:function(pass,index){this.passes.splice(index,0,pass);},isLastEnabledPass:function(passIndex){for(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/28] pixelRatio@u0022#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @2390 (verified):
+Target1.dispose();this.renderTarget2.dispose();this.renderTarget1=renderTarget;this.renderTarget2=renderTarget.clone(true);this.writeBuffer=this.renderTarget1;this.readBuffer=this.renderTarget2;},setSize:function(width,height){this._width=width;this._height=height;var effectiveWidth=this._width*this._pixelRatio;var effectiveHeight=this._height*this._pixelRatio;this.renderTarget1.setSize(effectiveWidth,effectiveHeight);this.renderTarget2.setSize(effectiveWidth,effectiveHeight);for(var i=0;i<this.passes.length;i++){this.passes[i].setSize(effectiveWidth,effectiveHeight);}},setPixelRatio:function([...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/28] renderTarget@u0022#0 | kind=param depth=5 refCount=5 | engine/webgl-renderer.js
+DECL @1452 (verified):
+is.writeBuffer,this.readBuffer,deltaTime,maskActive);if(pass.needsSwap){if(maskActive){var context=this.qIySEZgti.getContext();var stencil=this.qIySEZgti.state.buffers.stencil;stencil.setFunc(context.NOTEQUAL,1,4294967295);this.copyPass.render(this.qIySEZgti,this.writeBuffer,this.readBuffer,deltaTime);stencil.setFunc(context.EQUAL,1,4294967295);}this.swapBuffers();}if(usvzFuAsEB.MaskPass!==undefined){if(pass instanceof usvzFuAsEB.MaskPass){maskActive=true;}else if(pass instanceof usvzFuAsEB.ClearMaskPass){maskActive=false;}}}this.qIySEZgti.setRenderTarget(currentRenderTarget);},reset:function([...line truncated...]
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/28] stencil@u0022#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @983 (verified):
+(var i=passIndex+1;i<this.passes.length;i++){if(this.passes[i].ReDNKHkwk){return false;}}return true;},render:function(deltaTime){if(deltaTime===undefined){deltaTime=this.clock.getDelta();}var currentRenderTarget=this.qIySEZgti.getRenderTarget();var maskActive=false;var pass,i,il=this.passes.length;for(i=0;i<il;i++){pass=this.passes[i];if(pass.ReDNKHkwk===false)continue;pass.renderToScreen=this.renderToScreen&&this.isLastEnabledPass(i);pass.render(this.qIySEZgti,this.writeBuffer,this.readBuffer,deltaTime,maskActive);if(pass.needsSwap){if(maskActive){var context=this.qIySEZgti.getContext();var [...line truncated...]
+USES: refCount=2, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/28] a3k@u2171#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @12 (verified):
+function NJ(a3k){var a3l='';for(var a3m=0x0;a3m<a3k['length'];a3m++){a3l+=String['fromCharCode'](-(a3k[a3m]-0xa));}return a3l;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/28] a3l@u2171#0 | kind=var depth=5 refCount=2 | ui/widgets.js
+DECL @21 (verified):
+function NJ(a3k){var a3l='';for(var a3m=0x0;a3m<a3k['length'];a3m++){a3l+=String['fromCharCode'](-(a3k[a3m]-0xa));}return a3l;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/28] a3m@u2171#0 | kind=var depth=5 refCount=3 | ui/widgets.js
+DECL @36 (verified):
+function NJ(a3k){var a3l='';for(var a3m=0x0;a3m<a3k['length'];a3m++){a3l+=String['fromCharCode'](-(a3k[a3m]-0xa));}return a3l;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/28] a3k@u2110#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @12 (verified):
+function LQ(a3k,a3l,a3m){return a3k=LP(a3k,a3l),LN(a3k,a3l,a3m);}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/28] a3l@u2110#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @16 (verified):
+function LQ(a3k,a3l,a3m){return a3k=LP(a3k,a3l),LN(a3k,a3l,a3m);}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/28] a3m@u2110#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @20 (verified):
+function LQ(a3k,a3l,a3m){return a3k=LP(a3k,a3l),LN(a3k,a3l,a3m);}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/28] a3k@u2103#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @12 (verified):
+function LG(a3k,a3l){var aqY=ai1;let a3m=document['createElement']('canvas');a3m["width"]=Math['floor'](a3k["width"]*a3l),a3m["height"]=Math["floor"](a3k["height"]*a3l);let a3n=a3m["getContext"]('2d');return a3n['clearRect'](0x0,0x0,a3m["width"],a3m['height']),a3n["drawImage"](a3k,0x0,0x0,a3m['width'],a3m['height']),a3m;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/28] a3l@u2103#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @16 (verified):
+function LG(a3k,a3l){var aqY=ai1;let a3m=document['createElement']('canvas');a3m["width"]=Math['floor'](a3k["width"]*a3l),a3m["height"]=Math["floor"](a3k["height"]*a3l);let a3n=a3m["getContext"]('2d');return a3n['clearRect'](0x0,0x0,a3m["width"],a3m['height']),a3n["drawImage"](a3k,0x0,0x0,a3m['width'],a3m['height']),a3m;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/28] FullScreenQuad@u0025#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @158 (verified):
+usvzFuAsEB.Pass.FullScreenQuad=(function(){var aKmLbYuMC=new usvzFuAsEB.lUtmuvURyPI(-1,1,1,-1,0,1);var RNQDluasaN=new usvzFuAsEB.PlaneBufferGeometry(2,2);var FullScreenQuad=function(material){this._mesh=new usvzFuAsEB.Mesh(RNQDluasaN,material);};Object.defineProperty(FullScreenQuad.prototype,'material',{get:function(){return this._mesh.material;},set:function(value){this._mesh.material=value;}});Object.assign(FullScreenQuad.prototype,{dispose:function(){this._mesh.RNQDluasaN.dispose();},render:function(qIySEZgti){qIySEZgti.render(this._mesh,aKmLbYuMC);}});return FullScreenQuad;}());
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/28] RNQDluasaN@u0025#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @103 (verified):
+usvzFuAsEB.Pass.FullScreenQuad=(function(){var aKmLbYuMC=new usvzFuAsEB.lUtmuvURyPI(-1,1,1,-1,0,1);var RNQDluasaN=new usvzFuAsEB.PlaneBufferGeometry(2,2);var FullScreenQuad=function(material){this._mesh=new usvzFuAsEB.Mesh(RNQDluasaN,material);};Object.defineProperty(FullScreenQuad.prototype,'material',{get:function(){return this._mesh.material;},set:function(value){this._mesh.material=value;}});Object.assign(FullScreenQuad.prototype,{dispose:function(){this._mesh.RNQDluasaN.dispose();},render:function(qIySEZgti){qIySEZgti.render(this._mesh,aKmLbYuMC);}});return FullScreenQuad;}());
+USES: refCount=1, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/28] aKmLbYuMC@u0025#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @47 (verified):
+usvzFuAsEB.Pass.FullScreenQuad=(function(){var aKmLbYuMC=new usvzFuAsEB.lUtmuvURyPI(-1,1,1,-1,0,1);var RNQDluasaN=new usvzFuAsEB.PlaneBufferGeometry(2,2);var FullScreenQuad=function(material){this._mesh=new usvzFuAsEB.Mesh(RNQDluasaN,material);};Object.defineProperty(FullScreenQuad.prototype,'material',{get:function(){return this._mesh.material;},set:function(value){this._mesh.material=value;}});Object.assign(FullScreenQuad.prototype,{dispose:function(){this._mesh.RNQDluasaN.dispose();},render:function(qIySEZgti){qIySEZgti.render(this._mesh,aKmLbYuMC);}});return FullScreenQuad;}());
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/28] qIySEZgti@u0025#0 | kind=param depth=7 refCount=1 | engine/webgl-renderer.js
+DECL @508 (verified):
+usvzFuAsEB.Pass.FullScreenQuad=(function(){var aKmLbYuMC=new usvzFuAsEB.lUtmuvURyPI(-1,1,1,-1,0,1);var RNQDluasaN=new usvzFuAsEB.PlaneBufferGeometry(2,2);var FullScreenQuad=function(material){this._mesh=new usvzFuAsEB.Mesh(RNQDluasaN,material);};Object.defineProperty(FullScreenQuad.prototype,'material',{get:function(){return this._mesh.material;},set:function(value){this._mesh.material=value;}});Object.assign(FullScreenQuad.prototype,{dispose:function(){this._mesh.RNQDluasaN.dispose();},render:function(qIySEZgti){qIySEZgti.render(this._mesh,aKmLbYuMC);}});return FullScreenQuad;}());
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[23/28] value@u0025#0 | kind=param depth=7 refCount=1 | engine/webgl-renderer.js
+DECL @362 (verified):
+usvzFuAsEB.Pass.FullScreenQuad=(function(){var aKmLbYuMC=new usvzFuAsEB.lUtmuvURyPI(-1,1,1,-1,0,1);var RNQDluasaN=new usvzFuAsEB.PlaneBufferGeometry(2,2);var FullScreenQuad=function(material){this._mesh=new usvzFuAsEB.Mesh(RNQDluasaN,material);};Object.defineProperty(FullScreenQuad.prototype,'material',{get:function(){return this._mesh.material;},set:function(value){this._mesh.material=value;}});Object.assign(FullScreenQuad.prototype,{dispose:function(){this._mesh.RNQDluasaN.dispose();},render:function(qIySEZgti){qIySEZgti.render(this._mesh,aKmLbYuMC);}});return FullScreenQuad;}());
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[24/28] a3o@u2775#0 | kind=param depth=5 refCount=2 | network/handlers.js
+DECL @21 (verified):
+'t05nDaZZ6':function(a3o){isNaN(Kx)&&(Kx=0.3),isNaN(Kx)&&window['onerror']('ChangeSGR\x20NaN:\x20'+Kx),!isNaN(a3o['FBFOTIucqfz'])&&(Kx+=a3o['FBFOTIucqfz']),isNaN(Kx)&&window['onerror']('ChangeSGR\x20NaN\x202:\x20'+Kx),Kx>0x1&&(Kx=0x1),Kx<0x0&&(Kx=0x0),KV('sgr',Kx);},
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[25/28] a3i@u0402#0 | kind=param depth=5 refCount=2 | ui/widgets.js
+DECL @12 (verified):
+function u8(a3i,a3j){var ap7=ai1;if(tU==undefined)return;var a3k=u7(a3j);for(var a3l=0x0;a3l<tU['children']["length"];a3l++){var a3m=tU['children'][a3l];if(a3m['dataset']==undefined||a3m['dataset']['category']==undefined)continue;if(u7(a3m['dataset']['category'])>a3k){tU['insertBefore'](a3i,a3m);return;}}tU['appendChild'](a3i);}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[26/28] a3j@u0402#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @16 (verified):
+function u8(a3i,a3j){var ap7=ai1;if(tU==undefined)return;var a3k=u7(a3j);for(var a3l=0x0;a3l<tU['children']["length"];a3l++){var a3m=tU['children'][a3l];if(a3m['dataset']==undefined||a3m['dataset']['category']==undefined)continue;if(u7(a3m['dataset']['category'])>a3k){tU['insertBefore'](a3i,a3m);return;}}tU['appendChild'](a3i);}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[27/28] a3o@u2723#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @27 (verified):
+function a0l(){var aC2=ai1,a3o={};return a3o['x']=0x0,a3o['y']=0x0,{'time':GK,'position':new usvzFuAsEB[("gURkzCzeY")](),'rotation':a3o,'copy':function(a3p){var aC3=aC2;this['position']['copy'](a3p['position']),this[RY]['x']=a3p[RY]['x'],this[RY]['y']=a3p[RY]['y'],this["time"]=a3p['time'];}};}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[28/28] a3i@u0354#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function ta(a3i){return a3i;}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-29: propose EVERY binding above.

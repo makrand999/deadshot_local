@@ -1,0 +1,223 @@
+{
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @811821 var binding=bindingsForPath[index]; swapped between cached/active slots in AnimationObjectGroup cache; canonical PropertyBinding loop temp — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @812952 var binding=bindingsForPath[index] in recache loop; same canonical binding-swap temp as #4 — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @825157 var binding=bindingsByName[trackName]; AnimationMixer._bindAction per-track PropertyMixer lookup, 12 refs; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @826186 var binding=bindings[i]; _activateAction loop over action._propertyBindings w/ useCount/_lendBinding; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#7"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @826487 var binding=bindings[i]; _deactivateAction loop w/ --useCount/restoreOriginalState/_takeBackBinding; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#8"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @829026 var binding=bindings[i]; _removeInactiveBindingsForAction loop w/ --referenceCount; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#9"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @829840 param binding of _addInactiveBinding(binding,rootUuid,trackName); registered into bindingsByRoot/bindings; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#10"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @830218 param binding of _removeInactiveBinding; reads binding.binding/rootNode/path; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#11"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @830749 param binding of _lendBinding; swaps _cacheIndex active/inactive slots; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#12"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @831102 param binding of _takeBackBinding; mirrors _lendBinding cache-slot swap; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#13"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @835604 var binding=bindingByName[trackName]; uncacheRoot loop w/ restoreOriginalState/_removeInactiveBinding; canonical engine term — already readable.",
+      "name": "binding",
+      "selector": "binding@u0020#14"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @829943 var bindingByName=bindingsByRoot[rootUuid]; trackName→binding map in _addInactiveBinding, 4 refs; descriptive camelCase — already readable.",
+      "name": "bindingByName",
+      "selector": "bindingByName@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @830388 bindingByName=bindingsByRoot[rootUuid]; same trackName→binding map in _removeInactiveBinding, 2 refs; descriptive camelCase — already readable.",
+      "name": "bindingByName",
+      "selector": "bindingByName@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @835495 bindingByName=bindingsByRoot[rootUuid]; same map iterated by trackName in uncacheRoot, 3 refs; descriptive camelCase — already readable.",
+      "name": "bindingByName",
+      "selector": "bindingByName@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @328922 var bindingStates={}; WebGLBindingStates geometry→program→state map, 10 refs (getBindingState/dispose/release*); canonical engine term — already readable.",
+      "name": "bindingStates",
+      "selector": "bindingStates@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @346517 param of WebGLGeometries(gl,attributes,info,bindingStates); USES releaseStatesOfGeometry — canonical three.js WebGLBindingStates manager handle, already readable.",
+      "name": "bindingStates",
+      "selector": "bindingStates@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @372496 param of WebGLProgram(renderer,cacheKey,parameters,bindingStates); USES destroy()->releaseStatesOfProgram — canonical engine handle, already readable.",
+      "name": "bindingStates",
+      "selector": "bindingStates@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @384424 param of WebGLPrograms(...,bindingStates,clipping); USES passes to new WebGLProgram — canonical engine handle, already readable.",
+      "name": "bindingStates",
+      "selector": "bindingStates@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @490812 renderer-scope var; USES new WebGLBindingStates + 13 refs (initAttributes/enableAttribute/dispose) — canonical engine singleton, already readable.",
+      "name": "bindingStates",
+      "selector": "bindingStates@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @808580 PropertyBinding.bind(); USES BindingType.Direct/ArrayElement/HasFromToArray/EntireArray + Getter/Setter dispatch — canonical engine enum local, already readable.",
+      "name": "bindingType",
+      "selector": "bindingType@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @425662 param of setBlending(...); USES defaults to blendSrc + blendFuncSeparate — canonical WebGL blend-state factor name, already readable.",
+      "name": "blendSrcAlpha",
+      "selector": "blendSrcAlpha@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @425602 param of setBlending(blending,...); USES switch over Normal/Additive/Subtractive/MultiplyBlending — canonical material.blending mirror, already readable.",
+      "name": "blending",
+      "selector": "blending@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @355891 param of flatten(array,nBlocks,blockSize); USES uniform-array flatten stride — idiomatic already-readable param, no cryptic token.",
+      "name": "blockSize",
+      "selector": "blockSize@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @875451 _halfBlur(): var blurMaterial=this._blurMaterial; USES new Mesh(lodPlane,blurMaterial) — PMREM blur pass handle, already readable.",
+      "name": "blurMaterial",
+      "selector": "blurMaterial@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @875651 _halfBlur(): var blurMesh=new Mesh(_lodPlanes[lodOut],blurMaterial); USES renderer.render(blurMesh,_flatCamera) — PMREM quad mesh, already readable.",
+      "name": "blurMesh",
+      "selector": "blurMesh@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @875706 _halfBlur(): var blurUniforms=blurMaterial.uniforms; USES 9 refs setting envMap/samples/weights/latitudinal/dTheta — already-readable uniforms handle.",
+      "name": "blurUniforms",
+      "selector": "blurUniforms@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @539673 Skeleton.pose(): var bone=this.bones[i]; USES matrixWorld copy from boneInverses — idiomatic loop temp, already readable.",
+      "name": "bone",
+      "selector": "bone@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @540648 getBoneByName(): var bone=this.bones[i]; USES name match + return — idiomatic loop temp, already readable.",
+      "name": "bone",
+      "selector": "bone@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @540955 fromJSON(): var bone=bones[uuid]; USES undefined-check/new Bone()/push — idiomatic lookup temp, already readable.",
+      "name": "bone",
+      "selector": "bone@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @541440 toJSON(): var bone=bones[i]; USES data.bones.push(bone.uuid) — idiomatic loop temp, already readable.",
+      "name": "bone",
+      "selector": "bone@u0020#3"
+    }
+  ],
+  "slice": "00",
+  "stats": {
+    "total": 30,
+    "rename": 0,
+    "keep": 30,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

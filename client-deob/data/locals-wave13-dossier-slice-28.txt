@@ -1,0 +1,64 @@
+# DOSSIER slice-28 (wave 13, 11 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/11] _worker@u0034#0 | kind=param depth=7 refCount=1 | engine/assets-draco.js
+DECL @2178 (verified):
+tribute];if(type.BYTES_PER_ELEMENT!==undefined){taskConfig.attributeTypes[attribute]=type.name;}}var taskKey=JSON.stringify(taskConfig);if(usvzFuAsEB.tlRWqyJjE.taskCache.has(buffer)){var cachedTask=usvzFuAsEB.tlRWqyJjE.taskCache.get(buffer);if(cachedTask.key===taskKey){return cachedTask.promise;}else if(buffer.byteLength===0){throw new Error('usvzFuAsEB.tlRWqyJjE: Unable to re-decode a buffer with different '+'settings. Buffer has already been transferred.');}}var worker;var taskID=this.workerNextTaskID++;var taskCost=buffer.byteLength;var geometryPending=this._getWorker(taskID,taskCost).then([...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/11] callback@u0034#0 | kind=param depth=5 refCount=1 | engine/assets-draco.js
+DECL @1201 (verified):
+rn('usvzFuAsEB.tlRWqyJjE: The .setSkipDequantization() method has been removed.');},load:function(url,onLoad,onProgress,onError){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.path);loader.setResponseType('arraybuffer');loader.setRequestHeader(this.requestHeader);loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{var taskConfig={attributeIDs:this.defaultAttributeIDs,attributeTypes:this.defaultAttributeTypes,useUniqueIDs:false};this.decodeGeometry(buffer,taskConfig).then(onLoad).catch(onError);},onProgress,onError);},decodeDracoFile:function(buffer,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/11] geometryData@u0034#0 | kind=param depth=5 refCount=4 | engine/assets-draco.js
+DECL @2648 (verified):
+orker;var taskID=this.workerNextTaskID++;var taskCost=buffer.byteLength;var geometryPending=this._getWorker(taskID,taskCost).then(_worker=>{worker=_worker;return new Promise((resolve,reject)=>{worker._callbacks[taskID]={resolve,reject};worker.postMessage({type:'decode',id:taskID,taskConfig,buffer},[buffer]);});}).then(message=>this._createGeometry(message.RNQDluasaN));geometryPending.catch(()=>true).then(()=>{if(worker&&taskID){this._releaseTask(worker,taskID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function([...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/11] geometryPending@u0034#0 | kind=var depth=5 refCount=3 | engine/assets-draco.js
+DECL @2124 (verified):
+.attributeTypes){var type=taskConfig.attributeTypes[attribute];if(type.BYTES_PER_ELEMENT!==undefined){taskConfig.attributeTypes[attribute]=type.name;}}var taskKey=JSON.stringify(taskConfig);if(usvzFuAsEB.tlRWqyJjE.taskCache.has(buffer)){var cachedTask=usvzFuAsEB.tlRWqyJjE.taskCache.get(buffer);if(cachedTask.key===taskKey){return cachedTask.promise;}else if(buffer.byteLength===0){throw new Error('usvzFuAsEB.tlRWqyJjE: Unable to re-decode a buffer with different '+'settings. Buffer has already been transferred.');}}var worker;var taskID=this.workerNextTaskID++;var taskCost=buffer.byteLength;var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/11] itemSize@u0034#0 | kind=var depth=5 refCount=1 | engine/assets-draco.js
+DECL @2955 (verified):
+);});}).then(message=>this._createGeometry(message.RNQDluasaN));geometryPending.catch(()=>true).then(()=>{if(worker&&taskID){this._releaseTask(worker,taskID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function(geometryData){var RNQDluasaN=new usvzFuAsEB.kwrjVVjSgIH();if(geometryData.index){RNQDluasaN.setIndex(new usvzFuAsEB.BufferAttribute(geometryData.index.array,1));}for(var i=0;i<geometryData.attributes.length;i++){var attribute=geometryData.attributes[i];var name=attribute.name;var array=attribute.array;var [...line truncated...]
+USES: refCount=1, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/11] libraries@u0034#0 | kind=param depth=7 refCount=2 | engine/assets-draco.js
+DECL @3888 (verified):
+);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(this.decoderPending)return this.decoderPending;var useJS=typeof WebAssembly!=='object'||this.decoderConfig.type==='js';var librariesPending=[];if(useJS){librariesPending.push(this._loadLibrary('draco_decoder.js','text'));}else{librariesPending.push(this._loadLibrary('draco_wasm_wrapper.js','text'));librariesPending.push(this._loadLibrary('draco_decoder.wasm','arraybuffer'));}this.decoderPending=Promise.all(librariesPending).then([...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/11] librariesPending@u0034#0 | kind=var depth=5 refCount=4 | engine/assets-draco.js
+DECL @3578 (verified):
+Size;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(this.decoderPending)return this.decoderPending;var useJS=typeof WebAssembly!=='object'||this.decoderConfig.type==='js';var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/11] responseType@u0034#0 | kind=param depth=5 refCount=1 | engine/assets-draco.js
+DECL @3107 (verified):
+skID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function(geometryData){var RNQDluasaN=new usvzFuAsEB.kwrjVVjSgIH();if(geometryData.index){RNQDluasaN.setIndex(new usvzFuAsEB.BufferAttribute(geometryData.index.array,1));}for(var i=0;i<geometryData.attributes.length;i++){var attribute=geometryData.attributes[i];var name=attribute.name;var array=attribute.array;var itemSize=attribute.itemSize;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/11] taskKey@u0034#0 | kind=var depth=5 refCount=2 | engine/assets-draco.js
+DECL @1679 (verified):
+his.decodeGeometry(buffer,taskConfig).then(onLoad).catch(onError);},onProgress,onError);},decodeDracoFile:function(buffer,callback,attributeIDs,attributeTypes){var taskConfig={attributeIDs:attributeIDs||this.defaultAttributeIDs,attributeTypes:attributeTypes||this.defaultAttributeTypes,useUniqueIDs:!!attributeIDs};this.decodeGeometry(buffer,taskConfig).then(callback);},decodeGeometry:function(buffer,taskConfig){for(var attribute in taskConfig.attributeTypes){var type=taskConfig.attributeTypes[attribute];if(type.BYTES_PER_ELEMENT!==undefined){taskConfig.attributeTypes[attribute]=type.name;}}var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@2564: de',id:taskID,taskConfig,buffer},[buffer]);});}).then(message=>this._createGeometry(message.RNQDluasaN));geometryPending.catch(()=>true).then(()=>{if(worker&&taskID){this._releaseTask(worker,taskID);}});usvzFuAsEB.tlRWqyJjE.taskCache.set(buffer,{key:taskKey,promise:geometryPending});return geometryPending;},_createGeometry:function(geometryData){var RNQDluasaN=new usvzFuAsEB.kwrjVVjSgIH();if(geometryData.index){RNQDluasaN.setIndex(new usvzFuAsEB.BufferAttribute(geometryData.index.array,1));}for(
+==============================================================================
+[10/11] useJS@u0034#0 | kind=var depth=5 refCount=2 | engine/assets-draco.js
+DECL @3506 (verified):
+ame=attribute.name;var array=attribute.array;var itemSize=attribute.itemSize;RNQDluasaN.setAttribute(name,new usvzFuAsEB.BufferAttribute(array,itemSize));}return RNQDluasaN;},_loadLibrary:function(url,responseType){var loader=new usvzFuAsEB.FileLoader(this.manager);loader.setPath(this.decoderPath);loader.setResponseType(responseType);loader.setWithCredentials(this.withCredentials);return new Promise((resolve,reject)=>{loader.load(url,resolve,undefined,reject);});},preload:function(){this._initDecoder();return this;},_initDecoder:function(){if(this.decoderPending)return this.decoderPending;var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/11] workerLimit@u0034#0 | kind=param depth=5 refCount=1 | engine/assets-draco.js
+DECL @286 (verified):
+usvzFuAsEB.tlRWqyJjE.prototype=Object.assign(Object.create(usvzFuAsEB.Loader.prototype),{constructor:usvzFuAsEB.tlRWqyJjE,setDecoderPath:function(path){this.decoderPath=path;return this;},setDecoderConfig:function(config){this.decoderConfig=config;return this;},setWorkerLimit:function(workerLimit){this.workerLimit=workerLimit;return this;},setVerbosity:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setVerbosity() method has been removed.');},setDrawMode:function(){console.warn('usvzFuAsEB.tlRWqyJjE: The .setDrawMode() method has been removed.');},setSkipDequantization:function(){console.w[...line truncated...]
+USES: refCount=1, 4 token-occurrences in unit, showing 1 nearest outside DECL window:
+@4353: ng(fn.indexOf('{')+1,fn.lastIndexOf('}'))].join('\n');this.workerSourceURL=URL.createObjectURL(new Blob([body]));});return this.decoderPending;},_getWorker:function(taskID,taskCost){return this._initDecoder().then(()=>{if(this.workerPool.length<this.workerLimit){var worker=new Worker(this.workerSourceURL);worker._callbacks={};worker._taskCosts={};worker._taskLoad=0;worker.postMessage({type:'init',decoderConfig:this.decoderConfig});worker.onmessage=function(e){var message=e.data;switch(message.ty
+==============================================================================
+END slice-28: propose EVERY binding above.

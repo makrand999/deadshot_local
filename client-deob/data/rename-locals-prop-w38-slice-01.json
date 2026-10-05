@@ -1,0 +1,222 @@
+{
+ "meta": {
+  "wave": 38,
+  "slice": "01",
+  "mergedFrom": [
+   "01a",
+   "01b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722811 declares absellipse's aRotation param, forwarded to new EllipseCurve(...,aRotation); use sites @702738/@702771 show this.aRotation driving the cos/sin rotation of the computed point. Ellipse rotation angle.",
+   "name": "ellipseRotation",
+   "selector": "aRotation@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @701626 declares EllipseCurve(aX,aY,xRadius,yRadius,aStartAngle,...) storing this.aStartAngle=aStartAngle||0 (visible @701793/@701805); use sites @702222/@702582 show getPoint computing angle=this.aStartAngle+t*deltaAngle. Ellipse start angle.",
+   "name": "ellipseStartAngle",
+   "selector": "aStartAngle@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @703865 declares ArcCurve(aX,aY,aRadius,aStartAngle,...) forwarding it to EllipseCurve.call (visible @703944); same start-angle role as EllipseCurve ctor param. Arc start angle.",
+   "name": "ellipseStartAngle",
+   "selector": "aStartAngle@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722153 declares Path arc(aX,aY,aRadius,aStartAngle,...) forwarding it to this.absarc(aX+x0,...) ; relative-arc start angle passed down the absarc/absellipse chain. Arc start angle.",
+   "name": "ellipseStartAngle",
+   "selector": "aStartAngle@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722358 declares absarc(aX,aY,aRadius,aStartAngle,...) forwarding it to this.absellipse(aX,aY,aRadius,aRadius,aStartAngle,...); absolute-arc start angle. Arc start angle.",
+   "name": "ellipseStartAngle",
+   "selector": "aStartAngle@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722525 declares Path ellipse(aX,aY,xRadius,yRadius,aStartAngle,...) forwarding it to this.absellipse(aX+x0,...); relative-ellipse start angle. Ellipse start angle.",
+   "name": "ellipseStartAngle",
+   "selector": "aStartAngle@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722778 declares absellipse(aX,aY,xRadius,yRadius,aStartAngle,...) forwarding it to new EllipseCurve(...,aStartAngle,...) (visible @722849/@722871); absolute-ellipse start angle. Ellipse start angle.",
+   "name": "ellipseStartAngle",
+   "selector": "aStartAngle@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @701604 declares EllipseCurve(aX,...) storing this.aX=aX||0 (visible @701717/@701720); use sites @702618/@702796 show getPoint computing x=this.aX+xRadius*cos(angle). Ellipse center x-coordinate.",
+   "name": "ellipseCenterX",
+   "selector": "aX@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @703851 declares ArcCurve(aX,...) forwarding it to EllipseCurve.call(this,aX,...) (visible @703922); same center-x role as EllipseCurve ctor param. Arc center x-coordinate.",
+   "name": "ellipseCenterX",
+   "selector": "aX@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @721465 declares quadraticCurveTo(aCPx,aCPy,aX,aY) passing aX to new Vector2(aX,aY) and currentPoint.set(aX,aY) (visible @721576/@721630); end-point x of the quadratic segment. Curve end-point x.",
+   "name": "endPointX",
+   "selector": "aX@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @721712 declares bezierCurveTo(aCP1x,aCP1y,aCP2x,aCP2y,aX,aY) passing aX to new Vector2(aX,aY) and currentPoint.set(aX,aY) (visible @721850); end-point x of the cubic segment. Curve end-point x.",
+   "name": "endPointX",
+   "selector": "aX@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722139 declares Path arc(aX,...) forwarding aX+x0 to this.absarc (visible @722253/@722344); center-x of the arc relative to currentPoint. Arc center x-coordinate.",
+   "name": "ellipseCenterX",
+   "selector": "aX@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722344 declares absarc(aX,...) forwarding aX to this.absellipse(aX,aY,...) (visible @722408/@722503); absolute center-x of the arc. Arc center x-coordinate.",
+   "name": "ellipseCenterX",
+   "selector": "aX@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722503 declares Path ellipse(aX,...) forwarding aX+x0 to this.absellipse (visible @722639/@722756); center-x of the ellipse relative to currentPoint. Ellipse center x-coordinate.",
+   "name": "ellipseCenterX",
+   "selector": "aX@u0020#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722756 declares absellipse(aX,...) forwarding aX to new EllipseCurve(aX,aY,...) (visible @722849); absolute center-x of the ellipse. Ellipse center x-coordinate.",
+   "name": "ellipseCenterX",
+   "selector": "aX@u0020#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @773533 declares ShapePath quadraticCurveTo(aCPx,aCPy,aX,aY); its single use forwards aX to currentPath.quadraticCurveTo as the curve endpoint X.",
+   "name": "curveEndX",
+   "selector": "aX@u0020#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @773666 declares ShapePath bezierCurveTo(aCP1x,aCP1y,aCP2x,aCP2y,aX,aY); its single use forwards aX to currentPath.bezierCurveTo as the curve endpoint X.",
+   "name": "curveEndX",
+   "selector": "aX@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @701607 declares EllipseCurve(aX,aY,xRadius,...) constructor param; its use sets this.aY, the ellipse center Y consumed at @702661 (y=aY+yRadius*sin).",
+   "name": "ellipseCenterY",
+   "selector": "aY@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @703854 declares ArcCurve(aX,aY,aRadius,...) param; its use forwards aY to EllipseCurve.call (use site @703925) as the arc center Y.",
+   "name": "arcCenterY",
+   "selector": "aY@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @721468 declares Path quadraticCurveTo(aCPx,aCPy,aX,aY); its 2 uses build new Vector2(aX,aY) and currentPoint.set(aX,aY), i.e. the curve endpoint Y.",
+   "name": "curveEndY",
+   "selector": "aY@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @721715 declares Path bezierCurveTo(aCP1x,aCP1y,aCP2x,aCP2y,aX,aY); its 2 uses build the CubicBezierCurve endpoint Vector2(aX,aY) and currentPoint.set(aX,aY).",
+   "name": "curveEndY",
+   "selector": "aY@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722142 declares Path arc(aX,aY,aRadius,...); its use calls absarc(aX+x0,aY+y0,...), offsetting the relative arc center Y to absolute.",
+   "name": "arcCenterY",
+   "selector": "aY@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722347 declares Path absarc(aX,aY,aRadius,...); its use forwards aY to absellipse(aX,aY,aRadius,aRadius,...) as the absolute arc center Y.",
+   "name": "arcCenterY",
+   "selector": "aY@u0020#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722506 declares Path ellipse(aX,aY,xRadius,...); its use calls absellipse(aX+x0,aY+y0,...), offsetting the relative ellipse center Y to absolute.",
+   "name": "ellipseCenterY",
+   "selector": "aY@u0020#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @722759 declares Path absellipse(aX,aY,xRadius,...); its use constructs new EllipseCurve(aX,aY,...) (use site @722852) with aY as center Y.",
+   "name": "ellipseCenterY",
+   "selector": "aY@u0020#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @773536 declares ShapePath quadraticCurveTo(aCPx,aCPy,aX,aY); its single use forwards aY to currentPath.quadraticCurveTo as the curve endpoint Y.",
+   "name": "curveEndY",
+   "selector": "aY@u0020#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @773669 declares ShapePath bezierCurveTo(...,aX,aY); its single use forwards aY to currentPath.bezierCurveTo as the curve endpoint Y.",
+   "name": "curveEndY",
+   "selector": "aY@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @612191 declares var a_x=verts[indexA*3] in generateTopUV; its use builds the Vector2(a_x,a_y) top-UV triple (return visible in @612547 window).",
+   "name": "vertexAX",
+   "selector": "a_x@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @612547 declares var a_x=verts[indexA*3] in generateSideWallUV; its use builds side-wall UVs as Vector2(a_x,1-a_z) (use site @612945).",
+   "name": "vertexAX",
+   "selector": "a_x@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @612219 declares var a_y=verts[indexA*3+1] in generateTopUV; its use builds the Vector2(a_x,a_y) top-UV triple (return visible in @612547 window).",
+   "name": "vertexAY",
+   "selector": "a_y@u0020#0"
+  }
+ ]
+}

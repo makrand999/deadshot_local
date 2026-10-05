@@ -1,0 +1,223 @@
+{
+ "slice": "03",
+ "stats": {
+  "total": 30,
+  "rename": 1,
+  "keep": 29,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @626373 var shape=shapes[i] in _toJSON$2 loop; USES refCount=1 pushing shape.uuid — idiomatic loop item name",
+   "name": "shape",
+   "selector": "shape@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @627314 var shape=shapes[i] in _toJSON$3 loop; USES refCount=1 pushing shape.uuid — idiomatic loop item name",
+   "name": "shape",
+   "selector": "shape@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @755922 var shape=new Shape().fromJSON(json[i]) in parseShapes; USES refCount=2 keying shapes[shape.uuid] — already-readable domain name",
+   "name": "shape",
+   "selector": "shape@u0020#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @759167 var shape=shapes[data.shapes[j]] in ShapeGeometry parse loop; USES refCount=1 geometryShapes.push(shape) — idiomatic lookup item name",
+   "name": "shape",
+   "selector": "shape@u0020#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @625367 var shapeHole=shapeHoles[_i] in addShape hole loop; USES refCount=2 isClockWise checks — already-readable domain name",
+   "name": "shapeHole",
+   "selector": "shapeHole@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @625206 var shapeHoles=points.holes in addShape; USES refCount=6 loop + triangulation — already-readable domain name",
+   "name": "shapeHoles",
+   "selector": "shapeHoles@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @604788 shapePoints extrude contour points in ExtrudeBufferGeometry; USES refCount=2 — already-readable domain name",
+   "name": "shapePoints",
+   "selector": "shapePoints@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @625175 var shapeVertices=points.shape in addShape; USES refCount=8 winding/reverse/triangulation — already-readable domain name",
+   "name": "shapeVertices",
+   "selector": "shapeVertices@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @103408 var shapes from parameters.shapes in toJSON serialize; USES refCount=4 serializing shape uuids — already-readable domain name",
+   "name": "shapes",
+   "selector": "shapes@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @603029 param shapes of ExtrudeBufferGeometry ctor; USES refCount=7 stored to parameters + addShape loop — already-readable param name",
+   "name": "shapes",
+   "selector": "shapes@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @611937 var shapes=this.parameters.shapes in ExtrudeBufferGeometry.toJSON; USES refCount=1 passed to _toJSON — already-readable name",
+   "name": "shapes",
+   "selector": "shapes@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @613181 param shapes of _toJSON helper; USES refCount=4 Array.isArray + uuid push — already-readable param name",
+   "name": "shapes",
+   "selector": "shapes@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @613576 param shapes of _toJSON (extrude variant); USES refCount=2 uuid serialization — already-readable param name",
+   "name": "shapes",
+   "selector": "shapes@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @613937 var shapes=this.parameters.shapes in ExtrudeGeometry.toJSON; USES refCount=1 passed to _toJSON$1 — already-readable name",
+   "name": "shapes",
+   "selector": "shapes@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @614097 param shapes of ExtrudeGeometry ctor; USES refCount=4 stored to parameters + fromBufferGeometry — already-readable param name",
+   "name": "shapes",
+   "selector": "shapes@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @624354 ShapeBufferGeometry ctor param; USES x5 stored into parameters.shapes / passed to fromBufferGeometry — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @626155 toJSON local var shapes=this.parameters.shapes; USES x1 passed to _toJSON$2(shapes,data) — idiomatic readable name",
+   "name": "shapes",
+   "selector": "shapes@u0020#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @626278 param in ShapeBufferGeometry.toJSON/_toJSON$2 region; USES x4 uuid-serialization loop — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @626570 _toJSON$2(shapes,data) param; USES x2 Array.isArray(shapes) + shapes[i]/shapes.uuid reads — idiomatic readable name",
+   "name": "shapes",
+   "selector": "shapes@u0020#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @627105 var in ShapeGeometry region (parameters.shapes plumbing); USES x1 toJSON serialization — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#11"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @627219 param in ShapeGeometry.toJSON/_toJSON$3 region; USES x4 shape-uuid loop — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#12"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @631721 var in TextBufferGeometry ctor (font.generateShapes result feeding ExtrudeGeometry); USES x1 — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#13"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @755147 ObjectLoader.parse var shapes=this.parseShapes(json.shapes); USES x1 passed to parseGeometries — idiomatic readable name",
+   "name": "shapes",
+   "selector": "shapes@u0020#14"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @755852 parseShapes var shapes={} uuid-keyed dict filled via Shape().fromJSON; USES x2 — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#15"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @756383 parseGeometries(json,shapes) param; USES x2 shapes[uuid] lookups for Shape/Extrude geometry cases — idiomatic readable name",
+   "name": "shapes",
+   "selector": "shapes@u0020#16"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @773915 toShapesNoHoles var shapes=[] accumulator of Shape per subpath; USES x2 push+return — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#17"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @775069 Path.toShapes var shapes=[] with tmpShape pushes incl single-subpath fast path; USES x4 — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#18"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @777006 Font.generateShapes var shapes=[] aggregating paths[p].toShapes(); USES x2 — token already readable",
+   "name": "shapes",
+   "selector": "shapes@u0020#19"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @672146 KeyframeTrack shift(time) method name (times-array offset, three.js API); refCount=0 — idiomatic public method name",
+   "name": "shift",
+   "selector": "shift@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @776107 var sho=newShapeHoles[_sIdx]; USES x2 iterated (sho.length, sho[hIdx] as ho hole records reassigned via isPointInsidePolygon) — cryptic token, clear per-shape hole-list role",
+   "name": "shapeHoles",
+   "selector": "sho@u0020#0"
+  }
+ ]
+}

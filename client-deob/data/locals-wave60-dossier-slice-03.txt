@@ -1,0 +1,34 @@
+# DOSSIER slice-03 (wave 60, 3 bindings, 3 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/3] a3n@u2218#0 | kind=var depth=5 refCount=19 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @73 (verified):
+function QR(a3l){var axD=ai1;for(var a3m=0x0;a3m<HC['length'];a3m++){var a3n=HC['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n["IUTkaCQgos"]<a3n["delay"])continue;if(a3n['IUTkaCQgos']>a3n["delay"]+a3n['time']){a3n['obj']['position']['x']=0x0,a3n['obj']['position']['y']=0x0,a3n["obj"]["shaking"]=![];a3n['cb']!==undefined&&(a3n['cb'](a3n["obj"]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n["time"];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math["floor"](Math['random']()*0x100);a3n["obj"]['position']['x']=Jy[a3p]*a3o,a3n['obj']["position"]['y']=Jx[a3[...line truncated...]
+USES: refCount=19, 20 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @73 (verified), servedRefCount=19:
+function QR(a3l){var axD=ai1;for(var a3m=0x0;a3m<HC['length'];a3m++){var a3n=HC['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n[axD(0xe31)]<a3n[axD(0xe2d)])continue;if(a3n['IUTkaCQgos']>a3n[axD(0xe2d)]+a3n['time']){a3n['obj']['position']['x']=0x0,a3n['obj']['position']['y']=0x0,a3n[axD(0x9a0)][axD(0x343)]=![];a3n['cb']!==undefined&&(a3n['cb'](a3n[axD(0x9a0)]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[axD(0x35c)];a3o=
+SERVED USES: 20 token-occurrences in unit, showing 3 nearest outside DECL window:
+@486: a0)][axD(0x343)]=![];a3n['cb']!==undefined&&(a3n['cb'](a3n[axD(0x9a0)]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[axD(0x35c)];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math[axD(0x5ce)](Math['random']()*0x100);a3n[axD(0x9a0)]['position']['x']=Jy[a3p]*a3o,a3n['obj'][axD(0x215)]['y']=Jx[a3p]*a3o;}}
+@549: 0x9a0)]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[axD(0x35c)];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math[axD(0x5ce)](Math['random']()*0x100);a3n[axD(0x9a0)]['position']['x']=Jy[a3p]*a3o,a3n['obj'][axD(0x215)]['y']=Jx[a3p]*a3o;}}
+@594: ),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[axD(0x35c)];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math[axD(0x5ce)](Math['random']()*0x100);a3n[axD(0x9a0)]['position']['x']=Jy[a3p]*a3o,a3n['obj'][axD(0x215)]['y']=Jx[a3p]*a3o;}}
+==============================================================================
+[2/3] a3o@u2218#0 | kind=var depth=5 refCount=5 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @401 (verified):
+function QR(a3l){var axD=ai1;for(var a3m=0x0;a3m<HC['length'];a3m++){var a3n=HC['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n["IUTkaCQgos"]<a3n["delay"])continue;if(a3n['IUTkaCQgos']>a3n["delay"]+a3n['time']){a3n['obj']['position']['x']=0x0,a3n['obj']['position']['y']=0x0,a3n["obj"]["shaking"]=![];a3n['cb']!==undefined&&(a3n['cb'](a3n["obj"]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n["time"];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math["floor"](Math['random']()*0x100);a3n["obj"]['position']['x']=Jy[a3p]*a3o,a3n['obj']["position"]['y']=Jx[a3[...line truncated...]
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @416 (verified), servedRefCount=5:
+{var axD=ai1;for(var a3m=0x0;a3m<HC['length'];a3m++){var a3n=HC['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n[axD(0xe31)]<a3n[axD(0xe2d)])continue;if(a3n['IUTkaCQgos']>a3n[axD(0xe2d)]+a3n['time']){a3n['obj']['position']['x']=0x0,a3n['obj']['position']['y']=0x0,a3n[axD(0x9a0)][axD(0x343)]=![];a3n['cb']!==undefined&&(a3n['cb'](a3n[axD(0x9a0)]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[axD(0x35c)];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math[axD(0x5ce)](Math['random']()*0x100);a3n[axD(0x9a0)]['position']['x']=Jy[a3p]*a3o,a3n['obj'][axD(0x215)][...line truncated...]
+SERVED USES: 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/3] a3p@u2218#0 | kind=var depth=5 refCount=2 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @485 (verified):
+function QR(a3l){var axD=ai1;for(var a3m=0x0;a3m<HC['length'];a3m++){var a3n=HC['array'][a3m];a3n['IUTkaCQgos']+=a3l;if(a3n["IUTkaCQgos"]<a3n["delay"])continue;if(a3n['IUTkaCQgos']>a3n["delay"]+a3n['time']){a3n['obj']['position']['x']=0x0,a3n['obj']['position']['y']=0x0,a3n["obj"]["shaking"]=![];a3n['cb']!==undefined&&(a3n['cb'](a3n["obj"]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n["time"];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math["floor"](Math['random']()*0x100);a3n["obj"]['position']['x']=Jy[a3p]*a3o,a3n['obj']["position"]['y']=Jx[a3[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @504 (verified), servedRefCount=2:
+CQgos']+=a3l;if(a3n[axD(0xe31)]<a3n[axD(0xe2d)])continue;if(a3n['IUTkaCQgos']>a3n[axD(0xe2d)]+a3n['time']){a3n['obj']['position']['x']=0x0,a3n['obj']['position']['y']=0x0,a3n[axD(0x9a0)][axD(0x343)]=![];a3n['cb']!==undefined&&(a3n['cb'](a3n[axD(0x9a0)]),a3n['cb']=null);HC['splice'](a3m,0x1),a3m--;continue;}var a3o=(a3n['IUTkaCQgos']-a3n['delay'])/a3n[axD(0x35c)];a3o=0x1-a3o,a3o*=a3n['amount'];var a3p=Math[axD(0x5ce)](Math['random']()*0x100);a3n[axD(0x9a0)]['position']['x']=Jy[a3p]*a3o,a3n['obj'][axD(0x215)]['y']=Jx[a3p]*a3o;}}
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-03: propose EVERY binding above.

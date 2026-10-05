@@ -1,0 +1,232 @@
+{
+ "meta": {
+  "slice": "01b",
+  "wave": 50
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: y param of aa8 draw callback in fillRect both sides; SERVED: y param of aa8 draw callback in fillRect both sides (snippet-only twin).",
+   "name": "drawY",
+   "selector": "ah9@u2151#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: y param of aad draw callback in drawImage both sides; SERVED: y param of aad draw callback in drawImage both sides (snippet-only twin).",
+   "name": "drawY",
+   "selector": "ah9@u2151#25"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner loop index over Kq.skins matching name weapon; SERVED: inner loop index over Kq.skins matching name weapon (snippet-only twin).",
+   "name": "skinIdx",
+   "selector": "ah9@u2151#26"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: index over itemOptions by sku, reused over option children; SERVED: index over itemOptions by sku, reused over option children (snippet-only twin).",
+   "name": "optionIdx",
+   "selector": "ah9@u2151#27"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: first param canvas context, filter and drawImage calls; SERVED: first param canvas context, filter and drawImage calls (snippet-only twin).",
+   "name": "ctx",
+   "selector": "ah9@u2151#29"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop index over aaz bobbing neon images in Mt; SERVED: loop index over aaz bobbing neon images in Mt (snippet-only twin).",
+   "name": "bobIdx",
+   "selector": "ah9@u2151#30"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: let sku from aaH row, passed to purchase calls; SERVED: let sku from aaH row, passed to purchase calls (snippet-only twin).",
+   "name": "sku",
+   "selector": "ah9@u2151#31"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: slide element assigned ahu selected, added to ahk; SERVED: slide element assigned ahu selected, added to ahk (snippet-only twin).",
+   "name": "selectedBar",
+   "selector": "ahA@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loadout list element matched by name wear weapon; SERVED: loadout list element matched by name wear weapon (snippet-only twin).",
+   "name": "entry",
+   "selector": "ahA@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: green channel 0xa3 scaled, reused for red gradient; SERVED: green channel 0xa3 scaled, reused for red gradient (snippet-only twin).",
+   "name": "green",
+   "selector": "ahA@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: scoreboard row datum, columns points kills rendered; SERVED: scoreboard row datum, columns points kills rendered (snippet-only twin).",
+   "name": "row",
+   "selector": "ahA@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: image child added once into selected bar element; SERVED: image child added once into selected bar element (snippet-only twin).",
+   "name": "barImage",
+   "selector": "ahB@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new name weapon wear object pushed to loadout; SERVED: new name weapon wear object pushed to loadout (snippet-only twin).",
+   "name": "newEntry",
+   "selector": "ahB@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blue channel 0xf0 scaled, reused for red gradient; SERVED: blue channel 0xf0 scaled, reused for red gradient (snippet-only twin).",
+   "name": "blue",
+   "selector": "ahB@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: row text opacity 0.8, raised for current header rows; SERVED: row text opacity 0.8, raised for current header rows (snippet-only twin).",
+   "name": "rowOpacity",
+   "selector": "ahB@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: hidden x opacity descriptor for selected bar; SERVED: hidden x opacity descriptor for selected bar (snippet-only twin).",
+   "name": "hiddenState",
+   "selector": "ahC@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: built entry set as L0 then fires select click; SERVED: built entry set as L0 then fires select click (snippet-only twin).",
+   "name": "selectedEntry",
+   "selector": "ahC@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: blue rgba gradient texture for left TDM fade; SERVED: blue rgba gradient texture for left TDM fade (snippet-only twin).",
+   "name": "leftGradient",
+   "selector": "ahC@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: running x cursor across scoreboard columns from aho; SERVED: running x cursor across scoreboard columns from aho (snippet-only twin).",
+   "name": "cursorX",
+   "selector": "ahC@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: shown x opacity descriptor for selected bar; SERVED: shown x opacity descriptor for selected bar (snippet-only twin).",
+   "name": "shownState",
+   "selector": "ahD@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: weapon to slot index stored in Kq; SERVED: weapon to slot index stored in Kq (snippet-only twin).",
+   "name": "weaponSlot",
+   "selector": "ahD@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: left gradient image added to tdmContainer; SERVED: left gradient image added to tdmContainer (snippet-only twin).",
+   "name": "leftGradientImage",
+   "selector": "ahD@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: column loop index including two spacer pseudo-columns; SERVED: column loop index including two spacer pseudo-columns (snippet-only twin).",
+   "name": "colIdx",
+   "selector": "ahD@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: settings category row element with click handlers; SERVED: settings category row element with click handlers (snippet-only twin).",
+   "name": "categoryRow",
+   "selector": "ahE@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: built entry set as L0 refreshing sell panel; SERVED: built entry set as L0 refreshing sell panel (snippet-only twin).",
+   "name": "sellEntry",
+   "selector": "ahE@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: red rgba gradient texture for right TDM fade; SERVED: red rgba gradient texture for right TDM fade (snippet-only twin).",
+   "name": "rightGradient",
+   "selector": "ahE@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: synthetic empty 10-wide column at loop end; SERVED: synthetic empty 10-wide column at loop end (snippet-only twin).",
+   "name": "spacerCol",
+   "selector": "ahE@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: id text descriptor pushed to buttons array; SERVED: id text descriptor pushed to buttons array (snippet-only twin).",
+   "name": "button",
+   "selector": "ahF@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: slot element looked up, passed to display call; SERVED: slot element looked up, passed to display call (snippet-only twin).",
+   "name": "slotContainer",
+   "selector": "ahF@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: right gradient image added to tdmContainer; SERVED: right gradient image added to tdmContainer (snippet-only twin).",
+   "name": "rightGradientImage",
+   "selector": "ahF@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: synthetic empty 70-wide final column; SERVED: synthetic empty 70-wide final column (snippet-only twin).",
+   "name": "endSpacerCol",
+   "selector": "ahF@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clicked row element param in onclick handler; SERVED: clicked row element param in onclick handler (snippet-only twin).",
+   "name": "row",
+   "selector": "ahG@u2151#0"
+  }
+ ]
+}

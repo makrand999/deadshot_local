@@ -92,7 +92,7 @@ public class MainActivity extends Activity {
         public String getAllStoredValuesJson() {
             try {
                 JSONObject obj = new JSONObject();
-                String[] syncKeys = new String[]{"settings", "mobilelayout", "keyb", "onboarded", "dses"};
+                String[] syncKeys = new String[]{"settings", "mobilelayout", "keyb", "onboarded", "dses", "playername"};
                 for (String k : syncKeys) {
                     String v = prefs.getString("game_pref_" + k, null);
                     if (v != null) {
@@ -306,7 +306,7 @@ public class MainActivity extends Activity {
                 "          }\n" +
                 "        }\n" +
                 "      }\n" +
-                "      var syncKeys = ['settings', 'mobilelayout', 'keyb', 'onboarded', 'dses'];\n" +
+                "      var syncKeys = ['settings', 'mobilelayout', 'keyb', 'onboarded', 'dses', 'playername'];\n" +
                 "      for (var i = 0; i < syncKeys.length; i++) {\n" +
                 "        var key = syncKeys[i];\n" +
                 "        var localVal = localStorage.getItem(key);\n" +

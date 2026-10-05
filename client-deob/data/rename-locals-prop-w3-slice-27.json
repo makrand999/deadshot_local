@@ -1,0 +1,222 @@
+{
+ "slice": "slice-27",
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 fromValues: var=new a3m(2), filled [0..1], returned as new vector",
+   "name": "resultVec",
+   "selector": "a3A@u0008#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 add(out,a,b): 3rd param indexed [0..1] as second vector operand",
+   "name": "rhsVec",
+   "selector": "a3A@u0008#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 subtract(out,a,b): 3rd param indexed [0..1] as second vector operand",
+   "name": "rhsVec",
+   "selector": "a3A@u0008#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 multiply(out,a,b): 3rd param indexed [0..1] as second vector operand",
+   "name": "rhsVec",
+   "selector": "a3A@u0008#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 max(out,a,b): 3rd param indexed [0..1] as second vector operand",
+   "name": "rhsVec",
+   "selector": "a3A@u0008#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 scale(out,a,s): 3rd param used as scalar multiplier a3z[i]*a3A",
+   "name": "scaleFactor",
+   "selector": "a3A@u0008#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 scaleAndAdd(out,a,b,s): 3rd param indexed [0..1] as vector operand",
+   "name": "rhsVec",
+   "selector": "a3A@u0008#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 distance: var a3A=a3z[0]-a3y[0], used in sqrt(a3A^2+a3B^2) as dx",
+   "name": "dx",
+   "selector": "a3A@u0008#10"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec2 normalize: var a3A=a3z[0], squared into length as cached x",
+   "name": "xComp",
+   "selector": "a3A@u0008#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "transformMat4(out,a,m): 3rd param indexed [0..13] as transform matrix",
+   "name": "xformMat",
+   "selector": "a3A@u0008#21"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "forEach inner fn: 1st param iterated via length/index as flat vec array",
+   "name": "vecList",
+   "selector": "a3A@u0008#22"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 fromValues(x,y,z): 3rd param stored to out[2] as z component",
+   "name": "zVal",
+   "selector": "a3A@u0008#23"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 set(out,x,y,z): 3rd param stored to out[1] as y component",
+   "name": "yCoord",
+   "selector": "a3A@u0008#24"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 add(out,a,b): 3rd param indexed [0..2] as second vector operand",
+   "name": "rhsVec",
+   "selector": "a3A@u0008#25"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 scaleAndAdd(out,a,b,s): 3rd param indexed [0..2] as vector operand",
+   "name": "rhsVec",
+   "selector": "a3A@u0008#32"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 distance: a3A=a3z[0]-a3y[0], consumed as a3A*a3A inside sqrt; x-component difference",
+   "name": "diffX",
+   "selector": "a3A@u0008#33"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 squaredDistance: a3A=a3z[0]-a3y[0], consumed as a3A*a3A sum; x-component difference",
+   "name": "diffX",
+   "selector": "a3A@u0008#34"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 squaredLength: a3A=a3y[1], consumed as a3A*a3A in x2+y2+z2 sum; cached y component",
+   "name": "compY",
+   "selector": "a3A@u0008#37"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 cross(out,a,b): a3A indexed [0..2] into a3E/a3F/a3G cross terms; second vector operand",
+   "name": "vecB",
+   "selector": "a3A@u0008#39"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 transformMat3: a3A read at [0..8] strided 3-wide against xyz; source 3x3 matrix",
+   "name": "srcMat3",
+   "selector": "a3A@u0008#42"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 transformQuat: a3A[0..3] loaded into a3E..a3H quat-math chain; source quaternion",
+   "name": "srcQuat",
+   "selector": "a3A@u0008#43"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 rotateX: a3A subtracted from a3z then added back around X rotation; rotation origin",
+   "name": "originVec",
+   "selector": "a3A@u0008#44"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 rotateY: a3A subtracted from a3z then added back around Y rotation; rotation origin",
+   "name": "originVec",
+   "selector": "a3A@u0008#45"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec3 rotateZ: a3A subtracted from a3z then added back around Z rotation; rotation origin",
+   "name": "originVec",
+   "selector": "a3A@u0008#46"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "vec4 fromValues: a3A stored to a3C[0x2] of fresh vec4; z component value",
+   "name": "zValue",
+   "selector": "a3A@u0008#48"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "vec4 set: a3A stored to a3y[0x1]; y component value",
+   "name": "yValue",
+   "selector": "a3A@u0008#49"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec4 add: a3A[i] added to a3z[i] elementwise x4; second vector operand",
+   "name": "vecB",
+   "selector": "a3A@u0008#50"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec4 scale: scalar a3A multiplies a3z[0..3] elementwise x4; scale factor",
+   "name": "scaleFactor",
+   "selector": "a3A@u0008#57"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec4 distance: a3A=a3z[0]-a3y[0], consumed as a3A*a3A inside sqrt; x-component difference",
+   "name": "diffX",
+   "selector": "a3A@u0008#58"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "vec4 lerp: a3A[0..3] are blend endpoints in a3C+t*(a3A[i]-a3C); lerp target (vecB taken)",
+   "name": "lerpTarget",
+   "selector": "a3A@u0008#63"
+  }
+ ],
+ "stats": {
+  "rename": 30,
+  "keep": 0,
+  "high": 28,
+  "medium": 2,
+  "low": 0
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "meta": {
+  "wave": 66,
+  "slice": "03"
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: forEach select element; children/selectedIndex/value accessed both lineages. SERVED: identical (snippet-only twin).",
+   "name": "selectEl",
+   "selector": "a3i@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: select children length bounding li-builder loop both lineages. SERVED: identical (snippet-only twin).",
+   "name": "optionCount",
+   "selector": "a3j@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: select innerHTML wrapped into div string both sides. SERVED: identical (snippet-only twin).",
+   "name": "selectInnerHtml",
+   "selector": "a3k@u0412#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount=0 assigned never read",
+   "selector": "a3l@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: parsed replacement div inserted after select both sides. SERVED: identical (snippet-only twin).",
+   "name": "customSelectDiv",
+   "selector": "a3m@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inserted dropdown box; toggles classes/onclick both lineages. SERVED: identical (snippet-only twin).",
+   "name": "customSelectBox",
+   "selector": "a3n@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: flag records selectedIndex==-1 then restores it. SERVED: identical (snippet-only twin).",
+   "name": "wasUnselected",
+   "selector": "a3o@u0412#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "dead binding refCount=0 assigned never read",
+   "selector": "a3p@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: tK(select) value assigned to box minWidth style. SERVED: identical (snippet-only twin).",
+   "name": "selectMinWidth",
+   "selector": "a3q@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: created ul holds li options, toggled both sides. SERVED: identical (snippet-only twin).",
+   "name": "optionsList",
+   "selector": "a3r@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: li built from option value/text appended both sides. SERVED: identical (snippet-only twin).",
+   "name": "optionItem",
+   "selector": "a3t@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: ul children collection looped for onclick assignment. SERVED: identical (snippet-only twin).",
+   "name": "optionItems",
+   "selector": "a3u@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: each active dropdown closed unless current box. SERVED: identical (snippet-only twin).",
+   "name": "otherSelectBox",
+   "selector": "a3w@u0412#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "med",
+   "evidence": "VM9: li onclick event param only undefined-checked. SERVED: identical (snippet-only twin).",
+   "name": "clickEvent",
+   "selector": "a3w@u0412#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: catch param logged via console.log. SERVED: identical (snippet-only twin).",
+   "name": "caughtError",
+   "selector": "a3w@u0412#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: recomputed tK(select) minWidth after option pick. SERVED: identical (snippet-only twin).",
+   "name": "updatedMinWidth",
+   "selector": "a3x@u0412#0"
+  }
+ ]
+}

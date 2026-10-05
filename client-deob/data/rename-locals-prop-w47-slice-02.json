@@ -1,0 +1,333 @@
+{
+ "meta": {
+  "wave": 47,
+  "slice": "02",
+  "mergedFrom": [
+   "02a",
+   "02b",
+   "02c"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: let a4o=false, set true after first worldProjection multiply+copy into OC, later materials take if(a4o) fast-copy path; SERVED shows identical flag logic with shifted offsets.",
+   "name": "worldProjCached",
+   "selector": "a4o@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var a4p=a3R[material] normalized to array then indexed as a4p[a4M].uniforms.worldProjection; SERVED shows the same material-to-array normalization and indexed uniform updates.",
+   "name": "materialArray",
+   "selector": "a4p@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: outer var loop a4r over OY[map] first dimension (Fl[x]-1.. and 0..length), indexing OY[map][a4r][a4s]; SERVED repeats the same outer x-dimension loops.",
+   "name": "mapCellX",
+   "selector": "a4r@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: inner var loop a4s over OY[map][a4r] second dimension (Fl[z]-1.. and 0..length); SERVED repeats the same inner z-dimension loops.",
+   "name": "mapCellZ",
+   "selector": "a4s@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var a4t=0 incremented via visible?a4t++:a4u++ in both the map-cell pass and the OZ pass; SERVED shows the same visible-side increments and resets.",
+   "name": "visibleCount",
+   "selector": "a4t@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var a4u=0 incremented on the hidden side via visible?a4t++:a4u++ in both passes; SERVED shows the same hidden-side increments and resets.",
+   "name": "hiddenCount",
+   "selector": "a4u@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: for(var a4v=0;a4v<OY[map][a4r][a4s].length;a4v++) indexing cell objects for frustumBox/inFrustum updates; SERVED shows the same cell-array index loop.",
+   "name": "cellObjectIdx",
+   "selector": "a4v@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var a4w=Oy[intersectsBox](a4P) then stored to inFrustum/visible and reused in occlusion/Pz guards; SERVED shows the same intersectsBox assignment and guard reuse.",
+   "name": "inFrustumNow",
+   "selector": "a4w@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var a4x=false set true when TB h uniform >0/!=0 around blur-string construction, gating the (!a4x..)&&(render) path; SERVED shows identical h checks and render gating.",
+   "name": "blurActive",
+   "selector": "a4x@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: var a4y=TB[0].uniforms.h.value used once in the a4z scale computation; SERVED shows the same h-value load and single use.",
+   "name": "blurHeight",
+   "selector": "a4y@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: var a4z ends as 2.5 and divides innerWidth/innerHeight for composer size a4A/a4B; SERVED shows the same overwrite chain and composer-size division.",
+   "name": "downsampleFactor",
+   "selector": "a4z@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: for(let a50=0;a50<OZ.length;a50++) re-enabling visible for inFrustum2 entries; SERVED shows the same OZ loop, distinct from sibling loopIdx/innerLoopIdx.",
+   "name": "meshLoopIdx",
+   "selector": "a50@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: catch(a51){} with zero references around an empty OY[map][Qv][Qw] loop; SERVED shows the same empty catch with zero references.",
+   "name": "unusedError",
+   "selector": "a51@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: catch(a52){!L1&&console.log(a52)} around the Tv render attempt; SERVED shows the same logged catch around the composer-sized Tv render.",
+   "name": "composerRenderErr",
+   "selector": "a52@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: Tm traverse-style callback param with oldVisible save and visible/frustumCulled toggles before Fu render(Tm,camera); SERVED shows the same callback body and scene render.",
+   "name": "traverseNode",
+   "selector": "a53@u2855#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 traverse callback stashes oldVisible/visible and frustumCulled on the visited object; SERVED side shows the identical save-and-force-visible sequence on the same param.",
+   "name": "traversedChild",
+   "selector": "a53@u2855#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 for-loop indexes the a3o color-item array to set color/fillStyle per element; SERVED side shows the same loop over a3o with only the length lookup string-encoded.",
+   "name": "colorItemIndex",
+   "selector": "agM@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 assigns createLinearGradient result, adds color stops, and sets it as fillStyle (twice); SERVED side shows the same gradient creation, addColorStop calls, and fillStyle assignment.",
+   "name": "fillGradient",
+   "selector": "agM@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 defaults the param to 0x64 then assigns it to canvas height and fillRect dimensions; SERVED side shows the same default plus width/height assignment on the created canvas.",
+   "name": "canvasHeight",
+   "selector": "agM@u2151#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 sets it to constant 0x96 and adds it to the base size for the a3D button dimensions; SERVED side shows the same constant and the same agL+agM sizing expression.",
+   "name": "sizePadding",
+   "selector": "agM@u2151#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 loops over Object.keys of the parsed mobile layout to copy entries into customMobileButtons; SERVED side shows the same keys loop with only string lookups encoded.",
+   "name": "layoutKeyIndex",
+   "selector": "agM@u2151#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 passes it as the third a3D (UIButton label/width/height) argument; SERVED side shows the same passthrough into the a3D constructor call.",
+   "name": "buttonHeight",
+   "selector": "agM@u2151#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 defaults it to 0x3c and pairs it with agL as container/panel width-by-height dimensions; SERVED side shows the same default and the same makeContainer/QtjDeukbWl sizing.",
+   "name": "panelHeight",
+   "selector": "agM@u2151#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 creates an img element whose onload prerenders it and whose src is a weapon icon URL; SERVED side shows the same img creation, onload prerender, and src assignment.",
+   "name": "weaponIconImage",
+   "selector": "agM@u2151#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 builds a container object, adds the crosshair bar pieces to it, and prerenders it; SERVED side shows the same container creation, add calls, and prerender handoff.",
+   "name": "crosshairPanel",
+   "selector": "agN@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 creates a canvas, sizes and fills it, wraps it in an Nm overlay, and stores it as agK.canvas; SERVED side shows the same canvas creation, sizing, overlay wrap, and canvas storage.",
+   "name": "prerenderCanvas",
+   "selector": "agN@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 constructs an a3D button with icon image, touch/mouse handlers, and pushes it to the mobile-button list; SERVED side shows the same button construction and handler wiring.",
+   "name": "touchButton",
+   "selector": "agN@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 catch binding is used only as the console.error argument for the layout-parse failure; SERVED side shows the same catch-and-log-error shape.",
+   "name": "caughtError",
+   "selector": "agN@u2151#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 passes it as the fourth a3D argument, which a3D forwards as the Mj text-size argument; SERVED side shows the same passthrough into the a3D constructor call.",
+   "name": "textSize",
+   "selector": "agN@u2151#5"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 defaults it to 23.5, scales it, and passes it as the Mj text-size argument; SERVED side shows the same default, scaling, and Mj size use.",
+   "name": "labelSize",
+   "selector": "agN@u2151#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: second createElement('canvas') in the weapon-icon preload loop; receives the pANxEEFMRM prerender plus '#070' tint fill and is stored as a3K[name]. SERVED shows the same canvas creation, prerender call, and tinted fill with only string lookups encoded.",
+   "name": "weaponIconCanvas",
+   "selector": "agN@u2151#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var agO=0x32 paired with agP=0x19 as the width/height args of the four corner QtjDeukbWl rects in the MN crosshair builder. SERVED shows the same constant pair passed to the same four corner-rect constructions.",
+   "name": "cornerWidth",
+   "selector": "agO@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: let agO wraps makeContainer output via a3m element in a3D, then accumulates the rect, gradient, text, strokes, and handlers across 61 refs. SERVED shows the same element construction and the same 61-ref accumulation with encoded lookups.",
+   "name": "buttonElement",
+   "selector": "agO@u2151#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: let agO=new Nm(agN,0,0,1) in a3E wraps the prerender canvas, with x/y proxied onto it via defineProperty setters. SERVED shows the same Nm wrap of the same canvas and the same position proxying.",
+   "name": "canvasOverlay",
+   "selector": "agO@u2151#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: var agO=0.8 in a3G is assigned as the shown-state size (agQ.size) onto the touch button text element. SERVED shows the same 0.8 constant flowing into the same text shown-state size.",
+   "name": "shownTextSize",
+   "selector": "agO@u2151#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a3I builds let agO=new object holding the a3D button (agO.button=agP) with stick/unstick transition methods around it. SERVED shows the same wrapper object, button field, and stick-method wiring.",
+   "name": "buttonWrapper",
+   "selector": "agO@u2151#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: onload#1 temp a3k image of the icon img, fed once into pANxEEFMRM targeting the first canvas. SERVED shows the same temp image construction and the same single prerender use.",
+   "name": "iconSprite",
+   "selector": "agO@u2151#6"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: onload#2 temp a3k image of the second icon img, fed into pANxEEFMRM targeting the green-tinted ('#070') second canvas. SERVED shows the same temp image and the same tinted-canvas prerender path.",
+   "name": "tintedIconSprite",
+   "selector": "agO@u2151#7"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: yhikrzIhlK tick-callback param whose width is set to span the two world x positions times 1.1; the callback target is the dark a3Z overlay rect. SERVED shows the same width-span computation on the same callback param.",
+   "name": "overlayRect",
+   "selector": "agO@u2151#8"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: MQ(agO,agP) computes bar width a44*agO/agP and label agO+' | '+agP, called as MQ(0x64,0x64) beside the 'healthleft' label, so agO is current health. SERVED shows the same ratio math, label format, and call args.",
+   "name": "currentHealth",
+   "selector": "agO@u2151#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "VM9: yhikrzIhlK tick-callback param with zero references; the body only repositions a4g. SERVED shows the same unused param, so no role is evidenced on either side.",
+   "selector": "agO@u2151#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "VM9: yhikrzIhlK tick-callback param with zero references; the body only repositions a4i. SERVED shows the same unused param, so no role is evidenced on either side.",
+   "selector": "agO@u2151#11"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: for-loop index over the N6 screen list, fading each visible entry when opening Change Class. SERVED shows the same N6 loop with the same fade-out body.",
+   "name": "screenIndex",
+   "selector": "agO@u2151#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: let agO=Hs[Hx[a3M]] weapon record in the class-select loop; its ui.name labels the button and ui.offset shifts the gun sprite. SERVED shows the same table lookup and the same ui.name/ui.offset uses.",
+   "name": "weaponEntry",
+   "selector": "agO@u2151#14"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var agP=0x19 paired with agO=0x32 as the width/height args of the four corner QtjDeukbWl rects in the MN crosshair builder. SERVED shows the same constant pair passed to the same four corner-rect constructions.",
+   "name": "cornerHeight",
+   "selector": "agP@u2151#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: a3D roundRectangle slightly larger than the button with white stroke, stored as button.eNhvzCNMO and wrapped in an element with shown/hidden states. SERVED shows the same frame rect, storage field, and state wrap.",
+   "name": "hoverFrame",
+   "selector": "agP@u2151#1"
+  }
+ ]
+}

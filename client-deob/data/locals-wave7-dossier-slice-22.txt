@@ -1,0 +1,131 @@
+# DOSSIER slice-22 (wave 7, 22 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/22] Face3@u1742#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @519 (verified):
+function GeometryFromBufferGeometry(RNQDluasaN){'use strict';var scope=new usvzFuAsEB.Geometry();var index=RNQDluasaN.index!==null?RNQDluasaN.index:undefined;var attributes=RNQDluasaN.attributes;if(attributes.position===undefined){console.error('usvzFuAsEB.Geometry.fromBufferGeometry(): Position attribute required for conversion.');return this;}var position=attributes.position;var normal=attributes.normal;var color=attributes.color;var uv=attributes.uv;var uv2=attributes.uv2;var gURkzCzeY=usvzFuAsEB.gURkzCzeY;var Face3=usvzFuAsEB.Face3;var Color=usvzFuAsEB.Color;var vFgdYWoMXeQ=usvzFuAsEB.vFgd[...line truncated...]
+USES: refCount=2, 4 token-occurrences in unit, showing 2 nearest outside DECL window:
+@1188: pe.colors[a],scope.colors[b],scope.colors[c]];const vertexNormals=normal===undefined?[]:[new gURkzCzeY().fromBufferAttribute(normal,a),new gURkzCzeY().fromBufferAttribute(normal,b),new gURkzCzeY().fromBufferAttribute(normal,c)];vec3s+=3;var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([new vFgdYWoMXeQ().fromBufferAttribute(uv,a),new vFgdYWoMXeQ().fromBufferAttribute(uv,b),new vFgdYWoMXeQ().fromBufferAttribute
+@2103: s=color===undefined?[]:[scope.colors[a],scope.colors[b],scope.colors[c]];const vertexNormals=normal===undefined?[]:[getVec3().fromBufferAttribute(normal,a),getVec3().fromBufferAttribute(normal,b),getVec3().fromBufferAttribute(normal,c)];var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([getVec2().fromBufferAttribute(uv,a),getVec2().fromBufferAttribute(uv,b),getVec2().fromBufferAttribute(uv,c)]);}if(uv2!==undef
+==============================================================================
+[2/22] addFace@u1742#0 | kind=function depth=6 refCount=4 | engine/webgl-renderer.js
+DECL @1807 (verified):
+ormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([new vFgdYWoMXeQ().fromBufferAttribute(uv,a),new vFgdYWoMXeQ().fromBufferAttribute(uv,b),new vFgdYWoMXeQ().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([new vFgdYWoMXeQ().fromBufferAttribute(uv2,a),new vFgdYWoMXeQ().fromBufferAttribute(uv2,b),new vFgdYWoMXeQ().fromBufferAttribute(uv2,c)]);}}var vec3Pool=[];var vec2Pool=[];var vec3Index=0;function getVec3(){return vec3Pool[vec3Index++];}var vec2Index=0;function getVec2(){return vec2Pool[vec2Index++];}function [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 4 nearest outside DECL window:
+@3147: .vFgdYWoMXeQ());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());}if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var start=group.start;var count=group.count;for(var j=start,jl=start+count;j<jl;j+=3){if(index!==undefined){addFace(index.getX(j),index.getX(j+1),index.getX(j+2),group.materialIndex);}else{addFace(j,j+1,j+2,group.materialIndex);}}}}else{if(index!==undefined){for(var _i3=0;_i3<index.count;_i3+=3){addFace(index.getX(_i3),index.getX(_i3+1),index.getX(_i3+2));
+@3228: for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var start=group.start;var count=group.count;for(var j=start,jl=start+count;j<jl;j+=3){if(index!==undefined){addFace(index.getX(j),index.getX(j+1),index.getX(j+2),group.materialIndex);}else{addFace(j,j+1,j+2,group.materialIndex);}}}}else{if(index!==undefined){for(var _i3=0;_i3<index.count;_i3+=3){addFace(index.getX(_i3),index.getX(_i3+1),index.getX(_i3+2));}}else{for(var _i4=0;_i4<position.count;_i4+=3){addFace(_i4,_i4+1,_i4+2);}}}scope
+@3336: (var j=start,jl=start+count;j<jl;j+=3){if(index!==undefined){addFace(index.getX(j),index.getX(j+1),index.getX(j+2),group.materialIndex);}else{addFace(j,j+1,j+2,group.materialIndex);}}}}else{if(index!==undefined){for(var _i3=0;_i3<index.count;_i3+=3){addFace(index.getX(_i3),index.getX(_i3+1),index.getX(_i3+2));}}else{for(var _i4=0;_i4<position.count;_i4+=3){addFace(_i4,_i4+1,_i4+2);}}}scope.computeFaceNormals();if(RNQDluasaN.boundingBox!==null){scope.boundingBox=RNQDluasaN.boundingBox.clone();}if
+@3445: (j+2),group.materialIndex);}else{addFace(j,j+1,j+2,group.materialIndex);}}}}else{if(index!==undefined){for(var _i3=0;_i3<index.count;_i3+=3){addFace(index.getX(_i3),index.getX(_i3+1),index.getX(_i3+2));}}else{for(var _i4=0;_i4<position.count;_i4+=3){addFace(_i4,_i4+1,_i4+2);}}}scope.computeFaceNormals();if(RNQDluasaN.boundingBox!==null){scope.boundingBox=RNQDluasaN.boundingBox.clone();}if(RNQDluasaN.boundingSphere!==null){scope.boundingSphere=RNQDluasaN.boundingSphere.clone();}return scope;}
+==============================================================================
+[3/22] addFaceOld@u1742#0 | kind=function depth=6 refCount=0 | engine/webgl-renderer.js
+DECL @862 (verified):
+try.fromBufferGeometry(): Position attribute required for conversion.');return this;}var position=attributes.position;var normal=attributes.normal;var color=attributes.color;var uv=attributes.uv;var uv2=attributes.uv2;var gURkzCzeY=usvzFuAsEB.gURkzCzeY;var Face3=usvzFuAsEB.Face3;var Color=usvzFuAsEB.Color;var vFgdYWoMXeQ=usvzFuAsEB.vFgdYWoMXeQ;if(uv2!==undefined)scope.faceVertexUvs[1]=[];for(var i=0;i<position.count;i++){scope.AUbXpMajF.push(new gURkzCzeY().fromBufferAttribute(position,i));if(color!==undefined){scope.colors.push(new Color().fromBufferAttribute(color,i));}}var vec3s=0;function [...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/22] attributes@u1742#0 | kind=var depth=5 refCount=6 | engine/webgl-renderer.js
+DECL @162 (verified):
+function GeometryFromBufferGeometry(RNQDluasaN){'use strict';var scope=new usvzFuAsEB.Geometry();var index=RNQDluasaN.index!==null?RNQDluasaN.index:undefined;var attributes=RNQDluasaN.attributes;if(attributes.position===undefined){console.error('usvzFuAsEB.Geometry.fromBufferGeometry(): Position attribute required for conversion.');return this;}var position=attributes.position;var normal=attributes.normal;var color=attributes.color;var uv=attributes.uv;var uv2=attributes.uv2;var gURkzCzeY=usvzFuAsEB.gURkzCzeY;var Face3=usvzFuAsEB.Face3;var Color=usvzFuAsEB.Color;var vFgdYWoMXeQ=usvzFuAsEB.vFgd[...line truncated...]
+USES: refCount=6, 8 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/22] faceCount@u1742#0 | kind=var depth=5 refCount=4 | engine/webgl-renderer.js
+DECL @2536 (verified):
+exNormals=normal===undefined?[]:[getVec3().fromBufferAttribute(normal,a),getVec3().fromBufferAttribute(normal,b),getVec3().fromBufferAttribute(normal,c)];var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([getVec2().fromBufferAttribute(uv,a),getVec2().fromBufferAttribute(uv,b),getVec2().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([getVec2().fromBufferAttribute(uv2,a),getVec2().fromBufferAttribute(uv2,b),getVec2().fromBufferAttribute(uv2,c)]);}}var groups=RNQDluasaN.groups;var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/22] getVec2@u1742#0 | kind=function depth=6 refCount=6 | engine/webgl-renderer.js
+DECL @1758 (verified):
+mal,c)];vec3s+=3;var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([new vFgdYWoMXeQ().fromBufferAttribute(uv,a),new vFgdYWoMXeQ().fromBufferAttribute(uv,b),new vFgdYWoMXeQ().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([new vFgdYWoMXeQ().fromBufferAttribute(uv2,a),new vFgdYWoMXeQ().fromBufferAttribute(uv2,b),new vFgdYWoMXeQ().fromBufferAttribute(uv2,c)]);}}var vec3Pool=[];var vec2Pool=[];var vec3Index=0;function getVec3(){return vec3Pool[vec3Index++];}var vec2Index=0;function [...line truncated...]
+USES: refCount=6, 7 token-occurrences in unit, showing 3 nearest outside DECL window:
+@2388: ors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([getVec2().fromBufferAttribute(uv,a),getVec2().fromBufferAttribute(uv,b),getVec2().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([getVec2().fromBufferAttribute(uv2,a),getVec2().fromBufferAttribute(uv2,b),getVec2().fromBufferAttribute(uv2,c)]);}}var groups=RNQDluasaN.groups;var faceCount=0;if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var count
+@2425: ace);if(uv!==undefined){scope.faceVertexUvs[0].push([getVec2().fromBufferAttribute(uv,a),getVec2().fromBufferAttribute(uv,b),getVec2().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([getVec2().fromBufferAttribute(uv2,a),getVec2().fromBufferAttribute(uv2,b),getVec2().fromBufferAttribute(uv2,c)]);}}var groups=RNQDluasaN.groups;var faceCount=0;if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var count=group.count;faceCount+=Math.floor(co
+@2462: texUvs[0].push([getVec2().fromBufferAttribute(uv,a),getVec2().fromBufferAttribute(uv,b),getVec2().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([getVec2().fromBufferAttribute(uv2,a),getVec2().fromBufferAttribute(uv2,b),getVec2().fromBufferAttribute(uv2,c)]);}}var groups=RNQDluasaN.groups;var faceCount=0;if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var count=group.count;faceCount+=Math.floor(count/3);}}else{if(index!==undefined){f
+==============================================================================
+[7/22] getVec3@u1742#0 | kind=function depth=6 refCount=3 | engine/webgl-renderer.js
+DECL @1693 (verified):
+BufferAttribute(normal,b),new gURkzCzeY().fromBufferAttribute(normal,c)];vec3s+=3;var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([new vFgdYWoMXeQ().fromBufferAttribute(uv,a),new vFgdYWoMXeQ().fromBufferAttribute(uv,b),new vFgdYWoMXeQ().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([new vFgdYWoMXeQ().fromBufferAttribute(uv2,a),new vFgdYWoMXeQ().fromBufferAttribute(uv2,b),new vFgdYWoMXeQ().fromBufferAttribute(uv2,c)]);}}var vec3Pool=[];var vec2Pool=[];var vec3Index=0;function [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/22] position@u1742#0 | kind=var depth=5 refCount=4 | engine/webgl-renderer.js
+DECL @351 (verified):
+function GeometryFromBufferGeometry(RNQDluasaN){'use strict';var scope=new usvzFuAsEB.Geometry();var index=RNQDluasaN.index!==null?RNQDluasaN.index:undefined;var attributes=RNQDluasaN.attributes;if(attributes.position===undefined){console.error('usvzFuAsEB.Geometry.fromBufferGeometry(): Position attribute required for conversion.');return this;}var position=attributes.position;var normal=attributes.normal;var color=attributes.color;var uv=attributes.uv;var uv2=attributes.uv2;var gURkzCzeY=usvzFuAsEB.gURkzCzeY;var Face3=usvzFuAsEB.Face3;var Color=usvzFuAsEB.Color;var vFgdYWoMXeQ=usvzFuAsEB.vFgd[...line truncated...]
+USES: refCount=4, 7 token-occurrences in unit, showing 2 nearest outside DECL window:
+@2776: roups;var faceCount=0;if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var count=group.count;faceCount+=Math.floor(count/3);}}else{if(index!==undefined){faceCount+=Math.floor(index.count/3);}else{faceCount+=Math.floor(position.count/3);}}for(var i=0;i<faceCount*3;i++){vec3Pool.push(new usvzFuAsEB.gURkzCzeY());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());}if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group
+@3422: ex.getX(j+1),index.getX(j+2),group.materialIndex);}else{addFace(j,j+1,j+2,group.materialIndex);}}}}else{if(index!==undefined){for(var _i3=0;_i3<index.count;_i3+=3){addFace(index.getX(_i3),index.getX(_i3+1),index.getX(_i3+2));}}else{for(var _i4=0;_i4<position.count;_i4+=3){addFace(_i4,_i4+1,_i4+2);}}}scope.computeFaceNormals();if(RNQDluasaN.boundingBox!==null){scope.boundingBox=RNQDluasaN.boundingBox.clone();}if(RNQDluasaN.boundingSphere!==null){scope.boundingSphere=RNQDluasaN.boundingSphere.clon
+==============================================================================
+[9/22] start@u1742#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @3043 (verified):
+erAttribute(uv2,b),getVec2().fromBufferAttribute(uv2,c)]);}}var groups=RNQDluasaN.groups;var faceCount=0;if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var count=group.count;faceCount+=Math.floor(count/3);}}else{if(index!==undefined){faceCount+=Math.floor(index.count/3);}else{faceCount+=Math.floor(position.count/3);}}for(var i=0;i<faceCount*3;i++){vec3Pool.push(new usvzFuAsEB.gURkzCzeY());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());}if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var [...line truncated...]
+USES: refCount=2, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/22] vec2Index@u1742#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @1737 (verified):
+omBufferAttribute(normal,c)];vec3s+=3;var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([new vFgdYWoMXeQ().fromBufferAttribute(uv,a),new vFgdYWoMXeQ().fromBufferAttribute(uv,b),new vFgdYWoMXeQ().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([new vFgdYWoMXeQ().fromBufferAttribute(uv2,a),new vFgdYWoMXeQ().fromBufferAttribute(uv2,b),new vFgdYWoMXeQ().fromBufferAttribute(uv2,c)]);}}var vec3Pool=[];var vec2Pool=[];var vec3Index=0;function getVec3(){return vec3Pool[vec3Index++];}var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/22] vec2Pool@u1742#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @1656 (verified):
+ribute(normal,a),new gURkzCzeY().fromBufferAttribute(normal,b),new gURkzCzeY().fromBufferAttribute(normal,c)];vec3s+=3;var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([new vFgdYWoMXeQ().fromBufferAttribute(uv,a),new vFgdYWoMXeQ().fromBufferAttribute(uv,b),new vFgdYWoMXeQ().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([new vFgdYWoMXeQ().fromBufferAttribute(uv2,a),new vFgdYWoMXeQ().fromBufferAttribute(uv2,b),new vFgdYWoMXeQ().fromBufferAttribute(uv2,c)]);}}var vec3Pool=[];var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 2 nearest outside DECL window:
+@2869: oups[_i2];var count=group.count;faceCount+=Math.floor(count/3);}}else{if(index!==undefined){faceCount+=Math.floor(index.count/3);}else{faceCount+=Math.floor(position.count/3);}}for(var i=0;i<faceCount*3;i++){vec3Pool.push(new usvzFuAsEB.gURkzCzeY());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());}if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var start=group.start;var count=group.count;for(var j=start,jl=start+count;j<jl;
+@2913: ath.floor(count/3);}}else{if(index!==undefined){faceCount+=Math.floor(index.count/3);}else{faceCount+=Math.floor(position.count/3);}}for(var i=0;i<faceCount*3;i++){vec3Pool.push(new usvzFuAsEB.gURkzCzeY());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());}if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var start=group.start;var count=group.count;for(var j=start,jl=start+count;j<jl;j+=3){if(index!==undefined){addFace(index.ge
+==============================================================================
+[12/22] vec3Index@u1742#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @1672 (verified):
+,new gURkzCzeY().fromBufferAttribute(normal,b),new gURkzCzeY().fromBufferAttribute(normal,c)];vec3s+=3;var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([new vFgdYWoMXeQ().fromBufferAttribute(uv,a),new vFgdYWoMXeQ().fromBufferAttribute(uv,b),new vFgdYWoMXeQ().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([new vFgdYWoMXeQ().fromBufferAttribute(uv2,a),new vFgdYWoMXeQ().fromBufferAttribute(uv2,b),new vFgdYWoMXeQ().fromBufferAttribute(uv2,c)]);}}var vec3Pool=[];var vec2Pool=[];var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/22] vec3Pool@u1742#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @1640 (verified):
+().fromBufferAttribute(normal,a),new gURkzCzeY().fromBufferAttribute(normal,b),new gURkzCzeY().fromBufferAttribute(normal,c)];vec3s+=3;var face=new Face3(a,b,c,vertexNormals,vertexColors,materialIndex);scope.faces.push(face);if(uv!==undefined){scope.faceVertexUvs[0].push([new vFgdYWoMXeQ().fromBufferAttribute(uv,a),new vFgdYWoMXeQ().fromBufferAttribute(uv,b),new vFgdYWoMXeQ().fromBufferAttribute(uv,c)]);}if(uv2!==undefined){scope.faceVertexUvs[1].push([new vFgdYWoMXeQ().fromBufferAttribute(uv2,a),new vFgdYWoMXeQ().fromBufferAttribute(uv2,b),new vFgdYWoMXeQ().fromBufferAttribute(uv2,c)]);}}var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@2827: i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var count=group.count;faceCount+=Math.floor(count/3);}}else{if(index!==undefined){faceCount+=Math.floor(index.count/3);}else{faceCount+=Math.floor(position.count/3);}}for(var i=0;i<faceCount*3;i++){vec3Pool.push(new usvzFuAsEB.gURkzCzeY());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());vec2Pool.push(new usvzFuAsEB.vFgdYWoMXeQ());}if(groups.length>0){for(var _i2=0;_i2<groups.length;_i2++){var group=groups[_i2];var start=group.start;var count=group.
+==============================================================================
+[14/22] a3o@u2551#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @12 (verified):
+function Xb(a3o){var a3p=X2/X1;X1=a3o,X2=a3p*X1,Xc();}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/22] a3p@u2810#0 | kind=param depth=5 refCount=1 | sim/game-loop.js
+DECL @17 (verified):
+function a1l(a3o,a3p,a3q){if(a12==null||a12['completed'])return;a1e(a3p||a3o,a3q||{}),a1j('terminal',a3o);}
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/22] a3K@u2876#0 | kind=var depth=5 refCount=2 | engine/shaders.js
+DECL @962 (verified):
+]*a3A),a3D['setSize'](a3y["width"]*a3A,a3y['height']*a3A);for(var a3G=0x0;a3G<a3z['length'];a3G++){var a3H=a3z[a3G],a3I;if(a3H=='render')a3I=new usvzFuAsEB['RenderPass'](a37["scene"],a37["aKmLbYuMC"]);else{if(a3H=='paint'){a3I=a3b('paint',a3B);if(a3I==null){var a3J=JSON['parse'](JSON['stringify'](rO));a3J["fragmentShader"]="const int radius = "+a3B+';\x0a'+a3J['fragmentShader'],a3J['uniforms']['radius']['value']=0x1,a3I=new usvzFuAsEB['ShaderPass'](a3J),a3a(a3I,'paint',a3B);}}else{if(a3H=="max")sj['uniforms']['radius']['value']=0x1,a3I=new usvzFuAsEB['ShaderPass'](sj);else{if(a3H=='blur'){var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/22] a3l@u0136#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @24 (verified):
+function qc(a3i,a3j,a3k,a3l,a3m,a3n){var anw=ai1;typeof a3i==='string'&&(a3i=document['getElementById'](a3i));if(!a3i||!('naturalWidth'in a3i))return;const a3o=a3m?'offset':'natural',a3p=a3i[a3o+'Width'],a3q=a3i[a3o+'Height'];typeof a3j==='string'&&(a3j=document['getElementById'](a3j));if(!a3j||!('getContext'in a3j))return;!a3n&&(a3j["style"]['width']=a3p+'px',a3j["style"]['height']=a3q+'px');a3j['width']=a3p,a3j['height']=a3q;const a3r=a3j['getContext']('2d');a3r['clearRect'](0x0,0x0,a3p,a3q),a3r["drawImage"](a3i,0x0,0x0,a3i['naturalWidth'],a3i['naturalHeight'],0x0,0x0,a3p,a3q);if(isNaN(a3k)|[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/22] NN@u2177#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @50 (verified):
+var NM=function(a3l){requestAnimationFrame(a3l);},NN=0x3**0x4;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/22] a3l@u2177#0 | kind=param depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @16 (verified):
+var NM=function(a3l){requestAnimationFrame(a3l);},NN=0x3**0x4;
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/22] KF@u2066#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @64 (verified):
+var Kv=![],Kw=![],Kx=0.3,Ky=0.3,Kz=0.3,KA=![],KB=[],KC=[],KD,KE,KF=![],KG=![],KH=[],KI={},KJ={},KK={},KL=[],KM=0x0,KN=0x0,KO=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/22] ZS@u2699#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @13 (verified):
+var ZP,ZQ,ZR,ZS;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/22] a3x@u2850#0 | kind=catch-param depth=7 refCount=0 | combat/scope-crosshair.js
+DECL @161 (verified):
+function a2M(){try{if(typeof performance!='undefined'&&performance!=null&&performance['memory']!=undefined)return performance['memory']['usedJSHeapSize'];}catch(a3x){}return null;}
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-22: propose EVERY binding above.

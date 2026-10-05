@@ -1,0 +1,2046 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 15,
+  "date": "2026-09-28",
+  "merged": 33,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 147,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @276 UMD factory(exports) param; USES 468x exports.<Name>=<Name> re-export tail — idiomatic module export object, already readable.",
+   "name": "exports",
+   "selector": "exports@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @69929 Ray.distanceSqToSegment var alongside s0/s1/det/segExtent; USES 5x in-window (extDet=segExtent*det threshold) — canonical three.js math temp, no clearer rename.",
+   "name": "extDet",
+   "selector": "extDet@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @328782 WebGLBindingStates: extension=capabilities.isWebGL2?null:extensions.get('OES_vertex_array_object'); USES create/bind/deleteVertexArrayOES — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @338578 WebGLBufferRenderer.renderInstances: extension=gl or extensions.get('ANGLE_instanced_arrays'); USES extension[methodName](...) — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @339253 WebGLCapabilities.getMaxAnisotropy: extension=extensions.get('EXT_texture_filter_anisotropic'); USES extension.MAX_TEXTURE_MAX_ANISOTROPY_EXT — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @345447 WebGLExtensions.has(name): var extension filled per-case via gl.getExtension(...); USES extensions[name]=extension — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#3",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @349843 WebGLIndexedBufferRenderer.renderInstances: extension=gl or extensions.get('ANGLE_instanced_arrays'); USES extension[methodName](...) — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#4",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @425002 WebGLState: extension=extensions.get('EXT_blend_minmax'); USES extension.MIN_EXT/MAX_EXT — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#5",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @441451 WebGLTextures: extension=extensions.get('EXT_texture_filter_anisotropic'); USES extension.TEXTURE_MAX_ANISOTROPY_EXT — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#6",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @459493 WebGLUtils.convert(p): var extension reused per-format via extensions.get(...); 29 USES returning extension.CONSTANT — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#7",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @493111 forceContextLoss: extension=extensions.get('WEBGL_lose_context'); USES extension.loseContext() — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#8",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @493237 forceContextRestore: extension=extensions.get('WEBGL_lose_context'); USES extension.restoreContext() — already-readable well-known term.",
+   "name": "extension",
+   "selector": "extension@u0020#9",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @183268 ShaderMaterial.toJSON: var extensions={} cloned from this.extensions; USES data.extensions copy — already-readable well-known term.",
+   "name": "extensions",
+   "selector": "extensions@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @328695 WebGLBindingStates(gl,extensions,...) param; USES extensions.get('OES_vertex_array_object'/'ANGLE_instanced_arrays') — already-readable well-known term.",
+   "name": "extensions",
+   "selector": "extensions@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @338304 WebGLBufferRenderer(gl,extensions,...) param; USES extensions.get('ANGLE_instanced_arrays') — already-readable well-known term.",
+   "name": "extensions",
+   "selector": "extensions@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @339130 function WebGLCapabilities(gl,extensions,parameters); USES refCount=2 extensions.get('EXT_texture_filter_anisotropic'/'OES_texture_float'); canonical three.js module param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#3",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @345334 var extensions={} cache inside WebGLExtensions(gl); USES refCount=4 extensions[name] reads/writes, returned by get(); the extension-cache object itself — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#4",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @349441 function WebGLIndexedBufferRenderer(gl,extensions,info,capabilities); USES refCount=1 extensions.get('ANGLE_instanced_arrays'); canonical three.js module param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#5",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @384400 function WebGLPrograms(renderer,cubemaps,extensions,capabilities,...); USES refCount=3 extensions.has('EXT_frag_depth'/'WEBGL_draw_buffers'/'EXT_shader_texture_lod'); canonical three.js module param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#6",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @398917 function WebGLLights(extensions,capabilities); USES refCount=2 extensions.has('OES_texture_float_linear'/'OES_texture_half_float_linear'); canonical three.js module param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#7",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @406784 function WebGLRenderState(extensions,capabilities); USES refCount=1 forwarded to new WebGLLights(extensions,capabilities); canonical pass-through param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#8",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @407446 function WebGLRenderStates(extensions,capabilities); USES refCount=2 forwarded to new WebGLRenderState x2; canonical pass-through param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#9",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @419641 function WebGLState(gl,extensions,capabilities); USES refCount=1 extensions.get('EXT_blend_minmax'); canonical three.js module param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#10",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @432525 function WebGLTextures(_gl,extensions,state,...); USES refCount=4 extensions.get('EXT_color_buffer_float'/anisotropic/float-linear); canonical three.js module param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#11",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @459409 function WebGLUtils(gl,extensions,capabilities); USES refCount=8 extensions.get(compressed-texture/depth-texture lookups); canonical three.js module param name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#12",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @490575 var extensions in WebGLRenderer ctor; USES refCount=26 extensions.get warmups + passed to WebGLUtils/State/Textures/BindingStates; canonical renderer field name — KEEP.",
+   "name": "extensions",
+   "selector": "extensions@u0020#13",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @64116 function satForAxes(axes,v0,v1,v2,extents) Box3 SAT helper; USES refCount=3; already-readable box-extents geometry param — KEEP.",
+   "name": "extents",
+   "selector": "extents@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @904321 Shape.prototype extractAllPoints(divisions) method name; USES refCount=0 deprecated API + warn; canonical three.js API name — KEEP.",
+   "name": "extractAllPoints",
+   "selector": "extractAllPoints@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @17794 Matrix3 _proto.extractBasis(xAxis,yAxis,zAxis) method name; USES refCount=0; canonical three.js Matrix API name — KEEP.",
+   "name": "extractBasis",
+   "selector": "extractBasis@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @75364 Matrix4 _proto.extractBasis(xAxis,yAxis,zAxis) method name; USES refCount=0; canonical three.js Matrix API name — KEEP.",
+   "name": "extractBasis",
+   "selector": "extractBasis@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @559452 fromBufferGeometry(RNQDluasaN){var scope=this; USES x8 scope.vertices/colors/faces/faceVertexUvs in nested addFace closure — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#5",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @580328 CylinderBufferGeometry var scope=_assertThisInitialized(_this); USES x2 scope.addGroup — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#6",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @603227 ExtrudeBufferGeometry var scope=_assertThisInitialized(_this); USES x4 scope.addGroup / uvgen.generateTopUV(scope,...) — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#7",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @684849 LoadingManager var scope=this; USES x8 scope.onStart/onProgress/onLoad/onError in itemStart/itemEnd/itemError closures — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#8",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @686417 Loader.loadAsync var scope=this; USES x1 scope.load in Promise executor — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#9",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @687319 FileLoader.load var scope=this; USES x13 scope.manager.itemStart/itemEnd/itemError in async callbacks — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#10",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @690946 AnimationLoader.load var scope=this; USES x6 scope.manager/path/requestHeader/withCredentials/parse — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#11",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @691702 CompressedTextureLoader.load var scope=this; USES x3 scope.withCredentials/parse in loadTexture closures — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#12",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @693470 ImageLoader.load var scope=this; USES x6 scope.manager.itemStart/itemEnd/itemError in onImageLoad/onImageError — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#13",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @695240 DataTextureLoader.load var scope=this; USES x2 loader config + scope.parse callback — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#14",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @740034 MaterialLoader.load var scope=this; USES x6 FileLoader config + scope.parse/itemError — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#15",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @750452 BufferGeometryLoader.load var scope=this; USES x6 FileLoader config + scope.parse/itemError — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#16",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @754324 ObjectLoader.load var scope=this; USES x1 scope.parse(json,onLoad) in loader callback — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#17",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @761146 ObjectLoader.parseImages var scope=this; USES x5 async image-load closures — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#18",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @772471 ImageBitmapLoader.load var scope=this; USES x7 scope.options/manager in fetch promise chain — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#19",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @778947 FontLoader.load var scope=this; USES x2 scope.withCredentials/parse — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#20",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @779909 AudioLoader.load var scope=this; USES x5 loader config + scope.manager.itemError — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#21",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @810556 AnimationObjectGroup var scope=this; USES x3 scope._objects/_bindings/nCachedObjects_ in stats getters — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#22",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @826883 _initMemoryManager var scope=this; USES x6 scope._actions/_bindings/_controlInterpolants in stats getters — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#23",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @932073 Audio.load deprecation shim var scope=this; USES x1 closure over loader — idiomatic this-alias, already readable.",
+   "name": "scope",
+   "selector": "scope@u0020#24",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @803190 PropertyBinding.findNode var searchNodeSubtree=function...; USES x2 recursive children search — descriptive engine-domain name, already readable.",
+   "name": "searchNodeSubtree",
+   "selector": "searchNodeSubtree@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @803217 named function expression searchNodeSubtree; refCount=0 self-name only — descriptive engine-domain name, already readable.",
+   "name": "searchNodeSubtree",
+   "selector": "searchNodeSubtree@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @598331 earcut function sectorContainsSector(m,p); USES x1 triangulate sector test — descriptive algorithm name, already readable.",
+   "name": "sectorContainsSector",
+   "selector": "sectorContainsSector@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @9079 MathUtils seededRandom:function...; refCount=0 canonical API name alongside randInt/randFloat — well-known engine term, already readable.",
+   "name": "seededRandom",
+   "selector": "seededRandom@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @69728 Ray.distanceSqToSegment var segExtent (half-length of v0-v1); USES x15 clamped s1/extDet math — standard math shorthand, role clear, already readable.",
+   "name": "segExtent",
+   "selector": "segExtent@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @578408 CircleBufferGeometry var segment=thetaStart+s/segments*thetaLength; USES x2 Math.cos/sin(segment) — canonical geometry-loop name, already readable.",
+   "name": "segment",
+   "selector": "segment@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @622784 RingBufferGeometry var segment=thetaStart+i/thetaSegments*thetaLength; USES x2 Math.cos/sin(segment) — canonical geometry-loop name, already readable.",
+   "name": "segment",
+   "selector": "segment@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @699079 Curve.getUtoTmapping var segmentFraction; USES x1 arc-length interpolation weight — descriptive name, already readable.",
+   "name": "segmentFraction",
+   "selector": "segmentFraction@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @178870 BoxBufferGeometry.buildPlane var segmentHeight=height/gridY; USES x1 grid vertex loop — descriptive name, already readable.",
+   "name": "segmentHeight",
+   "selector": "segmentHeight@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @699036 Curve.getUtoTmapping var segmentLength=lengthAfter-lengthBefore; USES x1 fraction denom — descriptive name, already readable.",
+   "name": "segmentLength",
+   "selector": "segmentLength@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @621861 function RingBufferGeometry(innerRadius,...); USES @623592 return RingBufferGeometry + @624061 new RingBufferGeometry + exports — canonical three.js geometry class",
+   "name": "RingBufferGeometry",
+   "selector": "RingBufferGeometry@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @623630 var RingGeometry=function(_Geometry); USES @644352 Geometries registry + @949269 exports.RingGeometry — canonical three.js geometry class",
+   "name": "RingGeometry",
+   "selector": "RingGeometry@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @623711 inner function RingGeometry(innerRadius,...); USES Geometries registry + exports — canonical three.js geometry class",
+   "name": "RingGeometry",
+   "selector": "RingGeometry@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @868670 var SIZE_MAX=Math.pow(2,LOD_MAX); USES @873492/@874492/@876951 _setViewport cubeUV/PMREM sizing — idiomatic SCREAMING constant",
+   "name": "SIZE_MAX",
+   "selector": "SIZE_MAX@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @645659 function SKCzNEjzurZ(parameters){Material.call; defines STANDARD}; USES isMeshStandardMaterial=true + MeshPhysicalMaterial inherits/calls it + roughness/metalness copy — definitive three.js MeshStandardMaterial (hub threejs-materials.md; precedent KibzRdopc→MeshBasicMaterial w7)",
+   "name": "MeshStandardMaterial",
+   "selector": "SKCzNEjzurZ@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "SKCzNEjzurZ",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 10,
+    "snippet": ";oEdpQEULkn.prototype.constructor=oEdpQEULkn;oEdpQEULkn.prototype.isRawShaderMaterial=true;function SKCzNEjzurZ(parameters){Material.call(this);this.defines={'S"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @5038 var SRGB8_ALPHA8_ASTC_10x10_Format=37851; USES @462701 WEBGL_compressed_texture_astc convert + @949303 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_10x10_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_10x10_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4918 var SRGB8_ALPHA8_ASTC_10x5_Format=37848; USES @462596 astc convert + @949373 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_10x5_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_10x5_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4958 var SRGB8_ALPHA8_ASTC_10x6_Format=37849; USES @462631 astc convert + @949441 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_10x6_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_10x6_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4998 var SRGB8_ALPHA8_ASTC_10x8_Format=37850; USES @462666 astc convert + @949509 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_10x8_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_10x8_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @5079 var SRGB8_ALPHA8_ASTC_12x10_Format=37852; USES @462737 astc convert + @949577 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_12x10_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_12x10_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @5120 var SRGB8_ALPHA8_ASTC_12x12_Format=37853; USES @462773 astc convert + @949647 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_12x12_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_12x12_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4606 var SRGB8_ALPHA8_ASTC_4x4_Format=37840; USES @462324 astc convert + @949717 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_4x4_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_4x4_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4645 var SRGB8_ALPHA8_ASTC_5x4_Format=37841; USES @462358 astc convert + @949783 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_5x4_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_5x4_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4684 var SRGB8_ALPHA8_ASTC_5x5_Format=37842; USES @462392 astc convert + @949849 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_5x5_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_5x5_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4723 var SRGB8_ALPHA8_ASTC_6x5_Format=37843; USES @462426 astc convert + @949915 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_6x5_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_6x5_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4762 var SRGB8_ALPHA8_ASTC_6x6_Format=37844; USES @462460 astc convert + @949981 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_6x6_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_6x6_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4801 var SRGB8_ALPHA8_ASTC_8x5_Format=37845; USES @462494 astc convert + @950047 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_8x5_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_8x5_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4840 var SRGB8_ALPHA8_ASTC_8x6_Format=37846; USES @462528 astc convert + @950113 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_8x6_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_8x6_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @4879 var SRGB8_ALPHA8_ASTC_8x8_Format=37847; USES @462562 astc convert + @950179 exports — SCREAMING GL format constant",
+   "name": "SRGB8_ALPHA8_ASTC_8x8_Format",
+   "selector": "SRGB8_ALPHA8_ASTC_8x8_Format@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @117799 function SRGBToLinear(c); USES @121850/@121879/@121908 copySRGBToLinear r/g/b — canonical three.js color util",
+   "name": "SRGBToLinear",
+   "selector": "SRGBToLinear@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @875625 var STANDARD_DEVIATIONS=3 in _halfBlur; single-use blur sigma count — idiomatic SCREAMING constant",
+   "name": "STANDARD_DEVIATIONS",
+   "selector": "STANDARD_DEVIATIONS@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @934686 var SceneUtils={createMultiMaterialObject...}; USES @950277 exports.SceneUtils — canonical three.js util namespace",
+   "name": "SceneUtils",
+   "selector": "SceneUtils@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @313265 var ShaderChunk={alphamap_fragment...}; USES 38 refs incl @320807 ShaderLib meshbasic_vert — canonical three.js chunk registry",
+   "name": "ShaderChunk",
+   "selector": "ShaderChunk@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @320633 var ShaderLib={basic...}; USES @324475 .physical + @326001 .cube + @327259 .background — canonical three.js shader registry",
+   "name": "ShaderLib",
+   "selector": "ShaderLib@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @644975 function ShadowMaterial(parameters); USES @658815 Materials registry + @950397 exports — canonical three.js material class",
+   "name": "ShadowMaterial",
+   "selector": "ShadowMaterial@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @398186 function ShadowUniformsCache(); USES @398988 WebGLLights shadowCache=ShadowUniformsCache() — already-readable factory name",
+   "name": "ShadowUniformsCache",
+   "selector": "ShadowUniformsCache@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @723570 function Shape(points); USES @755932 new Shape().fromJSON + @774011/@775136 toShapes — canonical three.js class",
+   "name": "Shape",
+   "selector": "Shape@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @624227 var ShapeBufferGeometry=function(_BufferGeometry); USES @626040 toJSON + @950455 exports — canonical three.js geometry class",
+   "name": "ShapeBufferGeometry",
+   "selector": "ShapeBufferGeometry@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @624334 inner function ShapeBufferGeometry(shapes,curveSegments); USES toJSON + exports — canonical three.js geometry class",
+   "name": "ShapeBufferGeometry",
+   "selector": "ShapeBufferGeometry@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @626473 var ShapeGeometry=function(_Geometry); USES @627174 toJSON + @904775 new ShapeGeometry + @950503 exports — canonical three.js geometry class",
+   "name": "ShapeGeometry",
+   "selector": "ShapeGeometry@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @2477 var ACESFilmicToneMapping among tone-mapping constants; USES switch case -> 'ACESFilmic' + exports — canonical three.js engine constant name, already readable.",
+   "name": "ACESFilmicToneMapping",
+   "selector": "ACESFilmicToneMapping@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @146242 fromGeometry: var AUbXpMajF=RNQDluasaN.AUbXpMajF; USES x6 indexed by face.a/b/c, length-compared with skinIndices/skinWeights — source geometry's vertex array.",
+   "name": "geometryVertices",
+   "selector": "AUbXpMajF@u0020#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "roups=groups;};_proto.fromGeometry=function fromGeometry(RNQDluasaN){var faces=RNQDluasaN.faces;var AUbXpMajF=RNQDluasaN.AUbXpMajF;var faceVertexUvs=RNQDluasaN."
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @174045 Mesh raycast Geometry branch: var AUbXpMajF=RNQDluasaN.AUbXpMajF; USES x3 fvA/fvB/fvC=AUbXpMajF[face.a/b/c] fed to checkIntersection — mesh vertex array.",
+   "name": "meshVertices",
+   "selector": "AUbXpMajF@u0020#1",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 3,
+    "snippet": "sh(BhSKyEIxpfR);}}}}}else if(RNQDluasaN.isGeometry){var isMultiMaterial=Array.isArray(material);var AUbXpMajF=RNQDluasaN.AUbXpMajF;var faces=RNQDluasaN.faces;va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @177979 BoxBufferGeometry: var AUbXpMajF=[]; USES x2 pushed with vector.x/y/z then Float32BufferAttribute(AUbXpMajF,3) for 'position' — flat box vertex positions.",
+   "name": "boxVertices",
+   "selector": "AUbXpMajF@u0020#2",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "eightSegments=Math.floor(heightSegments);depthSegments=Math.floor(depthSegments);var indices=[];var AUbXpMajF=[];var normals=[];var uvs=[];var numberOfVertices="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @200736 PlaneBufferGeometry: var AUbXpMajF=[]; pushed with (x,-y,0) alongside normals/uvs — flat plane vertex positions.",
+   "name": "planeVertices",
+   "selector": "AUbXpMajF@u0020#3",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "var gridY1=gridY+1;var segment_width=width/gridX;var segment_height=height/gridY;var indices=[];var AUbXpMajF=[];var normals=[];var uvs=[];for(var iy=0;iy<gridY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @545482 Line.computeLineDistances Geometry branch: var AUbXpMajF=RNQDluasaN.AUbXpMajF; USES x3 chained .distanceTo for cumulative line distances — line vertex array.",
+   "name": "lineVertices",
+   "selector": "AUbXpMajF@u0020#4",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 4,
+    "refCount": 3,
+    "snippet": "s(): Computation only possible with non-indexed kwrjVVjSgIH.');}}else if(RNQDluasaN.isGeometry){var AUbXpMajF=RNQDluasaN.AUbXpMajF;var _lineDistances=RNQDluasaN"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @547886 Line raycast Geometry branch: var AUbXpMajF=RNQDluasaN.AUbXpMajF; USES x3 distanceSqToSegment(AUbXpMajF[_i3],AUbXpMajF[_i3+1]) per segment — raycast line vertex array.",
+   "name": "raycastVertices",
+   "selector": "AUbXpMajF@u0020#5",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "matrixWorld),index:_i2,face:null,faceIndex:null,object:this});}}}else if(RNQDluasaN.isGeometry){var AUbXpMajF=RNQDluasaN.AUbXpMajF;var nbVertices=AUbXpMajF.leng"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @550166 LineSegments.computeLineDistances Geometry branch: var AUbXpMajF=RNQDluasaN.AUbXpMajF; USES x3 pairs stepped by 2 via _start/_end copy — segment vertex array.",
+   "name": "segmentVertices",
+   "selector": "AUbXpMajF@u0020#6",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 6,
+    "refCount": 3,
+    "snippet": "s(): Computation only possible with non-indexed kwrjVVjSgIH.');}}else if(RNQDluasaN.isGeometry){var AUbXpMajF=RNQDluasaN.AUbXpMajF;var _lineDistances=RNQDluasaN"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @553180 Points raycast Geometry branch: var AUbXpMajF=RNQDluasaN.AUbXpMajF; USES x2 testPoint(AUbXpMajF[_i2]) per vertex — points vertex array.",
+   "name": "pointVertices",
+   "selector": "AUbXpMajF@u0020#7",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 7,
+    "refCount": 2,
+    "snippet": "ute,_i);testPoint(_position$1,_i,localThresholdSq,matrixWorld,raycaster,loPNdwjKE,this);}}}else{var AUbXpMajF=RNQDluasaN.AUbXpMajF;for(var _i2=0,_l=AUbXpMajF.le"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @562552 computeVertexNormals: var AUbXpMajF=new Array(this.AUbXpMajF.length) of Vector3; USES x14 .add(cb/normal) then normalize, copied into vertexNormals — per-vertex normal accumulator.",
+   "name": "vertexNormalSums",
+   "selector": "AUbXpMajF@u0020#8",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 8,
+    "refCount": 14,
+    "snippet": "ormals:function computeVertexNormals(areaWeighted){if(areaWeighted===void 0){areaWeighted=true;}var AUbXpMajF=new Array(this.AUbXpMajF.length);for(var v=0,vl=th"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @570954 toJSON: var AUbXpMajF=[] pushed with vertex.x/y/z flats; USES x2 data.data.AUbXpMajF — serialized flat vertex array.",
+   "name": "jsonVertices",
+   "selector": "AUbXpMajF@u0020#9",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 9,
+    "refCount": 2,
+    "snippet": "r(var key in parameters){if(parameters[key]!==undefined)data[key]=parameters[key];}return data;}var AUbXpMajF=[];for(var i=0;i<this.AUbXpMajF.length;i++){var ve"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @573924 copy(source): var AUbXpMajF=source.AUbXpMajF; USES x2 this.AUbXpMajF.push(AUbXpMajF[i].clone()) — copied source vertex array.",
+   "name": "sourceVertices",
+   "selector": "AUbXpMajF@u0020#10",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 10,
+    "refCount": 2,
+    "snippet": "s=[];this.lineDistances=[];this.boundingBox=null;this.boundingSphere=null;this.name=source.name;var AUbXpMajF=source.AUbXpMajF;for(var i=0,il=AUbXpMajF.length;i"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @578215 CircleBufferGeometry: var AUbXpMajF=[]; pushed with vertex.x/y/z, read back for uv computation, Float32BufferAttribute(...,3) 'position' — flat circle vertex positions.",
+   "name": "circleVertices",
+   "selector": "AUbXpMajF@u0020#11",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 11,
+    "refCount": 5,
+    "snippet": "nts,thetaStart:thetaStart,thetaLength:thetaLength};segments=Math.max(3,segments);var indices=[];var AUbXpMajF=[];var normals=[];var uvs=[];var vertex=new gURkzC"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @580467 CylinderBufferGeometry: var AUbXpMajF=[]; USES x4 pushed in generateTorso/generateCap, Float32BufferAttribute(...,3) 'position' — flat cylinder vertex positions.",
+   "name": "cylinderVertices",
+   "selector": "AUbXpMajF@u0020#12",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 12,
+    "refCount": 4,
+    "snippet": "ialSegments=Math.floor(radialSegments);heightSegments=Math.floor(heightSegments);var indices=[];var AUbXpMajF=[];var normals=[];var uvs=[];var index=0;var index"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @585247 PolyhedronBufferGeometry(AUbXpMajF,indices,radius,detail) param; USES x4 stride-indexed vertex.x/y/z in getVertexByIndex — input vertex array (canonical three.js PolyhedronGeometry(vertices,...) per geometry reference).",
+   "name": "inputVertices",
+   "selector": "AUbXpMajF@u0020#13",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 13,
+    "refCount": 4,
+    "snippet": "eometry){_inheritsLoose(PolyhedronBufferGeometry,_BufferGeometry);function PolyhedronBufferGeometry(AUbXpMajF,indices,radius,detail){var _this;if(radius===void "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @589142 var AUbXpMajF=[-1,-1,-1,...] literal vertex coords in DodecahedronBufferGeometry; USES 1x passed to _PolyhedronBufferGeom.call(this,AUbXpMajF,indices,...) — canonical PolyhedronGeometry(vertices,...)",
+   "name": "dodecaVertices",
+   "selector": "AUbXpMajF@u0020#14",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 14,
+    "refCount": 1,
+    "snippet": ";if(radius===void 0){radius=1;}if(detail===void 0){detail=0;}var t=(1+Math.sqrt(5))/2;var r=1/t;var AUbXpMajF=[-1,-1,-1,-1,-1,1,-1,1,-1,-1,1,1,1,-1,-1,1,-1,1,1,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @591109 var AUbXpMajF=[] in EdgesGeometry; USES 5x push(v0/v1 x,y,z) + new Float32BufferAttribute(AUbXpMajF,3) position — collected edge-vertex coords",
+   "name": "edgeVertices",
+   "selector": "AUbXpMajF@u0020#15",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 15,
+    "refCount": 5,
+    "snippet": "r.count;var indexArr=[0,0,0];var vertKeys=['a','b','c'];var hashes=new Array(3);var edgeData={};var AUbXpMajF=[];for(var i=0;i<indexCount;i+=3){if(indexAttr){in"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @602223 var AUbXpMajF=[] in ShapeUtils.triangulateShape; USES 3x addContour fill + Earcut.triangulate(AUbXpMajF,holeIndices) — flat x/y contour-coord array for earcut",
+   "name": "triangulateVertices",
+   "selector": "AUbXpMajF@u0020#16",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 16,
+    "refCount": 3,
+    "snippet": "(pts){return ShapeUtils.area(pts)<0;},triangulateShape:function triangulateShape(contour,holes){var AUbXpMajF=[];var holeIndices=[];var faces=[];removeDupEndPts"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @602779 param addContour(AUbXpMajF,contour); USES 2x push(contour[i].x/.y) — flat vertex accumulator target, canonical addContour(vertices,contour)",
+   "name": "contourVertices",
+   "selector": "AUbXpMajF@u0020#17",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 17,
+    "refCount": 2,
+    "snippet": "ints){var l=points.length;if(l>2&&points[l-1].equals(points[0])){points.pop();}}function addContour(AUbXpMajF,contour){for(var i=0;i<contour.length;i++){AUbXpMa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @604839 var AUbXpMajF=shapePoints.shape in ExtrudeBufferGeometry; USES 12x isClockWise/reverse/triangulateShape/concat/scalePt2 indexing — extruded shape vertex (Vector2) list",
+   "name": "extrudeVertices",
+   "selector": "AUbXpMajF@u0020#18",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 18,
+    "refCount": 12,
+    "snippet": ";bevelThickness=0;bevelSize=0;bevelOffset=0;}var shapePoints=shape.extractPoints(curveSegments);var AUbXpMajF=shapePoints.shape;var holes=shapePoints.holes;var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @612155 param generateTopUV(RNQDluasaN,AUbXpMajF,...); USES 6x AUbXpMajF[indexA/B/C*3(+1)] x/y reads — flat vertex array for top-face UVs",
+   "name": "topUvVertices",
+   "selector": "AUbXpMajF@u0020#19",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 19,
+    "refCount": 6,
+    "snippet": "BufferGeometry;}(kwrjVVjSgIH);var WorldUVGenerator={generateTopUV:function generateTopUV(RNQDluasaN,AUbXpMajF,indexA,indexB,indexC){var a_x=AUbXpMajF[indexA*3];"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @612504 param generateSideWallUV(RNQDluasaN,AUbXpMajF,...); USES 12x AUbXpMajF[indexA/B/C/D*3..+2] x/y/z reads — flat vertex array for side-wall UVs",
+   "name": "sideWallVertices",
+   "selector": "AUbXpMajF@u0020#20",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 20,
+    "refCount": 12,
+    "snippet": "MXeQ(b_x,b_y),new vFgdYWoMXeQ(c_x,c_y)];},generateSideWallUV:function generateSideWallUV(RNQDluasaN,AUbXpMajF,indexA,indexB,indexC,indexD){var a_x=AUbXpMajF[ind"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @614660 var AUbXpMajF=[-1,t,0,...] literal vertex coords in IcosahedronBufferGeometry; USES 1x passed to _PolyhedronBufferGeom.call — canonical PolyhedronGeometry(vertices,...)",
+   "name": "icosaVertices",
+   "selector": "AUbXpMajF@u0020#21",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 21,
+    "refCount": 1,
+    "snippet": "{var _this;if(radius===void 0){radius=1;}if(detail===void 0){detail=0;}var t=(1+Math.sqrt(5))/2;var AUbXpMajF=[-1,t,0,1,t,0,-1,-t,0,1,-t,0,0,-1,t,0,1,t,0,-1,-t,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @616090 var AUbXpMajF=[] in LatheBufferGeometry; USES 2x push(vertex x,y,z) + new Float32BufferAttribute(AUbXpMajF,3) position — lathe vertex coords",
+   "name": "latheVertices",
+   "selector": "AUbXpMajF@u0020#22",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 22,
+    "refCount": 2,
+    "snippet": "};segments=Math.floor(segments);phiLength=MathUtils.clamp(phiLength,0,Math.PI*2);var indices=[];var AUbXpMajF=[];var uvs=[];var inverseSegments=1/segments;var v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @618196 var AUbXpMajF=[1,0,0,...] literal vertex coords in OctahedronBufferGeometry; USES 1x passed to _PolyhedronBufferGeom.call — canonical PolyhedronGeometry(vertices,...)",
+   "name": "octaVertices",
+   "selector": "AUbXpMajF@u0020#23",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 23,
+    "refCount": 1,
+    "snippet": "erGeometry(radius,detail){var _this;if(radius===void 0){radius=1;}if(detail===void 0){detail=0;}var AUbXpMajF=[1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1];var indic"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @619131 var AUbXpMajF=[] in ParametricBufferGeometry; USES 2x push(p0 x,y,z) + new Float32BufferAttribute(AUbXpMajF,3) position — parametric surface vertex coords",
+   "name": "parametricVertices",
+   "selector": "AUbXpMajF@u0020#24",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 24,
+    "refCount": 2,
+    "snippet": "arametricBufferGeometry';this.parameters={func:func,slices:slices,stacks:stacks};var indices=[];var AUbXpMajF=[];var normals=[];var uvs=[];var EPS=0.00001;var n"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @621399 param PolyhedronGeometry(AUbXpMajF,indices,radius,detail); USES 2x parameters record + forward to new PolyhedronBufferGeometry(AUbXpMajF,...) — canonical vertices param",
+   "name": "polyhedronVertices",
+   "selector": "AUbXpMajF@u0020#25",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 25,
+    "refCount": 2,
+    "snippet": "ometry=function(_Geometry){_inheritsLoose(PolyhedronGeometry,_Geometry);function PolyhedronGeometry(AUbXpMajF,indices,radius,detail){var _this;_this=_Geometry.c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @622547 var AUbXpMajF=[] in RingBufferGeometry; USES 2x push(vertex x,y,z) + new Float32BufferAttribute(AUbXpMajF,3) position — ring vertex coords",
+   "name": "ringVertices",
+   "selector": "AUbXpMajF@u0020#26",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 26,
+    "refCount": 2,
+    "snippet": "gth};thetaSegments=Math.max(3,thetaSegments);phiSegments=Math.max(1,phiSegments);var indices=[];var AUbXpMajF=[];var normals=[];var uvs=[];var radius=innerRadiu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @624583 var AUbXpMajF=[] in ShapeBufferGeometry; USES 3x indexOffset=length/3 + push(vertex x,y,0) + Float32BufferAttribute position — shape vertex coords",
+   "name": "shapeGeomVertices",
+   "selector": "AUbXpMajF@u0020#27",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 27,
+    "refCount": 3,
+    "snippet": "hapeBufferGeometry';_this.parameters={shapes:shapes,curveSegments:curveSegments};var indices=[];var AUbXpMajF=[];var normals=[];var uvs=[];var groupStart=0;var "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @628420 var AUbXpMajF=[] in SphereBufferGeometry; USES 2x grid-vertex pushes + new Float32BufferAttribute(AUbXpMajF,3) position — sphere vertex coords",
+   "name": "sphereVertices",
+   "selector": "AUbXpMajF@u0020#28",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "AUbXpMajF",
+   "binding": {
+    "unit": "u0020",
+    "index": 28,
+    "refCount": 2,
+    "snippet": "I);var index=0;var grid=[];var vertex=new gURkzCzeY();var normal=new gURkzCzeY();var indices=[];var AUbXpMajF=[];var normals=[];var uvs=[];for(var iy=0;iy<=heig"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @488454 var _framebuffer=null in WebGLRenderer; USES x3 in setFramebuffer/bindFramebuffer(36160) — canonical already-readable GL state field.",
+   "name": "_framebuffer",
+   "selector": "_framebuffer@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @871443 _proto._fromTexture=function; called by fromEquirectangular/fromCubemap — descriptive PMREM method name, keep.",
+   "name": "_fromTexture",
+   "selector": "_fromTexture@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @411329 var _frustum=new Frustum() in WebGLShadowMap; USES _frustum=shadow.getFrustum(), intersectsObject — canonical engine term.",
+   "name": "_frustum",
+   "selector": "_frustum@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @488975 var _frustum=new Frustum() in WebGLRenderer; USES x4 setFromProjectionMatrix/intersectsObject/intersectsSprite — canonical engine term.",
+   "name": "_frustum",
+   "selector": "_frustum@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @504838 projectObject temp; USES x8 _geometry=DgJwEtWhIm.update(object), pushed to renderList — already-readable temp.",
+   "name": "_geometry",
+   "selector": "_geometry@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @530045 module-level var; USES x6 lazy shared Sprite quad (setIndex/setAttribute) — already-readable cache.",
+   "name": "_geometry",
+   "selector": "_geometry@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @557386 var _geometryId=0; USES Geometry id via _geometryId+=2 — self-descriptive module counter, keep.",
+   "name": "_geometryId",
+   "selector": "_geometryId@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @879221 function _getBlurShader; USES x1 this._blurMaterial=_getBlurShader(MAX_SAMPLES) — descriptive PMREM factory, keep.",
+   "name": "_getBlurShader",
+   "selector": "_getBlurShader@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @883819 function _getCommonVertexShader; USES x3 vertexShader:_getCommonVertexShader() in PMREM materials — descriptive factory, keep.",
+   "name": "_getCommonVertexShader",
+   "selector": "_getCommonVertexShader@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @883008 function _getCubemapShader; USES x2 lazy this._cubemapShader init — descriptive PMREM factory, keep.",
+   "name": "_getCubemapShader",
+   "selector": "_getCubemapShader@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @885090 function _getEncodings; USES x3 '+_getEncodings()+' in PMREM fragment shaders — descriptive helper, keep.",
+   "name": "_getEncodings",
+   "selector": "_getEncodings@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @881492 function _getEquirectShader; USES x2 lazy this._equirectShader init — descriptive PMREM factory, keep.",
+   "name": "_getEquirectShader",
+   "selector": "_getEquirectShader@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @803643 PropertyBinding.prototype._getValue_unavailable noop; USES fallback this.getValue assignment when node missing — descriptive sentinel name, keep.",
+   "name": "_getValue_unavailable",
+   "selector": "_getValue_unavailable@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @665612 for(var _giveUpAt=i1-2;;) backward linear-scan bound in Interpolant.evaluate; USES loop-exit check — readable loop-bound temp, keep.",
+   "name": "_giveUpAt",
+   "selector": "_giveUpAt@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @432521 WebGLTextures(_gl,...) param; USES x65 generateMipmap/deleteTexture/deleteFramebuffer — canonical GL context name, keep.",
+   "name": "_gl",
+   "selector": "_gl@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @489302 WebGLRenderer GL context var; USES x72 getContext/initGLContext/passed to subsystems — canonical GL context name, keep.",
+   "name": "_gl",
+   "selector": "_gl@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @451174 var _glInternalFormat=getInternalFormat(...); USES x2 in renderbufferStorageMultisample/renderbufferStorage — self-descriptive, keep.",
+   "name": "_glInternalFormat",
+   "selector": "_glInternalFormat@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @172980 var _group=groups[_i2] in raycast non-indexed branch; USES x5 start/count/materialIndex — already-readable loop temp, keep.",
+   "name": "_group",
+   "selector": "_group@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @173003 var _groupMaterial=material[_group.materialIndex]; USES passed to checkBufferGeometryIntersection — already-readable temp, keep.",
+   "name": "_groupMaterial",
+   "selector": "_groupMaterial@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @605188 for(var _h=0,_hl=holes.length) ExtrudeGeometry reverse-winding hole index; USES x3 holes[_h] — loop temp, keep.",
+   "name": "_h",
+   "selector": "_h@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @607244 for(var _h2=0,_hl2=holes.length) hole-movements hole index (_ahole2=holes[_h2]); USES x3 — loop temp, keep.",
+   "name": "_h2",
+   "selector": "_h2@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @607897 for(var _h3=0,_hl3=holes.length) bottom-bevel hole index (_ahole3); USES x4 — loop temp, keep.",
+   "name": "_h3",
+   "selector": "_h3@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @609273 for(var _h4=0,_hl4=holes.length) top-bevel hole index (_ahole4); USES x4 — loop temp, keep.",
+   "name": "_h4",
+   "selector": "_h4@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @610427 for(var _h5=0,_hl5=holes.length) buildSideFaces hole index, sidewalls(_ahole5); USES x3 — loop temp, keep.",
+   "name": "_h5",
+   "selector": "_h5@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @875342 _proto._halfBlur=function; called x2 from _blur latitudinal/longitudinal passes — descriptive PMREM method, keep.",
+   "name": "_halfBlur",
+   "selector": "_halfBlur@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @488769 var _height=_canvas.height; USES x8 setSize/getSize/setPixelRatio/uniform refresh — canonical renderer field, keep.",
+   "name": "_height",
+   "selector": "_height@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @605193 _hl=holes.length loop limit paired with _h; USES bound check — loop-limit temp, keep.",
+   "name": "_hl",
+   "selector": "_hl@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @607250 _hl2=holes.length loop limit paired with _h2; USES bound check — loop-limit temp, keep.",
+   "name": "_hl2",
+   "selector": "_hl2@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @607903 _hl3=holes.length loop limit paired with _h3; USES bound check — loop-limit temp, keep.",
+   "name": "_hl3",
+   "selector": "_hl3@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @609279 _hl4=holes.length loop limit paired with _h4; USES bound check — loop-limit temp, keep.",
+   "name": "_hl4",
+   "selector": "_hl4@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @868835 var ENCODINGS map LinearEncoding->GL code; 10 USES index ENCODINGS[texture.encoding]/[LinearEncoding] for shader uniforms — SCREAMING lookup constant, already readable.",
+   "name": "ENCODINGS",
+   "selector": "ENCODINGS@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @41808 var EPS=0.000001 in Quaternion.setFromUnitVectors; USES r<EPS antiparallel guard — idiomatic epsilon threshold.",
+   "name": "EPS",
+   "selector": "EPS@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @619174 var EPS=0.00001 in ParametricBufferGeometry; 6 USES as u±EPS/v±EPS finite-difference step for normals — idiomatic epsilon.",
+   "name": "EPS",
+   "selector": "EPS@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @840427 var EPS=0.000001 in Spherical.makeSafe; 2 USES clamp phi to [EPS,PI-EPS] — idiomatic epsilon.",
+   "name": "EPS",
+   "selector": "EPS@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @868703 SCREAMING const array of blur sigmas; USES index EXTRA_LOD_SIGMA[...] for extra-LOD sigma — already readable.",
+   "name": "EXTRA_LOD_SIGMA",
+   "selector": "EXTRA_LOD_SIGMA@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @592879 var Earcut={triangulate...}; USES Earcut.triangulate(vertices,holeIndices) — well-known vendored polygon-triangulation library name.",
+   "name": "Earcut",
+   "selector": "Earcut@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @590342 var EdgesGeometry=...; hub threejs-geometry.md confirms canonical class; USES new EdgesGeometry(geometry)+exports — already readable.",
+   "name": "EdgesGeometry",
+   "selector": "EdgesGeometry@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @590437 inner function EdgesGeometry(geometry,thresholdAngle) ctor; same canonical class binding as #0 — already readable.",
+   "name": "EdgesGeometry",
+   "selector": "EdgesGeometry@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @893514 function EdgesHelper deprecated shim returning EdgesGeometry+LineBasicMaterial; USES exports.EdgesHelper — canonical legacy name.",
+   "name": "EdgesHelper",
+   "selector": "EdgesHelper@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @701591 function EllipseCurve; 13 USES incl ArcCurve inheriting EllipseCurve.prototype + new EllipseCurve in Path.absellipse — canonical Curve subclass.",
+   "name": "EllipseCurve",
+   "selector": "EllipseCurve@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @2241 var EqualDepth=4 in depth-func enum block; USES exports.EqualDepth — canonical GL engine constant.",
+   "name": "EqualDepth",
+   "selector": "EqualDepth@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @6089 var EqualStencilFunc=514 in stencil-func enum block; USES exports.EqualStencilFunc — canonical GL engine constant.",
+   "name": "EqualStencilFunc",
+   "selector": "EqualStencilFunc@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @2607 var EquirectangularReflectionMapping=303; hub lighting/loaders/materials/textures confirm canonical; USES WebGLCubeMaps mapping checks + exports.",
+   "name": "EquirectangularReflectionMapping",
+   "selector": "EquirectangularReflectionMapping@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @2648 var EquirectangularRefractionMapping=304 sibling of Reflection=303; USES WebGLCubeMaps mapping checks + TEXTURE_MAPPING + exports — canonical.",
+   "name": "EquirectangularRefractionMapping",
+   "selector": "EquirectangularRefractionMapping@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @87398 var Euler IIFE class; hub animation/fundamentals confirm canonical; USES Euler.DefaultOrder/RotationOrders + new Euler() in Object3D.",
+   "name": "Euler",
+   "selector": "Euler@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @87425 inner function Euler(x,y,z,order) ctor; same canonical class binding as #0 — already readable.",
+   "name": "Euler",
+   "selector": "Euler@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @6533 function EventDispatcher base; 10 USES as prototype parent (Texture, Material, Object3D, BufferGeometry, AnimationMixer...) — canonical engine term.",
+   "name": "EventDispatcher",
+   "selector": "EventDispatcher@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @602896 var ExtrudeBufferGeometry class; USES ExtrudeGeometry/TextBufferGeometry inherit + Geometries registry + exports — canonical geometry name.",
+   "name": "ExtrudeBufferGeometry",
+   "selector": "ExtrudeBufferGeometry@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @603007 inner function ExtrudeBufferGeometry(shapes,options) ctor; same canonical class binding as #0 — already readable.",
+   "name": "ExtrudeBufferGeometry",
+   "selector": "ExtrudeBufferGeometry@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @613473 var ExtrudeGeometry class; hub threejs-geometry.md confirms canonical; USES Geometries registry + Shape.extrude shim + exports.",
+   "name": "ExtrudeGeometry",
+   "selector": "ExtrudeGeometry@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @613560 inner function ExtrudeGeometry(shapes,options) ctor; same canonical class binding as #0 — already readable.",
+   "name": "ExtrudeGeometry",
+   "selector": "ExtrudeGeometry@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @569694 var FBFOTIucqfz=this.vertices.length-unique.length in Geometry.mergeVertices, returned after dedupe — count of removed duplicate vertices.",
+   "name": "removedVertexCount",
+   "selector": "FBFOTIucqfz@u0020#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "FBFOTIucqfz",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "idx,1);for(var j=0,jl=this.faceVertexUvs.length;j<jl;j++){this.faceVertexUvs[j].splice(idx,1);}}var FBFOTIucqfz=this.AUbXpMajF.length-unique.length;this.AUbXpMa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @718520 var FBFOTIucqfz=curveLengths[i]-d in CurvePath.getPoint; USES u=1-FBFOTIucqfz/segmentLength — leftover arc length within the hit segment.",
+   "name": "remainingLength",
+   "selector": "FBFOTIucqfz@u0020#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "FBFOTIucqfz",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "curveLengths=this.getCurveLengths();var i=0;while(i<curveLengths.length){if(curveLengths[i]>=d){var FBFOTIucqfz=curveLengths[i]-d;var curve=this.curves[i];var s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @784196 var FBFOTIucqfz=0 in Clock.getDelta; 3 USES (newTime-oldTime)/1000 accumulated into elapsedTime and returned — frame delta in seconds.",
+   "name": "deltaSeconds",
+   "selector": "FBFOTIucqfz@u0020#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "FBFOTIucqfz",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 3,
+    "snippet": " getElapsedTime(){this.getDelta();return this.elapsedTime;};_proto.getDelta=function getDelta(){var FBFOTIucqfz=0;if(this.autoStart&&!this.APnSGVXcNd){this.star"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @125205 var Face3 IIFE class; hub threejs-interaction.md confirms canonical; USES new Face3(a,b,c,...) in raycast/fromBufferGeometry + exports.",
+   "name": "Face3",
+   "selector": "Face3@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @125232 inner function Face3(a,b,c,normal,color,materialIndex) ctor; same canonical class binding as #0 — already readable.",
+   "name": "Face3",
+   "selector": "Face3@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @886621 function Face4 removed-shim returning new Face3; USES exports.Face4 — canonical legacy name, keep as-is.",
+   "name": "Face4",
+   "selector": "Face4@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @886862 var FaceColors=1 in NoColors/FaceColors/VertexColors enum; USES exports.FaceColors — canonical engine constant.",
+   "name": "FaceColors",
+   "selector": "FaceColors@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @687025 function FileLoader(manager); 12 USES new FileLoader(manager) across Animation/CompressedTexture/DataTexture/Material/Geometry/Object/Font loaders + exports — canonical.",
+   "name": "FileLoader",
+   "selector": "FileLoader@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @1599 var FlatShading=1 in shading enum; USES material .shading migration checks (flatShading=value===FlatShading) + exports — canonical engine constant.",
+   "name": "FlatShading",
+   "selector": "FlatShading@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+{
+  "slice": "slice-06",
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @769929 var objectAnimations=data.animations in ObjectLoader.parseObject; idiomatic three.js term, real words",
+      "name": "objectAnimations",
+      "selector": "objectAnimations@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @806878 var objectIndex=parsedPath.objectIndex; USES @807582-808045 bone-name resolve + targetObject[objectIndex]; real words",
+      "name": "objectIndex",
+      "selector": "objectIndex@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @351461 var objectInfluences=object.morphTargetInfluences in WebGLMorphtargets.update; three.js domain term",
+      "name": "objectInfluences",
+      "selector": "objectInfluences@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @802549 var objectName=results.nodeName.substring(lastDot+1) in parseTrackName; real words, matches parsed field",
+      "name": "objectName",
+      "selector": "objectName@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @806390 var objectName=parsedPath.objectName in bind; USES @806862 switch(objectName) materials/bones/default; idiomatic",
+      "name": "objectName",
+      "selector": "objectName@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @680771 findByName(objectOrClipArray,name) param; descriptive union-type param name, real words",
+      "name": "objectOrClipArray",
+      "selector": "objectOrClipArray@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @15892 Vector2.fromArray(array,offset) param; standard three.js array-offset idiom",
+      "name": "offset",
+      "selector": "offset@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @16026 Vector2.toArray(array,offset) param; standard three.js array-offset idiom",
+      "name": "offset",
+      "selector": "offset@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @16224 Vector2.fromBufferAttribute(attribute,index,offset) deprecated param; standard three.js name",
+      "name": "offset",
+      "selector": "offset@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @21216 Matrix3.fromArray(array,offset) param; standard three.js array-offset idiom",
+      "name": "offset",
+      "selector": "offset@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @21361 Matrix3.toArray(array,offset) param, refCount=11; standard three.js array-offset idiom",
+      "name": "offset",
+      "selector": "offset@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @34368 Vector4.fromArray(array,offset) param; standard three.js array-offset idiom",
+      "name": "offset",
+      "selector": "offset@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @34548 Vector4.toArray(array,offset) param; standard three.js array-offset idiom",
+      "name": "offset",
+      "selector": "offset@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @34792 Vector4.fromBufferAttribute(attribute,index,offset) deprecated param; standard three.js name",
+      "name": "offset",
+      "selector": "offset@u0020#7"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @45058 Quaternion.fromArray(array,offset) param; standard three.js array-offset idiom",
+      "name": "offset",
+      "selector": "offset@u0020#8"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@45267 Quaternion fromArray(array,offset) reads array[offset..offset+3]; real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#9"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@55760 Vector3 fromArray(array,offset) reads array[offset..]; real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#10"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@55917 Vector3 fromArray(array,offset) with offset===void 0 default; real word, canonical three.js param",
+      "name": "offset",
+      "selector": "offset@u0020#11"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@56138 Vector3 toArray(array,offset) writes array[offset..offset+2]; real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#12"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@63906 Box3.translate(offset): min.add(offset), max.add(offset); real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#13"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@67369 Sphere.translate(offset): center.add(offset); real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#14"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@86585 Matrix4.fromArray(array,offset) region after equals(); real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#15"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@86731 Matrix4.fromArray(array,offset): elements[i]=array[i+offset] loop, refCount=18; real word, canonical param",
+      "name": "offset",
+      "selector": "offset@u0020#16"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@90341 Euler.toArray(array,offset) writes array[offset..offset+3]; real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#17"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@109530 Plane.translate(offset) region after applyMatrix4; real word, canonical three.js translate(offset) param",
+      "name": "offset",
+      "selector": "offset@u0020#18"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@124492 Color.fromArray(array,offset) reads r/g/b at array[offset..]; real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#19"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@124649 Color.toArray(array,offset) writes array[offset..offset+2]; real word, canonical three.js signature",
+      "name": "offset",
+      "selector": "offset@u0020#20"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@138532 copyColorsArray: var offset=0 write cursor with 3x array[offset++], refCount=3; real word, matches upstream three.js",
+      "name": "offset",
+      "selector": "offset@u0020#21"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@138888 copyVector2sArray: var offset=0 write cursor with 2x array[offset++], refCount=2; real word, matches upstream three.js",
+      "name": "offset",
+      "selector": "offset@u0020#22"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL@139236 copyVector3sArray: var offset=0 write cursor with 3x array[offset++], refCount=3; real word, matches upstream three.js",
+      "name": "offset",
+      "selector": "offset@u0020#23"
+    }
+  ],
+  "stats": {
+    "rename": 0,
+    "keep": 30,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

@@ -1,0 +1,57 @@
+# DOSSIER slice-23 (wave 13, 10 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/10] tempKeys@u2252#0 | kind=var depth=5 refCount=6 | sim/game-loop.js
+DECL @225 (verified):
+function loadSettings(){var mNZeiqoUotp;try{try{if(localStorage.settings!=undefined){mNZeiqoUotp=JSON.parse(localStorage.settings);Rz=JSON.parse(JSON.stringify(mNZeiqoUotp));}}catch(e){}if(mNZeiqoUotp==undefined){return;}var tempKeys=Object.keys(mNZeiqoUotp);for(var i=0;i<tempKeys.length;i++){for(var j=0;j<Rw.length;j++){if(Rw[j].id==tempKeys[i]){if(tempKeys[i]==undefined){continue;}Rw[j].default=mNZeiqoUotp[tempKeys[i]];if(tempKeys[i]=='region'){Rw[j].default='';}if(mNZeiqoUotp.version==undefined&&tempKeys[i]=='sensitivity'){if(Rw[j].default!=1){Rw[j].default*=1.4;}}break;}}}}catch(e){}}
+USES: refCount=6, 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/10] FullScreenQuad@u0025#0 | kind=var depth=5 refCount=3 | engine/webgl-renderer.js
+DECL @158 (verified):
+usvzFuAsEB.Pass.FullScreenQuad=(function(){var aKmLbYuMC=new usvzFuAsEB.lUtmuvURyPI(-1,1,1,-1,0,1);var RNQDluasaN=new usvzFuAsEB.PlaneBufferGeometry(2,2);var FullScreenQuad=function(material){this._mesh=new usvzFuAsEB.Mesh(RNQDluasaN,material);};Object.defineProperty(FullScreenQuad.prototype,'material',{get:function(){return this._mesh.material;},set:function(value){this._mesh.material=value;}});Object.assign(FullScreenQuad.prototype,{dispose:function(){this._mesh.RNQDluasaN.dispose();},render:function(qIySEZgti){qIySEZgti.render(this._mesh,aKmLbYuMC);}});return FullScreenQuad;}());
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/10] W3@u2497#0 | kind=var depth=3 refCount=1 | sim/game-loop.js
+DECL @4 (verified):
+var W3=!![];
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/10] Xv@u2575#0 | kind=var depth=3 refCount=1 | characters/rigs.js
+DECL @4 (verified):
+var Xv,Xw=new Array(0x5),Xx=new Array(0x5);
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/10] faceLength@u1747#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @69 (verified):
+function makeGeoAABBs(geo){'use strict';if(geo.isBufferGeometry){var faceLength=geo.index.count/3;var AyXbLxaib;if(pZ){AyXbLxaib=new Float32Array(new SharedArrayBuffer(faceBufferLength*faceLength*4));}else{AyXbLxaib=new Float32Array(faceBufferLength*faceLength);}var min=new usvzFuAsEB.gURkzCzeY();var max=new usvzFuAsEB.gURkzCzeY();var verts=[];for(var i=0;i<3;i++){verts[i]=new usvzFuAsEB.gURkzCzeY();}var faceObj={a:0,b:1,c:2};for(var x=0;x<geo.index.count/3;x++){var face=geo.faces[x];face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}var AyXbLxaib;if(pZ&&false[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/10] faceObj@u1747#0 | kind=var depth=5 refCount=0 | engine/webgl-renderer.js
+DECL @408 (verified):
+function makeGeoAABBs(geo){'use strict';if(geo.isBufferGeometry){var faceLength=geo.index.count/3;var AyXbLxaib;if(pZ){AyXbLxaib=new Float32Array(new SharedArrayBuffer(faceBufferLength*faceLength*4));}else{AyXbLxaib=new Float32Array(faceBufferLength*faceLength);}var min=new usvzFuAsEB.gURkzCzeY();var max=new usvzFuAsEB.gURkzCzeY();var verts=[];for(var i=0;i<3;i++){verts[i]=new usvzFuAsEB.gURkzCzeY();}var faceObj={a:0,b:1,c:2};for(var x=0;x<geo.index.count/3;x++){var face=geo.faces[x];face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}var AyXbLxaib;if(pZ&&false[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/10] UU@u2469#0 | kind=var depth=3 refCount=1 | engine/webgl-renderer.js
+DECL @151 (verified):
+var UR=NJ([-0x6d,-0x5e,-0x5f,-0x59,-0x5e]),US=new usvzFuAsEB['Texture']({'image':Kr['pANxEEFMRM'](new Kr['QtjDeukbWl'](),0x100,0x100)['image']}),UT=[],UU=[];
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/10] Nu@u2152#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @12 (verified):
+var Nt=!![],Nu=!![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/10] VN@u2483#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var VN=0x50,VO=NJ([-0x63,-0x65,-0x6c,-0x5b,-0x63,-0x5b,-0x64,-0x6a,-0x4e]);
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/10] a0K@u2785#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var a0K=![],a0L=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-23: propose EVERY binding above.

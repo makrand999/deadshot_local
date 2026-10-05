@@ -1,0 +1,1864 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 34,
+  "date": "2026-09-28",
+  "merged": 7,
+  "heldLow": 0,
+  "heldInvalid": 0,
+  "kept": 173,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @571363 var hasFaceNormal=face.normal.length()>0; USES @572171 if(hasFaceNormal) push normal index — self-descriptive face flag",
+   "name": "hasFaceNormal",
+   "selector": "hasFaceNormal@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @571283 var hasFaceUv=false in Geometry.toJSON face loop; refCount=1 — self-descriptive face flag",
+   "name": "hasFaceUv",
+   "selector": "hasFaceUv@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @571526 var hasFaceVertexColor=face.vertexColors.length>0; USES @572459 if(hasFaceVertexColor) push color indices — self-descriptive",
+   "name": "hasFaceVertexColor",
+   "selector": "hasFaceVertexColor@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @571404 var hasFaceVertexNormal=face.vertexNormals.length>0; USES @572230 if(hasFaceVertexNormal) push normal indices — self-descriptive",
+   "name": "hasFaceVertexNormal",
+   "selector": "hasFaceVertexNormal@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @146320 fromGeometry scope; USES @147904 if(hasFaceVertexUv===true) push uvs + toJSON setBit/USES @571303/@571722/@572005 — self-descriptive flag",
+   "name": "hasFaceVertexUv",
+   "selector": "hasFaceVertexUv@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @200523 var height_half alongside width_half=width/2 in PlaneBufferGeometry; refCount=1 — readable half-extent",
+   "name": "height_half",
+   "selector": "height_half@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @399789 var hemiLength=0 in xdgCWeCpd; USES state.hemi[hemiLength]++/hash compare @403081/@403883/@404196/@404770 — readable hemisphere-light counter",
+   "name": "hemiLength",
+   "selector": "hemiLength@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @405064 var hemiLength=0 in setupView; USES state.hemi[hemiLength] @406530/@406681 — readable counter, sibling of #0 in disjoint scope",
+   "name": "hemiLength",
+   "selector": "hemiLength@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @682364 parseAnimation scope (addNonemptyTrack/tracks/clipName context); refCount=2 — self-descriptive track-list name",
+   "name": "hierarchyTracks",
+   "selector": "hierarchyTracks@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @8839 param randInt(low,high); USES in return low+floor(random*(high-low+1)) — idiomatic range bound",
+   "name": "high",
+   "selector": "high@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @8930 param randFloat(low,high); USES low+random*(high-low) — idiomatic range bound",
+   "name": "high",
+   "selector": "high@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @698721 var low=0,high=il-1 in getUtoTmapping; USES binary-search loop low<=high @698753/@698777/@698879 — idiomatic search bound",
+   "name": "high",
+   "selector": "high@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @604996 for(var h=0,hl=holes.length;h<hl;h++){var ahole=holes[h]...} — cryptic cached holes.length loop bound",
+   "name": "holesLength",
+   "selector": "hl@u0020#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "hl",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ar reverse=!ShapeUtils.isClockWise(AUbXpMajF);if(reverse){AUbXpMajF=AUbXpMajF.reverse();for(var h=0,hl=holes.length;h<hl;h++){var ahole=holes[h];if(ShapeUtils.i"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @776175 var ho=sho[hIdx] where sho=newShapeHoles[_sIdx]; USES isPointInsidePolygon(ho.p..)/betterShapeHoles push @776365 — cryptic hole-record element",
+   "name": "holeEntry",
+   "selector": "ho@u0020#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ho",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "length;_sIdx<_sLen;_sIdx++){var sho=newShapeHoles[_sIdx];for(var hIdx=0;hIdx<sho.length;hIdx++){var ho=sho[hIdx];var hole_unassigned=true;for(var s2Idx=0;s2Idx<"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @597440 param eliminateHoles(data,holeIndices,outerNode,dim) region; hole-middle earcut context — readable domain term",
+   "name": "hole",
+   "selector": "hole@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @597634 param eliminateHole(hole,outerNode); USES findHoleBridge(hole,..)/splitPolygon(outerNode,hole) — readable domain term",
+   "name": "hole",
+   "selector": "hole@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @724180 var hole=source.holes[i] in Shape.copy; USES holes.push(hole.clone()) — readable loop element",
+   "name": "hole",
+   "selector": "hole@u0020#2",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @724392 var hole=this.holes[i] in Shape.toJSON; USES data.holes.push(hole.toJSON()) — readable loop element",
+   "name": "hole",
+   "selector": "hole@u0020#3",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @724609 var hole=json.holes[i] in Shape.fromJSON; USES holes.push(new Path().fromJSON(hole)) — readable loop element",
+   "name": "hole",
+   "selector": "hole@u0020#4",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @612179 param generateSideWallUV(...,indexA,indexB,indexC,...); USES c_x=AUbXpMajF[indexC*3] @612795 — readable vertex-index param",
+   "name": "indexC",
+   "selector": "indexC@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @612528 param generateTopUV(...,indexC); USES c_x/c_y from AUbXpMajF[indexC*3..] — readable vertex-index param",
+   "name": "indexC",
+   "selector": "indexC@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @590961 EdgesGeometry scope (indexAttr/positionAttr context); refCount=1 — readable counter name",
+   "name": "indexCount",
+   "selector": "indexCount@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @598423 function indexCurve; USES @594333 indexCurve(ear,minX,minY,invSize) in earcutLinked — readable earcut helper name",
+   "name": "indexCurve",
+   "selector": "indexCurve@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @612535 param generateSideWallUV(...,indexD); refCount=3 d_x/d_y/d_z lookups — readable vertex-index param",
+   "name": "indexD",
+   "selector": "indexD@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @625094 var indexOffset=AUbXpMajF.length/3 in addShape; USES a/b/c=face[n]+indexOffset @625915/@625941/@625967 — readable base offset",
+   "name": "indexOffset",
+   "selector": "indexOffset@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @915457 param addDrawCall(start,count,indexOffset); USES legacy deprecation guard — readable, matches sibling #0 role",
+   "name": "indexOffset",
+   "selector": "indexOffset@u0020#1",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @581084 generateTorso scope (CylinderGeometry indices/indexArray/groupStart context); refCount=2 — readable row-index name",
+   "name": "indexRow",
+   "selector": "indexRow@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @465705 XR hand-tracking scope (XRHand.LITTLE_PHALANX_TIP/jointPose context); refCount=1 — readable fingertip-index name",
+   "name": "indexTip",
+   "selector": "indexTip@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @490780 WebGLRenderer var block; USES =new WebGLIndexedBufferRenderer @492519, qIySEZgti=indexedBufferRenderer @499769 — self-descriptive",
+   "name": "indexedBufferRenderer",
+   "selector": "indexedBufferRenderer@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @814471 unsubscribe_ scope; USES indicesByPath=this._bindingsIndicesByPath @815131/@815179/@815415 — self-descriptive lookup map",
+   "name": "indicesByPath",
+   "selector": "indicesByPath@u0020#0",
+   "slice": "slice-00",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @850373 var bones=getBoneList(object) in SkeletonHelper; USES refCount=2 iterate bones[i]/bones.length — readable domain term",
+   "name": "bones",
+   "selector": "bones@u0020#10",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @495447 setScissorTest=function(boolean); USES refCount=1 state.setScissorTest(_scissorTest=boolean) — readable, matches upstream signature",
+   "name": "boolean",
+   "selector": "boolean@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @924513 deprecated enableScissorTest=function(boolean); USES refCount=1 forwards to setScissorTest(boolean) — readable wrapper param",
+   "name": "boolean",
+   "selector": "boolean@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @85507 makePerspective(left,right,top,bottom,near,far); USES refCount=3 frustum plane math — readable standard param",
+   "name": "bottom",
+   "selector": "bottom@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @86076 makeOrthographic(left,right,top,bottom,near,far); USES refCount=2 h/y plane math — readable standard param",
+   "name": "bottom",
+   "selector": "bottom@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @732083 OrthographicCamera ctor (left,right,top,bottom,near,far); USES refCount=3 defaults + this.bottom — readable standard param",
+   "name": "bottom",
+   "selector": "bottom@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @733657 updateProjectionMatrix var bottom=cy-dy; USES refCount=2 view-offset adjust + makeOrthographic — readable local",
+   "name": "bottom",
+   "selector": "bottom@u0020#3",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @901503 deprecated makeFrustum(left,right,bottom,...); USES refCount=1 forwards into makePerspective — readable standard param",
+   "name": "bottom",
+   "selector": "bottom@u0020#4",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @471946 var bottom2=bottomFov*far/far2*near2 in setProjectionFromUnion; USES refCount=1 makePerspective(...,bottom2,...) — readable adjusted plane",
+   "name": "bottom2",
+   "selector": "bottom2@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @471306 var bottomFov=(projL[9]-1)/projL[5]-ish in setProjectionFromUnion; USES refCount=1 feeds bottom2 — readable VR FOV term",
+   "name": "bottomFov",
+   "selector": "bottomFov@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @430109 var boundTexture in bindTexture(webglType,webglTexture); USES refCount=7 texture-slot cache compare/store — readable cache var",
+   "name": "boundTexture",
+   "selector": "boundTexture@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @383879 var cachedAttributes + getAttributes(); USES refCount=3 lazy WebGLAttributes cache — readable cache var",
+   "name": "cachedAttributes",
+   "selector": "cachedAttributes@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @417506 var cachedMaterial in getMaterialVariant cache lookup; USES refCount=4 _materialCache hit path — readable cache var",
+   "name": "cachedMaterial",
+   "selector": "cachedMaterial@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @383731 var cachedUniforms + getUniforms(); USES refCount=3 lazy WebGLUniforms cache — readable cache var",
+   "name": "cachedUniforms",
+   "selector": "cachedUniforms@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @704603 CubicPoly calc:function(t) polynomial evaluator; USES px/py/pz .calc(weight) call sites — idiomatic math shorthand",
+   "name": "calc",
+   "selector": "calc@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @539386 Skeleton calculateInverses:function; USES bind() calls skeleton.calculateInverses() — readable method name",
+   "name": "calculateInverses",
+   "selector": "calculateInverses@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @636918 function calculatePositionOnCurve(u,p,q,radius,P); USES refCount=2 called for P1/P2 torus-knot frames — readable helper name",
+   "name": "calculatePositionOnCurve",
+   "selector": "calculatePositionOnCurve@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @688833 var callbacks=loading[url] in FileLoader load handler; USES refCount=4 fan-out onLoad loop — readable queue var",
+   "name": "callbacks",
+   "selector": "callbacks@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @689420 var callbacks=loading[url] in progress handler; USES refCount=2 onProgress fan-out — readable queue var",
+   "name": "callbacks",
+   "selector": "callbacks@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @689632 var callbacks=loading[url] in error handler; USES refCount=2 onError fan-out — readable queue var",
+   "name": "callbacks",
+   "selector": "callbacks@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @689914 var callbacks=loading[url] in abort handler; USES refCount=2 onError fan-out — readable queue var",
+   "name": "callbacks",
+   "selector": "callbacks@u0020#3",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @507995 var camera2 in ArrayCamera renderObjects loop; USES refCount=4 per-subcamera render — readable indexed var",
+   "name": "camera2",
+   "selector": "camera2@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @76744 YXZ branch var ce=c*e with c=cos(y),e=cos(z); USES refCount=2 matrix-element assigns; sibling cf already cosYsinZ in scope",
+   "name": "cosYcosZ",
+   "selector": "ce@u0020#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ce",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "d;te[5]=ae-bf*d;te[9]=-b*c;te[2]=bf-ae*d;te[6]=be+af*d;te[10]=a*c;}else if(euler.order==='YXZ'){var ce=c*e,cf=c*f,de=d*e,df=d*f;te[0]=ce+df*b;te[4]=de*b-cf;te[8"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @14225 Vector2 _proto.ceil=function ceil() Math.ceil x/y; USES Math.ceil mirrors — readable Math-mirror API name",
+   "name": "ceil",
+   "selector": "ceil@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @32646 Vector4 _proto.ceil=function ceil() Math.ceil x/y/z/w; USES Math.ceil mirrors — readable Math-mirror API name",
+   "name": "ceil",
+   "selector": "ceil@u0020#1",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @51712 Vector3 _proto.ceil=function ceil() Math.ceil x/y/z; USES Math.ceil mirrors — readable Math-mirror API name",
+   "name": "ceil",
+   "selector": "ceil@u0020#2",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @9436 MathUtils ceilPowerOfTwo:function; USES bone-texture sizing + nextPowerOfTwo alias — readable utility name",
+   "name": "ceilPowerOfTwo",
+   "selector": "ceilPowerOfTwo@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @582216 var centerIndexEnd in CylinderGeometry generateCap; USES refCount=1 ring-index loop — readable index bound",
+   "name": "centerIndexEnd",
+   "selector": "centerIndexEnd@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @581929 var centerIndexStart=index in generateCap; USES refCount=1 c=centerIndexStart+_x3 — readable index bound",
+   "name": "centerIndexStart",
+   "selector": "centerIndexStart@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @587861 var centroid in PolyhedronGeometry correctUVs; USES refCount=2 triangle-center UV fix — readable geometry term",
+   "name": "centroid",
+   "selector": "centroid@u0020#0",
+   "slice": "slice-01",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @195001 'me5=me[5]' in Frustum.setFromProjectionMatrix; upstream three.js matrix-element cache idiom with siblings me0-me4/me10-me15",
+   "name": "me5",
+   "selector": "me5@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @195011 'me6=me[6]' in Frustum.setFromProjectionMatrix; upstream three.js matrix-element cache idiom with siblings me0-me5/me7-me15",
+   "name": "me6",
+   "selector": "me6@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @195021 'me7=me[7]' in Frustum.setFromProjectionMatrix; upstream three.js matrix-element cache idiom with siblings me0-me6/me8-me15",
+   "name": "me7",
+   "selector": "me7@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @195035 'me8=me[8]' in Frustum.setFromProjectionMatrix; upstream three.js matrix-element cache idiom with siblings me0-me7/me9-me15",
+   "name": "me8",
+   "selector": "me8@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @195045 'me9=me[9]' in Frustum.setFromProjectionMatrix; upstream three.js matrix-element cache idiom with siblings me0-me8/me10-me15",
+   "name": "me9",
+   "selector": "me9@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @788001 setMediaElementSource(mediaElement) param; USES createMediaElementSource(mediaElement) — descriptive DOM API term",
+   "name": "mediaElement",
+   "selector": "mediaElement@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @788224 setMediaStreamSource(mediaStream) param; single USES as stream source — descriptive DOM API term",
+   "name": "mediaStream",
+   "selector": "mediaStream@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @350447 WebGLInfo local; USES @351051 returned as {memory:memory} plus info.memory.geometries/textures counters — descriptive real-word name",
+   "name": "memory",
+   "selector": "memory@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @255106 GLSL chunk var; USES @304486 '#include <metalnessmap_fragment>' + ShaderChunk registry @315680 — canonical three.js chunk name",
+   "name": "metalnessmap_fragment",
+   "selector": "metalnessmap_fragment@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @255299 GLSL chunk var; USES @303845 '#include <metalnessmap_pars_fragment>' + ShaderChunk registry @315724 — canonical three.js chunk name",
+   "name": "metalnessmap_pars_fragment",
+   "selector": "metalnessmap_pars_fragment@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @495529 setOpaqueSort(method) param; USES _opaqueSort=method assignment (in-window; @666588 is unrelated 'abstract method' string) — readable real-word param",
+   "name": "method",
+   "selector": "method@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @495591 setTransparentSort(method) param; USES _transparentSort=method assignment (in-window) — readable real-word param, own scope vs #0",
+   "name": "method",
+   "selector": "method@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @338588 WebGLBufferRenderer renderInstances local; USES @338625/@338715 assigned drawArraysInstanced* then extension[methodName] dispatch — descriptive",
+   "name": "methodName",
+   "selector": "methodName@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @349853 WebGLIndexedBufferRenderer renderInstances local; USES @349853-@350223 drawElementsInstanced* dispatch — descriptive, own scope vs #0",
+   "name": "methodName",
+   "selector": "methodName@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @600927 earcut triangulation helper; USES @599818 in isValidDiagonal(a,b) alongside locallyInside — descriptive geometric predicate name",
+   "name": "middleInside",
+   "selector": "middleInside@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @903443 Triangle.prototype legacy alias 'midpoint:function' with rename deprecation warning; refCount=0 — descriptive real-word API name",
+   "name": "midpoint",
+   "selector": "midpoint@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @687745 FileLoader data-URI parse local; USES @690354/@690380 overrideMimeType(this.mimeType) + setMimeType — standard web API term",
+   "name": "mimeType",
+   "selector": "mimeType@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @796972 PropertyMixer.accumulate blend factor 'weight/currentWeight'; shown USES are unrelated GLSL mix() strings — idiomatic animation-blend term",
+   "name": "mix",
+   "selector": "mix@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @795812 PropertyMixer ctor local; USES @796415 assigned per-type lerp fn then stored as _mixBufferRegion — descriptive real-word name",
+   "name": "mixFunction",
+   "selector": "mixFunction@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @795824 PropertyMixer ctor local; USES @796457 assigned _lerpAdditive then stored as _mixBufferRegionAdditive — descriptive real-word name",
+   "name": "mixFunctionAdditive",
+   "selector": "mixFunctionAdditive@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @170480 'for(var m=0,ml=morphAttribute.length;m<ml;m++)' — cryptic 2-char cached morph-target count bound (cf. ll->listenerCount precedent)",
+   "name": "morphCount",
+   "selector": "ml@u0020#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ml",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "morphAttribute!==undefined){this.morphTargetInfluences=[];this.morphTargetDictionary={};for(var m=0,ml=morphAttribute.length;m<ml;m++){var name=morphAttribute[m"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @548791 'for(var m=0,ml=morphAttribute.length;m<ml;m++)' — cryptic 2-char cached morph-target count bound, own scope vs #0/#2",
+   "name": "morphCount",
+   "selector": "ml@u0020#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ml",
+   "binding": {
+    "unit": "u0020",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "morphAttribute!==undefined){this.morphTargetInfluences=[];this.morphTargetDictionary={};for(var m=0,ml=morphAttribute.length;m<ml;m++){var name=morphAttribute[m"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @553709 'for(var m=0,ml=morphAttribute.length;m<ml;m++)' — cryptic 2-char cached morph-target count bound, own scope vs #0/#1",
+   "name": "morphCount",
+   "selector": "ml@u0020#2",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ml",
+   "binding": {
+    "unit": "u0020",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "morphAttribute!==undefined){this.morphTargetInfluences=[];this.morphTargetDictionary={};for(var m=0,ml=morphAttribute.length;m<ml;m++){var name=morphAttribute[m"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @165429 toNonIndexed local 'morphArray=[]' collecting converted buffer attributes per morph key — descriptive real-word name",
+   "name": "morphArray",
+   "selector": "morphArray@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @158981 computeBoundingBox loop item 'morphAttribute=morphAttributesPosition[i]' fed to setFromBufferAttribute — descriptive domain term",
+   "name": "morphAttribute",
+   "selector": "morphAttribute@u0020#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @160350 computeBoundingSphere loop item 'morphAttribute=morphAttributesPosition[i]' — descriptive domain term, own scope vs #0",
+   "name": "morphAttribute",
+   "selector": "morphAttribute@u0020#1",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @165447 toNonIndexed 'morphAttribute=morphAttributes[_name]' iterated for conversion — descriptive domain term, own scope",
+   "name": "morphAttribute",
+   "selector": "morphAttribute@u0020#2",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @168137 BufferGeometry.copy 'morphAttribute=morphAttributes[_name2]' cloned per key — descriptive domain term, own scope",
+   "name": "morphAttribute",
+   "selector": "morphAttribute@u0020#3",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @170337 updateMorphTargets 'morphAttribute=morphAttributes[keys[0]]' with .length/.name USES — descriptive domain term, own scope",
+   "name": "morphAttribute",
+   "selector": "morphAttribute@u0020#4",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @175902 checkBufferGeometryIntersection loop item 'morphAttribute=morphPosition[i]' fed to fromBufferAttribute — descriptive domain term",
+   "name": "morphAttribute",
+   "selector": "morphAttribute@u0020#5",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @802167 parseTrackName(trackName) on PropertyBinding; USES @800727 Composite fallback parse — descriptive verb phrase, already readable.",
+   "name": "parseTrackName",
+   "selector": "parseTrackName@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @363682 parseUniform(activeInfo,addr,container) WebGL uniform parser; USES @364502 WebGLUniforms ctor call — clear verb+object name.",
+   "name": "parseUniform",
+   "selector": "parseUniform@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @800680 var parsedPath in Composite; USES PropertyBinding.parseTrackName result passed to subscribe_ — descriptive result noun.",
+   "name": "parsedPath",
+   "selector": "parsedPath@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @801587 param parsedPath of PropertyBinding ctor; USES this.parsedPath assignment + parseTrackName fallback — matches sibling/property naming.",
+   "name": "parsedPath",
+   "selector": "parsedPath@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @801867 param parsedPath of create(); USES forwarded to new PropertyBinding/Composite — consistent pass-through name.",
+   "name": "parsedPath",
+   "selector": "parsedPath@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @806359 var parsedPath=this.parsedPath in bind(); 6 USES reading objectName/propertyName/nodeName — self-describing cached field.",
+   "name": "parsedPath",
+   "selector": "parsedPath@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @814455 param parsedPath of subscribe_(); 2 USES pushed to _parsedPaths + new PropertyBinding — consistent domain term.",
+   "name": "parsedPath",
+   "selector": "parsedPath@u0020#4",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @810926 var parsedPaths=this._parsedPaths in add(); 2 USES indexing parsedPaths[_j] for PropertyBinding — clear plural collection.",
+   "name": "parsedPaths",
+   "selector": "parsedPaths@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @814637 var parsedPaths in subscribe_(); USES parsedPaths.push(parsedPath) — clear plural collection.",
+   "name": "parsedPaths",
+   "selector": "parsedPaths@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @815243 var parsedPaths in unsubscribe_(); 3 USES swap-remove bookkeeping — clear plural collection.",
+   "name": "parsedPaths",
+   "selector": "parsedPaths@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @688248 var parser (FileLoader document/DOM branch); USES response parsing context — idiomatic single-word role noun.",
+   "name": "parser",
+   "selector": "parser@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @681304 var parts in CreateClipsFromMorphTargetSequences; 3 USES within DECL window (morph-target name split) — idiomatic.",
+   "name": "parts",
+   "selector": "parts@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @363747 var pathLength in parseUniform; USES within DECL window (uniform path segments) — descriptive camelCase.",
+   "name": "pathLength",
+   "selector": "pathLength@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @777020 var paths in Font generateShapes; 2 USES createPaths result flattened to shapes — idiomatic collection noun.",
+   "name": "paths",
+   "selector": "paths@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @777396 var paths=createPaths(...) in generateShapes; 2 USES paths.length/paths[p].toShapes() — idiomatic.",
+   "name": "paths",
+   "selector": "paths@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @810908 var paths=this._paths in AnimationObjectGroup.add; 2 USES paths[j] for PropertyBinding — clear field alias.",
+   "name": "paths",
+   "selector": "paths@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @814619 var paths in subscribe_(); USES paths.push(path) registration — clear field alias.",
+   "name": "paths",
+   "selector": "paths@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @815225 var paths in unsubscribe_(); 3 USES swap-remove bookkeeping — clear field alias.",
+   "name": "paths",
+   "selector": "paths@u0020#4",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @681194 var pattern=/^([\\w-]*?)([\\d]+)$/ for morph-target names; USES within DECL window — idiomatic regex name.",
+   "name": "pattern",
+   "selector": "pattern@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @789267 _proto.pause Audio playback control next to play/stop siblings — idiomatic public API verb.",
+   "name": "pause",
+   "selector": "pause@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @822926 var pending in AnimationAction update/time handling; 2 USES within DECL window — idiomatic state noun.",
+   "name": "pending",
+   "selector": "pending@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @728966 param penumbra of SpotLight ctor; 2 USES this.penumbra assignment + three.js light API — canonical domain term.",
+   "name": "penumbra",
+   "selector": "penumbra@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @774601 var perpEdge in isPointInsidePolygon point-in-polygon test; 2 USES edge-crossing math — readable domain abbreviation.",
+   "name": "perpEdge",
+   "selector": "perpEdge@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @54619 param phi of setFromSphericalCoords; 2 USES Math.sin/cos(phi) spherical math — canonical math symbol.",
+   "name": "phi",
+   "selector": "phi@u0020#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @616230 var phi=phiStart+i*... in LatheBufferGeometry; 2 USES sin/cos(phi) vertex ring — canonical math symbol.",
+   "name": "phi",
+   "selector": "phi@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @839909 param phi of Spherical ctor; 3 USES defaults + this.phi assignment — canonical math symbol.",
+   "name": "phi",
+   "selector": "phi@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @840126 param phi of Spherical.set; USES this.phi=phi assignment — canonical math symbol.",
+   "name": "phi",
+   "selector": "phi@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @875054 param poleAxis of _blur (PMREM); 2 USES forwarded to latitudinal/longitudinal _halfBlur — descriptive domain term.",
+   "name": "poleAxis",
+   "selector": "poleAxis@u0020#1",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @875408 param poleAxis of _halfBlur; 2 USES blurUniforms['poleAxis'].value assignment — matches GLSL uniform name.",
+   "name": "poleAxis",
+   "selector": "poleAxis@u0020#2",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @879293 var poleAxis=new Vector3(0,1,0) in _getBlurShader; USES 'poleAxis' uniform default — matches GLSL uniform name.",
+   "name": "poleAxis",
+   "selector": "poleAxis@u0020#3",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @143364 Uint8BufferAttribute(array,itemSize,normalized) forwarded to BufferAttribute.call; USES 1 ref — standard three.js/WebGL param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#4",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @143628 Uint8Clamped/Int16BufferAttribute(array,itemSize,normalized) forwarded to BufferAttribute.call; USES 1 ref — standard param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#5",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @143895 Int16/Uint16BufferAttribute(array,itemSize,normalized) forwarded to BufferAttribute.call; USES 1 ref — standard param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#6",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @144159 Uint16/Int32BufferAttribute(array,itemSize,normalized) forwarded to BufferAttribute.call; USES 1 ref — standard param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#7",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @144428 Int32/Uint32BufferAttribute(array,itemSize,normalized) forwarded to BufferAttribute.call; USES 1 ref — standard param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#8",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @144763 Float16BufferAttribute(array,itemSize,normalized) forwarded to BufferAttribute.call; USES 1 ref — standard param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#9",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @145036 Float32/Float64BufferAttribute(array,itemSize,normalized) forwarded to BufferAttribute.call; USES 1 ref — standard param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#10",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @164681 var normalized=attribute.normalized in convertBufferAttribute, passed to new BufferAttribute; USES 1 ref — already-readable copy of attribute flag",
+   "name": "normalized",
+   "selector": "normalized@u0020#11",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @333279 vertexAttribPointer(index,size,type,normalized,stride,offset) forwarded to gl.vertexAttribPointer; USES 1 ref — WebGL API param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#12",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @334082 var normalized=geometryAttribute.normalized passed to vertexAttribPointer calls; USES 2 refs — already-readable copy of attribute flag",
+   "name": "normalized",
+   "selector": "normalized@u0020#13",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @525921 InterleavedBufferAttribute(interleavedBuffer,itemSize,offset,normalized) ctor param; USES 1 ref — standard three.js ctor param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#14",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @749430 InstancedBufferAttribute(array,itemSize,normalized,...) ctor param; USES 4 refs — standard three.js ctor param name",
+   "name": "normalized",
+   "selector": "normalized@u0020#15",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @258243 var normalmap_pars_fragment shader-chunk string, registered in chunk map; USES 1 ref — canonical three.js shader chunk name",
+   "name": "normalmap_pars_fragment",
+   "selector": "normalmap_pars_fragment@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @668883 LinearInterpolant interpolate_ stride offset var paired with offset1; USES 1 ref inside window — idiomatic indexed-offset name",
+   "name": "offset0",
+   "selector": "offset0@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @668865 LinearInterpolant interpolate_ offset1=i1*stride sample offset; USES 2 refs inside window — idiomatic indexed-offset name",
+   "name": "offset1",
+   "selector": "offset1@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @123201 _proto.offsetHSL Color method definition; USES 0 refs — public three.js Color API name",
+   "name": "offsetHSL",
+   "selector": "offsetHSL@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @674321 KeyframeTrack.optimize offsetN=offset+stride next-sample offset; USES 1 ref inside window — readable prev/next offset pair name",
+   "name": "offsetN",
+   "selector": "offsetN@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @674299 KeyframeTrack.optimize offsetP=offset-stride prev-sample offset; USES 1 ref inside window — readable prev/next offset pair name",
+   "name": "offsetP",
+   "selector": "offsetP@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @777409 var offsetX=0 pen cursor in createPaths, advanced per glyph; USES 3 refs — readable coordinate name",
+   "name": "offsetX",
+   "selector": "offsetX@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @777673 createPath(char,scale,offsetX,...) glyph origin param used in outline scaling; USES 7 refs — readable coordinate name",
+   "name": "offsetX",
+   "selector": "offsetX@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @777419 var offsetY=0 line cursor in createPaths, decremented per newline; USES 2 refs — readable coordinate name",
+   "name": "offsetY",
+   "selector": "offsetY@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @777681 createPath(char,scale,offsetX,offsetY,...) glyph origin param used in outline scaling; USES 7 refs — readable coordinate name",
+   "name": "offsetY",
+   "selector": "offsetY@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @642219 for(var o=0,ol=groups.length;o<ol;++o) cached loop bound over geometry groups; USES 1 ref in loop cond — cryptic minified bound, role clear",
+   "name": "numGroups",
+   "selector": "ol@u0020#0",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ol",
+   "binding": {
+    "unit": "u0020",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "aN.groups;if(groups.length===0){groups=[{start:0,count:indices.count,materialIndex:0}];}for(var o=0,ol=groups.length;o<ol;++o){var group=groups[o];var start=gro"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @442763 var oldTime texture-upload timing probe compared via performance.now()-oldTime; USES 3 refs — readable timing name",
+   "name": "oldTime",
+   "selector": "oldTime@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @93900 QTOKQmNlEY(Object3D).onAfterRender lifecycle hook; USES 0 refs as binding — public three.js hook name",
+   "name": "onAfterRender",
+   "selector": "onAfterRender@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @196947 WebGLAnimation inner onAnimationFrame(time,frame) driving animationLoop; USES 2 refs — idiomatic rAF handler name",
+   "name": "onAnimationFrame",
+   "selector": "onAnimationFrame@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @473173 WebXRManager onAnimationFrame(time,frame) viewer-pose handler; USES 1 ref — idiomatic XR frame handler name",
+   "name": "onAnimationFrame",
+   "selector": "onAnimationFrame@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @501929 renderer onAnimationFrame(time) delegating to onAnimationFrameCallback; USES 1 ref — idiomatic frame handler name",
+   "name": "onAnimationFrame",
+   "selector": "onAnimationFrame@u0020#2",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @9696 setQuaternionFromProperEuler(q,a,b,c,order) switched over euler order strings; USES 2 refs — standard rotation-order param name",
+   "name": "order",
+   "selector": "order@u0020#0",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @39729 setFromEuler order=euler._order switched over XYZ/YXZ/XZY cases; USES 2 refs — standard rotation-order name",
+   "name": "order",
+   "selector": "order@u0020#1",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @32943 _proto.roundToZero=function roundToZero (Vector4 trunc); USES @14399/@14420/@51937/@51958 sibling Vector2/Vector3 trunc impls — readable public API name",
+   "name": "roundToZero",
+   "selector": "roundToZero@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @51958 _proto.roundToZero=function roundToZero (Vector3 trunc); USES @32943/@32922/@14420/@14399 sibling Vector4/Vector2 impls — readable public API name",
+   "name": "roundToZero",
+   "selector": "roundToZero@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @586314 subdivideFace scope (cols/detail grid); USES refCount=2 in-window — token already readable English word, no cryptic form to fix",
+   "name": "rows",
+   "selector": "rows@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @382898 WebGLProgram diagnostics scope; USES @383514/@383523 this.diagnostics={runnable:runnable,...} — readable status flag name",
+   "name": "runnable",
+   "selector": "runnable@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @9794 var s13=sin((a+c)/2) in setQuaternionFromProperEuler; USES refCount=6 in-window — idiomatic Euler trig shorthand with siblings c13/c1_3/s1_3",
+   "name": "s13",
+   "selector": "s13@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @9837 var s1_3=sin((a-c)/2) in setQuaternionFromProperEuler; USES refCount=3 in-window — idiomatic Euler trig shorthand with siblings c13/s13/c3_1",
+   "name": "s1_3",
+   "selector": "s1_3@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @776221 shape-hole ambiguity scope; USES refCount=6 in-window — readable shape-index abbreviation consistent with sIdx/sLen siblings, role not fully shown",
+   "name": "s2Idx",
+   "selector": "s2Idx@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @9881 var s3_1=sin((c-a)/2) per USES-adjacent window in setQuaternionFromProperEuler; USES refCount=3 in-window — idiomatic Euler trig shorthand",
+   "name": "s3_1",
+   "selector": "s3_1@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @775969 for(var sIdx=0,sLen=newShapes.length...) hole-assignment loop; USES refCount=3 in-window — idiomatic loop-index abbreviation",
+   "name": "sIdx",
+   "selector": "sIdx@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @775976 for(var sIdx=0,sLen=newShapes.length...) loop bound; USES refCount=1 in-window — idiomatic loop-length abbreviation",
+   "name": "sLen",
+   "selector": "sLen@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @5556 var sRGBEncoding=3001 encoding constant; USES @365587/@868900/@877383/getEncodingComponents/exports — public three.js API constant, must stay",
+   "name": "sRGBEncoding",
+   "selector": "sRGBEncoding@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @121367 Color scope (copyLinearToGamma region); USES refCount=3 in-window — token already readable, window truncated so role partly inferred",
+   "name": "safeInverse",
+   "selector": "safeInverse@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @458270 function safeSetTexture2D(texture,slot) render-target guard; USES @361901/@358853 textures.safeSetTexture2D calls — readable descriptive name",
+   "name": "safeSetTexture2D",
+   "selector": "safeSetTexture2D@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @458589 function safeSetTextureCube(texture,slot) render-target guard; USES @362103/@359495 textures.safeSetTextureCube calls — readable descriptive name",
+   "name": "safeSetTextureCube",
+   "selector": "safeSetTextureCube@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @702238 EllipseCurve region; USES refCount=2 in-window — token already readable English, DECL window truncated",
+   "name": "samePoints",
+   "selector": "samePoints@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @664833 function Interpolant(parameterPositions,sampleValues,sampleSize,...); USES @665006/@665064 this.valueSize=sampleSize — readable canonical param name",
+   "name": "sampleSize",
+   "selector": "sampleSize@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @666846 function CubicInterpolant(...,sampleSize,...); USES @666925 Interpolant.call(this,...,sampleSize,...) passthrough — readable canonical param name",
+   "name": "sampleSize",
+   "selector": "sampleSize@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @668527 function LinearInterpolant(...,sampleSize,...); USES sibling Interpolant.call passthrough windows — readable canonical param name",
+   "name": "sampleSize",
+   "selector": "sampleSize@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @669117 function DiscreteInterpolant(...,sampleSize,...); USES sibling Interpolant.call passthrough windows — readable canonical param name",
+   "name": "sampleSize",
+   "selector": "sampleSize@u0020#3",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @676364 function QuaternionLinearInterpolant(...,sampleSize,...); USES @676443 Interpolant.call passthrough — readable canonical param name",
+   "name": "sampleSize",
+   "selector": "sampleSize@u0020#4",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @82936 getMaxScaleOnAxis scope (te[0]*te[0]+... per @82985 window); USES refCount=1 in-window — readable squared-scale name, window truncated",
+   "name": "scaleXSq",
+   "selector": "scaleXSq@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @75824 extractRotation scope (scaleX sibling visible); USES refCount=3 in-window — readable axis-scale name, window truncated",
+   "name": "scaleY",
+   "selector": "scaleY@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "DECL @82985 getMaxScaleOnAxis scope (scaleXSq sibling visible); USES refCount=1 in-window — readable squared-scale name, window truncated",
+   "name": "scaleYSq",
+   "selector": "scaleYSq@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @788418 _proto.setBuffer=function setBuffer(audioBuffer) Audio source setter; USES @932163 scope.setBuffer(buffer) call — readable public API name",
+   "name": "setBuffer",
+   "selector": "setBuffer@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @837430 GLBufferAttribute setBuffer:function setBuffer(buffer){this.buffer=buffer}; USES @788418/@788399 Audio sibling — readable public API name",
+   "name": "setBuffer",
+   "selector": "setBuffer@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @328175 function setClear(color,alpha) background clear helper; USES @325566/@325493 setClear(clearColor,clearAlpha)/setClear(background,1) — readable name",
+   "name": "setClear",
+   "selector": "setClear@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @420100 ColorBuffer setClear:function setClear(r,g,b,a,...) gl.clearColor wrapper; USES @424214 colorBuffer.setClear(0,0,0,1) — readable name",
+   "name": "setClear",
+   "selector": "setClear@u0020#1",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @420947 DepthBuffer setClear:function setClear(depth) gl.clearDepth wrapper; USES @424244 depthBuffer.setClear(1) — readable name",
+   "name": "setClear",
+   "selector": "setClear@u0020#2",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @422381 StencilBuffer setClear:function setClear(stencil) gl.clearStencil wrapper; USES @424270 stencilBuffer.setClear(0) — readable name",
+   "name": "setClear",
+   "selector": "setClear@u0020#3",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @328576 setClearAlpha:function in background module return; USES @495993/@496029 background.setClearAlpha.apply passthrough — readable public API name",
+   "name": "setClearAlpha",
+   "selector": "setClearAlpha@u0020#0",
+   "slice": "slice-05",
+   "disposition": "keep",
+   "reason": null
+  }
+ ]
+}

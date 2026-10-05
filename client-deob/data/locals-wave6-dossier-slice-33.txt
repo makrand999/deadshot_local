@@ -1,0 +1,180 @@
+# DOSSIER slice-33 (wave 6, 33 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/33] BasisFile@u0045#0 | kind=var depth=9 refCount=1 | engine/webgl-renderer.js
+DECL @821 (verified):
+nary);break;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/33] _BasisFile@u0045#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @90 (verified):
+usvzFuAsEB.BasisTextureLoader.BasisWorker=function(){var config;var transcoderPending;var _BasisFile;onmessage=function(e){var message=e.data;switch(message.type){case'init':config=message.config;init(message.transcoderBinary);break;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',i[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 2 nearest outside DECL window:
+@860: id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var basisFile=new _BasisFile(new Uint8Array(buffer));var width=basisFile.getImageWidth(0,0);var height=basisFile.getImageHeight(0,0);var levels=basisFile.getNumLevels(0);var hasAlp
+@948: erPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var basisFile=new _BasisFile(new Uint8Array(buffer));var width=basisFile.getImageWidth(0,0);var height=basisFile.getImageHeight(0,0);var levels=basisFile.getNumLevels(0);var hasAlpha=basisFile.getHasAlpha();function cleanup(){basisFile.close();basisFile.delete();}if(!
+==============================================================================
+[3/33] basisFile@u0045#0 | kind=var depth=7 refCount=11 | engine/webgl-renderer.js
+DECL @934 (verified):
+message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,initializeBasis}=BasisModule;_BasisFile=BasisFile;initializeBasis();});}function transcode(buffer){var [...line truncated...]
+USES: refCount=11, 12 token-occurrences in unit, showing 4 nearest outside DECL window:
+@1566: row new Error('usvzFuAsEB.BasisTextureLoader:\tInvalid .basis file');}if(!basisFile.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){clea
+@1611: \tInvalid .basis file');}if(!basisFile.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextur
+@1666: ()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .transcodeImage failed.');}mipmaps.push({data:
+@1739: coding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var status=basisFile.transcodeImage(dst,0,mip,config.format,0,hasAlpha);if(!status){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .transcodeImage failed.');}mipmaps.push({data:dst,width:mipWidth,height:mipHeight});}cleanup();return{width,height,hasA
+==============================================================================
+[4/33] initializeBasis@u0045#0 | kind=var depth=9 refCount=1 | engine/webgl-renderer.js
+DECL @831 (verified):
+k;case'transcode':transcoderPending.then(()=>{try{var {width,height,hasAlpha,mipmaps,format}=transcode(message.buffer);var buffers=[];for(var i=0;i<mipmaps.length;++i){buffers.push(mipmaps[i].data.buffer);}self.postMessage({type:'transcode',id:message.id,width,height,hasAlpha,mipmaps,format},buffers);}catch(error){console.error(error);self.postMessage({type:'error',id:message.id,error:error.message});}});break;}};function init(wasmBinary){var BasisModule;transcoderPending=new Promise(resolve=>{BasisModule={wasmBinary,onRuntimeInitialized:resolve};BASIS(BasisModule);}).then(()=>{var {BasisFile,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/33] status@u0045#0 | kind=var depth=7 refCount=1 | engine/webgl-renderer.js
+DECL @1732 (verified):
+ha();function cleanup(){basisFile.close();basisFile.delete();}if(!hasAlpha){switch(config.format){case 9:config.format=8;break;default:break;}}if(!width||!height||!levels){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader:\tInvalid .basis file');}if(!basisFile.startTranscoding()){cleanup();throw new Error('usvzFuAsEB.BasisTextureLoader: .startTranscoding failed');}var mipmaps=[];for(var mip=0;mip<levels;mip++){var mipWidth=basisFile.getImageWidth(0,mip);var mipHeight=basisFile.getImageHeight(0,mip);var dst=new Uint8Array(basisFile.getImageTranscodedSizeInBytes(0,mip,config.format));var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/33] a3k@u2141#0 | kind=param depth=5 refCount=3 | ui/widgets.js
+DECL @12 (verified):
+function Mf(a3k,a3l,a3m,a3n,a3o){var arQ=ai1,a3p=document['createElement']("canvas");a3p["width"]=a3k,a3p["height"]=a3l;var a3q=a3p['getContext']('2d'),a3r=a3q['createLinearGradient'](0x0,0x0,a3m*a3k,a3n*a3l);for(var a3s=0x0;a3s<a3o['length'];a3s++){a3r['addColorStop'](a3o[a3s][0x0],a3o[a3s][0x1]);}return a3q["fillStyle"]=a3r,a3q['fillRect'](0x0,0x0,a3k,a3l),a3p;}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/33] a3s@u2141#0 | kind=var depth=5 refCount=4 | ui/widgets.js
+DECL @217 (verified):
+function Mf(a3k,a3l,a3m,a3n,a3o){var arQ=ai1,a3p=document['createElement']("canvas");a3p["width"]=a3k,a3p["height"]=a3l;var a3q=a3p['getContext']('2d'),a3r=a3q['createLinearGradient'](0x0,0x0,a3m*a3k,a3n*a3l);for(var a3s=0x0;a3s<a3o['length'];a3s++){a3r['addColorStop'](a3o[a3s][0x0],a3o[a3s][0x1]);}return a3q["fillStyle"]=a3r,a3q['fillRect'](0x0,0x0,a3k,a3l),a3p;}
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/33] AyXbLxaib@u1747#0 | kind=var depth=5 refCount=8 | engine/webgl-renderer.js
+DECL @102 (verified):
+function makeGeoAABBs(geo){'use strict';if(geo.isBufferGeometry){var faceLength=geo.index.count/3;var AyXbLxaib;if(pZ){AyXbLxaib=new Float32Array(new SharedArrayBuffer(faceBufferLength*faceLength*4));}else{AyXbLxaib=new Float32Array(faceBufferLength*faceLength);}var min=new usvzFuAsEB.gURkzCzeY();var max=new usvzFuAsEB.gURkzCzeY();var verts=[];for(var i=0;i<3;i++){verts[i]=new usvzFuAsEB.gURkzCzeY();}var faceObj={a:0,b:1,c:2};for(var x=0;x<geo.index.count/3;x++){var face=geo.faces[x];face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}var AyXbLxaib;if(pZ&&false[...line truncated...]
+USES: refCount=8, 10 token-occurrences in unit, showing 2 nearest outside DECL window:
+@1108: vzFuAsEB.gURkzCzeY();for(var x=0;x<geo.faces.length;x++){geo.faces[x].aabb=new GV(geo.faces[x]);}for(var x=0;x<geo.faces.length;x++){var face=geo.faces[x];if(face.skip){continue;}var n=face.normal;face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}
+@1129: for(var x=0;x<geo.faces.length;x++){geo.faces[x].aabb=new GV(geo.faces[x]);}for(var x=0;x<geo.faces.length;x++){var face=geo.faces[x];if(face.skip){continue;}var n=face.normal;face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}
+==============================================================================
+[9/33] faceLength@u1747#0 | kind=var depth=5 refCount=2 | engine/webgl-renderer.js
+DECL @69 (verified):
+function makeGeoAABBs(geo){'use strict';if(geo.isBufferGeometry){var faceLength=geo.index.count/3;var AyXbLxaib;if(pZ){AyXbLxaib=new Float32Array(new SharedArrayBuffer(faceBufferLength*faceLength*4));}else{AyXbLxaib=new Float32Array(faceBufferLength*faceLength);}var min=new usvzFuAsEB.gURkzCzeY();var max=new usvzFuAsEB.gURkzCzeY();var verts=[];for(var i=0;i<3;i++){verts[i]=new usvzFuAsEB.gURkzCzeY();}var faceObj={a:0,b:1,c:2};for(var x=0;x<geo.index.count/3;x++){var face=geo.faces[x];face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}var AyXbLxaib;if(pZ&&false[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/33] faceObj@u1747#0 | kind=var depth=5 refCount=0 | engine/webgl-renderer.js
+DECL @408 (verified):
+function makeGeoAABBs(geo){'use strict';if(geo.isBufferGeometry){var faceLength=geo.index.count/3;var AyXbLxaib;if(pZ){AyXbLxaib=new Float32Array(new SharedArrayBuffer(faceBufferLength*faceLength*4));}else{AyXbLxaib=new Float32Array(faceBufferLength*faceLength);}var min=new usvzFuAsEB.gURkzCzeY();var max=new usvzFuAsEB.gURkzCzeY();var verts=[];for(var i=0;i<3;i++){verts[i]=new usvzFuAsEB.gURkzCzeY();}var faceObj={a:0,b:1,c:2};for(var x=0;x<geo.index.count/3;x++){var face=geo.faces[x];face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}var AyXbLxaib;if(pZ&&false[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/33] verts@u1747#0 | kind=var depth=5 refCount=1 | engine/webgl-renderer.js
+DECL @337 (verified):
+function makeGeoAABBs(geo){'use strict';if(geo.isBufferGeometry){var faceLength=geo.index.count/3;var AyXbLxaib;if(pZ){AyXbLxaib=new Float32Array(new SharedArrayBuffer(faceBufferLength*faceLength*4));}else{AyXbLxaib=new Float32Array(faceBufferLength*faceLength);}var min=new usvzFuAsEB.gURkzCzeY();var max=new usvzFuAsEB.gURkzCzeY();var verts=[];for(var i=0;i<3;i++){verts[i]=new usvzFuAsEB.gURkzCzeY();}var faceObj={a:0,b:1,c:2};for(var x=0;x<geo.index.count/3;x++){var face=geo.faces[x];face.added=false;makeAABB(geo.faces[x],geo.AUbXpMajF,AyXbLxaib,x);}return AyXbLxaib;}var AyXbLxaib;if(pZ&&false[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/33] a3s@u2156#0 | kind=var depth=5 refCount=4 | characters/weapon-attach.js
+DECL @1066 (verified):
+urrent\x20environment.')!=-0x1||a3p["indexOf"]('idpiframe_initialization_failed')!=-0x1){window["loginDisabled"]=!![];return;}if(a3p["indexOf"]('Script\x20error.')!=-0x1){window["loginDisabled"]=!![],console['log']('You\x27ve\x20encountered\x20a\x20\x27Script\x20error\x27,\x20please\x20send\x20a\x20screenshot\x20of\x20the\x20console\x20to\x20the\x20de'+"adshot.io discord, thank you!");return;}var a3q=["dhdgffkkebhmkfjojejmpbldmpobfkfo",'gcalenpjmijncebpfijmoaglllgpjagf','jinjaccalgkegednnccohejagnlnfdag'];for(var a3r=0x0;a3r<a3q['length'];a3r++){if(a3p['indexOf'](a3q[a3r])!=-0x1){}}if(L1){var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/33] a3i@u0405#0 | kind=param depth=5 refCount=5 | ui/widgets.js
+DECL @12 (verified):
+function ub(a3i){var apd=ai1;if(tV[a3i]==undefined)return;var a3j=tV[tW];a3j!=undefined&&a3j["options"]!=undefined&&a3j["options"]['onHide']!=undefined&&tW!=a3i&&a3j['options']["onHide"]();tW=a3i;var a3k=tV[a3i];a3k['options']!=undefined&&a3k['options']['onShow']!=undefined&&a3k["options"]["onShow"](),window['updateSettingsCategoryHeader']!=undefined&&window["updateSettingsCategoryHeader"](a3i);}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[14/33] a3k@u2117#0 | kind=param depth=5 refCount=5 | ui/widgets.js
+DECL @12 (verified):
+function LW(a3k){var ard=ai1;if(LV[a3k])return LV[a3k];return LV[a3k]=document['getElementById'](a3k),document["getElementById"](a3k);}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[15/33] a3o@u2507#0 | kind=param depth=5 refCount=3 | sim/game-loop.js
+DECL @12 (verified):
+function Wq(a3o){a3o['ticksLeft']=0xa*0x1e,Tm['add'](a3o),Wn['push'](a3o);}
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[16/33] a3p@u2226#0 | kind=var depth=5 refCount=2 | sim/input.js
+DECL @861 (verified):
+R0(0x6)&&(QU(0x6)?(R4=!![],WP()):(R4=![],SW["d2J6H770A10"]=![],SW['zBgadyCVYk']['OUsPgMLOT']=![]));R0(0x7)&&(QU(0x7)?(R3=!![],Wu=![],Wt=!![]):(R3=![],Wu=!![]));R0(0x2)&&(WF["hRdQS9697"]=QU(0x2));R0(0x1)&&(WF["space"]=QU(0x1));R0(0x0)&&(WF["HpsuHliFMHL"]=QU(0x0));R0(0x3)&&(WF["MFUoomFzxq"]=QU(0x3));for(var a3l=0x0;a3l<0x8;a3l++){QY[a3l]=QU(a3l);}if(QS['axes']["length"]>=0x4){var a3m=QX(QS['axes'][0x2]),a3n=QX(QS["axes"][0x3]),a3o=Math["sqrt"](a3m*a3m+a3n*a3n);a3o>0x1&&(a3o=0x1);a3o>0x0&&(a3m/=a3o,a3n/=a3o,a3o=Math['pow'](a3o,2.2),a3m*=a3o,a3n*=a3o,a3m*=0x17*X2*Xd()/X1,a3n*=0x17*X2*Xd()/X1);var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/33] a3s@u2226#0 | kind=var depth=5 refCount=1 | sim/input.js
+DECL @1395 (verified):
+,a3m*=a3o,a3n*=a3o,a3m*=0x17*X2*Xd()/X1,a3n*=0x17*X2*Xd()/X1);var a3p=a1W(a3m,a3n,[0.7,0x1,1.2]);WY[RY][OO]-=a3p['aqlERUszRBZ'],X7-=a3p['dpXVcjPBbU'],Oe['x']=QX(QS['axes'][0x0])*0x5a,Oe['y']=QX(QS['axes'][0x1])*0x5a,Fl["CNFryyAhIm"](0x0),R1['left']=R1['right']=R1['up']=R1['down']=![];if(Oe['length']()>0x2d){Oe['divideScalar'](Oe["length"]());var a3q=0.45;if(Oe['x']>a3q)R1['right']=!![];else Oe['x']<-a3q&&(R1['left']=!![]);if(Oe['y']>a3q)R1["down"]=!![];else Oe['y']<-a3q&&(R1['up']=!![]);var a3r=Math['atan2']((R1['up']?-0x1:0x0)+(R1['down']?0x1:0x0),(R1['right']?0x1:0x0)+(R1['left']?-0x1:0x0)),[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/33] gtag@u2868#0 | kind=function depth=5 refCount=3 | characters/mesh-pool.js
+DECL @164 (verified):
+if(L1){var Sk=document.createElement('script');Sk.async=true;Sk.crossOrigin='anonymous';Sk.src='https://www.googletagmanager.com/gtag/js?id=UA-87346685-5';function gtag(){dataLayer.push(arguments);}gtag('js',new Date());Sk.onload=function(){try{if(gtag!==undefined){gtag('config','G-4T2ZJXRRCK',{cookie_flags:'secure;samesite=none'});}}catch(e){if(!L1){console.log(e);}}};document.head.appendChild(Sk);}
+USES: refCount=3, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/33] EZ@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88237 (verified):
+530,16,-254,0,-1983,-25,-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/33] F0@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88240 (verified):
+,16,-254,0,-1983,-25,-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[21/33] F1@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88243 (verified):
+,-254,0,-1983,-25,-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[22/33] F2@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88246 (verified):
+54,0,-1983,-25,-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[23/33] F3@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88249 (verified):
+0,-1983,-25,-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[24/33] F4@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88252 (verified):
+1983,-25,-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[25/33] F5@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88255 (verified):
+3,-25,-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[26/33] F6@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88258 (verified):
+25,-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,F5,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[27/33] F7@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88261 (verified):
+-4142,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,F5,F6,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[28/33] F8@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88264 (verified):
+42,0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,F5,F6,F7,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[29/33] F9@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88267 (verified):
+0,-16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,F5,F6,F7,F8,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[30/33] Fa@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88270 (verified):
+16,588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,F5,F6,F7,F8,F9,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[31/33] Fb@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88273 (verified):
+588,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,F5,F6,F7,F8,F9,Fa,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[32/33] Fc@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88276 (verified):
+,4,0,-1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,F5,F6,F7,F8,F9,Fa,Fb,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[33/33] Fe@u1709#0 | kind=var depth=3 refCount=0 | world/map-table.js
+DECL @88282 (verified):
+1461,6580,6022,1000,588,0,0,0,0,1238,0,0,0,0,588,0,33574,1824,2399,1000,734,-98,0,0,1034,7747,0,0,0,0,741,0,19887,4118,-1813,1000,2350,0,0,0,0,6489,0,0,0,0,2350,0,24641,5299,-4185,1000,588,0,0,0,0,1094,0,0,0,0,588,0,28266,1909,-6055,1000,2099,0,1080,0,0,4229,0,0,-1080,0,2099,0,26916,3232,14362,1000,1545,0,0,0,0,6144,0,0,0,0,1545,0,2742,5890,-19471,1000,1066,0,0,0,0,3736,0,0,0,0,1066,0,4713,3239,-20485,1000,1053,0,0,0,0,4767,0,0,0,0,1053,0,10124,2435,-27634,1000\x20],\x22grass\x22:[],\x22precision\x22:1000\x20}'}},EN,EO,EP,EQ,ER,ES,ET,EU,EV,EW,EX,EY,EZ,F0,F1,F2,F3,F4,F5,F6,F7,F8,F9,Fa,Fb,Fc,Fd,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-33: propose EVERY binding above.

@@ -1,0 +1,67 @@
+# DOSSIER slice-27 (wave 11, 11 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/11] a3N@u1970#0 | kind=var depth=5 refCount=0 | combat/fire.js
+DECL @2886 (verified):
+1.5-a56*a3j[0x0]*a3j[0x0]));};var a3l=new GV(),a3m=new usvzFuAsEB['Geometry'](),a3n=new usvzFuAsEB['Geometry'](),a3o=new Array(0x3),a3p=new usvzFuAsEB[("gURkzCzeY")](),a3q=new usvzFuAsEB['gURkzCzeY'](),a3r=new usvzFuAsEB['gURkzCzeY'](),a3s=new usvzFuAsEB['gURkzCzeY'](),a3t=new usvzFuAsEB[("gURkzCzeY")](),a3u=new usvzFuAsEB['gURkzCzeY'](),a3v=new usvzFuAsEB[("gURkzCzeY")](),a3w=new usvzFuAsEB[("vFgdYWoMXeQ")](),a3x=new usvzFuAsEB['vFgdYWoMXeQ'](),a3y=new usvzFuAsEB[("vFgdYWoMXeQ")](),a3z=0x0,a3A=0x0,a3B=0x0,a3C=0x0,a3D=0x0,a3E=0x0,a3F=0x0,a3G=0x0,a3H=0x0,a3I=0x0,a3J=0x0,a3K=0x0,a3L=0x0,a3M=0x0,[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/11] a54@u1970#0 | kind=var depth=5 refCount=0 | combat/fire.js
+DECL @36358 (verified):
+lxgw();Ff.RNQDluasaN=a55.RNQDluasaN;var loPNdwjKE=ER(a55,Ff,a58,a59);if(loPNdwjKE==null||loPNdwjKE.length==0){return 0;}return ES(a56,loPNdwjKE.array[0].point,a57);},EV=function(a55,a56,a57,a58,a59){if(!EW(a55))return;var a5a=EU(a55,a56,a57,a58,a59);if(a5a==null)return!![];if(a5a<0.1)return!![];return![];},EW=function(a55){var aqI=aqu;return a55["fkXbORMTcl"]!=undefined;};var a4Y=new usvzFuAsEB['gURkzCzeY'](),a4Z={'position':new usvzFuAsEB['gURkzCzeY']()},a50=new usvzFuAsEB['gURkzCzeY'](),a51=new usvzFuAsEB['gURkzCzeY'](),a52=new usvzFuAsEB['vFgdYWoMXeQ'](),a53=new usvzFuAsEB['vFgdYWoMXeQ'](),[...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/11] faceBox@u1970#0 | kind=var depth=7 refCount=4 | combat/fire.js
+DECL @6918 (verified):
+h(geo.faces[i]);fkXbORMTcl[x][z].faceVertexUvs[0][fkXbORMTcl[x][z].faces.length-1]=geo.faceVertexUvs[0][i];fkXbORMTcl[x][z].faceVertexUvs[1][fkXbORMTcl[x][z].faces.length-1]=geo.faceVertexUvs[1][i];}return spatial;};EQ=function(geo,splitSize,materials){'use strict';var spatial={map:[],startPos:new usvzFuAsEB.gURkzCzeY(),endPos:new usvzFuAsEB.gURkzCzeY(),maxBox:new usvzFuAsEB.gURkzCzeY(),minBox:new usvzFuAsEB.gURkzCzeY()};var fkXbORMTcl=spatial.map;var min=geo.AUbXpMajF[geo.faces[0].a].clone();var max=geo.AUbXpMajF[geo.faces[0].a].clone();var minBox=spatial.minBox;var maxBox=spatial.maxBox;var [...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 2 nearest outside DECL window:
+@7841: var xa=fkXbORMTcl[x-minBox.x]=[];xa.length=zLength;}var currentBox=new usvzFuAsEB.gURkzCzeY();for(var i=0;i<geo.faces.length;i++){points[0]=geo.AUbXpMajF[geo.faces[i].a];points[1]=geo.AUbXpMajF[geo.faces[i].b];points[2]=geo.AUbXpMajF[geo.faces[i].c];faceBox.setFromPoints(points);faceBox.getCenter(center);EY(spatial,center,currentBox,boxScale);var x=currentBox.x;var z=currentBox.z;if(fkXbORMTcl[x][z]==null){fkXbORMTcl[x][z]=[];for(var j=0;j<materials;j++){var newGeo=new usvzFuAsEB.Geometry();newG
+@7871: [];xa.length=zLength;}var currentBox=new usvzFuAsEB.gURkzCzeY();for(var i=0;i<geo.faces.length;i++){points[0]=geo.AUbXpMajF[geo.faces[i].a];points[1]=geo.AUbXpMajF[geo.faces[i].b];points[2]=geo.AUbXpMajF[geo.faces[i].c];faceBox.setFromPoints(points);faceBox.getCenter(center);EY(spatial,center,currentBox,boxScale);var x=currentBox.x;var z=currentBox.z;if(fkXbORMTcl[x][z]==null){fkXbORMTcl[x][z]=[];for(var j=0;j<materials;j++){var newGeo=new usvzFuAsEB.Geometry();newGeo.AUbXpMajF=geo.AUbXpMajF;new
+==============================================================================
+[4/11] filter@u1970#0 | kind=param depth=7 refCount=2 | combat/fire.js
+DECL @3734 (verified):
+![],a4c=null,a4d=null,a4e=null,a4f=null;Jx=[],Jy=[];var a4g=Math['PI']/0x80;for(var a4h=0x0;a4h<0x100;a4h++){Jx[a4h]=Math['KkKRLGFtA'](Math["sin"](a4h*a4g)),Jy[a4h]=Math["KkKRLGFtA"](Math["cos"](a4h*a4g));}var a4i=1.7,a4j=0x1/a4i;function a4k(a55,a56,a57){var aqA=aqu;return a57['copy'](a56)['min'](a55['endPos'])["max"](a55["startPos"])["sub"](a55['startPos']),a57["OpiuFvBcQd"](a4j),a57['floor'](),a57;}EY=function(a55,a56,a57,a58){var aqB=aqu;return a57['copy'](a56)['min'](a55['endPos'])["max"](a55['startPos'])['sub'](a55['startPos']),a57['OpiuFvBcQd'](a58),a57['floor'](),a57;};EO=function(geo,[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 2 nearest outside DECL window:
+@4546: axBox.y-minBox.y+1;var zLength=maxBox.z-minBox.z+1;for(var x=minBox.x;x<=maxBox.x;x++){var xa=fkXbORMTcl[x-minBox.x]=[];xa.length=yLength;for(var y=minBox.y;y<=maxBox.y;y++){(xa[y-minBox.y]=[]).length=zLength;}}for(var i=0;i<geo.faces.length;i++){if(filter!==undefined&&filter(geo,i)){continue;}var a=geo.faces[i].aabb;a4k(spatial,a.min,minBox);a4k(spatial,a.max,maxBox);for(var x=minBox.x;x<=maxBox.x;x++){for(var y=minBox.y;y<=maxBox.y;y++){for(var z=minBox.z;z<=maxBox.z;z++){if(fkXbORMTcl[x][y][z
+@4566: ar zLength=maxBox.z-minBox.z+1;for(var x=minBox.x;x<=maxBox.x;x++){var xa=fkXbORMTcl[x-minBox.x]=[];xa.length=yLength;for(var y=minBox.y;y<=maxBox.y;y++){(xa[y-minBox.y]=[]).length=zLength;}}for(var i=0;i<geo.faces.length;i++){if(filter!==undefined&&filter(geo,i)){continue;}var a=geo.faces[i].aabb;a4k(spatial,a.min,minBox);a4k(spatial,a.max,maxBox);for(var x=minBox.x;x<=maxBox.x;x++){for(var y=minBox.y;y<=maxBox.y;y++){for(var z=minBox.z;z<=maxBox.z;z++){if(fkXbORMTcl[x][y][z]==null){fkXbORMTcl[
+==============================================================================
+[5/11] materials@u1970#0 | kind=param depth=7 refCount=1 | combat/fire.js
+DECL @6560 (verified):
+tBox=new usvzFuAsEB.gURkzCzeY();for(var i=0;i<geo.faces.length;i++){EY(spatial,geo.faces[i].center,currentBox,boxScale);var x=currentBox.x;var z=currentBox.z;if(fkXbORMTcl[x][z]==null){var newGeo=new usvzFuAsEB.Geometry();newGeo.AUbXpMajF=geo.AUbXpMajF;newGeo.faceVertexUvs[0]=[];newGeo.faceVertexUvs[1]=[];fkXbORMTcl[x][z]=newGeo;}fkXbORMTcl[x][z].faces.push(geo.faces[i]);fkXbORMTcl[x][z].faceVertexUvs[0][fkXbORMTcl[x][z].faces.length-1]=geo.faceVertexUvs[0][i];fkXbORMTcl[x][z].faceVertexUvs[1][fkXbORMTcl[x][z].faces.length-1]=geo.faceVertexUvs[1][i];}return spatial;};EQ=function(geo,splitSize,[...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 1 nearest outside DECL window:
+@8035: geo.faces[i].b];points[2]=geo.AUbXpMajF[geo.faces[i].c];faceBox.setFromPoints(points);faceBox.getCenter(center);EY(spatial,center,currentBox,boxScale);var x=currentBox.x;var z=currentBox.z;if(fkXbORMTcl[x][z]==null){fkXbORMTcl[x][z]=[];for(var j=0;j<materials;j++){var newGeo=new usvzFuAsEB.Geometry();newGeo.AUbXpMajF=geo.AUbXpMajF;newGeo.faceVertexUvs[0]=[];newGeo.faceVertexUvs[1]=[];fkXbORMTcl[x][z][j]=newGeo;}}var m=geo.faces[i].materialIndex;delete geo.faces[i].materialIndex;if(fkXbORMTcl[x][
+==============================================================================
+[6/11] result@u0146#0 | kind=var depth=5 refCount=1 | world/modes.js
+DECL @141 (verified):
+var fpsCounter={startTime:0,frameNumber:0,getFPS:function(){this.frameNumber++;var d=new Date().getTime(),IUTkaCQgos=(d-this.startTime)/1000,result=Math.floor(this.frameNumber/IUTkaCQgos);if(IUTkaCQgos>1){this.startTime=new Date().getTime();this.frameNumber=0;}return result;}};
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/11] UU@u2469#0 | kind=var depth=3 refCount=1 | engine/webgl-renderer.js
+DECL @151 (verified):
+var UR=NJ([-0x6d,-0x5e,-0x5f,-0x59,-0x5e]),US=new usvzFuAsEB['Texture']({'image':Kr['pANxEEFMRM'](new Kr['QtjDeukbWl'](),0x100,0x100)['image']}),UT=[],UU=[];
+USES: refCount=1, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/11] rm@u0208#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var rm=rl,rn={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/11] NR@u2182#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @18 (verified):
+var NP=0x0,NQ=0x1,NR=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/11] ZS@u2699#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @13 (verified):
+var ZP,ZQ,ZR,ZS;
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/11] Wj@u2506#0 | kind=var depth=3 refCount=0 | core/constants.js
+DECL @37 (verified):
+var QP,Wg=G5,Wh=0x3e8/G5,Wi=0x3e8/Wb,Wj=Wi,Wk=getTime(),Wl=0x21*G3,Wm=getTime(),Wn=[],Wo=[],Wp=[];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-27: propose EVERY binding above.

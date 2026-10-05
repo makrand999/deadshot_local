@@ -1,0 +1,76 @@
+# DOSSIER slice-31 (wave 9, 12 bindings)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# Served twin is fingerprint-identical for every binding in this wave (agree-only).
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/12] totalByteLength@u0046#0 | kind=let depth=10 refCount=2 | engine/assets-draco.js
+DECL @58389 (verified):
+sAlpha&&opt.transcoderFormat.length<2)continue;if(opt.needsPowerOfTwo&&!(isPowerOfTwo(width)&&isPowerOfTwo(height)))continue;transcoderFormat=opt.transcoderFormat[hasAlpha?1:0];engineFormat=opt.engineFormat[hasAlpha?1:0];return{transcoderFormat,engineFormat};}console.warn('usvzFuAsEB.KTX2Loader: No suitable compressed texture format found. Decoding to RGBA32.');transcoderFormat=TranscoderFormat.RGBA32;engineFormat=EngineFormat.RGBAFormat;return{transcoderFormat,engineFormat};}function isPowerOfTwo(value){if(value<=2)return true;return(value&value-1)===0&&value!==0;}function concat(arrays){let [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/12] transcodeResult@u0046#0 | kind=param depth=8 refCount=1 | engine/assets-draco.js
+DECL @51193 (verified):
+urn this.transcoderPending;}load(url,onLoad,onProgress,onError){if(this.workerConfig===null){throw new Error('usvzFuAsEB.KTX2Loader: Missing initialization with \'.detectSupport( qIySEZgti )\'.');}const loader=new FileLoader(this.manager);loader.setResponseType('arraybuffer');loader.setWithCredentials(this.withCredentials);loader.load(url,buffer=>{if(_taskCache.has(buffer)){const cachedTask=_taskCache.get(buffer);return cachedTask.promise.then(onLoad).catch(onError);}this._createTexture(buffer).then(texture=>onLoad?onLoad(texture):null).catch(onError);},onProgress,onError);}_createTextureFrom([...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/12] vkFormat@u0046#0 | kind=const depth=8 refCount=6 | engine/assets-draco.js
+DECL @59204 (verified):
+.byteLength;}return result;}};var FORMAT_MAP={[Ae]:RGBAFormat,[pe]:RGBAFormat,[Ot]:RGBAFormat,[Ft]:RGBAFormat,[de]:RGFormat,[se]:RGFormat,[yt]:RGFormat,[dt]:RGFormat,[xe]:RedFormat,[$t]:RedFormat,[gt]:RedFormat,[ct]:RedFormat};var TYPE_MAP={[Ae]:FloatType,[pe]:HalfFloatType,[Ot]:UnsignedByteType,[Ft]:UnsignedByteType,[de]:FloatType,[se]:HalfFloatType,[yt]:UnsignedByteType,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {[...line truncated...]
+USES: refCount=6, 11 token-occurrences in unit, showing 7 nearest outside DECL window:
+@59954: else{throw new Error('usvzFuAsEB.KTX2Loader: Unsupported supercompressionScheme.');}if(TYPE_MAP[vkFormat]===FloatType){view=new Float32Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Float32Array.BYTES_PER_ELEMENT);}else if(TYPE_MAP[vkFormat]===HalfFloatType){view=new Uint16Array(levelData.buffer,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTextur
+@60268: ,levelData.byteOffset,levelData.byteLength/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loader_exports);})());
+@60304: Length/Uint16Array.BYTES_PER_ELEMENT);}else{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loader_exports);})());
+@60344: lse{view=levelData;}const texture=pixelDepth===0?new DataTexture(view,pixelWidth,pixelHeight):new Data3DTexture(view,pixelWidth,pixelHeight,pixelDepth);texture.type=TYPE_MAP[vkFormat];texture.format=FORMAT_MAP[vkFormat];texture.encoding=ENCODING_MAP[vkFormat]||LinearEncoding;texture.afCJVYrCGK=true;return Promise.resolve(texture);}return __toCommonJS(KTX2Loader_exports);})());
+@51926: pmaps=false;texture.afCJVYrCGK=true;texture.encoding=dfdTransferFn===x?sRGBEncoding:LinearEncoding;texture.premultiplyAlpha=!!(dfdFlags&p);return texture;}async _createTexture(buffer,config={}){const container=Pi(new Uint8Array(buffer));if(container.vkFormat!==nt){return createDataTexture(container);}const taskConfig=config;const texturePending=this.init().then(()=>{return this.workerPool.postMessage({type:'transcode',buffer,taskConfig},[buffer]);}).then(e=>this._createTextureFrom(e.data,contain
+@5521: ||e[4]!==Ti[4]||e[5]!==Ti[5]||e[6]!==Ti[6]||e[7]!==Ti[7]||e[8]!==Ti[8]||e[9]!==Ti[9]||e[10]!==Ti[10]||e[11]!==Ti[11])throw new Error('Missing KTX 2.0 identifier.');const n2=new Si(),i=17*Uint32Array.BYTES_PER_ELEMENT,s=new Ii(t2,Ti.length,i,true);n2.vkFormat=s._nextUint32(),n2.typeSize=s._nextUint32(),n2.pixelWidth=s._nextUint32(),n2.pixelHeight=s._nextUint32(),n2.pixelDepth=s._nextUint32(),n2.layerCount=s._nextUint32(),n2.faceCount=s._nextUint32();const a=s._nextUint32();n2.supercompressionSche
+@3552: rs.length=0;this.queue.length=0;this.workerStatus=0;}};var t=0;var n=2;var p=1;var x=2;var nt=0;var ct=9;var gt=15;var yt=16;var dt=22;var Ot=37;var Ft=43;var $t=76;var se=83;var pe=97;var xe=100;var de=103;var Ae=109;var Si=class{constructor(){this.vkFormat=0,this.typeSize=1,this.pixelWidth=0,this.pixelHeight=0,this.pixelDepth=0,this.layerCount=0,this.faceCount=1,this.supercompressionScheme=0,this.levels=[],this.dataFormatDescriptor=[{vendorId:0,descriptorType:0,descriptorBlockSize:0,versionNum
+==============================================================================
+[4/12] workerCreator@u0046#0 | kind=param depth=7 refCount=1 | engine/assets-draco.js
+DECL @2812 (verified):
+_initWorker(workerId){if(!this.workers[workerId]){const worker=this.workerCreator();worker.addEventListener('message',this._onMessage.bind(this,workerId));this.workers[workerId]=worker;}}_getIdleWorker(){for(let i=0;i<this.pool;i++)if(!(this.workerStatus&1<<i))return i;return-1;}_onMessage(workerId,msg){const resolve=this.workersResolve[workerId];resolve&&resolve(msg);if(this.queue.length){const {resolve:resolve2,msg:msg2,transfer}=this.queue.shift();this.workersResolve[workerId]=resolve2;this.workers[workerId].postMessage(msg2,transfer);}else{this.workerStatus^=1<<workerId;}}setWorkerCreator([...line truncated...]
+USES: refCount=1, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/12] zstd@u0046#0 | kind=const depth=12 refCount=2 | engine/assets-draco.js
+DECL @59577 (verified):
+e,[dt]:UnsignedByteType,[xe]:FloatType,[$t]:HalfFloatType,[gt]:UnsignedByteType,[ct]:UnsignedByteType};var ENCODING_MAP={[Ft]:sRGBEncoding,[dt]:sRGBEncoding,[gt]:sRGBEncoding};async function createDataTexture(container){const {vkFormat,pixelWidth,pixelHeight,pixelDepth}=container;if(FORMAT_MAP[vkFormat]===void 0){throw new Error('usvzFuAsEB.KTX2Loader: Unsupported vkFormat.');}const level=container.levels[0];let levelData;let view;if(container.supercompressionScheme===t){levelData=level.levelData;}else if(container.supercompressionScheme===n){if(!_zstd){_zstd=new Promise(async resolve=>{const [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/12] textureID@u0026#0 | kind=param depth=5 refCount=2 | engine/shaders.js
+DECL @38 (verified):
+usvzFuAsEB.ShaderPass=function(shader,textureID){usvzFuAsEB.Pass.call(this);this.textureID=textureID!==undefined?textureID:'tDiffuse';if(shader instanceof usvzFuAsEB.wPChizNknM){this.uniforms=shader.uniforms;this.material=shader;}else if(shader){this.uniforms=usvzFuAsEB.UniformsUtils.clone(shader.uniforms);this.material=new usvzFuAsEB.wPChizNknM({defines:Object.assign({},shader.defines),uniforms:this.uniforms,vertexShader:shader.vertexShader,fragmentShader:shader.fragmentShader});}this.fsQuad=new usvzFuAsEB.Pass.FullScreenQuad(this.material);};
+USES: refCount=2, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/12] self@u0019#0 | kind=param depth=5 refCount=1 | ui/widgets.js
+DECL @212 (verified):
+Array["prototype"]['join']=function(a3i=','){var aiG=ai1,a3j=this,a3k='';for(var a3l=0x0;a3l<a3j["length"];a3l++){a3l>0x0&&(a3k+=a3i),a3j[a3l]!==undefined&&a3j[a3l]!==null&&(a3k+=a3j[a3l]);}return a3k;},function(self){'use strict';var aiH=ai1;if(self['WeakMap']){}var a3i=Object["prototype"]["hasOwnProperty"],a3j=Object['defineProperty']&&(function(){var aiI=aiH;try{var a3m={};return a3m["value"]=0x1,Object['defineProperty']({},'x',a3m)['x']===0x1;}catch(a3n){}}()),a3k=function(a3m,a3n,a3o){if(a3j){var a3p={};a3p['configurable']=!![],a3p['writable']=!![],a3p['value']=a3o,Object['defineProperty'[...line truncated...]
+USES: refCount=1, 4 token-occurrences in unit, showing 2 nearest outside DECL window:
+@2103: 3o(a3q){return a3q+'_'+a3p()+'.'+a3p();}function a3p(){return Math['random']()['toString']()['substring'](0x2);}return a3k(a3m,"_polyfill",!![]),a3m;}());function a3l(a3m){return Object(a3m)===a3m;}}(typeof globalThis!=="undefined"?globalThis:typeof self!=='undefined'?self:typeof window!=='undefined'?window:typeof global!=='undefined'?global:this);
+@2122: '_'+a3p()+'.'+a3p();}function a3p(){return Math['random']()['toString']()['substring'](0x2);}return a3k(a3m,"_polyfill",!![]),a3m;}());function a3l(a3m){return Object(a3m)===a3m;}}(typeof globalThis!=="undefined"?globalThis:typeof self!=='undefined'?self:typeof window!=='undefined'?window:typeof global!=='undefined'?global:this);
+==============================================================================
+[8/12] qO@u0176#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var qO=qN,qP={};
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/12] KF@u2066#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @64 (verified):
+var Kv=![],Kw=![],Kx=0.3,Ky=0.3,Kz=0.3,KA=![],KB=[],KC=[],KD,KE,KF=![],KG=![],KH=[],KI={},KJ={},KK={},KL=[],KM=0x0,KN=0x0,KO=![];
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/12] VN@u2483#0 | kind=var depth=3 refCount=0 | sim/game-loop.js
+DECL @4 (verified):
+var VN=0x50,VO=NJ([-0x63,-0x65,-0x6c,-0x5b,-0x63,-0x5b,-0x64,-0x6a,-0x4e]);
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/12] a3o@u2776#0 | kind=param depth=5 refCount=0 | network/handlers.js
+DECL @21 (verified):
+'COCjGf0Sf':function(a3o){},
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/12] Tb@u2360#0 | kind=var depth=3 refCount=0 | engine/webgl-renderer.js
+DECL @12 (verified):
+var Ta=!![],Tb=new usvzFuAsEB['QTOKQmNlEY']();
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-31: propose EVERY binding above.

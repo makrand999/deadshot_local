@@ -1,0 +1,4411 @@
+{
+ "meta": {
+  "generatedBy": "client-deob/tools/merge-locals.mjs",
+  "wave": 49,
+  "date": "2026-09-29",
+  "merged": 181,
+  "heldLow": 0,
+  "heldInvalid": 1,
+  "kept": 3,
+  "skippedDone": 0,
+  "missingFiles": []
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var tg=tc[te[tf]] string trimmed of non-numeric edges, split(',') into Numbers fed to tb(); SERVED: identical flow with ai1-decoded length/split keys.",
+   "name": "configValueStr",
+   "selector": "tg@u0360#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "tg",
+   "binding": {
+    "unit": "u0360",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "for(var tf=0x0;tf<te['length'];tf++){if(typeof tc[te[tf]]=='string'){var tg=tc[te[tf]];for(var th=0x0;th<tg[\"length\"];th++){if(!isNaN"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0360",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "for(var tf=0x0;tf<te['length'];tf++){if(typeof tc[te[tf]]=='string'){var tg=tc[te[tf]];for(var th=0x0;th<tg[ai1(0x3a2)];th++){if(!isN"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: loop counter over tg chars in three trim/normalize loops; SERVED: same loops with ai1-decoded length key.",
+   "name": "charPos",
+   "selector": "th@u0360#0",
+   "slice": "slice-00",
+   "disposition": "heldInvalid",
+   "reason": null,
+   "token": "th",
+   "binding": {
+    "unit": "u0360",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "for(var tf=0x0;tf<te['length'];tf++){if(typeof tc[te[tf]]=='string'){var tg=tc[te[tf]];for(var th=0x0;th<tg[\"length\"];th++){if(!isNaN(tg['charAt'](th))){tg"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0360",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "for(var tf=0x0;tf<te['length'];tf++){if(typeof tc[te[tf]]=='string'){var tg=tc[te[tf]];for(var th=0x0;th<tg[ai1(0x3a2)];th++){if(!isNaN(tg['charAt'](th))){"
+   },
+   "note": "cross-unit top-level redecl: th already renamed file-wide by th@u2470#0->variantIdx (LD2); same (scope,token) cannot take two names"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var ti=tg.split(',') then Number() each element and pass ti[0..3] to tb(); SERVED: identical with ai1-decoded split key.",
+   "name": "configParts",
+   "selector": "ti@u0360#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "ti",
+   "binding": {
+    "unit": "u0360",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "];for(var th=0x0;th<tg[\"length\"];th++){if(!isNaN(tg['charAt'](th))){tg=tg['substr'](th);break;}}var ti=tg[\"split\"](',');tg=ti[ti['length']-0x1];for(var th=tg[\"l"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0360",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "for(var th=0x0;th<tg[ai1(0x3a2)];th++){if(!isNaN(tg['charAt'](th))){tg=tg['substr'](th);break;}}var ti=tg[ai1(0xb1e)](',');tg=ti[ti['length']-0x1];for(var th=tg"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a7q={y:+3} assigned to ah3 JaFgtqWxnF alongside shown/hidden sibling styles; SERVED: same object assigned via arY(0x8b4).",
+   "name": "linkPressedStyle",
+   "selector": "a7q@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7q",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",ah3['shown']=a7o;var a7p={};a7p[\"opacity\"]=0.5,a7p['y']=a7l['position']['y'],ah3['hidden']=a7p;var a7q={};a7q['y']=a7l['position']['y']+0x3,ah3[\"JaFgtqWxnF\"]=a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ah3['shown']=a7o;var a7p={};a7p[arY(0x40e)]=0.5,a7p['y']=a7l['position']['y'],ah3['hidden']=a7p;var a7q={};a7q['y']=a7l['position']['y']+0x3,ah3[arY(0x8b4)]=a7q"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Mj(a3k,'|',...) separator label between footer links at opacity 0.1 added to a7f; SERVED: identical separator construction.",
+   "name": "dividerLabel",
+   "selector": "a7r@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7r",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "c[\"ixjwTFmpU\"],Mu['fAdWFGQLqES'](ah3),Mu[\"fAdWFGQLqES\"](a7n),a7i-=a7l['width']+0x1e;if(a3M>0x0){var a7r=Mj(a3k,'|',a7i+0xf,a7l[\"position\"]['y']-0x2,0x19,'center"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ")]=tc[arY(0x386)],Mu['fAdWFGQLqES'](ah3),Mu[arY(0xb05)](a7n),a7i-=a7l['width']+0x1e;if(a3M>0x0){var a7r=Mj(a3k,'|',a7i+0xf,a7l[arY(0x215)]['y']-0x2,0x19,'center"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: object literal {title,title2,name,date,link} aliased by a7t for the Community Spotlight card; SERVED: same literal with arY-encoded keys.",
+   "name": "spotlightData",
+   "selector": "a7s@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7s",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": ");a7r['opacity']=0.1,a7r[\"size\"]=a7k,a7f[\"add\"](a7r);}}Mu['add'](a7f);if(!Kq['rEdLBblXu']&&![]){var a7s={};a7s[\"title\"]='DE'+\"ADSHOT.io SUS\",a7s['title2']='GAME"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "acity']=0.1,a7r[arY(0xe8c)]=a7k,a7f[arY(0x8da)](a7r);}}Mu['add'](a7f);if(!Kq['rEdLBblXu']&&![]){var a7s={};a7s[arY(0xcd)]='DE'+arY(0x7e6),a7s['title2']='GAMEPLA"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a7t=a7s alias whose title/title2/name/date/link render the Community Spotlight card; SERVED: same alias and field uses.",
+   "name": "spotlightInfo",
+   "selector": "a7t@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7t",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "ZZZZ\",a7s['date']='Jun\\x201,\\x202023',a7s[\"link\"]='https://www.youtube.com/watch?v=qhhQDq1n1IE';var a7t=a7s,a7u=a6N('promo/ccs/zzzz/thumbnail.webp'),a7v=a6N(\"pr"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "),a7s['date']='Jun\\x201,\\x202023',a7s[arY(0xadc)]='https://www.youtube.com/watch?v=qhhQDq1n1IE';var a7t=a7s,a7u=a6N('promo/ccs/zzzz/thumbnail.webp'),a7v=a6N(arY"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a6N('promo/ccs/zzzz/thumbnail.webp') passed to the large card image; SERVED: identical literal and image use.",
+   "name": "spotlightThumbnail",
+   "selector": "a7u@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7u",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "s['date']='Jun\\x201,\\x202023',a7s[\"link\"]='https://www.youtube.com/watch?v=qhhQDq1n1IE';var a7t=a7s,a7u=a6N('promo/ccs/zzzz/thumbnail.webp'),a7v=a6N(\"promo/ccs/"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ate']='Jun\\x201,\\x202023',a7s[arY(0xadc)]='https://www.youtube.com/watch?v=qhhQDq1n1IE';var a7t=a7s,a7u=a6N('promo/ccs/zzzz/thumbnail.webp'),a7v=a6N(arY(0x717))"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a6N('promo/ccs/zzzz/pfp.jpg') passed to the small 0x28 avatar image; SERVED: same loader call with encoded path.",
+   "name": "authorAvatar",
+   "selector": "a7v@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7v",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "='https://www.youtube.com/watch?v=qhhQDq1n1IE';var a7t=a7s,a7u=a6N('promo/ccs/zzzz/thumbnail.webp'),a7v=a6N(\"promo/ccs/zzzz/pfp.jpg\"),a7w=new a3k['object']();a7"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "='https://www.youtube.com/watch?v=qhhQDq1n1IE';var a7t=a7s,a7u=a6N('promo/ccs/zzzz/thumbnail.webp'),a7v=a6N(arY(0x717)),a7w=new a3k['object']();a7w['position']["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new a3k object container added to a7f receiving title/avatar/name/date children; SERVED: same container with identical add() calls.",
+   "name": "spotlightPanel",
+   "selector": "a7w@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7w",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "qhhQDq1n1IE';var a7t=a7s,a7u=a6N('promo/ccs/zzzz/thumbnail.webp'),a7v=a6N(\"promo/ccs/zzzz/pfp.jpg\"),a7w=new a3k['object']();a7w['position']['y']=-0x3d4,a7f['add"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "e.com/watch?v=qhhQDq1n1IE';var a7t=a7s,a7u=a6N('promo/ccs/zzzz/thumbnail.webp'),a7v=a6N(arY(0x717)),a7w=new a3k['object']();a7w['position']['y']=-0x3d4,a7f['add"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: a7x=0x3c extends the card makeContainer height and y-center; SERVED: identical constant and container math.",
+   "name": "cardExtraHeight",
+   "selector": "a7x@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7x",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "7w=new a3k['object']();a7w['position']['y']=-0x3d4,a7f['add'](a7w),a7w['opacity']=0.75;var a4N=0.85,a7x=0x3c,a7y=a3m[\"element\"](a3m['makeContainer'](-0xb9,0x1f4"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "7w=new a3k['object']();a7w['position']['y']=-0x3d4,a7f['add'](a7w),a7w['opacity']=0.75;var a4N=0.85,a7x=0x3c,a7y=a3m[arY(0x6d6)](a3m['makeContainer'](-0xb9,0x1f"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: clickable element wrapping the spotlight container with hover states and onclick opening the promo link; SERVED: same element, hover, and onclick.",
+   "name": "spotlightCard",
+   "selector": "a7y@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7y",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "k['object']();a7w['position']['y']=-0x3d4,a7f['add'](a7w),a7w['opacity']=0.75;var a4N=0.85,a7x=0x3c,a7y=a3m[\"element\"](a3m['makeContainer'](-0xb9,0x1f4-0x438+a7"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "k['object']();a7w['position']['y']=-0x3d4,a7f['add'](a7w),a7w['opacity']=0.75;var a4N=0.85,a7x=0x3c,a7y=a3m[arY(0x6d6)](a3m['makeContainer'](-0xb9,0x1f4-0x438+a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a7z={opacity:0.95} assigned as a7y hover state; SERVED: same object assigned to hover with decoded opacity key.",
+   "name": "cardHoverStyle",
+   "selector": "a7z@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a7z",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "eContainer'](-0xb9,0x1f4-0x438+a7x/0x2,0x168*a4N,0xca*a4N+a7x));a7y[\"r23ZS3L2g\"]['opacity']=0.6;var a7z={};a7z[\"opacity\"]=0.95,a7y['hover']=a7z,a7y[\"xhOdNSwMWQd"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "eContainer'](-0xb9,0x1f4-0x438+a7x/0x2,0x168*a4N,0xca*a4N+a7x));a7y[\"r23ZS3L2g\"]['opacity']=0.6;var a7z={};a7z[arY(0x40e)]=0.95,a7y['hover']=a7z,a7y[arY(0xddf)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: Mj text label whose setText(Math.round(ah9)) shows the rank progress value; SERVED: identical construction and setText calls.",
+   "name": "scoreValueText",
+   "selector": "a80@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a80",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "(a7X);let a7Z=new a3k['object']();a7P['add'](a7Z),a7Z['position']['y']=-0xa+a7W,a7Z[\"size\"]=0.8;var a80=Mj(Kq[\"pkghYgdlX\"],'14',-0x19,-0x1,31.9,\"right\");a80['op"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": ");let a7Z=new a3k['object']();a7P['add'](a7Z),a7Z['position']['y']=-0xa+a7W,a7Z[arY(0xe8c)]=0.8;var a80=Mj(Kq[arY(0x232)],'14',-0x19,-0x1,31.9,arY(0xff3));a80['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: '/ 100' or '/ 10' suffix label updated via setText next to a80; SERVED: identical suffix label and updates.",
+   "name": "scoreMaxText",
+   "selector": "a81@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a81",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "0.8;var a80=Mj(Kq[\"pkghYgdlX\"],'14',-0x19,-0x1,31.9,\"right\");a80['opacity']=0.7,a7Z['add'](a80);var a81=Mj(Kq['pkghYgdlX'],\"/ 100\",-0xc,0x0,31.9,'left');a81['op"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "8;var a80=Mj(Kq[arY(0x232)],'14',-0x19,-0x1,31.9,arY(0xff3));a80['opacity']=0.7,a7Z['add'](a80);var a81=Mj(Kq['pkghYgdlX'],arY(0x690),-0xc,0x0,31.9,'left');a81["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new a3D('Ranked: On',...) button whose onclick toggles ranked mode and tweens a7P; SERVED: identical button, toggle body, and positioning.",
+   "name": "rankedToggleBtn",
+   "selector": "a82@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a82",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "81=Mj(Kq['pkghYgdlX'],\"/ 100\",-0xc,0x0,31.9,'left');a81['opacity']=0.2,a7Z['add'](a81),a7Q(a7R);var a82=new a3D('Ranked:\\x20On',(0x1b8/0x2-0xa+(Gj?0x1e:0x0))*1."
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "Mj(Kq['pkghYgdlX'],arY(0x690),-0xc,0x0,31.9,'left');a81['opacity']=0.2,a7Z['add'](a81),a7Q(a7R);var a82=new a3D('Ranked:\\x20On',(0x1b8/0x2-0xa+(Gj?0x1e:0x0))*1."
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: boolean flipped by the ranked toggle, persisted via KV('re'), and read in ab8; SERVED: same flag, persistence, and ab8 read.",
+   "name": "rankedEnabled",
+   "selector": "a83@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a83",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "Q(a7R);var a82=new a3D('Ranked:\\x20On',(0x1b8/0x2-0xa+(Gj?0x1e:0x0))*1.3,Gj?0x58:0x46,Gj?0x28:0x21),a83=!![];let a84=0x172;a82[\"onclick\"]=function(){var atK=arY"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "Q(a7R);var a82=new a3D('Ranked:\\x20On',(0x1b8/0x2-0xa+(Gj?0x1e:0x0))*1.3,Gj?0x58:0x46,Gj?0x28:0x21),a83=!![];let a84=0x172;a82[arY(0xbd0)]=function(){var atK=ar"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: let a84=0x172 passed as duration to the toggle HL tweens and zeroed for instant apply; SERVED: same initial value and tween uses.",
+   "name": "toggleDuration",
+   "selector": "a84@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a84",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "2=new a3D('Ranked:\\x20On',(0x1b8/0x2-0xa+(Gj?0x1e:0x0))*1.3,Gj?0x58:0x46,Gj?0x28:0x21),a83=!![];let a84=0x172;a82[\"onclick\"]=function(){var atK=arY;a83?(a82['se"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "2=new a3D('Ranked:\\x20On',(0x1b8/0x2-0xa+(Gj?0x1e:0x0))*1.3,Gj?0x58:0x46,Gj?0x28:0x21),a83=!![];let a84=0x172;a82[arY(0xbd0)]=function(){var atK=arY;a83?(a82['s"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: empty centered Mj text stored on Kq for later status messages; SERVED: identical construction, placement, and Kq assignment.",
+   "name": "statusText",
+   "selector": "a85@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a85",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "0x5-0x20+a7H),a82['xhOdNSwMWQd'](!![]),Mu[\"add\"](a82[\"r23ZS3L2g\"]),Mu['fAdWFGQLqES'](a82),a7L();var a85=Mj(a3k,'',0x0,0x1f4,0x19,'center','',0x1);a85['opacity']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "0x20+a7H),a82['xhOdNSwMWQd'](!![]),Mu[arY(0x8da)](a82[arY(0xc7e)]),Mu['fAdWFGQLqES'](a82),a7L();var a85=Mj(a3k,'',0x0,0x1f4,0x19,'center','',0x1);a85['opacity']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: new a3D('Change Playlists',...) menu button with hidden text style; SERVED: same button with encoded label.",
+   "name": "changePlaylistsBtn",
+   "selector": "a86@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a86",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "center','',0x1);a85['opacity']=0.5;!Gj&&Mu['add'](a85);Kq['kAYKXUcnTQV']=a85,Kq['yhtfGGmyFf']();var a86=new a3D(\"Change Playlists\",0x104,0x3c,0x17);a86[\"r23ZS3L"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "center','',0x1);a85['opacity']=0.5;!Gj&&Mu['add'](a85);Kq['kAYKXUcnTQV']=a85,Kq['yhtfGGmyFf']();var a86=new a3D(arY(0xab1),0x104,0x3c,0x17);a86[arY(0xc7e)]['pos"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: {size:1,opacity:1} assigned to a86 text hidden state; SERVED: same object assigned to the encoded hidden slot.",
+   "name": "textHiddenStyle",
+   "selector": "a87@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a87",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "6=new a3D(\"Change Playlists\",0x104,0x3c,0x17);a86[\"r23ZS3L2g\"]['position']['set'](-0x172,0x190);var a87={};a87['size']=0x1,a87['opacity']=0x1,a86['text']['hidde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "();var a86=new a3D(arY(0xab1),0x104,0x3c,0x17);a86[arY(0xc7e)]['position']['set'](-0x172,0x190);var a87={};a87['size']=0x1,a87['opacity']=0x1,a86['text']['hidde"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: 'Region: ' label updated by Kq updateRegion with the region name; SERVED: identical label and updateRegion hook.",
+   "name": "regionText",
+   "selector": "a89@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a89",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "e,\"center\",'',0x1);a88['opacity']=0.7,a88[\"ReDNKHkwk\"]=![],Kq['psUqMaJVeTK']=a88,Mu['add'](a88);var a89=Mj(a3k,'Region:\\x20',0x0,0x1f4,0x17,\"center\",'',0x1);a89"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",arY(0x5e7),'',0x1);a88['opacity']=0.7,a88[arY(0xb1d)]=![],Kq['psUqMaJVeTK']=a88,Mu['add'](a88);var a89=Mj(a3k,'Region:\\x20',0x0,0x1f4,0x17,arY(0x5e7),'',0x1);a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: a8A=0x0 y-offset threading Latest Update lines and Patch Notes button, adjusted for short lists; SERVED: same offsets and adjustment.",
+   "name": "notesOffsetY",
+   "selector": "a8A@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8A",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "d'](a8x);var a8z=new a3k['object']();N5[\"add\"](a8z),a8z['position']=Kq['nwxurZsxI']['position'];var a8A=0x0,a8B=0xf;a3m['yhikrzIhlK'](a8x,function(ah6){var atR="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "8x);var a8z=new a3k['object']();N5[arY(0x8da)](a8z),a8z['position']=Kq['nwxurZsxI']['position'];var a8A=0x0,a8B=0xf;a3m['yhikrzIhlK'](a8x,function(ah6){var atR="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: a8B=0xf x-offset threading the Latest Update text and button x positions; SERVED: same x-offset uses.",
+   "name": "notesOffsetX",
+   "selector": "a8B@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8B",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ";var a8z=new a3k['object']();N5[\"add\"](a8z),a8z['position']=Kq['nwxurZsxI']['position'];var a8A=0x0,a8B=0xf;a3m['yhikrzIhlK'](a8x,function(ah6){var atR=arY;ah6["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "a8z=new a3k['object']();N5[arY(0x8da)](a8z),a8z['position']=Kq['nwxurZsxI']['position'];var a8A=0x0,a8B=0xf;a3m['yhikrzIhlK'](a8x,function(ah6){var atR=arY;ah6["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: '.io' logo suffix text at opacity 0.4 added to Mb; SERVED: identical text, opacity, and parent.",
+   "name": "ioSuffixText",
+   "selector": "a8C@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8C",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "3k['text']('DEAD\\x20\\x20\\x20\\x20SH\\x20\\x20\\x20T',0x0,-0x5,'#FFF','Encode\\x20Sans',0x50,'bold'));var a8C=new a3k['text']('.io',0x10e,0x7,'#FFF','Verdana',0x28,\"b"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "3k['text']('DEAD\\x20\\x20\\x20\\x20SH\\x20\\x20\\x20T',0x0,-0x5,'#FFF','Encode\\x20Sans',0x50,'bold'));var a8C=new a3k['text']('.io',0x10e,0x7,'#FFF','Verdana',0x28,ar"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: a8D=-0x3c offsets logo Mc x and the nav tab cursor aeG; SERVED: same constant feeding both positions.",
+   "name": "logoOffsetX",
+   "selector": "a8D@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8D",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'text']('.io',0x10e,0x7,'#FFF','Verdana',0x28,\"bold\");a8C[\"opacity\"]=0.4,Mb['add'](a8C),Me(a3k);var a8D=0x32;a8D=-0x3c,Mc['size']=0.6,Mc['position']['x']=0x3de+"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "']('.io',0x10e,0x7,'#FFF','Verdana',0x28,arY(0x4b0));a8C[arY(0x40e)]=0.4,Mb['add'](a8C),Me(a3k);var a8D=0x32;a8D=-0x3c,Mc['size']=0.6,Mc['position']['x']=0x3de+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: array of menu tab name strings iterated to build tab buttons with indexOf lookups; SERVED: same array with encoded entries and lookups.",
+   "name": "menuTabNames",
+   "selector": "a8E@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8E",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "dd\"](new a3k[(\"image\")](a3k[\"getImage\"]('promo/logo.webp'),0x0,0x0,0x578,0x12c)),a7m['add'](Mc);var a8E=['PLAY\\x20GAME',\"SETTINGS\",'SHOP',\"LOCKER\",'LEADERBOARD'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "](new a3k[(arY(0xbf7))](a3k[arY(0xb18)]('promo/logo.webp'),0x0,0x0,0x578,0x12c)),a7m['add'](Mc);var a8E=['PLAY\\x20GAME',arY(0x808),'SHOP',arY(0x504),'LEADERBOAR"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a8F=0x5 gates a3M<a8F when adding hover bars, indicators, and tab buttons; SERVED: same constant and gate conditions.",
+   "name": "visibleTabCount",
+   "selector": "a8F@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8F",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "BOARD',\"ACCOUNT\"];Gj&&(a8E=['PLAY\\x20GAME',\"SETTINGS\",'SHOP',\"LOCKER\",'ACCOUNT',\"LEADERBOARD\"]);var a8F=0x5;Gj&&!Gl&&(a8F=0x5);var a8G;N6=[Mu];function a8H(ah6)"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "BOARD',arY(0x7ac)];Gj&&(a8E=['PLAY\\x20GAME',arY(0x808),'SHOP',arY(0x504),'ACCOUNT',arY(0x5cb)]);var a8F=0x5;Gj&&!Gl&&(a8F=0x5);var a8G;N6=[Mu];function a8H(ah6)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: declared tab name compared uppercased against a8E entries to auto-click the matching tab; SERVED: same declaration and auto-select comparison.",
+   "name": "initialTab",
+   "selector": "a8G@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8G",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "AY\\x20GAME',\"SETTINGS\",'SHOP',\"LOCKER\",'ACCOUNT',\"LEADERBOARD\"]);var a8F=0x5;Gj&&!Gl&&(a8F=0x5);var a8G;N6=[Mu];function a8H(ah6){var atS=arY;return ah6=ah6['to"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "LAY\\x20GAME',arY(0x808),'SHOP',arY(0x504),'ACCOUNT',arY(0x5cb)]);var a8F=0x5;Gj&&!Gl&&(a8F=0x5);var a8G;N6=[Mu];function a8H(ah6){var atS=arY;return ah6=ah6['to"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: function mapping uppercased tab names via a8E.indexOf to N6 scenes, called for LOCKER/SHOP/ACCOUNT/etc; SERVED: identical lookup with decoded indexOf.",
+   "name": "sceneForTab",
+   "selector": "a8H@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8H",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "\",'SHOP',\"LOCKER\",'ACCOUNT',\"LEADERBOARD\"]);var a8F=0x5;Gj&&!Gl&&(a8F=0x5);var a8G;N6=[Mu];function a8H(ah6){var atS=arY;return ah6=ah6['toUpperCase'](),N6[a8E["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "8),'SHOP',arY(0x504),'ACCOUNT',arY(0x5cb)]);var a8F=0x5;Gj&&!Gl&&(a8F=0x5);var a8G;N6=[Mu];function a8H(ah6){var atS=arY;return ah6=ah6['toUpperCase'](),N6[a8E["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: per-tab scene created into N6 and reused as the target scene for Coming Soon labels; SERVED: same dual scene role.",
+   "name": "tabScene",
+   "selector": "a8I@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8I",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "=arY;return ah6=ah6['toUpperCase'](),N6[a8E[\"indexOf\"](ah6)];}while(N6[\"length\"]<a8E['length']){var a8I=a3m['scene']();a8I['ReDNKHkwk']=![],N6['push'](a8I);}var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "Y;return ah6=ah6['toUpperCase'](),N6[a8E[atS(0xfad)](ah6)];}while(N6[arY(0x3a2)]<a8E['length']){var a8I=a3m['scene']();a8I['ReDNKHkwk']=![],N6['push'](a8I);}var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: empty list looped to stamp Coming Soon labels onto looked-up tab scenes; SERVED: same empty list and label loop.",
+   "name": "comingSoonTabs",
+   "selector": "a8J@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8J",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "}while(N6[\"length\"]<a8E['length']){var a8I=a3m['scene']();a8I['ReDNKHkwk']=![],N6['push'](a8I);}var a8J=[];for(var a3M=0x0;a3M<a8J[\"length\"];a3M++){var a8I=a8H("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "hile(N6[arY(0x3a2)]<a8E['length']){var a8I=a3m['scene']();a8I['ReDNKHkwk']=![],N6['push'](a8I);}var a8J=[];for(var a3M=0x0;a3M<a8J[arY(0x3a2)];a3M++){var a8I=a8"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a8H('SETTINGS') scene whose dom is shown/hidden by a8N/a8Q/a8R toggles; SERVED: same scene lookup and dom visibility toggles.",
+   "name": "settingsScene",
+   "selector": "a8K@u2151#0",
+   "slice": "slice-00",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a8K",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 25,
+    "snippet": "20Coming\\x20Soon',0x0,0x0,0x28,\"center\"),a3O[\"opacity\"]=0.5,a8I['add'](a3O);}Mu['doms']=[MW,MX];var a8K=a8H(\"SETTINGS\");a8K['dom']=MU;var a8L=a3m[\"scene\"]();!L1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 25,
+    "snippet": "oming\\x20Soon',0x0,0x0,0x28,arY(0x5e7)),a3O[arY(0x40e)]=0.5,a8I['add'](a3O);}Mu['doms']=[MW,MX];var a8K=a8H(arY(0x808));a8K['dom']=MU;var a8L=a3m[arY(0x39e)]();"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3P=a3z[0x6] on VM9 (@34876) and SERVED (@35082) sides, then mixes it into out[0x2]/[0x6]/[0xa]; same cached-source-element role both sides.",
+   "name": "srcElem06",
+   "selector": "a3P@u0008#8",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3P",
+   "binding": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 4,
+    "snippet": "a3B[0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 8,
+    "refCount": 4,
+    "snippet": "0x1],a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3Q=a3z[0x7] on VM9 (@34876) and SERVED (@35082) sides, then mixes it into out[0x3]/[0x7]/[0xb]; identical role both sides.",
+   "name": "srcElem07",
+   "selector": "a3Q@u0008#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Q",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "0x1],a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;retu"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 4,
+    "snippet": ",a3E=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;retu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3R=a3z[0x8] on VM9 (@34876) and SERVED (@35082) sides, then mixes it into out[0x0]/[0x4]/[0x8] via rot entries; identical role both sides.",
+   "name": "srcElem08",
+   "selector": "a3R@u0008#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3R",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 4,
+    "snippet": ",a3E=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "=a3B[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return M"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3S=a3z[0x9] on VM9 (@34876) and SERVED (@35082) sides, then mixes it into out[0x1]/[0x5]/[0x9]; identical role both sides (rotSrcElem* spelling avoids taken srcElem09).",
+   "name": "rotSrcElem09",
+   "selector": "a3S@u0008#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3S",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "=a3B[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 4,
+    "snippet": "[0x2],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "lookAt caches a3S=a3A[0x0] (center x) on VM9 (@39713) and SERVED (@39879) sides, used in eye-center coincidence tests and z-axis a3I=a3M-a3S; identical role both sides.",
+   "name": "centerVecX",
+   "selector": "a3S@u0008#6",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3S",
+   "binding": {
+    "unit": "u0008",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "G,a3H,a3I,a3J,a3K,a3L,a3M=a3z[0x0],a3N=a3z[0x1],a3O=a3z[0x2],a3P=a3B[0x0],a3Q=a3B[0x1],a3R=a3B[0x2],a3S=a3A[0x0],a3T=a3A[0x1],a3U=a3A[0x2];return Math[\"abs\"](a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 6,
+    "refCount": 2,
+    "snippet": "G,a3H,a3I,a3J,a3K,a3L,a3M=a3z[0x0],a3N=a3z[0x1],a3O=a3z[0x2],a3P=a3B[0x0],a3Q=a3B[0x1],a3R=a3B[0x2],a3S=a3A[0x0],a3T=a3A[0x1],a3U=a3A[0x2];return Math[aiv(0x4fc"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3T=a3z[0xa] on VM9 (@34889) and SERVED (@35095) sides, then mixes it into out[0x2]/[0x6]/[0xa]; identical role both sides (spelling avoids taken srcElem10).",
+   "name": "rotSrcElem10",
+   "selector": "a3T@u0008#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3T",
+   "binding": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "[0x2],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "],a3F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "lookAt caches a3T=a3A[0x1] (center y) on VM9 (@39713) and SERVED (@39892) sides, used in eye-center tests and z-axis a3J=a3N-a3T; identical role both sides.",
+   "name": "centerY",
+   "selector": "a3T@u0008#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3T",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 2,
+    "snippet": ",a3K,a3L,a3M=a3z[0x0],a3N=a3z[0x1],a3O=a3z[0x2],a3P=a3B[0x0],a3Q=a3B[0x1],a3R=a3B[0x2],a3S=a3A[0x0],a3T=a3A[0x1],a3U=a3A[0x2];return Math[\"abs\"](a3M-a3S)<a3l&&M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 2,
+    "snippet": ",a3K,a3L,a3M=a3z[0x0],a3N=a3z[0x1],a3O=a3z[0x2],a3P=a3B[0x0],a3Q=a3B[0x1],a3R=a3B[0x2],a3S=a3A[0x0],a3T=a3A[0x1],a3U=a3A[0x2];return Math[aiv(0x4fc)](a3M-a3S)<a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate caches a3U=a3z[0xb] on VM9 (@34902) and SERVED (@35108) sides, then mixes it into out[0x3]/[0x7]/[0xb]; identical role both sides (spelling avoids taken srcElem11).",
+   "name": "rotSrcElem11",
+   "selector": "a3U@u0008#4",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3U",
+   "binding": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "],a3F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 4,
+    "refCount": 4,
+    "snippet": "F=Math[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "lookAt caches a3U=a3A[0x2] (center z) on VM9 (@39713) and SERVED (@39905) sides, used in eye-center tests and z-axis a3K=a3O-a3U; identical role both sides.",
+   "name": "centerZ",
+   "selector": "a3U@u0008#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3U",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "a3z[0x0],a3N=a3z[0x1],a3O=a3z[0x2],a3P=a3B[0x0],a3Q=a3B[0x1],a3R=a3B[0x2],a3S=a3A[0x0],a3T=a3A[0x1],a3U=a3A[0x2];return Math[\"abs\"](a3M-a3S)<a3l&&Math['abs'](a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "a3z[0x0],a3N=a3z[0x1],a3O=a3z[0x2],a3P=a3B[0x0],a3Q=a3B[0x1],a3R=a3B[0x2],a3S=a3A[0x0],a3T=a3A[0x1],a3U=a3A[0x2];return Math[aiv(0x4fc)](a3M-a3S)<a3l&&Math['abs"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate computes a3V=x*x*t+c (rotation submatrix b00) on VM9 (@34889) and SERVED (@35108) sides, consumed by out[0x0..0x3]; identical role both sides.",
+   "name": "rotEntry00",
+   "selector": "a3V@u0008#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3V",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "F=Math[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a3F)<"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "th[aiq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a3F)<"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate computes a3W=y*x*t+z*s (rotation submatrix b01) on VM9 (@34889) and SERVED (@35108) sides, consumed by out[0x0..0x3]; identical role both sides.",
+   "name": "rotEntry01",
+   "selector": "a3W@u0008#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "th[\"sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a3F)<a3l?"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "iq(0xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a3F)<a3l?"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate computes a3X=z*x*t-y*s (rotation submatrix b02) on VM9 (@34889) and SERVED (@35108) sides, consumed by out[0x0..0x3]; identical role both sides.",
+   "name": "rotEntry02",
+   "selector": "a3X@u0008#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3X",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "sqrt\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a3F)<a3l?null"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "xba3)](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a3F)<a3l?null"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "mat4.rotate computes a3Y=x*y*t-z*s (rotation submatrix b10) on VM9 (@34889) and SERVED (@35108) sides, consumed by out[0x4..0x7]; identical role both sides.",
+   "name": "rotEntry10",
+   "selector": "a3Y@u0008#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Y",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 5,
+    "snippet": "\"](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a3F)<a3l?null:(a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 5,
+    "snippet": ")](a3C*a3C+a3D*a3D+a3E*a3E),a3G,a3H,a3I,a3J,a3K,a3L,a3M,a3N,a3O,a3P,a3Q,a3R,a3S,a3T,a3U,a3V,a3W,a3X,a3Y,a3Z,a40,a41,a42,a43;return Math['abs'](a3F)<a3l?null:(a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "UMD factory param receives glMatrix/vec2/vec3/vec4/mat2 namespaces via guarded typeof attaches on VM9 (@312/@4633) and SERVED (@316/@4666) sides; same export-target role both sides.",
+   "name": "exportsTarget",
+   "selector": "a3k@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 18,
+    "snippet": "\"exports\"];})):a3j['exports']=typeof window!='undefined'?window:a3i:a3j[\"exports\"]=exports,function(a3k){var ai4=ai2;if(!a3l)var a3l=0.000001;if(!a3m)var a3m=ty"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 18,
+    "snippet": "3(0xd03)];})):a3j['exports']=typeof window!='undefined'?window:a3i:a3j[ai2(0xd03)]=exports,function(a3k){var ai4=ai2;if(!a3l)var a3l=0.000001;if(!a3m)var a3m=ty"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Module epsilon var a3l=0.000001 on VM9 (@341) and SERVED (@345) sides, used as the Math.abs(...)< a3l near-zero threshold in rotate and lookAt; identical role both sides.",
+   "name": "epsilon",
+   "selector": "a3l@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "=typeof window!='undefined'?window:a3i:a3j[\"exports\"]=exports,function(a3k){var ai4=ai2;if(!a3l)var a3l=0.000001;if(!a3m)var a3m=typeof Float32Array!='undefined"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "typeof window!='undefined'?window:a3i:a3j[ai2(0xd03)]=exports,function(a3k){var ai4=ai2;if(!a3l)var a3l=0.000001;if(!a3m)var a3m=typeof Float32Array!='undefined"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL sets it to Float32Array-or-Array and every create/clone/fromValues does `new a3m(n)`; SERVED DECL identical and nearest uses also `new a3m(0x2/0x3)`. Reassignable via setMatrixArrayType on both sides.",
+   "name": "matrixArrayType",
+   "selector": "a3m@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "d'?window:a3i:a3j[\"exports\"]=exports,function(a3k){var ai4=ai2;if(!a3l)var a3l=0.000001;if(!a3m)var a3m=typeof Float32Array!='undefined'?Float32Array:Array;if(!"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "'?window:a3i:a3j[ai2(0xd03)]=exports,function(a3k){var ai4=ai2;if(!a3l)var a3l=0.000001;if(!a3m)var a3m=typeof Float32Array!='undefined'?Float32Array:Array;if(!"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL aliases Math[\"random\"] and all uses are `a3n()` calls inside vec2/vec3/vec4 random fns; SERVED DECL aliases Math[ai4(0x4bd)] with the same random-fn call sites.",
+   "name": "matrixRandom",
+   "selector": "a3n@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "3l)var a3l=0.000001;if(!a3m)var a3m=typeof Float32Array!='undefined'?Float32Array:Array;if(!a3n)var a3n=Math[\"random\"];var a3o={};a3o['setMatrixArrayType']=func"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "3l)var a3l=0.000001;if(!a3m)var a3m=typeof Float32Array!='undefined'?Float32Array:Array;if(!a3n)var a3n=Math[ai4(0x4bd)];var a3o={};a3o['setMatrixArrayType']=fu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL window shows setMatrixArrayType/toRadian attached and export `a3k[\"glMatrix\"]=a3o`; SERVED window shows the same attachments and export via ai4(0xe1e). Core glMatrix namespace object.",
+   "name": "glMatrix",
+   "selector": "a3o@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3o",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "!a3m)var a3m=typeof Float32Array!='undefined'?Float32Array:Array;if(!a3n)var a3n=Math[\"random\"];var a3o={};a3o['setMatrixArrayType']=function(a3y){a3m=a3y;},typ"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "3m)var a3m=typeof Float32Array!='undefined'?Float32Array:Array;if(!a3n)var a3n=Math[ai4(0x4bd)];var a3o={};a3o['setMatrixArrayType']=function(a3y){a3m=a3y;},typ"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL is Math['PI']/0xb4 and toRadian returns `a3y*a3p`; SERVED DECL identical with toRadian `return a3y*a3p`. Degrees-to-radians multiplier on both sides.",
+   "name": "degToRadFactor",
+   "selector": "a3p@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3p",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "3o['setMatrixArrayType']=function(a3y){a3m=a3y;},typeof a3k!=\"undefined\"&&(a3k[\"glMatrix\"]=a3o);var a3p=Math['PI']/0xb4;a3o[\"toRadian\"]=function(a3y){return a3y"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a3o['setMatrixArrayType']=function(a3y){a3m=a3y;},typeof a3k!=ai4(0xf84)&&(a3k[ai4(0xe1e)]=a3o);var a3p=Math['PI']/0xb4;a3o[ai4(0xad9)]=function(a3y){return a3y"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 attaches vec2 ops (add/subtract/multiply/divide/min/max) and exports `a3k['vec2']=a3q` with str 'vec2(...)'; SERVED shows the same op attachments and vec2 export.",
+   "name": "vec2",
+   "selector": "a3q@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3q",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 45,
+    "snippet": "\"&&(a3k[\"glMatrix\"]=a3o);var a3p=Math['PI']/0xb4;a3o[\"toRadian\"]=function(a3y){return a3y*a3p;};var a3q={};a3q[\"create\"]=function(){var a3y=new a3m(0x2);return "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 45,
+    "snippet": ")&&(a3k[ai4(0xe1e)]=a3o);var a3p=Math['PI']/0xb4;a3o[ai4(0xad9)]=function(a3y){return a3y*a3p;};var a3q={};a3q[ai4(0xf2a)]=function(){var a3y=new a3m(0x2);retur"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 attaches 3-component ops (create/clone use `new a3m(0x3)`) and exports `a3k['vec3']=a3r` with str 'vec3(...)'; SERVED shows the same 3-wide ops and vec3 export.",
+   "name": "vec3",
+   "selector": "a3r@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3r",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 56,
+    "snippet": "eturn'vec2(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+'\\x20)';},typeof a3k!=\"undefined\"&&(a3k['vec2']=a3q);var a3r={};a3r['create']=function(){var a3y=new a3m(0x3);return "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 56,
+    "snippet": "return'vec2(\\x20'+a3y[0x0]+',\\x20'+a3y[0x1]+'\\x20)';},typeof a3k!=ai4(0xf84)&&(a3k['vec2']=a3q);var a3r={};a3r['create']=function(){var a3y=new a3m(0x3);return "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 attaches transpose/invert/adjoint/determinant/multiply/rotate/scale over 4 elements with str 'mat2(...' and export `a3k[\"mat2\"]=a3t`; SERVED shows the same mat2 method set.",
+   "name": "mat2",
+   "selector": "a3t@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3t",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 17,
+    "snippet": "a3y[0x1]+',\\x20'+a3y[0x2]+',\\x20'+a3y[0x3]+'\\x20)';},typeof a3k!='undefined'&&(a3k[\"vec4\"]=a3s);var a3t={};a3t[\"create\"]=function(){var a3y=new a3m(0x4);return "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 17,
+    "snippet": "x1]+',\\x20'+a3y[0x2]+',\\x20'+a3y[0x3]+'\\x20)';},typeof a3k!='undefined'&&(a3k[ai4(0x100b)]=a3s);var a3t={};a3t[ai4(0xf2a)]=function(){var a3y=new a3m(0x4);retur"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 attaches create/clone/copy/identity/invert/determinant/multiply/rotate/scale/translate over 6 elements with str 'mat2d(...'; SERVED DECL/uses show the same 6-element mat2d method set.",
+   "name": "mat2d",
+   "selector": "a3u@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3u",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 15,
+    "snippet": ",a3A[0x3]=a3B[0x3]-a3y[0x2]*a3A[0x1],[a3y,a3z,a3A];},typeof a3k!='undefined'&&(a3k[\"mat2\"]=a3t);var a3u={};a3u['create']=function(){var a3y=new a3m(0x6);return "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "[0x3]=a3B[0x3]-a3y[0x2]*a3A[0x1],[a3y,a3z,a3A];},typeof a3k!='undefined'&&(a3k[ai4(0xf99)]=a3t);var a3u={};a3u['create']=function(){var a3y=new a3m(0x6);return "
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 create uses `new a3m(0x10)` with 16-element identity/transpose/invert/adjoint/determinant/multiply and export `a3k['mat4']=a3w`; SERVED shows the same 16-wide mat4 method set.",
+   "name": "mat4",
+   "selector": "a3w@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3w",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 27,
+    "snippet": "th['pow'](a3y[0x7],0x2)+Math['pow'](a3y[0x8],0x2));},typeof a3k!=\"undefined\"&&(a3k['mat3']=a3v);var a3w={};a3w['create']=function(){var a3y=new a3m(0x10);return"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 27,
+    "snippet": "ath['pow'](a3y[0x7],0x2)+Math['pow'](a3y[0x8],0x2));},typeof a3k!=ai4(0xf84)&&(a3k['mat3']=a3v);var a3w={};a3w['create']=function(){var a3y=new a3m(0x10);return"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 create returns [0,0,0,1] with rotationTo/setAxes/setAxisAngle/fromMat3 and clone/copy/set aliased from vec4; SERVED shows the same quaternion API and vec4 aliases.",
+   "name": "quat",
+   "selector": "a3x@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 37,
+    "snippet": "th['pow'](a3y[0xe],0x2)+Math['pow'](a3y[0xf],0x2));},typeof a3k!=\"undefined\"&&(a3k['mat4']=a3w);var a3x={};a3x[\"create\"]=function(){var a3y=new a3m(0x4);return "
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 37,
+    "snippet": "ath['pow'](a3y[0xe],0x2)+Math['pow'](a3y[0xf],0x2));},typeof a3k!=ai4(0xf84)&&(a3k['mat4']=a3w);var a3x={};a3x[ai4(0xf2a)]=function(){var a3y=new a3m(0x4);retur"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 sole param of setMatrixArrayType, body assigns it to the array-type var (`a3m=a3y`); SERVED DECL shows the identical setter shape. Replacement array constructor.",
+   "name": "newArrayType",
+   "selector": "a3y@u0008#0",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ed'?Float32Array:Array;if(!a3n)var a3n=Math[\"random\"];var a3o={};a3o['setMatrixArrayType']=function(a3y){a3m=a3y;},typeof a3k!=\"undefined\"&&(a3k[\"glMatrix\"]=a3o"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "'?Float32Array:Array;if(!a3n)var a3n=Math[ai4(0x4bd)];var a3o={};a3o['setMatrixArrayType']=function(a3y){a3m=a3y;},typeof a3k!=ai4(0xf84)&&(a3k[ai4(0xe1e)]=a3o)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 sole param of toRadian, body returns `a3y*a3p` (times PI/180); SERVED DECL shows the same `return a3y*a3p`. Angle in degrees on both sides.",
+   "name": "degreesInput",
+   "selector": "a3y@u0008#1",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "y;},typeof a3k!=\"undefined\"&&(a3k[\"glMatrix\"]=a3o);var a3p=Math['PI']/0xb4;a3o[\"toRadian\"]=function(a3y){return a3y*a3p;};var a3q={};a3q[\"create\"]=function(){va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "3y;},typeof a3k!=ai4(0xf84)&&(a3k[ai4(0xe1e)]=a3o);var a3p=Math['PI']/0xb4;a3o[ai4(0xad9)]=function(a3y){return a3y*a3p;};var a3q={};a3q[ai4(0xf2a)]=function(){"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 local in vec2 create: `new a3m(0x2)`, zeroed and returned; SERVED DECL window shows the same `new a3m(0x2)` zero-init-and-return shape. Fresh vec2 instance.",
+   "name": "newVec2",
+   "selector": "a3y@u0008#2",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "h['PI']/0xb4;a3o[\"toRadian\"]=function(a3y){return a3y*a3p;};var a3q={};a3q[\"create\"]=function(){var a3y=new a3m(0x2);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y;},a3q["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 2,
+    "refCount": 3,
+    "snippet": "'PI']/0xb4;a3o[ai4(0xad9)]=function(a3y){return a3y*a3p;};var a3q={};a3q[ai4(0xf2a)]=function(){var a3y=new a3m(0x2);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y;},a3q["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 param of vec2 clone copied element-wise into a fresh `new a3m(0x2)`; SERVED clone shows the same copy-from-param shape. Source vector being cloned.",
+   "name": "vecToClone",
+   "selector": "a3y@u0008#3",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "eate\"]=function(){var a3y=new a3m(0x2);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y;},a3q['clone']=function(a3y){var a3z=new a3m(0x2);return a3z[0x0]=a3y[0x0],a3z[0x1]="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "xf2a)]=function(){var a3y=new a3m(0x2);return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y;},a3q['clone']=function(a3y){var a3z=new a3m(0x2);return a3z[0x0]=a3y[0x0],a3z[0x1]="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 first param of vec2 fromValues stored at index 0 (`a3A[0x0]=a3y`); SERVED fromValues shows the same index-0 store. X component value.",
+   "name": "xValue",
+   "selector": "a3y@u0008#5",
+   "slice": "slice-01",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3y",
+   "binding": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "=function(a3y,a3z){var a3A=new a3m(0x2);return a3A[0x0]=a3y,a3A[0x1]=a3z,a3A;},a3q[\"copy\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y;},a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 5,
+    "refCount": 3,
+    "snippet": "ction(a3y,a3z){var a3A=new a3m(0x2);return a3A[0x0]=a3y,a3A[0x1]=a3z,a3A;},a3q[ai4(0x609)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y;},a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "SERVED shows var a3A=lerpValue(...)*0.5 added to WY[RP]['y'] (weapon lift); VM9 window shows same recoil/spread context with the decl+use in the truncated region, refCount=1 both sides.",
+   "name": "recoilYOffset",
+   "selector": "a3A@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3A",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "while(Math['abs'](YdshJUELZK['CLUnXEIbM'])<0.25){YdshJUELZK['CLUnXEIbM']=Math[\"random\"]()-0.5;}}var a3A=GW(a3U[\"cmCVuvBOUx\"],a3U['npSDTRYmp'],PL)*0.5;WY[RP]['y'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ile(Math['abs'](YdshJUELZK['CLUnXEIbM'])<0.25){YdshJUELZK['CLUnXEIbM']=Math[aDW(0x4bd)]()-0.5;}}var a3A=GW(a3U[aDW(0x733)],a3U['npSDTRYmp'],PL)*0.5;WY[RP]['y']+"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show var a3B=acquireEffectInstance(\"CVO0H4H5n4F\") then a3B.setPosition(On) where On is the muzzle/world origin later used as tracer start and distance origin.",
+   "name": "muzzleEffect",
+   "selector": "a3B@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3B",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ":ZX[\"position\"]['z']=0.03;ZX['updateMatrixWorld'](),On['TLgJbfmniE'](ZX['matrixWorld']),a1T(On);var a3B=lrRnpundBY(\"CVO0H4H5n4F\");a3B[\"setPosition\"](On);if(SW[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ":ZX[aDW(0x215)]['z']=0.03;ZX['updateMatrixWorld'](),On['TLgJbfmniE'](ZX['matrixWorld']),a1T(On);var a3B=lrRnpundBY(\"CVO0H4H5n4F\");a3B[aDW(0x784)](On);if(SW[aDW("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 shows acquireEffectInstance(\"shotgunsmoke\") positioned at muzzle offsets with jittered velocity/scale/opacity; SERVED shows identical call shape and positioning (string via decoder index).",
+   "name": "shotgunSmoke",
+   "selector": "a3C@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3C",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "0.4);!SW[\"d2J6H770A10\"]&&(a1R['x']=0.07,a1R['y']=-0.07);for(var a3z=0x0;a3z<0xa;a3z++){continue;var a3C=lrRnpundBY(\"shotgunsmoke\");a3C[\"setPosition\"](YdshJUELZK"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 10,
+    "snippet": "0.4);!SW[\"d2J6H770A10\"]&&(a1R['x']=0.07,a1R['y']=-0.07);for(var a3z=0x0;a3z<0xa;a3z++){continue;var a3C=lrRnpundBY(aDW(0x71d));a3C[aDW(0x784)](YdshJUELZK[aDW(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show for(var a3E=0;a3E<pellets;a3E++) driving per-pellet spread sampling and raycast, indexing the Gu table as Gu[a3E*2].",
+   "name": "pelletIndex",
+   "selector": "a3E@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3E",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "xWorld']),a1T(On);SW['DMZbIHLgyk']['pellets']==undefined&&(SW['DMZbIHLgyk'][\"pellets\"]=0x1);for(var a3E=0x0;a3E<SW['DMZbIHLgyk']['pellets'];a3E++){var a3F=SW['V"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "World']),a1T(On);SW['DMZbIHLgyk']['pellets']==undefined&&(SW['DMZbIHLgyk'][aDW(0x4fb)]=0x1);for(var a3E=0x0;a3E<SW['DMZbIHLgyk']['pellets'];a3E++){var a3F=SW['V"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show var a3F=SW['VehNrzoThC']/0x7 consumed once as the base multiplier of the pellet polar radius a3I=a3F*sqrt(a3G).",
+   "name": "spreadBase",
+   "selector": "a3F@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3F",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "fined&&(SW['DMZbIHLgyk'][\"pellets\"]=0x1);for(var a3E=0x0;a3E<SW['DMZbIHLgyk']['pellets'];a3E++){var a3F=SW['VehNrzoThC']/0x7;if(SW['DMZbIHLgyk']['pellets']==0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ined&&(SW['DMZbIHLgyk'][aDW(0x4fb)]=0x1);for(var a3E=0x0;a3E<SW['DMZbIHLgyk']['pellets'];a3E++){var a3F=SW['VehNrzoThC']/0x7;if(SW['DMZbIHLgyk']['pellets']==0x1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show a3G drawn from nextFloat() (single pellet) or Gu[a3E*2] and consumed only inside Math.sqrt for the pellet radius.",
+   "name": "radialSample",
+   "selector": "a3G@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3G",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "DMZbIHLgyk']['pellets'];a3E++){var a3F=SW['VehNrzoThC']/0x7;if(SW['DMZbIHLgyk']['pellets']==0x1)var a3G=a0o['nextFloat'](),a3H=a0o[\"nextFloat\"]();else var a3G=G"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "DMZbIHLgyk']['pellets'];a3E++){var a3F=SW['VehNrzoThC']/0x7;if(SW['DMZbIHLgyk']['pellets']==0x1)var a3G=a0o['nextFloat'](),a3H=a0o[aDW(0x142)]();else var a3G=Gu"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show a3H drawn from nextFloat() (single pellet) or Gu[a3E*2+1] and consumed only as the angle a3J=a3H*2*PI.",
+   "name": "angleSample",
+   "selector": "a3H@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3H",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ";a3E++){var a3F=SW['VehNrzoThC']/0x7;if(SW['DMZbIHLgyk']['pellets']==0x1)var a3G=a0o['nextFloat'](),a3H=a0o[\"nextFloat\"]();else var a3G=Gu[a3E*0x2],a3H=Gu[a3E*0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ";a3E++){var a3F=SW['VehNrzoThC']/0x7;if(SW['DMZbIHLgyk']['pellets']==0x1)var a3G=a0o['nextFloat'](),a3H=a0o[aDW(0x142)]();else var a3G=Gu[a3E*0x2],a3H=Gu[a3E*0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show var a3I=a3F*Math.sqrt(a3G) fed into raycaster.setFromCamera(a3I*cos, a3I*sin) as the polar radius of pellet dispersion.",
+   "name": "pelletRadius",
+   "selector": "a3I@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3I",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ")var a3G=a0o['nextFloat'](),a3H=a0o[\"nextFloat\"]();else var a3G=Gu[a3E*0x2],a3H=Gu[a3E*0x2+0x1];var a3I=a3F*Math[\"sqrt\"](a3G),a3J=a3H*0x2*Math['PI'];a08[\"setFro"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "1)var a3G=a0o['nextFloat'](),a3H=a0o[aDW(0x142)]();else var a3G=Gu[a3E*0x2],a3H=Gu[a3E*0x2+0x1];var a3I=a3F*Math[aDW(0xba3)](a3G),a3J=a3H*0x2*Math['PI'];a08[aDW"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show var a3K=raycastCollisionGrid(QP,Ff,raycaster) with length/array[0].point reads for decals, smoke, tracer endpoints, and hit telemetry.",
+   "name": "raycastHits",
+   "selector": "a3K@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3K",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "os\"](a3J)*0x9/0x10,a3I*Math['sin'](a3J),Td),a08['far']=0x2710,Ff[\"RNQDluasaN\"]=QP['RNQDluasaN'];var a3K=ER(QP,Ff,a08),a3L,a3M,a3N=lrRnpundBY('T1P0J19B02U');a3N["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 13,
+    "snippet": "xb69)](a3J)*0x9/0x10,a3I*Math['sin'](a3J),Td),a08['far']=0x2710,Ff[aDW(0xbac)]=QP['RNQDluasaN'];var a3K=ER(QP,Ff,a08),a3L,a3M,a3N=lrRnpundBY('T1P0J19B02U');a3N["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show a3L=raycastHits.array[0].face.normal, then used to orient/offset the hole decal, impact sparks, and gunsmoke.",
+   "name": "hitNormal",
+   "selector": "a3L@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3L",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ",a3I*Math['sin'](a3J),Td),a08['far']=0x2710,Ff[\"RNQDluasaN\"]=QP['RNQDluasaN'];var a3K=ER(QP,Ff,a08),a3L,a3M,a3N=lrRnpundBY('T1P0J19B02U');a3N['clPJAbVChXM']=SW["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "10,a3I*Math['sin'](a3J),Td),a08['far']=0x2710,Ff[aDW(0xbac)]=QP['RNQDluasaN'];var a3K=ER(QP,Ff,a08),a3L,a3M,a3N=lrRnpundBY('T1P0J19B02U');a3N['clPJAbVChXM']=SW["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show var a3N=acquireEffectInstance('T1P0J19B02U') configured with color/opacity and passed to orientTracerEffect(a3N,Oo,a3S,a3M,a3T).",
+   "name": "tracerEffect",
+   "selector": "a3N@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3N",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "h['sin'](a3J),Td),a08['far']=0x2710,Ff[\"RNQDluasaN\"]=QP['RNQDluasaN'];var a3K=ER(QP,Ff,a08),a3L,a3M,a3N=lrRnpundBY('T1P0J19B02U');a3N['clPJAbVChXM']=SW['DMZbIHL"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "ath['sin'](a3J),Td),a08['far']=0x2710,Ff[aDW(0xbac)]=QP['RNQDluasaN'];var a3K=ER(QP,Ff,a08),a3L,a3M,a3N=lrRnpundBY('T1P0J19B02U');a3N['clPJAbVChXM']=SW['DMZbIHL"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show var a3O=0x2 (0x1 for weapon type 3) used solely as the trip count of the impact-effect spawn loop.",
+   "name": "impactCount",
+   "selector": "a3O@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3O",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "rrNzesxY'];if(a3K!=null&&a3K['length']>0x0){var a3D=0.8;a3L=a3K['array'][0x0]['face']['normal'];var a3O=0x2;SW[\"eXABYtRfN\"]==0x3&&(a3O=0x1);for(let a3V=0x0;a3V<"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "rrNzesxY'];if(a3K!=null&&a3K['length']>0x0){var a3D=0.8;a3L=a3K['array'][0x0]['face']['normal'];var a3O=0x2;SW[aDW(0x355)]==0x3&&(a3O=0x1);for(let a3V=0x0;a3V<a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show var a3P=acquireEffectInstance(\"n0007K83X2\") placed at the hit point with normal-aligned jittered velocity and added to the scene container.",
+   "name": "impactEffect",
+   "selector": "a3P@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3P",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "0]['face']['normal'];var a3O=0x2;SW[\"eXABYtRfN\"]==0x3&&(a3O=0x1);for(let a3V=0x0;a3V<a3O;a3V++){var a3P=lrRnpundBY(\"n0007K83X2\");a3P['setPosition'](a3K['array']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 11,
+    "snippet": "x0]['face']['normal'];var a3O=0x2;SW[aDW(0x355)]==0x3&&(a3O=0x1);for(let a3V=0x0;a3V<a3O;a3V++){var a3P=lrRnpundBY(\"n0007K83X2\");a3P['setPosition'](a3K['array']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show var a3Q=acquireEffectInstance('hole') copied to the hit point, offset along the face normal, randomly rotated/scaled — the bullet-hole decal.",
+   "name": "bulletHole",
+   "selector": "a3Q@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3Q",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "\"yoghpvfQE\"]['x']*=0.7,a3P['yoghpvfQE']['z']*=0.7),a3P[\"b152tm12ro9\"]['add'](a3P[\"yoghpvfQE\"]);}var a3Q=lrRnpundBY('hole');a3Q['matrixUpdate']=!![],a3Q['positio"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "(a3P[aDW(0x48b)]['x']*=0.7,a3P['yoghpvfQE']['z']*=0.7),a3P[aDW(0x564)]['add'](a3P[aDW(0x48b)]);}var a3Q=lrRnpundBY('hole');a3Q['matrixUpdate']=!![],a3Q['positio"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show var a3R=acquireEffectInstance('gunsmoke') in a 3-iteration loop at the hit point with normal-aligned drifting velocity and fading opacity.",
+   "name": "gunSmoke",
+   "selector": "a3R@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3R",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "n'][\"copy\"](a3K[\"array\"][0x0][\"point\"]));if(SW['eXABYtRfN']!=0x3)for(var a3z=0x0;a3z<0x3;a3z++){var a3R=lrRnpundBY('gunsmoke');a3R['matrixUpdate']=!![],a3R['pos"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 15,
+    "snippet": "609)](a3K[aDW(0x18f)][0x0][aDW(0xa4d)]));if(SW['eXABYtRfN']!=0x3)for(var a3z=0x0;a3z<0x3;a3z++){var a3R=lrRnpundBY('gunsmoke');a3R['matrixUpdate']=!![],a3R['pos"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show var a3S=On (muzzle origin) passed as the start-point argument to orientTracerEffect(a3N,Oo,a3S,a3M,a3T).",
+   "name": "tracerStart",
+   "selector": "a3S@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3S",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "Oo['distanceTo'](On);}else a3M=0x96,Oo[\"copy\"](WY[RP]),Oo['YbYyrgWGnfQ'](a08['klYMxzxpTL'],a3M);var a3S=On,a3T=0.6;a3N['oZzvWrXBEG']&&(a3N['oZzvWrXBEG'][\"scale\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "distanceTo'](On);}else a3M=0x96,Oo[aDW(0x609)](WY[RP]),Oo['YbYyrgWGnfQ'](a08['klYMxzxpTL'],a3M);var a3S=On,a3T=0.6;a3N['oZzvWrXBEG']&&(a3N['oZzvWrXBEG'][aDW(0xd"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show var a3T=0.6 (scaled by 0.4 in X6 mode) passed as the final width argument to orientTracerEffect.",
+   "name": "tracerWidth",
+   "selector": "a3T@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3T",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "tanceTo'](On);}else a3M=0x96,Oo[\"copy\"](WY[RP]),Oo['YbYyrgWGnfQ'](a08['klYMxzxpTL'],a3M);var a3S=On,a3T=0.6;a3N['oZzvWrXBEG']&&(a3N['oZzvWrXBEG'][\"scale\"]['y']="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "eTo'](On);}else a3M=0x96,Oo[aDW(0x609)](WY[RP]),Oo['YbYyrgWGnfQ'](a08['klYMxzxpTL'],a3M);var a3S=On,a3T=0.6;a3N['oZzvWrXBEG']&&(a3N['oZzvWrXBEG'][aDW(0xd6)]['y'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show the group-traversal callback param whose .material array uniforms get their flash value bumped and clamped.",
+   "name": "visitedMesh",
+   "selector": "a3V@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3V",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 8,
+    "snippet": ")&&!Wx)return;if(navigator['vibrate']){}Qx=0x1869f,PB=!![],Pu=!![],Qh=a1Z,Yx[\"XOVWraMIAg\"](function(a3V){var aDX=aDW;return;if(a3V['material']!=undefined)for(va"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "x3)&&!Wx)return;if(navigator['vibrate']){}Qx=0x1869f,PB=!![],Pu=!![],Qh=a1Z,Yx[aDW(0x4a2)](function(a3V){var aDX=aDW;return;if(a3V['material']!=undefined)for(va"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show for(let a3V=0;a3V<a3O;a3V++) spawning one impact effect per iteration; distinct binding from the traversal callback param.",
+   "name": "impactIndex",
+   "selector": "a3V@u2836#1",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3V",
+   "binding": {
+    "unit": "u2836",
+    "index": 1,
+    "refCount": 2,
+    "snippet": "a3D=0.8;a3L=a3K['array'][0x0]['face']['normal'];var a3O=0x2;SW[\"eXABYtRfN\"]==0x3&&(a3O=0x1);for(let a3V=0x0;a3V<a3O;a3V++){var a3P=lrRnpundBY(\"n0007K83X2\");a3P["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 1,
+    "refCount": 2,
+    "snippet": " a3D=0.8;a3L=a3K['array'][0x0]['face']['normal'];var a3O=0x2;SW[aDW(0x355)]==0x3&&(a3O=0x1);for(let a3V=0x0;a3V<a3O;a3V++){var a3P=lrRnpundBY(\"n0007K83X2\");a3P["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show for(var a3W=0;a3W<mesh.material.length;a3W++) indexing the material array to bump the flash uniform.",
+   "name": "materialIndex",
+   "selector": "a3W@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3W",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "!![],Qh=a1Z,Yx[\"XOVWraMIAg\"](function(a3V){var aDX=aDW;return;if(a3V['material']!=undefined)for(var a3W=0x0;a3W<a3V['material']['length'];a3W++){a3V[\"material\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "u=!![],Qh=a1Z,Yx[aDW(0x4a2)](function(a3V){var aDX=aDW;return;if(a3V['material']!=undefined)for(var a3W=0x0;a3W<a3V['material']['length'];a3W++){a3V[aDX(0x52e)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides show var a3x=0xb (0x10 for weapon 0) as the ammo threshold: max>thresh>current triggers the scaled dry_fire warning click.",
+   "name": "lowAmmoThreshold",
+   "selector": "a3x@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3x",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "'hgWOkdSgt']['value']=0.5),a3V['material'][a3W][\"uniforms\"]['hgWOkdSgt'][\"afCJVYrCGK\"]=!![];}});var a3x=0xb;SW['eXABYtRfN']==0x0&&(a3x=0x10);SW[\"DMZbIHLgyk\"]['x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "]['hgWOkdSgt']['value']=0.5),a3V['material'][a3W][aDX(0x29b)]['hgWOkdSgt'][aDX(0xd69)]=!![];}});var a3x=0xb;SW['eXABYtRfN']==0x0&&(a3x=0x10);SW[aDW(0x2d5)]['xqI"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Both sides show var a3y=playSoundEffect(...) with refCount=0: assigned once, never read, so no rename adds readability.",
+   "selector": "a3y@u2836#0",
+   "slice": "slice-02",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides show one function-scoped var reused as the counter/index across many loops (axis lerp, smoke puffs, entity visibility) and loop-body indexing.",
+   "name": "sharedLoopIndex",
+   "selector": "a3z@u2836#0",
+   "slice": "slice-02",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 30,
+    "snippet": "Lgyk']['FjQTHXKbTSO']*0.025-tc['linear'](a3U['FjQTHXKbTSO']/0x4))*0.7,a3U[\"lnYwEVhYr\"]=!![];for(var a3z=0x0;a3z<0x3;a3z++){WY[RP][Ji[a3z]]=GW(a3U[\"zkT2rWLY297\"]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2836",
+    "index": 0,
+    "refCount": 30,
+    "snippet": "Lgyk']['FjQTHXKbTSO']*0.025-tc['linear'](a3U['FjQTHXKbTSO']/0x4))*0.7,a3U[aDW(0x10ab)]=!![];for(var a3z=0x0;a3z<0x3;a3z++){WY[RP][Ji[a3z]]=GW(a3U[\"zkT2rWLY297\"]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: var a45=WX (weaponMountNode) guards the inspect-tween block and every use tweens a45['rotation'] via HL; served shows the identical alias and rotation tweens.",
+   "name": "weaponMount",
+   "selector": "a45@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a45",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "{Qx+=FJ/0x3e8;if(SW['krtmjJROjX']||SW[\"OUsPgMLOT\"])Qx=0xf423f;else WF[\"inspect\"]&&(Qx=0.00001);}var a45=WX;if(a45){var a46=0x28a,a47=tc['easeOutQuart'],a48=SW[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "{Qx+=FJ/0x3e8;if(SW['krtmjJROjX']||SW[aEg(0x994)])Qx=0xf423f;else WF[aEg(0x9c0)]&&(Qx=0.00001);}var a45=WX;if(a45){var a46=0x28a,a47=tc['easeOutQuart'],a48=SW[\""
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: initialized 0x28a, reassigned per branch (0x2bc/0x12c/0x96), and passed as the duration arg of every HL tweenProperty call; served shows the same init, reassignments, and call positions.",
+   "name": "tweenDuration",
+   "selector": "a46@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a46",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 21,
+    "snippet": "['krtmjJROjX']||SW[\"OUsPgMLOT\"])Qx=0xf423f;else WF[\"inspect\"]&&(Qx=0.00001);}var a45=WX;if(a45){var a46=0x28a,a47=tc['easeOutQuart'],a48=SW[\"W91ldgW19d\"]&&SW[\"v"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 21,
+    "snippet": "['krtmjJROjX']||SW[aEg(0x994)])Qx=0xf423f;else WF[aEg(0x9c0)]&&(Qx=0.00001);}var a45=WX;if(a45){var a46=0x28a,a47=tc['easeOutQuart'],a48=SW[\"W91ldgW19d\"]&&SW[\"v"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a47=tc['easeOutQuart'] and is the final ease arg of every HL tweenProperty call; served shows the same initializer and trailing-arg uses.",
+   "name": "tweenEase",
+   "selector": "a47@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a47",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 18,
+    "snippet": "jX']||SW[\"OUsPgMLOT\"])Qx=0xf423f;else WF[\"inspect\"]&&(Qx=0.00001);}var a45=WX;if(a45){var a46=0x28a,a47=tc['easeOutQuart'],a48=SW[\"W91ldgW19d\"]&&SW[\"vQ5Ra371n0\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 18,
+    "snippet": "jX']||SW[aEg(0x994)])Qx=0xf423f;else WF[aEg(0x9c0)]&&(Qx=0.00001);}var a45=WX;if(a45){var a46=0x28a,a47=tc['easeOutQuart'],a48=SW[\"W91ldgW19d\"]&&SW[\"vQ5Ra371n0\""
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: boolean state gate (if(a48)...) latched into PA (prevInspectActive) via PA=a48, with edge-trigger !PA; served shows the same gate, latch, and edge-trigger.",
+   "name": "inspectActive",
+   "selector": "a48@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a48",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "x=0xf423f;else WF[\"inspect\"]&&(Qx=0.00001);}var a45=WX;if(a45){var a46=0x28a,a47=tc['easeOutQuart'],a48=SW[\"W91ldgW19d\"]&&SW[\"vQ5Ra371n0\"]&&!SW[\"OUsPgMLOT\"]&&!S"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "=0xf423f;else WF[aEg(0x9c0)]&&(Qx=0.00001);}var a45=WX;if(a45){var a46=0x28a,a47=tc['easeOutQuart'],a48=SW[\"W91ldgW19d\"]&&SW[\"vQ5Ra371n0\"]&&!SW[aEg(0x994)]&&!SW"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: a49=Hs['awp']['VehNrzoThC']['j0EB3IT4Ug'] (defaulted to 0.1) normalizes the scope-bloom term 1-max(0,a49-bloom)/a49; served shows the identical read and formula.",
+   "name": "scopeBloomBase",
+   "selector": "a49@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a49",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "a30*SH['OFpGjswSPJw']/0.7),Um[\"piylfJrZJ\"]()));if(YdshJUELZK!==undefined&&Kq['MqaFuSJOX']==0x2){var a49=Hs['awp']['VehNrzoThC'][\"j0EB3IT4Ug\"];a49==0x0&&(a49=0.1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 4,
+    "snippet": ",a30*SH['OFpGjswSPJw']/0.7),Um[aEg(0x9f7)]()));if(YdshJUELZK!==undefined&&Kq['MqaFuSJOX']==0x2){var a49=Hs['awp']['VehNrzoThC'][\"j0EB3IT4Ug\"];a49==0x0&&(a49=0.1"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a4a=ZC['parent']['children']['indexOf'](ZC) compared against children length-1; served shows the same indexOf read and end-position comparison.",
+   "name": "skyboxChildIndex",
+   "selector": "a4a@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4a",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "/0x7);}Kq[\"update\"](FJ);Kq['JXdHtdIgu']!=undefined&&Kq[\"JXdHtdIgu\"](a1Z);if(ZC[\"parent\"]!=null){var a4a=ZC['parent'][\"children\"]['indexOf'](ZC);if(ZC!=undefined"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 1,
+    "snippet": ");}Kq[aEg(0x402)](FJ);Kq['JXdHtdIgu']!=undefined&&Kq[aEg(0x10df)](a1Z);if(ZC[aEg(0x8cb)]!=null){var a4a=ZC['parent'][aEg(0xc76)]['indexOf'](ZC);if(ZC!=undefined"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a4b=ZC['parent'] saved so ZC can be removed then re-added to the same parent (move-to-end); served shows the same save, remove, and re-add sequence.",
+   "name": "skyboxParent",
+   "selector": "a4b@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4b",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "ent'][\"children\"]['indexOf'](ZC);if(ZC!=undefined&&a4a!=ZC[\"parent\"][\"children\"]['length']-0x1){var a4b=ZC['parent'];ZC['parent']['remove'](ZC),a4b[\"add\"](ZC);}"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "t'][aEg(0xc76)]['indexOf'](ZC);if(ZC!=undefined&&a4a!=ZC[aEg(0x8cb)][aEg(0xc76)]['length']-0x1){var a4b=ZC['parent'];ZC['parent']['remove'](ZC),a4b[aEg(0x8da)]("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: for(let a4c=0;a4c<3;a4c++) writes backup position components via setComponent(a4c,GW(...getComponent(a4c)...)); served shows the same 0..2 loop over the backup slot.",
+   "name": "backupAxisIndex",
+   "selector": "a4c@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4c",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "(a3N[\"FShYTnMIW\"][RP][\"getComponent\"](a3L),a3N[\"xZ99d3OY82\"][RP][\"getComponent\"](a3L),PK));}for(let a4c=0x0;a4c<0x3;a4c++){a3N[\"r23ZS3L2g\"]['backup'][RP][\"setCo"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "nt'](a3L,GW(a3N[aEg(0xa05)][RP][aEg(0xa8)](a3L),a3N[\"xZ99d3OY82\"][RP][aEg(0xa8)](a3L),PK));}for(let a4c=0x0;a4c<0x3;a4c++){a3N[\"r23ZS3L2g\"]['backup'][RP][aEg(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: traverse-callback param tested for isMesh then stored into the mesh list; served shows the same callback shape with the isMesh guard and store.",
+   "name": "visitedNode",
+   "selector": "a4d@u2862#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a4d",
+   "binding": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ugxImUPAOI\"]==undefined&&(a3N[\"r23ZS3L2g\"][\"ugxImUPAOI\"]=[],a3N[\"r23ZS3L2g\"]['XOVWraMIAg'](function(a4d){var aEh=aEg;a4d['isMesh']&&(a3N[\"r23ZS3L2g\"][\"ugxImUPAO"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2862",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "g\"][aEg(0xd47)]==undefined&&(a3N[aEg(0xc7e)][aEg(0xd47)]=[],a3N[\"r23ZS3L2g\"]['XOVWraMIAg'](function(a4d){var aEh=aEg;a4d['isMesh']&&(a3N[\"r23ZS3L2g\"][aEh(0xd47)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: a9z=[0,50,37,10,3] sits beside the rarity-name array and is rendered as a9z[i]+'%'; served shows the same numeric array and percent rendering.",
+   "name": "rarityPercents",
+   "selector": "a9z@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a9z",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "a23e8\",'#d90218','#ffd324','#222'],a9y=[\"Common\",'Uncommon',\"Rare\",\"Epic\",'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "90218','#ffd324','#222'],a9y=[arY(0xfc8),'Uncommon',arY(0x851),arY(0xd15),'Legendary','Contraband'],a9z=[0x0,0x32,0x25,0xa,0x3],a9A=[],a9B=[],a9C=[],a9D;for(var"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aa0=new a3k['image'](getTempImage('promo/matrixpromo.png'),...) with size/opacity styling; served shows the same promo image construction and styling.",
+   "name": "matrixPromoImage",
+   "selector": "aa0@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa0",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "();a9S[\"add\"](a9Z),a9Z['add'](a9X[\"r23ZS3L2g\"]),a9X['ReDNKHkwk']=![],a9X['actuallyEnabled']=![];var aa0=new a3k['image'](a3k[\"getTempImage\"]('promo/matrixpromo."
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "S[arY(0x8da)](a9Z),a9Z['add'](a9X[\"r23ZS3L2g\"]),a9X['ReDNKHkwk']=![],a9X['actuallyEnabled']=![];var aa0=new a3k['image'](a3k[arY(0xfe5)]('promo/matrixpromo.png'"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "VM9 and served agree aa1 is an a3D shell stripped of its visuals, but neither side reveals what the stripped container is used for, so no role is clear.",
+   "selector": "aa1@u2151#0",
+   "slice": "slice-03",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aa2=new a3k['object']() added to the scene, collecting the neon bg image, title texts, and weapon sprites via add(); served shows the same container and add() uses.",
+   "name": "neonPromoGroup",
+   "selector": "aa2@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa2",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "sition']['set'](0x0,-0x14),aa1[\"r23ZS3L2g\"]['remove'](aa1[\"rectagle\"]),aa1[\"xhOdNSwMWQd\"](!![]);var aa2=new a3k['object']();aa2[\"size\"]=0x1,aa2[\"position\"]['y']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "]['position']['set'](0x0,-0x14),aa1[arY(0xc7e)]['remove'](aa1[arY(0xb6)]),aa1[arY(0xddf)](!![]);var aa2=new a3k['object']();aa2[arY(0xe8c)]=0x1,aa2[arY(0x215)]["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aa3=new a3k['image'](getTempImage('promo/neonbgsmall.png'),...) with a hue-rotate custom draw; served shows the same neon bg image and hue-rotate draw.",
+   "name": "neonBgImage",
+   "selector": "aa3@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa3",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "\"](!![]);var aa2=new a3k['object']();aa2[\"size\"]=0x1,aa2[\"position\"]['y']=-0x50,a9K['add'](aa2);var aa3=new a3k['image'](a3k['getTempImage']('promo/neonbgsmall."
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 16,
+    "snippet": "![]);var aa2=new a3k['object']();aa2[arY(0xe8c)]=0x1,aa2[arY(0x215)]['y']=-0x50,a9K['add'](aa2);var aa3=new a3k['image'](a3k['getTempImage']('promo/neonbgsmall."
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aa4 accumulates aa4+=FJ/0xf and feeds hue-rotate degree math in two draw callbacks; served shows the same accumulator and hue-rotate uses.",
+   "name": "huePhase",
+   "selector": "aa4@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa4",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "etTempImage']('promo/neonbgsmall.png'),0x0,0x0,0x384,0x1f4);aa3['size']=1.2,aa3[\"opacity\"]=0.45;var aa4=0x0;aa3['OJsvWrsPvs']=function(ah6,ah7,ah8,ah9){var aux="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "tTempImage']('promo/neonbgsmall.png'),0x0,0x0,0x384,0x1f4);aa3['size']=1.2,aa3[arY(0x40e)]=0.45;var aa4=0x0;aa3['OJsvWrsPvs']=function(ah6,ah7,ah8,ah9){var aux="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aa5={text:'NEON',x,y,rotation,size} title spec consumed by the promo-text loop; served shows the same NEON spec object and loop consumption.",
+   "name": "neonTitleSpec",
+   "selector": "aa5@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa5",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "h(aha){console['log'](aha);if(aa3[\"image\"]==null)return;}ah6['filter']='none';},aa2['add'](aa3);var aa5={};aa5['text']='NEON',aa5['x']=0x8c,aa5['y']=-0x28,aa5['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "ha){console['log'](aha);if(aa3[aux(0xbf7)]==null)return;}ah6['filter']='none';},aa2['add'](aa3);var aa5={};aa5['text']='NEON',aa5['x']=0x8c,aa5['y']=-0x28,aa5['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aa6={text:'SKIN SET',x,y,rotation,size} second spec consumed by the same promo-text loop; served shows the same spec and loop consumption.",
+   "name": "skinSetSubtitleSpec",
+   "selector": "aa6@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa6",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "var aa5={};aa5['text']='NEON',aa5['x']=0x8c,aa5['y']=-0x28,aa5['rotation']=0x0,aa5[\"size\"]=0x64;var aa6={};aa6[\"text\"]=\"SKIN SET\",aa6['x']=0xc8,aa6['y']=0x32,aa"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "aa5={};aa5['text']='NEON',aa5['x']=0x8c,aa5['y']=-0x28,aa5['rotation']=0x0,aa5[arY(0xe8c)]=0x64;var aa6={};aa6[arY(0x5a6)]=arY(0x5d8),aa6['x']=0xc8,aa6['y']=0x3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aa7=[aa5,aa6] iterated to build styled text elements via Mj; served shows the same two-element array and build loop.",
+   "name": "promoTitleSpecs",
+   "selector": "aa7@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa7",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": " aa6={};aa6[\"text\"]=\"SKIN SET\",aa6['x']=0xc8,aa6['y']=0x32,aa6[\"rotation\"]=0x0,aa6['size']=0x3c;var aa7=[aa5,aa6],aa8=new a3k[(\"QtjDeukbWl\")](-0xf0,0x50,0x276,0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "={};aa6[arY(0x5a6)]=arY(0x5d8),aa6['x']=0xc8,aa6['y']=0x32,aa6[arY(0x90d)]=0x0,aa6['size']=0x3c;var aa7=[aa5,aa6],aa8=new a3k[(arY(0x1a1))](-0xf0,0x50,0x276,0x3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: aa8 is a blurred, rotated backdrop panel (opacity 0.85, custom blur fill draw) behind the promo titles; served shows the same geometry and blur draw.",
+   "name": "neonBackdrop",
+   "selector": "aa8@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa8",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "ext\"]=\"SKIN SET\",aa6['x']=0xc8,aa6['y']=0x32,aa6[\"rotation\"]=0x0,aa6['size']=0x3c;var aa7=[aa5,aa6],aa8=new a3k[(\"QtjDeukbWl\")](-0xf0,0x50,0x276,0x320);aa8['opa"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "5a6)]=arY(0x5d8),aa6['x']=0xc8,aa6['y']=0x32,aa6[arY(0x90d)]=0x0,aa6['size']=0x3c;var aa7=[aa5,aa6],aa8=new a3k[(arY(0x1a1))](-0xf0,0x50,0x276,0x320);aa8['opaci"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aa9=Mj(a3k,aa7[i]...) text element styled per spec and added to the neon group; served shows the same per-spec text build and add.",
+   "name": "promoTitleText",
+   "selector": "aa9@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aa9",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "'none',ah6['globalCompositeOperation']='source-over';};for(var a3M=0x0;a3M<aa7[\"length\"];a3M++){var aa9=Mj(a3k,aa7[a3M]['text'],aa7[a3M]['x']+0x2d,aa7[a3M]['y']"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "one',ah6['globalCompositeOperation']='source-over';};for(var a3M=0x0;a3M<aa7[arY(0x3a2)];a3M++){var aa9=Mj(a3k,aa7[a3M]['text'],aa7[a3M]['x']+0x2d,aa7[a3M]['y']"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaA=['neonshotgun','neonar','neonsmg','neonawp'] iterated to load per-weapon promo art; served shows the same slug array and art-loading loop.",
+   "name": "neonSkinSlugs",
+   "selector": "aaA@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaA",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": ",Ms['fAdWFGQLqES'](ah8),ah8[\"onclick\"]=function(){a9Q(a9O);};}aay(a9M),aay(a9J),aay(a9N);var aaz=[],aaA=[\"neonshotgun\",\"neonar\",\"neonsmg\",\"neonawp\"];for(let ah7"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "Ms['fAdWFGQLqES'](ah8),ah8[auK(0xbd0)]=function(){a9Q(a9O);};}aay(a9M),aay(a9J),aay(a9N);var aaz=[],aaA=[arY(0x221),arY(0x87a),arY(0x950),arY(0x274)];for(let ah"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaB picks the weapon key (shotgun/ar/smg/awp) used as Nl[aaB] for the promo sprite; served shows the same per-index key and Nl lookup.",
+   "name": "neonWeaponKey",
+   "selector": "aaB@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaB",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "az=[],aaA=[\"neonshotgun\",\"neonar\",\"neonsmg\",\"neonawp\"];for(let ah7=0x0;ah7<aaA[\"length\"];ah7++){var aaB=[\"shotgun\",'ar',\"smg\",'awp'][ah7];let ah8=new a3k[(\"imag"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "[],aaA=[arY(0x221),arY(0x87a),arY(0x950),arY(0x274)];for(let ah7=0x0;ah7<aaA[arY(0x3a2)];ah7++){var aaB=[arY(0x2ba),'ar',arY(0x83a),'awp'][ah7];let ah8=new a3k["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaC=Mj(a3k,'NEW!!!',...) badge text added to the promo scene; served shows the same NEW!!! text build and scene add.",
+   "name": "newBadgeText",
+   "selector": "aaC@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaC",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "']=aha*0x7+aaz[ah9][\"IiFzPLpZAQ\"],aaz[ah9][\"rotation\"]=aaz[ah9][\"originalRotation\"]-aha*0.03;}};var aaC=Mj(a3k,'NEW!!!',0xc8,-0xdc,0x2d,'center','',0x4,!![]);aa"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "ition']['y']=aha*0x7+aaz[ah9][auM(0x544)],aaz[ah9][auM(0x90d)]=aaz[ah9][auM(0x5c1)]-aha*0.03;}};var aaC=Mj(a3k,'NEW!!!',0xc8,-0xdc,0x2d,'center','',0x4,!![]);aa"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaD=new a3D button holding the prizewheel image plus Spin/Wheel labels with onclick navigation; served shows the same button, image, labels, and onclick.",
+   "name": "prizeWheelButton",
+   "selector": "aaD@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaD",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 24,
+    "snippet": "]['strokeStyle']='#000',aaC['wAijZbUAD'][0x0][\"opacity\"]=0x0,aaC['opacity']=0.2,a9K['add'](aaC);var aaD=new a3D('',0x1c2,0xe6,0x1e);aaD[\"r23ZS3L2g\"]['remove'](a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 24,
+    "snippet": "['strokeStyle']='#000',aaC['wAijZbUAD'][0x0][arY(0x40e)]=0x0,aaC['opacity']=0.2,a9K['add'](aaC);var aaD=new a3D('',0x1c2,0xe6,0x1e);aaD[\"r23ZS3L2g\"]['remove'](a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaE=new a3k['image'](getTempImage('/promo/prizewheeltransparent.png'),...) added into the wheel button; served shows the same image and add into aaD.",
+   "name": "prizeWheelImage",
+   "selector": "aaE@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaE",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "D[\"QtjDeukbWl\"]),aaD['gradient'][\"r23ZS3L2g\"]['parent'][\"remove\"](aaD['gradient'][\"r23ZS3L2g\"]);var aaE=new a3k['image'](a3k['getTempImage']('/promo/prizewheelt"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "D[arY(0x1a1)]),aaD['gradient'][\"r23ZS3L2g\"]['parent'][arY(0x944)](aaD['gradient'][\"r23ZS3L2g\"]);var aaE=new a3k['image'](a3k['getTempImage']('/promo/prizewheelt"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9: aaG image sized 1.15 and added into the gems button (aaF) beside Buy/Gems labels; served shows the same construction, size, and add into aaF.",
+   "name": "gemsButtonImage",
+   "selector": "aaG@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaG",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "F['QtjDeukbWl']),aaF[\"gradient\"][\"r23ZS3L2g\"]['parent']['remove'](aaF['gradient'][\"r23ZS3L2g\"]);var aaG=new a3k['image'](a3k[\"getTempImage\"](\"/promo/buygemstran"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "F['QtjDeukbWl']),aaF[arY(0x91c)][\"r23ZS3L2g\"]['parent']['remove'](aaF['gradient'][\"r23ZS3L2g\"]);var aaG=new a3k['image'](a3k[arY(0xfe5)](arY(0x7d8)+arY(0x261)),"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaH=JT['gemOptions'] (shopCatalog) iterated for sku/gems/price/extra card fields; served shows the same catalog read and card-field loop.",
+   "name": "gemOptions",
+   "selector": "aaH@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaH",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "(!![]),a9K['add'](aaF[\"r23ZS3L2g\"]),Ms['fAdWFGQLqES'](aaF),aaF[\"onclick\"]=function(){a9Q(a9N);};var aaH=JT['gemOptions'],aaI=new a3k[(\"object\")]();aaI['position"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 9,
+    "snippet": "!![]),a9K['add'](aaF[\"r23ZS3L2g\"]),Ms['fAdWFGQLqES'](aaF),aaF[arY(0xbd0)]=function(){a9Q(a9N);};var aaH=JT['gemOptions'],aaI=new a3k[(arY(0x478))]();aaI['positi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaI=new a3k['object']() added to the gems scene, collecting each gem pack card; served shows the same container, scene add, and card adds.",
+   "name": "gemCardsGroup",
+   "selector": "aaI@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaI",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "[\"r23ZS3L2g\"]),Ms['fAdWFGQLqES'](aaF),aaF[\"onclick\"]=function(){a9Q(a9N);};var aaH=JT['gemOptions'],aaI=new a3k[(\"object\")]();aaI['position']['y']=0x46,a9N[\"add"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "\"r23ZS3L2g\"]),Ms['fAdWFGQLqES'](aaF),aaF[arY(0xbd0)]=function(){a9Q(a9N);};var aaH=JT['gemOptions'],aaI=new a3k[(arY(0x478))]();aaI['position']['y']=0x46,a9N[ar"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaJ=Mj(...,'Purchase Gems',...) title text added to the gems scene; served shows the same title build and scene add.",
+   "name": "purchaseGemsTitle",
+   "selector": "aaJ@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaJ",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": ";};var aaH=JT['gemOptions'],aaI=new a3k[(\"object\")]();aaI['position']['y']=0x46,a9N[\"add\"](aaI);var aaJ=Mj(Kq['pkghYgdlX'],\"Purchase Gems\",0x0,-0xf0,0x49,\"cente"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "aaH=JT['gemOptions'],aaI=new a3k[(arY(0x478))]();aaI['position']['y']=0x46,a9N[arY(0x8da)](aaI);var aaJ=Mj(Kq['pkghYgdlX'],arY(0x9c),0x0,-0xf0,0x49,arY(0x5e7),'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaK=Mj(...,'Buy gems to unlock premium content',...) subtitle added to the gems scene; served shows the same subtitle build and scene add.",
+   "name": "purchaseGemsSubtitle",
+   "selector": "aaK@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaK",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "hYgdlX'],\"Purchase Gems\",0x0,-0xf0,0x49,\"center\",'',2.5,![]);aaJ['opacity']=0.8,a9N['add'](aaJ);var aaK=Mj(Kq['pkghYgdlX'],'Buy\\x20gems\\x20to\\x20unlock\\x20premi"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'pkghYgdlX'],arY(0x9c),0x0,-0xf0,0x49,arY(0x5e7),'',2.5,![]);aaJ['opacity']=0.8,a9N['add'](aaJ);var aaK=Mj(Kq['pkghYgdlX'],'Buy\\x20gems\\x20to\\x20unlock\\x20premi"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaL=Gp (isCrazyGames) disables purchase buttons and gates the 'Payments are unavailable' notice; served shows the same flag reads and gating.",
+   "name": "paymentsUnavailable",
+   "selector": "aaL@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaL",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "(aaJ['position']['y']+=0x32,aaK[\"position\"]['y']+=0x32);a9N['onSceneSwitch']=function(){a6S();};var aaL=Gp,aaM=[];for(var a3M=0x0;a3M<aaH['length'];a3M++){var a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "(aaJ['position']['y']+=0x32,aaK[arY(0x215)]['y']+=0x32);a9N['onSceneSwitch']=function(){a6S();};var aaL=Gp,aaM=[];for(var a3M=0x0;a3M<aaH['length'];a3M++){var a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaM collects pushed price labels and is later matched by productId to setText live prices; served shows the same push collection and billing-update loop.",
+   "name": "priceLabels",
+   "selector": "aaM@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaM",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "osition']['y']+=0x32,aaK[\"position\"]['y']+=0x32);a9N['onSceneSwitch']=function(){a6S();};var aaL=Gp,aaM=[];for(var a3M=0x0;a3M<aaH['length'];a3M++){var a4N=1.5,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 4,
+    "snippet": "osition']['y']+=0x32,aaK[arY(0x215)]['y']+=0x32);a9N['onSceneSwitch']=function(){a6S();};var aaL=Gp,aaM=[];for(var a3M=0x0;a3M<aaH['length'];a3M++){var a4N=1.5,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaO=new a3J('Purchase',...) per-card action button, disabled when payments unavailable; served shows the same Purchase button build and gating.",
+   "name": "purchaseButton",
+   "selector": "aaO@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaO",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "=arY;if(window[\"AndroidBilling\"]){const aha=await uk['purchaseProduct'](ah9);return;}a6X(ah9);};var aaO=new a3J('Purchase',0xfa,0x46,0x1e);aaL&&(aaO['ReDNKHkwk'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "ar auN=arY;if(window[auN(0xf44)]){const aha=await uk['purchaseProduct'](ah9);return;}a6X(ah9);};var aaO=new a3J('Purchase',0xfa,0x46,0x1e);aaL&&(aaO['ReDNKHkwk'"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaP=new a3k['image'](getTempImage('promo/diamondstack'+i+'.png'),...) pack art added to the card; served shows the same diamond-stack image and card add.",
+   "name": "diamondStackImage",
+   "selector": "aaP@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaP",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "['set'](0x0,0x12c),aaO['xhOdNSwMWQd'](!![]);let ah9=aaH[a3M]['sku'];aaO['onclick']=function(){};var aaP=new a3k['image'](a3k['getTempImage'](\"promo/diamondstack"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 1,
+    "snippet": "['set'](0x0,0x12c),aaO['xhOdNSwMWQd'](!![]);let ah9=aaH[a3M]['sku'];aaO['onclick']=function(){};var aaP=new a3k['image'](a3k['getTempImage'](arY(0x1ed)+Math['ma"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaQ=Mj(...,gems+' Gems',...) count label added to the card; served shows the same gems-count label build and card add.",
+   "name": "gemsCountLabel",
+   "selector": "aaQ@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaQ",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "age'](\"promo/diamondstack\"+Math['max'](0x0,a3M)+\".png\"),0x0,a4E-0x1e,0xdc,0xdc);aaN['add'](aaP);var aaQ=Mj(Kq[\"pkghYgdlX\"],aaH[a3M]['gems']+'\\x20Gems',0x0,a4E+0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "TempImage'](arY(0x1ed)+Math['max'](0x0,a3M)+arY(0x30c)),0x0,a4E-0x1e,0xdc,0xdc);aaN['add'](aaP);var aaQ=Mj(Kq[arY(0x232)],aaH[a3M]['gems']+'\\x20Gems',0x0,a4E+0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaR=Mj(...,'$'+price,...) carries productId, is tracked in aaM, and added to the card; served shows the same price label, tracking, and add.",
+   "name": "priceLabel",
+   "selector": "aaR@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaR",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": "0,a4E+0x75,0x28,'center','',2.5,![]);aaQ[\"EpyzjenecZQ\"]=!![],aaQ['opacity']=0.9,aaN['add'](aaQ);var aaR=Mj(Kq['pkghYgdlX'],'$'+aaH[a3M][\"price\"],0x0,a4E+0xea,0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 5,
+    "snippet": ",0x0,a4E+0x75,0x28,'center','',2.5,![]);aaQ[arY(0x687)]=!![],aaQ['opacity']=0.9,aaN['add'](aaQ);var aaR=Mj(Kq['pkghYgdlX'],'$'+aaH[a3M][arY(0x5a4)],0x0,a4E+0xea"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaS=Mj(...,gems-extra+' Gems',...) base-amount label added to the card; served shows the same base-gems label build and card add.",
+   "name": "baseGemsLabel",
+   "selector": "aaS@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaS",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "']=aaH[a3M][\"sku\"],aaM['push'](aaR),aaR['EpyzjenecZQ']=!![],aaR['opacity']=0.75,aaN['add'](aaR);var aaS=Mj(Kq['pkghYgdlX'],aaH[a3M]['gems']-aaH[a3M]['extra']+'\\"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "H[a3M][arY(0x7bf)],aaM['push'](aaR),aaR['EpyzjenecZQ']=!![],aaR['opacity']=0.75,aaN['add'](aaR);var aaS=Mj(Kq['pkghYgdlX'],aaH[a3M]['gems']-aaH[a3M]['extra']+'\\"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaT=Mj(...,'+'+extra+' Bonus ',...) bonus label added only when extra!=0; served shows the same bonus label and conditional add.",
+   "name": "bonusGemsLabel",
+   "selector": "aaT@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaT",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "0,a4E+0xa0,0x1e,\"center\",'',2.5,![]);aaS['opacity']=0.5,aaS['EpyzjenecZQ']=!![],aaN['add'](aaS);var aaT=Mj(Kq[\"pkghYgdlX\"],'+'+aaH[a3M]['extra']+'\\x20Bonus\\x20'"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 6,
+    "snippet": "a4E+0xa0,0x1e,arY(0x5e7),'',2.5,![]);aaS['opacity']=0.5,aaS['EpyzjenecZQ']=!![],aaN['add'](aaS);var aaT=Mj(Kq[arY(0x232)],'+'+aaH[a3M]['extra']+'\\x20Bonus\\x20',"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9: aaU=Mj(...,'Payments are unavailable',...) with 'on CrazyGames' child, shown when aaL; served shows the same notice text and conditional scene add.",
+   "name": "paymentsUnavailableNotice",
+   "selector": "aaU@u2151#0",
+   "slice": "slice-03",
+   "disposition": "merged",
+   "reason": null,
+   "token": "aaU",
+   "binding": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "'][ahb]['productId']&&aaM[ahc][\"setText\"](aha['detail'][\"products\"][ahb]['price']);}}});if(aaL){var aaU=Mj(Kq[\"pkghYgdlX\"],\"Payments are unavailable\",0x0,0x50,0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u2151",
+    "index": 0,
+    "refCount": 3,
+    "snippet": "][ahb]['productId']&&aaM[ahc][auO(0xcdf)](aha['detail'][auO(0x42f)][ahb]['price']);}}});if(aaL){var aaU=Mj(Kq[arY(0x232)],arY(0x14e),0x0,0x50,0x32,arY(0x5e7),''"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.min computes out[N]=Math.min(a3z[N],a3A[N]) with a3z as first operand (rc=4); served copy identical modulo ai4-decoded 'min' keys (servedRefCount=4).",
+   "name": "minVecA",
+   "selector": "a3z@u0008#64",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 64,
+    "refCount": 4,
+    "snippet": "a3z[0x2]/a3A[0x2],a3y[0x3]=a3z[0x3]/a3A[0x3],a3y;},a3s[\"div\"]=a3s['divide'],a3s['min']=function(a3y,a3z,a3A){var aih=ai4;return a3y[0x0]=Math['min'](a3z[0x0],a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 64,
+    "refCount": 4,
+    "snippet": "x2]/a3A[0x2],a3y[0x3]=a3z[0x3]/a3A[0x3],a3y;},a3s[ai4(0xaca)]=a3s['divide'],a3s['min']=function(a3y,a3z,a3A){var aih=ai4;return a3y[0x0]=Math['min'](a3z[0x0],a3"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.max computes out[N]=Math.max(a3z[N],a3A[N]) with a3z as first operand (rc=4); served copy identical modulo ai4-decoded 'max' keys (servedRefCount=4).",
+   "name": "maxVecA",
+   "selector": "a3z@u0008#65",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 65,
+    "refCount": 4,
+    "snippet": "ath[\"min\"](a3z[0x2],a3A[0x2]),a3y[0x3]=Math[\"min\"](a3z[0x3],a3A[0x3]),a3y;},a3s['max']=function(a3y,a3z,a3A){var aii=ai4;return a3y[0x0]=Math[\"max\"](a3z[0x0],a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 65,
+    "refCount": 4,
+    "snippet": "40a)](a3z[0x2],a3A[0x2]),a3y[0x3]=Math[aih(0x40a)](a3z[0x3],a3A[0x3]),a3y;},a3s['max']=function(a3y,a3z,a3A){var aii=ai4;return a3y[0x0]=Math[aii(0x909)](a3z[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.scale computes out[N]=a3z[N]*a3A with a3z the input vector and a3A the scalar (rc=4); served copy identical with only the method key ai4-obfuscated (servedRefCount=4).",
+   "name": "vecToScale",
+   "selector": "a3z@u0008#66",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 66,
+    "refCount": 4,
+    "snippet": "h[\"max\"](a3z[0x2],a3A[0x2]),a3y[0x3]=Math['max'](a3z[0x3],a3A[0x3]),a3y;},a3s[\"scale\"]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A,a3y[0x1]=a3z[0x1]*a3A,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 66,
+    "refCount": 4,
+    "snippet": "x909)](a3z[0x2],a3A[0x2]),a3y[0x3]=Math['max'](a3z[0x3],a3A[0x3]),a3y;},a3s[ai4(0xd6)]=function(a3y,a3z,a3A){return a3y[0x0]=a3z[0x0]*a3A,a3y[0x1]=a3z[0x1]*a3A,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.squaredDistance diffs a3z[N]-a3y[N] and sums squares with a3z as second point (rc=4); served copy identical modulo dist/sqrDist alias keys (servedRefCount=4).",
+   "name": "sqrDistPointB",
+   "selector": "a3z@u0008#69",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 69,
+    "refCount": 4,
+    "snippet": "A*a3A+a3B*a3B+a3C*a3C+a3D*a3D);},a3s['dist']=a3s[\"pLBXqJSbPlZ\"],a3s['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 69,
+    "refCount": 4,
+    "snippet": "(a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3D);},a3s['dist']=a3s[ai4(0x439)],a3s['squaredDistance']=function(a3y,a3z){var a3A=a3z[0x0]-a3y[0x0],a3B=a3z[0x1]-a3y[0x1],a3C=a3z"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.length caches var a3z=a3y[0x0] then returns sqrt(a3z*a3z+...) (rc=2); served copy identical (servedRefCount=2).",
+   "name": "lenXElem",
+   "selector": "a3z@u0008#70",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 70,
+    "refCount": 2,
+    "snippet": "a3A+a3B*a3B+a3C*a3C+a3D*a3D;},a3s['sqrDist']=a3s[\"squaredDistance\"],a3s['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return M"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 70,
+    "refCount": 2,
+    "snippet": "rn a3A*a3A+a3B*a3B+a3C*a3C+a3D*a3D;},a3s['sqrDist']=a3s[ai4(0xa8b)],a3s['length']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return M"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.squaredLength caches var a3z=a3y[0x0] then returns a3z*a3z+... (rc=2); served copy identical modulo len/sqrLen alias keys (servedRefCount=2).",
+   "name": "sqrLenXElem",
+   "selector": "a3z@u0008#71",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 71,
+    "refCount": 2,
+    "snippet": "(a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C);},a3s['len']=a3s[\"length\"],a3s['squaredLength']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 71,
+    "refCount": 2,
+    "snippet": "3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C);},a3s['len']=a3s[ai4(0x3a2)],a3s['squaredLength']=function(a3y){var a3z=a3y[0x0],a3A=a3y[0x1],a3B=a3y[0x2],a3C=a3y[0x3];return a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.negate (dcItcWVWb) writes out[N]=-a3z[N] with a3z the source vector (rc=4); served copy identical (servedRefCount=4).",
+   "name": "vecToNegate",
+   "selector": "a3z@u0008#72",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 72,
+    "refCount": 4,
+    "snippet": " a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C;},a3s['sqrLen']=a3s[\"squaredLength\"],a3s['dcItcWVWb']=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x2]=-"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 72,
+    "refCount": 4,
+    "snippet": "eturn a3z*a3z+a3A*a3A+a3B*a3B+a3C*a3C;},a3s['sqrLen']=a3s[ai4(0x430)],a3s['dcItcWVWb']=function(a3y,a3z){return a3y[0x0]=-a3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x2]=-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.normalize reads a3z[0..3] into locals then writes out[N]=a3z[N]*invLen (rc=8); served copy identical with only the method key ai4-obfuscated (servedRefCount=8).",
+   "name": "vecToNormalize",
+   "selector": "a3z@u0008#73",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 73,
+    "refCount": 8,
+    "snippet": "z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x2]=-a3z[0x2],a3y[0x3]=-a3z[0x3],a3y;},a3s[\"normalize\"]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D="
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 73,
+    "refCount": 8,
+    "snippet": "3z[0x0],a3y[0x1]=-a3z[0x1],a3y[0x2]=-a3z[0x2],a3y[0x3]=-a3z[0x3],a3y;},a3s[ai4(0xfc6)]=function(a3y,a3z){var aij=ai4,a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D="
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.transformMat4 caches a3z[0..3] then multiplies by matrix rows into out (rc=4); served copy identical (servedRefCount=4).",
+   "name": "vecToTransform",
+   "selector": "a3z@u0008#77",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 77,
+    "refCount": 4,
+    "snippet": "]=a3n(),a3s[\"normalize\"](a3y,a3y),a3s['scale'](a3y,a3y,a3z),a3y;},a3s['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 77,
+    "refCount": 4,
+    "snippet": "3]=a3n(),a3s[aik(0xfc6)](a3y,a3y),a3s['scale'](a3y,a3y,a3z),a3y;},a3s['transformMat4']=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 vec4.transformQuat caches a3z[0..2] as the vector rotated by quaternion a3A (rc=3); served copy identical with only the method key ai4-obfuscated (servedRefCount=3).",
+   "name": "vecForQuat",
+   "selector": "a3z@u0008#78",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 78,
+    "refCount": 3,
+    "snippet": "3y[0x3]=a3A[0x3]*a3B+a3A[0x7]*a3C+a3A[0xb]*a3D+a3A[0xf]*a3E,a3y;},a3s[\"transformQuat\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 78,
+    "refCount": 3,
+    "snippet": "a3E,a3y[0x3]=a3A[0x3]*a3B+a3A[0x7]*a3C+a3A[0xb]*a3D+a3A[0xf]*a3E,a3y;},a3s[ai4(0xdc5)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3A["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 mat2.transpose reads source a3z lanes into out with an in-place alias branch (rc=7); served copy identical with only the method key ai4-obfuscated (servedRefCount=7).",
+   "name": "matToTranspose",
+   "selector": "a3z@u0008#82",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 82,
+    "refCount": 7,
+    "snippet": "a3y){return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3t[\"transpose\"]=function(a3y,a3z){if(a3y===a3z){var a3A=a3z[0x1];a3y[0x1]=a3z[0x2],a3y[0x"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 82,
+    "refCount": 7,
+    "snippet": "(a3y){return a3y[0x0]=0x1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3t[ai4(0x323)]=function(a3y,a3z){if(a3y===a3z){var a3A=a3z[0x1];a3y[0x1]=a3z[0x2],a3y[0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 mat2.invert reads a3z[0..3] for cofactor/determinant computation (rc=4); served copy identical with only the method key ai4-obfuscated (servedRefCount=4).",
+   "name": "matToInvert",
+   "selector": "a3z@u0008#83",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 83,
+    "refCount": 4,
+    "snippet": "[0x0],a3y[0x1]=a3z[0x2],a3y[0x2]=a3z[0x1],a3y[0x3]=a3z[0x3];return a3y;},a3t[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 83,
+    "refCount": 4,
+    "snippet": "x0],a3y[0x1]=a3z[0x2],a3y[0x2]=a3z[0x1],a3y[0x3]=a3z[0x3];return a3y;},a3t[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3]"
+   }
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "On both sides a3z is LDU's 2nd param with a single occurrence, returned untouched in [a3y,a3z,a3A] and never indexed (rc=1, servedRefCount=1); its purpose as an output slot is unclear.",
+   "selector": "a3z@u0008#88",
+   "slice": "slice-04",
+   "disposition": "keep",
+   "reason": null
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 mat2d.clone allocates var a3z=new a3m(0x6) and copies 6 lanes into it (rc=7); served copy identical with only the method key ai4-obfuscated (servedRefCount=7).",
+   "name": "cloneMat2d",
+   "selector": "a3z@u0008#89",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 89,
+    "refCount": 7,
+    "snippet": "y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[\"clone\"]=function(a3y){var a3z=new a3m(0x6);return a3z[0x0]=a3y[0x0],a3z[0x1]=a3y[0x1],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 89,
+    "refCount": 7,
+    "snippet": "x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[ai4(0xae2)]=function(a3y){var a3z=new a3m(0x6);return a3z[0x0]=a3y[0x0],a3z[0x1]=a3y[0x1],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 mat2d.invert reads a3z[0..5] for cofactor/determinant computation (rc=6); served copy identical with only the method key ai4-obfuscated (servedRefCount=6).",
+   "name": "mat2dToInvert",
+   "selector": "a3z@u0008#91",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 91,
+    "refCount": 6,
+    "snippet": "1,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[\"invert\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 91,
+    "refCount": 6,
+    "snippet": "a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y[0x4]=0x0,a3y[0x5]=0x0,a3y;},a3u[ai4(0xbf8)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat2d invert(a3y,a3z) reading a3z[0x0..0x5] into cofactors while a3y receives the result; SERVED DECL is the identical invert body with the same read/write split.",
+   "name": "invertSrcMat2d",
+   "selector": "a3z@u0008#92",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 92,
+    "refCount": 6,
+    "snippet": "terminant\"]=function(a3y){return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[\"multiply\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 92,
+    "refCount": 6,
+    "snippet": "i4(0x10b6)]=function(a3y){return a3y[0x0]*a3y[0x3]-a3y[0x1]*a3y[0x2];},a3u[ai4(0xdd3)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat2d multiply(a3y,a3z,a3A) caching a3z[0x0..0x5] as the left factor combined with a3A into a3y; SERVED DECL preserves the same operand roles.",
+   "name": "mulLeftMat2d",
+   "selector": "a3z@u0008#93",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 93,
+    "refCount": 6,
+    "snippet": "3D*a3M+a3F,a3y[0x5]=a3C*a3L+a3E*a3M+a3G,a3y;},a3u[\"mul\"]=a3u['multiply'],a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 93,
+    "refCount": 6,
+    "snippet": "M+a3F,a3y[0x5]=a3C*a3L+a3E*a3M+a3G,a3y;},a3u[ai4(0xcfe)]=a3u['multiply'],a3u['rotate']=function(a3y,a3z,a3A){var ain=ai4,a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 fromMat4(a3y,a3z) copying a3z[0x0..0x2,0x4..0x6,0x8..0xa] into a3y; SERVED DECL keeps the same 4x4-to-3x3 source copy.",
+   "name": "fromMatSrc",
+   "selector": "a3z@u0008#98",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 98,
+    "refCount": 9,
+    "snippet": "[0x5]=a3y[0x5],a3z[0x6]=a3y[0x6],a3z[0x7]=a3y[0x7],a3z[0x8]=a3y[0x8],a3z;},a3v[\"copy\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]=a3z"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 98,
+    "refCount": 9,
+    "snippet": "]=a3y[0x5],a3z[0x6]=a3y[0x6],a3z[0x7]=a3y[0x7],a3z[0x8]=a3y[0x8],a3z;},a3v[ai4(0x609)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]=a3z"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 multiply(a3y,a3z,a3A) caching a3z[0x0..0x8] as the left factor combined with a3A into a3y; SERVED DECL preserves the same operand roles.",
+   "name": "mulLeftMat3",
+   "selector": "a3z@u0008#104",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 104,
+    "refCount": 9,
+    "snippet": "a3I,a3y[0x8]=a3Q*a3D+a3R*a3G+a3S*a3J,a3y;},a3v['mul']=a3v['multiply'],a3v[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 104,
+    "refCount": 9,
+    "snippet": "*a3I,a3y[0x8]=a3Q*a3D+a3R*a3G+a3S*a3J,a3y;},a3v['mul']=a3v['multiply'],a3v[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3z[0x0],a3C=a3z[0x1],a3D=a3z[0x2],a3E=a3z["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 scale(a3y,a3z,a3A) multiplying a3z elements by the a3A vec2 factors into a3y; SERVED DECL is the same scale body with a3z as the source matrix.",
+   "name": "scaleSrcMat3",
+   "selector": "a3z@u0008#107",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 107,
+    "refCount": 6,
+    "snippet": "*a3z[0x5],a3y[0x6]=a3z[0x6],a3y[0x7]=a3z[0x7],a3y[0x8]=a3z[0x8],a3y;},a3v[\"fromMat2d\"]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]=0x0"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 107,
+    "refCount": 6,
+    "snippet": "C*a3z[0x5],a3y[0x6]=a3z[0x6],a3y[0x7]=a3z[0x7],a3y[0x8]=a3z[0x8],a3y;},a3v[ai4(0x5b1)]=function(a3y,a3z){return a3y[0x0]=a3z[0x0],a3y[0x1]=a3z[0x1],a3y[0x2]=0x0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat3 fromQuat(a3y,a3z) expanding the 4-element a3z quaternion into rotation entries of a3y; SERVED DECL keeps the identical quaternion-to-matrix expansion.",
+   "name": "quatSrc",
+   "selector": "a3z@u0008#109",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 109,
+    "refCount": 16,
+    "snippet": "a3N,a3y[0x2]=a3K-a3O,a3y[0x5]=a3L+a3N,a3y[0x8]=0x1-a3H-a3J,a3y;},a3v[\"normalFromMat4\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 109,
+    "refCount": 16,
+    "snippet": "]=a3L-a3N,a3y[0x2]=a3K-a3O,a3y[0x5]=a3L+a3N,a3y[0x8]=0x1-a3H-a3J,a3y;},a3v[ai4(0x449)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 clone(a3y) allocating a3z as a fresh 16-element array filled from a3y and returned; SERVED DECL is the same allocate-fill-return clone body.",
+   "name": "cloneOutMat4",
+   "selector": "a3z@u0008#110",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 110,
+    "refCount": 17,
+    "snippet": "y[0xb]=0x0,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x0,a3y[0xf]=0x1,a3y;},a3w[\"clone\"]=function(a3y){var a3z=new a3m(0x10);return a3z[0x0]=a3y[0x0],a3z[0x1]=a3y[0x1]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 110,
+    "refCount": 17,
+    "snippet": "xb]=0x0,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x0,a3y[0xf]=0x1,a3y;},a3w[ai4(0xae2)]=function(a3y){var a3z=new a3m(0x10);return a3z[0x0]=a3y[0x0],a3z[0x1]=a3y[0x1]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 adjoint(a3y,a3z) reading all 16 a3z elements into cofactor temporaries written to a3y; SERVED DECL preserves the same source/adjoint-output split.",
+   "name": "adjointSrcMat4",
+   "selector": "a3z@u0008#114",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 114,
+    "refCount": 16,
+    "snippet": "a3M*a3T-a3O*a3Q)*a42,a3y[0xf]=(a3I*a3T-a3J*a3R+a3K*a3Q)*a42,a3y):null;},a3w[\"adjoint\"]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3]"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 114,
+    "refCount": 16,
+    "snippet": "3M*a3T-a3O*a3Q)*a42,a3y[0xf]=(a3I*a3T-a3J*a3R+a3K*a3Q)*a42,a3y):null;},a3w[ai4(0x1b5)]=function(a3y,a3z){var a3A=a3z[0x0],a3B=a3z[0x1],a3C=a3z[0x2],a3D=a3z[0x3]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 multiply(a3y,a3z,a3A) caching a3z[0x0..0xf] as the left factor combined with a3A into a3y; SERVED DECL preserves the same operand roles.",
+   "name": "mulLeftMat4",
+   "selector": "a3z@u0008#117",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 117,
+    "refCount": 33,
+    "snippet": "0xf]=a3R*a3E+a3S*a3I+a3T*a3M+a3U*a3Q,a3y;},a3w['mul']=a3w['multiply'],a3w[\"translate\"]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 117,
+    "refCount": 33,
+    "snippet": "[0xf]=a3R*a3E+a3S*a3I+a3T*a3M+a3U*a3Q,a3y;},a3w['mul']=a3w['multiply'],a3w[ai4(0x42c)]=function(a3y,a3z,a3A){var a3B=a3A[0x0],a3C=a3A[0x1],a3D=a3A[0x2],a3E,a3F,"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL tail shows the generic mat4 rotate copying a3z[0xc..0xf] into a3y under an a3z!==a3y alias guard; SERVED DECL keeps the same source-matrix guard and copy.",
+   "name": "rotateSrcMat4",
+   "selector": "a3z@u0008#120",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 120,
+    "refCount": 17,
+    "snippet": "=a3z[0xc],a3y[0xd]=a3z[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf]),a3y);},a3w[\"rotateX\"]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[\"sin\"](a3A),a3C=Math['cos'](a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 120,
+    "refCount": 17,
+    "snippet": "a3z[0xc],a3y[0xd]=a3z[0xd],a3y[0xe]=a3z[0xe],a3y[0xf]=a3z[0xf]),a3y);},a3w[ai4(0x4a0)]=function(a3y,a3z,a3A){var air=ai4,a3B=Math[air(0xbd6)](a3A),a3C=Math['cos"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 rotateX(a3y,a3z,a3A) rotating rows cached from a3z by sin/cos of a3A into a3y; SERVED DECL is the same rotateX body with a3z as source.",
+   "name": "rotateXSrc",
+   "selector": "a3z@u0008#121",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 121,
+    "refCount": 17,
+    "snippet": "a3I*a3C-a3E*a3B,a3y[0xa]=a3J*a3C-a3F*a3B,a3y[0xb]=a3K*a3C-a3G*a3B,a3y;},a3w[\"rotateY\"]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[\"sin\"](a3A),a3C=Math[\"cos\"](a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 121,
+    "refCount": 17,
+    "snippet": "3I*a3C-a3E*a3B,a3y[0xa]=a3J*a3C-a3F*a3B,a3y[0xb]=a3K*a3C-a3G*a3B,a3y;},a3w[ai4(0xfbc)]=function(a3y,a3z,a3A){var ais=ai4,a3B=Math[ais(0xbd6)](a3A),a3C=Math[ais("
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows mat4 rotateY(a3y,a3z,a3A) rotating rows cached from a3z by sin/cos of a3A into a3y; SERVED DECL is the same rotateY body with a3z as source.",
+   "name": "rotateYSrc",
+   "selector": "a3z@u0008#122",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 122,
+    "refCount": 17,
+    "snippet": "a3E*a3B+a3I*a3C,a3y[0xa]=a3F*a3B+a3J*a3C,a3y[0xb]=a3G*a3B+a3K*a3C,a3y;},a3w['rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[\"cos\"](a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 122,
+    "refCount": 17,
+    "snippet": "a3E*a3B+a3I*a3C,a3y[0xa]=a3F*a3B+a3J*a3C,a3y[0xb]=a3G*a3B+a3K*a3C,a3y;},a3w['rotateZ']=function(a3y,a3z,a3A){var ait=ai4,a3B=Math['sin'](a3A),a3C=Math[ait(0xb69"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows the frustum builder using a3z as the left bound (1/(a3A-a3z), (a3A+a3z) terms); SERVED DECL keeps the identical left/right/bottom/top/near/far formula with a3z as left.",
+   "name": "leftPlane",
+   "selector": "a3z@u0008#126",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 126,
+    "refCount": 1,
+    "snippet": "y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=a3E*a3D*0x2*a3H,a3y[0xf]=0x0,a3y;},a3w[\"perspective\"]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[\"tan\"](a3z/0x2),a3"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 126,
+    "refCount": 1,
+    "snippet": ",a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=a3E*a3D*0x2*a3H,a3y[0xf]=0x0,a3y;},a3w[ai4(0x5fc)]=function(a3y,a3z,a3A,a3B,a3C){var aiu=ai4,a3D=0x1/Math[aiu(0x49d)](a3z/0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows perspective(a3y,a3z,...) computing 1/tan(a3z/2) as the vertical field-of-view term; SERVED DECL keeps the same fovy/aspect/near/far perspective formula.",
+   "name": "fovY",
+   "selector": "a3z@u0008#127",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 127,
+    "refCount": 2,
+    "snippet": "0x1,a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[\"ortho\"]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 127,
+    "refCount": 2,
+    "snippet": ",a3y[0xc]=0x0,a3y[0xd]=0x0,a3y[0xe]=0x2*a3C*a3B*a3E,a3y[0xf]=0x0,a3y;},a3w[ai4(0x508)]=function(a3y,a3z,a3A,a3B,a3C,a3D,a3E){var a3F=0x1/(a3z-a3A),a3G=0x1/(a3B-"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 DECL shows setAxes returning function(a3z,...) writing the result into a3z via fromMat3 then normalize; SERVED DECL keeps a3z as the same double-written quaternion output.",
+   "name": "outputQuat",
+   "selector": "a3z@u0008#131",
+   "slice": "slice-04",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3z",
+   "binding": {
+    "unit": "u0008",
+    "index": 131,
+    "refCount": 3,
+    "snippet": "){return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3x['setAxisAngle']=function(a3y,a3z,a3A){var aiz=ai4;a3A*=0.5;var a3B=Math[\"sin\"](a3A);retur"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u0008",
+    "index": 131,
+    "refCount": 3,
+    "snippet": "){return a3y[0x0]=0x0,a3y[0x1]=0x0,a3y[0x2]=0x0,a3y[0x3]=0x1,a3y;},a3x['setAxisAngle']=function(a3y,a3z,a3A){var aiz=ai4;a3A*=0.5;var a3B=Math[aiz(0xbd6)](a3A);"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 filter body reads a3i['faces'][a3j] and a3i['faceVertexUvs']; SERVED side shows the same a3i['faces'][a3j] access with only string-key obfuscation shifted.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3i",
+   "binding": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "p':[ux,uy,uz,uA,uB,uC,uD,uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l[\"mate"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "p':[ux,uy,uz,uA,uB,uC,uD,uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[apN(0xd8a)][a3j],a3m=a3l[ap"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 SERVED DECL both show filter:function(a3i,a3j,a3k) with a3l=a3i['faces'][a3j]; same geometry-object role on both sides.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3i",
+   "binding": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "pawns':[v4,v5,v6,v7,v8],'points':[v9,va,vb,vc,vd],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[\""
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "pawns':[v4,v5,v6,v7,v8],'points':[v9,va,vb,vc,vd],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED filter bodies both bind the face via a3l=a3i['faces'][a3j]; identical geometry-holder role on both sides.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3i",
+   "binding": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "ecticalBox2','electricalBox3','barrell',\"cruddyDoor\",'crateTexture','DirtGround'],'filter':function(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[\"m"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "electicalBox2','electricalBox3','barrell',ai1(0x48a),'crateTexture','DirtGround'],'filter':function(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[ap"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3l=a3i['faces'][a3j] and SERVED a3l=a3i[apQ(0xd8a)][a3j] (obfuscated 'faces' key); same geometry object on both sides.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3i",
+   "binding": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "ows':![],'spawns':[vX,vY,vZ,w0,w1,w2,w3,w4,w5,w6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l['mate"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 1,
+    "snippet": "ows':![],'spawns':[vX,vY,vZ,w0,w1,w2,w3,w4,w5,w6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[apQ(0xd8a)][a3j],a3m=a3l['m"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both VM9 and SERVED filter bodies read a3i['faces'][a3j] to fetch the face; geometry-holder role confirmed on both sides.",
+   "name": "mapGeometry",
+   "selector": "a3i@u1709#5",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3i",
+   "binding": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "w,xx,xy,xz,xA,xB,xC,xD,xE,xF,xG],'points':[xH,xI,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[\"mate"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 1,
+    "snippet": "w,xx,xy,xz,xA,xB,xC,xD,xE,xF,xG],'points':[xH,xI,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[apS(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 uses a3j as the faces subscript (a3i['faces'][a3j], faceVertexUvs[0][a3j][0]); SERVED preserves a3i[..][a3j] indexing on both DECL and USES.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3j",
+   "binding": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ux,uy,uz,uA,uB,uC,uD,uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l[\"material"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 2,
+    "snippet": "ux,uy,uz,uA,uB,uC,uD,uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[apN(0xd8a)][a3j],a3m=a3l[apN(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED both index faces with a3j (a3l=a3i['faces'][a3j]); face-index role identical on both sides.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3j",
+   "binding": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "s':[v4,v5,v6,v7,v8],'points':[v9,va,vb,vc,vd],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[\"mate"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 1,
+    "snippet": "s':[v4,v5,v6,v7,v8],'points':[v9,va,vb,vc,vd],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[apO(0"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3i['faces'][a3j] and SERVED a3i['faces'][a3j] with guard on a3k[a3l[..]]; a3j is the face subscript on both sides.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3j",
+   "binding": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "calBox2','electricalBox3','barrell',\"cruddyDoor\",'crateTexture','DirtGround'],'filter':function(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[\"mater"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 1,
+    "snippet": "ticalBox2','electricalBox3','barrell',ai1(0x48a),'crateTexture','DirtGround'],'filter':function(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[apP(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides bind the current face through a3i[faces-key][a3j]; a3j is consistently the face index on VM9 and SERVED.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3j",
+   "binding": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 1,
+    "snippet": ":![],'spawns':[vX,vY,vZ,w0,w1,w2,w3,w4,w5,w6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l['material"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 1,
+    "snippet": ":![],'spawns':[vX,vY,vZ,w0,w1,w2,w3,w4,w5,w6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[apQ(0xd8a)][a3j],a3m=a3l['mater"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED filter bodies both use a3j solely as the faces-array subscript; role agrees on both sides.",
+   "name": "faceIdx",
+   "selector": "a3j@u1709#5",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3j",
+   "binding": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 1,
+    "snippet": ",xy,xz,xA,xB,xC,xD,xE,xF,xG],'points':[xH,xI,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[\"material"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 1,
+    "snippet": ",xy,xz,xA,xB,xC,xD,xE,xF,xG],'points':[xH,xI,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[apS(0x33c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 repeatedly calls a3k[a3m]['indexOf']('<MaterialName>') with a3m=materialIndex; SERVED shows identical a3k[a3m]['indexOf'] texture/material checks.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "y,uz,uA,uB,uC,uD,uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l[\"materialInde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 7,
+    "snippet": "y,uz,uA,uB,uC,uD,uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[apN(0xd8a)][a3j],a3m=a3l[apN(0x33c)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3k[a3l['materialIndex']]['indexOf']('Barrel'/'Machines'/...) and SERVED a3k[a3l[..]]['indexOf'](..) with obfuscated keys; material-name list on both sides.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "v4,v5,v6,v7,v8],'points':[v9,va,vb,vc,vd],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[\"material"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "v4,v5,v6,v7,v8],'points':[v9,va,vb,vc,vd],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[apO(0x33c"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 checks a3k[materialIndex].indexOf('Coloredmetalpipe'/'glass'/...) and SERVED mirrors the same a3k[..].indexOf material probes; role matches.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 9,
+    "snippet": "ox2','electricalBox3','barrell',\"cruddyDoor\",'crateTexture','DirtGround'],'filter':function(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[\"materialI"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 9,
+    "snippet": "lBox2','electricalBox3','barrell',ai1(0x48a),'crateTexture','DirtGround'],'filter':function(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[apP(0x33c)"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 loops a3k[a3m]['indexOf'](a3n[a3o]) over foliage material names; SERVED keeps the same try{indexOf} loop over material names.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 3,
+    "snippet": ",'spawns':[vX,vY,vZ,w0,w1,w2,w3,w4,w5,w6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l['materialInde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 3,
+    "snippet": ",'spawns':[vX,vY,vZ,w0,w1,w2,w3,w4,w5,w6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[apQ(0xd8a)][a3j],a3m=a3l['materialI"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 and SERVED both iterate material-name probes (a3k[a3m]['indexOf']('Grass'/'Flag'/...)) to set collision/skip flags; same list role.",
+   "name": "materialNames",
+   "selector": "a3k@u1709#5",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3k",
+   "binding": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "xz,xA,xB,xC,xD,xE,xF,xG],'points':[xH,xI,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[\"materialInde"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 2,
+    "snippet": "xz,xA,xB,xC,xD,xE,xF,xG],'points':[xH,xI,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[apS(0x33c)];a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 binds a3l=a3i[\"faces\"][a3j] then reads/writes vertexColors, materialIndex, collision and skip; SERVED shows the same a3i[faces-key][a3j] face fetch with identical flag writes.",
+   "name": "face",
+   "selector": "a3l@u1709#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l[\"materialIndex\"];a3l[\"material"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 19,
+    "snippet": "uE,uF,uG,uH,uI,uJ,uK,uL,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[apN(0xd8a)][a3j],a3m=a3l[apN(0x33c)];a3l[apN(0x33c)]"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3l=a3i['faces'][a3j] with vertexColors/collision probes per material; SERVED mirrors the same faces-subscript fetch and collision writes with only key obfuscation shifted.",
+   "name": "face",
+   "selector": "a3l@u1709#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 12,
+    "snippet": "points':[v9,va,vb,vc,vd],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[\"materialIndex\"]]['indexOf"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 12,
+    "snippet": "points':[v9,va,vb,vc,vd],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[apO(0x33c)]]['indexOf'](ap"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 fetches a3l=a3i['faces'][a3j], guards on materialIndex, and toggles collision/skip flags; SERVED keeps the identical face-fetch plus flag-toggle shape.",
+   "name": "face",
+   "selector": "a3l@u1709#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 25,
+    "snippet": "ox3','barrell',\"cruddyDoor\",'crateTexture','DirtGround'],'filter':function(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[\"materialIndex\"]]==undefine"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 25,
+    "snippet": "lBox3','barrell',ai1(0x48a),'crateTexture','DirtGround'],'filter':function(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[apP(0x33c)]]==undefined)ret"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3l=a3i[\"faces\"][a3j] drives vertexColors indexOf comparisons that set collision/skip; SERVED shows the same faces-indexed face with matching flag writes.",
+   "name": "face",
+   "selector": "a3l@u1709#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 10,
+    "snippet": "vZ,w0,w1,w2,w3,w4,w5,w6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l['materialIndex'];a3l['material"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 10,
+    "snippet": "vZ,w0,w1,w2,w3,w4,w5,w6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[apQ(0xd8a)][a3j],a3m=a3l['materialIndex'];a3l['mater"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 binds a3l=a3i['faces'][a3j] and unconditionally clears its collision flag after the probe loop; SERVED preserves the same faces-subscript face binding.",
+   "name": "face",
+   "selector": "a3l@u1709#5",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3l",
+   "binding": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 6,
+    "snippet": ",xF,xG],'points':[xH,xI,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[\"materialIndex\"];a3l[\"material"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 6,
+    "snippet": ",xF,xG],'points':[xH,xI,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[apS(0x33c)];a3l[apS(0x33c)]<0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3m=a3l[\"materialIndex\"] with oldMaterialIndex fallback, used as the a3k[a3m] subscript; SERVED shows the same materialIndex-with-fallback subscript on both DECL and USES.",
+   "name": "faceMaterialIndex",
+   "selector": "a3m@u1709#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "L,uM,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l[\"materialIndex\"];a3l[\"materialIndex\"]<0x0&&(a3m=a3l["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 8,
+    "snippet": "M,uN],'points':[uO,uP,uQ,uR,uS],'filter':function(a3i,a3j,a3k){var apN=ai1,a3l=a3i[apN(0xd8a)][a3j],a3m=a3l[apN(0x33c)];a3l[apN(0x33c)]<0x0&&(a3m=a3l['oldMateri"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 assigns a3m=a3k[materialIndex]['indexOf']('Barrel'/'Machines'/'Beams'/...) and compares it against the vertex-color slot; SERVED repeats the same per-material indexOf-then-compare pattern.",
+   "name": "matchedTextureIndex",
+   "selector": "a3m@u1709#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 8,
+    "snippet": "d],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[\"materialIndex\"]]['indexOf'](\"Barrel\");a3m!=-0x1"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 8,
+    "snippet": "d],'aJkQkTWQo':[ve,vf,vg,vh,vi,vj],'filter':function(a3i,a3j,a3k){var apO=ai1,a3l=a3i['faces'][a3j],a3m=a3k[a3l[apO(0x33c)]]['indexOf'](apO(0x9a1));a3m!=-0x1&&M"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 reassigns a3m=a3k[materialIndex]['indexOf'](...) per texture ('Coloredmetalpipe', 'redmetal', 'glass', ...) for vertex-color equality tests; SERVED mirrors the same repeated indexOf probes.",
+   "name": "matchedTextureIndex",
+   "selector": "a3m@u1709#5",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 23,
+    "snippet": "n(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[\"materialIndex\"]]==undefined)return;var a3m=a3k[a3l['materialIndex']]['indexOf']('Coloredmetalpipe')"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 5,
+    "refCount": 23,
+    "snippet": "nction(a3i,a3j,a3k){var apP=ai1,a3l=a3i['faces'][a3j];if(a3k[a3l[apP(0x33c)]]==undefined)return;var a3m=a3k[a3l['materialIndex']]['indexOf']('Coloredmetalpipe')"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3m=a3l['materialIndex'] with oldMaterialIndex fallback feeds every a3k[a3m]['indexOf'] probe; SERVED keeps the identical fallback-then-subscript role.",
+   "name": "faceMaterialIndex",
+   "selector": "a3m@u1709#6",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u1709",
+    "index": 6,
+    "refCount": 5,
+    "snippet": "6,w7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[\"faces\"][a3j],a3m=a3l['materialIndex'];a3l['materialIndex']<0x0&&(a3m=a3l["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 6,
+    "refCount": 5,
+    "snippet": "7,w8],'points':[w9,wa,wb,wc,wd],'filter':function(a3i,a3j,a3k){var apQ=ai1,a3l=a3i[apQ(0xd8a)][a3j],a3m=a3l['materialIndex'];a3l['materialIndex']<0x0&&(a3m=a3l["
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3m=a3l[\"materialIndex\"] with oldMaterialIndex fallback is the a3k[a3m] subscript for the Asphalt probe; SERVED preserves the same fallback material-index subscript.",
+   "name": "faceMaterialIndex",
+   "selector": "a3m@u1709#8",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3m",
+   "binding": {
+    "unit": "u1709",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "I,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[\"materialIndex\"];a3l[\"materialIndex\"]<0x0&&(a3m=a3l["
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 8,
+    "refCount": 3,
+    "snippet": "I,xJ,xK,xL,xM,xN],'lightmaps':[Ay],'filter':function(a3i,a3j,a3k){var apS=ai1,a3l=a3i['faces'][a3j],a3m=a3l[apS(0x33c)];a3l[apS(0x33c)]<0x0&&(a3m=a3l['oldMateri"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 assigns a3n=a3k[a3m]['indexOf']('TextureAtlas'/...) per material and compares against the vertex-color slot; SERVED repeats the same indexOf-result-then-compare role.",
+   "name": "matchedTextureIndex",
+   "selector": "a3n@u1709#0",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "[\"faces\"][a3j],a3m=a3l[\"materialIndex\"];a3l[\"materialIndex\"]<0x0&&(a3m=a3l['oldMaterialIndex']);var a3n=a3k[a3m]['indexOf']('TextureAtlas');if(a3n!=-0x1&&Math['"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 0,
+    "refCount": 20,
+    "snippet": "a3l=a3i[apN(0xd8a)][a3j],a3m=a3l[apN(0x33c)];a3l[apN(0x33c)]<0x0&&(a3m=a3l['oldMaterialIndex']);var a3n=a3k[a3m]['indexOf']('TextureAtlas');if(a3n!=-0x1&&Math['"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 declares a3n as a foliage/prop material-name array looped via a3k[a3m]['indexOf'] to clear collision (and skip some); SERVED keeps the same name-list loop with matching flag writes.",
+   "name": "noCollisionTextures",
+   "selector": "a3n@u1709#1",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "3l['materialIndex'];a3l['materialIndex']<0x0&&(a3m=a3l['oldMaterialIndex']);if(a3m==0x19)return;var a3n=['fern1','bamboobranch','tree2aleaf','tree2bleaf',\"tree2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 1,
+    "refCount": 4,
+    "snippet": "3l['materialIndex'];a3l['materialIndex']<0x0&&(a3m=a3l['oldMaterialIndex']);if(a3m==0x19)return;var a3n=['fern1','bamboobranch','tree2aleaf','tree2bleaf',apQ(0x"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3n=['Wood','Bush2','Bush3','Material'] is looped with indexOf probes that clear the face collision flag; SERVED shows the same short name-list loop clearing collision.",
+   "name": "noCollisionTextures",
+   "selector": "a3n@u1709#2",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "['faces'][a3j],a3m=a3l['materialIndex'];a3l['materialIndex']<0x0&&(a3m=a3l[\"oldMaterialIndex\"]);var a3n=['Wood','Bush2','Bush3',\"Mate\"+\"rial\"];for(var a3o=0x0;a"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 2,
+    "refCount": 2,
+    "snippet": "a3l=a3i['faces'][a3j],a3m=a3l['materialIndex'];a3l['materialIndex']<0x0&&(a3m=a3l[apR(0x10b1)]);var a3n=['Wood','Bush2','Bush3',apR(0x3cc)+apR(0x6fa)];for(var a"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3n=[\"Asphalt\"] is looped via indexOf to clear collision before the unconditional collision reset; SERVED preserves the same single-entry probe-list loop.",
+   "name": "noCollisionTextures",
+   "selector": "a3n@u1709#3",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "['faces'][a3j],a3m=a3l[\"materialIndex\"];a3l[\"materialIndex\"]<0x0&&(a3m=a3l['oldMaterialIndex']);var a3n=[\"Asphalt\"];for(var a3o=0x0;a3o<a3n['length'];a3o++){if("
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 3,
+    "refCount": 2,
+    "snippet": "i1,a3l=a3i['faces'][a3j],a3m=a3l[apS(0x33c)];a3l[apS(0x33c)]<0x0&&(a3m=a3l['oldMaterialIndex']);var a3n=[apS(0xc91)];for(var a3o=0x0;a3o<a3n['length'];a3o++){if"
+   }
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 a3n is a long material-name array probed via indexOf to clear collision/skip most entries but re-enable collision for CaveWall/CaveFloor; SERVED keeps the same probe-list with the same mixed flag writes.",
+   "name": "collisionProbeNames",
+   "selector": "a3n@u1709#4",
+   "slice": "slice-05",
+   "disposition": "merged",
+   "reason": null,
+   "token": "a3n",
+   "binding": {
+    "unit": "u1709",
+    "index": 4,
+    "refCount": 7,
+    "snippet": "3l['materialIndex'];a3l['materialIndex']<0x0&&(a3m=a3l['oldMaterialIndex']);if(a3m==0x19)return;var a3n=['fern1','bamboobranch','tree2aleaf',\"tree2bleaf\",'tree2"
+   },
+   "divClass": "snippet-only",
+   "bindingServed": {
+    "unit": "u1709",
+    "index": 4,
+    "refCount": 7,
+    "snippet": "3l['materialIndex'];a3l['materialIndex']<0x0&&(a3m=a3l['oldMaterialIndex']);if(a3m==0x19)return;var a3n=['fern1','bamboobranch','tree2aleaf',apT(0xdf2),'tree2ab"
+   }
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+  "proposals": [
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @103079 serialize(library,element) + library[element.uuid] cache dict; already-readable cache/registry term, no cryptic token.",
+      "name": "library",
+      "selector": "library@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @397456 UniformsCache get(light) + lights[light.id]/light.type switch; canonical three.js Light term.",
+      "name": "light",
+      "selector": "light@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @398246 ShadowUniformsCache get(light) + lights[light.id]/light.type switch; canonical three.js Light term.",
+      "name": "light",
+      "selector": "light@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @399958 var light=lights[_i2] loop over lights + 46 refs (color/intensity/shadow/type dispatch); canonical loop light var.",
+      "name": "light",
+      "selector": "light@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @405161 setupView loop var light=lights[_i3] + 16 refs (matrixWorld/target/width/height per-type); canonical loop light var.",
+      "name": "light",
+      "selector": "light@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @406979 pushLight(light) pushes to lightsArray; canonical Light param name.",
+      "name": "light",
+      "selector": "light@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @412738 shadow render loop var light=lights[i] + light.shadow/light.name/updateMatrices; canonical loop light var.",
+      "name": "light",
+      "selector": "light@u0020#5"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @416373 getDepthMaterial(...,light,...) + light.isPointLight/matrixWorld checks; canonical Light param.",
+      "name": "light",
+      "selector": "light@u0020#6"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @418419 renderObject(...,light,type) + pass-through to getDepthMaterial/recursion; canonical Light param.",
+      "name": "light",
+      "selector": "light@u0020#7"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @726806 LightShadow.updateMatrices(light) + light.matrixWorld/target.matrixWorld; canonical three.js API param.",
+      "name": "light",
+      "selector": "light@u0020#8"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @728521 SpotLightShadow.updateMatrices(light) + light.angle/distance/fov derive; canonical three.js API param.",
+      "name": "light",
+      "selector": "light@u0020#9"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @730611 PointLightShadow.updateMatrices(light,viewportIndex) + light.matrixWorld; canonical three.js API param.",
+      "name": "light",
+      "selector": "light@u0020#10"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @734785 DirectionalLightShadow.updateMatrices(light) passthrough to base; canonical three.js API param.",
+      "name": "light",
+      "selector": "light@u0020#11"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @847911 SpotLightHelper(light,color) + this.light=light/matrixWorld; canonical helper Light param.",
+      "name": "light",
+      "selector": "light@u0020#12"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @851401 PointLightHelper(light,sphereSize,color) + this.light=light; canonical helper Light param.",
+      "name": "light",
+      "selector": "light@u0020#13"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @852304 HemisphereLightHelper(light,size,color) ctor param + _this.light=light/matrixWorld; canonical three.js Light param.",
+      "name": "light",
+      "selector": "light@u0020#14"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @856377 DirectionalLightHelper(light,size,color) ctor param + _this.light=light/matrixWorld; canonical three.js Light param.",
+      "name": "light",
+      "selector": "light@u0020#15"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @398826 shadowCastingLightsFirst(lightA,lightB) comparator + lightA.castShadow; idiomatic sort-comparator pair name.",
+      "name": "lightA",
+      "selector": "lightA@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @398833 shadowCastingLightsFirst(lightA,lightB) comparator + lightB.castShadow; idiomatic sort-comparator pair name.",
+      "name": "lightB",
+      "selector": "lightB@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @726938 LightShadow.updateMatrices alias lightPositionWorld=this._lightPositionWorld + setFromMatrixPosition/copy; well-known engine term.",
+      "name": "lightPositionWorld",
+      "selector": "lightPositionWorld@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @730730 PointLightShadow.updateMatrices alias lightPositionWorld=this._lightPositionWorld + 5 refs (position copy/translate); well-known engine term.",
+      "name": "lightPositionWorld",
+      "selector": "lightPositionWorld@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @228074 var lightmap_fragment GLSL chunk string + ShaderChunk registry/#include <lightmap_fragment>; canonical three.js chunk name.",
+      "name": "lightmap_fragment",
+      "selector": "lightmap_fragment@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @228284 var lightmap_pars_fragment GLSL chunk string + ShaderChunk registry/#include refs; canonical three.js chunk name.",
+      "name": "lightmap_pars_fragment",
+      "selector": "lightmap_pars_fragment@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @122738 Color.getHSL var lightness=(min+max)/2 alongside hue/saturation; canonical HSL component name.",
+      "name": "lightness",
+      "selector": "lightness@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @387140 getParameters(material,lights,...) + 8 refs (numDirLights/lights.directional...); canonical three.js lights-state param.",
+      "name": "lights",
+      "selector": "lights@u0020#0"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @397422 UniformsCache var lights={} dict keyed by light.id + get(light) lookups; canonical three.js cache name.",
+      "name": "lights",
+      "selector": "lights@u0020#1"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @398212 ShadowUniformsCache var lights={} dict keyed by light.id + get(light) lookups; canonical three.js cache name.",
+      "name": "lights",
+      "selector": "lights@u0020#2"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @399629 setup(lights) param + lights.sort/lights.length iteration; canonical lights-array param.",
+      "name": "lights",
+      "selector": "lights@u0020#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @404962 setupView(lights,camera) param + lights.length loop with per-type view setup; canonical lights-array param.",
+      "name": "lights",
+      "selector": "lights@u0020#4"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "DECL @406813 WebGLRenderState var lights=new WebGLLights(...) + setupLights/setupLightsView calls; canonical three.js state name.",
+      "name": "lights",
+      "selector": "lights@u0020#5"
+    }
+  ],
+  "slice": "01",
+  "stats": {
+    "total": 30,
+    "rename": 0,
+    "keep": 30,
+    "high": 30,
+    "medium": 0,
+    "low": 0
+  }
+}

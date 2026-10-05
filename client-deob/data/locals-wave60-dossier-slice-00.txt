@@ -1,0 +1,58 @@
+# DOSSIER slice-00 (wave 60, 6 bindings, 6 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/6] a3i@u1961#0 | kind=param depth=5 refCount=5 | network/codec.js [DIVERGED snippet-only]
+DECL @12 (verified):
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i["getUint16"](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m["length"];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l["hasString"]&&(Jf(a3k,a3i,a3j),a3j=a3k["stringOffset"]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @12 (verified), servedRefCount=5:
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aq
+SERVED USES: 6 token-occurrences in unit, showing 1 nearest outside DECL window:
+@450: ;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aqt(0x6d1)]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+==============================================================================
+[2/6] a3j@u1961#0 | kind=param depth=5 refCount=13 | network/codec.js [DIVERGED snippet-only]
+DECL @16 (verified):
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i["getUint16"](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m["length"];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l["hasString"]&&(Jf(a3k,a3i,a3j),a3j=a3k["stringOffset"]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+USES: refCount=13, 14 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @16 (verified), servedRefCount=13:
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aqt(0x
+SERVED USES: 14 token-occurrences in unit, showing 2 nearest outside DECL window:
+@441: r a3n=0x0;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aqt(0x6d1)]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+@469: ];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aqt(0x6d1)]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+==============================================================================
+[3/6] a3k@u1961#0 | kind=var depth=5 refCount=6 | network/codec.js [DIVERGED snippet-only]
+DECL @106 (verified):
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i["getUint16"](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m["length"];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l["hasString"]&&(Jf(a3k,a3i,a3j),a3j=a3k["stringOffset"]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+USES: refCount=6, 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @105 (verified), servedRefCount=6:
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aqt(0x6d1)]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+SERVED USES: 7 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/6] a3l@u1961#0 | kind=var depth=5 refCount=5 | network/codec.js [DIVERGED snippet-only]
+DECL @144 (verified):
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i["getUint16"](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m["length"];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l["hasString"]&&(Jf(a3k,a3i,a3j),a3j=a3k["stringOffset"]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @143 (verified), servedRefCount=5:
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aqt(0x6d1)]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+SERVED USES: 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/6] a3m@u1961#0 | kind=var depth=5 refCount=2 | network/codec.js [DIVERGED snippet-only]
+DECL @205 (verified):
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i["getUint16"](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m["length"];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l["hasString"]&&(Jf(a3k,a3i,a3j),a3j=a3k["stringOffset"]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @204 (verified), servedRefCount=2:
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aqt(0x6d1)]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/6] a3n@u1961#0 | kind=var depth=5 refCount=5 | network/codec.js [DIVERGED snippet-only]
+DECL @244 (verified):
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i["getUint16"](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m["length"];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l["hasString"]&&(Jf(a3k,a3i,a3j),a3j=a3k["stringOffset"]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+USES: refCount=5, 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @243 (verified), servedRefCount=5:
+function Jg(a3i,a3j){var aqt=ai1;a3j=a3j||0x0;if(a3i[aqt(0x153)](a3j)==0x0)return a3j+=0x98967f,null;var a3k=J3[J9[a3i['getUint16'](a3j)-0x1]],a3l=a3k;if(a3l==undefined)return a3j+=0x98967f,undefined;var a3m=a3l['globalKeys'];a3j+=0x2;for(var a3n=0x0;a3n<a3m[aqt(0x3a2)];a3n++){a3k[a3m[a3n]]=a3i[Ia[a3l['byteSizes'][a3n]]](a3j),a3j+=I2[a3l['byteSizes'][a3n]];}return a3l[aqt(0x10f3)]&&(Jf(a3k,a3i,a3j),a3j=a3k[aqt(0x6d1)]),a3k['byteOffset']=a3j,pZ&&(a3i['byteOffset']+=a3j),a3k;}
+SERVED USES: 6 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-00: propose EVERY binding above.

@@ -1,0 +1,172 @@
+# DOSSIER slice-05 (wave 69, 20 bindings, 20 DIVERGED snippet-only)
+# Conventions: windows are char-slices of ORIGINAL VM9 unit text; @ = unit-relative offset.
+# Globals appear CRYPTIC here (pre-rename); resolve via data/rename-map.json if needed.
+# DIVERGED wave: bindings marked [DIVERGED snippet-only] carry SERVED-side DECL+USES too — same binding, shifted context bytes. Verify the role on BOTH sides before renaming.
+# Decide RENAME (cryptic, role clear) or KEEP (idiomatic/already-readable) per binding.
+==============================================================================
+[1/20] a3A@u2851#0 | kind=var depth=5 refCount=4 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @369 (verified):
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu["info"]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x["length"],null;}if(a3x['length']==a2D)return null;a2D=a3x["length"];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+"Key"];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A]["name"]||'','cacheKey':(''+a3B)["slice"](0x0,0xa0)}));}return a[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @377 (verified), servedRefCount=4:
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu[aE7(0x79c)]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x[aE7(0x3a2)],null;}if(a3x['length']==a2D)return null;a2D=a3x[aE7(0x3a2)];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+aE7(0x3b8)];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A][aE7(0x9ec)]||'','cacheKey':(''+a3B)[aE7(0x67c)](0x[...line truncated...]
+SERVED USES: 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[2/20] a3B@u2851#0 | kind=var depth=5 refCount=4 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @406 (verified):
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu["info"]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x["length"],null;}if(a3x['length']==a2D)return null;a2D=a3x["length"];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+"Key"];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A]["name"]||'','cacheKey':(''+a3B)["slice"](0x0,0xa0)}));}return a[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @414 (verified), servedRefCount=4:
+{var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu[aE7(0x79c)]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x[aE7(0x3a2)],null;}if(a3x['length']==a2D)return null;a2D=a3x[aE7(0x3a2)];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+aE7(0x3b8)];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A][aE7(0x9ec)]||'','cacheKey':(''+a3B)[aE7(0x67c)](0x0,0xa0)}));}re[...line truncated...]
+SERVED USES: 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[3/20] a3C@u2851#0 | kind=catch-param depth=7 refCount=0 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @610 (verified):
+2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu["info"]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x["length"],null;}if(a3x['length']==a2D)return null;a2D=a3x["length"];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+"Key"];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A]["name"]||'','cacheKey':(''+a3B)["slice"](0x0,0xa0)}));}return a3z;}catch([...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @630 (verified), servedRefCount=0:
+++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x[aE7(0x3a2)],null;}if(a3x['length']==a2D)return null;a2D=a3x[aE7(0x3a2)];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+aE7(0x3b8)];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A][aE7(0x9ec)]||'','cacheKey':(''+a3B)[aE7(0x67c)](0x0,0xa0)}));}return a3z;}catch(a3C){return null;}}
+SERVED USES: 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[4/20] a3x@u2851#0 | kind=var depth=5 refCount=8 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @141 (verified):
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu["info"]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x["length"],null;}if(a3x['length']==a2D)return null;a2D=a3x["length"];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+"Key"];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A]["name"]||'','cacheKey':(''+a3B)["slice"](0x0,0xa0)}));}return a[...line truncated...]
+USES: refCount=8, 9 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @141 (verified), servedRefCount=8:
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu[aE7(0x79c)]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x[aE7(0x3a2)],null;}if(a3x['length']==a2D)return null;a2D=a3x[aE7(0x3a2)];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+aE7(0x3b8)];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':
+SERVED USES: 9 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[5/20] a3y@u2851#0 | kind=var depth=5 refCount=3 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @197 (verified):
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu["info"]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x["length"],null;}if(a3x['length']==a2D)return null;a2D=a3x["length"];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+"Key"];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A]["name"]||'','cacheKey':(''+a3B)["slice"](0x0,0xa0)}));}return a[...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @201 (verified), servedRefCount=3:
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu[aE7(0x79c)]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x[aE7(0x3a2)],null;}if(a3x['length']==a2D)return null;a2D=a3x[aE7(0x3a2)];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+aE7(0x3b8)];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A][aE7(0x9ec)]||'','cacheKey':(''+a3B)[aE7(0x67c)](0x[...line truncated...]
+SERVED USES: 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[6/20] a3z@u2851#0 | kind=var depth=5 refCount=4 | sim/game-loop.js [DIVERGED snippet-only]
+DECL @352 (verified):
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu["info"]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x["length"],null;}if(a3x['length']==a2D)return null;a2D=a3x["length"];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+"Key"];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A]["name"]||'','cacheKey':(''+a3B)["slice"](0x0,0xa0)}));}return a[...line truncated...]
+USES: refCount=4, 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @360 (verified), servedRefCount=4:
+function a2N(){var aE7=ai1;try{if(typeof Fu=='undefined'||Fu==null||Fu['info']==undefined||Fu['info']['programs']==undefined)return null;var a3x=Fu[aE7(0x79c)]['programs'];if(a2K==null){a2K={};for(var a3y=0x0;a3y<a3x['length'];a3y++){a2K[a3x[a3y]['cache'+'Key']]=!![];}return a2D=a3x[aE7(0x3a2)],null;}if(a3x['length']==a2D)return null;a2D=a3x[aE7(0x3a2)];var a3z=null;for(var a3A=0x0;a3A<a3x['length'];a3A++){var a3B=a3x[a3A]['cache'+aE7(0x3b8)];a3B!=undefined&&a2K[a3B]!==!![]&&(a2K[a3B]=!![],a3z==null&&(a3z=[]),a3z['push']({'shaderName':a3x[a3A][aE7(0x9ec)]||'','cacheKey':(''+a3B)[aE7(0x67c)](0x[...line truncated...]
+SERVED USES: 5 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[7/20] Xp@u2571#0 | kind=var depth=3 refCount=0 | characters/rigs.js [DIVERGED snippet-only]
+DECL @4 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @4 (verified), servedRefCount=0:
+var Xp=![],Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](fu
+SERVED USES: 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[8/20] Xq@u2571#0 | kind=var depth=3 refCount=0 | characters/rigs.js [DIVERGED snippet-only]
+DECL @11 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=0, 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @11 (verified), servedRefCount=0:
+var Xp=![],Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(
+SERVED USES: 1 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[9/20] a3A@u2571#0 | kind=var depth=5 refCount=1 | characters/rigs.js [DIVERGED snippet-only]
+DECL @737 (verified):
+ne'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w["bones"]['length'];++a3z){var [...line truncated...]
+USES: refCount=1, 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @752 (verified), servedRefCount=1:
+);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x[aAb(0xb3a)](new usvzFuAsEB[(aAb(0x345))](a3y,a3w['boneInverses']),a3x['matrixWorld']);}return a3p;};
+SERVED USES: 2 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[10/20] a3B@u2571#0 | kind=param depth=7 refCount=7 | characters/rigs.js [DIVERGED snippet-only]
+DECL @199 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=7, 19 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @201 (verified), servedRefCount=7:
+var Xp=![],Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[...line truncated...]
+SERVED USES: 19 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[11/20] a3B@u2571#1 | kind=param depth=7 refCount=10 | characters/rigs.js [DIVERGED snippet-only]
+DECL @411 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=10, 19 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @411 (verified), servedRefCount=10:
+Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'[...line truncated...]
+SERVED USES: 19 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[12/20] a3o@u2571#0 | kind=param depth=5 refCount=3 | characters/rigs.js [DIVERGED snippet-only]
+DECL @59 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @58 (verified), servedRefCount=3:
+var Xp=![],Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x
+SERVED USES: 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[13/20] a3p@u2571#0 | kind=var depth=5 refCount=2 | characters/rigs.js [DIVERGED snippet-only]
+DECL @76 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@884: a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w["bones"]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x["bind"](new usvzFuAsEB[("Skeleton")](a3y,a3w['boneInverses']),a3x['matrixWorld']);}return a3p;};
+SERVED DECL @75 (verified), servedRefCount=2:
+var Xp=![],Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['
+SERVED USES: 3 token-occurrences in unit, showing 1 nearest outside DECL window:
+@903: a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x[aAb(0xb3a)](new usvzFuAsEB[(aAb(0x345))](a3y,a3w['boneInverses']),a3x['matrixWorld']);}return a3p;};
+==============================================================================
+[14/20] a3q@u2571#0 | kind=var depth=5 refCount=3 | characters/rigs.js [DIVERGED snippet-only]
+DECL @149 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @148 (verified), servedRefCount=3:
+var Xp=![],Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&
+SERVED USES: 4 token-occurrences in unit, showing 1 nearest outside DECL window:
+@597: Ag'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'
+==============================================================================
+[15/20] a3r@u2571#0 | kind=var depth=5 refCount=3 | characters/rigs.js [DIVERGED snippet-only]
+DECL @156 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @155 (verified), servedRefCount=3:
+var Xp=![],Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B
+SERVED USES: 4 token-occurrences in unit, showing 2 nearest outside DECL window:
+@633: isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x[aAb(0xb3a)](new usvzFuAs
+@646: s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x[aAb(0xb3a)](new usvzFuAsEB[(aAb(0x345
+==============================================================================
+[16/20] a3t@u2571#0 | kind=var depth=5 refCount=2 | characters/rigs.js [DIVERGED snippet-only]
+DECL @368 (verified):
+var Xp=![],Xq=new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name'][...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @368 (verified), servedRefCount=2:
+var Xp=![],Xq=new usvzFuAsEB[(ai1(0x1001))](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o[aAb(0x39e)]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[...line truncated...]
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[17/20] a3u@u2571#0 | kind=var depth=5 refCount=2 | characters/rigs.js [DIVERGED snippet-only]
+DECL @614 (verified):
+new usvzFuAsEB[("QTOKQmNlEY")](),Xr=function(a3o){var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var [...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @626 (verified), servedRefCount=2:
+kinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x[aAb(0xb3a)](new u[...line truncated...]
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[18/20] a3x@u2571#0 | kind=var depth=5 refCount=2 | characters/rigs.js [DIVERGED snippet-only]
+DECL @663 (verified):
+{var aAb=ai1,a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @675 (verified), servedRefCount=2:
+saN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x[aAb(0xb3a)](new usvzFuAsEB[(aAb(0x345))](a3y,a3w['boneInverses']),[...line truncated...]
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[19/20] a3y@u2571#0 | kind=var depth=5 refCount=2 | characters/rigs.js [DIVERGED snippet-only]
+DECL @676 (verified):
+a3p={'animations':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],[...line truncated...]
+USES: refCount=2, 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @688 (verified), servedRefCount=2:
+ined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x[aAb(0xb3a)](new usvzFuAsEB[(aAb(0x345))](a3y,a3w['boneInverses']),a3x['matrixWo[...line truncated...]
+SERVED USES: 3 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+[20/20] a3z@u2571#0 | kind=var depth=5 refCount=3 | characters/rigs.js [DIVERGED snippet-only]
+DECL @691 (verified):
+s':a3o['animations'],'scene':a3o['scene']['clone'](!![])},a3q={},a3r={};a3o["scene"]['XOVWraMIAg'](function(a3B){var aAc=aAb;a3B['isSkinnedMesh']&&(a3r[a3B['name']]=a3B),a3B['RNQDluasaN']!==undefined&&a3B['name']!==undefined&&(a3q[a3B['name']]=a3B["RNQDluasaN"]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B["name"]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B["name"]]=a3B),a3B["name"]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var [...line truncated...]
+USES: refCount=3, 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+SERVED DECL @703 (verified), servedRefCount=3:
+']!==undefined&&(a3q[a3B['name']]=a3B[aAc(0xbac)]);});var a3s={},a3t={};a3p['scene']['XOVWraMIAg'](function(a3B){var aAd=aAb;a3B['isBone']&&(a3s[a3B[aAd(0x9ec)]]=a3B),a3B['isSkinnedMesh']&&(a3t[a3B[aAd(0x9ec)]]=a3B),a3B[aAd(0x9ec)]!==undefined&&a3q[a3B['name']]!==undefined&&(a3B['RNQDluasaN']=a3q[a3B['name']]);});for(var a3u in a3r){var a3v=a3r[a3u],a3w=a3v['skeleton'],a3x=a3t[a3u],a3y=[];for(var a3z=0x0;a3z<a3w[aAb(0xb1f)]['length'];++a3z){var a3A=a3s[a3w['bones'][a3z]['name']];a3y['push'](a3A);}a3x[aAb(0xb3a)](new usvzFuAsEB[(aAb(0x345))](a3y,a3w['boneInverses']),a3x['matrixWorld']);}return [...line truncated...]
+SERVED USES: 4 token-occurrences in unit, showing 0 nearest outside DECL window:
+==============================================================================
+END slice-05: propose EVERY binding above.

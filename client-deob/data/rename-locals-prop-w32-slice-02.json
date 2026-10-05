@@ -1,0 +1,223 @@
+{
+ "slice": "02",
+ "stats": {
+  "total": 30,
+  "rename": 30,
+  "keep": 0,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010797 for(a4j=0,a4k=skin.joints.length) loop bound; sibling a4j already jointIndex; USES a4j<a4k in loadScene skin branch",
+   "name": "jointCount",
+   "selector": "a4k@u0020#28"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1011388 var a4k=[] collects Matrix4 inverses; USES a4k.push(a4o) + new Skeleton(a4j,a4k) (three.js boneInverses)",
+   "name": "boneInverses",
+   "selector": "a4k@u0020#29"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @999609 for(a4k=0,a4l=targets.length) loop bound in morph-target bounds loop; sibling a4k already targetIndex; USES a4k<a4l",
+   "name": "targetCount",
+   "selector": "a4l@u0020#12"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1002571 var a4l={primitive,promise} stored in primitiveCache; USES a4l.primitive/a4l.promise/a4c[a4i]=a4l in loadGeometries",
+   "name": "cacheEntry",
+   "selector": "a4l@u0020#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010812 for(a4l=0,...) loop index over resolved joint nodes; USES a4n=a4h[a4l] in loadScene skin traverse",
+   "name": "jointNodeIndex",
+   "selector": "a4l@u0020#16"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @989457 a4m=accessor.normalized===true flag; USES passed to BufferAttribute/InterleavedBufferAttribute ctors in loadAccessor",
+   "name": "normalized",
+   "selector": "a4m@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010820 a4m=resolved-joints.length loop bound; USES a4l<a4m in loadScene skin traverse",
+   "name": "jointNodeCount",
+   "selector": "a4m@u0020#13"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @970270 Promise executor param in draco decodePrimitive; USES a4n(decodedGeometry) after decodeDracoFile (resolve role; 'resolve' already taken)",
+   "name": "resolveGeometry",
+   "selector": "a4n@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @989486 var a4n=new TypedArray(...) backing store; USES new BufferAttribute(a4n,...)/InterleavedBuffer(a4n,...) in loadAccessor",
+   "name": "typedArray",
+   "selector": "a4n@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010857 var a4n=resolvedJoints[a4l] per-joint node; USES if(a4n) joints.push(a4n)",
+   "name": "jointNode",
+   "selector": "a4n@u0020#15"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978219 a4o=-2t^3+3t^2 cubic Hermite weight (three.js s2; s2 is rename-map key); USES a4q=1-a4o + result accumulation in interpolate_",
+   "name": "splineS2",
+   "selector": "a4o@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @992077 ImageBitmap loader callback param; USES new CanvasTexture(a4o) in loadTexture",
+   "name": "imageBitmap",
+   "selector": "a4o@u0020#4"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1010899 var a4o=new Matrix4 from inverseBindMatrices array; USES boneInverses.push(a4o)",
+   "name": "boneInverse",
+   "selector": "a4o@u0020#9"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978240 a4p=t^3-t^2 cubic Hermite weight (three.js s3; s3 is rename-map key); USES result accumulation in interpolate_",
+   "name": "splineS3",
+   "selector": "a4p@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978252 a4q=1-a4o cubic Hermite weight (three.js s0; s0 is rename-map key); USES result accumulation in interpolate_",
+   "name": "splineS0",
+   "selector": "a4q@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978264 interpolate_: a4r=a4p-a4k+a4j (4th Hermite basis s1); USES refCount=1 in a4d[a4s]=a4q*a4t+a4r*a4u+...",
+   "name": "hermiteS1",
+   "selector": "a4r@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978288 interpolate_: for(var a4s=0;a4s!==a4f;a4s++) loop index over valueSize components; USES refCount=7",
+   "name": "valueIdx",
+   "selector": "a4s@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978317 interpolate_: a4t=a4e[a4n+a4s+a4f] prev-knot point value p0; USES refCount=1 in result blend",
+   "name": "prevPoint",
+   "selector": "a4t@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006549 anim loader: a4t=a4p[0x3] resolves a4f pushes of a4k (channel samplers); USES a4B=a4t[a4w] then a4B[interpolation]",
+   "name": "samplers",
+   "selector": "a4t@u0020#3"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978338 interpolate_: a4u=a4e[a4n+a4s+a4g]*a4i prev-knot tangent m0 scaled by dt; USES refCount=1 in result blend",
+   "name": "prevTangent",
+   "selector": "a4u@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006562 anim loader: a4u=a4p[0x4] resolves a4g pushes of a4l (channel targets); USES a4C=a4u[a4w] then switch on a4C[path]",
+   "name": "targets",
+   "selector": "a4u@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978363 interpolate_: a4v=a4e[a4m+a4s+a4f] next-knot point value p1; USES refCount=1 in result blend",
+   "name": "nextPoint",
+   "selector": "a4v@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006575 anim loader: a4v=[] collects KeyframeTracks; USES refCount=2: a4v[push](a4M) and new AnimationClip(a4N,undefined,a4v)",
+   "name": "tracks",
+   "selector": "a4v@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @978384 interpolate_: a4w=a4e[a4m+a4s]*a4i next-knot tangent m1 scaled by dt; USES refCount=1 in result blend",
+   "name": "nextTangent",
+   "selector": "a4w@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006590 anim loader: for(var a4w=0;a4w<a4x;a4w++) channel loop index; USES refCount=7 indexing a4q/a4r/a4s/a4t/a4u",
+   "name": "channelIdx",
+   "selector": "a4w@u0020#2"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006598 anim loader: a4x=a4q[length] loop bound over resolved nodes; USES refCount=1 in loop condition",
+   "name": "nodeCount",
+   "selector": "a4x@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006635 anim loader: a4y=a4q[a4w] per-channel node; USES refCount=7 incl updateMatrix and undefined-continue",
+   "name": "animNode",
+   "selector": "a4y@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @1006648 anim loader: a4z=a4r[a4w] per-channel input accessor; USES a4z[array] as times in KeyframeTrack ctor @1007946",
+   "name": "inputAccessor",
+   "selector": "a4z@u0020#1"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @721688 Path.bezierCurveTo param alongside aCP1y/aCP2x/aCP2y/aX/aY; USES forwarded to CubicBezierCurve control point x",
+   "name": "cp1x",
+   "selector": "aCP1x@u0020#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "DECL @773642 ShapePath.bezierCurveTo param; USES forwarded to currentPath.bezierCurveTo(aCP1x,...) first control-point x",
+   "name": "cp1x",
+   "selector": "aCP1x@u0020#1"
+  }
+ ]
+}

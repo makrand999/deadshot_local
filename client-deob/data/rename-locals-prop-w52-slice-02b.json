@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "slice": "02b",
+    "wave": 52
+  },
+  "proposals": [
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: tier weapon smg ar awp for referral reward preview; SERVED: smg/ar/awp selector builds ice skin image (snippet-only twin).",
+      "name": "rewardWeapon",
+      "selector": "ahf@u2151#22"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: login prompt text displayed; SERVED: label text passed as login prompt (snippet-only twin).",
+      "name": "loginPrompt",
+      "selector": "ahg@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: xsolla order body stringified; SERVED: xsolla payload with sandbox quantity settings params (snippet-only twin).",
+      "name": "paymentPayload",
+      "selector": "ahg@u2151#1"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: equipped skin entry destructured; SERVED: equippedSkins loop entry exposing name weapon wear (snippet-only twin).",
+      "name": "equippedSkin",
+      "selector": "ahg@u2151#3"
+    },
+    {
+      "action": "keep",
+      "confidence": "high",
+      "evidence": "Both sides show dead binding assigned never read (ahg@u2151#5).",
+      "selector": "ahg@u2151#5"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: stored setting initial value seeding slider; SERVED: getter result seeds range and number inputs (snippet-only twin).",
+      "name": "crosshairSettingValue",
+      "selector": "ahg@u2151#6"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: spinner cell loop index over display cells; SERVED: loop counter indexing abe spin cells (snippet-only twin).",
+      "name": "cellIndex",
+      "selector": "ahg@u2151#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: random offset range 0xa0; SERVED: width constant randomizing spin strip offset (snippet-only twin).",
+      "name": "spinOffsetRange",
+      "selector": "ahg@u2151#9"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: label x offset 0x41 zeroed when centered; SERVED: x offset for promo skin labels (snippet-only twin).",
+      "name": "labelOffsetX",
+      "selector": "ahg@u2151#10"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: weapon key maps materials textures; SERVED: weapon key matching materials building textures (snippet-only twin).",
+      "name": "weaponKey",
+      "selector": "ahg@u2151#11"
+    },
+    {
+      "action": "rename",
+      "confidence": "medium",
+      "evidence": "VM9: gates trade-up removal branch; SERVED: flag toggles trade-up remove versus add (snippet-only twin).",
+      "name": "isRemoveMode",
+      "selector": "ahg@u2151#12"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: deep copy skins filtered; SERVED: deep clone of skins list filtered (snippet-only twin).",
+      "name": "skinsCopy",
+      "selector": "ahg@u2151#13"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: dialog overlay root object; SERVED: overlay object holding dim buttons panels (snippet-only twin).",
+      "name": "dialogOverlay",
+      "selector": "ahg@u2151#14"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: idle sway frequency multiplier; SERVED: sine multiplier for inspect bob animation (snippet-only twin).",
+      "name": "bobFrequency",
+      "selector": "ahg@u2151#15"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: tradeUp skins token body; SERVED: skins plus token posted to tradeUp (snippet-only twin).",
+      "name": "tradeUpPayload",
+      "selector": "ahg@u2151#16"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: clipboard failure logged reported; SERVED: catch param logged on clipboard failure (snippet-only twin).",
+      "name": "copyError",
+      "selector": "ahg@u2151#17"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: ice preview skin inspected; SERVED: ice skin object assigned for inspect (snippet-only twin).",
+      "name": "inspectSkin",
+      "selector": "ahg@u2151#18"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: clamped bar progress value; SERVED: clamped 0-5 value scaling bar width (snippet-only twin).",
+      "name": "progressLevel",
+      "selector": "ahg@u2151#19"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: index enables inspect buttons; SERVED: loop counter enabling inspect buttons list (snippet-only twin).",
+      "name": "btnIndex",
+      "selector": "ahg@u2151#20"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: index disables inspect buttons; SERVED: loop counter disabling inspect buttons list (snippet-only twin).",
+      "name": "btnIndex",
+      "selector": "ahg@u2151#21"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: XHR fetches leaderboards JSON; SERVED: XHR fetching GET leaderboards JSON payload (snippet-only twin).",
+      "name": "leaderboardXhr",
+      "selector": "ahg@u2151#22"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: Daily Weekly All options; SERVED: Daily Weekly All tab labels array (snippet-only twin).",
+      "name": "periodTabs2",
+      "selector": "ahg@u2151#23"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: period lowercased table key; SERVED: leaderboard period param lowercased lookup (snippet-only twin).",
+      "name": "periodKey",
+      "selector": "ahg@u2151#24"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: clicked tab passed selector; SERVED: onclick tab element passed to selector (snippet-only twin).",
+      "name": "clickedTab",
+      "selector": "ahg@u2151#26"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: captured tab deferred onclick; SERVED: captured tab deferred auto-click timeout (snippet-only twin).",
+      "name": "pendingTab",
+      "selector": "ahg@u2151#27"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: challenge board title text; SERVED: Winter Daily Weekly challenges title text (snippet-only twin).",
+      "name": "challengeHeader",
+      "selector": "ahh@u2151#0"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: xsolla fetch response json; SERVED: awaited xsolla fetch response parsed json (snippet-only twin).",
+      "name": "paymentResponse2",
+      "selector": "ahh@u2151#1"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: equipped name resolved preloaded; SERVED: equipped skin name with useLink resolved (snippet-only twin).",
+      "name": "equippedSkinName",
+      "selector": "ahh@u2151#3"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: syncs renderer canvas size; SERVED: syncs WebGL renderer to canvas rect (snippet-only twin).",
+      "name": "resizeRenderer",
+      "selector": "ahh@u2151#5"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: clamps applies slider value; SERVED: clamps slider input updates setting preview (snippet-only twin).",
+      "name": "applySliderValue",
+      "selector": "ahh@u2151#6"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: spin strip entry filling slot visuals; SERVED: spin strip entry filling slot visuals (snippet-only twin).",
+      "name": "stripItem",
+      "selector": "ahh@u2151#8"
+    },
+    {
+      "action": "rename",
+      "confidence": "high",
+      "evidence": "VM9: preloaded image wrapped textured; SERVED: temp image callback loaded as texture (snippet-only twin).",
+      "name": "loadedImage",
+      "selector": "ahh@u2151#9"
+    }
+  ]
+}

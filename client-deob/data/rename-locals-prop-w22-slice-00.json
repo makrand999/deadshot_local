@@ -1,0 +1,223 @@
+{
+ "slice": "00",
+ "stats": {
+  "total": 30,
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @556198 CompressedTexture(mipmaps,...,minFilter,...) param; USES refCount=1 forwarded via Texture.call + this.minFilter default — idiomatic three.js texture param",
+   "name": "minFilter",
+   "selector": "minFilter@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @556565 CanvasTexture(canvas,...,minFilter,...) param; USES refCount=3 Texture.call forwarding — idiomatic three.js texture param",
+   "name": "minFilter",
+   "selector": "minFilter@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @661939 subclip var minStartTime; USES refCount=3, 4 occurrences, 0 outside DECL window — readable min-start-time accumulator",
+   "name": "minStartTime",
+   "selector": "minStartTime@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @595295 isEarHashed var minTX=a.x<b.x?... triangle min-x; USES refCount=1 zOrder(minTX,...) — readable earcut abbreviation",
+   "name": "minTX",
+   "selector": "minTX@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @595341 isEarHashed var minTY=a.y<b.y?... triangle min-y; USES refCount=1 zOrder(...,minTY,...) — readable earcut abbreviation",
+   "name": "minTY",
+   "selector": "minTY@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @13824 clampScalar(minVal,maxVal) Vector2 param; USES refCount=2 Math.max(minVal,Math.min(...)) per component — readable",
+   "name": "minVal",
+   "selector": "minVal@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @32097 clampScalar(minVal,maxVal) Vector4 param; USES refCount=4 Math.max(minVal,...) x/y/z/w — readable",
+   "name": "minVal",
+   "selector": "minVal@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @51237 clampScalar(minVal,maxVal) Vector3 param; USES refCount=3 Math.max(minVal,...) x/y/z — readable",
+   "name": "minVal",
+   "selector": "minVal@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @56960 Box3-scope var minX; USES refCount=3 setFrom* bounds accumulation + this.min.set(minX,...) — readable",
+   "name": "minX",
+   "selector": "minX@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @57408 setFromArray var minX=+Infinity; USES refCount=3 if(x<minX)minX=x + this.min.set(minX,...) — readable",
+   "name": "minX",
+   "selector": "minX@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @593187 Earcut.triangulate var minX bounds scan; USES refCount=5 invSize=Math.max(maxX-minX,...) + earcutLinked passthrough — readable",
+   "name": "minX",
+   "selector": "minX@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @594276 earcutLinked(ear,triangles,dim,minX,...) param; USES refCount=5 indexCurve/isEarHashed + recursive pass calls — readable",
+   "name": "minX",
+   "selector": "minX@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @595209 isEarHashed(ear,minX,minY,invSize) param; USES refCount=2 zOrder(minTX,minTY,minX,...)/zOrder(maxTX,...) — readable",
+   "name": "minX",
+   "selector": "minX@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @596588 splitEarcut(start,triangles,dim,minX,...) param; USES refCount=2 earcutLinked(a/c,...,minX,...) passthrough — readable",
+   "name": "minX",
+   "selector": "minX@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @598440 indexCurve(start,minX,minY,invSize) param; USES refCount=1 zOrder(p.x,p.y,minX,...) — readable",
+   "name": "minX",
+   "selector": "minX@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @599102 param minX of indexCurve/zOrder chain; USES @598440 indexCurve(start,minX,minY,invSize)->zOrder(p.x,p.y,minX,minY,invSize); idiomatic bbox min-X.",
+   "name": "minX",
+   "selector": "minX@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @56979 Box3 var minY=+Infinity; USES @57651/@57750 if(y<minY)minY=y plus this.min.set(minX,minY,minZ); idiomatic y-minimum.",
+   "name": "minY",
+   "selector": "minY@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @57427 setFromArray var minY=+Infinity with if(y<minY)minY=y loop; USES refCount=3 same min-track idiom; already-readable.",
+   "name": "minY",
+   "selector": "minY@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @593192 Earcut.triangulate var minX,minY,maxX,maxY; USES @594281 earcutLinked(ear,triangles,dim,minX,minY,invSize); bbox min-Y.",
+   "name": "minY",
+   "selector": "minY@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @594281 earcutLinked(ear,triangles,dim,minX,minY,invSize,pass) param; USES recursive earcutLinked/filterPoints calls forwarding minY; idiomatic.",
+   "name": "minY",
+   "selector": "minY@u0020#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @595214 isEarHashed(ear,minX,minY,invSize) param; USES @594477 isEarHashed(ear,minX,minY,invSize) and zOrder(minTX,minTY,minX,minY,invSize); keep.",
+   "name": "minY",
+   "selector": "minY@u0020#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @596593 splitEarcut(start,triangles,dim,minX,minY,invSize) param; USES @596802/@596850 earcutLinked(a/c,triangles,dim,minX,minY,invSize); pass-through bound.",
+   "name": "minY",
+   "selector": "minY@u0020#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @598445 indexCurve(start,minX,minY,invSize) param; USES @599107/@599157 zOrder(x,y,minX,minY,invSize) normalization; idiomatic.",
+   "name": "minY",
+   "selector": "minY@u0020#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @599107 zOrder(x,y,minX,minY,invSize) param; USES @598512 zOrder(p.x,p.y,minX,minY,invSize), y=32767*(y-minY)*invSize; keep.",
+   "name": "minY",
+   "selector": "minY@u0020#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @56998 Box3 var minZ=+Infinity; USES @57668/@57755 if(z<minZ)minZ=z plus this.min.set(minX,minY,minZ); idiomatic z-minimum.",
+   "name": "minZ",
+   "selector": "minZ@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @57446 setFromArray var minZ=+Infinity with if(z<minZ)minZ=z; USES refCount=3 same Box3 min-track idiom; keep.",
+   "name": "minZ",
+   "selector": "minZ@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @595483 isEarHashed var minZ=zOrder(minTX,minTY,minX,minY,invSize); USES @595611/@595904 range test p.z>=minZ && n.z<=maxZ; min z-order bound.",
+   "name": "minZ",
+   "selector": "minZ@u0020#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @443212 uploadTexture var mipmap; USES @444549/@444608 mipmap=mipmaps[i], texImage2D(...,mipmap.width,mipmap.height,...,mipmap.data); loop cursor.",
+   "name": "mipmap",
+   "selector": "mipmap@u0020#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @447962 setTextureCube var mipmap; USES @445968/@445889 mipmap=mipmaps[_i2], texImage2D/compressedTexImage2D upload; idiomatic.",
+   "name": "mipmap",
+   "selector": "mipmap@u0020#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "DECL @448712 cubemap var mipmapImage in _mipmap/mipmaps face loop; USES refCount=3 within DECL window; already-readable descriptive name.",
+   "name": "mipmapImage",
+   "selector": "mipmapImage@u0020#0"
+  }
+ ]
+}

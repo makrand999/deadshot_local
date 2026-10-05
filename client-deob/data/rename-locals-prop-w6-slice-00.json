@@ -1,0 +1,222 @@
+{
+ "slice": "slice-00",
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "HttpRequest xhr opts: for-in copied onto xhr, .binary sets responseType; idiomatic bag.",
+   "name": "options",
+   "selector": "options@u0011#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh ctor: options.stream_type to addBuffers, for-in copied onto this; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#1"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.configure: unknown keys merged in, .stream_type forwarded; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#2"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.load: options.no_gl gates gl, forwarded to configure; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#3"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.mergeMeshes: options[j] datatypes per buffer; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#4"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.fromURL: options||{} default, passed as HttpRequest opts; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#5"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.encode: options forwarded to encoder call; idiomatic passthrough.",
+   "name": "options",
+   "selector": "options@u0011#6"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.plane: options.detail/size/width/height/xz with defaults; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#7"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.plane2D: options.size scales vertices; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#8"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.point: unused param, consistent factory signature; idiomatic keep.",
+   "name": "options",
+   "selector": "options@u0011#9"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.cube: options.size/halfsize plus flags, forwarded to load; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#10"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.box: options.sizex/sizey/sizez plus flags; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#11"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.circle: options.size/radius/slices/xz/empty defaults; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#12"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.cylinder: options.caps gates cap trim, forwarded to load; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#13"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.sphere: options.lines/hemi/size read, forwarded to load; idiomatic.",
+   "name": "options",
+   "selector": "options@u0011#14"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh factory param; options.hemi read, bag fwd to GL.Mesh.load(buffers,options,gl); idiomatic",
+   "name": "options",
+   "selector": "options@u0011#15"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.grid param; options.lines/size read, bag fwd to new GL.Mesh(data,options,gl); idiomatic",
+   "name": "options",
+   "selector": "options@u0011#16"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Mesh.icosahedron param; radius/subdivisions reads, bag fwd to GL.Mesh.load + BBox; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#17"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "Texture-path options bag param; forwarded via setUploadOptions(options,gl) setup; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#18"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "setUploadOptions param; options.premultiply_alpha/no_flip drive pixelStorei; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#19"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "uploadData(data,options) param; bag fwd to Texture.setUploadOptions(options,gl); idiomatic",
+   "name": "options",
+   "selector": "options@u0011#20"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "fromURL param; options.texture/temp_color/type configure async/DDS/image load; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#21"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "fromImage param; options.texture reuse, uploadImage(image,options)+filter setup; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#22"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "fromVideo param; options.texture reuse, uploadImage(video,options)+mipmap gate; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#23"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "fromVideo/fromTexture path param; options.texture reuse + new GL.Texture(w,h,options); idiomatic",
+   "name": "options",
+   "selector": "options@u0011#24"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "fromTexture param; options bag fwd to new GL.Texture(w,h,options)+copyTo; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#25"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "clone param; options merged into old_options via for-in, fwd to fromTexture; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#26"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "fromMemory param; options.texture reuse + setUploadOptions(options)+texImage2D; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#27"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "fromDDSInMemory param; options.texture reuse + setUploadOptions + DDS memory load; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#28"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "fromShader param; options bag fwd to new GL.Texture(w,h,options)+drawTo quad; idiomatic",
+   "name": "options",
+   "selector": "options@u0011#29"
+  }
+ ],
+ "stats": {
+  "rename": 0,
+  "keep": 30,
+  "high": 30,
+  "medium": 0,
+  "low": 0
+ }
+}

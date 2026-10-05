@@ -1,0 +1,214 @@
+{
+ "meta": {
+  "wave": 46,
+  "slice": "03",
+  "mergedFrom": [
+   "03a",
+   "03b"
+  ]
+ },
+ "proposals": [
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "Both VM9 and SERVED show only writes of 0x0 (mass reset plus loop reset) and no read; no observable role.",
+   "selector": "a3A@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides assign it position.y minus a head offset and use it as the upper clamp min(max(vert.y,a3C),a3B) for triangle verts a/b/c.",
+   "name": "sweepMaxY",
+   "selector": "a3B@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides assign it position.y minus a3O and use it as the lower clamp max(vert.y,a3C) plus the else-branch sample height.",
+   "name": "sweepMinY",
+   "selector": "a3C@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides reuse it per triangle vertex as min(max(vert.y,a3C),a3B), deduped into the a3o sample slots.",
+   "name": "clampedVertY",
+   "selector": "a3E@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "Both sides show two sequential roles: plane distance dVal+normal.dot(p), then reassigned to a squared distance compared against a3V; no single clear role.",
+   "selector": "a3F@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides compute a3u.x^2+a3u.z^2 (horizontal push-out distance squared) and reject the face when it exceeds a3T.",
+   "name": "horizDistSq",
+   "selector": "a3G@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "refCount 0 on both VM9 and SERVED sides: declared 0x0 and never referenced, so no role can be established.",
+   "selector": "a3H@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "high",
+   "evidence": "refCount 0 on both VM9 and SERVED sides: declared 0x0 and never referenced, so no role can be established.",
+   "selector": "a3I@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides derive it from rotation.y plus strafe offsets, mod 0x100, and index the Jx/Jy direction tables (Ga=Jx[a3K],Gb=Jy[a3K]).",
+   "name": "moveDirIndex",
+   "selector": "a3K@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "medium",
+   "evidence": "Both sides only reset it to 0x0 and read it once in position.y+=a3W; never assigned a nonzero value, so its role is unclear.",
+   "selector": "a3W@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides load a5a[a5D+faceSoundIndex] and store it into the entity ground-contact field when a ground hit lands.",
+   "name": "groundSoundIndex",
+   "selector": "a3X@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "Both sides set it to a small constant and assign velocity.y=a3Y as the default grounded vertical velocity.",
+   "name": "groundedVelY",
+   "selector": "a3Y@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides reset it per pass, skip non-inside faces once set, and latch it when the point-in-triangle test a40 passes.",
+   "name": "insideTriHitFound",
+   "selector": "a3Z@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides declare it as the Uint32Array over the shared buffer and apply the 0x5f3759df bit hack in the normalize fast inverse sqrt.",
+   "name": "invSqrtIntView",
+   "selector": "a3k@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "Both sides allocate Array(0x3) and fill it with deduped clamped vertex heights, then iterate a3s.y=a3o[a5F] per sample.",
+   "name": "sampleHeights",
+   "selector": "a3o@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3p[\"max\"](a3u) accumulates the per-face offset while a3q takes min, and position.sub(a3p) applies it; SERVED shows the same max-accumulate/subtract pattern via aqH keys.",
+   "name": "maxPenetration",
+   "selector": "a3p@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3q['min'](a3u) mirrors a3p's max as the paired lower accumulator, subtracted from position; SERVED repeats the min-accumulate/subtract shape.",
+   "name": "minPenetration",
+   "selector": "a3q@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 copies the face offset then zeroes x/z, adds radius (y+=a3P), and position.add(a3r) in the ground-contact branch; SERVED matches with identical copy/add structure.",
+   "name": "groundSnap",
+   "selector": "a3r@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a3t.copy(a4r(point,tri)) then distance/subVectors against the sample point, in both the EN early-out and face loops; SERVED repeats the copy/distance/delta uses.",
+   "name": "closestPoint",
+   "selector": "a3t@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 builds a3u from closest-point minus sample point, derives horizDistSq (x*x+z*z), and feeds a3p.max/a3q.min; SERVED shows the same subVectors-then-accumulate flow.",
+   "name": "faceDelta",
+   "selector": "a3u@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 sets a3w.x/a3w.y from the Ga/Gb direction tables indexed by moveDirIndex and dots it with horizontal velocity to steer; SERVED matches the table-assign/dot/scale uses.",
+   "name": "moveDir2D",
+   "selector": "a3w@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 loads a3x.x/y from velocity.x/z (flattened horizontal velocity) and dots it against the wish direction; SERVED shows the same velocity-load and dot uses.",
+   "name": "horizVelocity",
+   "selector": "a3x@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 copies the wish dir scaled by dot(vel,dir)/lenSq (a projection), then length/clampLength checks feed velocity; SERVED repeats the copy/scale/dot/length pattern.",
+   "name": "projectedMove",
+   "selector": "a3y@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "Both sides show only writes (batch zero, sentinel reset 0x2540be3ff, a3z=a3G on contact) with no read in the dossier, so its purpose is unclear.",
+   "selector": "a3z@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a40=a4t(point, tri a/b/c) gates 'if(a3Z&&!a40)continue' and latches insideTriHitFound via 'a40&&(a3Z=!![])'; SERVED matches the predicate-call plus gate/latch exactly.",
+   "name": "pointInTri",
+   "selector": "a40@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "medium",
+   "evidence": "VM9 stashes the contact flag before clearing it, then uses it for the break test and the post-loop lift adjustment; SERVED repeats the stash/test/break shape, though the flag's exact ground-vs-contact nuance is inferred.",
+   "name": "wasGrounded",
+   "selector": "a41@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "Both sides show only a reset-to-false and a single set-to-true in the resolved-contact branch with no reads, so its purpose is unclear.",
+   "selector": "a42@u1970#0"
+  },
+  {
+   "action": "keep",
+   "confidence": "low",
+   "evidence": "Both sides show only a reset-to-false and 'a4a&&(a43=!![])' in the ground-snap sub-branch with no reads, so its purpose is unclear.",
+   "selector": "a43@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a44=up&&!down||down&&!up (forward/back keys) steering the move-direction blend; SERVED computes the identical up/down expression (down via aqH) with the same steering uses.",
+   "name": "forwardInput",
+   "selector": "a44@u1970#0"
+  },
+  {
+   "action": "rename",
+   "confidence": "high",
+   "evidence": "VM9 a45=left&&!right||right&&!left (strafe keys) steering the move-direction blend and slide facing; SERVED computes the identical left/right expression (via aqH) with the same uses.",
+   "name": "strafeInput",
+   "selector": "a45@u1970#0"
+  }
+ ]
+}
